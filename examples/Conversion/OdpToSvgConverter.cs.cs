@@ -3,34 +3,37 @@ using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-namespace OdpToSvgConverter
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        // Input ODP file path
+        string inputPath = "input.odp";
+        // Output HTML file path (contains SVG images)
+        string outputPath = "output.html";
+
+        // Override paths if provided as command‑line arguments
+        if (args.Length >= 2)
         {
-            // Define directories and file names
-            string dataDir = @"C:\Data";
-            string inputOdpPath = Path.Combine(dataDir, "input.odp");
-            string outputSvgPath = Path.Combine(dataDir, "output.svg");
-            string outputPresPath = Path.Combine(dataDir, "output.pptx");
+            inputPath = args[0];
+            outputPath = args[1];
+        }
 
-            // Load the ODP presentation
-            using (Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputOdpPath))
-            {
-                // Ensure there is at least one slide
-                if (pres.Slides.Count > 0)
-                {
-                    // Convert the first slide to SVG
-                    using (FileStream svgStream = new FileStream(outputSvgPath, FileMode.Create))
-                    {
-                        pres.Slides[0].WriteAsSvg(svgStream);
-                    }
-                }
+        // Load the ODP presentation
+        using (Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath))
+        {
+            // Create SVG options for slide image conversion
+            Aspose.Slides.Export.SVGOptions svgOpts = new Aspose.Slides.Export.SVGOptions();
 
-                // Save the presentation (required before exit)
-                pres.Save(outputPresPath, Aspose.Slides.Export.SaveFormat.Pptx);
-            }
+            // Set slide image format to SVG using the SVG options
+            Aspose.Slides.Export.SlideImageFormat slideImgFmt = Aspose.Slides.Export.SlideImageFormat.Svg(svgOpts);
+
+            // Configure HTML export options to use the SVG slide image format
+            Aspose.Slides.Export.HtmlOptions htmlOpts = new Aspose.Slides.Export.HtmlOptions();
+            htmlOpts.SlideImageFormat = slideImgFmt;
+
+            // Save the presentation as HTML (slides are rendered as SVG)
+            pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Html, htmlOpts);
         }
     }
 }
