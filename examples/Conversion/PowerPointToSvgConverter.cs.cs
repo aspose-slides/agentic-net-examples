@@ -1,31 +1,46 @@
 using System;
+using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-namespace PowerPointToSvg
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        // Input PowerPoint file path
+        string inputPath = "input.pptx";
+        // Output directory for SVG files
+        string outputDir = "output";
+
+        // Override paths with command line arguments if provided
+        if (args.Length >= 1)
         {
-            // Input PowerPoint file path (first argument or default)
-            string inputPath = args.Length > 0 ? args[0] : "input.pptx";
+            inputPath = args[0];
+        }
+        if (args.Length >= 2)
+        {
+            outputDir = args[1];
+        }
 
-            // Output HTML file path containing SVG images (second argument or default)
-            string outputPath = args.Length > 1 ? args[1] : "output.html";
+        // Ensure the output directory exists
+        Directory.CreateDirectory(outputDir);
 
-            // Load the presentation
-            Presentation pres = new Presentation(inputPath);
+        // Load the presentation
+        using (Presentation pres = new Presentation(inputPath))
+        {
+            // Iterate through each slide and save it as an SVG file
+            for (int i = 0; i < pres.Slides.Count; i++)
+            {
+                string svgPath = Path.Combine(outputDir, $"slide_{i + 1}.svg");
+                using (FileStream fs = new FileStream(svgPath, FileMode.Create))
+                {
+                    // Create default SVG options
+                    SVGOptions svgOptions = new SVGOptions();
 
-            // Configure HTML export options to use SVG for slide images
-            HtmlOptions htmlOptions = new HtmlOptions();
-            htmlOptions.SlideImageFormat = SlideImageFormat.Svg(new SVGOptions());
-
-            // Save the presentation as HTML with embedded SVG images
-            pres.Save(outputPath, SaveFormat.Html, htmlOptions);
-
-            // Dispose the presentation object
-            pres.Dispose();
+                    // Save the current slide as SVG using the slide image format API
+                    pres.Slides[i].WriteAsSvg(fs, svgOptions);
+                }
+            }
         }
     }
 }
