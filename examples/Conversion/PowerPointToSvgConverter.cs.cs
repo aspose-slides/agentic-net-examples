@@ -7,40 +7,29 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Input PowerPoint file path
-        string inputPath = "input.pptx";
-        // Output directory for SVG files
-        string outputDir = "output";
-
-        // Override paths with command line arguments if provided
-        if (args.Length >= 1)
-        {
-            inputPath = args[0];
-        }
-        if (args.Length >= 2)
-        {
-            outputDir = args[1];
-        }
-
-        // Ensure the output directory exists
+        // Define input presentation path and output directory
+        string dataDir = "Data";
+        string inputPath = Path.Combine(dataDir, "input.pptx");
+        string outputDir = Path.Combine(dataDir, "output");
         Directory.CreateDirectory(outputDir);
 
         // Load the presentation
-        using (Presentation pres = new Presentation(inputPath))
-        {
-            // Iterate through each slide and save it as an SVG file
-            for (int i = 0; i < pres.Slides.Count; i++)
-            {
-                string svgPath = Path.Combine(outputDir, $"slide_{i + 1}.svg");
-                using (FileStream fs = new FileStream(svgPath, FileMode.Create))
-                {
-                    // Create default SVG options
-                    SVGOptions svgOptions = new SVGOptions();
+        Presentation pres = new Presentation(inputPath);
 
-                    // Save the current slide as SVG using the slide image format API
-                    pres.Slides[i].WriteAsSvg(fs, svgOptions);
-                }
+        // Export each slide as SVG
+        int slideIndex = 0;
+        while (slideIndex < pres.Slides.Count)
+        {
+            string outSvgPath = Path.Combine(outputDir, "slide_" + slideIndex + ".svg");
+            using (FileStream outStream = new FileStream(outSvgPath, FileMode.Create))
+            {
+                pres.Slides[slideIndex].WriteAsSvg(outStream);
             }
+            slideIndex++;
         }
+
+        // Save the presentation before exiting
+        string outPptxPath = Path.Combine(outputDir, "output.pptx");
+        pres.Save(outPptxPath, SaveFormat.Pptx);
     }
 }
