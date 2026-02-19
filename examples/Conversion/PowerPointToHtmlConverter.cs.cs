@@ -1,33 +1,62 @@
 using System;
+using Aspose.Slides;
+using Aspose.Slides.Export;
+using Aspose.Slides.Export;
+using Aspose.Slides.Export;
+using Aspose.Slides.Export;
 
-class Program
+namespace PowerPointToHtml
 {
-    static void Main()
+    class CustomHtmlController : IHtmlFormattingController
     {
-        // Input PowerPoint file path
-        System.String inputPath = "input.pptx";
-        // Output HTML file path
-        System.String outputPath = "output.html";
+        public void WriteDocumentStart(IHtmlGenerator generator, IPresentation presentation)
+        {
+            // Insert custom CSS into the HTML header
+            generator.AddHtml("<style>body { font-family: Arial, sans-serif; background-color: #f0f0f0; }</style>");
+        }
 
-        // Load the presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+        public void WriteDocumentEnd(IHtmlGenerator generator, IPresentation presentation)
+        {
+            // No custom footer needed
+        }
 
-        // Set HTML export options
-        Aspose.Slides.Export.HtmlOptions htmlOpt = new Aspose.Slides.Export.HtmlOptions();
-        // Use a simple document formatter (no slide show)
-        htmlOpt.HtmlFormatter = Aspose.Slides.Export.HtmlFormatter.CreateDocumentFormatter("document.html", false);
+        public void WriteShapeStart(IHtmlGenerator generator, IShape shape)
+        {
+            // No custom shape handling
+        }
 
-        // Configure notes layout options (optional)
-        Aspose.Slides.Export.NotesCommentsLayoutingOptions notesOptions = new Aspose.Slides.Export.NotesCommentsLayoutingOptions();
-        notesOptions.NotesPosition = Aspose.Slides.Export.NotesPositions.BottomFull;
-        // Assign notes options to HTML options if needed
-        // (Here we only set SlidesLayoutOptions to null as a placeholder)
-        htmlOpt.SlidesLayoutOptions = null;
+        public void WriteShapeEnd(IHtmlGenerator generator, IShape shape)
+        {
+            // No custom shape handling
+        }
 
-        // Save the presentation as HTML
-        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Html, htmlOpt);
+        public void WriteSlideStart(IHtmlGenerator generator, ISlide slide)
+        {
+            // No custom slide handling
+        }
 
-        // Dispose the presentation object
-        presentation.Dispose();
+        public void WriteSlideEnd(IHtmlGenerator generator, ISlide slide)
+        {
+            // No custom slide handling
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string inputPath = "input.pptx";
+            string outputPath = "output.html";
+
+            Presentation presentation = new Presentation(inputPath);
+            HtmlOptions htmlOptions = new HtmlOptions();
+
+            // Use custom formatter with our controller to inject CSS
+            htmlOptions.HtmlFormatter = HtmlFormatter.CreateCustomFormatter(new CustomHtmlController());
+
+            // Save as HTML
+            presentation.Save(outputPath, SaveFormat.Html, htmlOptions);
+            presentation.Dispose();
+        }
     }
 }
