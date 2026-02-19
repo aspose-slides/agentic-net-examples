@@ -3,47 +3,40 @@ using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-class Program
+namespace OdpToSvgConverter
 {
-    static void Main(string[] args)
+    class Program
     {
-        // Input ODP file path
-        string inputPath = "input.odp";
-        // Output folder for SVG files
-        string outputFolder = "output_svg";
-
-        if (args.Length >= 1)
+        static void Main(string[] args)
         {
-            inputPath = args[0];
-        }
-        if (args.Length >= 2)
-        {
-            outputFolder = args[1];
-        }
+            // Input ODP file path (first argument) or default
+            string inputPath = args.Length > 0 ? args[0] : "input.odp";
 
-        // Ensure the output directory exists
-        if (!Directory.Exists(outputFolder))
-        {
-            Directory.CreateDirectory(outputFolder);
-        }
+            // Output directory for SVG files (second argument) or default
+            string outputDir = args.Length > 1 ? args[1] : "output";
 
-        // Load the ODP presentation
-        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
-
-        // Convert each slide to SVG
-        int slideIndex = 0;
-        foreach (Aspose.Slides.ISlide slide in pres.Slides)
-        {
-            string svgPath = Path.Combine(outputFolder, "slide_" + slideIndex + ".svg");
-            using (FileStream outStream = new FileStream(svgPath, FileMode.Create))
+            // Ensure output directory exists
+            if (!Directory.Exists(outputDir))
             {
-                slide.WriteAsSvg(outStream);
+                Directory.CreateDirectory(outputDir);
             }
-            slideIndex++;
-        }
 
-        // Save the presentation (optional)
-        string savedPath = Path.Combine(outputFolder, "saved.odp");
-        pres.Save(savedPath, Aspose.Slides.Export.SaveFormat.Odp);
+            // Load the ODP presentation
+            Presentation pres = new Presentation(inputPath);
+
+            // Convert each slide to an individual SVG file
+            for (int i = 0; i < pres.Slides.Count; i++)
+            {
+                string svgFilePath = Path.Combine(outputDir, $"slide_{i + 1}.svg");
+                using (FileStream svgStream = new FileStream(svgFilePath, FileMode.Create))
+                {
+                    pres.Slides[i].WriteAsSvg(svgStream);
+                }
+            }
+
+            // Save the presentation (required before exit)
+            string savedPresentationPath = Path.Combine(outputDir, "converted.pptx");
+            pres.Save(savedPresentationPath, SaveFormat.Pptx);
+        }
     }
 }
