@@ -2,50 +2,48 @@ using System;
 using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Vba;
-using Aspose.Slides.Export;
 
-namespace ExtractVbaMacros
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
+        // Path to the input presentation (must be macro-enabled, e.g., .pptm)
+        string inputPath = "input.pptm";
+        // Directory where extracted VBA modules will be saved
+        string outputDir = "VbaModules";
+
+        // Ensure the output directory exists
+        if (!System.IO.Directory.Exists(outputDir))
+            System.IO.Directory.CreateDirectory(outputDir);
+
+        // Load the presentation
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+        try
         {
-            // Path to the input presentation
-            string inputPath = "input.pptx";
-
-            // Directory to save extracted VBA modules
-            string outputDir = "VbaModules";
-
-            // Ensure the output directory exists
-            if (!Directory.Exists(outputDir))
-                Directory.CreateDirectory(outputDir);
-
-            // Load the presentation
-            Presentation pres = new Presentation(inputPath);
-            try
+            // Get the VBA project from the presentation
+            Aspose.Slides.Vba.IVbaProject vbaProject = presentation.VbaProject;
+            if (vbaProject != null)
             {
-                // Get the VBA project from the presentation
-                IVbaProject vbaProject = pres.VbaProject;
-                if (vbaProject != null)
+                // Iterate through all VBA modules
+                Aspose.Slides.Vba.IVbaModuleCollection modules = vbaProject.Modules;
+                foreach (Aspose.Slides.Vba.IVbaModule module in modules)
                 {
-                    // Get the collection of VBA modules
-                    IVbaModuleCollection modules = vbaProject.Modules;
-                    // Iterate through each module and save its source code
-                    for (int i = 0; i < modules.Count; i++)
-                    {
-                        IVbaModule module = modules[i];
-                        string sourceCode = module.SourceCode;
-                        string moduleFileName = Path.Combine(outputDir, module.Name + ".bas");
-                        File.WriteAllText(moduleFileName, sourceCode);
-                    }
+                    // Retrieve module name and source code
+                    string moduleName = module.Name;
+                    string sourceCode = module.SourceCode;
+
+                    // Save the source code to a .bas file
+                    string outPath = System.IO.Path.Combine(outputDir, moduleName + ".bas");
+                    System.IO.File.WriteAllText(outPath, sourceCode);
                 }
             }
-            finally
-            {
-                // Save the presentation before exiting
-                pres.Save(inputPath, SaveFormat.Pptx);
-                pres.Dispose();
-            }
+        }
+        finally
+        {
+            // Save the presentation (required by authoring rules)
+            presentation.Save("output.pptm", Aspose.Slides.Export.SaveFormat.Pptm);
+            // Dispose the presentation object
+            presentation.Dispose();
         }
     }
 }
