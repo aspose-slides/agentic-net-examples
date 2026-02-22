@@ -1,30 +1,28 @@
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 class Program
 {
     static void Main()
     {
-        // Input PPTX file path (contains macros)
-        string inputPath = Path.Combine("input-folder", "presentation-with-macros.pptx");
-        // Output PDF file path
-        string outputPath = Path.Combine("output-folder", "output.pdf");
+        // Define input and output file paths
+        string inputPath = System.IO.Path.Combine("Input", "MacroPresentation.pptm");
+        string outputPath = System.IO.Path.Combine("Output", "MacroPresentation.pdf");
+
         // Ensure the output directory exists
-        Directory.CreateDirectory(Path.GetDirectoryName(outputPath));
+        System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(outputPath));
 
-        // Load the presentation
-        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
+        // Load the macro-enabled presentation
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
 
-        // Set PDF options (e.g., PDF/A-2a compliance)
+        // Create PDF options and set compliance level
         Aspose.Slides.Export.PdfOptions pdfOptions = new Aspose.Slides.Export.PdfOptions();
         pdfOptions.Compliance = Aspose.Slides.Export.PdfCompliance.PdfA2a;
 
         // Save the presentation as PDF
-        pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pdf, pdfOptions);
+        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pdf, pdfOptions);
 
-        // Dispose the presentation object
-        pres.Dispose();
+        // Release resources
+        presentation.Dispose();
     }
 }
