@@ -1,4 +1,3 @@
-using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
@@ -13,13 +12,13 @@ class Program
         // Load the presentation
         Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
 
-        // Remove the first VBA module if any exist
+        // Remove the first VBA module if present
         if (presentation.VbaProject != null && presentation.VbaProject.Modules.Count > 0)
         {
             presentation.VbaProject.Modules.Remove(presentation.VbaProject.Modules[0]);
         }
 
-        // Save the modified presentation
+        // Save the presentation
         presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
         presentation.Dispose();
     }
