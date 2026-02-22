@@ -2,48 +2,56 @@ using System;
 using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Vba;
+using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        // Path to the input presentation (must be macro-enabled, e.g., .pptm)
+        // Path to the input presentation containing VBA macros
         string inputPath = "input.pptm";
+
         // Directory where extracted VBA modules will be saved
-        string outputDir = "VbaModules";
+        string outputDir = "ExtractedMacros";
 
         // Ensure the output directory exists
-        if (!System.IO.Directory.Exists(outputDir))
-            System.IO.Directory.CreateDirectory(outputDir);
+        if (!Directory.Exists(outputDir))
+        {
+            Directory.CreateDirectory(outputDir);
+        }
 
         // Load the presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
         try
         {
             // Get the VBA project from the presentation
-            Aspose.Slides.Vba.IVbaProject vbaProject = presentation.VbaProject;
+            Aspose.Slides.Vba.IVbaProject vbaProject = pres.VbaProject;
+
             if (vbaProject != null)
             {
                 // Iterate through all VBA modules
                 Aspose.Slides.Vba.IVbaModuleCollection modules = vbaProject.Modules;
+                int moduleIndex = 0;
                 foreach (Aspose.Slides.Vba.IVbaModule module in modules)
                 {
                     // Retrieve module name and source code
                     string moduleName = module.Name;
                     string sourceCode = module.SourceCode;
 
-                    // Save the source code to a .bas file
-                    string outPath = System.IO.Path.Combine(outputDir, moduleName + ".bas");
-                    System.IO.File.WriteAllText(outPath, sourceCode);
+                    // Create a file name for the module
+                    string fileName = Path.Combine(outputDir, "Module_" + moduleIndex + "_" + moduleName + ".bas");
+
+                    // Write the source code to the file
+                    File.WriteAllText(fileName, sourceCode);
+                    moduleIndex++;
                 }
             }
         }
         finally
         {
-            // Save the presentation (required by authoring rules)
-            presentation.Save("output.pptm", Aspose.Slides.Export.SaveFormat.Pptm);
-            // Dispose the presentation object
-            presentation.Dispose();
+            // Save the presentation before exiting (even if unchanged)
+            pres.Save("output.pptm", SaveFormat.Pptm);
+            pres.Dispose();
         }
     }
 }
