@@ -1,37 +1,34 @@
 using System;
 using System.IO;
+using Aspose.Slides;
 
-namespace AsposeSlidesSvgConversion
+namespace PPTXToSVG
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Path to the source PPTX file
-            string sourcePath = "input.pptx";
+            // Input PPTX file path (use first argument or default)
+            string inputPath = (args.Length > 0) ? args[0] : "input.pptx";
 
             // Load the presentation
-            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(sourcePath))
+            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
             {
-                // Iterate through all slides
-                for (int index = 0; index < presentation.Slides.Count; index++)
+                // Iterate through all slides and save each as SVG
+                for (int i = 0; i < presentation.Slides.Count; i++)
                 {
-                    // Get the current slide
-                    Aspose.Slides.ISlide slide = presentation.Slides[index];
+                    Aspose.Slides.ISlide slide = presentation.Slides[i];
+                    string svgPath = $"slide_{i + 1}.svg";
 
-                    // Define the output SVG file name
-                    string svgPath = $"slide_{index + 1}.svg";
-
-                    // Create a file stream for the SVG output
                     using (FileStream svgStream = File.Create(svgPath))
                     {
-                        // Write the slide as SVG
                         slide.WriteAsSvg(svgStream);
                     }
                 }
 
-                // Save the presentation (no modifications made)
-                presentation.Save(sourcePath, Aspose.Slides.Export.SaveFormat.Pptx);
+                // Save the presentation before exiting (optional output)
+                string outputPath = "output.pptx";
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
             }
         }
     }
