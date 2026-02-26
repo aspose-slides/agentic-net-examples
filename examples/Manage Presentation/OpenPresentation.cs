@@ -1,43 +1,31 @@
 using System;
 using Aspose.Slides;
-using Aspose.Slides.Export;
-using System.IO;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        // Path to the password‑protected presentation
-        string inputPath = "protected.pptx";
-        string outputPath = "opened.pptx";
-        string password = "myPassword";
+        // Path to the source presentation
+        string sourcePath = "largePresentation.pptx";
+        // Path to save the modified presentation
+        string outputPath = "outputPresentation.pptx";
 
-        // Create LoadOptions and set the password
+        // Create load options with BLOB management settings
         Aspose.Slides.LoadOptions loadOptions = new Aspose.Slides.LoadOptions();
-        loadOptions.Password = password;
+        // Configure BLOB management options
+        loadOptions.BlobManagementOptions = new Aspose.Slides.BlobManagementOptions();
+        loadOptions.BlobManagementOptions.IsTemporaryFilesAllowed = true;
+        loadOptions.BlobManagementOptions.PresentationLockingBehavior = Aspose.Slides.PresentationLockingBehavior.KeepLocked;
 
-        // Open the presentation with the load options
-        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath, loadOptions))
+        // Open the presentation with the specified load options
+        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(sourcePath, loadOptions))
         {
-            // Perform any required operations on the presentation here
+            // Example operation: write slide count to console
+            int slideCount = presentation.Slides.Count;
+            Console.WriteLine("Number of slides: " + slideCount);
 
-            // Save the presentation before exiting
+            // Save the presentation
             presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
         }
-
-        // Determine if the presentation is password protected
-        Aspose.Slides.IPresentationInfo info = Aspose.Slides.PresentationFactory.Instance.GetPresentationInfo(inputPath);
-        if (info.IsPasswordProtected)
-        {
-            Console.WriteLine("The presentation is password protected.");
-        }
-        else
-        {
-            Console.WriteLine("The presentation is not password protected.");
-        }
-
-        // Verify whether the provided password is correct
-        bool isPasswordCorrect = info.CheckPassword(password);
-        Console.WriteLine("Password correct: " + isPasswordCorrect);
     }
 }
