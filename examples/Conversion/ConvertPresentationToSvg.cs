@@ -1,30 +1,39 @@
 using System;
 using System.IO;
+using Aspose.Slides;
 
-class Program
+namespace SlideToSvgConverter
 {
-    static void Main(string[] args)
+    class Program
     {
-        // Path to the source PowerPoint file
-        string sourcePath = "input.pptx";
-
-        // Load the presentation
-        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(sourcePath))
+        static void Main(string[] args)
         {
-            // Iterate through all slides and save each as an SVG file
-            for (int index = 0; index < presentation.Slides.Count; index++)
+            // Path to the source PowerPoint file
+            string sourcePath = "input.pptx";
+
+            // Load the presentation
+            using (Presentation pres = new Presentation(sourcePath))
             {
-                Aspose.Slides.ISlide slide = presentation.Slides[index];
-                string svgPath = $"slide_{index + 1}.svg";
-
-                using (FileStream svgStream = File.Create(svgPath))
+                // Iterate through all slides
+                for (int i = 0; i < pres.Slides.Count; i++)
                 {
-                    slide.WriteAsSvg(svgStream);
-                }
-            }
+                    // Get the current slide
+                    ISlide slide = pres.Slides[i];
 
-            // Save the presentation (required before exit)
-            presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+                    // Create SVG file name for the slide
+                    string svgPath = $"slide_{i}.svg";
+
+                    // Create a file stream to write the SVG
+                    using (FileStream svgStream = File.Create(svgPath))
+                    {
+                        // Save the slide as SVG
+                        slide.WriteAsSvg(svgStream);
+                    }
+                }
+
+                // Save the presentation (required by authoring rules)
+                pres.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            }
         }
     }
 }
