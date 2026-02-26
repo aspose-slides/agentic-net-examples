@@ -2,24 +2,28 @@ using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-class Program
+namespace ConvertPptToHtml
 {
-    static void Main()
+    class Program
     {
-        // Load the source presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation("input.pptx");
+        static void Main(string[] args)
+        {
+            // Path to the source PowerPoint file
+            string inputPath = "input.pptx";
+            // Path for the generated HTML file
+            string outputPath = "output.html";
 
-        // Create an HTML formatter with custom CSS and slide titles enabled
-        Aspose.Slides.Export.HtmlFormatter formatter = Aspose.Slides.Export.HtmlFormatter.CreateDocumentFormatter("custom.css", true);
+            // Load the presentation
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
 
-        // Configure HTML export options
-        Aspose.Slides.Export.HtmlOptions options = new Aspose.Slides.Export.HtmlOptions();
-        options.HtmlFormatter = formatter;
+            // Create HTML export options (default does not embed fonts)
+            Aspose.Slides.Export.HtmlOptions htmlOptions = new Aspose.Slides.Export.HtmlOptions();
 
-        // Save the presentation as HTML using the custom formatter
-        presentation.Save("output.html", Aspose.Slides.Export.SaveFormat.Html, options);
+            // Save the presentation as HTML
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Html, htmlOptions);
 
-        // Ensure the presentation is saved (already saved as HTML) and release resources
-        presentation.Dispose();
+            // Release resources
+            presentation.Dispose();
+        }
     }
 }
