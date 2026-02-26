@@ -3,33 +3,33 @@ using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-class Program
+namespace SvgToShapesExample
 {
-    static void Main(string[] args)
+    class Program
     {
-        // Path to the source SVG file
-        string svgFilePath = "input.svg";
-
-        // Load the SVG image into an ISvgImage instance
-        Aspose.Slides.ISvgImage svgImage = new Aspose.Slides.SvgImage(svgFilePath);
-
-        // Create a new presentation
-        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation())
+        static void Main(string[] args)
         {
-            // Get the first slide of the presentation
-            Aspose.Slides.ISlide slide = presentation.Slides[0];
+            // Paths for the source SVG and the output PPTX
+            string svgFilePath = "heading.svg";
+            string outputPptxPath = "output.pptx";
 
-            // Define the position and size for the group shape that will contain the SVG shapes
-            float x = 0f;
-            float y = 0f;
-            float width = 500f;
-            float height = 500f;
+            // Create a new presentation
+            using (Presentation presentation = new Presentation())
+            {
+                // Get the first slide
+                ISlide slide = presentation.Slides[0];
 
-            // Add a group shape to the slide, converting the SVG image into individual shapes
-            Aspose.Slides.IGroupShape groupShape = slide.Shapes.AddGroupShape(svgImage, x, y, width, height);
+                // Load SVG content from file and create an SvgImage object
+                string svgContent = File.ReadAllText(svgFilePath);
+                ISvgImage svgImage = new SvgImage(svgContent);
 
-            // Save the presentation to a PPTX file
-            presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+                // Convert the SVG image into a group of shapes and add it to the slide
+                // Parameters: svgImage, x, y, width, height
+                IGroupShape groupShape = slide.Shapes.AddGroupShape(svgImage, 0f, 0f, 500f, 100f);
+
+                // Save the presentation to a PPTX file
+                presentation.Save(outputPptxPath, SaveFormat.Pptx);
+            }
         }
     }
 }
