@@ -1,6 +1,6 @@
 using System;
 
-namespace EmbedFontsExample
+namespace MyApp
 {
     class Program
     {
@@ -11,7 +11,6 @@ namespace EmbedFontsExample
             {
                 // Get all fonts used in the presentation
                 Aspose.Slides.IFontData[] allFonts = presentation.FontsManager.GetFonts();
-
                 // Get fonts already embedded
                 Aspose.Slides.IFontData[] embeddedFonts = presentation.FontsManager.GetEmbeddedFonts();
 
