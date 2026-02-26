@@ -7,59 +7,50 @@ class Program
 {
     static void Main()
     {
-        // Path to the source presentation
-        string sourcePath = "input.pptx";
+        // Path to the input PPTX file
+        string inputPath = "input.pptx";
+
+        // Directory where extracted flash data will be saved
+        string outputDir = "FlashOutput";
+        if (!Directory.Exists(outputDir))
+            Directory.CreateDirectory(outputDir);
 
         // Load the presentation
-        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(sourcePath))
+        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
+        try
         {
-            // Buffer for stream copying
-            byte[] buffer = new byte[8192];
+            // Get the collection of controls on the first slide
+            Aspose.Slides.IControlCollection controls = pres.Slides[0].Controls;
+            Aspose.Slides.Control flashControl = null;
 
-            // Iterate through all embedded video objects (Flash objects may be stored here)
-            for (int index = 0; index < presentation.Videos.Count; index++)
+            // Find the flash control by its name
+            foreach (Aspose.Slides.IControl control in controls)
             {
-                Aspose.Slides.IVideo video = presentation.Videos[index];
-
-                // Determine file extension based on content type
-                string contentType = video.ContentType; // e.g., "application/x-shockwave-flash"
-                string extension = ".bin";
-                int slashPos = contentType.LastIndexOf('/');
-                if (slashPos >= 0 && slashPos < contentType.Length - 1)
+                if (control.Name == "ShockwaveFlash1")
                 {
-                    string typePart = contentType.Substring(slashPos + 1);
-                    if (typePart.Equals("x-shockwave-flash", StringComparison.OrdinalIgnoreCase))
-                    {
-                        extension = ".swf";
-                    }
-                    else if (typePart.Equals("mp4", StringComparison.OrdinalIgnoreCase))
-                    {
-                        extension = ".mp4";
-                    }
-                    else if (typePart.Equals("avi", StringComparison.OrdinalIgnoreCase))
-                    {
-                        extension = ".avi";
-                    }
-                }
-
-                string outputFile = $"extracted_{index}{extension}";
-
-                // Extract the binary data to a file
-                using (Stream videoStream = video.GetStream())
-                {
-                    using (FileStream fileStream = new FileStream(outputFile, FileMode.Create, FileAccess.Write))
-                    {
-                        int bytesRead;
-                        while ((bytesRead = videoStream.Read(buffer, 0, buffer.Length)) > 0)
-                        {
-                            fileStream.Write(buffer, 0, bytesRead);
-                        }
-                    }
+                    flashControl = (Aspose.Slides.Control)control;
+                    break;
                 }
             }
 
-            // Save the presentation (no modifications) before exiting
-            presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            // If a flash control is found, extract its binary data
+            if (flashControl != null)
+            {
+                byte[] data = flashControl.ActiveXControlBinary;
+                string outPath = Path.Combine(outputDir, "flash.bin");
+                using (FileStream fs = new FileStream(outPath, FileMode.Create, FileAccess.Write, FileShare.Read))
+                {
+                    fs.Write(data, 0, data.Length);
+                }
+            }
+
+            // Save the presentation before exiting (optional step)
+            string savedPath = Path.Combine(outputDir, "presentation_saved.pptx");
+            pres.Save(savedPath, Aspose.Slides.Export.SaveFormat.Pptx);
+        }
+        finally
+        {
+            pres.Dispose();
         }
     }
 }
