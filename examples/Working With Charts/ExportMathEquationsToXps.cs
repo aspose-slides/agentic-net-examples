@@ -1,50 +1,39 @@
 using System;
-using System.IO;
 using Aspose.Slides;
-using Aspose.Slides.Export;
 using Aspose.Slides.MathText;
+using Aspose.Slides.Export;
 
-namespace AsposeSlidesExample
+namespace WorkingWithCharts
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             // Create a new presentation
-            using (var presentation = new Aspose.Slides.Presentation())
-            {
-                // Get the first slide
-                var slide = presentation.Slides[0];
+            Presentation pres = new Presentation();
 
-                // Add a Math shape to host the equation
-                var mathShape = slide.Shapes.AddMathShape(0, 0, 720, 150);
+            // Add a math shape to host the equation
+            IAutoShape mathShape = pres.Slides[0].Shapes.AddMathShape(0f, 0f, 500f, 50f);
 
-                // Retrieve the MathParagraph from the shape
-                var mathParagraph = ((MathPortion)mathShape.TextFrame.Paragraphs[0].Portions[0]).MathParagraph;
+            // Retrieve the math paragraph from the shape
+            IMathParagraph mathParagraph = ((MathPortion)mathShape.TextFrame.Paragraphs[0].Portions[0]).MathParagraph;
 
-                // Build a fraction x/y
-                var fraction = new MathematicalText("x").Divide("y");
-                mathParagraph.Add(new MathBlock(fraction));
+            // Create a math block and add elements to form the equation a + b = c
+            MathBlock mathBlock = new MathBlock();
+            mathBlock.Add(new MathematicalText("a"));
+            mathBlock.Add(new MathematicalText("+"));
+            mathBlock.Add(new MathematicalText("b"));
+            mathBlock.Add(new MathematicalText("="));
+            mathBlock.Add(new MathematicalText("c"));
 
-                // Build the equation c² = a² + b²
-                var mathBlock = new MathematicalText("c")
-                    .SetSuperscript("2")
-                    .Join("=")
-                    .Join(new MathematicalText("a").SetSuperscript("2"))
-                    .Join("+")
-                    .Join(new MathematicalText("b").SetSuperscript("2"));
-                mathParagraph.Add(mathBlock);
+            // Add the math block to the paragraph
+            mathParagraph.Add(mathBlock);
 
-                // Optional: get LaTeX representation (not required for XPS export)
-                // var latex = mathParagraph.ToLatex();
+            // Save the presentation as XPS
+            pres.Save("MathEquationOutput.xps", SaveFormat.Xps);
 
-                // Configure XPS export options
-                var xpsOptions = new Aspose.Slides.Export.XpsOptions();
-                xpsOptions.SaveMetafilesAsPng = true; // example option
-
-                // Save the presentation as XPS
-                presentation.Save("MathEquations.xps", Aspose.Slides.Export.SaveFormat.Xps, xpsOptions);
-            }
+            // Dispose the presentation
+            pres.Dispose();
         }
     }
 }
