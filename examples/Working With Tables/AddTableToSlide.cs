@@ -4,22 +4,23 @@ using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
         // Create a new presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        using (Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation())
+        {
+            // Get the first slide
+            Aspose.Slides.ISlide slide = pres.Slides[0];
 
-        // Access the first slide
-        Aspose.Slides.ISlide slide = presentation.Slides[0];
+            // Define column widths and row heights
+            double[] columnWidths = new double[] { 50, 50, 50 };
+            double[] rowHeights = new double[] { 50, 30, 30, 30, 30 };
 
-        // Define column widths and row heights (in points)
-        double[] columnWidths = new double[] { 100, 100, 100 };
-        double[] rowHeights = new double[] { 50, 30, 30, 30 };
+            // Add a table to the slide
+            Aspose.Slides.ITable table = slide.Shapes.AddTable(100, 50, columnWidths, rowHeights);
 
-        // Add a table to the slide
-        Aspose.Slides.ITable table = slide.Shapes.AddTable(100, 50, columnWidths, rowHeights);
-
-        // Save the presentation to disk
-        presentation.Save("TablePresentation.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            // Save the presentation
+            pres.Save("table.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        }
     }
 }
