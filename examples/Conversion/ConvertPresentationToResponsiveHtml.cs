@@ -1,25 +1,24 @@
 using System;
-using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        // Load the source presentation
-        var presentation = new Aspose.Slides.Presentation("input.pptx");
+        // Path to the source PowerPoint file
+        string sourcePath = "input.pptx";
+        // Path to the output HTML file
+        string outputPath = "output.html";
 
-        // Configure HTML export options for responsive SVG output
-        var htmlOptions = new Aspose.Slides.Export.HtmlOptions();
-        htmlOptions.SvgResponsiveLayout = true;
-        var svgOptions = new Aspose.Slides.Export.SVGOptions();
-        htmlOptions.SlideImageFormat = Aspose.Slides.Export.SlideImageFormat.Svg(svgOptions);
+        // Load the presentation from the file
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(sourcePath);
 
-        // Export the presentation to a single responsive HTML file
-        presentation.Save("output.html", Aspose.Slides.Export.SaveFormat.Html, htmlOptions);
+        // Create HTML export options (default responsive layout)
+        Aspose.Slides.Export.HtmlOptions htmlOptions = new Aspose.Slides.Export.HtmlOptions();
 
-        // Save the presentation before exiting (optional)
-        presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        // Save the presentation as responsive HTML
+        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Html, htmlOptions);
+
+        // Ensure the presentation is properly disposed before exiting
+        presentation.Dispose();
     }
 }
