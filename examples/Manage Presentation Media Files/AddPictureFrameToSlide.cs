@@ -1,33 +1,40 @@
 using System;
+using System.IO;
+using Aspose.Slides;
+using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
+        // Define data directory and ensure it exists
+        string dataDir = Path.Combine(Directory.GetCurrentDirectory(), "Data");
+        if (!Directory.Exists(dataDir))
+            Directory.CreateDirectory(dataDir);
+
+        // Input image path (replace with actual image file name)
+        string imagePath = Path.Combine(dataDir, "image.jpg");
+        // Output presentation path
+        string outPath = Path.Combine(dataDir, "output.pptx");
+
         // Create a new presentation
         Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-        // Get the first slide
-        Aspose.Slides.ISlide slide = presentation.Slides[0];
+        // Load the image from file
+        Aspose.Slides.IImage img = Aspose.Slides.Images.FromFile(imagePath);
+        // Add the image to the presentation's image collection
+        Aspose.Slides.IPPImage imgx = presentation.Images.AddImage(img);
 
-        // Load image from file
-        System.IO.FileStream imageStream = new System.IO.FileStream("image.jpg", System.IO.FileMode.Open, System.IO.FileAccess.Read);
-        Aspose.Slides.IPPImage image = presentation.Images.AddImage(imageStream);
-        imageStream.Close();
-
-        // Add picture frame to the slide
-        Aspose.Slides.IPictureFrame pictureFrame = slide.Shapes.AddPictureFrame(
+        // Add a picture frame using the image's original width and height
+        Aspose.Slides.IPictureFrame pictureFrame = presentation.Slides[0].Shapes.AddPictureFrame(
             Aspose.Slides.ShapeType.Rectangle,
-            50f,   // X position
-            50f,   // Y position
-            300f,  // Width
-            200f,  // Height
-            image);
+            0, 0,
+            imgx.Width,
+            imgx.Height,
+            imgx);
 
-        // Save the presentation
-        presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
-
-        // Clean up
+        // Save the presentation in PPTX format
+        presentation.Save(outPath, Aspose.Slides.Export.SaveFormat.Pptx);
         presentation.Dispose();
     }
 }
