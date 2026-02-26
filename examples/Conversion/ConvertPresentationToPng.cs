@@ -2,17 +2,17 @@ using System;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        // Path to the source presentation (PPT or PPTX)
+        // Input PowerPoint file
         System.String inputPath = "input.pptx";
-        // Format string for the output PNG files
+        // Output PNG file pattern
         System.String outputFormat = "slide_{0}.png";
 
-        // Load the presentation
+        // Load presentation
         Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
 
-        // Iterate through all slides and export each as PNG
+        // Convert each slide to PNG
         for (int index = 0; index < pres.Slides.Count; index++)
         {
             Aspose.Slides.ISlide slide = pres.Slides[index];
@@ -23,7 +23,7 @@ class Program
             }
         }
 
-        // Save the presentation (required by authoring rules)
+        // Save the presentation before exiting (required by authoring rules)
         pres.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
         pres.Dispose();
     }
