@@ -1,33 +1,28 @@
 using System;
+using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-namespace PresentationToHtml
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
+        // Path to the source presentation
+        var sourcePath = "input.pptx";
+        // Path to the output HTML file
+        var outputPath = "output.html";
+
+        // Load the presentation
+        using (var presentation = new Aspose.Slides.Presentation(sourcePath))
         {
-            // Path to the source presentation
-            string inputPath = "input.pptx";
-            // Path to the output HTML file
-            string outputPath = "output.html";
+            // Configure HTML export options for high‑quality images
+            var htmlOptions = new Aspose.Slides.Export.HtmlOptions();
+            // Use the default slide image format (raster) and set maximum JPEG quality
+            htmlOptions.SlideImageFormat = new Aspose.Slides.Export.SlideImageFormat();
+            htmlOptions.JpegQuality = 100;
 
-            // Load the presentation
-            using (Presentation presentation = new Presentation(inputPath))
-            {
-                // Create HTML export options
-                HtmlOptions htmlOptions = new HtmlOptions();
-
-                // Create a formatting controller that embeds all fonts
-                EmbedAllFontsHtmlController fontController = new EmbedAllFontsHtmlController();
-
-                // Assign a custom HTML formatter that uses the font embedding controller
-                htmlOptions.HtmlFormatter = HtmlFormatter.CreateCustomFormatter(fontController);
-
-                // Save the presentation as HTML with embedded original fonts
-                presentation.Save(outputPath, SaveFormat.Html, htmlOptions);
-            }
+            // Save the presentation as HTML with the specified options
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Html, htmlOptions);
         }
     }
 }
