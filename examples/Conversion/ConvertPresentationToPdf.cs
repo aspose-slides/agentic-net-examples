@@ -1,23 +1,25 @@
 using System;
+using Aspose.Slides;
+using Aspose.Slides.Export;
 
-namespace PowerPointToPdfConverter
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            // Path to the source PowerPoint file
-            string inputPath = "input.pptx";
+        // Load the PowerPoint presentation
+        Presentation presentation = new Presentation("input.pptx");
 
-            // Path where the PDF will be saved
-            string outputPath = "output.pdf";
+        // Create PDF export options
+        PdfOptions pdfOptions = new PdfOptions();
+        pdfOptions.JpegQuality = 90;
+        pdfOptions.SaveMetafilesAsPng = true;
+        pdfOptions.TextCompression = PdfTextCompression.Flate;
+        pdfOptions.Compliance = PdfCompliance.Pdf15;
 
-            // Load the presentation using the fully-qualified Aspose.Slides type
-            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
-            {
-                // Save the presentation as PDF using the fully-qualified SaveFormat enum
-                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pdf);
-            }
-        }
+        // Save the presentation as PDF with the custom options
+        presentation.Save("output.pdf", SaveFormat.Pdf, pdfOptions);
+
+        // Release resources
+        presentation.Dispose();
     }
 }
