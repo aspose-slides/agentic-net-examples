@@ -1,38 +1,40 @@
 using System;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-class Program
+namespace AsposeSlidesCustomFontDemo
 {
-    static void Main()
+    class Program
     {
-        // Load custom font from file
-        string fontPath = "customfont.ttf";
-        byte[] fontData = System.IO.File.ReadAllBytes(fontPath);
-        Aspose.Slides.FontsLoader.LoadExternalFont(fontData);
-
-        // Create a new presentation
-        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation();
-
-        // Add a new slide based on the layout of the first slide
-        Aspose.Slides.ISlide slide = pres.Slides.AddEmptySlide(pres.Slides[0].LayoutSlide);
-
-        // Add a rectangle AutoShape and a TextFrame
-        Aspose.Slides.IAutoShape autoShape = (Aspose.Slides.IAutoShape)slide.Shapes.AddAutoShape(
-            Aspose.Slides.ShapeType.Rectangle, 100, 100, 400, 50);
-        autoShape.AddTextFrame("Sample Text");
-
-        // Apply the custom font to all portions in the paragraph
-        Aspose.Slides.IParagraph paragraph = autoShape.TextFrame.Paragraphs[0];
-        foreach (Aspose.Slides.IPortion portion in paragraph.Portions)
+        static void Main(string[] args)
         {
-            portion.PortionFormat.LatinFont = new Aspose.Slides.FontData("CustomFontName");
+            // Path to the folder that contains custom font files (e.g., .ttf)
+            string fontsFolder = @"C:\CustomFonts";
+
+            // Load custom fonts before creating any presentation objects
+            Aspose.Slides.FontsLoader.LoadExternalFonts(new string[] { fontsFolder });
+
+            // Create a new presentation
+            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation())
+            {
+                // Get the first slide
+                Aspose.Slides.ISlide slide = presentation.Slides[0];
+
+                // Add a rectangle AutoShape to the slide
+                Aspose.Slides.IAutoShape shape = (Aspose.Slides.IAutoShape)slide.Shapes.AddAutoShape(
+                    Aspose.Slides.ShapeType.Rectangle, 50, 50, 400, 100);
+
+                // Add a TextFrame with sample text
+                Aspose.Slides.ITextFrame textFrame = shape.AddTextFrame("Hello with custom font");
+
+                // Set the custom font for the first portion of the text
+                Aspose.Slides.IPortion portion = textFrame.Paragraphs[0].Portions[0];
+                portion.PortionFormat.LatinFont = new Aspose.Slides.FontData("MyCustomFont");
+
+                // Save the presentation
+                presentation.Save("CustomFontPresentation.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            }
+
+            // Clear the font cache after processing
+            Aspose.Slides.FontsLoader.ClearCache();
         }
-
-        // Save the presentation
-        pres.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
-
-        // Clear the font cache
-        Aspose.Slides.FontsLoader.ClearCache();
     }
 }
