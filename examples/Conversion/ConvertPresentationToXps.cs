@@ -6,14 +6,15 @@ class Program
     {
         // Path to the source PowerPoint file
         string sourcePath = "input.pptx";
-        // Path where the XPS file will be saved
+        // Path to the output XPS file
         string outputPath = "output.xps";
 
-        // Load the presentation
-        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(sourcePath))
+        // Load the presentation using fully-qualified Aspose.Slides type
+        using (Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(sourcePath))
         {
-            // Save the presentation to XPS format using default options
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Xps);
+            // Save the presentation to XPS format with default settings
+            pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Xps);
         }
+        // Presentation is disposed automatically by the using statement
     }
 }
