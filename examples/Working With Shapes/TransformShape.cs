@@ -1,49 +1,37 @@
 using System;
 using Aspose.Slides;
-using Aspose.Slides.Export;
 
-namespace WorkingWithShapes
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
-        {
-            // Load an existing presentation (replace with your file path)
-            string inputPath = "input.pptx";
-            Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
+        // Create a new presentation
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-            // Get the first slide and its shape collection
-            Aspose.Slides.ISlide srcSlide = pres.Slides[0];
-            Aspose.Slides.IShapeCollection srcShapes = srcSlide.Shapes;
+        // Get the first slide
+        Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-            // Assume there is at least one shape on the slide
-            Aspose.Slides.IShape shape = srcShapes[0];
+        // Add a rectangle auto shape
+        Aspose.Slides.IAutoShape shape = (Aspose.Slides.IAutoShape)slide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 50, 50, 200, 100);
 
-            // Move the shape
-            shape.X = shape.X + 100f; // shift right by 100 points
-            shape.Y = shape.Y + 50f;  // shift down by 50 points
+        // Move the shape to a new position
+        shape.X = 150;
+        shape.Y = 150;
 
-            // Scale the shape (increase size by 150%)
-            shape.Width = shape.Width * 1.5f;
-            shape.Height = shape.Height * 1.5f;
+        // Rotate the shape by 45 degrees
+        shape.Rotation = 45;
 
-            // Rotate the shape 45 degrees clockwise
-            shape.Rotation = 45f;
+        // Scale the shape by 150%
+        shape.Width = shape.Width * 1.5f;
+        shape.Height = shape.Height * 1.5f;
 
-            // Clone the transformed shape onto a new blank slide
-            Aspose.Slides.ILayoutSlide blankLayout = pres.Masters[0].LayoutSlides.GetByType(Aspose.Slides.SlideLayoutType.Blank);
-            Aspose.Slides.ISlide destSlide = pres.Slides.AddEmptySlide(blankLayout);
-            Aspose.Slides.IShapeCollection destShapes = destSlide.Shapes;
+        // Clone the shape and place the clone at a different location
+        Aspose.Slides.IShape clonedShape = slide.Shapes.AddClone(shape, 400, 150);
 
-            // Add clone at a new position (offset by 200 points)
-            destShapes.AddClone(shape, shape.X + 200f, shape.Y + 200f);
+        // Bring the cloned shape to the front
+        slide.Shapes.Reorder(slide.Shapes.Count - 1, clonedShape);
 
-            // Save the modified presentation
-            string outputPath = "output.pptx";
-            pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
-
-            // Release resources
-            pres.Dispose();
-        }
+        // Save the presentation
+        presentation.Save("ShapeOperations_out.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
