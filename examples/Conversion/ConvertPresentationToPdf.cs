@@ -1,29 +1,43 @@
 using System;
-using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-class Program
+namespace ConvertPresentationToPdf
 {
-    static void Main(string[] args)
+    public class Program
     {
-        // Verify that a source file path is provided
-        if (args.Length == 0)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Please specify the path to the PPT file.");
-            return;
+            // Expect two arguments: input presentation path and output PDF path
+            if (args.Length < 2)
+            {
+                Console.WriteLine("Usage: ConvertPresentationToPdf <input-ppt-or-pptx> <output-pdf>");
+                return;
+            }
+
+            string inputPath = args[0];
+            string outputPath = args[1];
+
+            // Load the presentation (supports PPT, PPTX, etc.)
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+
+            // Configure PDF export options with advanced features
+            Aspose.Slides.Export.PdfOptions pdfOptions = new Aspose.Slides.Export.PdfOptions();
+            pdfOptions.JpegQuality = 90; // High-quality JPEG images
+            pdfOptions.SaveMetafilesAsPng = true; // Convert metafiles to PNG
+            pdfOptions.TextCompression = Aspose.Slides.Export.PdfTextCompression.Flate; // Compress text
+            pdfOptions.Compliance = Aspose.Slides.Export.PdfCompliance.Pdf15; // PDF/A-1b compliance
+            pdfOptions.Password = "SecretPassword123"; // Protect PDF with a password
+            pdfOptions.AccessPermissions = Aspose.Slides.Export.PdfAccessPermissions.PrintDocument |
+                                          Aspose.Slides.Export.PdfAccessPermissions.HighQualityPrint;
+
+            // Save the presentation as PDF using the configured options
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pdf, pdfOptions);
+
+            // Release resources
+            presentation.Dispose();
+
+            Console.WriteLine("Conversion completed successfully.");
         }
-
-        string inputPath = args[0];
-        string outputPath = Path.ChangeExtension(inputPath, ".pdf");
-
-        // Load the presentation from the specified file
-        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
-        {
-            // Save the presentation as PDF
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pdf);
-        }
-
-        Console.WriteLine("Conversion completed: " + outputPath);
     }
 }
