@@ -4,16 +4,18 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Create a new presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        // Path to the source presentation file
+        string sourcePath = "input.pptx";
+        // Path to the output presentation file
+        string outputPath = "output.pptx";
 
-        // Access the first slide (presentation has one empty slide by default)
-        Aspose.Slides.ISlide slide = presentation.Slides[0];
+        // Load the presentation
+        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(sourcePath))
+        {
+            // (Optional) modify the presentation here
 
-        // Save the presentation to PPTX format
-        presentation.Save("ModifiedPresentation.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
-
-        // Release resources
-        presentation.Dispose();
+            // Save the presentation in PPTX format
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+        }
     }
 }
