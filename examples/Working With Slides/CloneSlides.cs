@@ -1,32 +1,28 @@
 using System;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-namespace CloneMultipleSlides
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
+        // Load the source presentation
+        using (Aspose.Slides.Presentation sourcePres = new Aspose.Slides.Presentation("source.pptx"))
         {
-            // Load the source presentation
-            using (Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation("source.pptx"))
+            // Create a new destination presentation
+            using (Aspose.Slides.Presentation destPres = new Aspose.Slides.Presentation())
             {
-                // Get the slide collection
-                Aspose.Slides.ISlideCollection slides = pres.Slides;
+                // Get slide collections
+                Aspose.Slides.ISlideCollection sourceSlides = sourcePres.Slides;
+                Aspose.Slides.ISlideCollection destSlides = destPres.Slides;
 
-                // Define the range of slides to clone (e.g., first three slides)
-                int startIndex = 0;
-                int endIndex = 2; // inclusive
-
-                // Loop through the specified range and clone each slide to the end of the collection
-                for (int i = startIndex; i <= endIndex; i++)
+                // Clone each slide from source to destination
+                for (int i = 0; i < sourceSlides.Count; i++)
                 {
-                    // Clone the slide and add it to the end of the collection
-                    slides.AddClone(slides[i]);
+                    Aspose.Slides.ISlide sourceSlide = sourceSlides[i];
+                    destSlides.AddClone(sourceSlide);
                 }
 
-                // Save the modified presentation
-                pres.Save("cloned_output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+                // Save the destination presentation
+                destPres.Save("cloned_output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
             }
         }
     }
