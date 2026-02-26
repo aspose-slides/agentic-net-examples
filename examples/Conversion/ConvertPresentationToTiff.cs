@@ -1,27 +1,26 @@
 using System;
+using System.Drawing;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        // Paths to the source presentation and the output TIFF file
-        string inputPath = "input.pptx";
-        string outputPath = "output.tiff";
+        // Path to the source presentation
+        var sourcePath = "input.pptx";
 
-        // Load the presentation from the specified file
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+        // Load the presentation
+        using (var presentation = new Aspose.Slides.Presentation(sourcePath))
+        {
+            // Create TIFF options with custom image size and DPI
+            var options = new Aspose.Slides.Export.TiffOptions();
+            options.ImageSize = new Size(1728, 1078); // custom dimensions
+            options.DpiX = 200; // horizontal DPI
+            options.DpiY = 100; // vertical DPI
 
-        // Set up TIFF options for black-and-white conversion
-        Aspose.Slides.Export.TiffOptions tiffOptions = new Aspose.Slides.Export.TiffOptions();
-        tiffOptions.CompressionType = Aspose.Slides.Export.TiffCompressionTypes.CCITT4;
-        tiffOptions.BwConversionMode = Aspose.Slides.Export.BlackWhiteConversionMode.Dithering;
-
-        // Save the presentation as a multi-page black-and-white TIFF image
-        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Tiff, tiffOptions);
-
-        // Release resources
-        presentation.Dispose();
+            // Save the presentation as a TIFF file using the specified options
+            presentation.Save("output.tiff", Aspose.Slides.Export.SaveFormat.Tiff, options);
+        }
     }
 }
