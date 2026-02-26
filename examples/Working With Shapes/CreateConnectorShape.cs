@@ -1,40 +1,36 @@
 using System;
 using Aspose.Slides;
-using Aspose.Slides.Export;
 
-namespace AsposeSlidesExample
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
-        {
-            // Create a new presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        // Create a new presentation
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-            // Access the shape collection of the first slide
-            Aspose.Slides.IShapeCollection shapes = presentation.Slides[0].Shapes;
+        // Get the first slide
+        Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-            // Add an ellipse shape
-            Aspose.Slides.IAutoShape ellipse = shapes.AddAutoShape(
-                Aspose.Slides.ShapeType.Ellipse, 0, 100, 100, 100);
+        // Access the shape collection of the slide
+        Aspose.Slides.IShapeCollection shapes = slide.Shapes;
 
-            // Add a rectangle shape
-            Aspose.Slides.IAutoShape rectangle = shapes.AddAutoShape(
-                Aspose.Slides.ShapeType.Rectangle, 100, 300, 100, 100);
+        // Add an ellipse shape
+        Aspose.Slides.IAutoShape ellipse = shapes.AddAutoShape(Aspose.Slides.ShapeType.Ellipse, 0f, 100f, 100f, 100f);
 
-            // Add a bent connector shape
-            Aspose.Slides.IConnector connector = shapes.AddConnector(
-                Aspose.Slides.ShapeType.BentConnector2, 0, 0, 10, 10);
+        // Add a rectangle shape
+        Aspose.Slides.IAutoShape rectangle = shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 100f, 300f, 100f, 100f);
 
-            // Connect the shapes using the connector
-            connector.StartShapeConnectedTo = ellipse;
-            connector.EndShapeConnectedTo = rectangle;
+        // Add a bent connector shape
+        Aspose.Slides.IConnector connector = shapes.AddConnector(Aspose.Slides.ShapeType.BentConnector2, 0f, 0f, 10f, 10f);
 
-            // Reroute the connector to the shortest path
-            connector.Reroute();
+        // Connect the shapes using the connector
+        connector.StartShapeConnectedTo = ellipse;
+        connector.EndShapeConnectedTo = rectangle;
 
-            // Save the presentation
-            presentation.Save("ConnectorShape.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
-        }
+        // Reroute the connector to the shortest path
+        connector.Reroute();
+
+        // Save the presentation
+        presentation.Save("ShapesConnector.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
