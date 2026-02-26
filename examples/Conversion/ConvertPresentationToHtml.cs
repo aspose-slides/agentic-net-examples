@@ -1,27 +1,47 @@
 using System;
+using Aspose.Slides;
+using Aspose.Slides.Export;
 
-class Program
+namespace ConvertPptToHtml
 {
-    static void Main(string[] args)
+    class Program
     {
-        // Path to the source PowerPoint file
-        System.String inputPath = "input.pptx";
-        // Path where the HTML output will be saved
-        System.String outputPath = "output.html";
-        // Path or URL to the CSS file that defines the new style
-        System.String cssPath = "style.css";
+        static void Main(string[] args)
+        {
+            // Load the PowerPoint presentation
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation("input.pptx");
 
-        // Load the presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+            // Embed all fonts that are used in the presentation but not yet embedded
+            Aspose.Slides.IFontData[] allFonts = presentation.FontsManager.GetFonts();
+            Aspose.Slides.IFontData[] embeddedFonts = presentation.FontsManager.GetEmbeddedFonts();
 
-        // Configure HTML export options with a custom formatter that uses the CSS file
-        Aspose.Slides.Export.HtmlOptions htmlOptions = new Aspose.Slides.Export.HtmlOptions();
-        htmlOptions.HtmlFormatter = Aspose.Slides.Export.HtmlFormatter.CreateDocumentFormatter(cssPath, true);
+            for (int i = 0; i < allFonts.Length; i++)
+            {
+                Aspose.Slides.IFontData font = allFonts[i];
+                bool isEmbedded = false;
+                for (int j = 0; j < embeddedFonts.Length; j++)
+                {
+                    if (embeddedFonts[j].Equals(font))
+                    {
+                        isEmbedded = true;
+                        break;
+                    }
+                }
+                if (!isEmbedded)
+                {
+                    // Embed the font with all characters
+                    presentation.FontsManager.AddEmbeddedFont(font, Aspose.Slides.Export.EmbedFontCharacters.All);
+                }
+            }
 
-        // Save the presentation as HTML using the new CSS style
-        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Html, htmlOptions);
+            // Set HTML export options (optional customizations can be added here)
+            Aspose.Slides.Export.HtmlOptions htmlOptions = new Aspose.Slides.Export.HtmlOptions();
 
-        // Release resources
-        presentation.Dispose();
+            // Save the presentation as HTML with embedded fonts
+            presentation.Save("output.html", Aspose.Slides.Export.SaveFormat.Html, htmlOptions);
+
+            // Dispose the presentation object
+            presentation.Dispose();
+        }
     }
 }
