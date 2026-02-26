@@ -2,19 +2,21 @@ using System;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        // Load the source presentation
-        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation("input.pptx");
+        // Path to the source PowerPoint file
+        string sourcePath = "input.pptx";
+        // Path to the output HTML file
+        string outputPath = "output.html";
 
-        // Configure HTML export options to remove cropped picture areas
-        Aspose.Slides.Export.HtmlOptions options = new Aspose.Slides.Export.HtmlOptions();
-        options.DeletePicturesCroppedAreas = true;
+        // Load the presentation
+        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(sourcePath))
+        {
+            // Create default HTML export options (default DPI is 72)
+            Aspose.Slides.Export.HtmlOptions options = new Aspose.Slides.Export.HtmlOptions();
 
-        // Save the presentation as HTML with the specified options
-        pres.Save("output.html", Aspose.Slides.Export.SaveFormat.Html, options);
-
-        // Release resources
-        pres.Dispose();
+            // Save the presentation as HTML
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Html, options);
+        }
     }
 }
