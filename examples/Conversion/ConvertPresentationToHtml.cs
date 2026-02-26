@@ -1,22 +1,35 @@
 using System;
 
-class Program
+namespace Example
 {
-    static void Main(string[] args)
+    class Program
     {
-        // Path to the source PowerPoint file
-        string sourcePath = "input.pptx";
-        // Path to the output HTML file
-        string outputPath = "output.html";
-
-        // Load the presentation
-        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(sourcePath))
+        static void Main(string[] args)
         {
-            // Create default HTML export options (default DPI is 72)
-            Aspose.Slides.Export.HtmlOptions options = new Aspose.Slides.Export.HtmlOptions();
+            // Input and output file paths
+            string inputPath = "input.pptx";
+            string outputPath = "output.html";
 
-            // Save the presentation as HTML
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Html, options);
+            // Load the presentation
+            Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
+
+            // No fonts to exclude from embedding
+            string[] fontExclude = new string[0];
+
+            // Create a controller that embeds all fonts
+            Aspose.Slides.Export.EmbedAllFontsHtmlController embedController = new Aspose.Slides.Export.EmbedAllFontsHtmlController(fontExclude);
+
+            // Set up HTML options with the custom formatter
+            Aspose.Slides.Export.HtmlOptions htmlOptions = new Aspose.Slides.Export.HtmlOptions
+            {
+                HtmlFormatter = Aspose.Slides.Export.HtmlFormatter.CreateCustomFormatter(embedController)
+            };
+
+            // Save the presentation as HTML with embedded fonts
+            pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Html, htmlOptions);
+
+            // Dispose the presentation object
+            pres.Dispose();
         }
     }
 }
