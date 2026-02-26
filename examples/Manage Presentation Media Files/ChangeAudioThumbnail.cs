@@ -3,42 +3,33 @@ using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-namespace ManageAudioThumbnail
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            // Load an existing presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation("input.pptx");
+        // Create a new presentation
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-            // Access the first slide (adjust index as needed)
-            Aspose.Slides.ISlide slide = presentation.Slides[0];
+        // Access the first slide
+        Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-            // Find the first audio frame on the slide
-            Aspose.Slides.IAudioFrame audioFrame = null;
-            foreach (Aspose.Slides.IShape shape in slide.Shapes)
-            {
-                audioFrame = shape as Aspose.Slides.IAudioFrame;
-                if (audioFrame != null)
-                {
-                    break;
-                }
-            }
+        // Load the audio file and add an audio frame to the slide
+        FileStream audioStream = new FileStream("sample2.mp3", FileMode.Open, FileAccess.Read);
+        Aspose.Slides.IAudioFrame audioFrame = slide.Shapes.AddAudioFrameEmbedded(150, 100, 50, 50, audioStream);
+        audioStream.Dispose();
 
-            if (audioFrame != null)
-            {
-                // Load the new thumbnail image from file
-                FileStream imageStream = new FileStream("newThumbnail.jpg", FileMode.Open, FileAccess.Read);
-                Aspose.Slides.IPPImage newImage = presentation.Images.AddImage(imageStream);
-                imageStream.Dispose();
+        // Load the image that will be used as the audio frame thumbnail
+        FileStream imageStream = new FileStream("eagle.jpeg", FileMode.Open, FileAccess.Read);
+        Aspose.Slides.IPPImage thumbnailImage = presentation.Images.AddImage(imageStream);
+        imageStream.Dispose();
 
-                // Assign the new image as the audio frame's picture (thumbnail)
-                audioFrame.PictureFormat.Picture.Image = newImage;
-            }
+        // Set the custom thumbnail image for the audio frame
+        audioFrame.PictureFormat.Picture.Image = thumbnailImage;
 
-            // Save the modified presentation
-            presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
-        }
+        // Save the modified presentation
+        presentation.Save("AudioFrameWithCustomThumbnail.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+
+        // Clean up
+        presentation.Dispose();
     }
 }
