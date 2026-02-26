@@ -1,29 +1,20 @@
 using System;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-namespace DefaultFontDemo
+namespace Example
 {
     class Program
     {
         static void Main(string[] args)
         {
             // Create a new presentation
-            Presentation presentation = new Presentation();
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-            // Add a rectangle shape with some text to the first slide
-            IAutoShape shape = presentation.Slides[0].Shapes.AddAutoShape(ShapeType.Rectangle, 50, 50, 400, 100);
-            shape.AddTextFrame("Sample text using default font");
-
-            // Define save options with a default regular font
-            PdfOptions pdfOptions = new PdfOptions();
+            // Configure PDF save options to use Arial as the default font
+            Aspose.Slides.Export.PdfOptions pdfOptions = new Aspose.Slides.Export.PdfOptions();
             pdfOptions.DefaultRegularFont = "Arial";
 
-            // Save the presentation using the defined default font
-            presentation.Save("DefaultFontPresentation.pdf", SaveFormat.Pdf, pdfOptions);
-
-            // Clean up
-            presentation.Dispose();
+            // Save the presentation as PDF with the specified default font
+            presentation.Save("PresentationWithArial.pdf", Aspose.Slides.Export.SaveFormat.Pdf, pdfOptions);
         }
     }
 }
