@@ -2,20 +2,32 @@ using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-class Program
+namespace PresentationToHtml
 {
-    static void Main(string[] args)
+    class Program
     {
-        // Path to the source PowerPoint file
-        string sourcePath = "input.pptx";
-        // Path where the HTML output will be saved
-        string outputPath = "output.html";
-
-        // Load the presentation from the file
-        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(sourcePath))
+        static void Main(string[] args)
         {
-            // Convert and save the presentation to HTML format
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Html);
+            // Path to the source presentation
+            string inputPath = "input.pptx";
+            // Path to the output HTML file
+            string outputPath = "output.html";
+
+            // Load the presentation
+            using (Presentation presentation = new Presentation(inputPath))
+            {
+                // Create HTML export options
+                HtmlOptions htmlOptions = new HtmlOptions();
+
+                // Create a formatting controller that embeds all fonts
+                EmbedAllFontsHtmlController fontController = new EmbedAllFontsHtmlController();
+
+                // Assign a custom HTML formatter that uses the font embedding controller
+                htmlOptions.HtmlFormatter = HtmlFormatter.CreateCustomFormatter(fontController);
+
+                // Save the presentation as HTML with embedded original fonts
+                presentation.Save(outputPath, SaveFormat.Html, htmlOptions);
+            }
         }
     }
 }
