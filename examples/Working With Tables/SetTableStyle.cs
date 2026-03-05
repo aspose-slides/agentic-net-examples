@@ -3,7 +3,7 @@ using Aspose.Slides;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
         // Create a new presentation
         Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
@@ -19,7 +19,7 @@ class Program
         Aspose.Slides.ITable table = slide.Shapes.AddTable(50, 50, columnWidths, rowHeights);
 
         // Apply a built‑in table style
-        table.StylePreset = Aspose.Slides.TableStylePreset.LightStyle1;
+        table.StylePreset = Aspose.Slides.TableStylePreset.MediumStyle2Accent1;
 
         // Save the presentation to disk
         presentation.Save("TableStyleDemo.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
