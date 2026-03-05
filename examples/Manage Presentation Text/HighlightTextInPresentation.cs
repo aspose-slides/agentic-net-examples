@@ -1,7 +1,5 @@
 using System;
-using System.Text.RegularExpressions;
-using Aspose.Slides;
-using Aspose.Slides.Export;
+using System.Drawing;
 
 class Program
 {
@@ -12,22 +10,20 @@ class Program
         string outputPath = "output.pptx";
 
         // Load the presentation
-        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
 
-        // Get the first shape as AutoShape
-        Aspose.Slides.AutoShape shape = pres.Slides[0].Shapes[0] as Aspose.Slides.AutoShape;
+        // Get the first shape on the first slide as an AutoShape
+        Aspose.Slides.AutoShape autoShape = (Aspose.Slides.AutoShape)presentation.Slides[0].Shapes[0];
 
-        // Highlight text matching the regex pattern
-        if (shape != null && shape.TextFrame != null)
-        {
-            shape.TextFrame.HighlightRegex(
-                new Regex(@"\b[^\s]{10,}\b"),
-                System.Drawing.Color.Blue,
-                null);
-        }
+        // Highlight the word "example" with Yellow color
+        autoShape.TextFrame.HighlightText("example", System.Drawing.Color.Yellow);
+
+        // Highlight the whole word "test" with LightBlue color using search options
+        Aspose.Slides.TextSearchOptions options = new Aspose.Slides.TextSearchOptions();
+        options.WholeWordsOnly = true;
+        autoShape.TextFrame.HighlightText("test", System.Drawing.Color.LightBlue, options, null);
 
         // Save the modified presentation
-        pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
-        pres.Dispose();
+        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
