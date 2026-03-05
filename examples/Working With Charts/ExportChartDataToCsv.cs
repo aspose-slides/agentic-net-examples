@@ -11,60 +11,70 @@ namespace ExportChartDataToCsv
     {
         static void Main(string[] args)
         {
-            // Define paths
+            // Define output paths
             string dataDir = Path.Combine(Directory.GetCurrentDirectory(), "Data");
-            string inputPath = Path.Combine(dataDir, "input.pptx");
-            string outputPath = Path.Combine(dataDir, "output.pptx");
-            string csvPath = Path.Combine(dataDir, "chartdata.csv");
+            Directory.CreateDirectory(dataDir);
+            string outputCsvPath = Path.Combine(dataDir, "chart_data.csv");
+            string outputPptxPath = Path.Combine(dataDir, "ExportChartData_out.pptx");
 
-            // Load presentation
-            Presentation pres = new Presentation(inputPath);
+            // Create a new presentation
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-            // Get first slide and first chart
-            ISlide slide = pres.Slides[0];
-            IChart chart = slide.Shapes[0] as IChart;
+            // Get the first slide
+            Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-            // Export chart data to CSV
-            using (StreamWriter writer = new StreamWriter(csvPath, false, Encoding.UTF8))
+            // Add a sample chart (Clustered Column) with default data
+            Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(
+                Aspose.Slides.Charts.ChartType.ClusteredColumn,
+                50f, 50f, 600f, 400f);
+
+            // Access the embedded workbook that holds chart data
+            Aspose.Slides.Charts.IChartDataWorkbook workbook = chart.ChartData.ChartDataWorkbook;
+
+            // Determine the number of series and categories
+            int seriesCount = chart.ChartData.Series.Count;
+            int categoriesCount = chart.ChartData.Categories.Count;
+
+            // Build CSV content
+            StringBuilder csvBuilder = new StringBuilder();
+
+            // Write header row (empty first cell + series names)
+            csvBuilder.Append("Category");
+            for (int s = 0; s < seriesCount; s++)
             {
-                for (int s = 0; s < chart.ChartData.Series.Count; s++)
+                // Series name is stored in the first row of each series column
+                object seriesNameObj = workbook.GetCell(0, 0, s + 1).Value;
+                string seriesName = seriesNameObj != null ? seriesNameObj.ToString() : $"Series{s + 1}";
+                csvBuilder.Append(',').Append(seriesName);
+            }
+            csvBuilder.AppendLine();
+
+            // Write each category row with its data points
+            for (int c = 0; c < categoriesCount; c++)
+            {
+                // Category name is stored in the first column of each category row
+                object categoryNameObj = workbook.GetCell(0, c + 1, 0).Value;
+                string categoryName = categoryNameObj != null ? categoryNameObj.ToString() : $"Category{c + 1}";
+                csvBuilder.Append(categoryName);
+
+                // Append each series value for this category
+                for (int s = 0; s < seriesCount; s++)
                 {
-                    IChartSeries series = chart.ChartData.Series[s];
-                    StringBuilder lineBuilder = new StringBuilder();
-
-                    // Series identifier (you can replace with actual series name if available)
-                    lineBuilder.Append("Series" + s);
-
-                    for (int p = 0; p < series.DataPoints.Count; p++)
-                    {
-                        object rawValue = series.DataPoints[p].Value.Data;
-                        string valueString;
-
-                        IStringChartValue stringChartValue = rawValue as IStringChartValue;
-                        if (stringChartValue != null)
-                        {
-                            // Convert IStringChartValue to string
-                            valueString = stringChartValue.ToString();
-                        }
-                        else if (rawValue != null)
-                        {
-                            valueString = rawValue.ToString();
-                        }
-                        else
-                        {
-                            valueString = string.Empty;
-                        }
-
-                        lineBuilder.Append("," + valueString);
-                    }
-
-                    writer.WriteLine(lineBuilder.ToString());
+                    object cellValueObj = workbook.GetCell(0, c + 1, s + 1).Value;
+                    string cellValue = cellValueObj != null ? cellValueObj.ToString() : "";
+                    csvBuilder.Append(',').Append(cellValue);
                 }
+                csvBuilder.AppendLine();
             }
 
+            // Write CSV file to disk
+            File.WriteAllText(outputCsvPath, csvBuilder.ToString());
+
             // Save the presentation
-            pres.Save(outputPath, SaveFormat.Pptx);
-            pres.Dispose();
+            presentation.Save(outputPptxPath, Aspose.Slides.Export.SaveFormat.Pptx);
+
+            // Clean up
+            presentation.Dispose();
         }
     }
 }
