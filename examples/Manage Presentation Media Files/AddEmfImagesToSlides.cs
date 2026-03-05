@@ -3,7 +3,7 @@ using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-namespace AddEmfImage
+namespace AddEmfImagesToSlides
 {
     class Program
     {
@@ -15,23 +15,32 @@ namespace AddEmfImage
             // Get the first slide
             Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-            // Path to the EMF image file
-            string emfPath = "heading.emf";
+            // Path to the EMF image generated from an Excel sheet
+            string emfFilePath = "excel_sheet.emf";
+
+            // Open the EMF file as a stream
+            FileStream emfStream = new FileStream(emfFilePath, FileMode.Open, FileAccess.Read);
 
             // Add the EMF image to the presentation's image collection
-            Aspose.Slides.IPPImage emfImage;
-            using (FileStream emfStream = new FileStream(emfPath, FileMode.Open, FileAccess.Read))
-            {
-                emfImage = presentation.Images.AddImage(emfStream);
-            }
+            Aspose.Slides.IPPImage emfImage = presentation.Images.AddImage(emfStream);
 
-            // Insert the EMF image as a picture frame on the slide
-            Aspose.Slides.IPictureFrame pictureFrame = slide.Shapes.AddPictureFrame(
+            // Close the stream as it is no longer needed
+            emfStream.Close();
+
+            // Add the EMF image to the slide as a picture frame
+            slide.Shapes.AddPictureFrame(
                 Aspose.Slides.ShapeType.Rectangle,
-                50, 50, 400, 100, emfImage);
+                50f,   // X position
+                50f,   // Y position
+                400f,  // Width
+                300f,  // Height
+                emfImage);
 
-            // Save the presentation
-            presentation.Save("PresentationWithEmf.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            // Save the presentation in PPTX format
+            presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+
+            // Dispose the presentation object
+            presentation.Dispose();
         }
     }
 }
