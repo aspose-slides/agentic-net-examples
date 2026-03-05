@@ -8,8 +8,11 @@ class Program
         // Create a new presentation
         Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-        // Get the first layout slide from the presentation's layout collection
-        Aspose.Slides.ILayoutSlide layoutSlide = presentation.LayoutSlides[0];
+        // Get the first master slide from the presentation
+        Aspose.Slides.IMasterSlide masterSlide = presentation.Masters[0];
+
+        // Select a predefined layout slide from the master (e.g., the first layout)
+        Aspose.Slides.ILayoutSlide layoutSlide = masterSlide.LayoutSlides[0];
 
         // Add a new empty slide based on the selected layout
         Aspose.Slides.ISlide newSlide = presentation.Slides.AddEmptySlide(layoutSlide);
