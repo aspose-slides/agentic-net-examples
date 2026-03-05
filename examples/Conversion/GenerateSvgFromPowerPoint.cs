@@ -5,7 +5,7 @@ using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
         // Load the PowerPoint presentation
         Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation("input.pptx");
@@ -22,7 +22,10 @@ class Program
             }
         }
 
-        // Save the presentation before exiting (no modifications made)
+        // Save the presentation before exiting
         presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+
+        // Release resources
+        presentation.Dispose();
     }
 }
