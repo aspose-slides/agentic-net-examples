@@ -1,44 +1,31 @@
 using System;
-using System.IO;
-using System.Drawing.Imaging;
-using Aspose.Slides;
 
-namespace SlideToJpegExample
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
+        // Scaling factors for the thumbnail (full size)
+        int scaleX = 1;
+        int scaleY = scaleX;
+
+        // Path to the source PPTX file
+        System.String inputPath = "input.pptx";
+
+        // Load the presentation
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+
+        // Export each slide as a JPEG image
+        foreach (Aspose.Slides.ISlide slide in presentation.Slides)
         {
-            // Path to the source PPTX file
-            string sourcePath = "input.pptx";
-            // Directory to save JPEG images
-            string outputDir = "output";
-
-            // Ensure the output directory exists
-            if (!Directory.Exists(outputDir))
+            using (Aspose.Slides.IImage thumbnail = slide.GetImage(scaleX, scaleY))
             {
-                Directory.CreateDirectory(outputDir);
-            }
-
-            // Load the presentation
-            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(sourcePath))
-            {
-                // Iterate through all slides
-                for (int index = 0; index < presentation.Slides.Count; index++)
-                {
-                    Aspose.Slides.ISlide slide = presentation.Slides[index];
-                    // Render the slide to an image (full scale)
-                    using (Aspose.Slides.IImage image = slide.GetImage(1f, 1f))
-                    {
-                        string imagePath = Path.Combine(outputDir, $"Slide_{index + 1}.jpg");
-                        // Save the image as JPEG
-                        image.Save(imagePath, ImageFormat.Jpeg);
-                    }
-                }
-
-                // Save the presentation before exiting (even if unchanged)
-                presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+                System.String imageFileName = System.String.Format("Slide_{0}.jpg", slide.SlideNumber);
+                thumbnail.Save(imageFileName, Aspose.Slides.ImageFormat.Jpeg);
             }
         }
+
+        // Save the presentation (required by authoring rules)
+        presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        presentation.Dispose();
     }
 }
