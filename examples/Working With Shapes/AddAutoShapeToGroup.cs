@@ -13,16 +13,18 @@ class Program
         Aspose.Slides.ISlide slide = pres.Slides[0];
 
         // Add a group shape to the slide
-        Aspose.Slides.IGroupShape group = slide.Shapes.AddGroupShape();
+        Aspose.Slides.IGroupShape groupShape = slide.Shapes.AddGroupShape();
 
-        // Add initial auto shapes to the group
-        group.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 100, 100, 100, 50);
-        group.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Ellipse, 250, 100, 100, 50);
-
-        // Add another auto shape to the same group
-        group.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Triangle, 175, 200, 100, 80);
+        // Add an auto shape (rectangle) to the group shape
+        Aspose.Slides.IAutoShape autoShape = groupShape.Shapes.AddAutoShape(
+            Aspose.Slides.ShapeType.Rectangle,
+            100f,   // X position
+            100f,   // Y position
+            200f,   // Width
+            100f    // Height
+        );
 
         // Save the presentation
-        pres.Save("GroupShapeExample.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        pres.Save("GroupShapeWithAutoShape.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
