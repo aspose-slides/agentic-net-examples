@@ -6,26 +6,19 @@ class Program
 {
     static void Main()
     {
-        // Load the existing PPTX presentation
-        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation("input.pptx"))
-        {
-            // Iterate through all comment authors in the presentation
-            foreach (Aspose.Slides.ICommentAuthor commentAuthor in presentation.CommentAuthors)
-            {
-                // Iterate through each comment belonging to the current author
-                foreach (Aspose.Slides.IComment comment in commentAuthor.Comments)
-                {
-                    // Identify comments that need to be deleted (e.g., containing specific text)
-                    if (comment.Text != null && comment.Text.Contains("DeleteMe"))
-                    {
-                        // Remove the comment and all its replies from the slide
-                        comment.Remove();
-                    }
-                }
-            }
+        // Load the presentation from a PPTX file
+        Presentation presentation = new Presentation("input.pptx");
 
-            // Save the modified presentation before exiting
-            presentation.Save("output.pptx", SaveFormat.Pptx);
+        // Remove all comments by clearing each author's comment collection
+        foreach (ICommentAuthor author in presentation.CommentAuthors)
+        {
+            author.Comments.Clear();
         }
+
+        // Save the modified presentation
+        presentation.Save("output.pptx", SaveFormat.Pptx);
+
+        // Release resources
+        presentation.Dispose();
     }
 }
