@@ -14,18 +14,14 @@ namespace PowerPointToHtml
             // Path to the output HTML file
             string outputPath = "output.html";
 
-            // URL or path to the custom CSS file
-            string cssPath = "custom.css";
-
             // Load the presentation
-            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(sourcePath))
+            using (Presentation presentation = new Presentation(sourcePath))
             {
-                // Create HTML options with a custom formatter that uses the CSS file
-                Aspose.Slides.Export.HtmlOptions htmlOptions = new Aspose.Slides.Export.HtmlOptions();
-                htmlOptions.HtmlFormatter = Aspose.Slides.Export.HtmlFormatter.CreateDocumentFormatter(cssPath, true);
+                // Create HTML export options (default does not embed fonts)
+                HtmlOptions htmlOptions = new HtmlOptions();
 
-                // Save the presentation as HTML using the specified options
-                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Html, htmlOptions);
+                // Save the presentation as HTML without embedding fonts
+                presentation.Save(outputPath, SaveFormat.Html, htmlOptions);
             }
         }
     }
