@@ -9,19 +9,15 @@ class Program
         // Load the presentation from a file
         Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation("input.pptx");
 
-        // Get the slide collection
-        Aspose.Slides.ISlideCollection slides = presentation.Slides;
-
-        // Iterate through each slide by index
-        for (int i = 0; i < slides.Count; i++)
+        // Iterate through all slides in the presentation
+        foreach (Aspose.Slides.ISlide slide in presentation.Slides)
         {
-            Aspose.Slides.ISlide slide = slides[i];
-            Console.WriteLine("Processing slide index: " + i);
-            // Additional slide processing can be performed here
+            // Example operation: write a message for each slide
+            Console.WriteLine("Processing a slide.");
         }
 
         // Save the presentation before exiting
-        presentation.Save("output.pptx", SaveFormat.Pptx);
+        presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
 
         // Release resources
         presentation.Dispose();
