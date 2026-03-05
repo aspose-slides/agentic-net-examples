@@ -1,33 +1,29 @@
 using System;
+using Aspose.Slides;
 
 class Program
 {
     static void Main()
     {
-        // Input and output file paths
-        string inputPath = "AccessBuiltinProperties.pptx";
-        string outputPath = "DocumentProperties_out.pptx";
+        // Create a new presentation
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-        // Load the presentation
-        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
-        {
-            // Get built‑in document properties
-            Aspose.Slides.IDocumentProperties documentProperties = presentation.DocumentProperties;
+        // Access and modify document properties
+        Aspose.Slides.IDocumentProperties docProps = presentation.DocumentProperties;
+        docProps.Author = "John Doe";
+        docProps.Title = "Managed Presentation";
+        docProps.Subject = "Aspose.Slides Demo";
+        docProps.Comments = "Created using Aspose.Slides for .NET";
 
-            // Display current built‑in properties
-            Console.WriteLine("Author : " + documentProperties.Author);
-            Console.WriteLine("Title : " + documentProperties.Title);
-            Console.WriteLine("Subject : " + documentProperties.Subject);
-            Console.WriteLine("Comments : " + documentProperties.Comments);
+        // Get the first slide
+        Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-            // Modify built‑in properties
-            documentProperties.Author = "Aspose.Slides for .NET";
-            documentProperties.Title = "Managing Presentation Properties";
-            documentProperties.Subject = "Built‑in Properties Example";
-            documentProperties.Comments = "Updated by example code";
+        // Add a rectangle shape with text
+        Aspose.Slides.IAutoShape autoShape = slide.Shapes.AddAutoShape(
+            Aspose.Slides.ShapeType.Rectangle, 50, 50, 400, 100);
+        autoShape.TextFrame.Text = "Hello Aspose.Slides!";
 
-            // Save the presentation (PPTX format)
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
-        }
+        // Save the presentation
+        presentation.Save("ManagedPresentation.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
