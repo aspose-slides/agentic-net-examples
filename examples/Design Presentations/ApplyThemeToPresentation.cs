@@ -1,22 +1,24 @@
 using System;
+using Aspose.Slides;
+using Aspose.Slides.Theme;
+using Aspose.Slides.Export;
 
-namespace ApplyThemeExample
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
-        {
-            // Path to the external theme file (.thmx)
-            string themePath = "example.thmx";
+        // Create a new presentation
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-            // Create a new presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        // Apply an external theme to the first master slide and to all dependent slides
+        Aspose.Slides.IMasterSlide masterSlide = presentation.Masters[0];
+        Aspose.Slides.IMasterSlide themedMaster = masterSlide.ApplyExternalThemeToDependingSlides("MyTheme.thmx");
 
-            // Apply the external theme to the first master slide and all its dependent slides
-            Aspose.Slides.IMasterSlide themedMaster = presentation.Masters[0].ApplyExternalThemeToDependingSlides(themePath);
+        // Modify a property of the master theme (example: change line style color)
+        Aspose.Slides.Theme.IMasterTheme masterTheme = presentation.MasterTheme;
+        masterTheme.FormatScheme.LineStyles[0].FillFormat.SolidFillColor.Color = System.Drawing.Color.Blue;
 
-            // Save the themed presentation
-            presentation.Save("ThemedPresentation.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
-        }
+        // Save the presentation before exiting
+        presentation.Save("ThemedPresentation.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
