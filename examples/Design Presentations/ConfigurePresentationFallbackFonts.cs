@@ -1,34 +1,30 @@
 using System;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-namespace AsposeSlidesExample
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
-        {
-            // Create a new empty presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        // Create a new presentation
+        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation();
 
-            // Get the existing fallback rules collection from the FontsManager
-            Aspose.Slides.IFontFallBackRulesCollection fallbackRules = presentation.FontsManager.FontFallBackRulesCollection;
+        // Create a collection for font fallback rules
+        Aspose.Slides.IFontFallBackRulesCollection rules = new Aspose.Slides.FontFallBackRulesCollection();
 
-            // Create a new fallback rule for Unicode range 0x0400-0x04FF with primary fallback font
-            Aspose.Slides.IFontFallBackRule newRule = new Aspose.Slides.FontFallBackRule(0x0400, 0x04FF, "Times New Roman");
+        // Add a fallback rule for Unicode range 0x400-0x4FF using Times New Roman
+        rules.Add(new Aspose.Slides.FontFallBackRule(0x400, 0x4FF, "Times New Roman"));
 
-            // Add additional fallback fonts to the rule
-            newRule.AddFallBackFonts("Arial");
-            newRule.AddFallBackFonts(new string[] { "Tahoma", "Calibri" });
+        // Assign the fallback rules to the presentation's FontsManager
+        pres.FontsManager.FontFallBackRulesCollection = rules;
 
-            // Add the rule to the collection
-            fallbackRules.Add(newRule);
+        // Render the first slide to an image with default scaling
+        Aspose.Slides.IImage img = pres.Slides[0].GetImage(1f, 1f);
 
-            // Assign the modified collection back to the FontsManager (optional if collection is mutable)
-            presentation.FontsManager.FontFallBackRulesCollection = fallbackRules;
+        // Save the rendered slide as a PNG file
+        img.Save("slide.png", Aspose.Slides.ImageFormat.Png);
+        img.Dispose();
 
-            // Save the presentation before exiting
-            presentation.Save("FallbackFonts.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
-        }
+        // Save the presentation before exiting
+        pres.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        pres.Dispose();
     }
 }
