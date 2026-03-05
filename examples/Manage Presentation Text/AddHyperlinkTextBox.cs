@@ -12,28 +12,28 @@ class Program
         // Get the first slide
         Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-        // Add a rectangle AutoShape to act as a text box
+        // Add a rectangle auto shape
         Aspose.Slides.IShape shape = slide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 150, 150, 150, 50);
 
-        // Cast the shape to IAutoShape to access text-related methods
+        // Cast the shape to AutoShape
         Aspose.Slides.IAutoShape autoShape = (Aspose.Slides.IAutoShape)shape;
 
-        // Add an empty TextFrame to the shape
+        // Add a text frame to the shape
         autoShape.AddTextFrame("");
 
-        // Access the TextFrame
+        // Access the text frame
         Aspose.Slides.ITextFrame textFrame = autoShape.TextFrame;
 
-        // Set the display text for the hyperlink
+        // Set the text for the first portion
         textFrame.Paragraphs[0].Portions[0].Text = "Aspose.Slides";
 
-        // Obtain the HyperlinkManager for the text portion
+        // Get the hyperlink manager for the portion
         Aspose.Slides.IHyperlinkManager hyperlinkManager = textFrame.Paragraphs[0].Portions[0].PortionFormat.HyperlinkManager;
 
-        // Assign an external hyperlink to the text
+        // Set an external hyperlink on click
         hyperlinkManager.SetExternalHyperlinkClick("http://www.aspose.com");
 
-        // Save the presentation as PPTX
-        presentation.Save("TextBoxWithHyperlink_out.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        // Save the presentation
+        presentation.Save("HyperlinkPresentation_out.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
