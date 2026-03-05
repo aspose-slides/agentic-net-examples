@@ -13,16 +13,16 @@ class Program
         Aspose.Slides.ISlide slide = presentation.Slides[0];
 
         // Add a rectangle auto shape
-        Aspose.Slides.IAutoShape autoShape = slide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 100, 100, 300, 100);
+        Aspose.Slides.IAutoShape autoShape = slide.Shapes.AddAutoShape(ShapeType.Rectangle, 100, 100, 300, 100);
 
-        // Add a text frame with initial text
+        // Add a text frame to the shape
         Aspose.Slides.ITextFrame textFrame = autoShape.AddTextFrame("Rotated Text");
 
-        // Set custom rotation angle for the text within the text frame (e.g., 45 degrees)
+        // Set custom rotation angle for the text within the text frame
         Aspose.Slides.ITextFrameFormat textFormat = textFrame.TextFrameFormat;
-        textFormat.RotationAngle = 45f;
+        textFormat.RotationAngle = 45f; // Rotate text 45 degrees
 
         // Save the presentation
-        presentation.Save("CustomTextRotation.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        presentation.Save("CustomTextRotation.pptx", SaveFormat.Pptx);
     }
 }
