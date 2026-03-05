@@ -1,30 +1,25 @@
 using System;
+using System.IO;
 
-namespace PresentationToResponsiveHtml
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
+        // Load the presentation from a file
+        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation("input.pptx"))
         {
-            // Path to the source presentation
-            string inputPath = "input.pptx";
-            // Path to the generated HTML file
-            string outputPath = "output.html";
+            // Create HTML export options
+            Aspose.Slides.Export.HtmlOptions htmlOptions = new Aspose.Slides.Export.HtmlOptions();
 
-            // Load the presentation from file
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+            // Configure slide image format to SVG
+            Aspose.Slides.Export.SVGOptions svgOptions = new Aspose.Slides.Export.SVGOptions();
+            htmlOptions.SlideImageFormat = Aspose.Slides.Export.SlideImageFormat.Svg(svgOptions);
 
-            // Set up HTML5 export options for a responsive layout
-            Aspose.Slides.Export.Html5Options htmlOptions = new Aspose.Slides.Export.Html5Options();
-            Aspose.Slides.Export.HandoutLayoutingOptions layoutOptions = new Aspose.Slides.Export.HandoutLayoutingOptions();
-            layoutOptions.Handout = Aspose.Slides.Export.HandoutType.Handouts4Horizontal;
-            htmlOptions.SlidesLayoutOptions = layoutOptions;
+            // Enable responsive layout (remove width/height attributes from SVG)
+            htmlOptions.SvgResponsiveLayout = true;
 
-            // Save the presentation as responsive HTML5
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Html5, htmlOptions);
-
-            // Release resources
-            presentation.Dispose();
+            // Save the presentation as responsive HTML
+            presentation.Save("output.html", Aspose.Slides.Export.SaveFormat.Html, htmlOptions);
         }
     }
 }
