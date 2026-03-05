@@ -1,5 +1,6 @@
 using System;
 using Aspose.Slides;
+using Aspose.Slides.Export;
 
 class Program
 {
@@ -19,12 +20,7 @@ class Program
 
         // Create a new paragraph
         Aspose.Slides.IParagraph newParagraph = new Aspose.Slides.Paragraph();
-
-        // Create a portion with the desired text
-        Aspose.Slides.IPortion newPortion = new Aspose.Slides.Portion("This is a new paragraph.");
-
-        // Add the portion to the paragraph
-        newParagraph.Portions.Add(newPortion);
+        newParagraph.Text = "This is a new paragraph.";
 
         // Add the new paragraph to the TextFrame
         textFrame.Paragraphs.Add(newParagraph);
