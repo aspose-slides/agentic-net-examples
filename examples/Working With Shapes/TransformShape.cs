@@ -5,33 +5,39 @@ class Program
 {
     static void Main()
     {
-        // Create a new presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        // Input and output file paths
+        string inputPath = "input.pptx";
+        string outputPath = "output.pptx";
+
+        // Load the source presentation
+        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
 
         // Get the first slide
-        Aspose.Slides.ISlide slide = presentation.Slides[0];
+        Aspose.Slides.ISlide srcSlide = pres.Slides[0];
 
-        // Add a rectangle auto shape
-        Aspose.Slides.IAutoShape shape = (Aspose.Slides.IAutoShape)slide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 50, 50, 200, 100);
+        // Add a rectangle shape to the source slide
+        Aspose.Slides.IShape shape = srcSlide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 100f, 100f, 200f, 100f);
 
-        // Move the shape to a new position
-        shape.X = 150;
-        shape.Y = 150;
+        // Move the shape
+        shape.X = 150f;
+        shape.Y = 150f;
 
-        // Rotate the shape by 45 degrees
-        shape.Rotation = 45;
+        // Rotate the shape
+        shape.Rotation = 45f;
 
-        // Scale the shape by 150%
+        // Scale the shape (increase size by 1.5 times)
         shape.Width = shape.Width * 1.5f;
         shape.Height = shape.Height * 1.5f;
 
-        // Clone the shape and place the clone at a different location
-        Aspose.Slides.IShape clonedShape = slide.Shapes.AddClone(shape, 400, 150);
+        // Create a blank layout slide for cloning
+        Aspose.Slides.ILayoutSlide blankLayout = pres.Masters[0].LayoutSlides.GetByType(Aspose.Slides.SlideLayoutType.Blank);
+        Aspose.Slides.ISlide destSlide = pres.Slides.AddEmptySlide(blankLayout);
 
-        // Bring the cloned shape to the front
-        slide.Shapes.Reorder(slide.Shapes.Count - 1, clonedShape);
+        // Clone the transformed shape onto the new slide at a specific position
+        Aspose.Slides.IShape clonedShape = destSlide.Shapes.AddClone(shape, 300f, 200f);
 
-        // Save the presentation
-        presentation.Save("ShapeOperations_out.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        // Save the modified presentation
+        pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+        pres.Dispose();
     }
 }
