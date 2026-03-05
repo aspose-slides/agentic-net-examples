@@ -1,5 +1,6 @@
 using System;
 using Aspose.Slides;
+using Aspose.Slides.Export;
 
 class Program
 {
@@ -11,10 +12,10 @@ class Program
         // Get the first master slide
         Aspose.Slides.IMasterSlide masterSlide = presentation.Masters[0];
 
-        // Add a new layout slide to the master slide
-        Aspose.Slides.ILayoutSlide newLayout = masterSlide.LayoutSlides.Add(Aspose.Slides.SlideLayoutType.Title, "CustomTitleLayout");
+        // Add a new custom layout slide to the master
+        Aspose.Slides.ILayoutSlide newLayout = masterSlide.LayoutSlides.Add(Aspose.Slides.SlideLayoutType.Custom, "MyCustomLayout");
 
         // Save the presentation
-        presentation.Save("AddLayoutSlide.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        presentation.Save("AddLayout.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
