@@ -1,34 +1,48 @@
 using System;
+using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-class Program
+namespace AddLinkedOleObjectFrames
 {
-    static void Main()
+    class Program
     {
-        // Create a new presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        static void Main(string[] args)
+        {
+            // Output directory
+            string outDir = "Output";
+            if (!Directory.Exists(outDir))
+                Directory.CreateDirectory(outDir);
 
-        // Access the first slide
-        Aspose.Slides.ISlide slide = presentation.Slides[0];
+            // Create a new presentation
+            Presentation presentation = new Presentation();
 
-        // Define position and size for the OLE object frame
-        float x = 50f;
-        float y = 50f;
-        float width = 400f;
-        float height = 300f;
+            // Access the first slide
+            ISlide slide = presentation.Slides[0];
 
-        // Define the OLE class name (ProgID) and the path to the linked file
-        string className = "Excel.Sheet";
-        string linkedFilePath = "sample.xlsx";
+            // Define the OLE object class name and the path to the linked file
+            // Example: linking an Excel workbook
+            string oleClassName = "Excel.Sheet";
+            string linkedFilePath = @"C:\Temp\sample.xlsx";
 
-        // Add a linked OLE object frame to the slide
-        Aspose.Slides.IOleObjectFrame oleFrame = slide.Shapes.AddOleObjectFrame(x, y, width, height, className, linkedFilePath);
+            // Add a linked OLE object frame to the slide
+            IOleObjectFrame oleObjectFrame = slide.Shapes.AddOleObjectFrame(
+                50,    // X position (points)
+                50,    // Y position (points)
+                400,   // Width (points)
+                300,   // Height (points)
+                oleClassName,
+                linkedFilePath);
 
-        // Set the object to update automatically when the presentation is opened
-        oleFrame.UpdateAutomatic = true;
+            // Optional: display the OLE object as an icon
+            oleObjectFrame.IsObjectIcon = false;
 
-        // Save the presentation in PPT format
-        presentation.Save("LinkedOleObject.ppt", SaveFormat.Ppt);
+            // Save the presentation in PPT format
+            string outputPath = Path.Combine(outDir, "LinkedOleObject.ppt");
+            presentation.Save(outputPath, SaveFormat.Ppt);
+
+            // Dispose the presentation
+            presentation.Dispose();
+        }
     }
 }
