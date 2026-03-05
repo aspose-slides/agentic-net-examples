@@ -1,6 +1,5 @@
 using System;
 using Aspose.Slides;
-using Aspose.Slides.Export;
 
 class Program
 {
@@ -9,21 +8,26 @@ class Program
         // Create a new presentation
         Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-        // Get the first slide
+        // Get the first (default) slide
         Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-        // Add a rectangle shape to the slide (x=100, y=100, width=200, height=100)
-        Aspose.Slides.IShape shape = slide.Shapes.AddAutoShape(ShapeType.Rectangle, 100f, 100f, 200f, 100f);
+        // Add a rectangle shape to the slide
+        Aspose.Slides.IShape shape = slide.Shapes.AddAutoShape(
+            Aspose.Slides.ShapeType.Rectangle,
+            100,   // X position
+            100,   // Y position
+            200,   // Width
+            100    // Height
+        );
 
-        // Store original dimensions
-        float originalWidth = shape.Width;
-        float originalHeight = shape.Height;
+        // Define a scaling factor
+        float scaleFactor = 1.5f;
 
-        // Scale the shape: increase width by 50% and height by 75%
-        shape.Width = originalWidth * 1.5f;
-        shape.Height = originalHeight * 1.75f;
+        // Scale the shape's width and height
+        shape.Width = shape.Width * scaleFactor;
+        shape.Height = shape.Height * scaleFactor;
 
         // Save the presentation
-        presentation.Save("ScaledShape.pptx", SaveFormat.Pptx);
+        presentation.Save("ScaledShape.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
