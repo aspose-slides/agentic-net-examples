@@ -1,6 +1,6 @@
+using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
-using System.Drawing;
 
 class Program
 {
@@ -12,52 +12,51 @@ class Program
         // Get the first slide
         Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-        // Add a table with 2 columns and 2 rows
-        double[] columnWidths = new double[] { 150, 150 };
-        double[] rowHeights = new double[] { 50, 50 };
-        Aspose.Slides.ITable table = slide.Shapes.AddTable(50, 50, columnWidths, rowHeights) as Aspose.Slides.ITable;
+        // Add a rectangle auto shape to hold the FAQ
+        Aspose.Slides.IAutoShape faqShape = slide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 50, 50, 600, 400);
 
-        if (table != null)
-        {
-            // Create a PortionFormat and set font height
-            Aspose.Slides.PortionFormat portionFormat = new Aspose.Slides.PortionFormat();
-            portionFormat.FontHeight = 24f;
+        // Add a text frame with a title
+        faqShape.AddTextFrame("Frequently Asked Questions");
 
-            // Apply the portion format to the first column
-            table.Columns[0].SetTextFormat(portionFormat);
+        // Access the text frame
+        Aspose.Slides.ITextFrame textFrame = faqShape.TextFrame;
 
-            // Create a ParagraphFormat and set alignment and right margin
-            Aspose.Slides.ParagraphFormat paragraphFormat = new Aspose.Slides.ParagraphFormat();
-            paragraphFormat.Alignment = Aspose.Slides.TextAlignment.Right;
-            paragraphFormat.MarginRight = 5f;
+        // Remove the default paragraph (the title placeholder)
+        textFrame.Paragraphs.RemoveAt(0);
 
-            // Apply the paragraph format to the first column
-            table.Columns[0].SetTextFormat(paragraphFormat);
+        // First question
+        Aspose.Slides.Paragraph question1 = new Aspose.Slides.Paragraph();
+        question1.ParagraphFormat.Bullet.Type = Aspose.Slides.BulletType.Symbol;
+        question1.ParagraphFormat.Bullet.Char = System.Convert.ToChar(8226); // bullet character
+        question1.Text = "What is Aspose.Slides?";
+        question1.ParagraphFormat.Indent = 20;
+        question1.ParagraphFormat.Bullet.Color.Color = System.Drawing.Color.Black;
+        question1.ParagraphFormat.Bullet.IsBulletHardColor = Aspose.Slides.NullableBool.True;
+        textFrame.Paragraphs.Add(question1);
 
-            // Create a TextFrameFormat and set vertical text type
-            Aspose.Slides.TextFrameFormat textFrameFormat = new Aspose.Slides.TextFrameFormat();
-            textFrameFormat.TextVerticalType = Aspose.Slides.TextVerticalType.Vertical;
+        // Answer to first question
+        Aspose.Slides.Paragraph answer1 = new Aspose.Slides.Paragraph();
+        answer1.Text = "Aspose.Slides is a .NET library for creating and manipulating PowerPoint files.";
+        answer1.ParagraphFormat.Indent = 40;
+        textFrame.Paragraphs.Add(answer1);
 
-            // Apply the text frame format to the second column
-            table.Columns[1].SetTextFormat(textFrameFormat);
-        }
+        // Second question
+        Aspose.Slides.Paragraph question2 = new Aspose.Slides.Paragraph();
+        question2.ParagraphFormat.Bullet.Type = Aspose.Slides.BulletType.Symbol;
+        question2.ParagraphFormat.Bullet.Char = System.Convert.ToChar(8226);
+        question2.Text = "How to add a shape?";
+        question2.ParagraphFormat.Indent = 20;
+        question2.ParagraphFormat.Bullet.Color.Color = System.Drawing.Color.Black;
+        question2.ParagraphFormat.Bullet.IsBulletHardColor = Aspose.Slides.NullableBool.True;
+        textFrame.Paragraphs.Add(question2);
 
-        // Add an AutoShape to demonstrate correct usage of read‑only PortionFormat
-        Aspose.Slides.IAutoShape autoShape = slide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 300, 50, 200, 100);
-        autoShape.AddTextFrame("Sample FAQ");
+        // Answer to second question
+        Aspose.Slides.Paragraph answer2 = new Aspose.Slides.Paragraph();
+        answer2.Text = "Use slide.Shapes.AddAutoShape with the desired ShapeType and dimensions.";
+        answer2.ParagraphFormat.Indent = 40;
+        textFrame.Paragraphs.Add(answer2);
 
-        // Access the first portion of the text frame
-        Aspose.Slides.IPortion portion = autoShape.TextFrame.Paragraphs[0].Portions[0];
-
-        // Modify properties of the read‑only PortionFormat (the object itself is mutable)
-        portion.PortionFormat.FontHeight = 18f;
-        portion.PortionFormat.FontBold = Aspose.Slides.NullableBool.True;
-        portion.PortionFormat.LanguageId = "en-US";
-
-        // Save the presentation in PPTX format
-        presentation.Save("FAQ_Output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
-
-        // Dispose the presentation
-        presentation.Dispose();
+        // Save the presentation before exiting
+        presentation.Save("FaqPresentation.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
