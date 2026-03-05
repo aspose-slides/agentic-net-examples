@@ -6,31 +6,34 @@ class Program
 {
     static void Main()
     {
-        // Load an existing presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation("input.pptx");
+        // Input and output file paths
+        string inputPath = "input.pptx";
+        string outputPath = "output.pptx";
 
-        // Access the first slide (adjust index as needed)
-        Aspose.Slides.ISlide slide = presentation.Slides[0];
+        // Load the presentation
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
 
-        // Find the index of the first table shape on the slide
-        int tableShapeIndex = -1;
-        for (int i = 0; i < slide.Shapes.Count; i++)
+        // Iterate through all slides
+        for (int slideIndex = 0; slideIndex < presentation.Slides.Count; slideIndex++)
         {
-            if (slide.Shapes[i] is Aspose.Slides.ITable)
+            Aspose.Slides.ISlide slide = presentation.Slides[slideIndex];
+
+            // Iterate through shapes in reverse order to safely remove items
+            for (int shapeIndex = slide.Shapes.Count - 1; shapeIndex >= 0; shapeIndex--)
             {
-                tableShapeIndex = i;
-                break;
+                Aspose.Slides.IShape shape = slide.Shapes[shapeIndex];
+                Aspose.Slides.ITable table = shape as Aspose.Slides.ITable;
+
+                // If the shape is a table, remove it from the slide
+                if (table != null)
+                {
+                    slide.Shapes.RemoveAt(shapeIndex);
+                }
             }
         }
 
-        // If a table was found, remove it from the slide
-        if (tableShapeIndex != -1)
-        {
-            slide.Shapes.RemoveAt(tableShapeIndex);
-        }
-
         // Save the modified presentation
-        presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
 
         // Release resources
         presentation.Dispose();
