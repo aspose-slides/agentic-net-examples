@@ -4,20 +4,11 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Input PowerPoint file path
-        string inputPath = "input.pptx";
-        // Output HTML file path
-        string outputPath = "output.html";
-
-        // Load the presentation
-        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
-        {
-            // Set HTML export options to remove cropped picture areas
-            Aspose.Slides.Export.HtmlOptions htmlOptions = new Aspose.Slides.Export.HtmlOptions();
-            htmlOptions.DeletePicturesCroppedAreas = true;
-
-            // Save the presentation as HTML with the specified options
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Html, htmlOptions);
-        }
+        // Load the PowerPoint presentation
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation("input.pptx");
+        // Convert and save to HTML using default image DPI (72)
+        presentation.Save("output.html", Aspose.Slides.Export.SaveFormat.Html);
+        // Release resources
+        presentation.Dispose();
     }
 }
