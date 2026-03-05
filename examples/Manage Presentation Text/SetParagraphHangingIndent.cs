@@ -1,29 +1,32 @@
 using System;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 class Program
 {
     static void Main()
     {
-        // Create a new presentation
-        var presentation = new Aspose.Slides.Presentation();
+        // Path to the source PPTX file
+        string sourcePath = "InputPresentation.pptx";
 
-        // Access the first slide
-        var slide = presentation.Slides[0];
+        // Load the presentation
+        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(sourcePath))
+        {
+            // Get the first slide
+            Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-        // Add a rectangle auto shape with a text frame
-        var shape = slide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 50, 50, 400, 100);
-        shape.AddTextFrame("This is a sample paragraph.");
+            // Assume the first shape on the slide is an AutoShape with a text frame
+            Aspose.Slides.IAutoShape autoShape = (Aspose.Slides.IAutoShape)slide.Shapes[0];
 
-        // Get the first paragraph of the text frame
-        var textFrame = shape.TextFrame;
-        var paragraph = textFrame.Paragraphs[0];
+            // Access the text frame of the shape
+            Aspose.Slides.ITextFrame textFrame = autoShape.TextFrame;
 
-        // Set hanging indent (negative value) for the paragraph
-        paragraph.ParagraphFormat.Indent = -30f;
+            // Get the first paragraph in the text frame
+            Aspose.Slides.IParagraph paragraph = textFrame.Paragraphs[0];
 
-        // Save the presentation
-        presentation.Save("HangingIndent_out.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            // Set a hanging indent (negative value) for the paragraph
+            paragraph.ParagraphFormat.Indent = -30f; // 30 points hanging indent
+
+            // Save the modified presentation
+            presentation.Save("OutputPresentation.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        }
     }
 }
