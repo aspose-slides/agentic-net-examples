@@ -1,12 +1,10 @@
 using System;
 using System.IO;
 using System.Drawing;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
         // Create a new presentation
         Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
@@ -14,28 +12,24 @@ class Program
         // Get the first slide
         Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-        // Load an image from file and add it to the presentation's image collection
-        FileStream imageStream = new FileStream("sample.jpg", FileMode.Open, FileAccess.Read);
-        Aspose.Slides.IPPImage image = presentation.Images.AddImage(imageStream);
-        imageStream.Close();
+        // Load an image from file
+        string imagePath = Path.Combine(Directory.GetCurrentDirectory(), "sample.jpg");
+        Aspose.Slides.IImage image = Aspose.Slides.Images.FromFile(imagePath);
+        Aspose.Slides.IPPImage imgx = presentation.Images.AddImage(image);
 
-        // Add a picture frame to the slide
+        // Add a picture frame containing the image
         Aspose.Slides.IPictureFrame pictureFrame = slide.Shapes.AddPictureFrame(
-            ShapeType.Rectangle, // shape type
-            100,                 // X position (points)
-            100,                 // Y position (points)
-            300,                 // width (points)
-            200,                 // height (points)
-            image);              // image to display
+            Aspose.Slides.ShapeType.Rectangle,
+            50, 50,
+            imgx.Width, imgx.Height,
+            imgx);
 
-        // Set the line (border) color of the picture frame to red
-        pictureFrame.LineFormat.FillFormat.FillType = FillType.Solid;
+        // Set the line color of the picture frame to Red and define line width
+        pictureFrame.LineFormat.FillFormat.FillType = Aspose.Slides.FillType.Solid;
         pictureFrame.LineFormat.FillFormat.SolidFillColor.Color = Color.Red;
+        pictureFrame.LineFormat.Width = 5;
 
-        // Save the presentation to a file
-        presentation.Save("output.pptx", SaveFormat.Pptx);
-
-        // Clean up
-        presentation.Dispose();
+        // Save the presentation
+        presentation.Save("SetPictureFrameLineColor_out.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
