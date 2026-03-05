@@ -8,21 +8,20 @@ class Program
     static void Main()
     {
         // Create a new presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        Presentation presentation = new Presentation();
 
         // Get the first slide
-        Aspose.Slides.ISlide slide = presentation.Slides[0];
+        ISlide slide = presentation.Slides[0];
 
-        // Path to the local video file
-        string videoPath = "sample.mp4";
-
-        // Add a video frame to the slide, embedding the video
-        Aspose.Slides.IVideoFrame videoFrame = slide.Shapes.AddVideoFrame(50, 150, 300, 350, videoPath);
-
-        // Set playback mode (optional)
-        videoFrame.PlayMode = Aspose.Slides.VideoPlayModePreset.Auto;
+        // Add video to the presentation from a file stream
+        using (FileStream videoStream = new FileStream("sample.mp4", FileMode.Open, FileAccess.Read))
+        {
+            IVideo video = presentation.Videos.AddVideo(videoStream, LoadingStreamBehavior.KeepLocked);
+            // Add a video frame to the slide using the IVideo object
+            IVideoFrame videoFrame = slide.Shapes.AddVideoFrame(50f, 150f, 300f, 350f, video);
+        }
 
         // Save the presentation
-        presentation.Save("VideoPresentation.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        presentation.Save("VideoPresentation_out.pptx", SaveFormat.Pptx);
     }
 }
