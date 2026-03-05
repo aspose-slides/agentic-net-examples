@@ -1,17 +1,25 @@
 using System;
+using System.IO;
+using Aspose.Slides;
+using Aspose.Slides.Export;
 
-class Program
+namespace MyApp
 {
-    static void Main(string[] args)
+    class Program
     {
-        // Path to the template PPTX file
-        string templatePath = "Template.pptx";
-
-        // Load the presentation from the template file
-        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(templatePath))
+        static void Main(string[] args)
         {
+            // Open the PPTX file as a stream
+            FileStream inputStream = new FileStream("input.pptx", FileMode.Open, FileAccess.Read);
+            // Initialize presentation from the stream
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputStream);
+            // Close the input stream as it is no longer needed
+            inputStream.Close();
+
             // Save the presentation to a new file
-            presentation.Save("Output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            // Dispose the presentation object
+            presentation.Dispose();
         }
     }
 }
