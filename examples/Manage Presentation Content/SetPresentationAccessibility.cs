@@ -2,37 +2,37 @@ using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-namespace PresentationAccessibilityDemo
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            // Create a new presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        // Create a new presentation
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-            // Access the first slide
-            Aspose.Slides.ISlide slide = presentation.Slides[0];
+        // Set document properties to improve accessibility metadata
+        Aspose.Slides.IDocumentProperties docProps = presentation.DocumentProperties;
+        docProps.Title = "Accessible Presentation";
+        docProps.Subject = "Demonstrates accessibility features";
+        docProps.Author = "John Doe";
 
-            // Add a rectangle shape to the slide
-            Aspose.Slides.IShape shape = slide.Shapes.AddAutoShape(
-                Aspose.Slides.ShapeType.Rectangle,
-                100, 100, 200, 100);
+        // Access the first slide
+        Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-            // Set alternative text for accessibility
-            shape.AlternativeText = "Rectangle shape for accessibility";
+        // Add a rectangle shape with alternative text for screen readers
+        Aspose.Slides.IShape shape = slide.Shapes.AddAutoShape(
+            Aspose.Slides.ShapeType.Rectangle,
+            100, 100, 300, 150);
+        shape.AlternativeText = "Important information box";
 
-            // Set document properties (metadata)
-            Aspose.Slides.IDocumentProperties docProps = presentation.DocumentProperties;
-            docProps.Title = "Accessible Presentation";
-            docProps.Subject = "Demo of accessibility features";
-            docProps.Author = "Aspose.Slides Example";
+        // Add presenter notes to the slide
+        Aspose.Slides.INotesSlideManager notesMgr = slide.NotesSlideManager;
+        Aspose.Slides.INotesSlide notesSlide = notesMgr.AddNotesSlide();
+        notesSlide.NotesTextFrame.Text = "Slide notes: Explain the content of the rectangle.";
 
-            // Save the presentation
-            presentation.Save("AccessiblePresentation.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        // Save the presentation before exiting
+        presentation.Save("AccessiblePresentation.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
 
-            // Clean up
-            presentation.Dispose();
-        }
+        // Clean up resources
+        presentation.Dispose();
     }
 }
