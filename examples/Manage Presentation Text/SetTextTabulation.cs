@@ -1,46 +1,33 @@
 using System;
-using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-namespace SetTextTabulationExample
+namespace SetTextTabulation
 {
     class Program
     {
-        static void Main()
+        static void Main(string[] args)
         {
-            // Define output directory and file name
-            System.String outputDir = "Output";
-            if (!System.IO.Directory.Exists(outputDir))
-                System.IO.Directory.CreateDirectory(outputDir);
-            System.String outPath = System.IO.Path.Combine(outputDir, "SetTextTabulation_out.pptx");
-
             // Create a new presentation
             Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
             // Access the first slide
             Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-            // Add a rectangle AutoShape
-            Aspose.Slides.IAutoShape shape = slide.Shapes.AddAutoShape(
-                Aspose.Slides.ShapeType.Rectangle, 100, 100, 400, 200);
+            // Add a rectangle shape with a text frame
+            Aspose.Slides.IAutoShape shape = (Aspose.Slides.IAutoShape)slide.Shapes.AddAutoShape(
+                Aspose.Slides.ShapeType.Rectangle, 50, 100, 400, 100);
+            shape.AddTextFrame("Item1\tItem2\tItem3");
 
-            // Add a TextFrame with tab-separated text
-            shape.AddTextFrame("Column1\tColumn2\tColumn3");
-
-            // Access the first paragraph of the TextFrame
+            // Get the first paragraph of the text frame
             Aspose.Slides.IParagraph paragraph = shape.TextFrame.Paragraphs[0];
 
-            // Add tab stops at desired positions (in points) with left alignment
-            paragraph.ParagraphFormat.Tabs.Add(100.0, Aspose.Slides.TabAlignment.Left);
-            paragraph.ParagraphFormat.Tabs.Add(200.0, Aspose.Slides.TabAlignment.Left);
-            paragraph.ParagraphFormat.Tabs.Add(300.0, Aspose.Slides.TabAlignment.Left);
+            // Add a tab at position 100 points, left-aligned
+            Aspose.Slides.ITabCollection tabs = paragraph.ParagraphFormat.Tabs;
+            tabs.Add(new Aspose.Slides.Tab(100.0, Aspose.Slides.TabAlignment.Left));
 
-            // Save the presentation to the specified path
-            presentation.Save(outPath, Aspose.Slides.Export.SaveFormat.Pptx);
-
-            // Dispose the presentation object
-            presentation.Dispose();
+            // Save the presentation
+            presentation.Save("SetTab_out.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
         }
     }
 }
