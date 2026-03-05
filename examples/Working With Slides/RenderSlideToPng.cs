@@ -1,34 +1,35 @@
 using System;
+using System.Drawing.Imaging;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-namespace RenderSlideToPng
+namespace SlideToPngExample
 {
     class Program
     {
         static void Main(string[] args)
         {
             // Path to the source PPTX file
-            System.String inputPath = "input.pptx";
-            // Format string for output PNG files
-            System.String outputFormat = "slide_{0}.png";
+            string sourcePath = "input.pptx";
+            // Path for the output PNG file of the specific slide
+            string outputPath = "slide_1.png";
 
             // Load the presentation
-            Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
-
-            // Iterate through all slides and export each as PNG
-            for (int index = 0; index < pres.Slides.Count; index++)
+            using (Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(sourcePath))
             {
-                Aspose.Slides.ISlide slide = pres.Slides[index];
+                // Get the first slide (index 0)
+                Aspose.Slides.ISlide slide = pres.Slides[0];
+
+                // Render the slide to an image
                 using (Aspose.Slides.IImage image = slide.GetImage())
                 {
-                    System.String outputPath = System.String.Format(outputFormat, index);
-                    image.Save(outputPath, Aspose.Slides.ImageFormat.Png);
+                    // Save the image as PNG
+                    image.Save(outputPath, ImageFormat.Png);
                 }
-            }
 
-            // Save the presentation (no modifications) before exiting
-            pres.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+                // Save the presentation before exiting (as required)
+                pres.Save(sourcePath, Aspose.Slides.Export.SaveFormat.Pptx);
+            }
         }
     }
 }
