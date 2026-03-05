@@ -1,45 +1,35 @@
 using System;
+using Aspose.Slides;
+using Aspose.Slides.Export;
 
-namespace Example
+namespace ManagePresentationProperties
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Path to the folder containing presentations
-            System.String dataDir = "C:\\Data\\";
-            // Path to the template presentation
-            System.String templatePath = dataDir + "Template.pptx";
+            // Define input and output file paths
+            System.String inputPath = "input.pptx";
+            System.String outputPath = "output.pptx";
 
-            // Load template presentation info
-            Aspose.Slides.IPresentationInfo templateInfo = Aspose.Slides.PresentationFactory.Instance.GetPresentationInfo(templatePath);
-            Aspose.Slides.IDocumentProperties templateProps = templateInfo.ReadDocumentProperties();
+            // Load the presentation from the input file
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
 
-            // Set desired properties on the template
-            templateProps.Author = "John Doe";
-            templateProps.Title = "Sample Title";
-            templateProps.Category = "Category";
-            templateProps.Keywords = "keyword1, keyword2";
-            templateProps.Company = "MyCompany";
-            templateProps.Comments = "Some comments";
-            templateProps.ContentType = "application/vnd.ms-powerpoint";
-            templateProps.Subject = "Subject";
+            // Access the built-in document properties
+            Aspose.Slides.IDocumentProperties documentProperties = presentation.DocumentProperties;
 
-            // List of target presentations to update
-            System.String[] targetFiles = new System.String[]
-            {
-                dataDir + "Doc1.ppt",
-                dataDir + "Doc2.ppt",
-                dataDir + "Doc3.ppt"
-            };
+            // Modify built-in properties
+            documentProperties.Author = "John Doe";
+            documentProperties.Title = "Sample Title";
+            documentProperties.Subject = "Sample Subject";
+            documentProperties.Comments = "Sample Comments";
+            documentProperties.Manager = "Jane Manager";
 
-            // Update each target presentation with the template properties and save
-            foreach (System.String targetPath in targetFiles)
-            {
-                Aspose.Slides.IPresentationInfo targetInfo = Aspose.Slides.PresentationFactory.Instance.GetPresentationInfo(targetPath);
-                targetInfo.UpdateDocumentProperties(templateProps);
-                targetInfo.WriteBindedPresentation(targetPath);
-            }
+            // Save the presentation in PPTX format
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+
+            // Dispose the presentation object
+            presentation.Dispose();
         }
     }
 }
