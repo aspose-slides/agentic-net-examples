@@ -1,29 +1,26 @@
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
-using System.Drawing;
 
-namespace RemoveSlideBackground
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        // Create a new presentation with a default empty slide
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+
+        // Iterate through all slides in the presentation
+        for (int i = 0; i < presentation.Slides.Count; i++)
         {
-            // Create a new presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+            // Get the current slide
+            Aspose.Slides.ISlide slide = presentation.Slides[i];
 
-            // Iterate through all slides and remove their background
-            for (int slideIndex = 0; slideIndex < presentation.Slides.Count; slideIndex++)
-            {
-                // Set the background to own background with a transparent solid fill
-                presentation.Slides[slideIndex].Background.Type = Aspose.Slides.BackgroundType.OwnBackground;
-                presentation.Slides[slideIndex].Background.FillFormat.FillType = Aspose.Slides.FillType.Solid;
-                presentation.Slides[slideIndex].Background.FillFormat.SolidFillColor.Color = Color.Transparent;
-            }
-
-            // Save the presentation
-            string outputPath = System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory(), "RemovedBackground.pptx");
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            // Set the background to own background and remove any fill (no fill)
+            slide.Background.Type = Aspose.Slides.BackgroundType.OwnBackground;
+            slide.Background.FillFormat.FillType = Aspose.Slides.FillType.NoFill;
         }
+
+        // Save the modified presentation to a file
+        presentation.Save("RemovedBackground.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
