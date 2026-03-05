@@ -1,60 +1,66 @@
 using System;
 using System.IO;
+using System.Drawing;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-namespace AsposeSlidesExample
+namespace PictureFrameFormattingExample
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Define data directory and ensure it exists
-            string dataDir = Path.Combine(Directory.GetCurrentDirectory(), "Data");
-            if (!Directory.Exists(dataDir))
-            {
-                Directory.CreateDirectory(dataDir);
-            }
-
-            // Input image path and output presentation path
-            string imagePath = Path.Combine(dataDir, "image.png");
-            string outputPath = Path.Combine(dataDir, "output.pptx");
-
             // Create a new presentation
             Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-            // Get the first slide
-            Aspose.Slides.ISlide slide = presentation.Slides[0];
+            // Load an image from file
+            FileStream imageStream = new FileStream("sample.jpg", FileMode.Open, FileAccess.Read);
+            Aspose.Slides.IPPImage image = presentation.Images.AddImage(imageStream);
+            imageStream.Dispose();
 
-            // Load image from file
-            Aspose.Slides.IImage image = Aspose.Slides.Images.FromFile(imagePath);
-
-            // Add image to presentation's image collection
-            Aspose.Slides.IPPImage ipPImage = presentation.Images.AddImage(image);
-
-            // Add picture frame to the slide using the image dimensions
-            float xPos = 50f;
-            float yPos = 50f;
-            Aspose.Slides.IPictureFrame pictureFrame = slide.Shapes.AddPictureFrame(
+            // Add a picture frame to the first slide
+            Aspose.Slides.IPictureFrame pictureFrame = presentation.Slides[0].Shapes.AddPictureFrame(
                 Aspose.Slides.ShapeType.Rectangle,
-                xPos,
-                yPos,
-                ipPImage.Width,
-                ipPImage.Height,
-                ipPImage);
+                100f,   // X position
+                100f,   // Y position
+                300f,   // Width
+                200f,   // Height
+                image);
 
-            // Set line formatting for the picture frame
-            pictureFrame.LineFormat.FillFormat.FillType = Aspose.Slides.FillType.Solid;
-            pictureFrame.LineFormat.FillFormat.SolidFillColor.Color = System.Drawing.Color.Blue;
+            // Set alternative text
+            pictureFrame.AlternativeText = "Sample picture";
+            pictureFrame.AlternativeTextTitle = "Picture Title";
+
+            // Apply rotation
+            pictureFrame.Rotation = 45f;
+
+            // Adjust size and position
+            pictureFrame.X = 50f;
+            pictureFrame.Y = 50f;
+            pictureFrame.Width = 400f;
+            pictureFrame.Height = 300f;
+
+            // Scale relative to original picture size
+            pictureFrame.RelativeScaleWidth = 0.8f;
+            pictureFrame.RelativeScaleHeight = 0.8f;
+
+            // Set decorative flag and visibility
+            pictureFrame.IsDecorative = true;
+            pictureFrame.Hidden = false;
+
+            // Configure line format (border)
             pictureFrame.LineFormat.Width = 5f;
+            pictureFrame.LineFormat.FillFormat.FillType = FillType.Solid;
+            pictureFrame.LineFormat.FillFormat.SolidFillColor.Color = Color.Red;
 
-            // Set rotation (no rotation in this example)
-            pictureFrame.Rotation = 0f;
+            // Configure fill format (background of the frame)
+            pictureFrame.FillFormat.FillType = FillType.Solid;
+            pictureFrame.FillFormat.SolidFillColor.Color = Color.LightBlue;
 
             // Save the presentation
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            presentation.Save("FormattedPictureFrame_out.pptx", SaveFormat.Pptx);
 
-            // Clean up
+            // Dispose the presentation
             presentation.Dispose();
         }
     }
