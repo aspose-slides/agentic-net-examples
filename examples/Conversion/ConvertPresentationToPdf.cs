@@ -4,23 +4,13 @@ using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        // Verify command line arguments
-        if (args.Length < 2)
-        {
-            Console.WriteLine("Usage: ConvertPptxToPdf <input.pptx> <output.pdf>");
-            return;
-        }
-
-        string inputPath = args[0];
-        string outputPath = args[1];
-
-        // Load the PPTX presentation
-        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
+        // Load the PPTX presentation from file
+        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation("input.pptx"))
         {
             // Save the presentation as PDF
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pdf);
+            presentation.Save("output.pdf", Aspose.Slides.Export.SaveFormat.Pdf);
         }
     }
 }
