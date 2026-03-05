@@ -1,12 +1,20 @@
 using System;
 
-class Program
+namespace AsposeSlidesExample
 {
-    static void Main()
+    class Program
     {
-        // Create a new presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
-        // Save the presentation in PPTX format
-        presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        static void Main(string[] args)
+        {
+            // Create a new presentation instance
+            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation())
+            {
+                // Define the output file path
+                string outputPath = "SavedPresentation.pptx";
+
+                // Save the presentation in PPTX format
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            }
+        }
     }
 }
