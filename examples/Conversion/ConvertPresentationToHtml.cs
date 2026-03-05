@@ -1,28 +1,23 @@
 using System;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-namespace PowerPointToHtml
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        // Input PowerPoint file path
+        string inputPath = "input.pptx";
+        // Output HTML file path
+        string outputPath = "output.html";
+
+        // Load the presentation
+        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
         {
-            // Path to the source PowerPoint file
-            string sourcePath = "input.pptx";
+            // Set HTML export options to remove cropped picture areas
+            Aspose.Slides.Export.HtmlOptions htmlOptions = new Aspose.Slides.Export.HtmlOptions();
+            htmlOptions.DeletePicturesCroppedAreas = true;
 
-            // Path to the output HTML file
-            string outputPath = "output.html";
-
-            // Load the presentation
-            using (Presentation presentation = new Presentation(sourcePath))
-            {
-                // Create HTML export options (default does not embed fonts)
-                HtmlOptions htmlOptions = new HtmlOptions();
-
-                // Save the presentation as HTML without embedding fonts
-                presentation.Save(outputPath, SaveFormat.Html, htmlOptions);
-            }
+            // Save the presentation as HTML with the specified options
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Html, htmlOptions);
         }
     }
 }
