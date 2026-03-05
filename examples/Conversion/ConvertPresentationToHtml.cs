@@ -1,37 +1,28 @@
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
-using System.Drawing.Imaging;
 
-namespace ConvertPresentationToHtml
+namespace ConsoleApp
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Input PowerPoint file path
+            // Path to the source PowerPoint file
             string inputPath = "input.pptx";
-            // Output HTML file path
+
+            // Path to the output HTML file
             string outputPath = "output.html";
 
             // Load the presentation
-            Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
+            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
+            {
+                // Create HtmlOptions to preserve slide dimensions (default behavior)
+                Aspose.Slides.Export.HtmlOptions htmlOptions = new Aspose.Slides.Export.HtmlOptions();
 
-            // Create HTML export options
-            Aspose.Slides.Export.HtmlOptions htmlOptions = new Aspose.Slides.Export.HtmlOptions();
-
-            // Set image scale to achieve ~150 DPI (default DPI is 96)
-            float scale = 150f / 96f;
-            // Use high-quality JPEG images for slides
-            htmlOptions.SlideImageFormat = Aspose.Slides.Export.SlideImageFormat.Bitmap(scale, ImageFormat.Jpeg);
-            // Set maximum JPEG quality
-            htmlOptions.JpegQuality = 100;
-
-            // Save the presentation as HTML with the specified options
-            pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Html, htmlOptions);
-
-            // Dispose the presentation object
-            pres.Dispose();
+                // Save the presentation as HTML
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Html, htmlOptions);
+            }
         }
     }
 }
