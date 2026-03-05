@@ -2,28 +2,50 @@ using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-class Program
+namespace AsposeSlidesHtmlConversion
 {
-    static void Main()
+    class Program
     {
-        // Load the PowerPoint presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation("input.pptx");
-
-        // Embed all fonts used in the presentation
-        Aspose.Slides.IFontsManager fontsManager = presentation.FontsManager;
-        Aspose.Slides.IFontData[] allFonts = fontsManager.GetFonts();
-        for (int i = 0; i < allFonts.Length; i++)
+        static void Main(string[] args)
         {
-            Aspose.Slides.IFontData font = allFonts[i];
-            // Embed the font with all characters
-            fontsManager.AddEmbeddedFont(font, Aspose.Slides.Export.EmbedFontCharacters.All);
+            // Input PowerPoint file path
+            string inputPath = "input.pptx";
+            // Output HTML file path
+            string outputPath = "output.html";
+
+            // Load the presentation
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+
+            // Embed all fonts that are not already embedded
+            Aspose.Slides.IFontData[] allFonts = presentation.FontsManager.GetFonts();
+            Aspose.Slides.IFontData[] embeddedFonts = presentation.FontsManager.GetEmbeddedFonts();
+
+            foreach (Aspose.Slides.IFontData font in allFonts)
+            {
+                bool isEmbedded = false;
+                foreach (Aspose.Slides.IFontData embeddedFont in embeddedFonts)
+                {
+                    if (embeddedFont.Equals(font))
+                    {
+                        isEmbedded = true;
+                        break;
+                    }
+                }
+
+                if (!isEmbedded)
+                {
+                    presentation.FontsManager.AddEmbeddedFont(font, Aspose.Slides.Export.EmbedFontCharacters.All);
+                }
+            }
+
+            // Set HTML export options (default linking behavior for fonts)
+            Aspose.Slides.Export.HtmlOptions htmlOptions = new Aspose.Slides.Export.HtmlOptions();
+
+            // Save the presentation as HTML
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Html, htmlOptions);
+
+            // Dispose the presentation object
+            presentation.Dispose();
         }
-
-        // Set HTML export options (optional: specify default font)
-        Aspose.Slides.Export.HtmlOptions htmlOptions = new Aspose.Slides.Export.HtmlOptions();
-        htmlOptions.DefaultRegularFont = "Arial";
-
-        // Save the presentation as HTML with linked fonts
-        presentation.Save("output.html", Aspose.Slides.Export.SaveFormat.Html, htmlOptions);
     }
 }
