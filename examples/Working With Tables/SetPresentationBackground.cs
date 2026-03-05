@@ -1,35 +1,23 @@
 using System;
 using System.Drawing;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-class Program
+namespace BackgroundExample
 {
-    static void Main()
+    class Program
     {
-        // Create a new presentation
-        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation())
+        static void Main(string[] args)
         {
-            // Access the first slide
-            Aspose.Slides.ISlide slide = presentation.Slides[0];
+            // Create a new presentation
+            using (Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation())
+            {
+                // Set the background of the first slide to a solid blue color
+                pres.Slides[0].Background.Type = Aspose.Slides.BackgroundType.OwnBackground;
+                pres.Slides[0].Background.FillFormat.FillType = Aspose.Slides.FillType.Solid;
+                pres.Slides[0].Background.FillFormat.SolidFillColor.Color = Color.Blue;
 
-            // Set the slide background to a solid light gray color
-            slide.Background.Type = BackgroundType.OwnBackground;
-            slide.Background.FillFormat.FillType = FillType.Solid;
-            slide.Background.FillFormat.SolidFillColor.Color = Color.LightGray;
-
-            // Define column widths and row heights for the table
-            double[] columnWidths = new double[] { 100, 100, 100 };
-            double[] rowHeights = new double[] { 50, 30, 30 };
-
-            // Add a table to the slide
-            Aspose.Slides.ITable table = slide.Shapes.AddTable(50, 100, columnWidths, rowHeights);
-
-            // Apply a built‑in style to the table
-            table.StylePreset = TableStylePreset.LightStyle1Accent1;
-
-            // Save the presentation
-            presentation.Save("TableWithBackground.pptx", SaveFormat.Pptx);
+                // Save the presentation to disk
+                pres.Save("BackgroundColor_out.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            }
         }
     }
 }
