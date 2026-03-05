@@ -1,27 +1,32 @@
 using System;
 
-class Program
+namespace AsposeSlidesConversion
 {
-    static void Main(string[] args)
+    class Program
     {
-        // Define input PowerPoint file and output PDF file paths
-        string inputPath = "input.pptx";
-        string outputPath = "output.pdf";
-
-        // Load the presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
-
-        // Create PDF options and set layout to include speaker notes at the bottom
-        Aspose.Slides.Export.PdfOptions pdfOptions = new Aspose.Slides.Export.PdfOptions();
-        pdfOptions.SlidesLayoutOptions = new Aspose.Slides.Export.NotesCommentsLayoutingOptions()
+        static void Main(string[] args)
         {
-            NotesPosition = Aspose.Slides.Export.NotesPositions.BottomFull
-        };
+            // Input PowerPoint file path
+            string inputPath = "input.pptx";
+            // Output PDF file path
+            string outputPath = "output.pdf";
 
-        // Save the presentation as PDF with notes
-        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pdf, pdfOptions);
+            // Load the presentation
+            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
+            {
+                // Create PDF options
+                Aspose.Slides.Export.PdfOptions pdfOptions = new Aspose.Slides.Export.PdfOptions();
 
-        // Release resources
-        presentation.Dispose();
+                // Configure notes layout to preserve speaker notes
+                Aspose.Slides.Export.NotesCommentsLayoutingOptions notesLayout = new Aspose.Slides.Export.NotesCommentsLayoutingOptions();
+                notesLayout.NotesPosition = Aspose.Slides.Export.NotesPositions.BottomFull;
+
+                // Assign the notes layout to PDF options
+                pdfOptions.SlidesLayoutOptions = notesLayout;
+
+                // Save the presentation as PDF with notes
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pdf, pdfOptions);
+            }
+        }
     }
 }
