@@ -1,32 +1,25 @@
 using System;
-using System.IO;
+using Aspose.Slides;
+using Aspose.Slides.Export;
 
-namespace RestoreNormalViewPropertiesExample
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
-        {
-            // Input and output file paths
-            string dataDir = "Data";
-            string inputPath = Path.Combine(dataDir, "input.ppt");
-            string outputPath = Path.Combine(dataDir, "output.ppt");
+        // Load an existing PPTX presentation
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation("input.pptx");
 
-            // Load the presentation
-            Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
+        // Get the normal view properties (read‑only property, but its members are writable)
+        Aspose.Slides.INormalViewProperties normalViewProps = presentation.ViewProperties.NormalViewProperties;
 
-            // Configure Normal View properties
-            pres.ViewProperties.NormalViewProperties.HorizontalBarState = Aspose.Slides.SplitterBarStateType.Restored;
-            pres.ViewProperties.NormalViewProperties.VerticalBarState = Aspose.Slides.SplitterBarStateType.Maximized;
-            pres.ViewProperties.NormalViewProperties.RestoredTop.AutoAdjust = true;
-            pres.ViewProperties.NormalViewProperties.RestoredTop.DimensionSize = 80f;
-            pres.ViewProperties.NormalViewProperties.ShowOutlineIcons = true;
+        // Access the restored top region properties
+        Aspose.Slides.INormalViewRestoredProperties restoredTop = normalViewProps.RestoredTop;
 
-            // Save the presentation in PPT format
-            pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Ppt);
+        // Modify the restored top properties
+        restoredTop.AutoAdjust = true;
+        restoredTop.DimensionSize = 80f;
 
-            // Release resources
-            pres.Dispose();
-        }
+        // Save the modified presentation
+        presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
