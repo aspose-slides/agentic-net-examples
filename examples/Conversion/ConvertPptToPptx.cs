@@ -6,20 +6,22 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Path to the source PPT file
+        // Input PPT file path
         string inputPath = "input.ppt";
-        // Path for the converted PPTX file
+        // Output PPTX file path
         string outputPath = "output.pptx";
 
         // Load the PPT presentation
-        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
-        {
-            // Create PPTX save options using the factory
-            Aspose.Slides.Export.ISaveOptionsFactory optionsFactory = new Aspose.Slides.Export.SaveOptionsFactory();
-            Aspose.Slides.Export.IPptxOptions pptxOptions = optionsFactory.CreatePptxOptions();
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
 
-            // Save the presentation as PPTX with the specified options
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx, pptxOptions);
-        }
+        // Create a SaveOptionsFactory instance to obtain PPTX save options
+        Aspose.Slides.Export.SaveOptionsFactory optionsFactory = new Aspose.Slides.Export.SaveOptionsFactory();
+        Aspose.Slides.Export.IPptxOptions pptxOptions = optionsFactory.CreatePptxOptions();
+
+        // Save the presentation as PPTX using the obtained options
+        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx, pptxOptions);
+
+        // Dispose the presentation object
+        presentation.Dispose();
     }
 }
