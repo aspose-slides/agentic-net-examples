@@ -1,38 +1,21 @@
 using System;
-using System.IO;
-using System.Drawing;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-namespace InsertEllipseExample
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
-        {
-            // Create a new presentation
-            Presentation presentation = new Presentation();
+        // Create a new presentation
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-            // Get the first slide
-            ISlide slide = presentation.Slides[0];
+        // Get the first slide
+        Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-            // Add an ellipse shape to the slide
-            IShape shape = slide.Shapes.AddAutoShape(ShapeType.Ellipse, 50, 50, 200, 100);
+        // Add an ellipse shape to the slide
+        Aspose.Slides.IAutoShape ellipse = slide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Ellipse, 100, 100, 200, 150);
 
-            // Set solid fill color for the ellipse
-            shape.FillFormat.FillType = FillType.Solid;
-            shape.FillFormat.SolidFillColor.Color = Color.Chocolate;
-
-            // Set solid line color and width for the ellipse border
-            shape.LineFormat.FillFormat.FillType = FillType.Solid;
-            shape.LineFormat.FillFormat.SolidFillColor.Color = Color.Black;
-            shape.LineFormat.Width = 2;
-
-            // Determine output file path
-            string outputPath = Path.Combine(Directory.GetCurrentDirectory(), "EllipseOutput.pptx");
-
-            // Save the presentation
-            presentation.Save(outputPath, SaveFormat.Pptx);
-        }
+        // Save the presentation
+        presentation.Save("EllipsePresentation.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
