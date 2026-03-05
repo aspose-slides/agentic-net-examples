@@ -1,34 +1,31 @@
 using System;
 using System.IO;
 using Aspose.Slides;
+using Aspose.Slides.Export;
 
 class Program
 {
     static void Main()
     {
-        // Path to the source presentation
-        string sourcePath = "input.pptx";
-        // Path to the new image file that will replace existing images
+        // Paths for the source presentation, the new image, and the output presentation
+        string inputPptxPath = "input.pptx";
         string newImagePath = "newImage.png";
-        // Path to save the modified presentation
-        string outputPath = "output.pptx";
+        string outputPptxPath = "output.pptx";
 
-        // Load the presentation
-        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(sourcePath))
+        // Load the existing presentation
+        var presentation = new Aspose.Slides.Presentation(inputPptxPath);
+
+        // Read the new image data
+        var newImageData = File.ReadAllBytes(newImagePath);
+
+        // Replace the first image in the image collection, if any
+        if (presentation.Images.Count > 0)
         {
-            // Read the new image data into a byte array
-            byte[] newImageData = File.ReadAllBytes(newImagePath);
-
-            // Iterate through all images in the presentation and replace them
-            int imageCount = presentation.Images.Count;
-            for (int i = 0; i < imageCount; i++)
-            {
-                Aspose.Slides.IPPImage image = presentation.Images[i];
-                image.ReplaceImage(newImageData);
-            }
-
-            // Save the updated presentation
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            var existingImage = presentation.Images[0];
+            existingImage.ReplaceImage(newImageData);
         }
+
+        // Save the modified presentation
+        presentation.Save(outputPptxPath, Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
