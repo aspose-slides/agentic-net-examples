@@ -1,48 +1,28 @@
 using System;
-using System.Net;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-namespace AddWebVideoExample
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
-        {
-            // Create a new presentation
-            Presentation pres = new Presentation();
+        // Create a new presentation
+        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation();
 
-            // Get the first slide
-            ISlide slide = pres.Slides[0];
+        // Get the first slide
+        Aspose.Slides.ISlide slide = pres.Slides[0];
 
-            // YouTube video identifier
-            string videoId = "Tj75Arhq5ho";
+        // Add a video frame that embeds a local video file
+        Aspose.Slides.IVideoFrame videoFrame = slide.Shapes.AddVideoFrame(50, 150, 300, 150, "sample_video.mp4");
 
-            // Add a video frame that loads video from the web (YouTube embed URL)
-            IVideoFrame videoFrame = slide.Shapes.AddVideoFrame(
-                10,                     // X position
-                10,                     // Y position
-                427,                    // Width
-                240,                    // Height
-                "https://www.youtube.com/embed/" + videoId); // Video URL
+        // Set playback mode and volume
+        videoFrame.PlayMode = Aspose.Slides.VideoPlayModePreset.Auto;
+        videoFrame.Volume = Aspose.Slides.AudioVolumeMode.Loud;
 
-            // Set the video to play automatically
-            videoFrame.PlayMode = VideoPlayModePreset.Auto;
+        // Save the presentation in PPTX format
+        pres.Save("VideoPresentation_out.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
 
-            // Load and set a thumbnail image for the video frame
-            using (WebClient client = new WebClient())
-            {
-                string thumbnailUri = "http://img.youtube.com/vi/" + videoId + "/hqdefault.jpg";
-                byte[] thumbnailData = client.DownloadData(thumbnailUri);
-                IPPImage thumbnailImage = pres.Images.AddImage(thumbnailData);
-                videoFrame.PictureFormat.Picture.Image = thumbnailImage;
-            }
-
-            // Save the presentation
-            pres.Save("AddVideoFromWeb_out.pptx", SaveFormat.Pptx);
-
-            // Clean up
-            pres.Dispose();
-        }
+        // Release resources
+        pres.Dispose();
     }
 }
