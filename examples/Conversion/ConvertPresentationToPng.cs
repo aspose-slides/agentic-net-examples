@@ -1,38 +1,30 @@
 using System;
-using System.IO;
 
 class Program
 {
     static void Main()
     {
         // Input PowerPoint file
-        System.String inputPath = "sample.pptx";
-
-        // Output folder for PNG images
-        System.String outputFolder = "output";
-        System.IO.Directory.CreateDirectory(outputFolder);
-
-        // Scaling factors for custom dimensions
-        System.Int32 scaleX = 2;
-        System.Int32 scaleY = scaleX;
+        System.String inputPath = "input.pptx";
+        // Output file name pattern for PNG images
+        System.String outputFormat = "slide_{0}.png";
 
         // Load the presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
 
-        // Convert each slide to a PNG image with the specified scale
-        foreach (Aspose.Slides.ISlide slide in presentation.Slides)
+        // Convert each slide to PNG
+        for (int i = 0; i < pres.Slides.Count; i++)
         {
-            using (Aspose.Slides.IImage image = slide.GetImage(scaleX, scaleY))
+            Aspose.Slides.ISlide slide = pres.Slides[i];
+            using (Aspose.Slides.IImage image = slide.GetImage())
             {
-                System.String imageFileName = System.String.Format(
-                    System.IO.Path.Combine(outputFolder, "Slide_{0}.png"),
-                    slide.SlideNumber);
-                image.Save(imageFileName, Aspose.Slides.ImageFormat.Png);
+                System.String outputPath = System.String.Format(outputFormat, i);
+                image.Save(outputPath, Aspose.Slides.ImageFormat.Png);
             }
         }
 
-        // Save the presentation before exiting (no modifications made)
-        presentation.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
-        presentation.Dispose();
+        // Save the presentation before exiting (optional)
+        pres.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        pres.Dispose();
     }
 }
