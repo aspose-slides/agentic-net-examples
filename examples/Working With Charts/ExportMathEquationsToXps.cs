@@ -3,37 +3,30 @@ using Aspose.Slides;
 using Aspose.Slides.MathText;
 using Aspose.Slides.Export;
 
-namespace WorkingWithCharts
+class Program
 {
-    public class Program
+    static void Main()
     {
-        public static void Main(string[] args)
-        {
-            // Create a new presentation
-            Presentation pres = new Presentation();
+        // Create a new presentation
+        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation();
 
-            // Add a math shape to host the equation
-            IAutoShape mathShape = pres.Slides[0].Shapes.AddMathShape(0f, 0f, 500f, 50f);
+        // Add a mathematical shape to the first slide
+        Aspose.Slides.IAutoShape mathShape = pres.Slides[0].Shapes.AddMathShape(0, 0, 500, 50);
 
-            // Retrieve the math paragraph from the shape
-            IMathParagraph mathParagraph = ((MathPortion)mathShape.TextFrame.Paragraphs[0].Portions[0]).MathParagraph;
+        // Retrieve the math paragraph from the shape
+        Aspose.Slides.MathText.IMathParagraph mathParagraph = ((Aspose.Slides.MathText.MathPortion)mathShape.TextFrame.Paragraphs[0].Portions[0]).MathParagraph;
 
-            // Create a math block and add elements to form the equation a + b = c
-            MathBlock mathBlock = new MathBlock();
-            mathBlock.Add(new MathematicalText("a"));
-            mathBlock.Add(new MathematicalText("+"));
-            mathBlock.Add(new MathematicalText("b"));
-            mathBlock.Add(new MathematicalText("="));
-            mathBlock.Add(new MathematicalText("c"));
+        // Build a math block representing the equation "a + b = c"
+        Aspose.Slides.MathText.IMathElement equationElement = new Aspose.Slides.MathText.MathematicalText("a")
+            .Join("+")
+            .Join(new Aspose.Slides.MathText.MathematicalText("b"))
+            .Join("=")
+            .Join(new Aspose.Slides.MathText.MathematicalText("c"));
 
-            // Add the math block to the paragraph
-            mathParagraph.Add(mathBlock);
+        // Add the math block to the paragraph (explicit cast resolves constructor ambiguity)
+        mathParagraph.Add(new Aspose.Slides.MathText.MathBlock((Aspose.Slides.MathText.IMathElement)equationElement));
 
-            // Save the presentation as XPS
-            pres.Save("MathEquationOutput.xps", SaveFormat.Xps);
-
-            // Dispose the presentation
-            pres.Dispose();
-        }
+        // Save the presentation as XPS
+        pres.Save("MathEquation.xps", Aspose.Slides.Export.SaveFormat.Xps);
     }
 }
