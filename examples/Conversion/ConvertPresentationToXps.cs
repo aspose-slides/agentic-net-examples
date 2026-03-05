@@ -2,22 +2,22 @@ using System;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        // Paths to source presentations
-        string pptPath = "sample.ppt";
-        string pptxPath = "sample.pptx";
+        // Load the source PowerPoint presentation
+        var presentation = new Aspose.Slides.Presentation("input.pptx");
 
-        // Convert PPT to XPS using default options
-        Aspose.Slides.Presentation pptPresentation = new Aspose.Slides.Presentation(pptPath);
-        pptPresentation.Save("sample_converted_from_ppt.xps", Aspose.Slides.Export.SaveFormat.Xps);
-        pptPresentation.Dispose();
+        // Save the presentation to XPS using default settings
+        presentation.Save("output_default.xps", Aspose.Slides.Export.SaveFormat.Xps);
 
-        // Convert PPTX to XPS using custom XpsOptions
-        Aspose.Slides.Presentation pptxPresentation = new Aspose.Slides.Presentation(pptxPath);
-        Aspose.Slides.Export.XpsOptions xpsOptions = new Aspose.Slides.Export.XpsOptions();
-        xpsOptions.SaveMetafilesAsPng = true; // Example custom option
-        pptxPresentation.Save("sample_converted_from_pptx.xps", Aspose.Slides.Export.SaveFormat.Xps, xpsOptions);
-        pptxPresentation.Dispose();
+        // Create XPS options and customize them
+        var options = new Aspose.Slides.Export.XpsOptions();
+        options.SaveMetafilesAsPng = true;
+
+        // Save the presentation to XPS using custom options
+        presentation.Save("output_custom.xps", Aspose.Slides.Export.SaveFormat.Xps, options);
+
+        // Release resources
+        presentation.Dispose();
     }
 }
