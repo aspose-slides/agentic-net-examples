@@ -1,32 +1,34 @@
 using System;
-using System.Drawing;
+using Aspose.Slides;
+using Aspose.Slides.Theme;
+using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
         // Create a new presentation
-        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation();
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-        // Get the first slide
-        Aspose.Slides.ISlide slide = pres.Slides[0];
+        // Access the major font collection from the master theme
+        Aspose.Slides.IFonts majorFonts = presentation.MasterTheme.FontScheme.Major;
 
-        // Add a rectangle AutoShape with a text frame
-        Aspose.Slides.IAutoShape shape = (Aspose.Slides.IAutoShape)slide.Shapes.AddAutoShape(
-            Aspose.Slides.ShapeType.Rectangle, 50, 50, 400, 100);
-        shape.AddTextFrame("Sample Text");
+        // Set the Latin font
+        Aspose.Slides.IFontData latinFont = new Aspose.Slides.FontData("Calibri");
+        majorFonts.LatinFont = latinFont;
 
-        // Set font properties for the first paragraph and first portion
-        shape.TextFrame.Paragraphs[0].ParagraphFormat.Alignment = Aspose.Slides.TextAlignment.Center;
-        shape.TextFrame.Paragraphs[0].Portions[0].PortionFormat.FontHeight = 24f;
-        shape.TextFrame.Paragraphs[0].Portions[0].PortionFormat.FontBold = Aspose.Slides.NullableBool.True;
-        shape.TextFrame.Paragraphs[0].Portions[0].PortionFormat.FillFormat.FillType = Aspose.Slides.FillType.Solid;
-        shape.TextFrame.Paragraphs[0].Portions[0].PortionFormat.FillFormat.SolidFillColor.Color = Color.FromArgb(255, 0, 0, 255); // Blue
+        // Set the East Asian font
+        Aspose.Slides.IFontData eastAsianFont = new Aspose.Slides.FontData("Yu Gothic");
+        majorFonts.EastAsianFont = eastAsianFont;
+
+        // Set the Complex Script font
+        Aspose.Slides.IFontData complexFont = new Aspose.Slides.FontData("Arial Unicode MS");
+        majorFonts.ComplexScriptFont = complexFont;
+
+        // Assign a script-specific font (e.g., Arabic script)
+        presentation.MasterTheme.FontScheme.Major.SetScriptFont("Arab", "Segoe UI");
 
         // Save the presentation
-        pres.Save("OutputPresentation.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
-
-        // Clean up
-        pres.Dispose();
+        presentation.Save("FontSelectionSequence_out.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
