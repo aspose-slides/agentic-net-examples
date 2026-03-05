@@ -6,13 +6,13 @@ class Program
 {
     static void Main()
     {
-        // Load an existing PPTX presentation
+        // Load an existing presentation
         Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation("input.pptx");
 
-        // Retrieve the slide reference by its zero‑based index
+        // Get a reference to the slide at the specified index (e.g., first slide)
         Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-        // Example operation: display the slide's unique identifier
+        // Example usage: output the slide's ID
         Console.WriteLine("Slide ID: " + slide.SlideId);
 
         // Save the presentation before exiting
