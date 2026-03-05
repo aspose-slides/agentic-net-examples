@@ -3,35 +3,51 @@ using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-namespace ImageHeadingDemo
+namespace AddImagesToSlideHeadings
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Path to the image file to be added
-            string imagePath = "image.jpg";
+            // Define the data directory where images are stored and output will be saved
+            string dataDir = "Data";
+            if (!Directory.Exists(dataDir))
+                Directory.CreateDirectory(dataDir);
+
+            // Path to the local image file
+            string imagePath = Path.Combine(dataDir, "image.jpg");
 
             // Create a new presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+            Presentation pres = new Presentation();
 
-            // Get the first slide
-            Aspose.Slides.ISlide slide = presentation.Slides[0];
+            // Get the first slide (slide index 0)
+            ISlide slide = pres.Slides[0];
 
-            // Add the image to the presentation and place it on the slide
-            using (FileStream imageStream = new FileStream(imagePath, FileMode.Open, FileAccess.Read))
-            {
-                Aspose.Slides.IPPImage image = presentation.Images.AddImage(imageStream, Aspose.Slides.LoadingStreamBehavior.KeepLocked);
-                slide.Shapes.AddPictureFrame(Aspose.Slides.ShapeType.Rectangle, 50, 150, 300, 200, image);
-            }
+            // Load the image from file and add it to the presentation's image collection
+            IImage image = Images.FromFile(imagePath);
+            IPPImage imgx = pres.Images.AddImage(image);
 
-            // Add a heading shape (rectangle) to the slide
-            Aspose.Slides.IShape shape = slide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 50, 50, 400, 50);
-            Aspose.Slides.IAutoShape headingShape = (Aspose.Slides.IAutoShape)shape;
-            headingShape.AddTextFrame("Presentation Heading");
+            // Add a picture frame at the top-left corner of the slide (acting as a heading image)
+            // Width and height are taken from the added image to preserve its original size
+            IPictureFrame pictureFrame = slide.Shapes.AddPictureFrame(
+                ShapeType.Rectangle,
+                0f,               // X position
+                0f,               // Y position
+                imgx.Width,       // Width of the picture frame
+                imgx.Height,      // Height of the picture frame
+                imgx);
 
-            // Save the presentation to a PPTX file
-            presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            // Optional: add a border around the picture frame
+            pictureFrame.LineFormat.FillFormat.FillType = FillType.Solid;
+            pictureFrame.LineFormat.FillFormat.SolidFillColor.Color = System.Drawing.Color.Blue;
+            pictureFrame.LineFormat.Width = 2f;
+
+            // Save the presentation to the output file
+            string outPath = Path.Combine(dataDir, "output.pptx");
+            pres.Save(outPath, SaveFormat.Pptx);
+
+            // Release resources
+            pres.Dispose();
         }
     }
 }
