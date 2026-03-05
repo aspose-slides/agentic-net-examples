@@ -3,34 +3,40 @@ using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-class Program
+namespace SetPresentationBackgroundImage
 {
-    static void Main()
+    class Program
     {
-        // Create a new presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        static void Main(string[] args)
+        {
+            // Define paths
+            string dataDir = Directory.GetCurrentDirectory();
+            string imagePath = Path.Combine(dataDir, "background.jpg");
+            string outputPath = Path.Combine(dataDir, "output.pptx");
 
-        // Get the first slide
-        Aspose.Slides.ISlide slide = presentation.Slides[0];
+            // Create a new presentation
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-        // Set the background to use a picture fill
-        slide.Background.Type = Aspose.Slides.BackgroundType.OwnBackground;
-        slide.Background.FillFormat.FillType = Aspose.Slides.FillType.Picture;
-        slide.Background.FillFormat.PictureFillFormat.PictureFillMode = Aspose.Slides.PictureFillMode.Stretch;
+            // Get the first slide
+            Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-        // Path to the background image file
-        string dataDir = Directory.GetCurrentDirectory();
-        string imagePath = Path.Combine(dataDir, "background.jpg"); // replace with your image file name
+            // Set slide background to use a picture
+            slide.Background.Type = Aspose.Slides.BackgroundType.OwnBackground;
+            slide.Background.FillFormat.FillType = Aspose.Slides.FillType.Picture;
+            slide.Background.FillFormat.PictureFillFormat.PictureFillMode = Aspose.Slides.PictureFillMode.Stretch;
 
-        // Load the image and add it to the presentation's image collection
-        Aspose.Slides.IImage image = Aspose.Slides.Images.FromFile(imagePath);
-        Aspose.Slides.IPPImage pptImage = presentation.Images.AddImage(image);
+            // Load image and add it to the presentation's image collection
+            Aspose.Slides.IImage img = Aspose.Slides.Images.FromFile(imagePath);
+            Aspose.Slides.IPPImage pptImg = presentation.Images.AddImage(img);
 
-        // Assign the image to the slide background
-        slide.Background.FillFormat.PictureFillFormat.Picture.Image = pptImage;
+            // Assign the image to the slide background
+            slide.Background.FillFormat.PictureFillFormat.Picture.Image = pptImg;
 
-        // Save the presentation
-        string outputPath = Path.Combine(dataDir, "OutputPresentation.pptx");
-        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            // Save the presentation
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+
+            // Clean up
+            presentation.Dispose();
+        }
     }
 }
