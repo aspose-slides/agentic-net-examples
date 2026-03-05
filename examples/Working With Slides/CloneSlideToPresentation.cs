@@ -6,23 +6,25 @@ class Program
 {
     static void Main()
     {
-        // Load the source presentation
-        Aspose.Slides.Presentation srcPres = new Aspose.Slides.Presentation("Source.pptx");
+        // Load the source presentation containing the slide to be cloned
+        Presentation srcPres = new Presentation("Source.pptx");
 
         // Create a new destination presentation
-        Aspose.Slides.Presentation destPres = new Aspose.Slides.Presentation();
+        Presentation destPres = new Presentation();
 
         // Get the first slide from the source presentation
-        Aspose.Slides.ISlide sourceSlide = srcPres.Slides[0];
+        ISlide sourceSlide = srcPres.Slides[0];
 
-        // Insert a clone of the source slide into the destination presentation at index 0
-        Aspose.Slides.ISlideCollection destSlides = destPres.Slides;
-        destSlides.InsertClone(0, sourceSlide);
+        // Get the slide collection of the destination presentation
+        ISlideCollection destSlides = destPres.Slides;
 
-        // Save the destination presentation
-        destPres.Save("ClonedPresentation.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        // Insert a clone of the source slide at the end of the destination slide collection
+        destSlides.InsertClone(destSlides.Count, sourceSlide);
 
-        // Clean up
+        // Save the destination presentation to disk
+        destPres.Save("ClonedPresentation.pptx", SaveFormat.Pptx);
+
+        // Clean up resources
         srcPres.Dispose();
         destPres.Dispose();
     }
