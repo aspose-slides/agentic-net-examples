@@ -1,28 +1,23 @@
 using System;
 
-namespace PresentationToHtml
+namespace AsposeSlidesHtmlConversion
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Path to the source PowerPoint file
+            // Path to the source presentation
             string inputPath = "input.pptx";
+
             // Path to the output HTML file
             string outputPath = "output.html";
 
-            // Load the presentation
+            // Load the presentation from the file
             using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
             {
-                // Optional: configure HTML export options
-                Aspose.Slides.Export.HtmlOptions htmlOptions = new Aspose.Slides.Export.HtmlOptions();
-
-                // Save the presentation as HTML
-                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Html, htmlOptions);
+                // Save the presentation in HTML format
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Html);
             }
-
-            // Indicate completion
-            Console.WriteLine("Presentation converted to HTML successfully.");
         }
     }
 }
