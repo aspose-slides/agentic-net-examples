@@ -1,41 +1,23 @@
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
-using Aspose.Slides.Ink;
 
 class Program
 {
     static void Main()
     {
-        // Load an existing PPTX file
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation("input.pptx");
+        // Create a new presentation
+        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation();
 
-        // Access the first slide
-        Aspose.Slides.ISlide slide = presentation.Slides[0];
+        // Configure ink options using RenderingOptions (InkOptions are available here)
+        Aspose.Slides.Export.RenderingOptions renderingOpts = new Aspose.Slides.Export.RenderingOptions();
+        renderingOpts.InkOptions.HideInk = true;                     // Hide ink objects
+        renderingOpts.InkOptions.InterpretMaskOpAsOpacity = false; // Use mask operation instead of opacity
 
-        // Iterate through all shapes on the slide to find Ink objects
-        for (int i = 0; i < slide.Shapes.Count; i++)
-        {
-            Aspose.Slides.IShape shape = slide.Shapes[i];
+        // Save the presentation in PPTX format with the specified ink options
+        pres.Save("ManagedInkPresentation.pptx", Aspose.Slides.Export.SaveFormat.Pptx, renderingOpts);
 
-            // Check if the shape is an Ink object
-            if (shape is Aspose.Slides.Ink.Ink)
-            {
-                Aspose.Slides.Ink.Ink inkShape = (Aspose.Slides.Ink.Ink)shape;
-
-                // Ensure the ink shape is visible
-                inkShape.Hidden = false;
-
-                // Retrieve the ink traces (read‑only property)
-                Aspose.Slides.Ink.IInkTrace[] traces = inkShape.Traces;
-
-                // Example processing: output the number of traces
-                int traceCount = traces.Length;
-                Console.WriteLine("Ink shape '{0}' contains {1} trace(s).", inkShape.Name, traceCount);
-            }
-        }
-
-        // Save the modified presentation in PPTX format
-        presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        // Clean up resources
+        pres.Dispose();
     }
 }
