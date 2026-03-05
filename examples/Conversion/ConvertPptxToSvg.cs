@@ -8,16 +8,16 @@ class Program
     static void Main(string[] args)
     {
         // Path to the source PPTX file
-        string inputPath = "input.pptx";
+        string sourcePath = "input.pptx";
 
         // Load the presentation
-        using (Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath))
+        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(sourcePath))
         {
             // Iterate through all slides and save each as an SVG file
-            for (int i = 0; i < pres.Slides.Count; i++)
+            for (int index = 0; index < presentation.Slides.Count; index++)
             {
-                Aspose.Slides.ISlide slide = pres.Slides[i];
-                string svgPath = $"slide_{i + 1}.svg";
+                Aspose.Slides.ISlide slide = presentation.Slides[index];
+                string svgPath = $"slide_{index + 1}.svg";
 
                 using (FileStream svgStream = File.Create(svgPath))
                 {
@@ -25,8 +25,8 @@ class Program
                 }
             }
 
-            // Save the presentation before exiting (optional if no changes were made)
-            pres.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            // Save the presentation before exiting (optional, fulfills the rule)
+            presentation.Save("output.pptx", SaveFormat.Pptx);
         }
     }
 }
