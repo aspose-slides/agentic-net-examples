@@ -10,29 +10,30 @@ namespace SlideDifferenceDetector
         {
             // Path to the source presentation
             string sourcePath = "input.pptx";
-            // Path to save the (unchanged) presentation after processing
-            string outputPath = "output.pptx";
 
             // Load the presentation
-            using (Presentation presentation = new Presentation(sourcePath))
+            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(sourcePath))
             {
-                // Iterate through all slide pairs and compare them
-                for (int i = 0; i < presentation.Slides.Count; i++)
+                // Get the total number of slides
+                int slideCount = presentation.Slides.Count;
+
+                // Compare each pair of slides
+                for (int i = 0; i < slideCount; i++)
                 {
-                    for (int j = i + 1; j < presentation.Slides.Count; j++)
+                    for (int j = i + 1; j < slideCount; j++)
                     {
                         // Use BaseSlide.Equals to determine if slides are identical
                         bool areEqual = presentation.Slides[i].Equals(presentation.Slides[j]);
 
                         if (!areEqual)
                         {
-                            Console.WriteLine($"Slide #{i} is different from Slide #{j}");
+                            Console.WriteLine(string.Format("Slide #{0} is different from Slide #{1}", i, j));
                         }
                     }
                 }
 
-                // Save the presentation before exiting
-                presentation.Save(outputPath, SaveFormat.Pptx);
+                // Save the presentation (required by lifecycle rules)
+                presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
             }
         }
     }
