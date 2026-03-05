@@ -1,21 +1,21 @@
 using System;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 class Program
 {
     static void Main()
     {
-        // Create a new presentation (contains one empty slide by default)
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
-
-        // Obtain a layout slide from the existing first slide
-        Aspose.Slides.ILayoutSlide layout = presentation.Slides[0].LayoutSlide;
-
-        // Add a new empty slide using the obtained layout
-        Aspose.Slides.ISlide newSlide = presentation.Slides.AddEmptySlide(layout);
-
-        // Save the presentation to a file
-        presentation.Save("AddedSlide.pptx", SaveFormat.Pptx);
+        // Load the source presentation containing the slide to copy
+        Aspose.Slides.Presentation sourcePres = new Aspose.Slides.Presentation("source.pptx");
+        // Create a new destination presentation (starts with one empty slide)
+        Aspose.Slides.Presentation destPres = new Aspose.Slides.Presentation();
+        // Get the first slide from the source presentation
+        Aspose.Slides.ISlide sourceSlide = sourcePres.Slides[0];
+        // Add a clone of the source slide to the destination presentation
+        destPres.Slides.AddClone(sourceSlide);
+        // Save the destination presentation to a file
+        destPres.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        // Clean up resources
+        sourcePres.Dispose();
+        destPres.Dispose();
     }
 }
