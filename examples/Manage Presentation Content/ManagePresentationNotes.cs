@@ -1,34 +1,33 @@
 using System;
+using Aspose.Slides;
+using Aspose.Slides.Export;
 
-namespace ManagePresentationNotes
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
+        // Define input and output file paths
+        string dataDir = "Data";
+        string inputFile = System.IO.Path.Combine(dataDir, "Input.pptx");
+        string outputFile = System.IO.Path.Combine(dataDir, "Output.pptx");
+
+        // Load an existing presentation
+        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputFile))
         {
-            // Define output directory
-            string outDir = "Output";
-            if (!System.IO.Directory.Exists(outDir))
-                System.IO.Directory.CreateDirectory(outDir);
+            // Add notes to the first slide
+            Aspose.Slides.INotesSlideManager firstSlideNotesMgr = presentation.Slides[0].NotesSlideManager;
+            Aspose.Slides.INotesSlide firstNotesSlide = firstSlideNotesMgr.AddNotesSlide();
+            firstNotesSlide.NotesTextFrame.Text = "Speaker notes for the first slide.";
 
-            // Create a new presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+            // Remove notes from the second slide if it exists
+            if (presentation.Slides.Count > 1)
+            {
+                Aspose.Slides.INotesSlideManager secondSlideNotesMgr = presentation.Slides[1].NotesSlideManager;
+                secondSlideNotesMgr.RemoveNotesSlide();
+            }
 
-            // Get the first slide
-            Aspose.Slides.ISlide slide = presentation.Slides[0];
-
-            // Add a notes slide to the first slide
-            Aspose.Slides.INotesSlide notesSlide = slide.NotesSlideManager.AddNotesSlide();
-
-            // Set the notes text
-            notesSlide.NotesTextFrame.Text = "These are the speaker notes.";
-
-            // Save the presentation in PPT format
-            string outPath = System.IO.Path.Combine(outDir, "PresentationWithNotes.ppt");
-            presentation.Save(outPath, Aspose.Slides.Export.SaveFormat.Ppt);
-
-            // Dispose the presentation
-            presentation.Dispose();
+            // Save the modified presentation
+            presentation.Save(outputFile, SaveFormat.Pptx);
         }
     }
 }
