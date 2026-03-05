@@ -7,27 +7,16 @@ class Program
 {
     static void Main()
     {
-        // Create a new presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        // Load an existing presentation
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation("input.pptx");
 
-        // Get the first slide
-        Aspose.Slides.ISlide slide = presentation.Slides[0];
+        // Get the first effect from the first slide's main animation sequence
+        Aspose.Slides.Animation.IEffect effect = presentation.Slides[0].Timeline.MainSequence[0];
 
-        // Add a rectangle shape with text
-        Aspose.Slides.IAutoShape shape = (Aspose.Slides.IAutoShape)slide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 100, 100, 300, 200);
-        shape.AddTextFrame("Animated Text");
+        // Set the start delay (trigger delay) to 2 seconds
+        effect.Timing.TriggerDelayTime = 2.0f;
 
-        // Add an animation effect to the shape
-        Aspose.Slides.Animation.IEffect effect = slide.Timeline.MainSequence.AddEffect(
-            shape,
-            Aspose.Slides.Animation.EffectType.Appear,
-            Aspose.Slides.Animation.EffectSubtype.None,
-            Aspose.Slides.Animation.EffectTriggerType.AfterPrevious);
-
-        // Set start delay (in seconds) for the animation
-        effect.Timing.TriggerDelayTime = 2.0f; // 2 seconds delay
-
-        // Save the presentation
-        presentation.Save("SetAnimationStartDelay_out.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        // Save the modified presentation
+        presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
