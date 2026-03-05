@@ -1,33 +1,33 @@
 using System;
 using System.Drawing;
 using Aspose.Slides;
-using Aspose.Slides.Export;
 
-namespace ModernCommentExample
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
-        {
-            // Create a new presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        // Create a new presentation. Comments allow reviewers to give feedback without changing slide content.
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-            // Add a comment author
-            Aspose.Slides.ICommentAuthor commentAuthor = presentation.CommentAuthors.AddAuthor("John Doe", "JD");
+        // Add a comment author who will be associated with the comments.
+        Aspose.Slides.ICommentAuthor commentAuthor = presentation.CommentAuthors.AddAuthor("John Doe", "JD");
 
-            // Define the position for the modern comment
-            PointF commentPosition = new PointF(100f, 100f);
+        // Define the position where the comment will appear on the slide (relative coordinates).
+        System.Drawing.PointF commentPosition = new System.Drawing.PointF();
+        commentPosition.X = 0.5f;
+        commentPosition.Y = 0.5f;
 
-            // Add a modern comment to the first slide
-            Aspose.Slides.IModernComment modernComment = commentAuthor.Comments.AddModernComment(
-                "This is a modern comment added via Aspose.Slides",
-                presentation.Slides[0],
-                null,
-                commentPosition,
-                DateTime.Now);
+        // Add a comment to the first slide. This helps collaborators discuss specific parts of the slide.
+        commentAuthor.Comments.AddComment(
+            "Please verify the data in this chart.",
+            presentation.Slides[0],
+            commentPosition,
+            DateTime.Now);
 
-            // Save the presentation
-            presentation.Save("ModernComments_out.pptx", SaveFormat.Pptx);
-        }
+        // Set the presentation's built‑in Comments property to provide an overall remark.
+        presentation.DocumentProperties.Comments = "Presentation includes reviewer comments for collaborative editing.";
+
+        // Save the presentation in PPTX format before exiting.
+        presentation.Save("CommentsDemo.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
