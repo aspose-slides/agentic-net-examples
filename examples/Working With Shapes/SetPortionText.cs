@@ -1,37 +1,33 @@
 using System;
+using Aspose.Slides;
+using Aspose.Slides.Export;
 
-namespace Example
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
-        {
-            // Create a new presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        // Create a new presentation
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-            // Get the first slide
-            Aspose.Slides.ISlide slide = presentation.Slides[0];
+        // Get the first slide
+        Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-            // Add a rectangle AutoShape
-            Aspose.Slides.IAutoShape autoShape = slide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 150, 75, 150, 50);
+        // Add a rectangle shape
+        Aspose.Slides.IAutoShape autoShape = slide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 100, 100, 300, 100);
 
-            // Add a TextFrame with placeholder text
-            autoShape.AddTextFrame(" ");
+        // Add a text frame with placeholder text
+        Aspose.Slides.ITextFrame textFrame = autoShape.AddTextFrame("Placeholder");
 
-            // Access the TextFrame
-            Aspose.Slides.ITextFrame textFrame = autoShape.TextFrame;
+        // Get the first paragraph
+        Aspose.Slides.IParagraph paragraph = textFrame.Paragraphs[0];
 
-            // Get the first paragraph
-            Aspose.Slides.IParagraph paragraph = textFrame.Paragraphs[0];
+        // Get the first portion
+        Aspose.Slides.IPortion portion = paragraph.Portions[0];
 
-            // Get the first portion
-            Aspose.Slides.IPortion portion = paragraph.Portions[0];
+        // Set the text of the portion
+        portion.Text = "Hello, Aspose!";
 
-            // Set the text of the portion
-            portion.Text = "Aspose TextBox";
-
-            // Save the presentation
-            presentation.Save("TextBox_out.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
-        }
+        // Save the presentation
+        presentation.Save("Output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
