@@ -2,33 +2,24 @@ using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-namespace FontSubstitutionExample
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
-        {
-            // Create a new presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        // Create a new presentation
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-            // Define source and destination fonts
-            Aspose.Slides.IFontData sourceFont = new Aspose.Slides.FontData("Arial");
-            Aspose.Slides.IFontData destFont = new Aspose.Slides.FontData("Times New Roman");
+        // Define the source (missing) font and the substitute font
+        Aspose.Slides.IFontData sourceFont = new Aspose.Slides.FontData("NonExistingFont");
+        Aspose.Slides.IFontData substituteFont = new Aspose.Slides.FontData("Arial");
 
-            // Create a font substitution rule
-            Aspose.Slides.FontSubstRule substitutionRule = new Aspose.Slides.FontSubstRule(sourceFont, destFont);
+        // Create a substitution rule that applies when the source font is not found
+        Aspose.Slides.FontSubstRule substitutionRule = new Aspose.Slides.FontSubstRule(sourceFont, substituteFont, Aspose.Slides.FontSubstCondition.WhenInaccessible);
 
-            // Apply the substitution rule to the presentation
-            presentation.FontsManager.ReplaceFont(substitutionRule);
+        // Add the rule to the presentation's FontsManager
+        presentation.FontsManager.FontSubstRuleList.Add(substitutionRule);
 
-            // List current font substitutions
-            foreach (Aspose.Slides.FontSubstitutionInfo info in presentation.FontsManager.GetSubstitutions())
-            {
-                Console.WriteLine("{0} -> {1}", info.OriginalFontName, info.SubstitutedFontName);
-            }
-
-            // Save the presentation
-            presentation.Save("FontSubstitutionOutput.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
-        }
+        // Save the presentation
+        presentation.Save("SubstitutedFontPresentation.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
