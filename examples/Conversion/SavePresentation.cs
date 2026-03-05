@@ -1,20 +1,27 @@
 using System;
+using Aspose.Slides;
+using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        // Path to the source PPTX file
-        var inputPath = "input.pptx";
+        // Path to the source PPT file
+        string inputPath = "input.ppt";
+        // Path for the converted PPTX file
+        string outputPath = "output.pptx";
 
-        // Path for the output PPT file
-        var outputPath = "output.ppt";
+        // Load the PPT presentation
+        Presentation presentation = new Presentation(inputPath);
 
-        // Load the PPTX presentation
-        using (var presentation = new Aspose.Slides.Presentation(inputPath))
-        {
-            // Save the presentation in PPT format
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Ppt);
-        }
+        // Create PPTX save options using the factory
+        SaveOptionsFactory optionsFactory = new SaveOptionsFactory();
+        IPptxOptions pptxOptions = optionsFactory.CreatePptxOptions();
+
+        // Save the presentation as PPTX with the specified options
+        presentation.Save(outputPath, SaveFormat.Pptx, pptxOptions);
+
+        // Ensure resources are released before exiting
+        presentation.Dispose();
     }
 }
