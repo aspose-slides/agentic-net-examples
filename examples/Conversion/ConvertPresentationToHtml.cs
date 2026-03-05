@@ -1,22 +1,19 @@
 using System;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
         // Path to the source PowerPoint file
-        string sourceFile = "input.pptx";
-
-        // Path where the HTML output will be saved
-        string htmlFile = "output.html";
+        string sourcePath = "sample.pptx";
+        // Path to the output HTML file
+        string outputPath = "sample.html";
 
         // Load the presentation from the file
-        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(sourceFile))
+        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(sourcePath))
         {
-            // Convert and save the presentation as HTML
-            presentation.Save(htmlFile, Aspose.Slides.Export.SaveFormat.Html);
+            // Convert and save the entire presentation to HTML format
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Html);
         }
     }
 }
