@@ -1,25 +1,17 @@
 using System;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        // Define input and output file paths
-        System.String inputPath = "input.ppt";
-        System.String outputPath = "output.ppt";
+        // Load the existing PPT presentation
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation("input.pptx");
 
-        // Load the presentation from the input file
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+        // Access hyperlink queries and remove all hyperlinks from the slides
+        Aspose.Slides.IHyperlinkQueries hyperlinkQueries = presentation.HyperlinkQueries;
+        hyperlinkQueries.RemoveAllHyperlinks();
 
-        // Remove all hyperlinks from the presentation
-        presentation.HyperlinkQueries.RemoveAllHyperlinks();
-
-        // Save the modified presentation in PPT format
-        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Ppt);
-
-        // Release resources
-        presentation.Dispose();
+        // Save the modified presentation
+        presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
