@@ -8,21 +8,37 @@ class Program
     static void Main()
     {
         // Create a new presentation
-        var presentation = new Aspose.Slides.Presentation();
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-        // Access the first slide
-        var slide = presentation.Slides[0];
+        // Get the first slide
+        Aspose.Slides.ISlide slide = presentation.Slides[0];
 
         // Add an ellipse shape to the slide
-        var ellipse = slide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Ellipse, 100, 100, 200, 150);
+        Aspose.Slides.IAutoShape ellipse = slide.Shapes.AddAutoShape(
+            Aspose.Slides.ShapeType.Ellipse, // Shape type
+            100, // X position
+            100, // Y position
+            200, // Width
+            150  // Height
+        );
 
-        // Apply line formatting to the ellipse
-        ellipse.LineFormat.Width = 5; // Set line width (points)
-        ellipse.LineFormat.DashStyle = Aspose.Slides.LineDashStyle.Dash; // Set dash style
-        ellipse.LineFormat.FillFormat.FillType = Aspose.Slides.FillType.Solid; // Use solid fill for the line
-        ellipse.LineFormat.FillFormat.SolidFillColor.Color = Color.Blue; // Set line color
+        // Access the line format of the ellipse
+        Aspose.Slides.ILineFormat lineFormat = ellipse.LineFormat;
 
-        // Save the presentation
+        // Set line width
+        lineFormat.Width = 5.0;
+
+        // Set line style to single (solid line)
+        lineFormat.Style = Aspose.Slides.LineStyle.Single;
+
+        // Set dash style to dash
+        lineFormat.DashStyle = Aspose.Slides.LineDashStyle.Dash;
+
+        // Set line fill to solid color (red)
+        lineFormat.FillFormat.FillType = Aspose.Slides.FillType.Solid;
+        lineFormat.FillFormat.SolidFillColor.Color = Color.Red;
+
+        // Save the presentation to a file
         presentation.Save("EllipseLineFormat.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
