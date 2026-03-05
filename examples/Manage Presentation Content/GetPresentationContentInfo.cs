@@ -1,25 +1,52 @@
 using System;
+using System.IO;
 using Aspose.Slides;
+using Aspose.Slides.Export;
 
-class Program
+namespace ManagePresentationContentInfo
 {
-    static void Main()
+    class Program
     {
-        // Load an existing PPT presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation("input.ppt");
+        static void Main(string[] args)
+        {
+            // Define the directory containing the presentation files
+            string dataDir = @"C:\PresentationData";
 
-        // Access the document properties of the presentation
-        Aspose.Slides.IDocumentProperties docProps = presentation.DocumentProperties;
+            // Ensure the directory exists
+            if (!Directory.Exists(dataDir))
+            {
+                Directory.CreateDirectory(dataDir);
+            }
 
-        // Modify built‑in properties
-        docProps.Author = "John Doe";
-        docProps.Title = "Updated Presentation";
-        docProps.Subject = "Demo";
+            // Input PPT file path
+            string inputPath = Path.Combine(dataDir, "input.ppt");
 
-        // Save the presentation in PPT format
-        presentation.Save("output.ppt", Aspose.Slides.Export.SaveFormat.Ppt);
+            // Get presentation information without loading the full presentation
+            Aspose.Slides.IPresentationInfo presentationInfo = Aspose.Slides.PresentationFactory.Instance.GetPresentationInfo(inputPath);
+            Aspose.Slides.LoadFormat loadFormat = presentationInfo.LoadFormat;
+            Console.WriteLine("Presentation load format: " + loadFormat);
 
-        // Release resources
-        presentation.Dispose();
+            // Load the presentation for editing
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+
+            // Access the first slide
+            Aspose.Slides.ISlide slide = presentation.Slides[0];
+
+            // Add a rectangle AutoShape to the slide
+            Aspose.Slides.IAutoShape autoShape = (Aspose.Slides.IAutoShape)slide.Shapes.AddAutoShape(
+                Aspose.Slides.ShapeType.Rectangle, 50, 50, 300, 100);
+
+            // Add a TextFrame to the AutoShape (cast to IAutoShape to access AddTextFrame)
+            autoShape.AddTextFrame("Hello Aspose.Slides!");
+
+            // Save the modified presentation in PPT format
+            string outputPath = Path.Combine(dataDir, "output.ppt");
+            presentation.Save(outputPath, SaveFormat.Ppt);
+
+            // Dispose the presentation object
+            presentation.Dispose();
+
+            Console.WriteLine("Presentation saved to: " + outputPath);
+        }
     }
 }
