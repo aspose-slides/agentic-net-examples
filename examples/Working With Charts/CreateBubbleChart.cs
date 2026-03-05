@@ -1,3 +1,5 @@
+using System;
+
 class Program
 {
     static void Main()
@@ -7,9 +9,9 @@ class Program
 
         // Add a bubble chart to the first slide
         Aspose.Slides.Charts.IChart chart = presentation.Slides[0].Shapes.AddChart(
-            Aspose.Slides.Charts.ChartType.Bubble, 50f, 50f, 600f, 400f);
+            Aspose.Slides.Charts.ChartType.Bubble, 0f, 0f, 500f, 400f);
 
-        // Set how bubble size is represented (optional)
+        // Set bubble size representation to Width
         chart.ChartData.SeriesGroups[0].BubbleSizeRepresentation = Aspose.Slides.Charts.BubbleSizeRepresentationType.Width;
 
         // Save the presentation
