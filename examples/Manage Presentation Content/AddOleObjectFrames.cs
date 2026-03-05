@@ -1,18 +1,23 @@
 using System;
 using System.IO;
+using Aspose.Slides;
+using Aspose.Slides.Export;
+using Aspose.Slides.DOM.Ole;
 
 class Program
 {
     static void Main()
     {
-        // Define directories and file paths
-        string outputDir = "Output";
-        if (!Directory.Exists(outputDir))
+        // Define output directory and ensure it exists
+        string outDir = "Output";
+        if (!Directory.Exists(outDir))
         {
-            Directory.CreateDirectory(outputDir);
+            Directory.CreateDirectory(outDir);
         }
-        string inputOlePath = Path.Combine(outputDir, "sample.xlsx"); // Ensure this file exists
-        string outputPptPath = Path.Combine(outputDir, "OleObject_out.ppt");
+
+        // Input OLE file (e.g., an Excel file) and output presentation paths
+        string inputFile = Path.Combine(outDir, "sample.xlsx");
+        string outputFile = Path.Combine(outDir, "OleObject_out.ppt");
 
         // Create a new presentation
         Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
@@ -21,23 +26,23 @@ class Program
         Aspose.Slides.ISlide slide = presentation.Slides[0];
 
         // Read the OLE file data into a byte array
-        byte[] oleFileData = File.ReadAllBytes(inputOlePath);
+        byte[] excelData = File.ReadAllBytes(inputFile);
 
-        // Create embedded data info for the OLE object (extension without dot)
-        Aspose.Slides.IOleEmbeddedDataInfo oleDataInfo = new Aspose.Slides.DOM.Ole.OleEmbeddedDataInfo(oleFileData, "xlsx");
+        // Create OLE embedded data info (file data and extension)
+        Aspose.Slides.IOleEmbeddedDataInfo dataInfo = new Aspose.Slides.DOM.Ole.OleEmbeddedDataInfo(excelData, "xlsx");
 
-        // Add an OLE object frame that covers the whole slide
+        // Add an OLE object frame that covers the entire slide
         Aspose.Slides.IOleObjectFrame oleObjectFrame = slide.Shapes.AddOleObjectFrame(
             0,
             0,
             presentation.SlideSize.Size.Width,
             presentation.SlideSize.Size.Height,
-            oleDataInfo);
+            dataInfo);
 
-        // Save the presentation in PPT format
-        presentation.Save(outputPptPath, Aspose.Slides.Export.SaveFormat.Ppt);
+        // Save the presentation in PPT format as required
+        presentation.Save(outputFile, Aspose.Slides.Export.SaveFormat.Ppt);
 
-        // Dispose the presentation object
+        // Dispose the presentation to release resources
         presentation.Dispose();
     }
 }
