@@ -4,21 +4,17 @@ using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        // Input PowerPoint file path
-        System.String inputPath = "input.pptx";
-        // Output PDF file path
-        System.String outputPath = "output.pdf";
+        // Load the PowerPoint presentation
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation("input.pptx");
 
-        // Load the presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+        // Configure PDF options to include hidden slides
+        Aspose.Slides.Export.PdfOptions pdfOptions = new Aspose.Slides.Export.PdfOptions();
+        pdfOptions.ShowHiddenSlides = true;
 
-        // Set a custom slide size (width: 800 points, height: 600 points) and ensure content fits
-        presentation.SlideSize.SetSize(800f, 600f, Aspose.Slides.SlideSizeScaleType.EnsureFit);
-
-        // Save the presentation as PDF
-        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pdf);
+        // Save the presentation as PDF with the specified options
+        presentation.Save("output.pdf", Aspose.Slides.Export.SaveFormat.Pdf, pdfOptions);
 
         // Release resources
         presentation.Dispose();
