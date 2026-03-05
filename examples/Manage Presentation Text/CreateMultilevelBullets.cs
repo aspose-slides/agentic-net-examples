@@ -12,31 +12,32 @@ class Program
         // Get the first slide
         Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-        // Add a rectangle shape to hold the bullet list
-        Aspose.Slides.IAutoShape autoShape = (Aspose.Slides.IAutoShape)slide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 50, 50, 400, 300);
-        autoShape.AddTextFrame("Placeholder");
+        // Add a rectangle shape to hold the text
+        Aspose.Slides.IAutoShape shape = (Aspose.Slides.IAutoShape)slide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 50, 50, 500, 300);
+        shape.AddTextFrame("");
 
-        // Get the text frame and clear default paragraph
-        Aspose.Slides.ITextFrame textFrame = autoShape.TextFrame;
-        textFrame.Paragraphs.Clear();
+        // First level bullet
+        Aspose.Slides.IParagraph para1 = shape.TextFrame.Paragraphs[0];
+        para1.ParagraphFormat.Bullet.Type = Aspose.Slides.BulletType.Symbol;
+        para1.ParagraphFormat.Bullet.Char = (char)8226; // •
+        para1.ParagraphFormat.Depth = 0;
+        para1.Portions[0].Text = "First level bullet";
 
-        // Level 0 bullet
-        Aspose.Slides.IParagraph para0 = new Aspose.Slides.Paragraph();
-        para0.ParagraphFormat.Depth = 0;
-        para0.Text = "Level 1 Item";
-        textFrame.Paragraphs.Add(para0);
-
-        // Level 1 bullet
-        Aspose.Slides.IParagraph para1 = new Aspose.Slides.Paragraph();
-        para1.ParagraphFormat.Depth = 1;
-        para1.Text = "Level 2 Item";
-        textFrame.Paragraphs.Add(para1);
-
-        // Level 2 bullet
+        // Second level bullet
         Aspose.Slides.IParagraph para2 = new Aspose.Slides.Paragraph();
-        para2.ParagraphFormat.Depth = 2;
-        para2.Text = "Level 3 Item";
-        textFrame.Paragraphs.Add(para2);
+        para2.ParagraphFormat.Bullet.Type = Aspose.Slides.BulletType.Symbol;
+        para2.ParagraphFormat.Bullet.Char = (char)8226;
+        para2.ParagraphFormat.Depth = 1;
+        para2.Portions.Add(new Aspose.Slides.Portion("Second level bullet"));
+        shape.TextFrame.Paragraphs.Add(para2);
+
+        // Third level bullet
+        Aspose.Slides.IParagraph para3 = new Aspose.Slides.Paragraph();
+        para3.ParagraphFormat.Bullet.Type = Aspose.Slides.BulletType.Symbol;
+        para3.ParagraphFormat.Bullet.Char = (char)8226;
+        para3.ParagraphFormat.Depth = 2;
+        para3.Portions.Add(new Aspose.Slides.Portion("Third level bullet"));
+        shape.TextFrame.Paragraphs.Add(para3);
 
         // Save the presentation
         presentation.Save("MultilevelBullets.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
