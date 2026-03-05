@@ -1,32 +1,40 @@
 using System;
 using Aspose.Slides;
+using Aspose.Slides.Export;
 
-class Program
+namespace CloneMultipleSlides
 {
-    static void Main()
+    class Program
     {
-        // Load the source presentation
-        Aspose.Slides.Presentation srcPres = new Aspose.Slides.Presentation("source.pptx");
-
-        // Create a new destination presentation
-        Aspose.Slides.Presentation destPres = new Aspose.Slides.Presentation();
-
-        // Get the slide collection of the destination presentation
-        Aspose.Slides.ISlideCollection destSlides = destPres.Slides;
-
-        // Clone each slide from the source to the destination
-        for (int i = 0; i < srcPres.Slides.Count; i++)
+        static void Main(string[] args)
         {
-            Aspose.Slides.ISlide sourceSlide = srcPres.Slides[i];
-            // Insert the cloned slide at the end of the destination collection
-            destSlides.InsertClone(destSlides.Count, sourceSlide);
+            // Paths to source and destination presentations
+            string sourcePath = "source.pptx";
+            string destinationPath = "cloned.pptx";
+
+            // Load the source presentation
+            using (Presentation srcPres = new Presentation(sourcePath))
+            {
+                // Create a new destination presentation
+                using (Presentation destPres = new Presentation())
+                {
+                    // Get the slide collection of the destination presentation
+                    ISlideCollection destSlides = destPres.Slides;
+
+                    // Iterate through each slide in the source presentation
+                    for (int i = 0; i < srcPres.Slides.Count; i++)
+                    {
+                        // Get the current source slide
+                        ISlide sourceSlide = srcPres.Slides[i];
+
+                        // Insert a clone of the source slide at the end of the destination collection
+                        destSlides.InsertClone(destSlides.Count, sourceSlide);
+                    }
+
+                    // Save the destination presentation
+                    destPres.Save(destinationPath, SaveFormat.Pptx);
+                }
+            }
         }
-
-        // Save the cloned presentation
-        destPres.Save("cloned_output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
-
-        // Clean up resources
-        srcPres.Dispose();
-        destPres.Dispose();
     }
 }
