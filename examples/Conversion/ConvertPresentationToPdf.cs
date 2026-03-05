@@ -6,26 +6,19 @@ class Program
 {
     static void Main()
     {
-        // Load the PowerPoint presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation("input.pptx");
+        // Input PowerPoint file path
+        System.String inputPath = "input.pptx";
+        // Output PDF file path
+        System.String outputPath = "output.pdf";
 
-        // Create PDF export options
-        Aspose.Slides.Export.PdfOptions pdfOptions = new Aspose.Slides.Export.PdfOptions();
+        // Load the presentation
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
 
-        // Set JPEG quality
-        pdfOptions.JpegQuality = 90;
+        // Set a custom slide size (width: 800 points, height: 600 points) and ensure content fits
+        presentation.SlideSize.SetSize(800f, 600f, Aspose.Slides.SlideSizeScaleType.EnsureFit);
 
-        // Convert metafiles to PNG
-        pdfOptions.SaveMetafilesAsPng = true;
-
-        // Apply text compression
-        pdfOptions.TextCompression = Aspose.Slides.Export.PdfTextCompression.Flate;
-
-        // Define PDF compliance level
-        pdfOptions.Compliance = Aspose.Slides.Export.PdfCompliance.Pdf15;
-
-        // Save the presentation as PDF with the specified options
-        presentation.Save("output.pdf", Aspose.Slides.Export.SaveFormat.Pdf, pdfOptions);
+        // Save the presentation as PDF
+        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pdf);
 
         // Release resources
         presentation.Dispose();
