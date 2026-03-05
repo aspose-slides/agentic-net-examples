@@ -2,30 +2,31 @@ using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-namespace InsertSlideAtPosition
+namespace AddSlideAtPosition
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Input and output file paths
-            string inputPath = "source.pptx";
-            string outputPath = "result.pptx";
+            // Path to the source presentation
+            string sourcePath = "input.pptx";
+            // Path to save the modified presentation
+            string outputPath = "output.pptx";
+            // Index at which the new slide will be inserted (0‑based)
+            int insertIndex = 1;
 
             // Load the existing presentation
-            Presentation pres = new Presentation(inputPath);
+            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(sourcePath))
+            {
+                // Choose a slide to clone (e.g., the first slide)
+                Aspose.Slides.ISlide sourceSlide = presentation.Slides[0];
 
-            // Get the slide collection
-            ISlideCollection slides = pres.Slides;
+                // Insert a clone of the chosen slide at the specified position
+                presentation.Slides.InsertClone(insertIndex, sourceSlide);
 
-            // Insert a copy of the first slide at position 1 (second position)
-            slides.InsertClone(1, pres.Slides[0]);
-
-            // Save the modified presentation
-            pres.Save(outputPath, SaveFormat.Pptx);
-
-            // Release resources
-            pres.Dispose();
+                // Save the presentation
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            }
         }
     }
 }
