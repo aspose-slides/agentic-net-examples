@@ -5,31 +5,34 @@ class Program
     static void Main()
     {
         // Create a new presentation
-        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation())
-        {
-            // Access the first slide
-            Aspose.Slides.ISlide slide = presentation.Slides[0];
+        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation();
 
-            // Add a clustered column chart to the slide
-            Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(
-                Aspose.Slides.Charts.ChartType.ClusteredColumn,
-                50, 50, 500, 400);
+        // Access the first slide
+        Aspose.Slides.ISlide slide = pres.Slides[0];
 
-            // Ensure the chart displays a legend
-            chart.HasLegend = true;
+        // Add a clustered column chart with sample data
+        Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(
+            Aspose.Slides.Charts.ChartType.ClusteredColumn, 50f, 50f, 500f, 400f);
 
-            // Position the legend to the right side of the chart
-            chart.Legend.Position = Aspose.Slides.Charts.LegendPositionType.Right;
+        // Validate layout to calculate actual legend dimensions
+        chart.ValidateChartLayout();
 
-            // Allow other chart elements to overlap the legend
-            chart.Legend.Overlay = true;
+        // Ensure the legend is visible
+        chart.HasLegend = true;
 
-            // Adjust legend size (relative to chart dimensions)
-            chart.Legend.Width = 0.2f;   // 20% of chart width
-            chart.Legend.Height = 0.5f;  // 50% of chart height
+        // Access the legend object
+        Aspose.Slides.Charts.Legend legend = (Aspose.Slides.Charts.Legend)chart.Legend;
 
-            // Save the presentation
-            presentation.Save("ChartLegendOverview.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
-        }
+        // Set custom position and size for the legend (fractions of chart size)
+        legend.X = 0.8f;      // 80% from the left edge of the chart
+        legend.Y = 0.1f;      // 10% from the top edge of the chart
+        legend.Width = 0.15f; // 15% of the chart width
+        legend.Height = 0.3f; // 30% of the chart height
+
+        // Prevent other chart elements from overlapping the legend
+        legend.Overlay = false;
+
+        // Save the presentation
+        pres.Save("ChartLegendOverview.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
