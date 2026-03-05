@@ -1,49 +1,47 @@
 using System;
+using Aspose.Slides;
+using Aspose.Slides.Export;
 
-namespace BulletDemo
+namespace BulletExample
 {
     class Program
     {
         static void Main(string[] args)
         {
             // Create a new presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation())
+            {
+                // Get the first slide
+                Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-            // Get the first slide
-            Aspose.Slides.ISlide slide = presentation.Slides[0];
+                // Add a rectangle shape to hold the bullet list
+                Aspose.Slides.IAutoShape autoShape = slide.Shapes.AddAutoShape(
+                    Aspose.Slides.ShapeType.Rectangle, 50, 50, 400, 200);
 
-            // Add a rectangle auto shape to hold text
-            Aspose.Slides.IAutoShape shape = (Aspose.Slides.IAutoShape)slide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 50, 50, 400, 300);
+                // Add a text frame to the shape
+                Aspose.Slides.ITextFrame textFrame = autoShape.AddTextFrame("Bullet List");
 
-            // Add a text frame to the shape
-            Aspose.Slides.ITextFrame textFrame = shape.AddTextFrame("Agenda");
+                // Create first bullet paragraph
+                Aspose.Slides.IParagraph paragraph1 = new Aspose.Slides.Paragraph();
+                paragraph1.ParagraphFormat.Bullet.Type = Aspose.Slides.BulletType.Symbol;
+                paragraph1.ParagraphFormat.Bullet.Char = (char)8226; // •
+                Aspose.Slides.IPortion portion1 = new Aspose.Slides.Portion();
+                portion1.Text = "First bullet item";
+                paragraph1.Portions.Add(portion1);
+                textFrame.Paragraphs.Add(paragraph1);
 
-            // Set the title text
-            textFrame.Paragraphs[0].Portions[0].Text = "Agenda";
+                // Create second bullet paragraph
+                Aspose.Slides.IParagraph paragraph2 = new Aspose.Slides.Paragraph();
+                paragraph2.ParagraphFormat.Bullet.Type = Aspose.Slides.BulletType.Symbol;
+                paragraph2.ParagraphFormat.Bullet.Char = (char)8226; // •
+                Aspose.Slides.IPortion portion2 = new Aspose.Slides.Portion();
+                portion2.Text = "Second bullet item";
+                paragraph2.Portions.Add(portion2);
+                textFrame.Paragraphs.Add(paragraph2);
 
-            // Create first bullet paragraph
-            Aspose.Slides.Paragraph bullet1 = new Aspose.Slides.Paragraph();
-            bullet1.ParagraphFormat.Bullet.Type = Aspose.Slides.BulletType.Symbol;
-            bullet1.ParagraphFormat.Bullet.Char = (char)8226; // bullet character
-            Aspose.Slides.Portion portion1 = new Aspose.Slides.Portion();
-            portion1.Text = "First item";
-            bullet1.Portions.Add(portion1);
-            textFrame.Paragraphs.Add(bullet1);
-
-            // Create second bullet paragraph
-            Aspose.Slides.Paragraph bullet2 = new Aspose.Slides.Paragraph();
-            bullet2.ParagraphFormat.Bullet.Type = Aspose.Slides.BulletType.Symbol;
-            bullet2.ParagraphFormat.Bullet.Char = (char)8226;
-            Aspose.Slides.Portion portion2 = new Aspose.Slides.Portion();
-            portion2.Text = "Second item";
-            bullet2.Portions.Add(portion2);
-            textFrame.Paragraphs.Add(bullet2);
-
-            // Save the presentation
-            presentation.Save("BulletsPresentation.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
-
-            // Dispose the presentation
-            presentation.Dispose();
+                // Save the presentation
+                presentation.Save("Bullets_out.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            }
         }
     }
 }
