@@ -1,31 +1,22 @@
 using System;
-using System.IO;
 
-class Program
+namespace AsposeSlidesExample
 {
-    static void Main()
+    class Program
     {
-        // Define output directory and ensure it exists
-        string outputDir = "output";
-        if (!Directory.Exists(outputDir))
+        static void Main(string[] args)
         {
-            Directory.CreateDirectory(outputDir);
+            // Create a new presentation
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+
+            // Import slides from a PDF file
+            presentation.Slides.AddFromPdf("document.pdf");
+
+            // Save the resulting presentation
+            presentation.Save("fromPdfDocument.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+
+            // Dispose the presentation object
+            presentation.Dispose();
         }
-
-        // Paths for the source PDF and the resulting PPTX file
-        string pdfPath = "input.pdf";
-        string pptxPath = Path.Combine(outputDir, "result.pptx");
-
-        // Create a new presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
-
-        // Import slides from the PDF document
-        presentation.Slides.AddFromPdf(pdfPath);
-
-        // Save the presentation in PPTX format
-        presentation.Save(pptxPath, Aspose.Slides.Export.SaveFormat.Pptx);
-
-        // Dispose the presentation object
-        presentation.Dispose();
     }
 }
