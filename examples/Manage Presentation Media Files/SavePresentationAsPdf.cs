@@ -4,26 +4,18 @@ using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        // Create a new presentation
+        // Create a new presentation instance
         Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-        // Ensure output directory exists
-        string outputDir = "Output";
-        if (!System.IO.Directory.Exists(outputDir))
-            System.IO.Directory.CreateDirectory(outputDir);
+        // Save the presentation in PPTX format
+        presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
 
-        // Save the presentation as PPTX
-        string pptxPath = System.IO.Path.Combine(outputDir, "presentation.pptx");
-        presentation.Save(pptxPath, Aspose.Slides.Export.SaveFormat.Pptx);
+        // Save the presentation in PDF format
+        presentation.Save("output.pdf", Aspose.Slides.Export.SaveFormat.Pdf);
 
-        // Save the presentation as PDF
-        string pdfPath = System.IO.Path.Combine(outputDir, "presentation.pdf");
-        Aspose.Slides.Export.PdfOptions pdfOptions = new Aspose.Slides.Export.PdfOptions();
-        presentation.Save(pdfPath, Aspose.Slides.Export.SaveFormat.Pdf, pdfOptions);
-
-        // Dispose the presentation
+        // Release resources
         presentation.Dispose();
     }
 }
