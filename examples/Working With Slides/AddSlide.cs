@@ -1,30 +1,21 @@
 using System;
 using Aspose.Slides;
+using Aspose.Slides.Export;
 
-namespace SlideCloneExample
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
-        {
-            // Load source presentation containing the slide to be copied
-            Aspose.Slides.Presentation sourcePresentation = new Aspose.Slides.Presentation("source.pptx");
+        // Create a new presentation (contains one empty slide by default)
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-            // Create a new destination presentation
-            Aspose.Slides.Presentation destinationPresentation = new Aspose.Slides.Presentation();
+        // Obtain a layout slide from the existing first slide
+        Aspose.Slides.ILayoutSlide layout = presentation.Slides[0].LayoutSlide;
 
-            // Get the first slide from the source presentation
-            Aspose.Slides.ISlide sourceSlide = sourcePresentation.Slides[0];
+        // Add a new empty slide using the obtained layout
+        Aspose.Slides.ISlide newSlide = presentation.Slides.AddEmptySlide(layout);
 
-            // Clone the source slide and add it to the destination presentation
-            destinationPresentation.Slides.AddClone(sourceSlide);
-
-            // Save the destination presentation
-            destinationPresentation.Save("clonedSlide.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
-
-            // Dispose presentations
-            sourcePresentation.Dispose();
-            destinationPresentation.Dispose();
-        }
+        // Save the presentation to a file
+        presentation.Save("AddedSlide.pptx", SaveFormat.Pptx);
     }
 }
