@@ -3,51 +3,27 @@ using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-namespace ExportParagraphToHtml
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
+        var presentationPath = "input.pptx";
+        var htmlPath = "output.html";
+
+        using (var presentation = new Aspose.Slides.Presentation(presentationPath))
         {
-            // Input and output file paths
-            string presentationPath = "input.pptx";
-            string htmlOutputPath = "output.html";
-
-            // Load the presentation
-            using (Presentation presentation = new Presentation(presentationPath))
+            var slide = presentation.Slides[0];
+            var shape = slide.Shapes[0] as Aspose.Slides.IAutoShape;
+            if (shape != null && shape.TextFrame != null)
             {
-                // Get the first slide
-                ISlide slide = presentation.Slides[0];
-
-                // Find the first shape that contains a text frame
-                IAutoShape autoShape = null;
-                foreach (IShape shape in slide.Shapes)
-                {
-                    autoShape = shape as IAutoShape;
-                    if (autoShape != null && autoShape.TextFrame != null)
-                    {
-                        break;
-                    }
-                }
-
-                if (autoShape != null && autoShape.TextFrame != null)
-                {
-                    // Get the paragraph collection from the text frame
-                    IParagraphCollection paragraphs = autoShape.TextFrame.Paragraphs;
-
-                    // Set HTML conversion options
-                    TextToHtmlConversionOptions options = new TextToHtmlConversionOptions();
-
-                    // Export all paragraphs to HTML
-                    string html = paragraphs.ExportToHtml(0, paragraphs.Count, options);
-
-                    // Write the HTML to a file
-                    File.WriteAllText(htmlOutputPath, html);
-                }
-
-                // Save the presentation before exiting
-                presentation.Save(presentationPath, SaveFormat.Pptx);
+                var paragraphs = shape.TextFrame.Paragraphs;
+                var options = new Aspose.Slides.Export.TextToHtmlConversionOptions();
+                var html = paragraphs.ExportToHtml(0, paragraphs.Count, options);
+                File.WriteAllText(htmlPath, html);
             }
+
+            // Save the presentation before exiting
+            presentation.Save("saved.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
         }
     }
 }
