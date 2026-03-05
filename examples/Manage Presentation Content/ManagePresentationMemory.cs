@@ -7,11 +7,11 @@ class Program
 {
     static void Main()
     {
-        // Define source and copy paths
+        // Paths for the source and the copy
         string sourcePath = "largePresentation.ppt";
-        string copyPath = "largePresentation_copy.pptx";
+        string copyPath = "largePresentation_copy.ppt";
 
-        // Configure load options to keep the source file locked during the presentation lifetime
+        // Load options with BlobManagementOptions to keep the source locked
         Aspose.Slides.LoadOptions loadOptions = new Aspose.Slides.LoadOptions
         {
             BlobManagementOptions = new Aspose.Slides.BlobManagementOptions
@@ -20,23 +20,19 @@ class Program
             }
         };
 
-        // Open the very large presentation with the specified load options
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(sourcePath, loadOptions);
+        // Open the very large presentation
+        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(sourcePath, loadOptions);
 
         // Rename the first slide (example of modifying content)
-        presentation.Slides[0].Name = "RenamedSlide";
+        pres.Slides[0].Name = "RenamedSlide";
 
-        // Save a copy of the presentation in PPTX format (as demonstrated in the rule)
-        presentation.Save(copyPath, Aspose.Slides.Export.SaveFormat.Pptx);
+        // Save the presentation in PPT format before exiting
+        pres.Save(copyPath, Aspose.Slides.Export.SaveFormat.Ppt);
 
-        // Additionally, save the presentation in PPT format as required
-        string outputPptPath = "largePresentation_out.ppt";
-        presentation.Save(outputPptPath, Aspose.Slides.Export.SaveFormat.Ppt);
+        // Delete the original file now that it is no longer needed
+        File.Delete(sourcePath);
 
-        // Delete the original source file now that it is no longer needed
-        System.IO.File.Delete(sourcePath);
-
-        // Release all resources
-        presentation.Dispose();
+        // Clean up resources
+        pres.Dispose();
     }
 }
