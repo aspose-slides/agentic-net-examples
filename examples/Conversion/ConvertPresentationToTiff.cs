@@ -1,24 +1,35 @@
 using System;
+using System.Drawing;
+using Aspose.Slides;
+using Aspose.Slides.Export;
 
 class Program
 {
     static void Main(string[] args)
     {
-        // Path to the source presentation
-        string inputPath = "input.pptx";
-        // Path for the output black‑and‑white TIFF file
-        string outputPath = "output.tiff";
+        // Load the source presentation
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation("input.pptx");
 
-        // Load the presentation from file
-        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
-        {
-            // Create TIFF options and configure black‑and‑white conversion
-            Aspose.Slides.Export.TiffOptions tiffOptions = new Aspose.Slides.Export.TiffOptions();
-            tiffOptions.CompressionType = Aspose.Slides.Export.TiffCompressionTypes.CCITT4;
-            tiffOptions.BwConversionMode = Aspose.Slides.Export.BlackWhiteConversionMode.Dithering;
+        // Create TIFF export options
+        Aspose.Slides.Export.TiffOptions tiffOptions = new Aspose.Slides.Export.TiffOptions();
 
-            // Save the presentation as a multi‑page black‑and‑white TIFF image
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Tiff, tiffOptions);
-        }
+        // Set compression type (default LZW)
+        tiffOptions.CompressionType = Aspose.Slides.Export.TiffCompressionTypes.Default;
+
+        // Set custom DPI
+        tiffOptions.DpiX = 200;
+        tiffOptions.DpiY = 100;
+
+        // Set custom image size
+        tiffOptions.ImageSize = new System.Drawing.Size(1728, 1078);
+
+        // Save the presentation as TIFF with the specified options
+        presentation.Save("output.tiff", Aspose.Slides.Export.SaveFormat.Tiff, tiffOptions);
+
+        // Save the original presentation before exiting (optional)
+        presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+
+        // Release resources
+        presentation.Dispose();
     }
 }
