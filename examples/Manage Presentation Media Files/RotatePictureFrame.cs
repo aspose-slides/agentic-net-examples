@@ -1,43 +1,33 @@
 using System;
 using System.IO;
-using Aspose.Slides;
 using Aspose.Slides.Export;
 
-namespace RotatePictureFrameExample
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
-        {
-            // Create a new presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        // Create a new presentation
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-            // Get the first slide
-            Aspose.Slides.ISlide slide = presentation.Slides[0];
+        // Get the first slide
+        Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-            // Load an image from file
-            FileStream imageStream = new FileStream("sample_image.jpg", FileMode.Open, FileAccess.Read);
-            Aspose.Slides.IPPImage image = presentation.Images.AddImage(imageStream);
-            imageStream.Dispose();
+        // Load an image from file
+        FileStream imageStream = new FileStream("sample.jpg", FileMode.Open, FileAccess.Read);
+        Aspose.Slides.IPPImage image = presentation.Images.AddImage(imageStream);
+        imageStream.Close();
 
-            // Add a picture frame to the slide
-            Aspose.Slides.IPictureFrame pictureFrame = slide.Shapes.AddPictureFrame(
-                Aspose.Slides.ShapeType.Rectangle, // shape type
-                100,    // X position
-                100,    // Y position
-                200,    // Width
-                200,    // Height
-                image   // picture
-            );
+        // Add a picture frame to the slide
+        Aspose.Slides.IPictureFrame pictureFrame = slide.Shapes.AddPictureFrame(
+            Aspose.Slides.ShapeType.Rectangle, 100, 100, 200, 150, image);
 
-            // Rotate the picture frame by a positive angle (clockwise)
-            pictureFrame.Rotation = 45f; // 45 degrees clockwise
+        // Rotate the picture frame clockwise by 45 degrees (positive value)
+        pictureFrame.Rotation = 45f;
 
-            // Save the presentation
-            presentation.Save("RotatedPicture.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        // Save the presentation
+        presentation.Save("RotatedPicture.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
 
-            // Clean up
-            presentation.Dispose();
-        }
+        // Clean up
+        presentation.Dispose();
     }
 }
