@@ -4,17 +4,18 @@ using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        // Load the source presentation
-        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation("input.pptx");
-        // Create XPS export options
-        Aspose.Slides.Export.XpsOptions options = new Aspose.Slides.Export.XpsOptions();
-        // Convert metafiles to PNG during export
-        options.SaveMetafilesAsPng = true;
-        // Save the presentation as XPS with the custom options
-        pres.Save("output.xps", Aspose.Slides.Export.SaveFormat.Xps, options);
-        // Release resources
-        pres.Dispose();
+        // Path to the source PPTX file
+        var inputPath = "input.pptx";
+        // Path for the resulting XPS file
+        var outputPath = "output.xps";
+
+        // Load the presentation
+        using (var presentation = new Aspose.Slides.Presentation(inputPath))
+        {
+            // Save the presentation in XPS format
+            presentation.Save(outputPath, SaveFormat.Xps);
+        }
     }
 }
