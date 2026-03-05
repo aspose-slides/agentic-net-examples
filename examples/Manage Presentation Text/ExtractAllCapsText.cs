@@ -1,5 +1,5 @@
 using System;
-using System.IO;
+using System.Collections.Generic;
 using Aspose.Slides;
 using Aspose.Slides.Util;
 
@@ -9,50 +9,49 @@ namespace ExtractAllCapsText
     {
         static void Main(string[] args)
         {
-            // Define input and output file paths
-            string inputPath = Path.Combine(Directory.GetCurrentDirectory(), "input.pptx");
-            string outputPath = Path.Combine(Directory.GetCurrentDirectory(), "output.pptx");
+            // Path to the source presentation
+            string sourcePath = "input.pptx";
+            // Path to the output presentation (saved before exit)
+            string outputPath = "output.pptx";
 
-            // Load the presentation (needed for saving later)
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
-
-            // Extract raw text from the presentation using the Unarranged mode
-            Aspose.Slides.IPresentationText presentationText = Aspose.Slides.PresentationFactory.Instance.GetPresentationText(
-                inputPath,
-                Aspose.Slides.TextExtractionArrangingMode.Unarranged);
-
-            // Iterate through each slide's text and output all‑caps words
-            for (int i = 0; i < presentationText.SlidesText.Length; i++)
+            // Load the presentation
+            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(sourcePath))
             {
-                Aspose.Slides.ISlideText slideText = presentationText.SlidesText[i];
-                string text = slideText.Text;
+                // Get all text frames from the presentation (including master slides)
+                Aspose.Slides.ITextFrame[] textFrames = Aspose.Slides.Util.SlideUtil.GetAllTextFrames(presentation, true);
 
-                // Split the slide text into individual words
-                string[] words = text.Split(new char[] { ' ', '\t', '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+                // List to hold extracted all-caps text
+                List<string> allCapsTexts = new List<string>();
 
-                foreach (string word in words)
+                // Iterate through each text frame
+                foreach (Aspose.Slides.ITextFrame textFrame in textFrames)
                 {
-                    // Determine if the word consists only of uppercase letters (ignore non‑letter characters)
-                    bool isAllCaps = true;
-                    foreach (char c in word)
+                    // Iterate through each paragraph in the text frame
+                    foreach (Aspose.Slides.IParagraph paragraph in textFrame.Paragraphs)
                     {
-                        if (char.IsLetter(c) && !char.IsUpper(c))
+                        // Iterate through each portion in the paragraph
+                        foreach (Aspose.Slides.IPortion portion in paragraph.Portions)
                         {
-                            isAllCaps = false;
-                            break;
+                            // Check if the portion has All-Caps effect
+                            if (portion.PortionFormat.TextCapType == Aspose.Slides.TextCapType.All)
+                            {
+                                // Add the text of the portion to the list
+                                allCapsTexts.Add(portion.Text);
+                            }
                         }
                     }
-
-                    if (isAllCaps && word.Length > 0)
-                    {
-                        Console.WriteLine(word);
-                    }
                 }
-            }
 
-            // Save the (unchanged) presentation before exiting
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
-            presentation.Dispose();
+                // Output the extracted all-caps text to console
+                Console.WriteLine("Extracted All-Caps Text:");
+                foreach (string text in allCapsTexts)
+                {
+                    Console.WriteLine(text);
+                }
+
+                // Save the presentation before exiting
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            }
         }
     }
 }
