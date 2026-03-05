@@ -1,28 +1,26 @@
 using System;
 
-namespace AsposeSlidesExample
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
-        {
-            // Create a new presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        // Create a new presentation
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-            // Access the first slide
-            Aspose.Slides.ISlide slide = presentation.Slides[0];
+        // Access the first slide
+        Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-            // Add a clustered column chart to the slide
-            Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(
-                Aspose.Slides.Charts.ChartType.ClusteredColumn,
-                0f,    // X position
-                0f,    // Y position
-                500f,  // Width
-                500f   // Height
-            );
+        // Add a clustered column chart at position (50,50) with size 500x400
+        Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(
+            Aspose.Slides.Charts.ChartType.ClusteredColumn,
+            50f, 50f, 500f, 400f);
 
-            // Save the presentation
-            presentation.Save("ChartPresentation.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
-        }
+        // Set chart title
+        chart.HasTitle = true;
+        chart.ChartTitle.AddTextFrameForOverriding("Sample Chart");
+        chart.ChartTitle.TextFrameForOverriding.TextFrameFormat.CenterText = Aspose.Slides.NullableBool.True;
+
+        // Save the presentation
+        presentation.Save("ChartPresentation.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
