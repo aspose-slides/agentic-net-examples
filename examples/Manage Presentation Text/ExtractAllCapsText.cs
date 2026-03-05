@@ -1,59 +1,51 @@
 using System;
 using System.Collections.Generic;
 using Aspose.Slides;
-using Aspose.Slides.Util;
 using Aspose.Slides.Export;
+using Aspose.Slides.Util;
 
-namespace ManagePresentationText
+public class Program
 {
-    class Program
+    public static void Main()
     {
-        static void Main(string[] args)
+        // Path to the source presentation
+        string inputPath = "input.pptx";
+
+        // Load the presentation
+        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
         {
-            // Input and output file paths
-            string inputPath = "input.pptx";
-            string outputPath = "output.pptx";
+            // Retrieve all text frames (excluding master slides)
+            Aspose.Slides.ITextFrame[] textFrames = Aspose.Slides.Util.SlideUtil.GetAllTextFrames(presentation, false);
 
-            // Load the presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+            // List to store extracted text with All-Caps effect
+            System.Collections.Generic.List<string> allCapsTexts = new System.Collections.Generic.List<string>();
 
-            // List to hold all-caps text portions
-            List<string> allCapsTexts = new List<string>();
-
-            // Iterate through each slide
-            foreach (Aspose.Slides.ISlide slide in presentation.Slides)
+            // Iterate through each text frame
+            foreach (Aspose.Slides.ITextFrame textFrame in textFrames)
             {
-                // Get all text frames on the slide
-                Aspose.Slides.ITextFrame[] textFrames = Aspose.Slides.Util.SlideUtil.GetAllTextBoxes(slide);
-
-                // Iterate through each text frame
-                foreach (Aspose.Slides.ITextFrame textFrame in textFrames)
+                // Iterate through paragraphs within the text frame
+                foreach (Aspose.Slides.IParagraph paragraph in textFrame.Paragraphs)
                 {
-                    // Iterate through paragraphs
-                    foreach (Aspose.Slides.IParagraph paragraph in textFrame.Paragraphs)
+                    // Iterate through portions within the paragraph
+                    foreach (Aspose.Slides.IPortion portion in paragraph.Portions)
                     {
-                        // Iterate through portions
-                        foreach (Aspose.Slides.IPortion portion in paragraph.Portions)
+                        // Check if the portion has All-Caps effect
+                        if (portion.PortionFormat.TextCapType == Aspose.Slides.TextCapType.All)
                         {
-                            // Check if the portion is all caps
-                            if (portion.PortionFormat.TextCapType == Aspose.Slides.TextCapType.All)
-                            {
-                                allCapsTexts.Add(portion.Text);
-                            }
+                            allCapsTexts.Add(portion.Text);
                         }
                     }
                 }
             }
 
-            // Output the extracted all-caps text
-            foreach (string text in allCapsTexts)
+            // Output the extracted All-Caps text
+            foreach (string txt in allCapsTexts)
             {
-                Console.WriteLine(text);
+                Console.WriteLine(txt);
             }
 
             // Save the presentation before exiting
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
-            presentation.Dispose();
+            presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
         }
     }
 }
