@@ -1,34 +1,31 @@
 using System;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-namespace PresentationPropertiesDemo
+namespace AsposeSlidesDemo
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            // Path to the source presentation file
-            string sourcePath = "sample.pptx";
+            // Input and output file paths
+            System.String inputPath = "input.pptx";
+            System.String outputPath = "output.pptx";
 
-            // Get presentation info using PresentationFactory
-            IPresentationInfo presentationInfo = PresentationFactory.Instance.GetPresentationInfo(sourcePath);
+            // Load the presentation
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
 
-            // Read document properties from the bound presentation
-            IDocumentProperties documentProperties = presentationInfo.ReadDocumentProperties();
+            // Access built‑in document properties
+            Aspose.Slides.IDocumentProperties docProps = presentation.DocumentProperties;
 
-            // Display some built‑in properties
-            Console.WriteLine("Title: " + documentProperties.Title);
-            Console.WriteLine("Author: " + documentProperties.Author);
-            Console.WriteLine("Created Time (UTC): " + documentProperties.CreatedTime);
-            Console.WriteLine("Subject: " + documentProperties.Subject);
+            // Retrieve and display title, author, and slide count
+            System.Console.WriteLine("Title: " + docProps.Title);
+            System.Console.WriteLine("Author: " + docProps.Author);
+            System.Console.WriteLine("Slide Count: " + presentation.Slides.Count);
 
-            // Load the presentation to ensure it is saved before exit
-            using (Presentation presentation = new Presentation(sourcePath))
-            {
-                // Save the presentation (can be the same file or a new one)
-                presentation.Save("sample_saved.pptx", SaveFormat.Pptx);
-            }
+            // Save the presentation before exiting (required by authoring rules)
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+
+            // Release resources
+            presentation.Dispose();
         }
     }
 }
