@@ -8,16 +8,14 @@ class Program
         // Create a new presentation
         Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-        // Get the first slide
-        Aspose.Slides.ISlide slide = presentation.Slides[0];
+        // Add a rectangle shape to the first slide
+        Aspose.Slides.IShape shape = presentation.Slides[0].Shapes.AddAutoShape(
+            Aspose.Slides.ShapeType.Rectangle, 50, 50, 200, 100);
 
-        // Add a line shape to the slide
-        Aspose.Slides.IAutoShape lineShape = slide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Line, 50, 150, 300, 0);
+        // Set the line dash style of the shape to Dash
+        shape.LineFormat.DashStyle = Aspose.Slides.LineDashStyle.Dash;
 
-        // Set the line dash style of the shape
-        lineShape.LineFormat.DashStyle = Aspose.Slides.LineDashStyle.Dash;
-
-        // Save the presentation
-        presentation.Save("ShapeLineDashStyle_out.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        // Save the presentation to a file
+        presentation.Save("LineDashStyleDemo.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
