@@ -2,20 +2,23 @@ using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-class Program
+namespace ExportSlideToPdf
 {
-    static void Main()
+    class Program
     {
-        // Load the source PPTX presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation("input.pptx");
+        static void Main(string[] args)
+        {
+            // Load the PPTX presentation from file
+            Presentation presentation = new Presentation("input.pptx");
 
-        // Specify the slide(s) to export (1‑based index)
-        int[] slideIndices = new int[] { 1 };
+            // Create PDF export options (optional, can be customized)
+            PdfOptions pdfOptions = new PdfOptions();
 
-        // Export the selected slide to a PDF file
-        presentation.Save("slide1.pdf", slideIndices, Aspose.Slides.Export.SaveFormat.Pdf);
+            // Save the entire presentation as a PDF file
+            presentation.Save("output.pdf", SaveFormat.Pdf, pdfOptions);
 
-        // Release resources
-        presentation.Dispose();
+            // Dispose the presentation object to release resources
+            presentation.Dispose();
+        }
     }
 }
