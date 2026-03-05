@@ -1,30 +1,29 @@
 using System;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-class Program
+namespace PresentationPropertiesDemo
 {
-    static void Main()
+    class Program
     {
-        // Create a new presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        static void Main(string[] args)
+        {
+            // Create a new presentation
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-        // Access the document properties collection
-        Aspose.Slides.IDocumentProperties documentProperties = presentation.DocumentProperties;
+            // Access document properties
+            Aspose.Slides.IDocumentProperties docProps = presentation.DocumentProperties;
 
-        // Add custom properties
-        documentProperties["CustomInt"] = 123;
-        documentProperties["CustomString"] = "Hello World";
-        documentProperties["AnotherInt"] = 456;
+            // Set built-in properties
+            docProps.Author = "John Doe";
+            docProps.Title = "Custom Properties Demo";
+            docProps.Subject = "Aspose.Slides Example";
 
-        // Get the name of the first custom property
-        string firstPropertyName = documentProperties.GetCustomPropertyName(0);
+            // Add custom properties
+            docProps.SetCustomPropertyValue("CustomString", "Hello World");
+            docProps.SetCustomPropertyValue("CustomInt", 42);
+            docProps.SetCustomPropertyValue("CustomDate", DateTime.UtcNow);
 
-        // Remove the first custom property
-        documentProperties.RemoveCustomProperty(firstPropertyName);
-
-        // Save the presentation in PPT format
-        string outputPath = "CustomPropertiesPresentation.ppt";
-        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Ppt);
+            // Save the presentation in PPT format
+            presentation.Save("CustomPropertiesDemo.ppt", Aspose.Slides.Export.SaveFormat.Ppt);
+        }
     }
 }
