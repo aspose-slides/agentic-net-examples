@@ -1,29 +1,27 @@
 using System;
-using System.IO;
 using Aspose.Slides;
 
 class Program
 {
     static void Main(string[] args)
     {
-        // Define input and output file paths
-        string dataDir = "C:\\Presentations\\";
-        string inputPath = Path.Combine(dataDir, "input.ppt");
-        string outputPath = Path.Combine(dataDir, "output.ppt");
+        // Define the directory containing the presentation files
+        string dataDir = "path_to_presentation_directory\\";
+        // Input PPTX file path
+        string inputPath = System.IO.Path.Combine(dataDir, "AccessSlides.pptx");
+        // Output PPTX file path
+        string outputPath = System.IO.Path.Combine(dataDir, "RemoveNotesAtSpecificSlide_out.pptx");
 
         // Load the presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
+        {
+            // Access the notes slide manager for the first slide (index 0)
+            Aspose.Slides.INotesSlideManager notesManager = presentation.Slides[0].NotesSlideManager;
+            // Remove the notes slide associated with this slide
+            notesManager.RemoveNotesSlide();
 
-        // Get the first slide (index 0)
-        Aspose.Slides.ISlide slide = presentation.Slides[0];
-
-        // Access the notes slide manager for the slide
-        Aspose.Slides.INotesSlideManager notesManager = slide.NotesSlideManager;
-
-        // Remove the notes slide if it exists
-        notesManager.RemoveNotesSlide();
-
-        // Save the modified presentation in PPT format
-        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Ppt);
+            // Save the modified presentation
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+        }
     }
 }
