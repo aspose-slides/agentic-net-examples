@@ -9,18 +9,16 @@ namespace PresentationToHtml
     {
         static void Main(string[] args)
         {
-            // Path to the source presentation file
+            // Input PowerPoint file path
             string inputPath = "input.pptx";
-
-            // Path to the output HTML file
+            // Output HTML file path
             string outputPath = "output.html";
 
-            // Load the presentation from the file
+            // Load the presentation
             using (Presentation presentation = new Presentation(inputPath))
             {
-                // Optional: configure HTML export options (e.g., embed images)
+                // Create HTML export options (default options)
                 HtmlOptions htmlOptions = new HtmlOptions();
-                // htmlOptions.SlidesLayoutOptions can be set here if needed
 
                 // Save the presentation as HTML
                 presentation.Save(outputPath, SaveFormat.Html, htmlOptions);
