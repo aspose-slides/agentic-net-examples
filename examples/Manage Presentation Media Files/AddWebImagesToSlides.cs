@@ -1,35 +1,45 @@
 using System;
-using System.Net;
+using System.IO;
+using System.Net.Http;
+using Aspose.Slides;
+using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        // Create a new presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
-
-        // Get the first slide
-        Aspose.Slides.ISlide slide = presentation.Slides[0];
-
         // URL of the image to download
         string imageUrl = "https://example.com/image.jpg";
 
-        // Download image data from the web
-        System.Net.WebClient webClient = new System.Net.WebClient();
-        byte[] imageBytes = webClient.DownloadData(imageUrl);
-        webClient.Dispose();
+        // Download image data as byte array
+        byte[] imageBytes;
+        using (HttpClient client = new HttpClient())
+        {
+            System.Threading.Tasks.Task<byte[]> downloadTask = client.GetByteArrayAsync(imageUrl);
+            downloadTask.Wait();
+            imageBytes = downloadTask.Result;
+        }
 
-        // Add the downloaded image to the presentation's image collection
-        Aspose.Slides.IPPImage ipImage = presentation.Images.AddImage(imageBytes);
+        // Create a new presentation
+        using (Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation())
+        {
+            // Get the first slide
+            Aspose.Slides.ISlide slide = pres.Slides[0];
 
-        // Insert the image onto the slide as a picture frame
-        slide.Shapes.AddPictureFrame(Aspose.Slides.ShapeType.Rectangle, 50f, 150f, 300f, 200f, ipImage);
+            // Add a heading textbox
+            Aspose.Slides.IAutoShape headingShape = (Aspose.Slides.IAutoShape)slide.Shapes.AddAutoShape(
+                Aspose.Slides.ShapeType.Rectangle, 50, 20, 600, 50);
+            headingShape.TextFrame.Text = "Image from Web";
 
-        // Save the presentation to a file
-        string outputPath = "AddWebImages_out.pptx";
-        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            // Add the downloaded image to the presentation
+            Aspose.Slides.IPPImage img = pres.Images.AddImage(imageBytes);
 
-        // Clean up resources
-        presentation.Dispose();
+            // Insert the image onto the slide
+            slide.Shapes.AddPictureFrame(
+                Aspose.Slides.ShapeType.Rectangle, 100, 100, 400, 300, img);
+
+            // Save the presentation
+            pres.Save("WebImagePresentation.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        }
     }
 }
