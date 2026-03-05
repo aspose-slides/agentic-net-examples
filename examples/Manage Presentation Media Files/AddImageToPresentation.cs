@@ -1,34 +1,50 @@
 using System;
 using System.IO;
+using Aspose.Slides;
+using Aspose.Slides.Export;
 
-class Program
+namespace AddImageToPresentation
 {
-    static void Main()
+    class Program
     {
-        // Input image file path
-        string inputFilePath = "image.jpg";
-        // Output presentation file path
-        string outputFilePath = "result.pptx";
+        static void Main(string[] args)
+        {
+            // Input image file path
+            string inputFilePath = "input.png";
+            // Output presentation file path
+            string outputFilePath = "output.pptx";
 
-        // Create a new presentation
-        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation();
+            // Create a new presentation
+            Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation();
 
-        // Add image to the presentation's image collection
-        byte[] imageData = System.IO.File.ReadAllBytes(inputFilePath);
-        Aspose.Slides.IPPImage img = pres.Images.AddImage(imageData);
+            // Read image bytes from file
+            byte[] imageData = File.ReadAllBytes(inputFilePath);
 
-        // Get the first slide
-        Aspose.Slides.ISlide slide = pres.Slides[0];
+            // Add image to the presentation's image collection
+            Aspose.Slides.IPPImage img = pres.Images.AddImage(imageData);
 
-        // Add a rectangle shape to the slide
-        Aspose.Slides.IShape shape = slide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 50, 50, 400, 300);
+            // Get the first slide (or create one if none exist)
+            Aspose.Slides.ISlide slide;
+            if (pres.Slides.Count > 0)
+            {
+                slide = pres.Slides[0];
+            }
+            else
+            {
+                slide = pres.Slides.AddEmptySlide(pres.LayoutSlides.GetByType(Aspose.Slides.SlideLayoutType.Blank));
+            }
 
-        // Fill the shape with the added image
-        shape.FillFormat.FillType = Aspose.Slides.FillType.Picture;
-        shape.FillFormat.PictureFillFormat.Picture.Image = img;
+            // Add a picture frame that covers the whole slide
+            slide.Shapes.AddPictureFrame(
+                Aspose.Slides.ShapeType.Rectangle,
+                0,
+                0,
+                pres.SlideSize.Size.Width,
+                pres.SlideSize.Size.Height,
+                img);
 
-        // Save the presentation
-        pres.Save(outputFilePath, Aspose.Slides.Export.SaveFormat.Pptx);
-        pres.Dispose();
+            // Save the presentation in PPTX format
+            pres.Save(outputFilePath, Aspose.Slides.Export.SaveFormat.Pptx);
+        }
     }
 }
