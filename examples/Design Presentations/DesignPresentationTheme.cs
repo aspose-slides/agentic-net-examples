@@ -1,7 +1,8 @@
 using System;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 using System.Drawing;
+using Aspose.Slides;
+using Aspose.Slides.Theme;
+using Aspose.Slides.Export;
 
 class Program
 {
@@ -10,14 +11,20 @@ class Program
         // Create a new presentation
         Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-        // Modify the master theme's first line style to have a solid blue fill
-        presentation.MasterTheme.FormatScheme.LineStyles[0].FillFormat.SolidFillColor.Color = Color.Blue;
+        // Access the master theme (read‑only property, used for reading only)
+        Aspose.Slides.Theme.IMasterTheme masterTheme = presentation.MasterTheme;
 
-        // Apply an external theme file to the first master slide and all dependent slides
-        Aspose.Slides.IMasterSlide masterSlide = presentation.Masters[0];
-        masterSlide.ApplyExternalThemeToDependingSlides("ExternalTheme.thmx");
+        // Change the fill color of the first line style to Red
+        masterTheme.FormatScheme.LineStyles[0].FillFormat.SolidFillColor.Color = Color.Red;
 
-        // Save the presentation
-        presentation.Save("PresentationWithTheme_out.pptx", SaveFormat.Pptx);
+        // Set the third fill style to solid and change its color to ForestGreen
+        masterTheme.FormatScheme.FillStyles[2].FillType = FillType.Solid;
+        masterTheme.FormatScheme.FillStyles[2].SolidFillColor.Color = Color.ForestGreen;
+
+        // Modify the outer shadow distance of the third effect style
+        masterTheme.FormatScheme.EffectStyles[2].EffectFormat.OuterShadowEffect.Distance = 10f;
+
+        // Save the presentation before exiting
+        presentation.Save("ThemeDesignOutput.pptx", SaveFormat.Pptx);
     }
 }
