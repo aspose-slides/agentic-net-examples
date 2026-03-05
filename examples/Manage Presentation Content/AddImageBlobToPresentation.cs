@@ -7,27 +7,27 @@ class Program
 {
     static void Main()
     {
-        // Output directory
-        System.String outDir = "output";
-        if (!System.IO.Directory.Exists(outDir))
-            System.IO.Directory.CreateDirectory(outDir);
-
-        // Paths for image and output presentation
-        System.String imagePath = "large_image.jpg";
-        System.String outputPath = System.IO.Path.Combine(outDir, "presentationWithLargeImage.ppt");
+        // Path to the image file to be added as a BLOB
+        string imagePath = "large_image.jpg";
 
         // Create a new presentation
-        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation();
-
-        // Add image as BLOB with KeepLocked behavior
-        using (System.IO.FileStream fs = new System.IO.FileStream(imagePath, System.IO.FileMode.Open, System.IO.FileAccess.Read))
+        using (Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation())
         {
-            Aspose.Slides.IPPImage img = pres.Images.AddImage(fs, Aspose.Slides.LoadingStreamBehavior.KeepLocked);
-            pres.Slides[0].Shapes.AddPictureFrame(Aspose.Slides.ShapeType.Rectangle, 0, 0, 300, 200, img);
-        }
+            // Open the image file as a stream
+            using (FileStream fileStream = new FileStream(imagePath, FileMode.Open))
+            {
+                // Add the image to the presentation using KeepLocked behavior
+                Aspose.Slides.IPPImage img = pres.Images.AddImage(fileStream, Aspose.Slides.LoadingStreamBehavior.KeepLocked);
 
-        // Save the presentation in PPT format
-        pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Ppt);
-        pres.Dispose();
+                // Insert the image onto the first slide as a picture frame
+                pres.Slides[0].Shapes.AddPictureFrame(
+                    Aspose.Slides.ShapeType.Rectangle,
+                    0, 0, 300, 200,
+                    img);
+            }
+
+            // Save the presentation in PPT format
+            pres.Save("presentationWithLargeImage.ppt", Aspose.Slides.Export.SaveFormat.Ppt);
+        }
     }
 }
