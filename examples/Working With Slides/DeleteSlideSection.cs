@@ -6,23 +6,23 @@ class Program
 {
     static void Main()
     {
-        // Load the presentation from a file
-        Presentation presentation = new Presentation("input.pptx");
+        // Load the existing presentation
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation("input.pptx");
 
-        // Access the sections collection
-        ISectionCollection sections = presentation.Sections;
+        // Get the sections collection from the presentation
+        Aspose.Slides.ISectionCollection sections = presentation.Sections;
 
-        // Ensure there is at least one section to remove
+        // Check if there is at least one section to remove
         if (sections.Count > 0)
         {
-            // Get the first section
-            ISection section = sections[0];
+            // Retrieve the first section (or any specific section by index)
+            Aspose.Slides.ISection sectionToRemove = sections[0];
 
-            // Remove the section along with its slides
-            sections.RemoveSectionWithSlides(section);
+            // Remove the section together with all slides it contains
+            sections.RemoveSectionWithSlides(sectionToRemove);
         }
 
         // Save the modified presentation
-        presentation.Save("output.pptx", SaveFormat.Pptx);
+        presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
