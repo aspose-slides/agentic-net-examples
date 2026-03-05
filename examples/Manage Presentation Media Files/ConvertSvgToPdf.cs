@@ -3,25 +3,34 @@ using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-class Program
+namespace SvgToShapesExample
 {
-    static void Main()
+    class Program
     {
-        // Create a new presentation
-        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation())
+        static void Main(string[] args)
         {
-            // Load SVG content from file
-            string svgContent = System.IO.File.ReadAllText("input.svg");
-            Aspose.Slides.ISvgImage svgImage = new Aspose.Slides.SvgImage(svgContent);
+            // Path to the SVG file
+            string svgFilePath = "example.svg";
 
-            // Get the first slide
-            Aspose.Slides.ISlide slide = presentation.Slides[0];
+            // Read SVG content from file
+            string svgContent = File.ReadAllText(svgFilePath);
 
-            // Add the SVG as a group shape (position and size can be adjusted)
-            Aspose.Slides.IGroupShape groupShape = slide.Shapes.AddGroupShape(svgImage, 0f, 0f, 500f, 500f);
+            // Create an SVG image object from the content
+            ISvgImage svgImage = new SvgImage(svgContent);
 
-            // Save the presentation as PDF
-            presentation.Save("output.pdf", Aspose.Slides.Export.SaveFormat.Pdf);
+            // Create a new presentation
+            using (Presentation presentation = new Presentation())
+            {
+                // Get the first slide in the presentation
+                ISlide slide = presentation.Slides[0];
+
+                // Add a group shape to the slide by converting the SVG image into shapes
+                // Parameters: SVG image, X position, Y position, width, height
+                IGroupShape groupShape = slide.Shapes.AddGroupShape(svgImage, 0f, 0f, 500f, 500f);
+
+                // Save the presentation as a PDF file
+                presentation.Save("output.pdf", SaveFormat.Pdf);
+            }
         }
     }
 }
