@@ -5,7 +5,7 @@ using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
         // Create a new presentation
         Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
@@ -13,18 +13,28 @@ class Program
         // Get the first slide
         Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-        // Load image file into presentation images collection
-        string imagePath = "sample.jpg";
-        byte[] imageBytes = File.ReadAllBytes(imagePath);
-        Aspose.Slides.IPPImage image = presentation.Images.AddImage(imageBytes);
+        // Open the image file stream
+        System.IO.FileStream imageStream = new System.IO.FileStream("image.jpg", System.IO.FileMode.Open, System.IO.FileAccess.Read);
 
-        // Add picture frame to slide
+        // Add the image to the presentation's image collection
+        Aspose.Slides.IPPImage image = presentation.Images.AddImage(imageStream, Aspose.Slides.LoadingStreamBehavior.KeepLocked);
+
+        // Close the image stream
+        imageStream.Close();
+
+        // Add a picture frame containing the image to the slide
         Aspose.Slides.IPictureFrame pictureFrame = slide.Shapes.AddPictureFrame(
             Aspose.Slides.ShapeType.Rectangle,
-            50f, 50f, 300f, 200f,
+            50f,   // X position
+            50f,   // Y position
+            300f,  // Width
+            200f,  // Height
             image);
 
-        // Save the presentation
+        // Save the presentation in PPTX format
         presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+
+        // Dispose the presentation object
+        presentation.Dispose();
     }
 }
