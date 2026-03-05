@@ -1,17 +1,33 @@
 using System;
-using System.Drawing;
+using System.Text.RegularExpressions;
+using Aspose.Slides;
+using Aspose.Slides.Export;
 
 class Program
 {
     static void Main()
     {
-        // Load the existing presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation("input.pptx");
+        // Input and output file paths
+        string inputPath = "input.pptx";
+        string outputPath = "output.pptx";
 
-        // Highlight all occurrences of the word "example" with yellow color
-        presentation.HighlightText("example", Color.Yellow);
+        // Load the presentation
+        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
+
+        // Get the first shape as AutoShape
+        Aspose.Slides.AutoShape shape = pres.Slides[0].Shapes[0] as Aspose.Slides.AutoShape;
+
+        // Highlight text matching the regex pattern
+        if (shape != null && shape.TextFrame != null)
+        {
+            shape.TextFrame.HighlightRegex(
+                new Regex(@"\b[^\s]{10,}\b"),
+                System.Drawing.Color.Blue,
+                null);
+        }
 
         // Save the modified presentation
-        presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+        pres.Dispose();
     }
 }
