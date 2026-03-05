@@ -1,22 +1,35 @@
 using System;
 using Aspose.Slides;
-using Aspose.Slides.Export;
 
 class Program
 {
     static void Main(string[] args)
     {
-        // Path to the source presentation file (any supported format)
-        string sourcePath = "sample.pptx";
+        // Path to the password‑protected presentation
+        string inputPath = "protected.pptx";
+        // Path where the decrypted presentation will be saved
+        string outputPath = "unprotected.pptx";
+        // Password to open the presentation
+        string password = "YOUR_PASSWORD";
 
-        // Path where the presentation will be saved
-        string destinationPath = "converted.pptx";
-
-        // Open the presentation using the fully-qualified type
-        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(sourcePath))
+        // Retrieve information about the presentation
+        Aspose.Slides.IPresentationInfo info = Aspose.Slides.PresentationFactory.Instance.GetPresentationInfo(inputPath);
+        if (info.IsPasswordProtected)
         {
-            // Save the presentation in PPTX format before exiting
-            presentation.Save(destinationPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            Console.WriteLine("The presentation is protected by a password.");
         }
+
+        // Set load options with the password
+        Aspose.Slides.LoadOptions loadOptions = new Aspose.Slides.LoadOptions();
+        loadOptions.Password = password;
+
+        // Open the presentation using the load options
+        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath, loadOptions))
+        {
+            // Save the presentation before exiting
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+        }
+
+        Console.WriteLine("Presentation saved to " + outputPath);
     }
 }
