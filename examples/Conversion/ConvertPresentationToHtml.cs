@@ -1,43 +1,34 @@
 using System;
-using System.Drawing;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-namespace ConvertPresentationToHtml
+namespace AsposeSlidesHtmlConversion
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Input and output file paths
+            // Input PowerPoint file
             string inputPath = "input.pptx";
-            string outputPath = "output.html";
+
+            // Output HTML files
+            string outputHtmlOriginal = "output_original.html";
+            string outputHtmlEmbedded = "output_embedded.html";
 
             // Load the presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
+            {
+                // Save with original fonts (no embedding)
+                Aspose.Slides.Export.HtmlOptions htmlOptionsOriginal = new Aspose.Slides.Export.HtmlOptions();
+                presentation.Save(outputHtmlOriginal, Aspose.Slides.Export.SaveFormat.Html, htmlOptionsOriginal);
 
-            // Add a modern comment to the first slide
-            Aspose.Slides.ICommentAuthor author = presentation.CommentAuthors.AddAuthor("John Doe", "JD");
-            Aspose.Slides.IModernComment comment = author.Comments.AddModernComment(
-                "This is a sample modern comment.",
-                presentation.Slides[0],
-                null,
-                new System.Drawing.PointF(100f, 100f),
-                System.DateTime.Now);
+                // Save with embedded fonts
+                Aspose.Slides.Export.HtmlOptions htmlOptionsEmbedded = new Aspose.Slides.Export.HtmlOptions();
+                Aspose.Slides.Export.HtmlFormatter customFormatter = Aspose.Slides.Export.HtmlFormatter.CreateCustomFormatter(new Aspose.Slides.Export.EmbedAllFontsHtmlController());
+                htmlOptionsEmbedded.HtmlFormatter = customFormatter;
+                presentation.Save(outputHtmlEmbedded, Aspose.Slides.Export.SaveFormat.Html, htmlOptionsEmbedded);
 
-            // Set up HTML export options with comments included
-            Aspose.Slides.Export.HtmlOptions htmlOpt = new Aspose.Slides.Export.HtmlOptions();
-            htmlOpt.HtmlFormatter = Aspose.Slides.Export.HtmlFormatter.CreateDocumentFormatter("", false);
-            Aspose.Slides.Export.NotesCommentsLayoutingOptions notesOptions = new Aspose.Slides.Export.NotesCommentsLayoutingOptions();
-            notesOptions.NotesPosition = Aspose.Slides.Export.NotesPositions.BottomFull;
-            // No specific slides layout options required; using default (null)
-            htmlOpt.SlidesLayoutOptions = null;
-
-            // Save the presentation as HTML
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Html, htmlOpt);
-
-            // Dispose the presentation object
-            presentation.Dispose();
+                // Save the (possibly unchanged) presentation before exiting
+                presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            }
         }
     }
 }
