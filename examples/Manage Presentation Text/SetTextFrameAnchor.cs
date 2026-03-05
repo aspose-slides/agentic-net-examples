@@ -1,28 +1,32 @@
 using System;
 using Aspose.Slides;
-using Aspose.Slides.Export;
 using Aspose.Slides.Util;
+using Aspose.Slides.Export;
 
-namespace AsposeSlidesExample
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        // Load the existing presentation
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation("input.pptx");
+
+        // Retrieve all text frames from the presentation (including master slides)
+        Aspose.Slides.ITextFrame[] textFrames = Aspose.Slides.Util.SlideUtil.GetAllTextFrames(presentation, true);
+
+        // Iterate through each text frame and set its vertical anchoring type
+        foreach (Aspose.Slides.ITextFrame textFrame in textFrames)
         {
-            // Load an existing presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation("input.pptx");
+            // Access the text frame format
+            Aspose.Slides.ITextFrameFormat format = textFrame.TextFrameFormat;
 
-            // Retrieve all text frames in the presentation (excluding master slides)
-            Aspose.Slides.ITextFrame[] textFrames = Aspose.Slides.Util.SlideUtil.GetAllTextFrames(presentation, false);
-
-            // Set the vertical anchor type for each text frame
-            foreach (Aspose.Slides.ITextFrame textFrame in textFrames)
-            {
-                textFrame.TextFrameFormat.AnchoringType = Aspose.Slides.TextAnchorType.Top;
-            }
-
-            // Save the updated presentation
-            presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            // Set the anchoring type (e.g., Bottom)
+            format.AnchoringType = Aspose.Slides.TextAnchorType.Bottom;
         }
+
+        // Save the updated presentation as PPTX
+        presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+
+        // Dispose the presentation object
+        presentation.Dispose();
     }
 }
