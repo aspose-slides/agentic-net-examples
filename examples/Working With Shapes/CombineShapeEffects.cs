@@ -2,36 +2,39 @@ using System;
 using System.Drawing;
 using Aspose.Slides;
 using Aspose.Slides.Export;
+using Aspose.Slides.Effects;
 
-class Program
+namespace CombineShapeEffects
 {
-    static void Main()
+    class Program
     {
-        // Create a new presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        static void Main(string[] args)
+        {
+            // Create a new presentation
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-        // Access the first slide
-        Aspose.Slides.ISlide slide = presentation.Slides[0];
+            // Get the first slide
+            Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-        // Add a rectangle shape to the slide
-        Aspose.Slides.IAutoShape shape = slide.Shapes.AddAutoShape(
-            Aspose.Slides.ShapeType.Rectangle, 100, 100, 200, 100);
+            // Add a rectangle shape
+            Aspose.Slides.IAutoShape shape = (Aspose.Slides.IAutoShape)slide.Shapes.AddAutoShape(
+                Aspose.Slides.ShapeType.Rectangle, 100, 100, 300, 150);
 
-        // Enable and configure the glow effect
-        shape.EffectFormat.EnableGlowEffect();
-        shape.EffectFormat.GlowEffect.Radius = 10.0;
-        // Set the glow color (blue)
-        shape.EffectFormat.GlowEffect.Color.Color = Color.FromArgb(255, 0, 0, 255);
+            // Apply 3D depth and bevel effect
+            shape.ThreeDFormat.Depth = 5;
+            shape.ThreeDFormat.BevelTop.BevelType = Aspose.Slides.BevelPresetType.Circle;
+            shape.ThreeDFormat.BevelTop.Height = 5;
+            shape.ThreeDFormat.BevelTop.Width = 5;
 
-        // Enable and configure the outer shadow effect
-        shape.EffectFormat.EnableOuterShadowEffect();
-        shape.EffectFormat.OuterShadowEffect.BlurRadius = 5.0;
-        shape.EffectFormat.OuterShadowEffect.Direction = 45.0f;
-        shape.EffectFormat.OuterShadowEffect.Distance = 3.0;
-        // Set the shadow color (semi‑transparent black)
-        shape.EffectFormat.OuterShadowEffect.ShadowColor.Color = Color.FromArgb(128, 0, 0, 0);
+            // Enable outer shadow effect and configure it
+            shape.EffectFormat.EnableOuterShadowEffect();
+            shape.EffectFormat.OuterShadowEffect.BlurRadius = 4.0;
+            shape.EffectFormat.OuterShadowEffect.Distance = 3.0;
+            shape.EffectFormat.OuterShadowEffect.Direction = 45;
+            shape.EffectFormat.OuterShadowEffect.ShadowColor.Color = Color.FromArgb(128, 0, 0, 0);
 
-        // Save the presentation before exiting
-        presentation.Save("CombineShapeEffects.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            // Save the presentation
+            presentation.Save("CombinedEffects.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        }
     }
 }
