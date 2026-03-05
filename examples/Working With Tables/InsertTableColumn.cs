@@ -1,30 +1,43 @@
 using System;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 class Program
 {
     static void Main()
     {
-        // Create a new presentation
-        var presentation = new Aspose.Slides.Presentation();
+        // Load an existing presentation
+        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation("input.pptx");
 
         // Access the first slide
-        var slide = presentation.Slides[0];
+        Aspose.Slides.ISlide slide = pres.Slides[0];
 
-        // Define initial column widths and row heights
-        double[] columnWidths = { 100, 100 };
-        double[] rowHeights = { 50, 50, 50 };
+        // Find the first table on the slide
+        Aspose.Slides.ITable table = null;
+        for (int i = 0; i < slide.Shapes.Count; i++)
+        {
+            Aspose.Slides.IShape shape = slide.Shapes[i];
+            if (shape is Aspose.Slides.ITable)
+            {
+                table = (Aspose.Slides.ITable)shape;
+                break;
+            }
+        }
 
-        // Add a table to the slide
-        var table = slide.Shapes.AddTable(50, 50, columnWidths, rowHeights);
+        if (table != null)
+        {
+            // Get the columns collection of the table
+            Aspose.Slides.IColumnCollection columns = table.Columns;
 
-        // Insert a new column at index 1 (between the existing columns)
-        // Use the first column as a template for the new column
-        var templateColumn = table.Columns[0];
-        table.Columns.InsertClone(1, templateColumn, false);
+            // Use the first column as a template for the new column
+            Aspose.Slides.IColumn templateColumn = columns[0];
 
-        // Save the presentation
-        presentation.Save("InsertedColumnTable.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            // Specify the index where the new column should be inserted
+            int insertIndex = 1; // example: insert after the first column
+
+            // Insert a clone of the template column at the specified index
+            Aspose.Slides.IColumn[] newColumns = columns.InsertClone(insertIndex, templateColumn, false);
+        }
+
+        // Save the modified presentation
+        pres.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
