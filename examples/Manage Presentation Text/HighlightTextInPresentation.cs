@@ -1,29 +1,31 @@
 using System;
+using System.Text.RegularExpressions;
 using System.Drawing;
 
-class Program
+namespace HighlightTextWithRegex
 {
-    static void Main()
+    class Program
     {
-        // Input and output file paths
-        string inputPath = "input.pptx";
-        string outputPath = "output.pptx";
+        static void Main(string[] args)
+        {
+            // Path to the source presentation
+            string inputPath = "SamplePresentation.pptx";
 
-        // Load the presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+            // Path to the output presentation
+            string outputPath = "SamplePresentation-Highlighted.pptx";
 
-        // Get the first shape on the first slide as an AutoShape
-        Aspose.Slides.AutoShape autoShape = (Aspose.Slides.AutoShape)presentation.Slides[0].Shapes[0];
+            // Load the presentation
+            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
+            {
+                // Define the regular expression to match words with 10 or more characters
+                Regex regex = new Regex(@"\b[^\s]{10,}\b");
 
-        // Highlight the word "example" with Yellow color
-        autoShape.TextFrame.HighlightText("example", System.Drawing.Color.Yellow);
+                // Highlight all matches with blue color
+                presentation.HighlightRegex(regex, Color.Blue, null);
 
-        // Highlight the whole word "test" with LightBlue color using search options
-        Aspose.Slides.TextSearchOptions options = new Aspose.Slides.TextSearchOptions();
-        options.WholeWordsOnly = true;
-        autoShape.TextFrame.HighlightText("test", System.Drawing.Color.LightBlue, options, null);
-
-        // Save the modified presentation
-        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                // Save the modified presentation
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            }
+        }
     }
 }
