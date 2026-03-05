@@ -1,24 +1,29 @@
 using System;
 using System.Drawing;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-namespace SetPresentationBackgroundColor
+namespace PresentationApp
 {
     class Program
     {
         static void Main(string[] args)
         {
             // Create a new presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+            Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation();
 
-            // Set the background of the first slide to a solid blue color
-            presentation.Slides[0].Background.Type = Aspose.Slides.BackgroundType.OwnBackground;
-            presentation.Slides[0].Background.FillFormat.FillType = Aspose.Slides.FillType.Solid;
-            presentation.Slides[0].Background.FillFormat.SolidFillColor.Color = Color.Blue;
+            // Iterate through all slides and set a solid color background
+            for (int i = 0; i < pres.Slides.Count; i++)
+            {
+                Aspose.Slides.ISlide slide = pres.Slides[i];
+                // Use own background
+                slide.Background.Type = Aspose.Slides.BackgroundType.OwnBackground;
+                // Set fill type to solid
+                slide.Background.FillFormat.FillType = Aspose.Slides.FillType.Solid;
+                // Set the solid fill color
+                slide.Background.FillFormat.SolidFillColor.Color = Color.LightBlue;
+            }
 
-            // Save the presentation to a file
-            presentation.Save("OutputPresentation.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            // Save the presentation before exiting
+            pres.Save("AllSlidesSolidBackground.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
         }
     }
 }
