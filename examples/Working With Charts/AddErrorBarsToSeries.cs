@@ -1,38 +1,51 @@
 using System;
+using System.Drawing;
 
 class Program
 {
     static void Main()
     {
         // Create a new presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        var presentation = new Aspose.Slides.Presentation();
 
-        // Add a bubble chart with sample data on the first slide
-        Aspose.Slides.Charts.IChart chart = presentation.Slides[0].Shapes.AddChart(
-            Aspose.Slides.Charts.ChartType.Bubble, 50f, 50f, 600f, 400f, true);
+        // Access the first slide
+        var slide = presentation.Slides[0];
 
-        // Get the first series of the chart
-        Aspose.Slides.Charts.IChartSeries series = chart.ChartData.Series[0];
+        // Add a clustered column chart
+        var chart = slide.Shapes.AddChart(Aspose.Slides.Charts.ChartType.ClusteredColumn, 50, 50, 500, 400);
 
-        // Configure X error bars
-        Aspose.Slides.Charts.IErrorBarsFormat errorBarsX = series.ErrorBarsXFormat;
-        errorBarsX.IsVisible = true;
-        errorBarsX.ValueType = Aspose.Slides.Charts.ErrorBarValueType.Fixed;
-        errorBarsX.Value = 0.5f;
-        errorBarsX.Type = Aspose.Slides.Charts.ErrorBarType.Plus;
-        errorBarsX.HasEndCap = true;
+        // Get the chart data workbook
+        var defaultWorksheetIndex = 0;
+        var chartDataWorkbook = chart.ChartData.ChartDataWorkbook;
 
-        // Configure Y error bars
-        Aspose.Slides.Charts.IErrorBarsFormat errorBarsY = series.ErrorBarsYFormat;
-        errorBarsY.IsVisible = true;
-        errorBarsY.ValueType = Aspose.Slides.Charts.ErrorBarValueType.Percentage;
-        errorBarsY.Value = 10;
-        errorBarsY.Format.Line.Width = 2;
-        errorBarsY.Type = Aspose.Slides.Charts.ErrorBarType.Plus;
-        errorBarsY.HasEndCap = true;
+        // Clear default series and categories
+        chart.ChartData.Series.Clear();
+        chart.ChartData.Categories.Clear();
+
+        // Add categories
+        chart.ChartData.Categories.Add(chartDataWorkbook.GetCell(defaultWorksheetIndex, 1, 0, "Category 1"));
+        chart.ChartData.Categories.Add(chartDataWorkbook.GetCell(defaultWorksheetIndex, 2, 0, "Category 2"));
+        chart.ChartData.Categories.Add(chartDataWorkbook.GetCell(defaultWorksheetIndex, 3, 0, "Category 3"));
+
+        // Add a series
+        var series = chart.ChartData.Series.Add(chartDataWorkbook.GetCell(defaultWorksheetIndex, 0, 1, "Series 1"), chart.Type);
+
+        // Add data points
+        series.DataPoints.AddDataPointForBarSeries(chartDataWorkbook.GetCell(defaultWorksheetIndex, 1, 1, 10));
+        series.DataPoints.AddDataPointForBarSeries(chartDataWorkbook.GetCell(defaultWorksheetIndex, 2, 1, 20));
+        series.DataPoints.AddDataPointForBarSeries(chartDataWorkbook.GetCell(defaultWorksheetIndex, 3, 1, 15));
+
+        // Configure Y error bars if allowed
+        if (Aspose.Slides.Charts.ChartTypeCharacterizer.IsErrorBarsYAllowed(chart.Type))
+        {
+            var errorBars = series.ErrorBarsYFormat;
+            errorBars.IsVisible = true;
+            errorBars.Type = Aspose.Slides.Charts.ErrorBarType.Both;
+            errorBars.ValueType = Aspose.Slides.Charts.ErrorBarValueType.Fixed;
+            errorBars.Value = 5f; // Fixed error bar length
+        }
 
         // Save the presentation
-        string outputPath = "AddErrorBars.pptx";
-        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+        presentation.Save("ErrorBarsChart.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
