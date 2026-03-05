@@ -13,42 +13,22 @@ class Program
         // Get the first slide
         Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-        // Add an image and assign a hyperlink to it
-        byte[] imageBytes = File.ReadAllBytes("image.png");
-        Aspose.Slides.IPPImage image = presentation.Images.AddImage(imageBytes);
-        Aspose.Slides.IPictureFrame pictureFrame = slide.Shapes.AddPictureFrame(
-            Aspose.Slides.ShapeType.Rectangle, 50, 50, 200, 150, image);
-        pictureFrame.HyperlinkClick = new Aspose.Slides.Hyperlink("https://www.example.com/image");
-        pictureFrame.HyperlinkClick.Tooltip = "Image link";
+        // Load audio file bytes (replace with actual path to your audio file)
+        byte[] audioData = File.ReadAllBytes("audio.mp3");
 
-        // Add an audio file and assign a hyperlink to it
-        byte[] audioBytes = File.ReadAllBytes("audio.mp3");
-        Aspose.Slides.IAudio audio = presentation.Audios.AddAudio(audioBytes);
-        Aspose.Slides.IAudioFrame audioFrame = slide.Shapes.AddAudioFrameEmbedded(
-            300, 50, 100, 100, audio);
-        audioFrame.HyperlinkClick = new Aspose.Slides.Hyperlink("https://www.example.com/audio");
-        audioFrame.HyperlinkClick.Tooltip = "Audio link";
+        // Add audio to the presentation
+        Aspose.Slides.IAudio audio = presentation.Audios.AddAudio(audioData);
 
-        // Add a video file and assign a hyperlink to it
-        byte[] videoBytes = File.ReadAllBytes("video.mp4");
-        Aspose.Slides.IVideo video = presentation.Videos.AddVideo(videoBytes);
-        Aspose.Slides.IVideoFrame videoFrame = slide.Shapes.AddVideoFrame(
-            300, 200, 200, 150, video);
-        videoFrame.HyperlinkClick = new Aspose.Slides.Hyperlink("https://www.example.com/video");
-        videoFrame.HyperlinkClick.Tooltip = "Video link";
+        // Add an audio frame to the slide
+        Aspose.Slides.IAudioFrame audioFrame = slide.Shapes.AddAudioFrameEmbedded(10, 10, 100, 100, audio);
 
-        // Add a textbox with a hyperlink using HyperlinkManager
-        Aspose.Slides.IShape shape = slide.Shapes.AddAutoShape(
-            Aspose.Slides.ShapeType.Rectangle, 50, 250, 300, 50);
-        Aspose.Slides.IAutoShape autoShape = (Aspose.Slides.IAutoShape)shape;
-        autoShape.AddTextFrame("Click here");
-        Aspose.Slides.ITextFrame textFrame = autoShape.TextFrame;
-        Aspose.Slides.IParagraph paragraph = textFrame.Paragraphs[0];
-        Aspose.Slides.IPortion portion = paragraph.Portions[0];
-        Aspose.Slides.IHyperlinkManager hyperlinkManager = portion.PortionFormat.HyperlinkManager;
-        hyperlinkManager.SetExternalHyperlinkClick("https://www.example.com/text");
+        // Set an external hyperlink on click for the audio frame
+        audioFrame.HyperlinkClick = new Aspose.Slides.Hyperlink("https://www.aspose.com/");
+
+        // Optionally set a tooltip for the hyperlink
+        audioFrame.HyperlinkClick.Tooltip = "Visit Aspose website";
 
         // Save the presentation
-        presentation.Save("MediaHyperlinks.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        presentation.Save("MediaHyperlink.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
