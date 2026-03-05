@@ -6,20 +6,23 @@ class Program
 {
     static void Main()
     {
-        // Load an existing presentation
-        using (Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation("input.pptx"))
-        {
-            // Access the first slide
-            Aspose.Slides.ISlide slide = pres.Slides[0];
+        // Create a new presentation
+        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation();
 
-            // Assume the first shape on the slide is a table
-            Aspose.Slides.ITable table = (Aspose.Slides.ITable)slide.Shapes[0];
+        // Access the first slide
+        Aspose.Slides.ISlide slide = pres.Slides[0];
 
-            // Delete the column at index 1 (second column) without removing attached rows
-            table.Columns.RemoveAt(1, false);
+        // Define column widths and row heights for the table
+        double[] columnWidths = new double[] { 100, 100, 100 };
+        double[] rowHeights = new double[] { 50, 50, 50 };
 
-            // Save the modified presentation
-            pres.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
-        }
+        // Add a table shape to the slide
+        Aspose.Slides.ITable table = slide.Shapes.AddTable(50, 50, columnWidths, rowHeights);
+
+        // Delete the second column (index 1) without removing attached rows
+        table.Columns.RemoveAt(1, false);
+
+        // Save the presentation before exiting
+        pres.Save("DeletedColumnTable.pptx", SaveFormat.Pptx);
     }
 }
