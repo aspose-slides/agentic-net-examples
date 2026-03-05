@@ -1,19 +1,31 @@
 using System;
 
-class Program
+namespace ConvertPresentation
 {
-    static void Main()
+    class Program
     {
-        // Load the PowerPoint presentation
-        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation("input.pptx"))
+        static void Main(string[] args)
         {
-            // Create PDF options and set password protection
-            Aspose.Slides.Export.PdfOptions pdfOptions = new Aspose.Slides.Export.PdfOptions();
-            pdfOptions.Password = "pdfPassword";
-            pdfOptions.AccessPermissions = Aspose.Slides.Export.PdfAccessPermissions.PrintDocument | Aspose.Slides.Export.PdfAccessPermissions.HighQualityPrint;
+            // Verify that input and output file paths are provided
+            if (args.Length < 2)
+            {
+                Console.WriteLine("Usage: ConvertPresentation <input-ppt-or-pptx> <output-pdf>");
+                return;
+            }
 
-            // Save the presentation as a password-protected PDF
-            presentation.Save("output.pdf", Aspose.Slides.Export.SaveFormat.Pdf, pdfOptions);
+            // Assign command‑line arguments to local variables
+            string inputPath = args[0];
+            string outputPath = args[1];
+
+            // Load the presentation from the specified file
+            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
+            {
+                // Save the presentation as a PDF file
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pdf);
+            }
+
+            // Inform the user that conversion has finished
+            Console.WriteLine("Conversion completed.");
         }
     }
 }
