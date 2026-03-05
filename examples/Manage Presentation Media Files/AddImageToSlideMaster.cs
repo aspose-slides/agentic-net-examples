@@ -3,45 +3,33 @@ using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-namespace ManagePresentationMediaFiles
+namespace SlideMasterImageExample
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Define the data directory
-            string dataDir = Path.Combine(Directory.GetCurrentDirectory(), "Data");
-            if (!Directory.Exists(dataDir))
-                Directory.CreateDirectory(dataDir);
-
-            // Path to the image file to be added to the master slide
-            string imageFileName = "heading.png";
-            string imagePath = Path.Combine(dataDir, imageFileName);
-
             // Create a new presentation
             Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation();
 
-            // Get the first master slide
+            // Get the first master slide in the presentation
             Aspose.Slides.IMasterSlide masterSlide = pres.Masters[0];
 
-            // Add the image to the presentation's image collection
-            Aspose.Slides.IPPImage img = pres.Images.AddImage(File.ReadAllBytes(imagePath));
+            // Load image bytes from file and add the image to the presentation's image collection
+            byte[] imageBytes = File.ReadAllBytes("image.png");
+            Aspose.Slides.IPPImage image = pres.Images.AddImage(imageBytes);
 
-            // Add a picture frame to the master slide (covering the whole slide)
+            // Add the image to the master slide so it appears on all slides that use this master
             masterSlide.Shapes.AddPictureFrame(
                 Aspose.Slides.ShapeType.Rectangle,
-                0,
-                0,
-                pres.SlideSize.Size.Width,
-                pres.SlideSize.Size.Height,
-                img);
+                10,    // X position
+                10,    // Y position
+                100,   // Width
+                100,   // Height
+                image);
 
-            // Save the presentation
-            string outPath = Path.Combine(dataDir, "PresentationWithMasterImage.pptx");
-            pres.Save(outPath, SaveFormat.Pptx);
-
-            // Clean up
-            pres.Dispose();
+            // Save the presentation to disk
+            pres.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
         }
     }
 }
