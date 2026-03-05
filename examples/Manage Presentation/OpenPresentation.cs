@@ -1,23 +1,25 @@
 using System;
-using System.IO;
+using Aspose.Slides;
+using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        // Create load options with BLOB management settings
-        Aspose.Slides.LoadOptions loadOptions = new Aspose.Slides.LoadOptions();
-        loadOptions.BlobManagementOptions = new Aspose.Slides.BlobManagementOptions();
-        loadOptions.BlobManagementOptions.IsTemporaryFilesAllowed = true;
-        loadOptions.BlobManagementOptions.PresentationLockingBehavior = Aspose.Slides.PresentationLockingBehavior.KeepLocked;
+        // Path to the source presentation file
+        string sourcePath = "Sample.pptx";
+        // Path to the output presentation file
+        string outputPath = "OutputPresentation.pptx";
 
-        // Open existing large presentation with the specified options
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation("largePresentation.pptx", loadOptions);
+        // Open the presentation using Aspose.Slides
+        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(sourcePath))
+        {
+            // Display basic information about the presentation
+            Console.WriteLine("Number of slides: " + presentation.Slides.Count);
+            Console.WriteLine("First slide number: " + presentation.FirstSlideNumber);
 
-        // Save the presentation before exiting
-        presentation.Save("largePresentation_modified.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
-
-        // Dispose presentation
-        presentation.Dispose();
+            // Save the presentation before exiting
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+        }
     }
 }
