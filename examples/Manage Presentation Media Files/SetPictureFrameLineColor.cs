@@ -1,45 +1,41 @@
 using System;
-using System.Drawing;
 using System.IO;
+using System.Drawing;
+using Aspose.Slides;
+using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        // Paths for the source image and the output presentation
-        string imagePath = Path.Combine(Directory.GetCurrentDirectory(), "example.jpg");
-        string outputPath = Path.Combine(Directory.GetCurrentDirectory(), "output.pptx");
-
         // Create a new presentation
         Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
         // Get the first slide
         Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-        // Load the image from file
-        Aspose.Slides.IImage image = Aspose.Slides.Images.FromFile(imagePath);
+        // Load an image from file and add it to the presentation's image collection
+        FileStream imageStream = new FileStream("sample.jpg", FileMode.Open, FileAccess.Read);
+        Aspose.Slides.IPPImage image = presentation.Images.AddImage(imageStream);
+        imageStream.Close();
 
-        // Add the image to the presentation's image collection
-        Aspose.Slides.IPPImage imgx = presentation.Images.AddImage(image);
-
-        // Add a picture frame containing the image
+        // Add a picture frame to the slide
         Aspose.Slides.IPictureFrame pictureFrame = slide.Shapes.AddPictureFrame(
-            Aspose.Slides.ShapeType.Rectangle,
-            50f,               // X position
-            50f,               // Y position
-            imgx.Width,        // Width of the picture frame
-            imgx.Height,       // Height of the picture frame
-            imgx);
+            ShapeType.Rectangle, // shape type
+            100,                 // X position (points)
+            100,                 // Y position (points)
+            300,                 // width (points)
+            200,                 // height (points)
+            image);              // image to display
 
-        // Set line formatting: solid blue line with a width of 5 points
-        pictureFrame.LineFormat.FillFormat.FillType = Aspose.Slides.FillType.Solid;
-        pictureFrame.LineFormat.FillFormat.SolidFillColor.Color = Color.Blue;
-        pictureFrame.LineFormat.Width = 5f;
+        // Set the line (border) color of the picture frame to red
+        pictureFrame.LineFormat.FillFormat.FillType = FillType.Solid;
+        pictureFrame.LineFormat.FillFormat.SolidFillColor.Color = Color.Red;
 
-        // No rotation applied
-        pictureFrame.Rotation = 0f;
+        // Save the presentation to a file
+        presentation.Save("output.pptx", SaveFormat.Pptx);
 
-        // Save the presentation
-        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+        // Clean up
+        presentation.Dispose();
     }
 }
