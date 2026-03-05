@@ -1,18 +1,23 @@
 using System;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-class Program
+namespace SetSlideSizeExample
 {
-    static void Main()
+    class Program
     {
-        // Create a new presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        static void Main(string[] args)
+        {
+            // Input and output file paths
+            System.String inputPath = "input.pptx";
+            System.String outputPath = "output.pptx";
 
-        // Set slide size to 16:9 without scaling existing content
-        presentation.SlideSize.SetSize(Aspose.Slides.SlideSizeType.OnScreen16x9, Aspose.Slides.SlideSizeScaleType.DoNotScale);
+            // Load the presentation
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
 
-        // Save the presentation
-        presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            // Set custom slide size (width: 780 points, height: 540 points) without scaling content
+            presentation.SlideSize.SetSize(780f, 540f, Aspose.Slides.SlideSizeScaleType.DoNotScale);
+
+            // Save the modified presentation
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+        }
     }
 }
