@@ -15,14 +15,8 @@ class Program
         // Access the tag collection
         Aspose.Slides.ITagCollection tags = presentation.CustomData.Tags;
 
-        // Key of the tag to remove
-        string tagKey = "MyTag";
-
-        // Remove the tag if it exists
-        if (tags.Contains(tagKey))
-        {
-            tags.Remove(tagKey);
-        }
+        // Remove the tag with the specified key
+        tags.Remove("MyTag");
 
         // Save the modified presentation in PPTX format
         presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
