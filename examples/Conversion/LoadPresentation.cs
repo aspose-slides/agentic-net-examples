@@ -1,22 +1,26 @@
 using System;
+using Aspose.Slides;
+using Aspose.Slides.Export;
 
-namespace AsposeSlidesDemo
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
-        {
-            // Path to the input PPT file
-            string inputPath = "input.ppt";
-            // Path to the output PPTX file
-            string outputPath = "output.pptx";
+        // Input and output file paths
+        string inputPath = "input.pptx";
+        string outputPath = "output.pptx";
 
-            // Load the presentation from the PPT file
-            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
-            {
-                // Save the presentation in PPTX format
-                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
-            }
-        }
+        // Load options (optional, can specify format)
+        Aspose.Slides.LoadOptions loadOptions = new Aspose.Slides.LoadOptions();
+        loadOptions.LoadFormat = Aspose.Slides.LoadFormat.Pptx;
+
+        // Load the PPTX presentation
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath, loadOptions);
+
+        // Save the presentation (must save before exiting)
+        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+
+        // Clean up resources
+        presentation.Dispose();
     }
 }
