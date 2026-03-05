@@ -1,31 +1,31 @@
 using System;
+using System.IO;
+using Aspose.Slides;
+using Aspose.Slides.Export;
 
 class Program
 {
     static void Main()
     {
-        // Scaling factors for the thumbnail (full size)
-        int scaleX = 1;
-        int scaleY = scaleX;
-
-        // Path to the source PPTX file
-        System.String inputPath = "input.pptx";
+        // Input presentation file
+        string inputPath = "input.pptx";
+        // Output JPEG file for the specific slide
+        string outputImagePath = "slide1.jpg";
+        // Output presentation file (must be saved before exit)
+        string outputPresentationPath = "output.pptx";
 
         // Load the presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
 
-        // Export each slide as a JPEG image
-        foreach (Aspose.Slides.ISlide slide in presentation.Slides)
-        {
-            using (Aspose.Slides.IImage thumbnail = slide.GetImage(scaleX, scaleY))
-            {
-                System.String imageFileName = System.String.Format("Slide_{0}.jpg", slide.SlideNumber);
-                thumbnail.Save(imageFileName, Aspose.Slides.ImageFormat.Jpeg);
-            }
-        }
+        // Get the specific slide (e.g., first slide)
+        Aspose.Slides.ISlide slide = pres.Slides[0];
 
-        // Save the presentation (required by authoring rules)
-        presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
-        presentation.Dispose();
+        // Render the slide to a JPEG image with full scale
+        Aspose.Slides.IImage slideImage = slide.GetImage(1f, 1f);
+        slideImage.Save(outputImagePath, Aspose.Slides.ImageFormat.Jpeg);
+
+        // Save the presentation before exiting
+        pres.Save(outputPresentationPath, Aspose.Slides.Export.SaveFormat.Pptx);
+        pres.Dispose();
     }
 }
