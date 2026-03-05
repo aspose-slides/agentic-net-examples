@@ -1,5 +1,4 @@
 using System;
-using System.Drawing;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
@@ -10,16 +9,19 @@ class Program
         // Create a new presentation
         Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-        // Add a second slide to serve as the target of the zoom frame
-        Aspose.Slides.ISlide targetSlide = presentation.Slides.AddEmptySlide(presentation.Slides[0].LayoutSlide);
+        // Get reference to the first (default) slide
+        Aspose.Slides.ISlide firstSlide = presentation.Slides[0];
 
-        // Add a zoom frame on the first slide that links to the second slide
-        Aspose.Slides.IZoomFrame zoomFrame = presentation.Slides[0].Shapes.AddZoomFrame(150f, 20f, 100f, 100f, targetSlide);
+        // Add a second slide by cloning the first slide
+        Aspose.Slides.ISlide secondSlide = presentation.Slides.AddClone(firstSlide);
 
-        // Set a name for the zoom frame
-        zoomFrame.Name = "MyZoomFrame";
+        // Add a Zoom frame on the first slide that links to the second slide
+        Aspose.Slides.IZoomFrame zoomFrame = firstSlide.Shapes.AddZoomFrame(150f, 20f, 100f, 100f, secondSlide);
+
+        // Set alternative text for the zoom frame
+        zoomFrame.AlternativeText = "Zoom to second slide";
 
         // Save the presentation to a PPTX file
-        presentation.Save("ZoomPresentation.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        presentation.Save("ZoomFramesPresentation.pptx", SaveFormat.Pptx);
     }
 }
