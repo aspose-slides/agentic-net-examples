@@ -1,19 +1,25 @@
 using System;
 
-class Program
+namespace ConvertPptxToPpt
 {
-    static void Main(string[] args)
+    class Program
     {
-        // Path to the source PPTX file
-        string inputPath = "input.pptx";
-        // Path for the resulting PPT file
-        string outputPath = "output.ppt";
-
-        // Load the PPTX presentation
-        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
+        static void Main(string[] args)
         {
+            // Input PPTX file path (first argument or default)
+            string inputPath = args.Length > 0 && !String.IsNullOrEmpty(args[0]) ? args[0] : "input.pptx";
+
+            // Output PPT file path (second argument or default)
+            string outputPath = args.Length > 1 && !String.IsNullOrEmpty(args[1]) ? args[1] : "output.ppt";
+
+            // Load the PPTX presentation
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+
             // Save the presentation in PPT format
             presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Ppt);
+
+            // Release resources
+            presentation.Dispose();
         }
     }
 }
