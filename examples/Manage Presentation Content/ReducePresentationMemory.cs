@@ -1,38 +1,36 @@
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-namespace ReducePresentationMemory
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
+        // Paths for the source and the output presentation
+        string sourcePath = "input.ppt";
+        string outputPath = "output.ppt";
+
+        // Configure load options to use BLOB management with KeepLocked behavior
+        Aspose.Slides.LoadOptions loadOptions = new Aspose.Slides.LoadOptions
         {
-            // Path to the source presentation
-            System.String sourcePath = "input.ppt";
-            // Path where the reduced-memory copy will be saved
-            System.String copyPath = "output.ppt";
+            BlobManagementOptions = new Aspose.Slides.BlobManagementOptions
+            {
+                PresentationLockingBehavior = Aspose.Slides.PresentationLockingBehavior.KeepLocked
+            }
+        };
 
-            // Create LoadOptions with BlobManagement to keep the source locked for the lifetime of the presentation
-            Aspose.Slides.LoadOptions loadOptions = new Aspose.Slides.LoadOptions();
-            loadOptions.BlobManagementOptions = new Aspose.Slides.BlobManagementOptions();
-            loadOptions.BlobManagementOptions.PresentationLockingBehavior = Aspose.Slides.PresentationLockingBehavior.KeepLocked;
+        // Load the presentation using the specified load options
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(sourcePath, loadOptions);
 
-            // Load the presentation using the specified LoadOptions
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(sourcePath, loadOptions);
+        // Example modification: rename the first slide
+        presentation.Slides[0].Name = "RenamedSlide";
 
-            // Example modification: rename the first slide
-            presentation.Slides[0].Name = "RenamedSlide";
+        // Save the presentation in PPT format
+        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Ppt);
 
-            // Save the presentation in PPT format
-            presentation.Save(copyPath, Aspose.Slides.Export.SaveFormat.Ppt);
+        // Release resources
+        presentation.Dispose();
 
-            // Dispose the presentation to release resources and unlock the source file
-            presentation.Dispose();
-
-            // Optionally delete the original file after processing
-            System.IO.File.Delete(sourcePath);
-        }
+        // Delete the original file (it was locked only during the presentation's lifetime)
+        File.Delete(sourcePath);
     }
 }
