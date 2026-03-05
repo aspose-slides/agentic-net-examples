@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
@@ -7,34 +6,26 @@ class Program
 {
     static void Main()
     {
-        // Load the presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation("input.pptx");
-
-        // Text of the comment to be deleted
-        string commentToDelete = "DeleteMe";
-
-        // Iterate through all comment authors
-        foreach (Aspose.Slides.ICommentAuthor commentAuthor in presentation.CommentAuthors)
+        // Load the existing PPTX presentation
+        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation("input.pptx"))
         {
-            // Collect comments that match the criteria
-            List<Aspose.Slides.IComment> commentsToRemove = new List<Aspose.Slides.IComment>();
-
-            foreach (Aspose.Slides.IComment comment in commentAuthor.Comments)
+            // Iterate through all comment authors in the presentation
+            foreach (Aspose.Slides.ICommentAuthor commentAuthor in presentation.CommentAuthors)
             {
-                if (comment.Text == commentToDelete)
+                // Iterate through each comment belonging to the current author
+                foreach (Aspose.Slides.IComment comment in commentAuthor.Comments)
                 {
-                    commentsToRemove.Add(comment);
+                    // Identify comments that need to be deleted (e.g., containing specific text)
+                    if (comment.Text != null && comment.Text.Contains("DeleteMe"))
+                    {
+                        // Remove the comment and all its replies from the slide
+                        comment.Remove();
+                    }
                 }
             }
 
-            // Remove the collected comments
-            foreach (Aspose.Slides.IComment comment in commentsToRemove)
-            {
-                comment.Remove();
-            }
+            // Save the modified presentation before exiting
+            presentation.Save("output.pptx", SaveFormat.Pptx);
         }
-
-        // Save the modified presentation
-        presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
