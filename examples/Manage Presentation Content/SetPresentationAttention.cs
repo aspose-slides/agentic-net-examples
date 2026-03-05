@@ -3,37 +3,31 @@ using Aspose.Slides;
 using Aspose.Slides.Export;
 using System.Drawing;
 
-namespace SetPresentationAttention
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
+        // Create a new presentation
+        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation())
         {
-            // Input and output file paths
-            string inputPath = "input.pptx";
-            string outputPath = "output.ppt";
+            // Get the first slide
+            Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-            // Load the presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+            // Set background color to LightGray
+            slide.Background.Type = Aspose.Slides.BackgroundType.OwnBackground;
+            slide.Background.FillFormat.FillType = Aspose.Slides.FillType.Solid;
+            slide.Background.FillFormat.SolidFillColor.Color = System.Drawing.Color.LightGray;
 
-            // Get the first shape on the first slide (assumed to be an AutoShape)
-            Aspose.Slides.AutoShape autoShape = (Aspose.Slides.AutoShape)presentation.Slides[0].Shapes[0];
+            // Add a note to the slide
+            Aspose.Slides.INotesSlideManager notesMgr = slide.NotesSlideManager;
+            Aspose.Slides.INotesSlide notesSlide = notesMgr.AddNotesSlide();
+            notesSlide.NotesTextFrame.Text = "This is a note for the slide.";
 
-            // Highlight the word "Attention" with Yellow color
-            autoShape.TextFrame.HighlightText("Attention", System.Drawing.Color.Yellow);
+            // Set slide show type to PresentedBySpeaker
+            presentation.SlideShowSettings.SlideShowType = new Aspose.Slides.PresentedBySpeaker();
 
-            // Highlight the word "Important" with Red color, whole words only
-            autoShape.TextFrame.HighlightText(
-                "Important",
-                System.Drawing.Color.Red,
-                new Aspose.Slides.TextSearchOptions() { WholeWordsOnly = true },
-                null);
-
-            // Save the modified presentation in PPT format
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Ppt);
-
-            // Release resources
-            presentation.Dispose();
+            // Save the presentation
+            presentation.Save("ManagedContent.ppt", Aspose.Slides.Export.SaveFormat.Ppt);
         }
     }
 }
