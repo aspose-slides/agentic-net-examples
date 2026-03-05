@@ -1,20 +1,27 @@
 using System;
 
-class Program
+namespace PresentationFormatChecker
 {
-    static void Main(string[] args)
+    class Program
     {
-        // Path to the presentation file
-        string filePath = "sample.pptx";
-
-        // Get information about the presentation format
-        Aspose.Slides.IPresentationInfo info = Aspose.Slides.PresentationFactory.Instance.GetPresentationInfo(filePath);
-        Console.WriteLine(info.LoadFormat);
-
-        // Load the presentation and save it before exiting
-        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(filePath))
+        static void Main(string[] args)
         {
-            presentation.Save(filePath, Aspose.Slides.Export.SaveFormat.Pptx);
+            // Path to the source presentation
+            string inputPath = "sample.pptx";
+            // Path for the saved copy
+            string outputPath = "sample_copy.pptx";
+
+            // Retrieve presentation information using PresentationFactory
+            Aspose.Slides.IPresentationInfo info = Aspose.Slides.PresentationFactory.Instance.GetPresentationInfo(inputPath);
+            // Display the detected load format
+            Console.WriteLine(info.LoadFormat);
+
+            // Load the presentation
+            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
+            {
+                // Save the presentation before exiting
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            }
         }
     }
 }
