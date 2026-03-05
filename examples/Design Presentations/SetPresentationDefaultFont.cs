@@ -1,6 +1,4 @@
 using System;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 class Program
 {
@@ -9,11 +7,11 @@ class Program
         // Create a new presentation
         Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-        // Define PDF save options with a default regular font
+        // Configure default regular font for saving
         Aspose.Slides.Export.PdfOptions pdfOptions = new Aspose.Slides.Export.PdfOptions();
-        pdfOptions.DefaultRegularFont = "Arial";
+        pdfOptions.DefaultRegularFont = "Arial Black";
 
-        // Save the presentation using the specified options
+        // Save the presentation with the specified default font
         presentation.Save("DefaultFontPresentation.pdf", Aspose.Slides.Export.SaveFormat.Pdf, pdfOptions);
     }
 }
