@@ -1,39 +1,37 @@
 using System;
-using Aspose.Slides;
-using Aspose.Slides.Effects;
-using Aspose.Slides.Export;
 using System.Drawing;
+using Aspose.Slides;
 
-namespace SetTextTransparency
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
-        {
-            // Input and output file paths
-            string inputPath = "input.pptx";
-            string outputPath = "output.pptx";
+        // Paths for input and output presentations
+        string inputPath = "input.pptx";
+        string outputPath = "output.pptx";
 
-            // Load the presentation
-            Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
+        // Load the existing presentation
+        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
 
-            // Get the first shape on the first slide (assumed to be an AutoShape with text)
-            Aspose.Slides.IAutoShape shape = (Aspose.Slides.IAutoShape)pres.Slides[0].Shapes[0];
+        // Get the first slide
+        Aspose.Slides.ISlide slide = pres.Slides[0];
 
-            // Access the effect format of the first portion of the first paragraph
-            Aspose.Slides.IEffectFormat effectFormat = shape.TextFrame.Paragraphs[0].Portions[0].PortionFormat.EffectFormat;
+        // Add an AutoShape if none exists (for demonstration)
+        Aspose.Slides.IAutoShape shape = slide.Shapes.AddAutoShape(
+            Aspose.Slides.ShapeType.Rectangle, 100, 100, 400, 100);
+        shape.AddTextFrame("Transparent Text");
 
-            // Get the outer shadow effect
-            Aspose.Slides.Effects.IOuterShadow outerShadow = effectFormat.OuterShadowEffect;
+        // Access the first portion of the first paragraph
+        Aspose.Slides.IPortion portion = shape.TextFrame.Paragraphs[0].Portions[0];
 
-            // Retrieve the current shadow color
-            System.Drawing.Color shadowColor = outerShadow.ShadowColor.Color;
+        // Ensure the fill type is solid before setting the color
+        portion.PortionFormat.FillFormat.FillType = Aspose.Slides.FillType.Solid;
 
-            // Set the shadow color with an alpha value to define transparency (e.g., 128 out of 255)
-            outerShadow.ShadowColor.Color = System.Drawing.Color.FromArgb(128, shadowColor);
+        // Set the text color with 50% transparency (alpha = 128)
+        portion.PortionFormat.FillFormat.SolidFillColor.Color =
+            System.Drawing.Color.FromArgb(128, portion.PortionFormat.FillFormat.SolidFillColor.Color);
 
-            // Save the modified presentation
-            pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
-        }
+        // Save the modified presentation
+        pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
