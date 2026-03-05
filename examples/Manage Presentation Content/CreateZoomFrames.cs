@@ -1,10 +1,7 @@
 using System;
-using System.IO;
 using System.Drawing;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-namespace ManagePresentationContent
+namespace AsposeSlidesZoomExample
 {
     class Program
     {
@@ -13,37 +10,40 @@ namespace ManagePresentationContent
             // Create a new presentation
             Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-            // Add two empty slides based on the layout of the first slide
-            Aspose.Slides.ISlide slide2 = presentation.Slides.AddEmptySlide(presentation.Slides[0].LayoutSlide);
-            Aspose.Slides.ISlide slide3 = presentation.Slides.AddEmptySlide(presentation.Slides[0].LayoutSlide);
+            // Get the first slide
+            Aspose.Slides.ISlide firstSlide = presentation.Slides[0];
 
-            // Set custom backgrounds for the new slides
-            slide2.Background.Type = Aspose.Slides.BackgroundType.OwnBackground;
-            slide2.Background.FillFormat.FillType = Aspose.Slides.FillType.Solid;
-            slide2.Background.FillFormat.SolidFillColor.Color = Color.Cyan;
+            // Add two more empty slides based on the layout of the first slide
+            Aspose.Slides.ISlide secondSlide = presentation.Slides.AddEmptySlide(presentation.Slides[0].LayoutSlide);
+            Aspose.Slides.ISlide thirdSlide = presentation.Slides.AddEmptySlide(presentation.Slides[0].LayoutSlide);
 
-            slide3.Background.Type = Aspose.Slides.BackgroundType.OwnBackground;
-            slide3.Background.FillFormat.FillType = Aspose.Slides.FillType.Solid;
-            slide3.Background.FillFormat.SolidFillColor.Color = Color.DarkKhaki;
+            // Create sections and associate them with the newly added slides
+            Aspose.Slides.ISection sectionOne = presentation.Sections.AddSection("Section One", secondSlide);
+            Aspose.Slides.ISection sectionTwo = presentation.Sections.AddSection("Section Two", thirdSlide);
 
-            // Add a Zoom Frame linking to slide2
-            Aspose.Slides.IZoomFrame zoomFrame1 = presentation.Slides[0].Shapes.AddZoomFrame(50f, 50f, 100f, 100f, slide2);
-            zoomFrame1.ShowBackground = true;
+            // -------------------------------------------------
+            // Add a Slide Zoom Frame that links to the second slide
+            // -------------------------------------------------
+            Aspose.Slides.IZoomFrame slideZoom = firstSlide.Shapes.AddZoomFrame(150f, 20f, 100f, 100f, secondSlide);
+            slideZoom.ReturnToParent = true; // Enable return to parent slide after zoom
 
-            // Load a custom image to be used in the second Zoom Frame
-            string imagePath = Path.Combine(Directory.GetCurrentDirectory(), "logo.png");
-            Aspose.Slides.IPPImage customImage = presentation.Images.AddImage(Aspose.Slides.Images.FromFile(imagePath));
+            // -------------------------------------------------
+            // Add a Section Zoom Frame that links to the first section
+            // -------------------------------------------------
+            Aspose.Slides.ISectionZoomFrame sectionZoom = firstSlide.Shapes.AddSectionZoomFrame(300f, 20f, 100f, 100f, sectionOne);
+            sectionZoom.ReturnToParent = true;
 
-            // Add a Zoom Frame linking to slide3 with the custom image
-            Aspose.Slides.IZoomFrame zoomFrame2 = presentation.Slides[0].Shapes.AddZoomFrame(200f, 50f, 100f, 100f, slide3, customImage);
-            zoomFrame2.LineFormat.Width = 5f;
-            zoomFrame2.LineFormat.FillFormat.FillType = Aspose.Slides.FillType.Solid;
-            zoomFrame2.LineFormat.FillFormat.SolidFillColor.Color = Color.HotPink;
-            zoomFrame2.LineFormat.DashStyle = Aspose.Slides.LineDashStyle.DashDot;
+            // -------------------------------------------------
+            // Add a Summary Zoom Frame that aggregates all sections
+            // -------------------------------------------------
+            Aspose.Slides.ISummaryZoomFrame summaryZoom = firstSlide.Shapes.AddSummaryZoomFrame(450f, 20f, 300f, 200f);
+            // Optionally, customize the summary zoom collection (e.g., add a new summary zoom section)
+            Aspose.Slides.ISummaryZoomSection newSummarySection = summaryZoom.SummaryZoomCollection.AddSummaryZoomSection(sectionTwo);
+            newSummarySection.Title = "Custom Section Title";
 
-            // Save the presentation in PPT format
-            string outputPath = Path.Combine(Directory.GetCurrentDirectory(), "ZoomFramesPresentation.ppt");
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Ppt);
+            // Save the presentation in PPTX format
+            string outputPath = System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory(), "ZoomFramesExample.pptx");
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
         }
     }
 }
