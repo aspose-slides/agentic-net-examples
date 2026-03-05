@@ -11,55 +11,48 @@ namespace ExtractSvgImages
         {
             // Input presentation path
             string inputPath = "input.pptx";
-            // Output directory for extracted SVG files
-            string outputDir = "ExtractedSvgs";
-
-            // Ensure output directory exists
-            if (!Directory.Exists(outputDir))
-            {
-                Directory.CreateDirectory(outputDir);
-            }
+            // Output directory for extracted SVG files and saved presentation
+            string outputDir = "output";
+            Directory.CreateDirectory(outputDir);
 
             // Load the presentation
-            using (Presentation pres = new Presentation(inputPath))
+            using (Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath))
             {
-                // Iterate through slides
+                // Iterate through all slides
                 for (int slideIndex = 0; slideIndex < pres.Slides.Count; slideIndex++)
                 {
-                    ISlide slide = pres.Slides[slideIndex];
+                    Aspose.Slides.ISlide slide = pres.Slides[slideIndex];
 
-                    // Iterate through shapes on the slide
+                    // Iterate through all shapes on the slide
                     for (int shapeIndex = 0; shapeIndex < slide.Shapes.Count; shapeIndex++)
                     {
-                        IShape shape = slide.Shapes[shapeIndex];
+                        Aspose.Slides.IShape shape = slide.Shapes[shapeIndex];
 
                         // Check if the shape is a picture frame
-                        IPictureFrame pictureFrame = shape as IPictureFrame;
+                        Aspose.Slides.IPictureFrame pictureFrame = shape as Aspose.Slides.IPictureFrame;
                         if (pictureFrame != null)
                         {
                             // Get the image associated with the picture frame
-                            IPPImage image = pictureFrame.PictureFormat.Picture.Image;
+                            Aspose.Slides.IPPImage ppImage = pictureFrame.PictureFormat.Picture.Image;
 
                             // Check if the image contains an SVG representation
-                            if (image.SvgImage != null)
+                            Aspose.Slides.ISvgImage svgImage = ppImage.SvgImage;
+                            if (svgImage != null)
                             {
-                                // Retrieve SVG content
-                                string svgContent = image.SvgImage.SvgContent;
-
-                                // Build output file name
-                                string svgFileName = $"slide{slideIndex + 1}_shape{shapeIndex + 1}.svg";
+                                // Build a file name for the extracted SVG
+                                string svgFileName = $"slide_{slideIndex}_shape_{shapeIndex}.svg";
                                 string svgFilePath = Path.Combine(outputDir, svgFileName);
 
-                                // Write SVG content to file
-                                File.WriteAllText(svgFilePath, svgContent);
+                                // Write the SVG content to disk
+                                File.WriteAllText(svgFilePath, svgImage.SvgContent);
                             }
                         }
                     }
                 }
 
-                // Save the presentation (required by authoring rules)
-                string savedPath = "output.pptx";
-                pres.Save(savedPath, SaveFormat.Pptx);
+                // Save the (unchanged) presentation before exiting
+                string savedPresentationPath = Path.Combine(outputDir, "saved.pptx");
+                pres.Save(savedPresentationPath, Aspose.Slides.Export.SaveFormat.Pptx);
             }
         }
     }
