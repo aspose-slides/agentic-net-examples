@@ -1,20 +1,15 @@
 using System;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        // Load the presentation from a file
+        // Load the presentation from a PPTX file
         Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation("input.pptx");
-
-        // Remove all hyperlinks (click and mouse‑over) from all shapes in the presentation
+        // Remove all hyperlinks from the presentation
         presentation.HyperlinkQueries.RemoveAllHyperlinks();
-
-        // Save the modified presentation
+        // Save the presentation back to PPTX format
         presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
-
         // Release resources
         presentation.Dispose();
     }
