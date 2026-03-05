@@ -1,35 +1,23 @@
 using System;
-using Aspose.Slides;
+using System.IO;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        // Path to the password‑protected presentation
-        string inputPath = "protected.pptx";
-        // Path where the decrypted presentation will be saved
-        string outputPath = "unprotected.pptx";
-        // Password to open the presentation
-        string password = "YOUR_PASSWORD";
-
-        // Retrieve information about the presentation
-        Aspose.Slides.IPresentationInfo info = Aspose.Slides.PresentationFactory.Instance.GetPresentationInfo(inputPath);
-        if (info.IsPasswordProtected)
-        {
-            Console.WriteLine("The presentation is protected by a password.");
-        }
-
-        // Set load options with the password
+        // Create load options with BLOB management settings
         Aspose.Slides.LoadOptions loadOptions = new Aspose.Slides.LoadOptions();
-        loadOptions.Password = password;
+        loadOptions.BlobManagementOptions = new Aspose.Slides.BlobManagementOptions();
+        loadOptions.BlobManagementOptions.IsTemporaryFilesAllowed = true;
+        loadOptions.BlobManagementOptions.PresentationLockingBehavior = Aspose.Slides.PresentationLockingBehavior.KeepLocked;
 
-        // Open the presentation using the load options
-        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath, loadOptions))
-        {
-            // Save the presentation before exiting
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
-        }
+        // Open existing large presentation with the specified options
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation("largePresentation.pptx", loadOptions);
 
-        Console.WriteLine("Presentation saved to " + outputPath);
+        // Save the presentation before exiting
+        presentation.Save("largePresentation_modified.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+
+        // Dispose presentation
+        presentation.Dispose();
     }
 }
