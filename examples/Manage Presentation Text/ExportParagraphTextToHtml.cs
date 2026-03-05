@@ -7,23 +7,34 @@ class Program
 {
     static void Main()
     {
-        var presentationPath = "input.pptx";
-        var htmlPath = "output.html";
-
-        using (var presentation = new Aspose.Slides.Presentation(presentationPath))
+        // Load the existing presentation
+        using (Presentation presentation = new Presentation("input.pptx"))
         {
-            var slide = presentation.Slides[0];
-            var shape = slide.Shapes[0] as Aspose.Slides.IAutoShape;
-            if (shape != null && shape.TextFrame != null)
+            // Get the first slide
+            ISlide slide = presentation.Slides[0];
+
+            // Get the first shape on the slide (assumed to contain text)
+            IShape shape = slide.Shapes[0];
+
+            // Cast the shape to AutoShape to access its TextFrame
+            IAutoShape autoShape = shape as IAutoShape;
+            if (autoShape != null && autoShape.TextFrame != null)
             {
-                var paragraphs = shape.TextFrame.Paragraphs;
-                var options = new Aspose.Slides.Export.TextToHtmlConversionOptions();
-                var html = paragraphs.ExportToHtml(0, paragraphs.Count, options);
-                File.WriteAllText(htmlPath, html);
+                // Get the collection of paragraphs from the TextFrame
+                IParagraphCollection paragraphs = autoShape.TextFrame.Paragraphs;
+
+                // Create default options for HTML conversion
+                TextToHtmlConversionOptions options = new TextToHtmlConversionOptions();
+
+                // Export all paragraphs to HTML
+                string html = paragraphs.ExportToHtml(0, paragraphs.Count, options);
+
+                // Write the generated HTML to a file
+                File.WriteAllText("output.html", html);
             }
 
-            // Save the presentation before exiting
-            presentation.Save("saved.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            // Save the presentation (even if unchanged) before exiting
+            presentation.Save("output.pptx", SaveFormat.Pptx);
         }
     }
 }
