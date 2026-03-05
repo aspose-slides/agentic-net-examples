@@ -1,5 +1,6 @@
 using System;
 using Aspose.Slides;
+using Aspose.Slides.Export;
 
 class Program
 {
@@ -8,12 +9,12 @@ class Program
         // Load the existing presentation
         Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation("input.pptx");
 
-        // Iterate through all slides in the presentation
+        // Iterate through all slides
         for (int slideIndex = 0; slideIndex < presentation.Slides.Count; slideIndex++)
         {
             Aspose.Slides.ISlide slide = presentation.Slides[slideIndex];
 
-            // Iterate through all shapes on the current slide
+            // Iterate through all shapes on the slide
             for (int shapeIndex = 0; shapeIndex < slide.Shapes.Count; shapeIndex++)
             {
                 // Process only AutoShape objects that can contain text
@@ -29,8 +30,8 @@ class Program
                         {
                             Aspose.Slides.IParagraph paragraph = autoShape.TextFrame.Paragraphs[paraIndex];
 
-                            // Set line spacing (SpaceWithin) in points (negative value indicates points)
-                            paragraph.ParagraphFormat.SpaceWithin = -12f; // Example: 12 points line spacing
+                            // Set line spacing (SpaceWithin) to 150% of the font size
+                            paragraph.ParagraphFormat.SpaceWithin = 150f;
                         }
                     }
                 }
