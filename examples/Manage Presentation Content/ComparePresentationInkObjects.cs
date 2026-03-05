@@ -1,28 +1,35 @@
 using System;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        // Load an existing presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation("input.pptx");
+        // Create a new presentation
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-        // Export to PDF with ink visible
-        Aspose.Slides.Export.PdfOptions pdfOptionsShowInk = new Aspose.Slides.Export.PdfOptions();
-        pdfOptionsShowInk.InkOptions.HideInk = false;
-        presentation.Save("output_show_ink.pdf", Aspose.Slides.Export.SaveFormat.Pdf, pdfOptionsShowInk);
+        // Add a regular line shape to the first slide
+        Aspose.Slides.ISlide slide = presentation.Slides[0];
+        slide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Line, 50, 150, 300, 0);
 
-        // Export to PDF with ink hidden
-        Aspose.Slides.Export.PdfOptions pdfOptionsHideInk = new Aspose.Slides.Export.PdfOptions();
-        pdfOptionsHideInk.InkOptions.HideInk = true;
-        presentation.Save("output_hide_ink.pdf", Aspose.Slides.Export.SaveFormat.Pdf, pdfOptionsHideInk);
+        // NOTE: Adding an actual Ink object to the slide requires complex handling.
+        // For this example we focus on how to control Ink visibility during export.
 
-        // Save the original presentation (ensuring it is saved before exit)
-        presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        // Create rendering options that hide Ink objects
+        Aspose.Slides.Export.RenderingOptions hideInkOptions = new Aspose.Slides.Export.RenderingOptions();
+        hideInkOptions.InkOptions.HideInk = true;
 
-        // Clean up resources
+        // Save the presentation as PPT with Ink hidden
+        presentation.Save("Presentation_HideInk.ppt", Aspose.Slides.Export.SaveFormat.Ppt, hideInkOptions);
+
+        // Create rendering options that show Ink objects
+        Aspose.Slides.Export.RenderingOptions showInkOptions = new Aspose.Slides.Export.RenderingOptions();
+        showInkOptions.InkOptions.HideInk = false;
+        showInkOptions.InkOptions.InterpretMaskOpAsOpacity = false;
+
+        // Save the presentation as PPT with Ink visible
+        presentation.Save("Presentation_ShowInk.ppt", Aspose.Slides.Export.SaveFormat.Ppt, showInkOptions);
+
+        // Dispose the presentation object
         presentation.Dispose();
     }
 }
