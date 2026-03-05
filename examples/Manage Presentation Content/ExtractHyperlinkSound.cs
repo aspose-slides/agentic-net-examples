@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using Aspose.Slides;
 
 class Program
 {
@@ -11,15 +12,17 @@ class Program
         // Access the first slide
         Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-        // Get the hyperlink of the first shape on the slide
-        Aspose.Slides.IHyperlink link = slide.Shapes[0].HyperlinkClick;
+        // Get the hyperlink associated with the first shape on the slide
+        Aspose.Slides.IHyperlink hyperlink = slide.Shapes[0].HyperlinkClick;
 
-        // If the hyperlink has an associated sound, extract it
-        if (link != null && link.Sound != null)
+        // If the hyperlink has an attached sound, extract it
+        if (hyperlink != null && hyperlink.Sound != null)
         {
-            byte[] audioData = link.Sound.BinaryData;
+            // Retrieve the sound data as a byte array
+            byte[] audioData = hyperlink.Sound.BinaryData;
+
             // Save the extracted sound to a file
-            File.WriteAllBytes("hyperlinkSound.mp3", audioData);
+            File.WriteAllBytes("hyperlink_sound.bin", audioData);
         }
 
         // Save the presentation before exiting
