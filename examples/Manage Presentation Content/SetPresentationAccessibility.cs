@@ -4,35 +4,22 @@ using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
         // Create a new presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation())
+        {
+            // Recommend the file as read‑only
+            presentation.ProtectionManager.ReadOnlyRecommended = true;
 
-        // Set document properties to improve accessibility metadata
-        Aspose.Slides.IDocumentProperties docProps = presentation.DocumentProperties;
-        docProps.Title = "Accessible Presentation";
-        docProps.Subject = "Demonstrates accessibility features";
-        docProps.Author = "John Doe";
+            // Apply write protection with a password
+            presentation.ProtectionManager.SetWriteProtection("writePass123");
 
-        // Access the first slide
-        Aspose.Slides.ISlide slide = presentation.Slides[0];
+            // Encrypt the presentation with a password
+            presentation.ProtectionManager.Encrypt("encryptPass123");
 
-        // Add a rectangle shape with alternative text for screen readers
-        Aspose.Slides.IShape shape = slide.Shapes.AddAutoShape(
-            Aspose.Slides.ShapeType.Rectangle,
-            100, 100, 300, 150);
-        shape.AlternativeText = "Important information box";
-
-        // Add presenter notes to the slide
-        Aspose.Slides.INotesSlideManager notesMgr = slide.NotesSlideManager;
-        Aspose.Slides.INotesSlide notesSlide = notesMgr.AddNotesSlide();
-        notesSlide.NotesTextFrame.Text = "Slide notes: Explain the content of the rectangle.";
-
-        // Save the presentation before exiting
-        presentation.Save("AccessiblePresentation.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
-
-        // Clean up resources
-        presentation.Dispose();
+            // Save the presentation before exiting
+            presentation.Save("AccessiblePresentation.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        }
     }
 }
