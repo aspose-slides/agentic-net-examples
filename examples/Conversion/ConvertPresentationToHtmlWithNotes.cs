@@ -1,18 +1,30 @@
 using System;
+using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-class Program
+namespace PresentationToHtml
 {
-    static void Main()
+    class Program
     {
-        // Load the source presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation("input.pptx");
+        static void Main(string[] args)
+        {
+            // Input PowerPoint file path
+            string inputPath = "input.pptx";
+            // Output HTML file path
+            string outputPath = "output.html";
 
-        // Configure the presentation to be shown in speaker mode (includes speaker notes)
-        presentation.SlideShowSettings.SlideShowType = new Aspose.Slides.PresentedBySpeaker();
+            // Load the presentation
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
 
-        // Save the presentation as HTML
-        presentation.Save("output.html", Aspose.Slides.Export.SaveFormat.Html);
+            // Create HTML export options (default options include notes)
+            Aspose.Slides.Export.HtmlOptions htmlOptions = new Aspose.Slides.Export.HtmlOptions();
+
+            // Save the presentation as HTML with notes
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Html, htmlOptions);
+
+            // Ensure the presentation is saved before exiting
+            presentation.Dispose();
+        }
     }
 }
