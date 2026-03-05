@@ -1,48 +1,52 @@
+using System;
+using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
-using Aspose.Slides.Util;
 
-class Program
+namespace GroupUngroupShapesDemo
 {
-    static void Main()
+    class Program
     {
-        // Create a new presentation
-        Presentation presentation = new Presentation();
-
-        // Get the first slide
-        ISlide slide = presentation.Slides[0];
-
-        // Access the shape collection of the slide
-        IShapeCollection shapes = slide.Shapes;
-
-        // Add individual shapes to the slide
-        IShape rect1 = shapes.AddAutoShape(ShapeType.Rectangle, 50, 50, 100, 100);
-        IShape rect2 = shapes.AddAutoShape(ShapeType.Ellipse, 200, 50, 100, 100);
-        IShape rect3 = shapes.AddAutoShape(ShapeType.Triangle, 350, 50, 100, 100);
-
-        // Create a group shape and add clones of the individual shapes
-        IGroupShape group = shapes.AddGroupShape();
-        group.Shapes.AddClone(rect1);
-        group.Shapes.AddClone(rect2);
-        group.Shapes.AddClone(rect3);
-
-        // Remove the original shapes from the slide (they are now inside the group)
-        shapes.Remove(rect1);
-        shapes.Remove(rect2);
-        shapes.Remove(rect3);
-
-        // Ungroup: clone each shape from the group back to the slide
-        IShapeCollection groupShapes = group.Shapes;
-        for (int i = 0; i < groupShapes.Count; i++)
+        static void Main(string[] args)
         {
-            IShape innerShape = groupShapes[i];
-            shapes.AddClone(innerShape);
+            // Define output directory and ensure it exists
+            string outputDir = "output" + Path.DirectorySeparatorChar;
+            if (!Directory.Exists(outputDir))
+                Directory.CreateDirectory(outputDir);
+
+            // Create a new presentation
+            Presentation pres = new Presentation();
+
+            // Get the first slide and its shape collection
+            ISlide slide = pres.Slides[0];
+            IShapeCollection slideShapes = slide.Shapes;
+
+            // Add a group shape to the slide
+            IGroupShape group = slideShapes.AddGroupShape();
+
+            // Add four rectangle shapes inside the group
+            group.Shapes.AddAutoShape(ShapeType.Rectangle, 100, 100, 100, 100);
+            group.Shapes.AddAutoShape(ShapeType.Rectangle, 250, 100, 100, 100);
+            group.Shapes.AddAutoShape(ShapeType.Rectangle, 100, 250, 100, 100);
+            group.Shapes.AddAutoShape(ShapeType.Rectangle, 250, 250, 100, 100);
+
+            // Set the frame of the group shape
+            group.Frame = new ShapeFrame(50, 50, 400, 400, NullableBool.False, NullableBool.False, 0);
+
+            // ----- Ungrouping demonstration -----
+            // Clone each shape inside the group back to the slide
+            IShape[] innerShapes = group.Shapes.ToArray();
+            foreach (IShape innerShape in innerShapes)
+            {
+                slideShapes.AddClone(innerShape);
+            }
+
+            // Remove the original group shape from the slide
+            slideShapes.Remove(group);
+            // ------------------------------------
+
+            // Save the presentation
+            pres.Save(outputDir + "GroupUngroupShapes_out.pptx", SaveFormat.Pptx);
         }
-
-        // Remove the now empty group shape
-        shapes.Remove(group);
-
-        // Save the presentation
-        presentation.Save("GroupUngroupDemo.pptx", SaveFormat.Pptx);
     }
 }
