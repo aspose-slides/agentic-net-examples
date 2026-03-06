@@ -1,40 +1,26 @@
 using System;
 using System.Drawing;
+using Aspose.Slides;
+using Aspose.Slides.Charts;
+using Aspose.Slides.Export;
 
 class Program
 {
     static void Main()
     {
         // Create a new presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation();
 
-        // Access the first slide
-        Aspose.Slides.ISlide slide = presentation.Slides[0];
-
-        // Add a clustered column chart
-        Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(
+        // Add a clustered column chart to the first slide
+        Aspose.Slides.Charts.IChart chart = pres.Slides[0].Shapes.AddChart(
             Aspose.Slides.Charts.ChartType.ClusteredColumn,
-            50, 50, 500, 400);
+            0f, 0f, 500f, 400f);
 
-        // Change fill color of the first series to Red
+        // Change the fill color of the first series to red
         chart.ChartData.Series[0].Format.Fill.FillType = Aspose.Slides.FillType.Solid;
-        chart.ChartData.Series[0].Format.Fill.SolidFillColor.Color = Color.FromArgb(255, 0, 0);
-
-        // Ensure a second series exists
-        if (chart.ChartData.Series.Count < 2)
-        {
-            Aspose.Slides.Charts.IChartDataWorkbook workbook = chart.ChartData.ChartDataWorkbook;
-            int defaultWorksheetIndex = 0;
-            chart.ChartData.Series.Add(
-                workbook.GetCell(defaultWorksheetIndex, 0, 1, "Series 2"),
-                chart.Type);
-        }
-
-        // Change fill color of the second series to Green
-        chart.ChartData.Series[1].Format.Fill.FillType = Aspose.Slides.FillType.Solid;
-        chart.ChartData.Series[1].Format.Fill.SolidFillColor.Color = Color.FromArgb(0, 255, 0);
+        chart.ChartData.Series[0].Format.Fill.SolidFillColor.Color = Color.Red;
 
         // Save the presentation
-        presentation.Save("ChangeSeriesFillColor_out.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        pres.Save("ChangeSeriesFillColor_out.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
