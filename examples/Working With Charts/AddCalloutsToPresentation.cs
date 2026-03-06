@@ -1,7 +1,5 @@
 using System;
 using Aspose.Slides;
-using Aspose.Slides.Charts;
-using Aspose.Slides.Export;
 
 class Program
 {
@@ -13,22 +11,22 @@ class Program
         // Get the first slide
         Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-        // Add a pie chart to the slide
-        Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(
-            Aspose.Slides.Charts.ChartType.Pie,
-            50f,   // X position
-            50f,   // Y position
-            500f,  // Width
-            400f   // Height
-        );
+        // Add a callout shape to the slide
+        Aspose.Slides.IAutoShape callout = slide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Callout1, 100, 100, 300, 100);
 
-        // Show the data values on the chart
-        chart.ChartData.Series[0].Labels.DefaultDataLabelFormat.ShowValue = true;
+        // Set the text of the callout
+        callout.TextFrame.Text = "This is a callout";
 
-        // Display the data labels as callouts
-        chart.ChartData.Series[0].Labels.DefaultDataLabelFormat.ShowLabelAsDataCallout = true;
+        // Set fill color for the callout
+        callout.FillFormat.FillType = Aspose.Slides.FillType.Solid;
+        callout.FillFormat.SolidFillColor.Color = System.Drawing.Color.LightYellow;
 
-        // Save the presentation
-        presentation.Save("AddCallouts_out.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        // Set line format for the callout
+        callout.LineFormat.Width = 2;
+        callout.LineFormat.FillFormat.FillType = Aspose.Slides.FillType.Solid;
+        callout.LineFormat.FillFormat.SolidFillColor.Color = System.Drawing.Color.Black;
+
+        // Save the presentation to a file
+        presentation.Save("CalloutPresentation.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
