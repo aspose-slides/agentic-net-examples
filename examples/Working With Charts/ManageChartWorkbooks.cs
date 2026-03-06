@@ -3,72 +3,72 @@ using Aspose.Slides;
 using Aspose.Slides.Charts;
 using Aspose.Slides.Export;
 
-class Program
+namespace ManageChartWorkbooksExample
 {
-    static void Main(string[] args)
+    class Program
     {
-        // Create a new presentation.
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        static void Main(string[] args)
+        {
+            // Output file path
+            string outputPath = "ManagedChartWorkbook.pptx";
 
-        // Access the first slide.
-        Aspose.Slides.ISlide slide = presentation.Slides[0];
+            // Create a new presentation
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-        // Add a Stacked Column 3D chart.
-        Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(
-            Aspose.Slides.Charts.ChartType.StackedColumn3D,
-            0f, 0f, 500f, 500f);
+            // Get the first slide
+            Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-        // Index of the default worksheet.
-        int defaultWorksheetIndex = 0;
+            // Add a 3‑D stacked column chart
+            Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(
+                Aspose.Slides.Charts.ChartType.StackedColumn3D,
+                0f, 0f, 500f, 500f);
 
-        // Get the chart data workbook.
-        Aspose.Slides.Charts.IChartDataWorkbook workbook = chart.ChartData.ChartDataWorkbook;
+            // Index of the default worksheet inside the chart's workbook
+            int defaultWorksheetIndex = 0;
 
-        // Add two series.
-        chart.ChartData.Series.Add(
-            workbook.GetCell(defaultWorksheetIndex, 0, 1, "Series 1"),
-            chart.Type);
-        chart.ChartData.Series.Add(
-            workbook.GetCell(defaultWorksheetIndex, 0, 2, "Series 2"),
-            chart.Type);
+            // Access the chart's embedded workbook
+            Aspose.Slides.Charts.IChartDataWorkbook workbook = chart.ChartData.ChartDataWorkbook;
 
-        // Add three categories.
-        chart.ChartData.Categories.Add(
-            workbook.GetCell(defaultWorksheetIndex, 1, 0, "Category 1"));
-        chart.ChartData.Categories.Add(
-            workbook.GetCell(defaultWorksheetIndex, 2, 0, "Category 2"));
-        chart.ChartData.Categories.Add(
-            workbook.GetCell(defaultWorksheetIndex, 3, 0, "Category 3"));
+            // Add two series
+            chart.ChartData.Series.Add(
+                workbook.GetCell(defaultWorksheetIndex, 0, 1, "Series 1"),
+                chart.Type);
+            chart.ChartData.Series.Add(
+                workbook.GetCell(defaultWorksheetIndex, 0, 2, "Series 2"),
+                chart.Type);
 
-        // Set 3D rotation properties.
-        chart.Rotation3D.RightAngleAxes = true;
-        chart.Rotation3D.RotationX = (sbyte)30;
-        chart.Rotation3D.RotationY = (ushort)20;
-        chart.Rotation3D.DepthPercents = (ushort)30;
+            // Add three categories
+            chart.ChartData.Categories.Add(
+                workbook.GetCell(defaultWorksheetIndex, 1, 0, "Category 1"));
+            chart.ChartData.Categories.Add(
+                workbook.GetCell(defaultWorksheetIndex, 2, 0, "Category 2"));
+            chart.ChartData.Categories.Add(
+                workbook.GetCell(defaultWorksheetIndex, 3, 0, "Category 3"));
 
-        // Populate data points for the first series.
-        Aspose.Slides.Charts.IChartSeries series1 = chart.ChartData.Series[0];
-        series1.DataPoints.AddDataPointForBarSeries(
-            workbook.GetCell(defaultWorksheetIndex, 1, 1, 20));
-        series1.DataPoints.AddDataPointForBarSeries(
-            workbook.GetCell(defaultWorksheetIndex, 2, 1, 50));
-        series1.DataPoints.AddDataPointForBarSeries(
-            workbook.GetCell(defaultWorksheetIndex, 3, 1, 30));
+            // Populate data for the first series
+            Aspose.Slides.Charts.IChartSeries series1 = chart.ChartData.Series[0];
+            series1.DataPoints.AddDataPointForBarSeries(
+                workbook.GetCell(defaultWorksheetIndex, 1, 1, 20));
+            series1.DataPoints.AddDataPointForBarSeries(
+                workbook.GetCell(defaultWorksheetIndex, 2, 1, 50));
+            series1.DataPoints.AddDataPointForBarSeries(
+                workbook.GetCell(defaultWorksheetIndex, 3, 1, 30));
 
-        // Populate data points for the second series.
-        Aspose.Slides.Charts.IChartSeries series2 = chart.ChartData.Series[1];
-        series2.DataPoints.AddDataPointForBarSeries(
-            workbook.GetCell(defaultWorksheetIndex, 1, 2, 30));
-        series2.DataPoints.AddDataPointForBarSeries(
-            workbook.GetCell(defaultWorksheetIndex, 2, 2, 10));
-        series2.DataPoints.AddDataPointForBarSeries(
-            workbook.GetCell(defaultWorksheetIndex, 3, 2, 60));
+            // Populate data for the second series
+            Aspose.Slides.Charts.IChartSeries series2 = chart.ChartData.Series[1];
+            series2.DataPoints.AddDataPointForBarSeries(
+                workbook.GetCell(defaultWorksheetIndex, 1, 2, 30));
+            series2.DataPoints.AddDataPointForBarSeries(
+                workbook.GetCell(defaultWorksheetIndex, 2, 2, 10));
+            series2.DataPoints.AddDataPointForBarSeries(
+                workbook.GetCell(defaultWorksheetIndex, 3, 2, 60));
 
-        // Set series overlap.
-        series2.ParentSeriesGroup.Overlap = (sbyte)-10;
+            // Link the chart to an external workbook (do not update data immediately)
+            string externalWorkbookPath = "externalData.xlsx";
+            ((Aspose.Slides.Charts.ChartData)chart.ChartData).SetExternalWorkbook(externalWorkbookPath, false);
 
-        // Save the presentation.
-        string outputPath = "ManageChartWorkbooks_out.pptx";
-        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            // Save the presentation
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+        }
     }
 }
