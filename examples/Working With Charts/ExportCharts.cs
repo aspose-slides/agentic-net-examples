@@ -1,32 +1,28 @@
 using System;
-using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        // Load the existing presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation("input.pptx");
+        // Output file paths
+        string presentationPath = "ExportedChart.pptx";
+        string chartImagePath = "ChartImage.png";
 
-        // Iterate through all slides
-        for (int index = 0; index < presentation.Slides.Count; index++)
-        {
-            // Get the current slide
-            Aspose.Slides.ISlide slide = presentation.Slides[index];
+        // Create a new presentation
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-            // Export the slide (which may contain charts) as an SVG file
-            using (FileStream fileStream = new FileStream($"slide_{index + 1}.svg", FileMode.Create, FileAccess.Write))
-            {
-                slide.WriteAsSvg(fileStream);
-            }
-        }
+        // Add a clustered column chart to the first slide
+        Aspose.Slides.Charts.IChart chart = presentation.Slides[0].Shapes.AddChart(
+            Aspose.Slides.Charts.ChartType.ClusteredColumn, 50f, 50f, 600f, 400f);
 
-        // Save the presentation (required before exiting)
-        presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        // Enable data labels to show values for the first series
+        chart.ChartData.Series[0].Labels.DefaultDataLabelFormat.ShowValue = true;
 
-        // Release resources
-        presentation.Dispose();
+        // Export the chart as an image (PNG)
+        Aspose.Slides.IImage chartImage = chart.GetImage();
+        chartImage.Save(chartImagePath, Aspose.Slides.ImageFormat.Png);
+
+        // Save the presentation containing the chart
+        presentation.Save(presentationPath, Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
