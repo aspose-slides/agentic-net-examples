@@ -1,8 +1,8 @@
 using System;
+using System.Drawing;
 using Aspose.Slides;
 using Aspose.Slides.Charts;
 using Aspose.Slides.Export;
-using System.Drawing;
 
 namespace SetDataPointBranchColor
 {
@@ -13,27 +13,27 @@ namespace SetDataPointBranchColor
             // Create a new presentation
             Presentation presentation = new Presentation();
 
-            // Add a Sunburst chart to the first slide
-            IChart chart = presentation.Slides[0].Shapes.AddChart(
-                ChartType.Sunburst, 50f, 50f, 500f, 400f);
+            // Add a Treemap chart to the first slide
+            IChart chart = presentation.Slides[0].Shapes.AddChart(ChartType.Treemap, 50, 50, 500, 400);
 
-            // Access the data points collection of the first series
-            IChartDataPointCollection dataPoints = chart.ChartData.Series[0].DataPoints;
+            // Get the first series of the chart
+            IChartSeries series = chart.ChartData.Series[0];
 
-            // Example: Show value for the 4th data point (index 3)
-            dataPoints[3].DataPointLevels[0].Label.DataLabelFormat.ShowValue = true;
+            // Ensure the series has at least one data point
+            if (series.DataPoints.Count == 0)
+            {
+                // Add a sample data point (value 10)
+                IChartDataWorkbook workbook = chart.ChartData.ChartDataWorkbook;
+                series.DataPoints.AddDataPointForTreemapSeries(workbook.GetCell(0, "B2", 10));
+            }
 
-            // Example: Customize label of the first data point (index 0) at level 2
-            IDataLabel branch1Label = dataPoints[0].DataPointLevels[2].Label;
-            branch1Label.DataLabelFormat.ShowCategoryName = true;
-            branch1Label.DataLabelFormat.ShowSeriesName = true;
-            branch1Label.DataLabelFormat.TextFormat.PortionFormat.FillFormat.FillType = FillType.Solid;
-            branch1Label.DataLabelFormat.TextFormat.PortionFormat.FillFormat.SolidFillColor.Color = Color.Yellow;
+            // Get the first data point
+            IChartDataPoint dataPoint = series.DataPoints[0];
 
-            // Example: Set fill color for a specific data point (index 9)
-            IFormat steam4Format = dataPoints[9].Format;
-            steam4Format.Fill.FillType = FillType.Solid;
-            steam4Format.Fill.SolidFillColor.Color = Color.FromArgb(255, 0, 0, 255); // Blue with full opacity
+            // Get the first data point level (branch) and set its fill color
+            IChartDataPointLevel level = dataPoint.DataPointLevels[0];
+            level.Format.Fill.FillType = FillType.Solid;
+            level.Format.Fill.SolidFillColor.Color = Color.Green;
 
             // Save the presentation
             presentation.Save("SetDataPointBranchColor_out.pptx", SaveFormat.Pptx);
