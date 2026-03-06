@@ -1,8 +1,11 @@
 using System;
+using Aspose.Slides;
+using Aspose.Slides.Charts;
+using Aspose.Slides.Export;
 
-class Program
+public class Program
 {
-    static void Main()
+    public static void Main()
     {
         // Create a new presentation
         Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
@@ -11,13 +14,13 @@ class Program
         Aspose.Slides.Charts.IChart chart = presentation.Slides[0].Shapes.AddChart(
             Aspose.Slides.Charts.ChartType.Bubble, 50f, 50f, 600f, 400f);
 
-        // Set bubble size representation to Width (radius proportional to value)
+        // Set bubble size representation to Width (bubble radius proportional to size value)
         chart.ChartData.SeriesGroups[0].BubbleSizeRepresentation = Aspose.Slides.Charts.BubbleSizeRepresentationType.Width;
 
         // Optionally adjust the bubble size scale (e.g., 150% of default size)
         chart.ChartData.SeriesGroups[0].BubbleSizeScale = 150;
 
-        // Save the presentation to a PPTX file
+        // Save the presentation before exiting
         presentation.Save("CustomizedBubbleChart.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
