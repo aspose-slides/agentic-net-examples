@@ -1,83 +1,72 @@
 using System;
+using System.Drawing;
 using Aspose.Slides;
 using Aspose.Slides.Charts;
-using System.Drawing;
+using Aspose.Slides.Export;
 
-namespace CustomizeChartExample
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            // Create a new presentation
-            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation())
-            {
-                // Access the first slide
-                Aspose.Slides.ISlide slide = presentation.Slides[0];
+        // Create a new presentation
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-                // Add a clustered column chart
-                Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(
-                    Aspose.Slides.Charts.ChartType.ClusteredColumn,
-                    0f, 0f, 500f, 500f);
+        // Access the first slide
+        Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-                // Set chart title
-                chart.HasTitle = true;
-                chart.ChartTitle.AddTextFrameForOverriding("Sales Comparison");
-                chart.ChartTitle.TextFrameForOverriding.TextFrameFormat.CenterText = NullableBool.True;
-                chart.ChartTitle.Height = 20f;
+        // Add a clustered column chart to the slide
+        Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(ChartType.ClusteredColumn, 50f, 50f, 500f, 400f);
 
-                // Clear default series and categories
-                chart.ChartData.Series.Clear();
-                chart.ChartData.Categories.Clear();
+        // Enable and set the chart title
+        chart.HasTitle = true;
+        chart.ChartTitle.AddTextFrameForOverriding("Sales Report");
+        chart.ChartTitle.TextFrameForOverriding.TextFrameFormat.CenterText = NullableBool.True;
+        chart.ChartTitle.Height = 20f;
 
-                // Get reference to the chart data workbook
-                Aspose.Slides.Charts.IChartDataWorkbook workbook = chart.ChartData.ChartDataWorkbook;
-                int defaultWorksheetIndex = 0;
+        // Remove default series and categories
+        chart.ChartData.Series.Clear();
+        chart.ChartData.Categories.Clear();
 
-                // Add categories
-                chart.ChartData.Categories.Add(workbook.GetCell(defaultWorksheetIndex, 1, 0, "Q1"));
-                chart.ChartData.Categories.Add(workbook.GetCell(defaultWorksheetIndex, 2, 0, "Q2"));
-                chart.ChartData.Categories.Add(workbook.GetCell(defaultWorksheetIndex, 3, 0, "Q3"));
+        // Get the default worksheet index and workbook
+        int defaultWorksheetIndex = 0;
+        Aspose.Slides.Charts.IChartDataWorkbook workbook = chart.ChartData.ChartDataWorkbook;
 
-                // Add series
-                chart.ChartData.Series.Add(workbook.GetCell(defaultWorksheetIndex, 0, 1, "Product A"), chart.Type);
-                chart.ChartData.Series.Add(workbook.GetCell(defaultWorksheetIndex, 0, 2, "Product B"), chart.Type);
+        // Add categories (e.g., quarters)
+        chart.ChartData.Categories.Add(workbook.GetCell(defaultWorksheetIndex, 1, 0, "Q1"));
+        chart.ChartData.Categories.Add(workbook.GetCell(defaultWorksheetIndex, 2, 0, "Q2"));
+        chart.ChartData.Categories.Add(workbook.GetCell(defaultWorksheetIndex, 3, 0, "Q3"));
 
-                // Populate data for first series
-                Aspose.Slides.Charts.IChartSeries series1 = chart.ChartData.Series[0];
-                series1.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 1, 1, 120));
-                series1.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 2, 1, 150));
-                series1.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 3, 1, 170));
+        // Add two series
+        chart.ChartData.Series.Add(workbook.GetCell(defaultWorksheetIndex, 0, 1, "Product A"), chart.Type);
+        chart.ChartData.Series.Add(workbook.GetCell(defaultWorksheetIndex, 0, 2, "Product B"), chart.Type);
 
-                // Set fill color for first series
-                series1.Format.Fill.FillType = Aspose.Slides.FillType.Solid;
-                series1.Format.Fill.SolidFillColor.Color = Color.Red;
+        // Populate data for the first series
+        Aspose.Slides.Charts.IChartSeries series0 = chart.ChartData.Series[0];
+        series0.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 1, 1, 120));
+        series0.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 2, 1, 150));
+        series0.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 3, 1, 180));
 
-                // Populate data for second series
-                Aspose.Slides.Charts.IChartSeries series2 = chart.ChartData.Series[1];
-                series2.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 1, 2, 80));
-                series2.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 2, 2, 130));
-                series2.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 3, 2, 190));
+        // Populate data for the second series
+        Aspose.Slides.Charts.IChartSeries series1 = chart.ChartData.Series[1];
+        series1.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 1, 2, 80));
+        series1.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 2, 2, 130));
+        series1.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 3, 2, 170));
 
-                // Set fill color for second series
-                series2.Format.Fill.FillType = Aspose.Slides.FillType.Solid;
-                series2.Format.Fill.SolidFillColor.Color = Color.Green;
+        // Set fill colors for the series
+        series0.Format.Fill.FillType = FillType.Solid;
+        series0.Format.Fill.SolidFillColor.Color = Color.Blue;
 
-                // Customize data labels
-                IDataLabel label = series1.DataPoints[0].Label;
-                label.DataLabelFormat.ShowCategoryName = true;
+        series1.Format.Fill.FillType = FillType.Solid;
+        series1.Format.Fill.SolidFillColor.Color = Color.Orange;
 
-                label = series1.DataPoints[1].Label;
-                label.DataLabelFormat.ShowSeriesName = true;
+        // Show values on data labels
+        series0.Labels.DefaultDataLabelFormat.ShowValue = true;
+        series1.Labels.DefaultDataLabelFormat.ShowValue = true;
 
-                label = series1.DataPoints[2].Label;
-                label.DataLabelFormat.ShowValue = true;
-                label.DataLabelFormat.ShowSeriesName = true;
-                label.DataLabelFormat.Separator = "/";
+        // Save the presentation
+        presentation.Save("CustomizedChart.pptx", SaveFormat.Pptx);
 
-                // Save the presentation
-                presentation.Save("CustomizedChart.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
-            }
-        }
+        // Clean up
+        presentation.Dispose();
     }
 }
