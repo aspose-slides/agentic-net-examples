@@ -7,17 +7,16 @@ class Program
     static void Main()
     {
         // Load an existing presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation("input.pptx");
+        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation("input.pptx");
 
-        // Create XPS export options
+        // Save the presentation to XPS using default settings
+        pres.Save("output_default.xps", Aspose.Slides.Export.SaveFormat.Xps);
+
+        // Create XpsOptions with custom settings
         Aspose.Slides.Export.XpsOptions options = new Aspose.Slides.Export.XpsOptions();
-        // Example option: convert metafiles to PNG
-        options.SaveMetafilesAsPng = true;
+        options.SaveMetafilesAsPng = true; // Convert metafiles to PNG
 
-        // Save the presentation as XPS using the specified options
-        presentation.Save("output.xps", Aspose.Slides.Export.SaveFormat.Xps, options);
-
-        // Release resources
-        presentation.Dispose();
+        // Save the presentation to XPS using the custom options
+        pres.Save("output_custom.xps", Aspose.Slides.Export.SaveFormat.Xps, options);
     }
 }
