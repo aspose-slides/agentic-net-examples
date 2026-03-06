@@ -1,42 +1,36 @@
 using System;
 using System.Drawing;
-using Aspose.Slides;
-using Aspose.Slides.Charts;
-using Aspose.Slides.Export;
 
-namespace SetDataPointBranchColor
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
-        {
-            // Create a new presentation
-            Presentation presentation = new Presentation();
+        // Create a new presentation
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-            // Add a Treemap chart to the first slide
-            IChart chart = presentation.Slides[0].Shapes.AddChart(ChartType.Treemap, 50, 50, 500, 400);
+        // Add a Sunburst chart to the first slide
+        Aspose.Slides.Charts.IChart chart = presentation.Slides[0].Shapes.AddChart(
+            Aspose.Slides.Charts.ChartType.Sunburst, 50f, 50f, 500f, 400f);
 
-            // Get the first series of the chart
-            IChartSeries series = chart.ChartData.Series[0];
+        // Get the data points collection of the first series
+        Aspose.Slides.Charts.IChartDataPointCollection dataPoints = chart.ChartData.Series[0].DataPoints;
 
-            // Ensure the series has at least one data point
-            if (series.DataPoints.Count == 0)
-            {
-                // Add a sample data point (value 10)
-                IChartDataWorkbook workbook = chart.ChartData.ChartDataWorkbook;
-                series.DataPoints.AddDataPointForTreemapSeries(workbook.GetCell(0, "B2", 10));
-            }
+        // Show value for a specific data point level
+        dataPoints[3].DataPointLevels[0].Label.DataLabelFormat.ShowValue = true;
 
-            // Get the first data point
-            IChartDataPoint dataPoint = series.DataPoints[0];
+        // Configure the label for a branch (data point 0, level 2)
+        Aspose.Slides.Charts.IDataLabel branch1Label = dataPoints[0].DataPointLevels[2].Label;
+        branch1Label.DataLabelFormat.ShowCategoryName = true;
+        branch1Label.DataLabelFormat.ShowSeriesName = true;
+        branch1Label.DataLabelFormat.TextFormat.PortionFormat.FillFormat.FillType = Aspose.Slides.FillType.Solid;
+        branch1Label.DataLabelFormat.TextFormat.PortionFormat.FillFormat.SolidFillColor.Color = Color.Yellow;
 
-            // Get the first data point level (branch) and set its fill color
-            IChartDataPointLevel level = dataPoint.DataPointLevels[0];
-            level.Format.Fill.FillType = FillType.Solid;
-            level.Format.Fill.SolidFillColor.Color = Color.Green;
+        // Set fill color for another data point (index 9)
+        Aspose.Slides.Charts.IFormat steam4Format = dataPoints[9].Format;
+        steam4Format.Fill.FillType = Aspose.Slides.FillType.Solid;
+        steam4Format.Fill.SolidFillColor.Color = Color.FromArgb(255, 0, 0, 255);
 
-            // Save the presentation
-            presentation.Save("SetDataPointBranchColor_out.pptx", SaveFormat.Pptx);
-        }
+        // Save the presentation
+        presentation.Save("SetDataPointBranchColor_out.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
