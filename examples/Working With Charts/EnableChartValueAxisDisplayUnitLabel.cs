@@ -1,26 +1,24 @@
 using System;
+using Aspose.Slides;
+using Aspose.Slides.Charts;
 
-namespace EnableChartValueAxisDisplayUnitLabel
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
-        {
-            // Create a new presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        // Create a new presentation
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-            // Add a clustered column chart to the first slide
-            Aspose.Slides.Charts.IChart chart = presentation.Slides[0].Shapes.AddChart(
-                Aspose.Slides.Charts.ChartType.ClusteredColumn, 0f, 0f, 500f, 400f);
+        // Get the first slide
+        Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-            // Enable display unit label (millions) on the vertical axis
-            chart.Axes.VerticalAxis.DisplayUnit = Aspose.Slides.Charts.DisplayUnitType.Millions;
+        // Add a clustered column chart to the slide
+        Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(Aspose.Slides.Charts.ChartType.ClusteredColumn, 50, 50, 500, 400);
 
-            // Save the presentation
-            presentation.Save("EnableChartValueAxisDisplayUnitLabel_out.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        // Enable the display unit label on the value (vertical) axis
+        chart.Axes.VerticalAxis.DisplayUnit = Aspose.Slides.Charts.DisplayUnitType.Millions;
 
-            // Dispose the presentation
-            presentation.Dispose();
-        }
+        // Save the presentation
+        presentation.Save("DisplayUnitChart.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
