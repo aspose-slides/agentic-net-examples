@@ -1,74 +1,52 @@
 using System;
 using System.Drawing;
-using Aspose.Slides;
-using Aspose.Slides.Charts;
-using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
         // Create a new presentation
-        Presentation pres = new Presentation();
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-        // Access the first slide
-        ISlide slide = pres.Slides[0];
+        // Add a clustered column chart with sample data
+        Aspose.Slides.Charts.IChart chart = presentation.Slides[0].Shapes.AddChart(
+            Aspose.Slides.Charts.ChartType.ClusteredColumn, 0f, 0f, 500f, 400f);
 
-        // Add a chart without sample data for custom configuration
-        IChart chart = slide.Shapes.AddChart(ChartType.ClusteredColumn, 0f, 0f, 500f, 500f, false);
+        // ----- Exponential trend line -----
+        Aspose.Slides.Charts.ITrendline exponentialTrend = chart.ChartData.Series[0].TrendLines.Add(
+            Aspose.Slides.Charts.TrendlineType.Exponential);
+        exponentialTrend.DisplayEquation = false;
+        exponentialTrend.DisplayRSquaredValue = false;
 
-        // Set chart title
-        chart.ChartTitle.AddTextFrameForOverriding("Sample Title");
-        chart.ChartTitle.TextFrameForOverriding.TextFrameFormat.CenterText = NullableBool.True;
-        chart.ChartTitle.Height = 20f;
-        chart.HasTitle = true;
+        // ----- Linear trend line -----
+        Aspose.Slides.Charts.ITrendline linearTrend = chart.ChartData.Series[0].TrendLines.Add(
+            Aspose.Slides.Charts.TrendlineType.Linear);
+        linearTrend.Format.Line.FillFormat.FillType = Aspose.Slides.FillType.Solid;
+        linearTrend.Format.Line.FillFormat.SolidFillColor.Color = Color.Red;
 
-        // Clear default series and categories
-        chart.ChartData.Series.Clear();
-        chart.ChartData.Categories.Clear();
+        // ----- Logarithmic trend line -----
+        Aspose.Slides.Charts.ITrendline logarithmicTrend = chart.ChartData.Series[0].TrendLines.Add(
+            Aspose.Slides.Charts.TrendlineType.Logarithmic);
+        logarithmicTrend.AddTextFrameForOverriding("Logarithmic Trend");
 
-        // Get workbook and default worksheet index
-        int defaultWorksheetIndex = 0;
-        IChartDataWorkbook workbook = chart.ChartData.ChartDataWorkbook;
+        // ----- Moving Average trend line -----
+        Aspose.Slides.Charts.ITrendline movingAverageTrend = chart.ChartData.Series[0].TrendLines.Add(
+            Aspose.Slides.Charts.TrendlineType.MovingAverage);
+        movingAverageTrend.Period = 3;
+        movingAverageTrend.TrendlineName = "MA (3)";
 
-        // Add series
-        chart.ChartData.Series.Add(workbook.GetCell(defaultWorksheetIndex, 0, 1, "Series 1"), chart.Type);
-        chart.ChartData.Series.Add(workbook.GetCell(defaultWorksheetIndex, 0, 2, "Series 2"), chart.Type);
+        // ----- Polynomial trend line -----
+        Aspose.Slides.Charts.ITrendline polynomialTrend = chart.ChartData.Series[0].TrendLines.Add(
+            Aspose.Slides.Charts.TrendlineType.Polynomial);
+        polynomialTrend.Order = 2;      // Quadratic
+        polynomialTrend.Forward = 1;    // Extend forward by 1 unit
 
-        // Add categories
-        chart.ChartData.Categories.Add(workbook.GetCell(defaultWorksheetIndex, 1, 0, "Category 1"));
-        chart.ChartData.Categories.Add(workbook.GetCell(defaultWorksheetIndex, 2, 0, "Category 2"));
-        chart.ChartData.Categories.Add(workbook.GetCell(defaultWorksheetIndex, 3, 0, "Category 3"));
-
-        // Populate first series data
-        IChartSeries series0 = chart.ChartData.Series[0];
-        series0.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 1, 1, 20));
-        series0.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 2, 1, 50));
-        series0.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 3, 1, 30));
-        series0.Format.Fill.FillType = FillType.Solid;
-        series0.Format.Fill.SolidFillColor.Color = Color.Red;
-
-        // Populate second series data
-        IChartSeries series1 = chart.ChartData.Series[1];
-        series1.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 1, 2, 30));
-        series1.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 2, 2, 10));
-        series1.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 3, 2, 60));
-        series1.Format.Fill.FillType = FillType.Solid;
-        series1.Format.Fill.SolidFillColor.Color = Color.Green;
-
-        // Configure data labels for the first series
-        IDataLabel label0 = series0.DataPoints[0].Label;
-        label0.DataLabelFormat.ShowCategoryName = true;
-
-        IDataLabel label1 = series0.DataPoints[1].Label;
-        label1.DataLabelFormat.ShowSeriesName = true;
-
-        IDataLabel label2 = series0.DataPoints[2].Label;
-        label2.DataLabelFormat.ShowValue = true;
-        label2.DataLabelFormat.ShowSeriesName = true;
-        label2.DataLabelFormat.Separator = "/";
+        // ----- Power trend line -----
+        Aspose.Slides.Charts.ITrendline powerTrend = chart.ChartData.Series[0].TrendLines.Add(
+            Aspose.Slides.Charts.TrendlineType.Power);
+        powerTrend.Backward = 1;        // Extend backward by 1 unit
 
         // Save the presentation
-        pres.Save("AsposeChart_out.pptx", SaveFormat.Pptx);
+        presentation.Save("ChartTrendLines_out.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
