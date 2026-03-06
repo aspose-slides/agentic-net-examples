@@ -1,19 +1,16 @@
 using System;
-using Aspose.Slides;
-using Aspose.Slides.Charts;
-using Aspose.Slides.Export;
 
-namespace CustomizeDataPointLabels
+namespace CustomDataLabelDemo
 {
     class Program
     {
-        static void Main()
+        static void Main(string[] args)
         {
             // Create a new presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+            Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation();
 
-            // Access the first slide
-            Aspose.Slides.ISlide slide = presentation.Slides[0];
+            // Get the first slide
+            Aspose.Slides.ISlide slide = pres.Slides[0];
 
             // Add a pie chart to the slide
             Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(
@@ -24,19 +21,16 @@ namespace CustomizeDataPointLabels
                 400f   // Height
             );
 
-            // Customize the default data label format for the first series
+            // Enable leader lines for the default data label format
             chart.ChartData.Series[0].Labels.DefaultDataLabelFormat.ShowLeaderLines = true;
 
-            // Customize a specific data label (first data point) in the first series
+            // Customize the first data label of the first series
             chart.ChartData.Series[0].Labels[0].DataLabelFormat.ShowValue = true;
-            chart.ChartData.Series[0].Labels[0].DataLabelFormat.ShowCategoryName = true;
-            chart.ChartData.Series[0].Labels[0].DataLabelFormat.Separator = " - ";
+            chart.ChartData.Series[0].Labels[0].DataLabelFormat.ShowCategoryName = false;
+            chart.ChartData.Series[0].Labels[0].DataLabelFormat.Separator = ", ";
 
             // Save the presentation
-            presentation.Save("CustomDataLabels.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
-
-            // Clean up resources
-            presentation.Dispose();
+            pres.Save("CustomDataLabels_out.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
         }
     }
 }
