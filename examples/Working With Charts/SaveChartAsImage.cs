@@ -1,24 +1,31 @@
 using System;
 
-class Program
+namespace ChartImageExample
 {
-    static void Main()
+    class Program
     {
-        // Create a new presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        static void Main(string[] args)
+        {
+            // Output file paths
+            string chartImagePath = "chart.png";
+            string presentationPath = "output.pptx";
 
-        // Add a clustered column chart to the first slide
-        Aspose.Slides.Charts.IChart chart = presentation.Slides[0].Shapes.AddChart(
-            Aspose.Slides.Charts.ChartType.ClusteredColumn,
-            0f, 0f, 500f, 500f);
+            // Create a new presentation
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-        // Get the chart image
-        Aspose.Slides.IImage chartImage = chart.GetImage();
+            // Add a clustered column chart to the first slide
+            Aspose.Slides.Charts.IChart chart = presentation.Slides[0].Shapes.AddChart(
+                Aspose.Slides.Charts.ChartType.ClusteredColumn,
+                0f, 0f, 500f, 400f);
 
-        // Save the chart image as PNG
-        chartImage.Save("chart.png", Aspose.Slides.ImageFormat.Png);
+            // Get the chart image
+            Aspose.Slides.IImage chartImage = chart.GetImage();
 
-        // Save the presentation
-        presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            // Save the chart image as PNG
+            chartImage.Save(chartImagePath, Aspose.Slides.ImageFormat.Png);
+
+            // Save the presentation
+            presentation.Save(presentationPath, Aspose.Slides.Export.SaveFormat.Pptx);
+        }
     }
 }
