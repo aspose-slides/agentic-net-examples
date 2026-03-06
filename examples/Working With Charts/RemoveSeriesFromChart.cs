@@ -1,52 +1,46 @@
-using System;
+using Aspose.Slides;
+using Aspose.Slides.Charts;
+using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
         // Create a new presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation();
 
         // Access the first slide
-        Aspose.Slides.ISlide slide = presentation.Slides[0];
+        Aspose.Slides.ISlide slide = pres.Slides[0];
 
-        // Add a clustered column chart to the slide
-        Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(
-            Aspose.Slides.Charts.ChartType.ClusteredColumn, 0f, 0f, 500f, 400f);
+        // Add a clustered column chart
+        Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(Aspose.Slides.Charts.ChartType.ClusteredColumn, 0f, 0f, 500f, 400f);
 
-        // Clear any default series and categories
+        // Clear default series and categories
         chart.ChartData.Series.Clear();
         chart.ChartData.Categories.Clear();
 
         // Get the chart data workbook
-        Aspose.Slides.Charts.IChartDataWorkbook workbook = chart.ChartData.ChartDataWorkbook;
+        Aspose.Slides.Charts.IChartDataWorkbook wb = chart.ChartData.ChartDataWorkbook;
         int defaultWorksheetIndex = 0;
 
-        // Add categories
-        chart.ChartData.Categories.Add(workbook.GetCell(defaultWorksheetIndex, 0, 0, "Category 1"));
-        chart.ChartData.Categories.Add(workbook.GetCell(defaultWorksheetIndex, 1, 0, "Category 2"));
-        chart.ChartData.Categories.Add(workbook.GetCell(defaultWorksheetIndex, 2, 0, "Category 3"));
-
         // Add two series
-        chart.ChartData.Series.Add(workbook.GetCell(defaultWorksheetIndex, 0, 1, "Series 1"), chart.Type);
-        chart.ChartData.Series.Add(workbook.GetCell(defaultWorksheetIndex, 0, 2, "Series 2"), chart.Type);
+        Aspose.Slides.Charts.IChartSeries series1 = chart.ChartData.Series.Add(wb.GetCell(defaultWorksheetIndex, 0, 1, "Series 1"), chart.Type);
+        Aspose.Slides.Charts.IChartSeries series2 = chart.ChartData.Series.Add(wb.GetCell(defaultWorksheetIndex, 0, 2, "Series 2"), chart.Type);
 
-        // Populate data for Series 1
-        Aspose.Slides.Charts.IChartSeries series1 = chart.ChartData.Series[0];
-        series1.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 1, 1, 10));
-        series1.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 2, 1, 20));
-        series1.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 3, 1, 30));
+        // Add categories
+        chart.ChartData.Categories.Add(wb.GetCell(defaultWorksheetIndex, 1, 0, "Category 1"));
+        chart.ChartData.Categories.Add(wb.GetCell(defaultWorksheetIndex, 2, 0, "Category 2"));
 
-        // Populate data for Series 2
-        Aspose.Slides.Charts.IChartSeries series2 = chart.ChartData.Series[1];
-        series2.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 1, 2, 15));
-        series2.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 2, 2, 25));
-        series2.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 3, 2, 35));
+        // Populate data points for both series
+        series1.DataPoints.AddDataPointForBarSeries(wb.GetCell(defaultWorksheetIndex, 1, 1, 10));
+        series1.DataPoints.AddDataPointForBarSeries(wb.GetCell(defaultWorksheetIndex, 2, 1, 20));
+        series2.DataPoints.AddDataPointForBarSeries(wb.GetCell(defaultWorksheetIndex, 1, 2, 30));
+        series2.DataPoints.AddDataPointForBarSeries(wb.GetCell(defaultWorksheetIndex, 2, 2, 40));
 
-        // Remove the second series (index 1)
-        chart.ChartData.Series.RemoveAt(1);
+        // Remove the second series from the chart
+        chart.ChartData.Series.Remove(series2);
 
         // Save the presentation
-        presentation.Save("RemoveSeries_out.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        pres.Save("RemoveSeries_out.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
