@@ -1,10 +1,9 @@
 using System;
 using Aspose.Slides;
-using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
         // Create a new presentation
         Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
@@ -12,20 +11,14 @@ class Program
         // Get the first slide
         Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-        // Add a rectangle auto shape to hold the FAQ text
+        // Add a rectangle auto shape to the slide
         Aspose.Slides.IAutoShape faqShape = (Aspose.Slides.IAutoShape)slide.Shapes.AddAutoShape(
-            Aspose.Slides.ShapeType.Rectangle, 50, 50, 600, 400);
+            Aspose.Slides.ShapeType.Rectangle, 50f, 150f, 400f, 200f);
 
-        // Add a text frame with initial content
-        Aspose.Slides.ITextFrame textFrame = faqShape.AddTextFrame("FAQ");
+        // Add a text frame with FAQ content
+        faqShape.AddTextFrame("Frequently Asked Questions:\n1. How to use Aspose.Slides?\n2. How to add text?\n3. How to save the file?");
 
-        // Set the FAQ content
-        textFrame.Text = "Q1: How to use Aspose.Slides?\nA1: Refer to the documentation.\n\nQ2: How to add a chart?\nA2: Use slide.Shapes.AddChart(...);";
-
-        // Save the presentation before exiting
+        // Save the presentation
         presentation.Save("FaqPresentation.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
-
-        // Release resources
-        presentation.Dispose();
     }
 }
