@@ -1,34 +1,36 @@
 using System;
+using System.IO;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        // Path to the Excel workbook containing the chart
-        string workbookPath = "chartData.xlsx";
-        // Worksheet name that holds the chart
+        // Path to the Excel workbook that contains the chart
+        string workbookPath = Path.Combine("Data", "ChartData.xlsx");
+        // Worksheet and chart name inside the workbook
         string worksheetName = "Sheet1";
-        // Name of the chart inside the worksheet
         string chartName = "Chart 1";
 
         // Create a new presentation
-        using (Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation())
-        {
-            // Get the shape collection of the first slide
-            Aspose.Slides.IShapeCollection shapes = pres.Slides[0].Shapes;
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-            // Add the chart from the Excel workbook to the slide
-            Aspose.Slides.Import.ExcelWorkbookImporter.AddChartFromWorkbook(
-                shapes,
-                10f,
-                10f,
-                workbookPath,
-                worksheetName,
-                chartName,
-                false);
+        // Get the shape collection of the first slide
+        Aspose.Slides.IShapeCollection shapes = presentation.Slides[0].Shapes;
 
-            // Save the presentation to a PPTX file
-            pres.Save("ChartFromWorkbook.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
-        }
+        // Import the chart from the Excel workbook and add it to the slide
+        Aspose.Slides.Import.ExcelWorkbookImporter.AddChartFromWorkbook(
+            shapes,
+            50f,               // X position
+            50f,               // Y position
+            workbookPath,
+            worksheetName,
+            chartName,
+            false);            // Do not embed the entire workbook
+
+        // Save the presentation
+        presentation.Save("ChartFromWorkbook_out.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+
+        // Release resources
+        presentation.Dispose();
     }
 }
