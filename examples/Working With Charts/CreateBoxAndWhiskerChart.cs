@@ -5,51 +5,50 @@ using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
         // Create a new presentation
-        Presentation presentation = new Presentation();
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
         // Access the first slide
-        ISlide slide = presentation.Slides[0];
+        Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-        // Add a Box and Whisker chart
-        IChart chart = slide.Shapes.AddChart(ChartType.BoxAndWhisker, 50f, 50f, 500f, 400f);
+        // Add a BoxAndWhisker chart
+        Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(Aspose.Slides.Charts.ChartType.BoxAndWhisker, 0, 0, 500, 400);
 
-        // Set chart title
-        chart.HasTitle = true;
-        chart.ChartTitle.AddTextFrameForOverriding("Box and Whisker Chart");
-
-        // Clear default series and categories
-        chart.ChartData.Series.Clear();
+        // Clear default categories and series
         chart.ChartData.Categories.Clear();
+        chart.ChartData.Series.Clear();
 
         // Get the chart data workbook
-        int defaultWorksheetIndex = 0;
-        IChartDataWorkbook workbook = chart.ChartData.ChartDataWorkbook;
-
-        // Add a series
-        IChartSeries series = chart.ChartData.Series.Add(
-            workbook.GetCell(defaultWorksheetIndex, 0, 1, "Series 1"),
-            ChartType.BoxAndWhisker);
+        Aspose.Slides.Charts.IChartDataWorkbook workbook = chart.ChartData.ChartDataWorkbook;
+        workbook.Clear(0);
 
         // Add categories
-        chart.ChartData.Categories.Add(workbook.GetCell(defaultWorksheetIndex, 1, 0, "Category 1"));
-        chart.ChartData.Categories.Add(workbook.GetCell(defaultWorksheetIndex, 2, 0, "Category 2"));
-        chart.ChartData.Categories.Add(workbook.GetCell(defaultWorksheetIndex, 3, 0, "Category 3"));
+        chart.ChartData.Categories.Add(workbook.GetCell(0, "A1", "Category 1"));
+        chart.ChartData.Categories.Add(workbook.GetCell(0, "A2", "Category 2"));
+        chart.ChartData.Categories.Add(workbook.GetCell(0, "A3", "Category 3"));
+        chart.ChartData.Categories.Add(workbook.GetCell(0, "A4", "Category 4"));
+        chart.ChartData.Categories.Add(workbook.GetCell(0, "A5", "Category 5"));
+        chart.ChartData.Categories.Add(workbook.GetCell(0, "A6", "Category 6"));
 
-        // Add data points for each category (values are comma‑separated)
-        IChartDataCell cell1 = workbook.GetCell(defaultWorksheetIndex, 1, 1, "1,2,3,4,5");
-        series.DataPoints.AddDataPointForBoxAndWhiskerSeries(cell1);
+        // Add a series for BoxAndWhisker
+        Aspose.Slides.Charts.IChartSeries series = chart.ChartData.Series.Add(Aspose.Slides.Charts.ChartType.BoxAndWhisker);
+        series.QuartileMethod = Aspose.Slides.Charts.QuartileMethodType.Inclusive;
+        series.ShowMeanLine = true;
+        series.ShowMeanMarkers = true;
+        series.ShowInnerPoints = true;
+        series.ShowOutlierPoints = true;
 
-        IChartDataCell cell2 = workbook.GetCell(defaultWorksheetIndex, 2, 1, "2,3,4,5,6");
-        series.DataPoints.AddDataPointForBoxAndWhiskerSeries(cell2);
-
-        IChartDataCell cell3 = workbook.GetCell(defaultWorksheetIndex, 3, 1, "3,4,5,6,7");
-        series.DataPoints.AddDataPointForBoxAndWhiskerSeries(cell3);
+        // Add data points
+        series.DataPoints.AddDataPointForBoxAndWhiskerSeries(workbook.GetCell(0, "B1", 10));
+        series.DataPoints.AddDataPointForBoxAndWhiskerSeries(workbook.GetCell(0, "B2", 20));
+        series.DataPoints.AddDataPointForBoxAndWhiskerSeries(workbook.GetCell(0, "B3", 30));
+        series.DataPoints.AddDataPointForBoxAndWhiskerSeries(workbook.GetCell(0, "B4", 40));
+        series.DataPoints.AddDataPointForBoxAndWhiskerSeries(workbook.GetCell(0, "B5", 50));
+        series.DataPoints.AddDataPointForBoxAndWhiskerSeries(workbook.GetCell(0, "B6", 60));
 
         // Save the presentation
-        presentation.Save("BoxWhiskerChart_out.pptx", SaveFormat.Pptx);
-        presentation.Dispose();
+        presentation.Save("BoxAndWhiskerChart.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
