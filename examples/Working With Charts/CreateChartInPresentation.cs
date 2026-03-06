@@ -1,33 +1,34 @@
 using System;
-using Aspose.Slides;
-using Aspose.Slides.Charts;
-using Aspose.Slides.Export;
 
-namespace AsposeSlidesChartExample
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
-        {
-            // Create a new presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        // Create a new presentation
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-            // Access the first slide
-            Aspose.Slides.ISlide slide = presentation.Slides[0];
+        // Access the first slide
+        Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-            // Add a clustered column chart to the slide
-            Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(
-                Aspose.Slides.Charts.ChartType.ClusteredColumn,
-                0f, 0f, 500f, 500f);
+        // Add a clustered column chart to the slide
+        Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(
+            Aspose.Slides.Charts.ChartType.ClusteredColumn,
+            0f, 0f, 500f, 500f);
 
-            // Optionally set a title for the chart
-            chart.HasTitle = true;
-            chart.ChartTitle.AddTextFrameForOverriding("Sample Chart");
-            chart.ChartTitle.TextFrameForOverriding.TextFrameFormat.CenterText = NullableBool.True;
-            chart.ChartTitle.Height = 20f;
+        // Get the chart's data workbook to manipulate cells
+        Aspose.Slides.Charts.IChartDataWorkbook workbook = chart.ChartData.ChartDataWorkbook;
 
-            // Save the presentation to a file
-            presentation.Save("ChartPresentation.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
-        }
+        // Set a formula in cell A1 (sheet 0, row 0, column 0)
+        workbook.GetCell(0, 0, 0).Formula = "SUM(B1:C1)";
+
+        // Set values in cells B1 and C1 (sheet 0, row 0, columns 1 and 2)
+        workbook.GetCell(0, 0, 1).Value = 10;
+        workbook.GetCell(0, 0, 2).Value = 20;
+
+        // Calculate formulas to update the result in A1
+        workbook.CalculateFormulas();
+
+        // Save the presentation to a PPTX file
+        presentation.Save("ChartPresentation.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
