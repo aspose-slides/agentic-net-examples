@@ -1,38 +1,33 @@
 using System;
-using Aspose.Slides;
-using Aspose.Slides.MathText;
-using Aspose.Slides.Export;
+using System.IO;
 
 class Program
 {
     static void Main()
     {
+        // Output file path
+        string outPath = "MathEquation.pptx";
+
         // Create a new presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation();
 
-        // Add a mathematical shape to the first slide
-        Aspose.Slides.IAutoShape mathShape = presentation.Slides[0].Shapes.AddMathShape(0, 0, 720, 150);
+        // Add a math shape to the first slide
+        Aspose.Slides.IAutoShape mathShape = pres.Slides[0].Shapes.AddMathShape(0, 0, 720, 150);
 
-        // Retrieve the math paragraph from the shape
+        // Get the math paragraph from the shape
         Aspose.Slides.MathText.IMathParagraph mathParagraph = ((Aspose.Slides.MathText.MathPortion)mathShape.TextFrame.Paragraphs[0].Portions[0]).MathParagraph;
 
-        // Create a fraction x / y and add it as a math block
-        Aspose.Slides.MathText.IMathElement fraction = new Aspose.Slides.MathText.MathematicalText("x").Divide("y");
-        mathParagraph.Add(new Aspose.Slides.MathText.MathBlock(fraction));
-
-        // Build the equation c² = a² + b²
-        Aspose.Slides.MathText.MathBlock equationBlock = new Aspose.Slides.MathText.MathBlock(
-            (Aspose.Slides.MathText.IMathElement)new Aspose.Slides.MathText.MathematicalText("c").SetSuperscript("2"));
-        equationBlock
+        // Build the math equation: c = a² + b²
+        Aspose.Slides.MathText.IMathBlock mathBlock = new Aspose.Slides.MathText.MathematicalText("c")
             .Join("=")
             .Join(new Aspose.Slides.MathText.MathematicalText("a").SetSuperscript("2"))
             .Join("+")
             .Join(new Aspose.Slides.MathText.MathematicalText("b").SetSuperscript("2"));
 
-        // Add the equation block to the paragraph
-        mathParagraph.Add(equationBlock);
+        // Add the math block to the paragraph
+        mathParagraph.Add(mathBlock);
 
         // Save the presentation
-        presentation.Save("AddMathEquation.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        pres.Save(outPath, Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
