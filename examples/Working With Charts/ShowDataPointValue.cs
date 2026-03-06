@@ -1,6 +1,4 @@
 using System;
-using Aspose.Slides;
-using Aspose.Slides.Charts;
 using Aspose.Slides.Export;
 
 class Program
@@ -10,40 +8,38 @@ class Program
         // Create a new presentation
         Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-        // Access the first slide
+        // Get the first slide
         Aspose.Slides.ISlide slide = presentation.Slides[0];
 
         // Add a clustered column chart to the slide
-        Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(Aspose.Slides.Charts.ChartType.ClusteredColumn, 50f, 50f, 500f, 400f);
+        Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(
+            Aspose.Slides.Charts.ChartType.ClusteredColumn,
+            50, 50, 500, 400);
 
-        // Remove default series and categories
-        chart.ChartData.Series.Clear();
-        chart.ChartData.Categories.Clear();
-
-        // Get the chart data workbook
+        // Access the chart's data workbook
         Aspose.Slides.Charts.IChartDataWorkbook workbook = chart.ChartData.ChartDataWorkbook;
 
-        // Clear the workbook (optional, ensures a clean start)
-        workbook.Clear(0);
-
-        // Add categories
+        // Clear existing categories and add a new one
+        chart.ChartData.Categories.Clear();
         chart.ChartData.Categories.Add(workbook.GetCell(0, "A1", "Category 1"));
-        chart.ChartData.Categories.Add(workbook.GetCell(0, "A2", "Category 2"));
-        chart.ChartData.Categories.Add(workbook.GetCell(0, "A3", "Category 3"));
 
-        // Add a series
-        Aspose.Slides.Charts.IChartSeries series = chart.ChartData.Series.Add(workbook.GetCell(0, "B0", "Series 1"), chart.Type);
+        // Get the first series (created by default)
+        Aspose.Slides.Charts.IChartSeries series = chart.ChartData.Series[0];
 
-        // Add data points to the series
-        series.DataPoints.AddDataPointForBarSeries(workbook.GetCell(0, "B1", 20));
-        series.DataPoints.AddDataPointForBarSeries(workbook.GetCell(0, "B2", 50));
-        series.DataPoints.AddDataPointForBarSeries(workbook.GetCell(0, "B3", 30));
+        // Set the value of the first data point
+        series.DataPoints[0].Value.AsLiteralDouble = 42.5;
 
-        // Show the value for the second data point (index 1)
-        Aspose.Slides.Charts.IDataLabel dataLabel = series.DataPoints[1].Label;
-        dataLabel.DataLabelFormat.ShowValue = true;
+        // Retrieve the value of the first data point
+        Aspose.Slides.Charts.IDoubleChartValue doubleValue = series.DataPoints[0].Value;
+        double numericValue = doubleValue.ToDouble();
+
+        // Add a textbox shape to display the data point value
+        Aspose.Slides.IAutoShape textShape = (Aspose.Slides.IAutoShape)slide.Shapes.AddAutoShape(
+            Aspose.Slides.ShapeType.Rectangle,
+            50, 470, 300, 50);
+        textShape.AddTextFrame("Data Point Value: " + numericValue.ToString());
 
         // Save the presentation
-        presentation.Save("ShowDataPointValue.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        presentation.Save("DataPointValue.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
