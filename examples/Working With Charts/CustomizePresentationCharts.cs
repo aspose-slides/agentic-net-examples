@@ -1,72 +1,21 @@
 using System;
-using Aspose.Slides;
-using Aspose.Slides.Charts;
-using Aspose.Slides.Export;
-using System.Drawing;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
         // Create a new presentation
         Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-        // Access the first slide
-        Aspose.Slides.ISlide slide = presentation.Slides[0];
+        // Add a clustered column chart to the first slide
+        Aspose.Slides.Charts.IChart chart = presentation.Slides[0].Shapes.AddChart(
+            Aspose.Slides.Charts.ChartType.ClusteredColumn, 50f, 50f, 500f, 400f);
 
-        // Add a clustered column chart to the slide
-        Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(Aspose.Slides.Charts.ChartType.ClusteredColumn, 50, 50, 500, 400);
-
-        // Set chart title
-        chart.HasTitle = true;
-        chart.ChartTitle.AddTextFrameForOverriding("Sales Report");
-        chart.ChartTitle.TextFrameForOverriding.TextFrameFormat.CenterText = Aspose.Slides.NullableBool.True;
-        chart.ChartTitle.Height = 20;
-
-        // Remove default series and categories
-        chart.ChartData.Series.Clear();
-        chart.ChartData.Categories.Clear();
-
-        // Get reference to the chart data workbook
-        Aspose.Slides.Charts.IChartDataWorkbook workbook = chart.ChartData.ChartDataWorkbook;
-        int defaultWorksheetIndex = 0;
-
-        // Add categories (e.g., quarters)
-        chart.ChartData.Categories.Add(workbook.GetCell(defaultWorksheetIndex, 1, 0, "Q1"));
-        chart.ChartData.Categories.Add(workbook.GetCell(defaultWorksheetIndex, 2, 0, "Q2"));
-        chart.ChartData.Categories.Add(workbook.GetCell(defaultWorksheetIndex, 3, 0, "Q3"));
-        chart.ChartData.Categories.Add(workbook.GetCell(defaultWorksheetIndex, 4, 0, "Q4"));
-
-        // Add two series
-        chart.ChartData.Series.Add(workbook.GetCell(defaultWorksheetIndex, 0, 1, "Product A"), chart.Type);
-        chart.ChartData.Series.Add(workbook.GetCell(defaultWorksheetIndex, 0, 2, "Product B"), chart.Type);
-
-        // Populate data for the first series
-        Aspose.Slides.Charts.IChartSeries seriesA = chart.ChartData.Series[0];
-        seriesA.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 1, 1, 120));
-        seriesA.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 2, 1, 150));
-        seriesA.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 3, 1, 170));
-        seriesA.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 4, 1, 200));
-
-        // Set fill color for the first series
-        seriesA.Format.Fill.FillType = Aspose.Slides.FillType.Solid;
-        seriesA.Format.Fill.SolidFillColor.Color = System.Drawing.Color.Blue;
-
-        // Populate data for the second series
-        Aspose.Slides.Charts.IChartSeries seriesB = chart.ChartData.Series[1];
-        seriesB.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 1, 2, 80));
-        seriesB.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 2, 2, 130));
-        seriesB.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 3, 2, 160));
-        seriesB.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 4, 2, 190));
-
-        // Set fill color for the second series
-        seriesB.Format.Fill.FillType = Aspose.Slides.FillType.Solid;
-        seriesB.Format.Fill.SolidFillColor.Color = System.Drawing.Color.Green;
-
-        // Show values for the first series data labels
-        seriesA.Labels.DefaultDataLabelFormat.ShowValue = true;
+        // Switch rows and columns of the chart data
+        chart.ChartData.SwitchRowColumn();
 
         // Save the presentation
-        presentation.Save("CustomizedChart_out.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        string outputPath = "SwitchChartRowsColumns.pptx";
+        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
