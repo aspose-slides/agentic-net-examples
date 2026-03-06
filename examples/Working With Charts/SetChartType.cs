@@ -7,25 +7,19 @@ class Program
 {
     static void Main()
     {
-        // Create a new presentation (lifecycle rule)
+        // Create a new presentation
         Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
         // Access the first slide
         Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-        // Add a chart with sample data (using the AddChart method)
-        Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(
-            Aspose.Slides.Charts.ChartType.ClusteredColumn, // initial type
-            0f,   // X position
-            0f,   // Y position
-            500f, // width
-            400f  // height
-        );
+        // Add a chart with an initial type (ClusteredColumn)
+        Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(Aspose.Slides.Charts.ChartType.ClusteredColumn, 50f, 50f, 500f, 400f);
 
         // Change the chart type to Pie
         chart.Type = Aspose.Slides.Charts.ChartType.Pie;
 
-        // Save the presentation before exiting (lifecycle rule)
+        // Save the presentation
         presentation.Save("SetChartType_out.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
