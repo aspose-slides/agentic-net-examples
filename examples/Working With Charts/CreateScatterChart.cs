@@ -1,67 +1,57 @@
+using System;
+using System.Drawing;
 using Aspose.Slides;
 using Aspose.Slides.Charts;
 using Aspose.Slides.Export;
 
-public class Program
+class Program
 {
-    public static void Main()
+    static void Main()
     {
         // Create a new presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        Presentation pres = new Presentation();
 
         // Access the first slide
-        Aspose.Slides.ISlide slide = presentation.Slides[0];
+        ISlide slide = pres.Slides[0];
 
-        // Add a scatter chart with smooth lines
-        Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(
-            Aspose.Slides.Charts.ChartType.ScatterWithSmoothLines,
-            0f, 0f, 400f, 400f);
+        // Add a scatter chart to the slide
+        IChart chart = slide.Shapes.AddChart(ChartType.ScatterWithMarkers, 0, 0, 500, 400);
 
         // Get the chart data workbook
-        Aspose.Slides.Charts.IChartDataWorkbook workbook = chart.ChartData.ChartDataWorkbook;
+        IChartDataWorkbook workbook = chart.ChartData.ChartDataWorkbook;
         int defaultWorksheetIndex = 0;
 
-        // Clear any default series
+        // Clear default series and categories
         chart.ChartData.Series.Clear();
+        chart.ChartData.Categories.Clear();
 
-        // Add two series with names
-        chart.ChartData.Series.Add(
-            workbook.GetCell(defaultWorksheetIndex, 0, 1, "Series 1"),
-            chart.Type);
-        chart.ChartData.Series.Add(
-            workbook.GetCell(defaultWorksheetIndex, 0, 3, "Series 2"),
-            chart.Type);
+        // Add new series
+        IChartSeries series1 = chart.ChartData.Series.Add(workbook.GetCell(defaultWorksheetIndex, 0, 1, "Series 1"), chart.Type);
+        IChartSeries series2 = chart.ChartData.Series.Add(workbook.GetCell(defaultWorksheetIndex, 0, 2, "Series 2"), chart.Type);
 
-        // First series data points
-        Aspose.Slides.Charts.IChartSeries series1 = chart.ChartData.Series[0];
-        series1.DataPoints.AddDataPointForScatterSeries(
-            workbook.GetCell(defaultWorksheetIndex, 1, 1, 1),
-            workbook.GetCell(defaultWorksheetIndex, 1, 2, 3));
-        series1.DataPoints.AddDataPointForScatterSeries(
-            workbook.GetCell(defaultWorksheetIndex, 2, 1, 2),
-            workbook.GetCell(defaultWorksheetIndex, 2, 2, 10));
-        series1.Type = Aspose.Slides.Charts.ChartType.ScatterWithStraightLinesAndMarkers;
-        series1.Marker.Size = 10;
-        series1.Marker.Symbol = Aspose.Slides.Charts.MarkerStyleType.Star;
+        // Add categories
+        chart.ChartData.Categories.Add(workbook.GetCell(defaultWorksheetIndex, 1, 0, "Category 1"));
+        chart.ChartData.Categories.Add(workbook.GetCell(defaultWorksheetIndex, 2, 0, "Category 2"));
+        chart.ChartData.Categories.Add(workbook.GetCell(defaultWorksheetIndex, 3, 0, "Category 3"));
 
-        // Second series data points
-        Aspose.Slides.Charts.IChartSeries series2 = chart.ChartData.Series[1];
-        series2.DataPoints.AddDataPointForScatterSeries(
-            workbook.GetCell(defaultWorksheetIndex, 1, 3, 5),
-            workbook.GetCell(defaultWorksheetIndex, 1, 4, 2));
-        series2.DataPoints.AddDataPointForScatterSeries(
-            workbook.GetCell(defaultWorksheetIndex, 2, 3, 3),
-            workbook.GetCell(defaultWorksheetIndex, 2, 4, 1));
-        series2.DataPoints.AddDataPointForScatterSeries(
-            workbook.GetCell(defaultWorksheetIndex, 3, 3, 2),
-            workbook.GetCell(defaultWorksheetIndex, 3, 4, 2));
-        series2.DataPoints.AddDataPointForScatterSeries(
-            workbook.GetCell(defaultWorksheetIndex, 4, 3, 5),
-            workbook.GetCell(defaultWorksheetIndex, 4, 4, 1));
-        series2.Marker.Size = 10;
-        series2.Marker.Symbol = Aspose.Slides.Charts.MarkerStyleType.Circle;
+        // Populate series1 with scatter data points
+        series1.DataPoints.AddDataPointForScatterSeries(1.0, 2.0);
+        series1.DataPoints.AddDataPointForScatterSeries(2.0, 3.5);
+        series1.DataPoints.AddDataPointForScatterSeries(3.0, 5.0);
+
+        // Populate series2 with scatter data points
+        series2.DataPoints.AddDataPointForScatterSeries(1.5, 1.0);
+        series2.DataPoints.AddDataPointForScatterSeries(2.5, 2.5);
+        series2.DataPoints.AddDataPointForScatterSeries(3.5, 4.0);
+
+        // Set fill colors for the series
+        series1.Format.Fill.FillType = FillType.Solid;
+        series1.Format.Fill.SolidFillColor.Color = Color.Red;
+
+        series2.Format.Fill.FillType = FillType.Solid;
+        series2.Format.Fill.SolidFillColor.Color = Color.Blue;
 
         // Save the presentation
-        presentation.Save("ScatterChart.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        pres.Save("ScatterChart_out.pptx", SaveFormat.Pptx);
     }
 }
