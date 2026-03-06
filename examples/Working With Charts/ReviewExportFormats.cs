@@ -1,28 +1,22 @@
 using System;
+using Aspose.Slides;
+using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        // Path to the source PPTX file
-        string inputPath = "sample.pptx";
+        // Load an existing PPTX presentation
+        Presentation presentation = new Presentation("input.pptx");
 
-        // Load the presentation
-        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
+        // List all supported export formats defined in SaveFormat enum
+        Array formats = Enum.GetValues(typeof(SaveFormat));
+        foreach (SaveFormat format in formats)
         {
-            // Retrieve all values of the SaveFormat enumeration (supported export formats)
-            Array formatValues = Enum.GetValues(typeof(Aspose.Slides.Export.SaveFormat));
-
-            // List each supported format
-            foreach (object value in formatValues)
-            {
-                Aspose.Slides.Export.SaveFormat format = (Aspose.Slides.Export.SaveFormat)value;
-                Console.WriteLine(format.ToString());
-            }
-
-            // Save the presentation before exiting (required)
-            string outputPath = "output.pptx";
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            Console.WriteLine(format.ToString());
         }
+
+        // Save the presentation before exiting (as PPTX)
+        presentation.Save("output.pptx", SaveFormat.Pptx);
     }
 }
