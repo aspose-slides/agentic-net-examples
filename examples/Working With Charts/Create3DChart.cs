@@ -1,6 +1,6 @@
 using System;
 
-namespace AsposeSlides3DChartExample
+namespace Example
 {
     class Program
     {
@@ -9,28 +9,18 @@ namespace AsposeSlides3DChartExample
             // Create a new presentation
             Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-            // Access the first slide
-            Aspose.Slides.ISlide slide = presentation.Slides[0];
+            // Add a 3D clustered column chart to the first slide
+            Aspose.Slides.Charts.IChart chart = presentation.Slides[0].Shapes.AddChart(
+                Aspose.Slides.Charts.ChartType.ClusteredColumn3D, 50f, 50f, 600f, 400f);
 
-            // Add a 3D clustered column chart to the slide
-            Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(
-                Aspose.Slides.Charts.ChartType.ClusteredColumn3D,
-                50f,   // X position
-                50f,   // Y position
-                600f,  // Width
-                400f   // Height
-            );
-
-            // Configure 3D rotation and depth
-            Aspose.Slides.Charts.IRotation3D rotation = chart.Rotation3D;
-            rotation.RotationX = 20;        // Rotate around X axis (degrees)
-            rotation.RotationY = 30;        // Rotate around Y axis (degrees)
-            rotation.DepthPercents = 150;   // Depth as percentage of chart width
-            rotation.HeightPercents = 100;  // Height as percentage of chart width
+            // Configure 3D rotation properties
+            chart.Rotation3D.DepthPercents = 200;      // Depth as a percentage of chart width
+            chart.Rotation3D.HeightPercents = 150;     // Height as a percentage of chart width
+            chart.Rotation3D.RotationX = 20;           // Rotation around X axis
+            chart.Rotation3D.RotationY = 30;           // Rotation around Y axis
 
             // Save the presentation to a PPTX file
-            string outputPath = "3DChartPresentation.pptx";
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            presentation.Save("3DChart.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
         }
     }
 }
