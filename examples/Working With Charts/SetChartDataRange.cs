@@ -1,22 +1,32 @@
 using System;
-using Aspose.Slides;
-using Aspose.Slides.Charts;
-using Aspose.Slides.Export;
 
-class Program
+namespace AsposeSlidesExample
 {
-    static void Main()
+    class Program
     {
-        // Create a new presentation
-        Presentation pres = new Presentation();
+        static void Main(string[] args)
+        {
+            // Input and output PPTX file paths
+            System.String inputPath = "input.pptx";
+            System.String outputPath = "output.pptx";
 
-        // Add a chart to the first slide
-        IChart chart = pres.Slides[0].Shapes.AddChart(ChartType.ClusteredColumn, 50f, 50f, 500f, 400f);
+            // Load the presentation
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
 
-        // Set the data range for the chart
-        ((ChartData)chart.ChartData).SetRange("Sheet1!$A$1:$C$4");
+            // Access the first slide
+            Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-        // Save the presentation
-        pres.Save("SetDataRange_out.pptx", SaveFormat.Pptx);
+            // Retrieve the first shape as a chart
+            Aspose.Slides.Charts.IChart chart = (Aspose.Slides.Charts.IChart)slide.Shapes[0];
+
+            // Set the chart data range
+            chart.ChartData.SetRange("Sheet1!$A$1:$C$4");
+
+            // Save the modified presentation
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+
+            // Clean up resources
+            presentation.Dispose();
+        }
     }
 }
