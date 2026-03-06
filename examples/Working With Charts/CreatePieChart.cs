@@ -21,7 +21,7 @@ namespace CreatePieChartApp
                 50f,   // X position
                 50f,   // Y position
                 400f,  // Width
-                400f   // Height
+                500f   // Height
             );
 
             // Set chart title
@@ -30,34 +30,30 @@ namespace CreatePieChartApp
             chart.ChartTitle.Height = 20f;
             chart.HasTitle = true;
 
-            // Show values on the first series data labels
+            // Show values on data labels
             chart.ChartData.Series[0].Labels.DefaultDataLabelFormat.ShowValue = true;
 
-            // Index of the default worksheet
+            // Prepare workbook and clear default data
             int defaultWorksheetIndex = 0;
-
-            // Get the chart data workbook
             Aspose.Slides.Charts.IChartDataWorkbook workbook = chart.ChartData.ChartDataWorkbook;
-
-            // Clear default series and categories
             chart.ChartData.Series.Clear();
             chart.ChartData.Categories.Clear();
 
             // Add categories
-            chart.ChartData.Categories.Add(workbook.GetCell(0, 1, 0, "Category 1"));
-            chart.ChartData.Categories.Add(workbook.GetCell(0, 2, 0, "Category 2"));
-            chart.ChartData.Categories.Add(workbook.GetCell(0, 3, 0, "Category 3"));
+            chart.ChartData.Categories.Add(workbook.GetCell(defaultWorksheetIndex, 1, 0, "Category 1"));
+            chart.ChartData.Categories.Add(workbook.GetCell(defaultWorksheetIndex, 2, 0, "Category 2"));
+            chart.ChartData.Categories.Add(workbook.GetCell(defaultWorksheetIndex, 3, 0, "Category 3"));
 
-            // Add a new series
+            // Add a series
             Aspose.Slides.Charts.IChartSeries series = chart.ChartData.Series.Add(
-                workbook.GetCell(0, 0, 1, "Series 1"),
+                workbook.GetCell(defaultWorksheetIndex, 0, 1, "Series 1"),
                 chart.Type
             );
 
-            // Populate series data points
-            series.DataPoints.AddDataPointForPieSeries(workbook.GetCell(defaultWorksheetIndex, 1, 1, 20));
-            series.DataPoints.AddDataPointForPieSeries(workbook.GetCell(defaultWorksheetIndex, 2, 1, 30));
-            series.DataPoints.AddDataPointForPieSeries(workbook.GetCell(defaultWorksheetIndex, 3, 1, 50));
+            // Add data points for the series
+            series.DataPoints.AddDataPointForPieSeries(workbook.GetCell(defaultWorksheetIndex, 1, 1, 20.0));
+            series.DataPoints.AddDataPointForPieSeries(workbook.GetCell(defaultWorksheetIndex, 2, 1, 30.0));
+            series.DataPoints.AddDataPointForPieSeries(workbook.GetCell(defaultWorksheetIndex, 3, 1, 40.0));
 
             // Enable varied colors for each slice
             series.ParentSeriesGroup.IsColorVaried = true;
