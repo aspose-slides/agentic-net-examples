@@ -1,0 +1,100 @@
+---
+name: comments-and-notes
+description: C# examples for comments-and-notes using Aspose.Slides for .NET
+language: csharp
+framework: net10.0
+parent: ../agents.md
+---
+
+# AGENTS - comments-and-notes
+
+## Persona
+
+You are a C# developer specializing in PowerPoint processing using Aspose.Slides for .NET,
+working within the **comments-and-notes** category.
+
+## Scope
+
+- This folder contains examples for **comments-and-notes**
+- Files are standalone `.cs` examples stored directly in this folder.
+
+## Required Namespaces
+
+- `using Aspose.Slides.Export;` (25/25 files)
+- `using System;` (24/25 files)
+- `using Aspose.Slides;` (23/25 files)
+- `using System.Drawing;` (1/25 files)
+- `using System.Collections.Generic;` (1/25 files)
+- `using System.IO;` (1/25 files)
+- `using System.Text;` (1/25 files)
+
+## Files in this folder
+
+| File | Key APIs | Description |
+|------|----------|-------------|
+| [Add-comment-to-PPTX-slide-with-author](./Add-comment-to-PPTX-slide-with-author.cs) |  | Add comment to PPTX slide with author |
+| [Assign-null-to-notes-slide-in-PPTX](./Assign-null-to-notes-slide-in-PPTX.cs) |  | Assign null to notes slide in PPTX |
+| [Clear-all-comments-from-PPTX-presentation](./Clear-all-comments-from-PPTX-presentation.cs) |  | Clear all comments from PPTX presentation |
+| [Clear-speaker-notes-from-PPTX-slide](./Clear-speaker-notes-from-PPTX-slide.cs) |  | Clear speaker notes from PPTX slide |
+| [Delete-comment-from-PPTX-slide](./Delete-comment-from-PPTX-slide.cs) |  | Delete comment from PPTX slide |
+| [Delete-selected-comments-from-PPTX-presentation](./Delete-selected-comments-from-PPTX-presentation.cs) |  | Delete selected comments from PPTX presentation |
+| [Delete-speaker-notes-from-PPTX-slide](./Delete-speaker-notes-from-PPTX-slide.cs) |  | Delete speaker notes from PPTX slide |
+| [Delete-specific-comment-from-PPTX-slide](./Delete-specific-comment-from-PPTX-slide.cs) |  | Delete specific comment from PPTX slide |
+| [Discard-comment-from-PPTX-slide](./Discard-comment-from-PPTX-slide.cs) |  | Discard comment from PPTX slide |
+| [Erase-comment-from-PPTX-slide](./Erase-comment-from-PPTX-slide.cs) |  | Erase comment from PPTX slide |
+| [Export-presentation-with-comments-to-PPTX](./Export-presentation-with-comments-to-PPTX.cs) |  | Export presentation with comments to PPTX |
+| [Export-presentation-with-notes-to-PPTX](./Export-presentation-with-notes-to-PPTX.cs) |  | Export presentation with notes to PPTX |
+| [Extract-comment-data-from-PPTX-presentation](./Extract-comment-data-from-PPTX-presentation.cs) |  | Extract comment data from PPTX presentation |
+| [Extract-notes-from-PPTX-slide](./Extract-notes-from-PPTX-slide.cs) |  | Extract notes from PPTX slide |
+| [Generate-consolidated-notes-overview-from-PPTX](./Generate-consolidated-notes-overview-from-PPTX.cs) |  | Generate consolidated notes overview from PPTX |
+| [Get-comment-authors-from-PPTX-presentation](./Get-comment-authors-from-PPTX-presentation.cs) |  | Get comment authors from PPTX presentation |
+| [Insert-speaker-notes-into-PPTX-slide](./Insert-speaker-notes-into-PPTX-slide.cs) |  | Insert speaker notes into PPTX slide |
+| [List-all-comments-from-PPTX-presentation](./List-all-comments-from-PPTX-presentation.cs) |  | List all comments from PPTX presentation |
+| [Purge-speaker-notes-from-PPTX-slide](./Purge-speaker-notes-from-PPTX-slide.cs) |  | Purge speaker notes from PPTX slide |
+| [Remove-all-speaker-notes-from-PPTX-slide](./Remove-all-speaker-notes-from-PPTX-slide.cs) |  | Remove all speaker notes from PPTX slide |
+| [Remove-comments-from-PPTX-presentation](./Remove-comments-from-PPTX-presentation.cs) |  | Remove comments from PPTX presentation |
+| [Set-notes-slide-to-null-in-PPTX](./Set-notes-slide-to-null-in-PPTX.cs) |  | Set notes slide to null in PPTX |
+| [Strip-notes-from-PPTX-slide-preserving-layout](./Strip-notes-from-PPTX-slide-preserving-layout.cs) |  | Strip notes from PPTX slide preserving layout |
+| [Update-comment-content-in-PPTX-presentation](./Update-comment-content-in-PPTX-presentation.cs) |  | Update comment content in PPTX presentation |
+| [Update-notes-content-in-PPTX-slide](./Update-notes-content-in-PPTX-slide.cs) |  | Update notes content in PPTX slide |
+
+## Category Statistics
+
+- Total examples: 25
+
+## Key API Surface
+
+- `Aspose.Slides.Presentation`
+- `Aspose.Slides.Export`
+- `Aspose.Slides`
+- `Aspose.Slides.Export.SaveFormat.Pptx`
+- `Aspose.Slides.IComment`
+- `Aspose.Slides.ICommentAuthor`
+- `Aspose.Slides.INotesSlideManager`
+- `Aspose.Slides.ISlide`
+- `Aspose.Slides.CommentAuthor`
+- `Aspose.Slides.Comment`
+- `Aspose.Slides.ICommentCollection`
+- `Aspose.Slides.INotesSlide`
+
+## Common Code Pattern
+
+Most examples follow a pattern similar to:
+
+```csharp
+using (Presentation pres = new Presentation("input.pptx"))
+{
+    // operations
+    pres.Save("output.pptx", SaveFormat.Pptx);
+}
+```
+
+## Category-Specific Tips
+
+- Load presentations using `new Presentation("file.pptx")`.
+- Modify slides through the `Slides` collection.
+- Save the presentation using `Presentation.Save(...)`.
+
+<!-- AUTOGENERATED:START -->
+Updated: 2026-03-17
+<!-- AUTOGENERATED:END -->
