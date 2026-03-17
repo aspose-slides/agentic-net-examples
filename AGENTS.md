@@ -24,40 +24,40 @@ When working in this repository:
 
 
 
-    ## Repository Overview
+## Repository Overview
 
-    This repository contains **627** working code examples demonstrating Aspose.Slides for .NET capabilities.
+This repository contains **627** working code examples demonstrating Aspose.Slides for .NET capabilities.
 
-    **Statistics** (as of 2026-03-17):
-    - Total Examples: 627
-    - Categories: 6
+**Statistics** (as of 2026-03-17):
+- Total Examples: 627
+- Categories: 6
 
-    ## Category Details
-    
-    ### 3d-presentations
-    - Examples: 11
-    - Guide: [agents.md](./3d-presentations/agents.md)
-    
-    ### animations
-    - Examples: 20
-    - Guide: [agents.md](./animations/agents.md)
-    
-    ### comments-and-notes
-    - Examples: 25
-    - Guide: [agents.md](./comments-and-notes/agents.md)
-    
-    ### conversion
-    - Examples: 199
-    - Guide: [agents.md](./conversion/agents.md)
-    
-    ### design-presentations
-    - Examples: 139
-    - Guide: [agents.md](./design-presentations/agents.md)
-    
-    ### manage-presentation-content
-    - Examples: 233
-    - Guide: [agents.md](./manage-presentation-content/agents.md)
-    
+## Category Details
+
+### 3d-presentations
+- Examples: 11
+- Guide: [agents.md](./3d-presentations/agents.md)
+
+### animations
+- Examples: 20
+- Guide: [agents.md](./animations/agents.md)
+
+### comments-and-notes
+- Examples: 25
+- Guide: [agents.md](./comments-and-notes/agents.md)
+
+### conversion
+- Examples: 199
+- Guide: [agents.md](./conversion/agents.md)
+
+### design-presentations
+- Examples: 139
+- Guide: [agents.md](./design-presentations/agents.md)
+
+### manage-presentation-content
+- Examples: 233
+- Guide: [agents.md](./manage-presentation-content/agents.md)
+
 
 
 ## Boundaries
