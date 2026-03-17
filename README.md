@@ -12,6 +12,7 @@ Examples are organized by feature category:
 - `3d-presentations/` - 11 example(s)
 - `animations/` - 20 example(s)
 - `comments-and-notes/` - 25 example(s)
+- `conversion/` - 199 example(s)
 
 Each category contains standalone `.cs` files that can be compiled and run independently.
 
