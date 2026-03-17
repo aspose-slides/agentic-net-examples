@@ -15,6 +15,7 @@ Examples are organized by feature category:
 - `conversion/` - 199 example(s)
 - `design-presentations/` - 139 example(s)
 - `manage-presentation-content/` - 233 example(s)
+- `manage-presentation-media-files/` - 179 example(s)
 
 Each category contains standalone `.cs` files that can be compiled and run independently.
 
