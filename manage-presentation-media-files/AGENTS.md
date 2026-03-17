@@ -20,17 +20,18 @@ working within the **manage-presentation-media-files** category.
 
 ## Required Namespaces
 
-- `using System;` (179/179 files)
-- `using Aspose.Slides.Export;` (179/179 files)
-- `using Aspose.Slides;` (152/179 files)
-- `using System.IO;` (141/179 files)
-- `using System.Drawing;` (6/179 files)
-- `using System.Net;` (4/179 files)
-- `using System.Net.Http;` (4/179 files)
-- `using Aspose.Slides.DOM.Ole;` (3/179 files)
-- `using System.Linq;` (1/179 files)
-- `using Aspose.Slides.Animation;` (1/179 files)
-- `using System.Collections.Generic;` (1/179 files)
+- `using System;` (180/180 files)
+- `using Aspose.Slides.Export;` (180/180 files)
+- `using Aspose.Slides;` (153/180 files)
+- `using System.IO;` (142/180 files)
+- `using System.Drawing;` (6/180 files)
+- `using System.Net;` (4/180 files)
+- `using System.Net.Http;` (4/180 files)
+- `using Aspose.Slides.DOM.Ole;` (3/180 files)
+- `using System.Linq;` (1/180 files)
+- `using Aspose.Slides.Animation;` (1/180 files)
+- `using Aspose.Slides.Util;` (1/180 files)
+- `using System.Collections.Generic;` (1/180 files)
 
 ## Files in this folder
 
@@ -101,6 +102,7 @@ working within the **manage-presentation-media-files** category.
 | [Extract-audio-from-PPTX-and-preserve-format](./Extract-audio-from-PPTX-and-preserve-format.cs) |  | Extract audio from PPTX and preserve format |
 | [Extract-audio-streams-from-PPTX-slide](./Extract-audio-streams-from-PPTX-slide.cs) |  | Extract audio streams from PPTX slide |
 | [Extract-embedded-flash-from-PPTX-presentation](./Extract-embedded-flash-from-PPTX-presentation.cs) |  | Extract embedded flash from PPTX presentation |
+| [Extract-embedded-images-from-slide-headings-PPTX](./Extract-embedded-images-from-slide-headings-PPTX.cs) |  | Extract embedded images from slide headings PPTX |
 | [Extract-embedded-video-from-heading-PPTX-slide](./Extract-embedded-video-from-heading-PPTX-slide.cs) |  | Extract embedded video from heading PPTX slide |
 | [Extract-embedded-video-from-PPTX-slide](./Extract-embedded-video-from-PPTX-slide.cs) |  | Extract embedded video from PPTX slide |
 | [Extract-embedded-video-from-PPTX-to-file](./Extract-embedded-video-from-PPTX-to-file.cs) |  | Extract embedded video from PPTX to file |
@@ -218,7 +220,7 @@ working within the **manage-presentation-media-files** category.
 
 ## Category Statistics
 
-- Total examples: 179
+- Total examples: 180
 
 ## Key API Surface
 
