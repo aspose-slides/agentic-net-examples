@@ -15,7 +15,12 @@ Examples are organized by feature category:
 - `conversion/` - 199 example(s)
 - `design-presentations/` - 139 example(s)
 - `manage-presentation-content/` - 233 example(s)
-- `manage-presentation-media-files/` - 179 example(s)
+- `manage-presentation-media-files/` - 180 example(s)
+- `manage-presentation-text/` - 141 example(s)
+- `manage-tags-and-custom-data/` - 17 example(s)
+- `math-equations/` - 35 example(s)
+- `vba-macros/` - 23 example(s)
+- `working-with-charts/` - 329 example(s)
 
 Each category contains standalone `.cs` files that can be compiled and run independently.
 

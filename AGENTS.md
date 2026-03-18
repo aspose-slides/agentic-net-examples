@@ -26,11 +26,11 @@ When working in this repository:
 
 ## Repository Overview
 
-This repository contains **806** working code examples demonstrating Aspose.Slides for .NET capabilities.
+This repository contains **1352** working code examples demonstrating Aspose.Slides for .NET capabilities.
 
 **Statistics** (as of 2026-03-18):
-- Total Examples: 806
-- Categories: 7
+- Total Examples: 1352
+- Categories: 12
 
 ## Category Details
 
@@ -59,8 +59,28 @@ This repository contains **806** working code examples demonstrating Aspose.Slid
 - Guide: [agents.md](./manage-presentation-content/agents.md)
 
 ### manage-presentation-media-files
-- Examples: 179
+- Examples: 180
 - Guide: [agents.md](./manage-presentation-media-files/agents.md)
+
+### manage-presentation-text
+- Examples: 141
+- Guide: [agents.md](./manage-presentation-text/agents.md)
+
+### manage-tags-and-custom-data
+- Examples: 17
+- Guide: [agents.md](./manage-tags-and-custom-data/agents.md)
+
+### math-equations
+- Examples: 35
+- Guide: [agents.md](./math-equations/agents.md)
+
+### vba-macros
+- Examples: 23
+- Guide: [agents.md](./vba-macros/agents.md)
+
+### working-with-charts
+- Examples: 329
+- Guide: [agents.md](./working-with-charts/agents.md)
 
 
 
