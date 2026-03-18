@@ -20,17 +20,17 @@ working within the **working-with-shapes** category.
 
 ## Required Namespaces
 
-- `using Aspose.Slides.Export;` (161/161 files)
-- `using System;` (160/161 files)
-- `using Aspose.Slides;` (145/161 files)
-- `using System.Drawing;` (23/161 files)
-- `using Aspose.Slides.Util;` (12/161 files)
-- `using Aspose.Slides.Animation;` (11/161 files)
-- `using System.IO;` (8/161 files)
-- `using Aspose.Slides.SmartArt;` (2/161 files)
-- `using Aspose.Slides.Effects;` (1/161 files)
-- `using Aspose.Slides.DOM.Ole;` (1/161 files)
-- `using System.Reflection;` (1/161 files)
+- `using Aspose.Slides.Export;` (166/166 files)
+- `using System;` (165/166 files)
+- `using Aspose.Slides;` (150/166 files)
+- `using System.Drawing;` (24/166 files)
+- `using Aspose.Slides.Util;` (12/166 files)
+- `using Aspose.Slides.Animation;` (11/166 files)
+- `using System.IO;` (9/166 files)
+- `using Aspose.Slides.SmartArt;` (2/166 files)
+- `using Aspose.Slides.DOM.Ole;` (2/166 files)
+- `using Aspose.Slides.Effects;` (1/166 files)
+- `using System.Reflection;` (1/166 files)
 
 ## Files in this folder
 
@@ -93,6 +93,7 @@ working within the **working-with-shapes** category.
 | [Handle-activex-control-event-PPTX](./Handle-activex-control-event-PPTX.cs) |  | Handle activex control event PPTX |
 | [Import-PPTX-and-modify-paragraphs-in-slides](./Import-PPTX-and-modify-paragraphs-in-slides.cs) |  | Import PPTX and modify paragraphs in slides |
 | [Import-PPTX-duplicate-shape-into-group-PPTX](./Import-PPTX-duplicate-shape-into-group-PPTX.cs) |  | Import PPTX duplicate shape into group PPTX |
+| [Insert-activex-control-and-set-properties-PPTX](./Insert-activex-control-and-set-properties-PPTX.cs) |  | Insert activex control and set properties PPTX |
 | [Insert-activex-ole-control-onto-slide-PPTX](./Insert-activex-ole-control-onto-slide-PPTX.cs) |  | Insert activex ole control onto slide PPTX |
 | [Insert-auto-shape-into-group-PPTX](./Insert-auto-shape-into-group-PPTX.cs) |  | Insert auto shape into group PPTX |
 | [Insert-bold-red-text-into-paragraph-PPTX](./Insert-bold-red-text-into-paragraph-PPTX.cs) |  | Insert bold red text into paragraph PPTX |
@@ -124,6 +125,8 @@ working within the **working-with-shapes** category.
 | [Load-PPTX-apply-shadow-effect-to-shape](./Load-PPTX-apply-shadow-effect-to-shape.cs) |  | Load PPTX apply shadow effect to shape |
 | [Load-PPTX-apply-shadow-to-elements](./Load-PPTX-apply-shadow-to-elements.cs) |  | Load PPTX apply shadow to elements |
 | [Load-PPTX-change-selected-text-color-red](./Load-PPTX-change-selected-text-color-red.cs) |  | Load PPTX change selected text color red |
+| [Load-PPTX-configure-shape-line-formatting-PPTX](./Load-PPTX-configure-shape-line-formatting-PPTX.cs) |  | Load PPTX configure shape line formatting PPTX |
+| [Load-PPTX-create-200x200-shape-thumbnail](./Load-PPTX-create-200x200-shape-thumbnail.cs) |  | Load PPTX create 200x200 shape thumbnail |
 | [Load-PPTX-create-custom-shape-on-slide](./Load-PPTX-create-custom-shape-on-slide.cs) |  | Load PPTX create custom shape on slide |
 | [Load-PPTX-create-first-slide-thumbnail](./Load-PPTX-create-first-slide-thumbnail.cs) |  | Load PPTX create first slide thumbnail |
 | [Load-PPTX-define-custom-geometry-path](./Load-PPTX-define-custom-geometry-path.cs) |  | Load PPTX define custom geometry path |
@@ -133,6 +136,7 @@ working within the **working-with-shapes** category.
 | [Load-PPTX-generate-shape-thumbnail-PPTX](./Load-PPTX-generate-shape-thumbnail-PPTX.cs) |  | Load PPTX generate shape thumbnail PPTX |
 | [Load-PPTX-get-computed-shape-properties](./Load-PPTX-get-computed-shape-properties.cs) |  | Load PPTX get computed shape properties |
 | [Load-PPTX-group-shapes-manipulate-unified-object](./Load-PPTX-group-shapes-manipulate-unified-object.cs) |  | Load PPTX group shapes manipulate unified object |
+| [Load-PPTX-insert-activex-button-preserve-content](./Load-PPTX-insert-activex-button-preserve-content.cs) |  | Load PPTX insert activex button preserve content |
 | [Load-PPTX-insert-auto-shape-dimensions](./Load-PPTX-insert-auto-shape-dimensions.cs) |  | Load PPTX insert auto shape dimensions |
 | [Load-PPTX-insert-content-at-location](./Load-PPTX-insert-content-at-location.cs) |  | Load PPTX insert content at location |
 | [Load-PPTX-insert-ellipse-shape-coordinates](./Load-PPTX-insert-ellipse-shape-coordinates.cs) |  | Load PPTX insert ellipse shape coordinates |
@@ -158,6 +162,7 @@ working within the **working-with-shapes** category.
 | [Move-rotate-scale-clone-shape-PPTX](./Move-rotate-scale-clone-shape-PPTX.cs) |  | Move rotate scale clone shape PPTX |
 | [Open-PPTX-add-paragraph-to-shape](./Open-PPTX-add-paragraph-to-shape.cs) |  | Open PPTX add paragraph to shape |
 | [Open-PPTX-and-add-connector-between-shapes](./Open-PPTX-and-add-connector-between-shapes.cs) |  | Open PPTX and add connector between shapes |
+| [Open-PPTX-insert-activex-control-configure-PPTX](./Open-PPTX-insert-activex-control-configure-PPTX.cs) |  | Open PPTX insert activex control configure PPTX |
 | [Open-pptx-insert-ellipse-preserve-formatting-PPTX](./Open-pptx-insert-ellipse-preserve-formatting-PPTX.cs) |  | Open pptx insert ellipse preserve formatting PPTX |
 | [Open-PPTX-insert-rectangle-shape-onto-slide](./Open-PPTX-insert-rectangle-shape-onto-slide.cs) |  | Open PPTX insert rectangle shape onto slide |
 | [Open-PPTX-retrieve-shapes-and-connect](./Open-PPTX-retrieve-shapes-and-connect.cs) |  | Open PPTX retrieve shapes and connect |
@@ -200,7 +205,7 @@ working within the **working-with-shapes** category.
 
 ## Category Statistics
 
-- Total examples: 161
+- Total examples: 166
 
 ## Key API Surface
 
@@ -208,8 +213,8 @@ working within the **working-with-shapes** category.
 - `Aspose.Slides.Export`
 - `Aspose.Slides`
 - `Aspose.Slides.Export.SaveFormat.Pptx`
-- `Aspose.Slides.IAutoShape`
 - `Aspose.Slides.ISlide`
+- `Aspose.Slides.IAutoShape`
 - `Aspose.Slides.ShapeType.Rectangle`
 - `Aspose.Slides.FillType.Solid`
 - `Aspose.Slides.IShape`
