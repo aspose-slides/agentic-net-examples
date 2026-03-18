@@ -21,6 +21,9 @@ Examples are organized by feature category:
 - `math-equations/` - 35 example(s)
 - `vba-macros/` - 23 example(s)
 - `working-with-charts/` - 329 example(s)
+- `working-with-shapes/` - 166 example(s)
+- `working-with-slides/` - 111 example(s)
+- `working-with-tables/` - 118 example(s)
 
 Each category contains standalone `.cs` files that can be compiled and run independently.
 
