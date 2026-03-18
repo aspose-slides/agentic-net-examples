@@ -23,7 +23,7 @@ jobs:
               <TargetFramework>net9.0</TargetFramework>
             </PropertyGroup>
             <ItemGroup>
-              <PackageReference Include="Aspose.Slides" Version="26.2.0" />
+              <PackageReference Include="Aspose.Slides" Version="26.1.0" />
             </ItemGroup>
           </Project>
           EOF
