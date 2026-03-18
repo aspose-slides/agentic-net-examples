@@ -20,12 +20,13 @@ working within the **working-with-slides** category.
 
 ## Required Namespaces
 
-- `using Aspose.Slides.Export;` (102/102 files)
-- `using System;` (101/102 files)
-- `using Aspose.Slides;` (88/102 files)
-- `using System.IO;` (8/102 files)
-- `using System.Drawing;` (7/102 files)
-- `using Aspose.Slides.SlideShow;` (1/102 files)
+- `using Aspose.Slides.Export;` (111/111 files)
+- `using System;` (110/111 files)
+- `using Aspose.Slides;` (94/111 files)
+- `using System.IO;` (8/111 files)
+- `using System.Drawing;` (7/111 files)
+- `using Aspose.Slides.SlideShow;` (1/111 files)
+- `using Aspose.Slides.DOM.Ole;` (1/111 files)
 
 ## Files in this folder
 
@@ -67,11 +68,13 @@ working within the **working-with-slides** category.
 | [Customize-slide-transition-easing-PPTX](./Customize-slide-transition-easing-PPTX.cs) |  | Customize slide transition easing PPTX |
 | [Define-custom-slide-transition-parameters-PPTX](./Define-custom-slide-transition-parameters-PPTX.cs) |  | Define custom slide transition parameters PPTX |
 | [Delete-multiple-slides-from-PPTX](./Delete-multiple-slides-from-PPTX.cs) |  | Delete multiple slides from PPTX |
+| [Delete-selected-slides-by-index-PPTX](./Delete-selected-slides-by-index-PPTX.cs) |  | Delete selected slides by index PPTX |
 | [Delete-slide-by-unique-id-PPTX](./Delete-slide-by-unique-id-PPTX.cs) |  | Delete slide by unique id PPTX |
 | [Delete-slide-section-and-preserve-order-PPTX](./Delete-slide-section-and-preserve-order-PPTX.cs) |  | Delete slide section and preserve order PPTX |
 | [Delete-specific-slide-from-PPTX](./Delete-specific-slide-from-PPTX.cs) |  | Delete specific slide from PPTX |
 | [Detect-differences-between-two-slides-PPTX](./Detect-differences-between-two-slides-PPTX.cs) |  | Detect differences between two slides PPTX |
 | [Determine-visual-equivalence-of-two-slides-PPTX](./Determine-visual-equivalence-of-two-slides-PPTX.cs) |  | Determine visual equivalence of two slides PPTX |
+| [Duplicate-multiple-slides-by-range-PPTX](./Duplicate-multiple-slides-by-range-PPTX.cs) |  | Duplicate multiple slides by range PPTX |
 | [Duplicate-selected-slides-with-layout-PPTX](./Duplicate-selected-slides-with-layout-PPTX.cs) |  | Duplicate selected slides with layout PPTX |
 | [Duplicate-slide-at-index-in-PPTX](./Duplicate-slide-at-index-in-PPTX.cs) |  | Duplicate slide at index in PPTX |
 | [Duplicate-slide-within-presentation-PPTX](./Duplicate-slide-within-presentation-PPTX.cs) |  | Duplicate slide within presentation PPTX |
@@ -91,13 +94,18 @@ working within the **working-with-slides** category.
 | [Import-custom-slide-layout-from-PPTX](./Import-custom-slide-layout-from-PPTX.cs) |  | Import custom slide layout from PPTX |
 | [Import-external-slide-into-presentation-PPTX](./Import-external-slide-into-presentation-PPTX.cs) |  | Import external slide into presentation PPTX |
 | [Import-slide-from-template-into-presentation-PPTX](./Import-slide-from-template-into-presentation-PPTX.cs) |  | Import slide from template into presentation PPTX |
+| [Insert-defined-layout-slide-into-PPTX](./Insert-defined-layout-slide-into-PPTX.cs) |  | Insert defined layout slide into PPTX |
 | [Insert-external-slide-into-current-deck-PPTX](./Insert-external-slide-into-current-deck-PPTX.cs) |  | Insert external slide into current deck PPTX |
 | [Insert-new-layout-into-slide-master-PPTX](./Insert-new-layout-into-slide-master-PPTX.cs) |  | Insert new layout into slide master PPTX |
 | [Insert-new-slide-preserving-layout-PPTX](./Insert-new-slide-preserving-layout-PPTX.cs) |  | Insert new slide preserving layout PPTX |
 | [Insert-slide-at-index-into-PPTX](./Insert-slide-at-index-into-PPTX.cs) |  | Insert slide at index into PPTX |
+| [Insert-slide-at-specific-position-PPTX](./Insert-slide-at-specific-position-PPTX.cs) |  | Insert slide at specific position PPTX |
 | [Insert-slide-from-source-into-target-PPTX](./Insert-slide-from-source-into-target-PPTX.cs) |  | Insert slide from source into target PPTX |
+| [Insert-slide-using-master-layout-PPTX](./Insert-slide-using-master-layout-PPTX.cs) |  | Insert slide using master layout PPTX |
 | [Insert-slides-into-section-maintaining-order-PPTX](./Insert-slides-into-section-maintaining-order-PPTX.cs) |  | Insert slides into section maintaining order PPTX |
 | [Insert-slides-into-target-section-PPTX](./Insert-slides-into-target-section-PPTX.cs) |  | Insert slides into target section PPTX |
+| [Insert-template-slide-into-presentation-PPTX](./Insert-template-slide-into-presentation-PPTX.cs) |  | Insert template slide into presentation PPTX |
+| [Insert-template-slide-preserving-formatting-PPTX](./Insert-template-slide-preserving-formatting-PPTX.cs) |  | Insert template slide preserving formatting PPTX |
 | [Iterate-through-all-slides-in-PPTX](./Iterate-through-all-slides-in-PPTX.cs) |  | Iterate through all slides in PPTX |
 | [List-slide-masters-in-PPTX](./List-slide-masters-in-PPTX.cs) |  | List slide masters in PPTX |
 | [List-supported-slide-dimensions-PPTX](./List-supported-slide-dimensions-PPTX.cs) |  | List supported slide dimensions PPTX |
@@ -108,6 +116,7 @@ working within the **working-with-slides** category.
 | [Remove-multiple-slides-while-preserving-order-PPTX](./Remove-multiple-slides-while-preserving-order-PPTX.cs) |  | Remove multiple slides while preserving order PPTX |
 | [Remove-section-from-PPTX-preserve-integrity](./Remove-section-from-PPTX-preserve-integrity.cs) |  | Remove section from PPTX preserve integrity |
 | [Remove-slide-at-index-from-PPTX](./Remove-slide-at-index-from-PPTX.cs) |  | Remove slide at index from PPTX |
+| [Remove-slide-at-zero-index-PPTX](./Remove-slide-at-zero-index-PPTX.cs) |  | Remove slide at zero index PPTX |
 | [Remove-slide-from-PPTX](./Remove-slide-from-PPTX.cs) |  | Remove slide from PPTX |
 | [Remove-slide-section-and-update-order-PPTX](./Remove-slide-section-and-update-order-PPTX.cs) |  | Remove slide section and update order PPTX |
 | [Remove-specific-slide-preserving-layout-PPTX](./Remove-specific-slide-preserving-layout-PPTX.cs) |  | Remove specific slide preserving layout PPTX |
@@ -129,6 +138,7 @@ working within the **working-with-slides** category.
 | [Set-slide-dimensions-using-pixels-PPTX](./Set-slide-dimensions-using-pixels-PPTX.cs) |  | Set slide dimensions using pixels PPTX |
 | [Set-slide-transition-and-duration-PPTX](./Set-slide-transition-and-duration-PPTX.cs) |  | Set slide transition and duration PPTX |
 | [Set-slide-transition-duration-consistently-PPTX](./Set-slide-transition-duration-consistently-PPTX.cs) |  | Set slide transition duration consistently PPTX |
+| [Transfer-external-slide-into-target-PPTX](./Transfer-external-slide-into-target-PPTX.cs) |  | Transfer external slide into target PPTX |
 | [Transfer-selected-slides-with-formatting-PPTX](./Transfer-selected-slides-with-formatting-PPTX.cs) |  | Transfer selected slides with formatting PPTX |
 | [Update-section-title-in-PPTX](./Update-section-title-in-PPTX.cs) |  | Update section title in PPTX |
 | [Update-slide-master-styling-options-PPTX](./Update-slide-master-styling-options-PPTX.cs) |  | Update slide master styling options PPTX |
@@ -136,7 +146,7 @@ working within the **working-with-slides** category.
 
 ## Category Statistics
 
-- Total examples: 102
+- Total examples: 111
 
 ## Key API Surface
 
