@@ -20,22 +20,22 @@ working within the **working-with-charts** category.
 
 ## Required Namespaces
 
-- `using Aspose.Slides.Export;` (327/329 files)
-- `using System;` (308/329 files)
-- `using Aspose.Slides;` (284/329 files)
-- `using Aspose.Slides.Charts;` (234/329 files)
-- `using System.Drawing;` (46/329 files)
-- `using System.IO;` (21/329 files)
-- `using Aspose.Slides.Animation;` (15/329 files)
-- `using Aspose.Slides.MathText;` (7/329 files)
-- `using System.Collections.Generic;` (2/329 files)
-- `using Aspose.Slides.Import;` (2/329 files)
-- `using Aspose.Slides.SlideShow;` (1/329 files)
-- `using Aspose.Slides.Spreadsheet;` (1/329 files)
-- `using Aspose.Slides.Theme;` (1/329 files)
-- `using System.Text;` (1/329 files)
-- `using Aspose.Slides.Excel;` (1/329 files)
-- `using Aspose.Slides.DOM.Ole;` (1/329 files)
+- `using Aspose.Slides.Export;` (287/289 files)
+- `using System;` (271/289 files)
+- `using Aspose.Slides;` (249/289 files)
+- `using Aspose.Slides.Charts;` (203/289 files)
+- `using System.Drawing;` (37/289 files)
+- `using System.IO;` (20/289 files)
+- `using Aspose.Slides.Animation;` (15/289 files)
+- `using Aspose.Slides.MathText;` (7/289 files)
+- `using System.Collections.Generic;` (2/289 files)
+- `using Aspose.Slides.Import;` (2/289 files)
+- `using Aspose.Slides.SlideShow;` (1/289 files)
+- `using Aspose.Slides.Spreadsheet;` (1/289 files)
+- `using Aspose.Slides.Theme;` (1/289 files)
+- `using System.Text;` (1/289 files)
+- `using Aspose.Slides.Excel;` (1/289 files)
+- `using Aspose.Slides.DOM.Ole;` (1/289 files)
 
 ## Files in this folder
 
@@ -45,7 +45,6 @@ working within the **working-with-charts** category.
 | [Add-modify-remove-PPTX-embedded-worksheets](./Add-modify-remove-PPTX-embedded-worksheets.cs) |  | Add modify remove PPTX embedded worksheets |
 | [Add-PPTX-bar-chart-with-formatting](./Add-PPTX-bar-chart-with-formatting.cs) |  | Add PPTX bar chart with formatting |
 | [Add-PPTX-box-whisker-chart-with-data](./Add-PPTX-box-whisker-chart-with-data.cs) |  | Add PPTX box whisker chart with data |
-| [Add-PPTX-bubble-chart-with-data-series](./Add-PPTX-bubble-chart-with-data-series.cs) |  | Add PPTX bubble chart with data series |
 | [Add-PPTX-callout-shapes-to-annotate-slides](./Add-PPTX-callout-shapes-to-annotate-slides.cs) |  | Add PPTX callout shapes to annotate slides |
 | [Add-PPTX-callout-shapes-with-custom-formatting](./Add-PPTX-callout-shapes-with-custom-formatting.cs) |  | Add PPTX callout shapes with custom formatting |
 | [Add-PPTX-category-element-custom-animation](./Add-PPTX-category-element-custom-animation.cs) |  | Add PPTX category element custom animation |
@@ -57,15 +56,11 @@ working within the **working-with-charts** category.
 | [Add-PPTX-clustered-column-chart-with-formatting](./Add-PPTX-clustered-column-chart-with-formatting.cs) |  | Add PPTX clustered column chart with formatting |
 | [Add-PPTX-conditional-constant-values](./Add-PPTX-conditional-constant-values.cs) |  | Add PPTX conditional constant values |
 | [Add-PPTX-custom-error-bars-to-series](./Add-PPTX-custom-error-bars-to-series.cs) |  | Add PPTX custom error bars to series |
-| [Add-PPTX-doughnut-chart-callout-annotation](./Add-PPTX-doughnut-chart-callout-annotation.cs) |  | Add PPTX doughnut chart callout annotation |
-| [Add-PPTX-doughnut-chart-with-data](./Add-PPTX-doughnut-chart-with-data.cs) |  | Add PPTX doughnut chart with data |
 | [Add-PPTX-error-bars-for-variability](./Add-PPTX-error-bars-for-variability.cs) |  | Add PPTX error bars for variability |
-| [Add-PPTX-funnel-chart-with-data](./Add-PPTX-funnel-chart-with-data.cs) |  | Add PPTX funnel chart with data |
 | [Add-PPTX-legend-and-title-slide](./Add-PPTX-legend-and-title-slide.cs) |  | Add PPTX legend and title slide |
 | [Add-PPTX-line-chart-programmatically](./Add-PPTX-line-chart-programmatically.cs) |  | Add PPTX line chart programmatically |
 | [Add-PPTX-numeric-labels-and-percentages](./Add-PPTX-numeric-labels-and-percentages.cs) |  | Add PPTX numeric labels and percentages |
 | [Add-PPTX-percentage-data-labels-to-charts](./Add-PPTX-percentage-data-labels-to-charts.cs) |  | Add PPTX percentage data labels to charts |
-| [Add-PPTX-pie-chart-data-points](./Add-PPTX-pie-chart-data-points.cs) |  | Add PPTX pie chart data points |
 | [Add-PPTX-pie-chart-with-series](./Add-PPTX-pie-chart-with-series.cs) |  | Add PPTX pie chart with series |
 | [Add-PPTX-predefined-functions-to-automate-slides](./Add-PPTX-predefined-functions-to-automate-slides.cs) |  | Add PPTX predefined functions to automate slides |
 | [Add-PPTX-R1C1-cell-referencing](./Add-PPTX-R1C1-cell-referencing.cs) |  | Add PPTX R1C1 cell referencing |
@@ -73,7 +68,6 @@ working within the **working-with-charts** category.
 | [Add-PPTX-see-also-reference](./Add-PPTX-see-also-reference.cs) |  | Add PPTX see also reference |
 | [Add-PPTX-statistical-trend-lines-to-series](./Add-PPTX-statistical-trend-lines-to-series.cs) |  | Add PPTX statistical trend lines to series |
 | [Add-PPTX-stock-chart-with-dynamic-data](./Add-PPTX-stock-chart-with-dynamic-data.cs) |  | Add PPTX stock chart with dynamic data |
-| [Add-PPTX-treemap-chart-with-data](./Add-PPTX-treemap-chart-with-data.cs) |  | Add PPTX treemap chart with data |
 | [Add-PPTX-trend-lines-to-all-charts](./Add-PPTX-trend-lines-to-all-charts.cs) |  | Add PPTX trend lines to all charts |
 | [Add-PPTX-trend-lines-to-charts](./Add-PPTX-trend-lines-to-charts.cs) |  | Add PPTX trend lines to charts |
 | [Add-PPTX-worksheet-formulas-overview-slide](./Add-PPTX-worksheet-formulas-overview-slide.cs) |  | Add PPTX worksheet formulas overview slide |
@@ -81,7 +75,6 @@ working within the **working-with-charts** category.
 | [Add-retrieve-modify-PPTX-string-constants](./Add-retrieve-modify-PPTX-string-constants.cs) |  | Add retrieve modify PPTX string constants |
 | [Adjust-PPTX-axis-label-offset-distance](./Adjust-PPTX-axis-label-offset-distance.cs) |  | Adjust PPTX axis label offset distance |
 | [Adjust-PPTX-bar-spacing-with-series-overlap](./Adjust-PPTX-bar-spacing-with-series-overlap.cs) |  | Adjust PPTX bar spacing with series overlap |
-| [Adjust-PPTX-bubble-chart-point-sizes](./Adjust-PPTX-bubble-chart-point-sizes.cs) |  | Adjust PPTX bubble chart point sizes |
 | [Adjust-PPTX-chart-axes-scaling-and-labels](./Adjust-PPTX-chart-axes-scaling-and-labels.cs) |  | Adjust PPTX chart axes scaling and labels |
 | [Adjust-PPTX-label-positions-by-coordinates](./Adjust-PPTX-label-positions-by-coordinates.cs) |  | Adjust PPTX label positions by coordinates |
 | [Adjust-PPTX-legend-font-point-size](./Adjust-PPTX-legend-font-point-size.cs) |  | Adjust PPTX legend font point size |
@@ -108,19 +101,15 @@ working within the **working-with-charts** category.
 | [Apply-PPTX-shape-fill-and-border-styles](./Apply-PPTX-shape-fill-and-border-styles.cs) |  | Apply PPTX shape fill and border styles |
 | [Apply-PPTX-table-cell-custom-numeric-format](./Apply-PPTX-table-cell-custom-numeric-format.cs) |  | Apply PPTX table cell custom numeric format |
 | [Assess-PPTX-export-formats-for-compatibility](./Assess-PPTX-export-formats-for-compatibility.cs) |  | Assess PPTX export formats for compatibility |
-| [Assign-PPTX-chart-element-data-values](./Assign-PPTX-chart-element-data-values.cs) |  | Assign PPTX chart element data values |
 | [Assign-PPTX-data-point-branch-color](./Assign-PPTX-data-point-branch-color.cs) |  | Assign PPTX data point branch color |
 | [Assign-PPTX-pie-chart-automatic-colors](./Assign-PPTX-pie-chart-automatic-colors.cs) |  | Assign PPTX pie chart automatic colors |
 | [Assign-PPTX-workbook-cell-data-label](./Assign-PPTX-workbook-cell-data-label.cs) |  | Assign PPTX workbook cell data label |
 | [Change-PPTX-legend-element-font-size](./Change-PPTX-legend-element-font-size.cs) |  | Change PPTX legend element font size |
 | [Change-PPTX-series-fill-color](./Change-PPTX-series-fill-color.cs) |  | Change PPTX series fill color |
-| [Compute-PPTX-chart-element-data-values](./Compute-PPTX-chart-element-data-values.cs) |  | Compute PPTX chart element data values |
 | [Compute-PPTX-parent-chart-element-position](./Compute-PPTX-parent-chart-element-position.cs) |  | Compute PPTX parent chart element position |
 | [Configure-PPTX-3d-chart-interactivity-and-settings](./Configure-PPTX-3d-chart-interactivity-and-settings.cs) |  | Configure PPTX 3d chart interactivity and settings |
 | [Configure-PPTX-3d-chart-rotation-and-depthpercents](./Configure-PPTX-3d-chart-rotation-and-depthpercents.cs) |  | Configure PPTX 3d chart rotation and depthpercents |
 | [Configure-PPTX-axis-title-rotation-angle](./Configure-PPTX-axis-title-rotation-angle.cs) |  | Configure PPTX axis title rotation angle |
-| [Configure-PPTX-bubble-chart-size-scaling](./Configure-PPTX-bubble-chart-size-scaling.cs) |  | Configure PPTX bubble chart size scaling |
-| [Configure-PPTX-bubble-chart-styling-and-options](./Configure-PPTX-bubble-chart-styling-and-options.cs) |  | Configure PPTX bubble chart styling and options |
 | [Configure-PPTX-category-axis-date-formatting](./Configure-PPTX-category-axis-date-formatting.cs) |  | Configure PPTX category axis date formatting |
 | [Configure-PPTX-category-axis-position](./Configure-PPTX-category-axis-position.cs) |  | Configure PPTX category axis position |
 | [Configure-PPTX-chart-axis-scaling-and-intervals](./Configure-PPTX-chart-axis-scaling-and-intervals.cs) |  | Configure PPTX chart axis scaling and intervals |
@@ -138,14 +127,11 @@ working within the **working-with-charts** category.
 | [Configure-PPTX-data-point-markers-style](./Configure-PPTX-data-point-markers-style.cs) |  | Configure PPTX data point markers style |
 | [Configure-PPTX-data-table-font-style](./Configure-PPTX-data-table-font-style.cs) |  | Configure PPTX data table font style |
 | [Configure-PPTX-doughnut-chart-inner-radius](./Configure-PPTX-doughnut-chart-inner-radius.cs) |  | Configure PPTX doughnut chart inner radius |
-| [Configure-PPTX-error-bar-values-manually](./Configure-PPTX-error-bar-values-manually.cs) |  | Configure PPTX error bar values manually |
 | [Configure-PPTX-error-bars-data-and-formatting](./Configure-PPTX-error-bars-data-and-formatting.cs) |  | Configure PPTX error bars data and formatting |
 | [Configure-PPTX-error-bars-style-color-thickness](./Configure-PPTX-error-bars-style-color-thickness.cs) |  | Configure PPTX error bars style color thickness |
-| [Configure-PPTX-external-workbook-data-bindings](./Configure-PPTX-external-workbook-data-bindings.cs) |  | Configure PPTX external workbook data bindings |
 | [Configure-PPTX-legend-behavior-and-styling](./Configure-PPTX-legend-behavior-and-styling.cs) |  | Configure PPTX legend behavior and styling |
 | [Configure-PPTX-marker-fill-and-border](./Configure-PPTX-marker-fill-and-border.cs) |  | Configure PPTX marker fill and border |
 | [Configure-PPTX-pie-and-bar-secondary-plots](./Configure-PPTX-pie-and-bar-secondary-plots.cs) |  | Configure PPTX pie and bar secondary plots |
-| [Configure-PPTX-pie-of-pie-secondary-plot](./Configure-PPTX-pie-of-pie-secondary-plot.cs) |  | Configure PPTX pie of pie secondary plot |
 | [Configure-PPTX-plot-area-fill-and-border](./Configure-PPTX-plot-area-fill-and-border.cs) |  | Configure PPTX plot area fill and border |
 | [Configure-PPTX-plot-area-layout-mode](./Configure-PPTX-plot-area-layout-mode.cs) |  | Configure PPTX plot area layout mode |
 | [Configure-PPTX-series-inverted-fill-colors](./Configure-PPTX-series-inverted-fill-colors.cs) |  | Configure PPTX series inverted fill colors |
@@ -159,14 +145,11 @@ working within the **working-with-charts** category.
 | [Convert-PPTX-to-PDF-retaining-formatting](./Convert-PPTX-to-PDF-retaining-formatting.cs) |  | Convert PPTX to PDF retaining formatting |
 | [Convert-PPTX-to-PNG-per-slide](./Convert-PPTX-to-PNG-per-slide.cs) |  | Convert PPTX to PNG per slide |
 | [Convert-PPTX-to-XPS-preserving-layout](./Convert-PPTX-to-XPS-preserving-layout.cs) |  | Convert PPTX to XPS preserving layout |
-| [Create-linked-workbook-for-PPTX-data](./Create-linked-workbook-for-PPTX-data.cs) |  | Create linked workbook for PPTX data |
-| [Create-PPTX-3d-column-chart-with-formatting](./Create-PPTX-3d-column-chart-with-formatting.cs) |  | Create PPTX 3d column chart with formatting |
 | [Create-PPTX-3d-scatter-chart-with-styling](./Create-PPTX-3d-scatter-chart-with-styling.cs) |  | Create PPTX 3d scatter chart with styling |
 | [Create-PPTX-animated-chart-with-transitions](./Create-PPTX-animated-chart-with-transitions.cs) |  | Create PPTX animated chart with transitions |
 | [Create-PPTX-animation-sequence-for-slides](./Create-PPTX-animation-sequence-for-slides.cs) |  | Create PPTX animation sequence for slides |
 | [Create-PPTX-area-chart-with-custom-styles](./Create-PPTX-area-chart-with-custom-styles.cs) |  | Create PPTX area chart with custom styles |
 | [Create-PPTX-box-whisker-chart-and-insert](./Create-PPTX-box-whisker-chart-and-insert.cs) |  | Create PPTX box whisker chart and insert |
-| [Create-PPTX-bubble-chart-with-customization](./Create-PPTX-bubble-chart-with-customization.cs) |  | Create PPTX bubble chart with customization |
 | [Create-PPTX-category-element-animation](./Create-PPTX-category-element-animation.cs) |  | Create PPTX category element animation |
 | [Create-PPTX-chart-and-configure-data-series](./Create-PPTX-chart-and-configure-data-series.cs) |  | Create PPTX chart and configure data series |
 | [Create-PPTX-chart-callouts-programmatically](./Create-PPTX-chart-callouts-programmatically.cs) |  | Create PPTX chart callouts programmatically |
@@ -178,26 +161,19 @@ working within the **working-with-charts** category.
 | [Create-PPTX-line-chart-with-data](./Create-PPTX-line-chart-with-data.cs) |  | Create PPTX line chart with data |
 | [Create-PPTX-overview-chart-from-workbook](./Create-PPTX-overview-chart-from-workbook.cs) |  | Create PPTX overview chart from workbook |
 | [Create-PPTX-overview-of-solution-hierarchy](./Create-PPTX-overview-of-solution-hierarchy.cs) |  | Create PPTX overview of solution hierarchy |
-| [Create-PPTX-pie-chart-objects-programmatically](./Create-PPTX-pie-chart-objects-programmatically.cs) |  | Create PPTX pie chart objects programmatically |
 | [Create-PPTX-pie-chart-with-data-binding](./Create-PPTX-pie-chart-with-data-binding.cs) |  | Create PPTX pie chart with data binding |
 | [Create-PPTX-pie-chart-with-series-formatting](./Create-PPTX-pie-chart-with-series-formatting.cs) |  | Create PPTX pie chart with series formatting |
-| [Create-PPTX-scatter-chart-with-customization](./Create-PPTX-scatter-chart-with-customization.cs) |  | Create PPTX scatter chart with customization |
-| [Create-PPTX-treemap-chart-with-hierarchical-series](./Create-PPTX-treemap-chart-with-hierarchical-series.cs) |  | Create PPTX treemap chart with hierarchical series |
 | [Create-retrieve-update-persist-PPTX-chart-workbook](./Create-retrieve-update-persist-PPTX-chart-workbook.cs) |  | Create retrieve update persist PPTX chart workbook |
 | [Customize-PPTX-axis-labels-formatting](./Customize-PPTX-axis-labels-formatting.cs) |  | Customize PPTX axis labels formatting |
 | [Customize-PPTX-bubble-shapes-colors-borders](./Customize-PPTX-bubble-shapes-colors-borders.cs) |  | Customize PPTX bubble shapes colors borders |
 | [Customize-PPTX-chart-properties-styles-and-data](./Customize-PPTX-chart-properties-styles-and-data.cs) |  | Customize PPTX chart properties styles and data |
 | [Customize-PPTX-chart-type-data-formatting](./Customize-PPTX-chart-type-data-formatting.cs) |  | Customize PPTX chart type data formatting |
 | [Customize-PPTX-chart-visual-styles-and-formatting](./Customize-PPTX-chart-visual-styles-and-formatting.cs) |  | Customize PPTX chart visual styles and formatting |
-| [Customize-PPTX-doughnut-chart-data-bindings](./Customize-PPTX-doughnut-chart-data-bindings.cs) |  | Customize PPTX doughnut chart data bindings |
 | [Customize-PPTX-legend-colors-fonts-borders-positioning](./Customize-PPTX-legend-colors-fonts-borders-positioning.cs) |  | Customize PPTX legend colors fonts borders positioning |
-| [Customize-PPTX-pie-chart-colors-labels-angles](./Customize-PPTX-pie-chart-colors-labels-angles.cs) |  | Customize PPTX pie chart colors labels angles |
 | [Customize-PPTX-plot-area-formatting-and-position](./Customize-PPTX-plot-area-formatting-and-position.cs) |  | Customize PPTX plot area formatting and position |
 | [Customize-PPTX-treemap-and-sunburst-data-points](./Customize-PPTX-treemap-and-sunburst-data-points.cs) |  | Customize PPTX treemap and sunburst data points |
 | [Define-PPTX-chart-custom-data-range](./Define-PPTX-chart-custom-data-range.cs) |  | Define PPTX chart custom data range |
-| [Define-PPTX-data-point-marker-properties](./Define-PPTX-data-point-marker-properties.cs) |  | Define PPTX data point marker properties |
 | [Define-PPTX-data-source-type](./Define-PPTX-data-source-type.cs) |  | Define PPTX data source type |
-| [Define-PPTX-error-constants-and-identifiers](./Define-PPTX-error-constants-and-identifiers.cs) |  | Define PPTX error constants and identifiers |
 | [Delete-PPTX-chart-data-series](./Delete-PPTX-chart-data-series.cs) |  | Delete PPTX chart data series |
 | [Describe-PPTX-plot-area-dimensions-and-formatting](./Describe-PPTX-plot-area-dimensions-and-formatting.cs) |  | Describe PPTX plot area dimensions and formatting |
 | [Disable-PPTX-line-chart-horizontal-axis](./Disable-PPTX-line-chart-horizontal-axis.cs) |  | Disable PPTX line chart horizontal axis |
@@ -215,7 +191,6 @@ working within the **working-with-charts** category.
 | [Evaluate-PPTX-chart-formulas-and-modify](./Evaluate-PPTX-chart-formulas-and-modify.cs) |  | Evaluate PPTX chart formulas and modify |
 | [Explain-PPTX-chart-calculation-methods-and-data](./Explain-PPTX-chart-calculation-methods-and-data.cs) |  | Explain PPTX chart calculation methods and data |
 | [Explain-PPTX-data-label-properties-usage](./Explain-PPTX-data-label-properties-usage.cs) |  | Explain PPTX data label properties usage |
-| [Explain-PPTX-data-markers-usage-and-options](./Explain-PPTX-data-markers-usage-and-options.cs) |  | Explain PPTX data markers usage and options |
 | [Explain-PPTX-error-bars-configuration-and-visualization](./Explain-PPTX-error-bars-configuration-and-visualization.cs) |  | Explain PPTX error bars configuration and visualization |
 | [Explain-PPTX-trend-lines-and-properties](./Explain-PPTX-trend-lines-and-properties.cs) |  | Explain PPTX trend lines and properties |
 | [Export-PDF-equations-with-layout-preservation](./Export-PDF-equations-with-layout-preservation.cs) |  | Export PDF equations with layout preservation |
@@ -240,7 +215,6 @@ working within the **working-with-charts** category.
 | [Get-PPTX-chart-external-workbook-path](./Get-PPTX-chart-external-workbook-path.cs) |  | Get PPTX chart external workbook path |
 | [Get-PPTX-chart-parent-element-coordinates](./Get-PPTX-chart-parent-element-coordinates.cs) |  | Get PPTX chart parent element coordinates |
 | [Get-PPTX-chart-series-collection](./Get-PPTX-chart-series-collection.cs) |  | Get PPTX chart series collection |
-| [Get-PPTX-chart-series-properties-and-bindings](./Get-PPTX-chart-series-properties-and-bindings.cs) |  | Get PPTX chart series properties and bindings |
 | [Get-PPTX-chart-vertical-axis-maximum](./Get-PPTX-chart-vertical-axis-maximum.cs) |  | Get PPTX chart vertical axis maximum |
 | [Get-PPTX-legend-details-and-formatting](./Get-PPTX-legend-details-and-formatting.cs) |  | Get PPTX legend details and formatting |
 | [Get-PPTX-plot-area-size-dimensions](./Get-PPTX-plot-area-size-dimensions.cs) |  | Get PPTX plot area size dimensions |
@@ -252,7 +226,6 @@ working within the **working-with-charts** category.
 | [Identify-PPTX-equation-types-for-rendering](./Identify-PPTX-equation-types-for-rendering.cs) |  | Identify PPTX equation types for rendering |
 | [Implement-PPTX-a1-notation-for-table-cells](./Implement-PPTX-a1-notation-for-table-cells.cs) |  | Implement PPTX a1 notation for table cells |
 | [Implement-PPTX-arithmetic-operators-in-slides](./Implement-PPTX-arithmetic-operators-in-slides.cs) |  | Implement PPTX arithmetic operators in slides |
-| [Implement-PPTX-bubble-chart-proportional-sizing](./Implement-PPTX-bubble-chart-proportional-sizing.cs) |  | Implement PPTX bubble chart proportional sizing |
 | [Implement-PPTX-comparison-operators-in-slides](./Implement-PPTX-comparison-operators-in-slides.cs) |  | Implement PPTX comparison operators in slides |
 | [Implement-PPTX-custom-axis-scaling-and-labels](./Implement-PPTX-custom-axis-scaling-and-labels.cs) |  | Implement PPTX custom axis scaling and labels |
 | [Implement-PPTX-worksheet-formulas-for-data-sync](./Implement-PPTX-worksheet-formulas-for-data-sync.cs) |  | Implement PPTX worksheet formulas for data sync |
@@ -268,16 +241,13 @@ working within the **working-with-charts** category.
 | [Insert-PPTX-custom-line-shape-geometry-formatting](./Insert-PPTX-custom-line-shape-geometry-formatting.cs) |  | Insert PPTX custom line shape geometry formatting |
 | [Insert-PPTX-custom-line-shape-with-style](./Insert-PPTX-custom-line-shape-with-style.cs) |  | Insert PPTX custom line shape with style |
 | [Insert-PPTX-data-series-and-remove-unwanted](./Insert-PPTX-data-series-and-remove-unwanted.cs) |  | Insert PPTX data series and remove unwanted |
-| [Insert-PPTX-doughnut-chart-callout-annotation](./Insert-PPTX-doughnut-chart-callout-annotation.cs) |  | Insert PPTX doughnut chart callout annotation |
 | [Insert-PPTX-equation-onto-slide](./Insert-PPTX-equation-onto-slide.cs) |  | Insert PPTX equation onto slide |
 | [Insert-PPTX-faq-section-into-presentation](./Insert-PPTX-faq-section-into-presentation.cs) |  | Insert PPTX faq section into presentation |
 | [Insert-PPTX-hierarchical-data-into-slides](./Insert-PPTX-hierarchical-data-into-slides.cs) |  | Insert PPTX hierarchical data into slides |
 | [Insert-PPTX-numeric-constants-consistently](./Insert-PPTX-numeric-constants-consistently.cs) |  | Insert PPTX numeric constants consistently |
 | [Insert-PPTX-overview-slide-with-thumbnails](./Insert-PPTX-overview-slide-with-thumbnails.cs) |  | Insert PPTX overview slide with thumbnails |
-| [Insert-PPTX-scatter-chart-into-slide](./Insert-PPTX-scatter-chart-into-slide.cs) |  | Insert PPTX scatter chart into slide |
 | [Insert-PPTX-see-also-section](./Insert-PPTX-see-also-section.cs) |  | Insert PPTX see also section |
 | [Insert-PPTX-stock-chart-into-slide](./Insert-PPTX-stock-chart-into-slide.cs) |  | Insert PPTX stock chart into slide |
-| [Insert-PPTX-treemap-chart-with-hierarchical-data](./Insert-PPTX-treemap-chart-with-hierarchical-data.cs) |  | Insert PPTX treemap chart with hierarchical data |
 | [Insert-PPTX-trend-line-into-slide](./Insert-PPTX-trend-line-into-slide.cs) |  | Insert PPTX trend line into slide |
 | [Insert-PPTX-trend-line-with-properties](./Insert-PPTX-trend-line-with-properties.cs) |  | Insert PPTX trend line with properties |
 | [Integrate-external-workbook-into-PPTX-slides](./Integrate-external-workbook-into-PPTX-slides.cs) |  | Integrate external workbook into PPTX slides |
@@ -292,10 +262,7 @@ working within the **working-with-charts** category.
 | [Manage-PPTX-chart-data-series-programmatically](./Manage-PPTX-chart-data-series-programmatically.cs) |  | Manage PPTX chart data series programmatically |
 | [Manage-PPTX-data-labels-precision-control](./Manage-PPTX-data-labels-precision-control.cs) |  | Manage PPTX data labels precision control |
 | [Manage-PPTX-embedded-worksheet-objects](./Manage-PPTX-embedded-worksheet-objects.cs) |  | Manage PPTX embedded worksheet objects |
-| [Map-dataset-values-to-bubble-chart-sizes](./Map-dataset-values-to-bubble-chart-sizes.cs) |  | Map dataset values to bubble chart sizes |
-| [Modify-PPTX-bubble-chart-appearance](./Modify-PPTX-bubble-chart-appearance.cs) |  | Modify PPTX bubble chart appearance |
 | [Modify-PPTX-chart-axes-scaling-and-labeling](./Modify-PPTX-chart-axes-scaling-and-labeling.cs) |  | Modify PPTX chart axes scaling and labeling |
-| [Modify-PPTX-chart-data-markers-programmatically](./Modify-PPTX-chart-data-markers-programmatically.cs) |  | Modify PPTX chart data markers programmatically |
 | [Modify-PPTX-chart-elements-series-axes-data-points](./Modify-PPTX-chart-elements-series-axes-data-points.cs) |  | Modify PPTX chart elements series axes data points |
 | [Modify-PPTX-data-table-layout-and-formatting](./Modify-PPTX-data-table-layout-and-formatting.cs) |  | Modify PPTX data table layout and formatting |
 | [Modify-PPTX-doughnut-chart-segments](./Modify-PPTX-doughnut-chart-segments.cs) |  | Modify PPTX doughnut chart segments |
@@ -313,14 +280,12 @@ working within the **working-with-charts** category.
 | [Refresh-PPTX-chart-data-dynamically](./Refresh-PPTX-chart-data-dynamically.cs) |  | Refresh PPTX chart data dynamically |
 | [Refresh-PPTX-chart-data-with-current-values](./Refresh-PPTX-chart-data-with-current-values.cs) |  | Refresh PPTX chart data with current values |
 | [Remove-PPTX-data-point-values](./Remove-PPTX-data-point-values.cs) |  | Remove PPTX data point values |
-| [Render-PPTX-data-table-on-slide](./Render-PPTX-data-table-on-slide.cs) |  | Render PPTX data table on slide |
 | [Render-PPTX-equations-as-highres-PNG](./Render-PPTX-equations-as-highres-PNG.cs) |  | Render PPTX equations as highres PNG |
 | [Render-PPTX-equations-as-JPEG](./Render-PPTX-equations-as-JPEG.cs) |  | Render PPTX equations as JPEG |
 | [Render-PPTX-equations-to-PDF-with-layout](./Render-PPTX-equations-to-PDF-with-layout.cs) |  | Render PPTX equations to PDF with layout |
 | [Render-PPTX-percentage-labels-on-slides](./Render-PPTX-percentage-labels-on-slides.cs) |  | Render PPTX percentage labels on slides |
 | [Reset-PPTX-chart-data-point-values](./Reset-PPTX-chart-data-point-values.cs) |  | Reset PPTX chart data point values |
 | [Retrieve-PPTX-chart-and-export-as-image](./Retrieve-PPTX-chart-and-export-as-image.cs) |  | Retrieve PPTX chart and export as image |
-| [Retrieve-PPTX-embedded-formula-results](./Retrieve-PPTX-embedded-formula-results.cs) |  | Retrieve PPTX embedded formula results |
 | [Retrieve-PPTX-external-workbook-path](./Retrieve-PPTX-external-workbook-path.cs) |  | Retrieve PPTX external workbook path |
 | [Retrieve-PPTX-plot-area-width-height](./Retrieve-PPTX-plot-area-width-height.cs) |  | Retrieve PPTX plot area width height |
 | [Retrieve-PPTX-series-auto-fill-color](./Retrieve-PPTX-series-auto-fill-color.cs) |  | Retrieve PPTX series auto fill color |
@@ -329,10 +294,8 @@ working within the **working-with-charts** category.
 | [Save-PPTX-chart-as-image](./Save-PPTX-chart-as-image.cs) |  | Save PPTX chart as image |
 | [Set-PPTX-3d-rotationx-rotationy-depthpercents](./Set-PPTX-3d-rotationx-rotationy-depthpercents.cs) |  | Set PPTX 3d rotationx rotationy depthpercents |
 | [Set-PPTX-axis-label-distance-from-axis](./Set-PPTX-axis-label-distance-from-axis.cs) |  | Set PPTX axis label distance from axis |
-| [Set-PPTX-axis-title-rotation-angle](./Set-PPTX-axis-title-rotation-angle.cs) |  | Set PPTX axis title rotation angle |
 | [Set-PPTX-category-axis-date-format](./Set-PPTX-category-axis-date-format.cs) |  | Set PPTX category axis date format |
 | [Set-PPTX-chart-type-and-update](./Set-PPTX-chart-type-and-update.cs) |  | Set PPTX chart type and update |
-| [Set-PPTX-custom-error-bar-values](./Set-PPTX-custom-error-bar-values.cs) |  | Set PPTX custom error bar values |
 | [Set-PPTX-data-label-decimal-precision](./Set-PPTX-data-label-decimal-precision.cs) |  | Set PPTX data label decimal precision |
 | [Set-PPTX-data-label-properties-programmatically](./Set-PPTX-data-label-properties-programmatically.cs) |  | Set PPTX data label properties programmatically |
 | [Set-PPTX-data-labels-to-percentage](./Set-PPTX-data-labels-to-percentage.cs) |  | Set PPTX data labels to percentage |
@@ -342,7 +305,6 @@ working within the **working-with-charts** category.
 | [Set-PPTX-data-table-font-attributes](./Set-PPTX-data-table-font-attributes.cs) |  | Set PPTX data table font attributes |
 | [Set-PPTX-doughnut-chart-center-gap](./Set-PPTX-doughnut-chart-center-gap.cs) |  | Set PPTX doughnut chart center gap |
 | [Set-PPTX-doughnut-chart-inner-gap](./Set-PPTX-doughnut-chart-inner-gap.cs) |  | Set PPTX doughnut chart inner gap |
-| [Set-PPTX-label-alignment-on-slide](./Set-PPTX-label-alignment-on-slide.cs) |  | Set PPTX label alignment on slide |
 | [Set-PPTX-legend-font-size](./Set-PPTX-legend-font-size.cs) |  | Set PPTX legend font size |
 | [Set-PPTX-legend-location-based-on-parameters](./Set-PPTX-legend-location-based-on-parameters.cs) |  | Set PPTX legend location based on parameters |
 | [Set-PPTX-marker-style-and-size](./Set-PPTX-marker-style-and-size.cs) |  | Set PPTX marker style and size |
@@ -353,8 +315,6 @@ working within the **working-with-charts** category.
 | [Set-PPTX-slide-animation-timing](./Set-PPTX-slide-animation-timing.cs) |  | Set PPTX slide animation timing |
 | [Set-PPTX-value-axis-position](./Set-PPTX-value-axis-position.cs) |  | Set PPTX value axis position |
 | [Show-PPTX-data-point-value-on-slide](./Show-PPTX-data-point-value-on-slide.cs) |  | Show PPTX data point value on slide |
-| [Show-PPTX-value-axis-display-unit](./Show-PPTX-value-axis-display-unit.cs) |  | Show PPTX value axis display unit |
-| [Specify-PPTX-data-source-behavior](./Specify-PPTX-data-source-behavior.cs) |  | Specify PPTX data source behavior |
 | [Style-PPTX-data-table-cells-and-borders](./Style-PPTX-data-table-cells-and-borders.cs) |  | Style PPTX data table cells and borders |
 | [Style-PPTX-legend-appearance-and-placement](./Style-PPTX-legend-appearance-and-placement.cs) |  | Style PPTX legend appearance and placement |
 | [Swap-PPTX-chart-data-series-axes](./Swap-PPTX-chart-data-series-axes.cs) |  | Swap PPTX chart data series axes |
@@ -373,7 +333,7 @@ working within the **working-with-charts** category.
 
 ## Category Statistics
 
-- Total examples: 329
+- Total examples: 289
 
 ## Key API Surface
 
@@ -386,10 +346,10 @@ working within the **working-with-charts** category.
 - `Aspose.Slides.ISlide`
 - `Aspose.Slides.Charts.ChartType.ClusteredColumn`
 - `Aspose.Slides.Charts.IChartSeries`
-- `Aspose.Slides.Charts.IChartDataWorkbook`
 - `Aspose.Slides.FillType.Solid`
-- `Aspose.Slides.NullableBool.True`
+- `Aspose.Slides.Charts.IChartDataWorkbook`
 - `Aspose.Slides.IAutoShape`
+- `Aspose.Slides.NullableBool.True`
 - `Aspose.Slides.Charts.ChartType.Pie`
 - `Aspose.Slides.ShapeType.Rectangle`
 
@@ -412,5 +372,5 @@ using (Presentation pres = new Presentation("input.pptx"))
 - Save the presentation using `Presentation.Save(...)`.
 
 <!-- AUTOGENERATED:START -->
-Updated: 2026-03-18
+Updated: 2026-03-20
 <!-- AUTOGENERATED:END -->
