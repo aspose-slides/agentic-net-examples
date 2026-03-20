@@ -26,10 +26,10 @@ When working in this repository:
 
 ## Repository Overview
 
-This repository contains **1837** working code examples demonstrating Aspose.Slides for .NET capabilities.
+This repository contains **1736** working code examples demonstrating Aspose.Slides for .NET capabilities.
 
-**Statistics** (as of 2026-03-18):
-- Total Examples: 1837
+**Statistics** (as of 2026-03-21):
+- Total Examples: 1736
 - Categories: 16
 
 ## Category Details
@@ -39,31 +39,31 @@ This repository contains **1837** working code examples demonstrating Aspose.Sli
 - Guide: [AGENTS.md](./3d-presentations/AGENTS.md)
 
 ### animations
-- Examples: 20
+- Examples: 19
 - Guide: [AGENTS.md](./animations/AGENTS.md)
 
 ### comments-and-notes
-- Examples: 25
+- Examples: 23
 - Guide: [AGENTS.md](./comments-and-notes/AGENTS.md)
 
 ### conversion
-- Examples: 199
+- Examples: 196
 - Guide: [AGENTS.md](./conversion/AGENTS.md)
 
 ### design-presentations
-- Examples: 139
+- Examples: 126
 - Guide: [AGENTS.md](./design-presentations/AGENTS.md)
 
 ### manage-presentation
-- Examples: 90
+- Examples: 89
 - Guide: [AGENTS.md](./manage-presentation/AGENTS.md)
 
 ### manage-presentation-content
-- Examples: 233
+- Examples: 221
 - Guide: [AGENTS.md](./manage-presentation-content/AGENTS.md)
 
 ### manage-presentation-media-files
-- Examples: 180
+- Examples: 167
 - Guide: [AGENTS.md](./manage-presentation-media-files/AGENTS.md)
 
 ### manage-presentation-text
@@ -75,27 +75,27 @@ This repository contains **1837** working code examples demonstrating Aspose.Sli
 - Guide: [AGENTS.md](./manage-tags-and-custom-data/AGENTS.md)
 
 ### math-equations
-- Examples: 35
+- Examples: 34
 - Guide: [AGENTS.md](./math-equations/AGENTS.md)
 
 ### vba-macros
-- Examples: 23
+- Examples: 22
 - Guide: [AGENTS.md](./vba-macros/AGENTS.md)
 
 ### working-with-charts
-- Examples: 329
+- Examples: 289
 - Guide: [AGENTS.md](./working-with-charts/AGENTS.md)
 
 ### working-with-shapes
-- Examples: 166
+- Examples: 162
 - Guide: [AGENTS.md](./working-with-shapes/AGENTS.md)
 
 ### working-with-slides
-- Examples: 111
+- Examples: 110
 - Guide: [AGENTS.md](./working-with-slides/AGENTS.md)
 
 ### working-with-tables
-- Examples: 118
+- Examples: 109
 - Guide: [AGENTS.md](./working-with-tables/AGENTS.md)
 
 
@@ -378,4 +378,4 @@ dotnet run
 
 
 ---
-Generated: 2026-03-18
+Generated: 2026-03-21
