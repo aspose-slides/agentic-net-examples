@@ -20,18 +20,17 @@ working within the **manage-presentation-media-files** category.
 
 ## Required Namespaces
 
-- `using System;` (180/180 files)
-- `using Aspose.Slides.Export;` (180/180 files)
-- `using Aspose.Slides;` (153/180 files)
-- `using System.IO;` (142/180 files)
-- `using System.Drawing;` (6/180 files)
-- `using System.Net;` (4/180 files)
-- `using System.Net.Http;` (4/180 files)
-- `using Aspose.Slides.DOM.Ole;` (3/180 files)
-- `using System.Linq;` (1/180 files)
-- `using Aspose.Slides.Animation;` (1/180 files)
-- `using Aspose.Slides.Util;` (1/180 files)
-- `using System.Collections.Generic;` (1/180 files)
+- `using System;` (167/167 files)
+- `using Aspose.Slides.Export;` (167/167 files)
+- `using Aspose.Slides;` (142/167 files)
+- `using System.IO;` (133/167 files)
+- `using System.Drawing;` (6/167 files)
+- `using Aspose.Slides.DOM.Ole;` (3/167 files)
+- `using System.Linq;` (1/167 files)
+- `using Aspose.Slides.Animation;` (1/167 files)
+- `using Aspose.Slides.Util;` (1/167 files)
+- `using System.Collections.Generic;` (1/167 files)
+- `using System.Net.Http;` (1/167 files)
 
 ## Files in this folder
 
@@ -48,18 +47,14 @@ working within the **manage-presentation-media-files** category.
 | [Add-logo-to-master-and-propagate-updates](./Add-logo-to-master-and-propagate-updates.cs) |  | Add logo to master and propagate updates |
 | [Add-pictureframe-with-dimensions-to-PPTX-slide](./Add-pictureframe-with-dimensions-to-PPTX-slide.cs) |  | Add pictureframe with dimensions to PPTX slide |
 | [Add-pictureframe-with-original-dimensions-to-PPTX](./Add-pictureframe-with-original-dimensions-to-PPTX.cs) |  | Add pictureframe with original dimensions to PPTX |
-| [Add-streaming-video-frame-to-PPTX-slide](./Add-streaming-video-frame-to-PPTX-slide.cs) |  | Add streaming video frame to PPTX slide |
-| [Add-svgimage-to-imageshapecollection-in-PPTX](./Add-svgimage-to-imageshapecollection-in-PPTX.cs) |  | Add svgimage to imageshapecollection in PPTX |
 | [Add-unique-audio-to-PPTX-collection](./Add-unique-audio-to-PPTX-collection.cs) |  | Add unique audio to PPTX collection |
 | [Add-video-caption-to-PPTX-slide](./Add-video-caption-to-PPTX-slide.cs) |  | Add video caption to PPTX slide |
-| [Add-web-image-to-PPTX-slide](./Add-web-image-to-PPTX-slide.cs) |  | Add web image to PPTX slide |
 | [Adjust-audio-volume-looping-icon-PPTX](./Adjust-audio-volume-looping-icon-PPTX.cs) |  | Adjust audio volume looping icon PPTX |
 | [Adjust-image-offsets-relative-to-shape-PPTX](./Adjust-image-offsets-relative-to-shape-PPTX.cs) |  | Adjust image offsets relative to shape PPTX |
 | [Adjust-image-scaling-for-pictureframe-PPTX](./Adjust-image-scaling-for-pictureframe-PPTX.cs) |  | Adjust image scaling for pictureframe PPTX |
 | [Adjust-line-thickness-of-pictureframe-in-PPTX](./Adjust-line-thickness-of-pictureframe-in-PPTX.cs) |  | Adjust line thickness of pictureframe in PPTX |
 | [Adjust-pictureframe-position-and-size-in-PPTX](./Adjust-pictureframe-position-and-size-in-PPTX.cs) |  | Adjust pictureframe position and size in PPTX |
 | [Apply-image-background-to-slides-in-PPTX](./Apply-image-background-to-slides-in-PPTX.cs) |  | Apply image background to slides in PPTX |
-| [Apply-image-fill-to-shape-in-PPTX](./Apply-image-fill-to-shape-in-PPTX.cs) |  | Apply image fill to shape in PPTX |
 | [Apply-line-color-to-pictureframe-in-PPTX](./Apply-line-color-to-pictureframe-in-PPTX.cs) |  | Apply line color to pictureframe in PPTX |
 | [Apply-pictureframe-formatting-properties-in-PPTX](./Apply-pictureframe-formatting-properties-in-PPTX.cs) |  | Apply pictureframe formatting properties in PPTX |
 | [Assign-fill-type-to-shape-in-PPTX](./Assign-fill-type-to-shape-in-PPTX.cs) |  | Assign fill type to shape in PPTX |
@@ -71,13 +66,11 @@ working within the **manage-presentation-media-files** category.
 | [Configure-audio-start-volume-looping-in-PPTX](./Configure-audio-start-volume-looping-in-PPTX.cs) |  | Configure audio start volume looping in PPTX |
 | [Configure-picture-fill-mode-in-PPTX](./Configure-picture-fill-mode-in-PPTX.cs) |  | Configure picture fill mode in PPTX |
 | [Consolidate-duplicate-images-preserve-master-graphics](./Consolidate-duplicate-images-preserve-master-graphics.cs) |  | Consolidate duplicate images preserve master graphics |
-| [Convert-SVG-into-PPTX-shapes-export-PDF](./Convert-SVG-into-PPTX-shapes-export-PDF.cs) |  | Convert SVG into PPTX shapes export PDF |
 | [Convert-svg-to-shapes-and-export-PDF](./Convert-svg-to-shapes-and-export-PDF.cs) |  | Convert svg to shapes and export PDF |
 | [Convert-svg-to-shapes-in-PPTX](./Convert-svg-to-shapes-in-PPTX.cs) |  | Convert svg to shapes in PPTX |
 | [Create-audio-frames-in-PPTX-slide](./Create-audio-frames-in-PPTX-slide.cs) |  | Create audio frames in PPTX slide |
 | [Create-embedded-video-frame-in-PPTX-slide](./Create-embedded-video-frame-in-PPTX-slide.cs) |  | Create embedded video frame in PPTX slide |
 | [Create-EMF-from-excel-and-insert-into-PPTX](./Create-EMF-from-excel-and-insert-into-PPTX.cs) |  | Create EMF from excel and insert into PPTX |
-| [Create-grouped-svg-shapes-in-PPTX-PDF](./Create-grouped-svg-shapes-in-PPTX-PDF.cs) |  | Create grouped svg shapes in PPTX PDF |
 | [Create-ivideo-instance-and-set-path-in-PPTX](./Create-ivideo-instance-and-set-path-in-PPTX.cs) |  | Create ivideo instance and set path in PPTX |
 | [Create-pictureframe-from-ippimage-in-PPTX](./Create-pictureframe-from-ippimage-in-PPTX.cs) |  | Create pictureframe from ippimage in PPTX |
 | [Create-pictureframe-with-custom-properties-in-PPTX](./Create-pictureframe-with-custom-properties-in-PPTX.cs) |  | Create pictureframe with custom properties in PPTX |
@@ -90,7 +83,6 @@ working within the **manage-presentation-media-files** category.
 | [Define-pictureframe-relative-dimensions-in-PPTX](./Define-pictureframe-relative-dimensions-in-PPTX.cs) |  | Define pictureframe relative dimensions in PPTX |
 | [Embed-audio-into-PPTX-with-timing](./Embed-audio-into-PPTX-with-timing.cs) |  | Embed audio into PPTX with timing |
 | [Embed-local-video-into-PPTX-slide](./Embed-local-video-into-PPTX-slide.cs) |  | Embed local video into PPTX slide |
-| [Embed-youtube-video-into-PPTX-slide](./Embed-youtube-video-into-PPTX-slide.cs) |  | Embed youtube video into PPTX slide |
 | [Export-audio-tracks-from-PPTX](./Export-audio-tracks-from-PPTX.cs) |  | Export audio tracks from PPTX |
 | [Export-embedded-video-to-file-and-PDF](./Export-embedded-video-to-file-and-PDF.cs) |  | Export embedded video to file and PDF |
 | [Export-flash-objects-from-PPTX-slide](./Export-flash-objects-from-PPTX-slide.cs) |  | Export flash objects from PPTX slide |
@@ -117,7 +109,6 @@ working within the **manage-presentation-media-files** category.
 | [Extract-svg-from-heading-pictureframe-in-PPTX](./Extract-svg-from-heading-pictureframe-in-PPTX.cs) |  | Extract svg from heading pictureframe in PPTX |
 | [Extract-svg-from-pictureframe-in-PPTX](./Extract-svg-from-pictureframe-in-PPTX.cs) |  | Extract svg from pictureframe in PPTX |
 | [Extract-svg-vector-from-pictureframe-in-PPTX](./Extract-svg-vector-from-pictureframe-in-PPTX.cs) |  | Extract svg vector from pictureframe in PPTX |
-| [Fallback-to-web-image-on-slide-PPTX](./Fallback-to-web-image-on-slide-PPTX.cs) |  | Fallback to web image on slide PPTX |
 | [Fetch-slide-at-index-from-PPTX](./Fetch-slide-at-index-from-PPTX.cs) |  | Fetch slide at index from PPTX |
 | [Fetch-slide-transition-settings-from-PPTX](./Fetch-slide-transition-settings-from-PPTX.cs) |  | Fetch slide transition settings from PPTX |
 | [Find-video-frames-in-PPTX-shapes](./Find-video-frames-in-PPTX-shapes.cs) |  | Find video frames in PPTX shapes |
@@ -137,7 +128,6 @@ working within the **manage-presentation-media-files** category.
 | [Insert-image-into-pictureframe-and-save-PPTX](./Insert-image-into-pictureframe-and-save-PPTX.cs) |  | Insert image into pictureframe and save PPTX |
 | [Insert-image-into-PPTX-master-layout](./Insert-image-into-PPTX-master-layout.cs) |  | Insert image into PPTX master layout |
 | [Insert-image-using-addpictureframe-into-PPTX](./Insert-image-using-addpictureframe-into-PPTX.cs) |  | Insert image using addpictureframe into PPTX |
-| [Insert-ivideo-and-set-url-in-PPTX](./Insert-ivideo-and-set-url-in-PPTX.cs) |  | Insert ivideo and set url in PPTX |
 | [Insert-local-image-into-heading-placeholder-PPTX](./Insert-local-image-into-heading-placeholder-PPTX.cs) |  | Insert local image into heading placeholder PPTX |
 | [Insert-local-image-into-PPTX-slide](./Insert-local-image-into-PPTX-slide.cs) |  | Insert local image into PPTX slide |
 | [Insert-local-video-into-PPTX-slide](./Insert-local-video-into-PPTX-slide.cs) |  | Insert local video into PPTX slide |
@@ -149,12 +139,9 @@ working within the **manage-presentation-media-files** category.
 | [Insert-pictureframe-with-image-into-PPTX-slide](./Insert-pictureframe-with-image-into-PPTX-slide.cs) |  | Insert pictureframe with image into PPTX slide |
 | [Insert-rectangular-autoshape-as-visual-container-PPTX](./Insert-rectangular-autoshape-as-visual-container-PPTX.cs) |  | Insert rectangular autoshape as visual container PPTX |
 | [Insert-rectangular-autoshape-with-styling-PPTX](./Insert-rectangular-autoshape-with-styling-PPTX.cs) |  | Insert rectangular autoshape with styling PPTX |
-| [Insert-scalable-svg-into-PPTX-slide](./Insert-scalable-svg-into-PPTX-slide.cs) |  | Insert scalable svg into PPTX slide |
 | [Insert-SVG-graphic-into-PPTX-slide](./Insert-SVG-graphic-into-PPTX-slide.cs) |  | Insert SVG graphic into PPTX slide |
 | [Insert-svg-image-into-heading-PPTX](./Insert-svg-image-into-heading-PPTX.cs) |  | Insert svg image into heading PPTX |
 | [Insert-video-into-PPTX-slide](./Insert-video-into-PPTX-slide.cs) |  | Insert video into PPTX slide |
-| [Insert-web-image-into-heading-PPTX](./Insert-web-image-into-heading-PPTX.cs) |  | Insert web image into heading PPTX |
-| [Insert-web-image-into-PPTX-slide](./Insert-web-image-into-PPTX-slide.cs) |  | Insert web image into PPTX slide |
 | [Instantiate-ippimage-from-PPTX-into-iimages-collection](./Instantiate-ippimage-from-PPTX-into-iimages-collection.cs) |  | Instantiate ippimage from PPTX into iimages collection |
 | [Instantiate-ivideoframe-object-in-PPTX](./Instantiate-ivideoframe-object-in-PPTX.cs) |  | Instantiate ivideoframe object in PPTX |
 | [Instantiate-pictureframe-using-ippimage-in-PPTX](./Instantiate-pictureframe-using-ippimage-in-PPTX.cs) |  | Instantiate pictureframe using ippimage in PPTX |
@@ -200,7 +187,6 @@ working within the **manage-presentation-media-files** category.
 | [Set-audio-playmode-and-volume-in-PPTX](./Set-audio-playmode-and-volume-in-PPTX.cs) |  | Set audio playmode and volume in PPTX |
 | [Set-background-image-on-master-PPTX](./Set-background-image-on-master-PPTX.cs) |  | Set background image on master PPTX |
 | [Set-image-as-shape-fill-in-PPTX](./Set-image-as-shape-fill-in-PPTX.cs) |  | Set image as shape fill in PPTX |
-| [Set-image-backgrounds-in-PPTX](./Set-image-backgrounds-in-PPTX.cs) |  | Set image backgrounds in PPTX |
 | [Set-image-dimensions-in-PPTX-slide](./Set-image-dimensions-in-PPTX-slide.cs) |  | Set image dimensions in PPTX slide |
 | [Set-image-offsets-to-shape-edge-PPTX](./Set-image-offsets-to-shape-edge-PPTX.cs) |  | Set image offsets to shape edge PPTX |
 | [Set-image-width-and-height-in-PPTX](./Set-image-width-and-height-in-PPTX.cs) |  | Set image width and height in PPTX |
@@ -220,7 +206,7 @@ working within the **manage-presentation-media-files** category.
 
 ## Category Statistics
 
-- Total examples: 180
+- Total examples: 167
 
 ## Key API Surface
 
@@ -233,12 +219,12 @@ working within the **manage-presentation-media-files** category.
 - `Aspose.Slides.ShapeType.Rectangle`
 - `Aspose.Slides.IPictureFrame`
 - `Aspose.Slides.IShape`
-- `Aspose.Slides.IVideoFrame`
 - `Aspose.Slides.AudioVolumeMode.Loud`
+- `Aspose.Slides.IVideoFrame`
 - `Aspose.Slides.LoadingStreamBehavior.KeepLocked`
 - `Aspose.Slides.IVideo`
 - `Aspose.Slides.IAudioFrame`
-- `Aspose.Slides.VideoPlayModePreset.Auto`
+- `Aspose.Slides.AudioPlayModePreset.Auto`
 
 ## Common Code Pattern
 
@@ -259,5 +245,5 @@ using (Presentation pres = new Presentation("input.pptx"))
 - Save the presentation using `Presentation.Save(...)`.
 
 <!-- AUTOGENERATED:START -->
-Updated: 2026-03-17
+Updated: 2026-03-20
 <!-- AUTOGENERATED:END -->

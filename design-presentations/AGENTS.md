@@ -20,14 +20,13 @@ working within the **design-presentations** category.
 
 ## Required Namespaces
 
-- `using Aspose.Slides.Export;` (139/139 files)
-- `using System;` (138/139 files)
-- `using Aspose.Slides;` (117/139 files)
-- `using System.IO;` (23/139 files)
-- `using System.Drawing;` (17/139 files)
-- `using System.Linq;` (2/139 files)
-- `using Aspose.Slides.Charts;` (1/139 files)
-- `using Aspose.Slides.Util;` (1/139 files)
+- `using Aspose.Slides.Export;` (126/126 files)
+- `using System;` (125/126 files)
+- `using Aspose.Slides;` (105/126 files)
+- `using System.IO;` (19/126 files)
+- `using System.Drawing;` (16/126 files)
+- `using System.Linq;` (2/126 files)
+- `using Aspose.Slides.Charts;` (1/126 files)
 
 ## Files in this folder
 
@@ -36,7 +35,6 @@ working within the **design-presentations** category.
 | [Activate-auto-font-replacement-in-PPTX](./Activate-auto-font-replacement-in-PPTX.cs) |  | Activate auto font replacement in PPTX |
 | [Activate-automatic-font-substitution-for-PPTX](./Activate-automatic-font-substitution-for-PPTX.cs) |  | Activate automatic font substitution for PPTX |
 | [Add-consistent-header-and-footer-to-PPTX](./Add-consistent-header-and-footer-to-PPTX.cs) |  | Add consistent header and footer to PPTX |
-| [Add-custom-font-to-presentation-before-render](./Add-custom-font-to-presentation-before-render.cs) |  | Add custom font to presentation before render |
 | [Add-custom-header-and-footer-to-presentation](./Add-custom-header-and-footer-to-presentation.cs) |  | Add custom header and footer to presentation |
 | [Add-custom-typography-to-PPTX-presentation](./Add-custom-typography-to-PPTX-presentation.cs) |  | Add custom typography to PPTX presentation |
 | [Add-dynamic-header-and-footer-to-PPTX](./Add-dynamic-header-and-footer-to-PPTX.cs) |  | Add dynamic header and footer to PPTX |
@@ -49,20 +47,16 @@ working within the **design-presentations** category.
 | [Add-slide-numbers-to-presentation-footer](./Add-slide-numbers-to-presentation-footer.cs) |  | Add slide numbers to presentation footer |
 | [Apply-background-color-to-PPTX-presentation](./Apply-background-color-to-PPTX-presentation.cs) |  | Apply background color to PPTX presentation |
 | [Apply-built-in-theme-to-presentation](./Apply-built-in-theme-to-presentation.cs) |  | Apply built in theme to presentation |
-| [Apply-color-scheme-to-presentation](./Apply-color-scheme-to-presentation.cs) |  | Apply color scheme to presentation |
 | [Apply-custom-background-to-presentation](./Apply-custom-background-to-presentation.cs) |  | Apply custom background to presentation |
 | [Apply-custom-font-across-presentation-slides](./Apply-custom-font-across-presentation-slides.cs) |  | Apply custom font across presentation slides |
 | [Apply-custom-font-to-all-elements](./Apply-custom-font-to-all-elements.cs) |  | Apply custom font to all elements |
 | [Apply-custom-font-to-slide-text](./Apply-custom-font-to-slide-text.cs) |  | Apply custom font to slide text |
 | [Apply-custom-font-uniformly-to-presentation](./Apply-custom-font-uniformly-to-presentation.cs) |  | Apply custom font uniformly to presentation |
-| [Apply-custom-theme-to-presentation-slides](./Apply-custom-theme-to-presentation-slides.cs) |  | Apply custom theme to presentation slides |
-| [Apply-default-theme-to-PPTX-presentation](./Apply-default-theme-to-PPTX-presentation.cs) |  | Apply default theme to PPTX presentation |
 | [Apply-default-typeface-to-all-slides](./Apply-default-typeface-to-all-slides.cs) |  | Apply default typeface to all slides |
 | [Apply-dynamic-header-and-footer-to-PPTX](./Apply-dynamic-header-and-footer-to-PPTX.cs) |  | Apply dynamic header and footer to PPTX |
 | [Apply-fallback-font-to-text-boxes](./Apply-fallback-font-to-text-boxes.cs) |  | Apply fallback font to text boxes |
 | [Apply-font-substitution-to-presentation](./Apply-font-substitution-to-presentation.cs) |  | Apply font substitution to presentation |
 | [Apply-image-background-to-presentation](./Apply-image-background-to-presentation.cs) |  | Apply image background to presentation |
-| [Apply-loaded-custom-font-to-presentation](./Apply-loaded-custom-font-to-presentation.cs) |  | Apply loaded custom font to presentation |
 | [Apply-modern-theme-to-presentation](./Apply-modern-theme-to-presentation.cs) |  | Apply modern theme to presentation |
 | [Apply-predefined-font-sequence-to-PPTX](./Apply-predefined-font-sequence-to-PPTX.cs) |  | Apply predefined font sequence to PPTX |
 | [Apply-predefined-theme-elements-to-PPTX](./Apply-predefined-theme-elements-to-PPTX.cs) |  | Apply predefined theme elements to PPTX |
@@ -70,7 +64,6 @@ working within the **design-presentations** category.
 | [Apply-solid-color-background-to-presentation](./Apply-solid-color-background-to-presentation.cs) |  | Apply solid color background to presentation |
 | [Apply-solid-fill-color-to-slide](./Apply-solid-fill-color-to-slide.cs) |  | Apply solid fill color to slide |
 | [Apply-specific-fonts-to-presentation-styling](./Apply-specific-fonts-to-presentation-styling.cs) |  | Apply specific fonts to presentation styling |
-| [Apply-specified-theme-to-PPTX-presentation](./Apply-specified-theme-to-PPTX-presentation.cs) |  | Apply specified theme to PPTX presentation |
 | [Apply-THMX-theme-to-presentation](./Apply-THMX-theme-to-presentation.cs) |  | Apply THMX theme to presentation |
 | [Assemble-presentation-with-fallback-fonts](./Assemble-presentation-with-fallback-fonts.cs) |  | Assemble presentation with fallback fonts |
 | [Assign-custom-fonts-to-presentation-slides](./Assign-custom-fonts-to-presentation-slides.cs) |  | Assign custom fonts to presentation slides |
@@ -83,7 +76,6 @@ working within the **design-presentations** category.
 | [Configure-fallback-font-collection-for-presentation](./Configure-fallback-font-collection-for-presentation.cs) |  | Configure fallback font collection for presentation |
 | [Configure-fallback-font-for-presentation](./Configure-fallback-font-for-presentation.cs) |  | Configure fallback font for presentation |
 | [Configure-fallback-font-priority-for-PPTX](./Configure-fallback-font-priority-for-PPTX.cs) |  | Configure fallback font priority for PPTX |
-| [Configure-fallback-fonts-for-consistency](./Configure-fallback-fonts-for-consistency.cs) |  | Configure fallback fonts for consistency |
 | [Configure-font-substitution-settings-for-presentation](./Configure-font-substitution-settings-for-presentation.cs) |  | Configure font substitution settings for presentation |
 | [Configure-gradient-background-for-presentation](./Configure-gradient-background-for-presentation.cs) |  | Configure gradient background for presentation |
 | [Configure-substitution-font-for-missing-typefaces](./Configure-substitution-font-for-missing-typefaces.cs) |  | Configure substitution font for missing typefaces |
@@ -128,9 +120,7 @@ working within the **design-presentations** category.
 | [Implement-font-selection-hierarchy-in-presentation](./Implement-font-selection-hierarchy-in-presentation.cs) |  | Implement font selection hierarchy in presentation |
 | [Implement-new-fontfallbackrule-in-PPTX-presentation](./Implement-new-fontfallbackrule-in-PPTX-presentation.cs) |  | Implement new fontfallbackrule in PPTX presentation |
 | [Import-fallback-font-file-into-presentation](./Import-fallback-font-file-into-presentation.cs) |  | Import fallback font file into presentation |
-| [Import-ttf-font-and-apply-to-slides](./Import-ttf-font-and-apply-to-slides.cs) |  | Import ttf font and apply to slides |
 | [Initialize-default-font-for-PPTX-presentation](./Initialize-default-font-for-PPTX-presentation.cs) |  | Initialize default font for PPTX presentation |
-| [Insert-branding-header-and-footer-to-presentation](./Insert-branding-header-and-footer-to-presentation.cs) |  | Insert branding header and footer to presentation |
 | [Instantiate-font-fallback-settings-collection](./Instantiate-font-fallback-settings-collection.cs) |  | Instantiate font fallback settings collection |
 | [Integrate-fallback-font-into-presentation](./Integrate-fallback-font-into-presentation.cs) |  | Integrate fallback font into presentation |
 | [List-embedded-fonts-in-presentation](./List-embedded-fonts-in-presentation.cs) |  | List embedded fonts in presentation |
@@ -155,7 +145,6 @@ working within the **design-presentations** category.
 | [Replace-specific-font-with-alternative-in-PPTX](./Replace-specific-font-with-alternative-in-PPTX.cs) |  | Replace specific font with alternative in PPTX |
 | [Report-embedded-fonts-in-presentation](./Report-embedded-fonts-in-presentation.cs) |  | Report embedded fonts in presentation |
 | [Retrieve-theme-components-and-apply-to-presentation](./Retrieve-theme-components-and-apply-to-presentation.cs) |  | Retrieve theme components and apply to presentation |
-| [Set-custom-font-for-text-segment](./Set-custom-font-for-text-segment.cs) |  | Set custom font for text segment |
 | [Set-custom-font-height-for-shape-text](./Set-custom-font-height-for-shape-text.cs) |  | Set custom font height for shape text |
 | [Set-default-font-before-adding-slides](./Set-default-font-before-adding-slides.cs) |  | Set default font before adding slides |
 | [Set-default-typeface-for-presentation](./Set-default-typeface-for-presentation.cs) |  | Set default typeface for presentation |
@@ -163,19 +152,16 @@ working within the **design-presentations** category.
 | [Set-fallback-font-rendering-options-for-presentation](./Set-fallback-font-rendering-options-for-presentation.cs) |  | Set fallback font rendering options for presentation |
 | [Set-image-background-to-slide](./Set-image-background-to-slide.cs) |  | Set image background to slide |
 | [Set-picture-background-to-slide](./Set-picture-background-to-slide.cs) |  | Set picture background to slide |
-| [Set-slide-master-theme-during-creation](./Set-slide-master-theme-during-creation.cs) |  | Set slide master theme during creation |
 | [Set-solid-white-background-to-slides](./Set-solid-white-background-to-slides.cs) |  | Set solid white background to slides |
 | [Set-uniform-background-color-to-PPTX-presentation](./Set-uniform-background-color-to-PPTX-presentation.cs) |  | Set uniform background color to PPTX presentation |
 | [Show-supported-font-formats-in-PPTX-presentation](./Show-supported-font-formats-in-PPTX-presentation.cs) |  | Show supported font formats in PPTX presentation |
 | [Specify-fallback-font-order-for-PPTX](./Specify-fallback-font-order-for-PPTX.cs) |  | Specify fallback font order for PPTX |
-| [Update-header-and-footer-per-slide](./Update-header-and-footer-per-slide.cs) |  | Update header and footer per slide |
-| [Update-slide-header-and-footer-in-PPTX](./Update-slide-header-and-footer-in-PPTX.cs) |  | Update slide header and footer in PPTX |
 | [Use-custom-font-to-style-presentation](./Use-custom-font-to-style-presentation.cs) |  | Use custom font to style presentation |
 | [Validate-fallback-font-coverage-in-presentation](./Validate-fallback-font-coverage-in-presentation.cs) |  | Validate fallback font coverage in presentation |
 
 ## Category Statistics
 
-- Total examples: 139
+- Total examples: 126
 
 ## Key API Surface
 
@@ -192,7 +178,7 @@ working within the **design-presentations** category.
 - `Aspose.Slides.FillType.Solid`
 - `Aspose.Slides.IFontFallBackRulesCollection`
 - `Aspose.Slides.Export.PptxOptions`
-- `Aspose.Slides.IPortion`
+- `Aspose.Slides.BackgroundType.OwnBackground`
 - `Aspose.Slides.Export.EmbedFontCharacters.All`
 
 ## Common Code Pattern
@@ -214,5 +200,5 @@ using (Presentation pres = new Presentation("input.pptx"))
 - Save the presentation using `Presentation.Save(...)`.
 
 <!-- AUTOGENERATED:START -->
-Updated: 2026-03-17
+Updated: 2026-03-20
 <!-- AUTOGENERATED:END -->

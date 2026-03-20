@@ -20,12 +20,12 @@ working within the **working-with-tables** category.
 
 ## Required Namespaces
 
-- `using Aspose.Slides.Export;` (118/118 files)
-- `using System;` (116/118 files)
-- `using Aspose.Slides;` (92/118 files)
-- `using System.Drawing;` (21/118 files)
-- `using System.IO;` (8/118 files)
-- `using Aspose.Slides.Util;` (4/118 files)
+- `using Aspose.Slides.Export;` (109/109 files)
+- `using System;` (107/109 files)
+- `using Aspose.Slides;` (85/109 files)
+- `using System.Drawing;` (19/109 files)
+- `using System.IO;` (7/109 files)
+- `using Aspose.Slides.Util;` (3/109 files)
 
 ## Files in this folder
 
@@ -47,7 +47,6 @@ working within the **working-with-tables** category.
 | [Apply-background-color-to-PPTX-table-cell](./Apply-background-color-to-PPTX-table-cell.cs) |  | Apply background color to PPTX table cell |
 | [Apply-cell-formatting-to-PPTX-table](./Apply-cell-formatting-to-PPTX-table.cs) |  | Apply cell formatting to PPTX table |
 | [Apply-font-color-to-PPTX-table-column](./Apply-font-color-to-PPTX-table-column.cs) |  | Apply font color to PPTX table column |
-| [Apply-picture-fill-to-PPTX-table-cell](./Apply-picture-fill-to-PPTX-table-cell.cs) |  | Apply picture fill to PPTX table cell |
 | [Apply-predefined-style-to-PPTX-table](./Apply-predefined-style-to-PPTX-table.cs) |  | Apply predefined style to PPTX table |
 | [Apply-style-to-PPTX-slides-consistently](./Apply-style-to-PPTX-slides-consistently.cs) |  | Apply style to PPTX slides consistently |
 | [Apply-table-level-formatting-to-PPTX-table](./Apply-table-level-formatting-to-PPTX-table.cs) |  | Apply table level formatting to PPTX table |
@@ -68,7 +67,6 @@ working within the **working-with-tables** category.
 | [Delete-specific-row-from-PPTX-table](./Delete-specific-row-from-PPTX-table.cs) |  | Delete specific row from PPTX table |
 | [Delete-specific-row-or-column-PPTX-table](./Delete-specific-row-or-column-PPTX-table.cs) |  | Delete specific row or column PPTX table |
 | [Delete-specified-columns-from-PPTX-table](./Delete-specified-columns-from-PPTX-table.cs) |  | Delete specified columns from PPTX table |
-| [Delete-specified-rows-from-PPTX-table](./Delete-specified-rows-from-PPTX-table.cs) |  | Delete specified rows from PPTX table |
 | [Delete-specified-table-from-PPTX-presentation](./Delete-specified-table-from-PPTX-presentation.cs) |  | Delete specified table from PPTX presentation |
 | [Delete-table-from-PPTX-slide-maintain-layout](./Delete-table-from-PPTX-slide-maintain-layout.cs) |  | Delete table from PPTX slide maintain layout |
 | [Delete-targeted-column-from-PPTX-table](./Delete-targeted-column-from-PPTX-table.cs) |  | Delete targeted column from PPTX table |
@@ -77,26 +75,21 @@ working within the **working-with-tables** category.
 | [Duplicate-row-in-PPTX-table](./Duplicate-row-in-PPTX-table.cs) |  | Duplicate row in PPTX table |
 | [Enable-banded-columns-in-PPTX-table](./Enable-banded-columns-in-PPTX-table.cs) |  | Enable banded columns in PPTX table |
 | [Expand-table-with-additional-columns-PPTX](./Expand-table-with-additional-columns-PPTX.cs) |  | Expand table with additional columns PPTX |
-| [Export-PPTX-table-to-CSV](./Export-PPTX-table-to-CSV.cs) |  | Export PPTX table to CSV |
 | [Extract-column-from-PPTX-table](./Extract-column-from-PPTX-table.cs) |  | Extract column from PPTX table |
 | [Extract-table-style-properties-PPTX](./Extract-table-style-properties-PPTX.cs) |  | Extract table style properties PPTX |
 | [Extract-text-from-PPTX-table-cell](./Extract-text-from-PPTX-table-cell.cs) |  | Extract text from PPTX table cell |
 | [Fetch-cell-at-index-PPTX-table](./Fetch-cell-at-index-PPTX-table.cs) |  | Fetch cell at index PPTX table |
 | [Find-slide-containing-table-by-index-PPTX](./Find-slide-containing-table-by-index-PPTX.cs) |  | Find slide containing table by index PPTX |
-| [Find-table-shape-in-PPTX-presentation](./Find-table-shape-in-PPTX-presentation.cs) |  | Find table shape in PPTX presentation |
 | [Get-cell-from-PPTX-table-by-index](./Get-cell-from-PPTX-table-by-index.cs) |  | Get cell from PPTX table by index |
 | [Get-paragraph-from-PPTX-textframe](./Get-paragraph-from-PPTX-textframe.cs) |  | Get paragraph from PPTX textframe |
 | [Get-row-from-PPTX-table-with-properties](./Get-row-from-PPTX-table-with-properties.cs) |  | Get row from PPTX table with properties |
 | [Get-slide-by-index-PPTX](./Get-slide-by-index-PPTX.cs) |  | Get slide by index PPTX |
 | [Get-table-from-PPTX-slide](./Get-table-from-PPTX-slide.cs) |  | Get table from PPTX slide |
-| [Get-table-object-from-first-PPTX-slide](./Get-table-object-from-first-PPTX-slide.cs) |  | Get table object from first PPTX slide |
 | [Get-table-style-attributes-in-PPTX](./Get-table-style-attributes-in-PPTX.cs) |  | Get table style attributes in PPTX |
 | [Get-textframe-from-PPTX-cell](./Get-textframe-from-PPTX-cell.cs) |  | Get textframe from PPTX cell |
-| [Identify-spanning-cells-in-PPTX-table](./Identify-spanning-cells-in-PPTX-table.cs) |  | Identify spanning cells in PPTX table |
 | [Insert-bitmap-into-ippimage-PPTX](./Insert-bitmap-into-ippimage-PPTX.cs) |  | Insert bitmap into ippimage PPTX |
 | [Insert-columns-into-PPTX-table-preserving-formatting](./Insert-columns-into-PPTX-table-preserving-formatting.cs) |  | Insert columns into PPTX table preserving formatting |
 | [Insert-image-into-first-table-cell-PPTX](./Insert-image-into-first-table-cell-PPTX.cs) |  | Insert image into first table cell PPTX |
-| [Insert-image-into-specific-table-cell-PPTX](./Insert-image-into-specific-table-cell-PPTX.cs) |  | Insert image into specific table cell PPTX |
 | [Insert-itable-into-PPTX-slide-with-dimensions](./Insert-itable-into-PPTX-slide-with-dimensions.cs) |  | Insert itable into PPTX slide with dimensions |
 | [Insert-row-at-index-in-PPTX-table](./Insert-row-at-index-in-PPTX-table.cs) |  | Insert row at index in PPTX table |
 | [Insert-rows-into-PPTX-table-preserving-formatting](./Insert-rows-into-PPTX-table-preserving-formatting.cs) |  | Insert rows into PPTX table preserving formatting |
@@ -130,7 +123,6 @@ working within the **working-with-tables** category.
 | [Save-modified-PPTX-and-export-PDF](./Save-modified-PPTX-and-export-PDF.cs) |  | Save modified PPTX and export PDF |
 | [Search-all-ishapes-for-PPTX-table](./Search-all-ishapes-for-PPTX-table.cs) |  | Search all ishapes for PPTX table |
 | [Set-cell-background-color-in-PPTX-table](./Set-cell-background-color-in-PPTX-table.cs) |  | Set cell background color in PPTX table |
-| [Set-cell-border-thickness-in-PPTX-table](./Set-cell-border-thickness-in-PPTX-table.cs) |  | Set cell border thickness in PPTX table |
 | [Set-column-widths-in-PPTX-table](./Set-column-widths-in-PPTX-table.cs) |  | Set column widths in PPTX table |
 | [Set-custom-background-for-PPTX-presentation](./Set-custom-background-for-PPTX-presentation.cs) |  | Set custom background for PPTX presentation |
 | [Set-custom-theme-for-PPTX-table](./Set-custom-theme-for-PPTX-table.cs) |  | Set custom theme for PPTX table |
@@ -139,7 +131,6 @@ working within the **working-with-tables** category.
 | [Set-font-style-size-color-PPTX-table](./Set-font-style-size-color-PPTX-table.cs) |  | Set font style size color PPTX table |
 | [Set-horizontal-alignment-and-right-margin-PPTX](./Set-horizontal-alignment-and-right-margin-PPTX.cs) |  | Set horizontal alignment and right margin PPTX |
 | [Set-initial-table-row-as-header-PPTX](./Set-initial-table-row-as-header-PPTX.cs) |  | Set initial table row as header PPTX |
-| [Set-picture-fill-on-PPTX-table-cell](./Set-picture-fill-on-PPTX-table-cell.cs) |  | Set picture fill on PPTX table cell |
 | [Set-row-heights-array-in-PPTX](./Set-row-heights-array-in-PPTX.cs) |  | Set row heights array in PPTX |
 | [Set-row-heights-in-PPTX-table](./Set-row-heights-in-PPTX-table.cs) |  | Set row heights in PPTX table |
 | [Set-typeface-for-all-PPTX-text](./Set-typeface-for-all-PPTX-text.cs) |  | Set typeface for all PPTX text |
@@ -152,15 +143,15 @@ working within the **working-with-tables** category.
 
 ## Category Statistics
 
-- Total examples: 118
+- Total examples: 109
 
 ## Key API Surface
 
 - `Aspose.Slides.Presentation`
 - `Aspose.Slides.ITable`
 - `Aspose.Slides.Export`
-- `Aspose.Slides.Export.SaveFormat.Pptx`
 - `Aspose.Slides`
+- `Aspose.Slides.Export.SaveFormat.Pptx`
 - `Aspose.Slides.ISlide`
 - `Aspose.Slides.FillType.Solid`
 - `Aspose.Slides.ICell`
@@ -191,5 +182,5 @@ using (Presentation pres = new Presentation("input.pptx"))
 - Save the presentation using `Presentation.Save(...)`.
 
 <!-- AUTOGENERATED:START -->
-Updated: 2026-03-18
+Updated: 2026-03-20
 <!-- AUTOGENERATED:END -->

@@ -20,17 +20,17 @@ working within the **manage-presentation-content** category.
 
 ## Required Namespaces
 
-- `using Aspose.Slides.Export;` (233/233 files)
-- `using System;` (230/233 files)
-- `using Aspose.Slides;` (197/233 files)
-- `using System.IO;` (66/233 files)
-- `using System.Drawing;` (31/233 files)
-- `using Aspose.Slides.Animation;` (11/233 files)
-- `using Aspose.Slides.Ink;` (9/233 files)
-- `using Aspose.Slides.DOM.Ole;` (5/233 files)
-- `using System.Collections.Generic;` (4/233 files)
-- `using Aspose.Slides.SlideShow;` (1/233 files)
-- `using Aspose.Slides.Charts;` (1/233 files)
+- `using Aspose.Slides.Export;` (221/221 files)
+- `using System;` (218/221 files)
+- `using Aspose.Slides;` (186/221 files)
+- `using System.IO;` (62/221 files)
+- `using System.Drawing;` (30/221 files)
+- `using Aspose.Slides.Animation;` (9/221 files)
+- `using Aspose.Slides.Ink;` (7/221 files)
+- `using System.Collections.Generic;` (4/221 files)
+- `using Aspose.Slides.DOM.Ole;` (4/221 files)
+- `using Aspose.Slides.SlideShow;` (1/221 files)
+- `using Aspose.Slides.Charts;` (1/221 files)
 
 ## Files in this folder
 
@@ -61,7 +61,6 @@ working within the **manage-presentation-content** category.
 | [Add-presentation-tip-to-PPTX-slides](./Add-presentation-tip-to-PPTX-slides.cs) |  | Add presentation tip to PPTX slides |
 | [Add-textual-comments-to-PPTX-slides](./Add-textual-comments-to-PPTX-slides.cs) |  | Add textual comments to PPTX slides |
 | [Adjust-PPTX-ink-brush-size](./Adjust-PPTX-ink-brush-size.cs) |  | Adjust PPTX ink brush size |
-| [Adjust-PPTX-ink-shape-height](./Adjust-PPTX-ink-shape-height.cs) |  | Adjust PPTX ink shape height |
 | [Adjust-PPTX-slide-zoom-consistently](./Adjust-PPTX-slide-zoom-consistently.cs) |  | Adjust PPTX slide zoom consistently |
 | [Analyze-PPTX-standard-elements-vs-ink-annotations](./Analyze-PPTX-standard-elements-vs-ink-annotations.cs) |  | Analyze PPTX standard elements vs ink annotations |
 | [Apply-3d-depth-extrusion-to-PPTX-shapes](./Apply-3d-depth-extrusion-to-PPTX-shapes.cs) |  | Apply 3d depth extrusion to PPTX shapes |
@@ -69,11 +68,9 @@ working within the **manage-presentation-content** category.
 | [Apply-3d-rotation-to-PPTX-objects](./Apply-3d-rotation-to-PPTX-objects.cs) |  | Apply 3d rotation to PPTX objects |
 | [Apply-animated-text-effects-to-PPTX](./Apply-animated-text-effects-to-PPTX.cs) |  | Apply animated text effects to PPTX |
 | [Apply-custom-notes-style-to-PPTX](./Apply-custom-notes-style-to-PPTX.cs) |  | Apply custom notes style to PPTX |
-| [Apply-ink-brush-color-to-PPTX-strokes](./Apply-ink-brush-color-to-PPTX-strokes.cs) |  | Apply ink brush color to PPTX strokes |
 | [Apply-PPTX-element-color-changes-programmatically](./Apply-PPTX-element-color-changes-programmatically.cs) |  | Apply PPTX element color changes programmatically |
 | [Apply-PPTX-hyperlink-styling-to-elements](./Apply-PPTX-hyperlink-styling-to-elements.cs) |  | Apply PPTX hyperlink styling to elements |
 | [Apply-shape-animation-timing-and-effects-PPTX](./Apply-shape-animation-timing-and-effects-PPTX.cs) |  | Apply shape animation timing and effects PPTX |
-| [Apply-zoom-frame-formatting-PPTX](./Apply-zoom-frame-formatting-PPTX.cs) |  | Apply zoom frame formatting PPTX |
 | [Assign-custom-thumbnails-to-section-zoom-PPTX](./Assign-custom-thumbnails-to-section-zoom-PPTX.cs) |  | Assign custom thumbnails to section zoom PPTX |
 | [Assign-PPTX-elements-decorative-attribute](./Assign-PPTX-elements-decorative-attribute.cs) |  | Assign PPTX elements decorative attribute |
 | [Assign-PPTX-embedded-object-icons-and-titles](./Assign-PPTX-embedded-object-icons-and-titles.cs) |  | Assign PPTX embedded object icons and titles |
@@ -90,7 +87,6 @@ working within the **manage-presentation-content** category.
 | [Configure-PPTX-brush-fill-stroke-properties](./Configure-PPTX-brush-fill-stroke-properties.cs) |  | Configure PPTX brush fill stroke properties |
 | [Configure-PPTX-default-slide-zoom](./Configure-PPTX-default-slide-zoom.cs) |  | Configure PPTX default slide zoom |
 | [Configure-PPTX-embedded-object-icons-and-titles](./Configure-PPTX-embedded-object-icons-and-titles.cs) |  | Configure PPTX embedded object icons and titles |
-| [Configure-PPTX-ink-brush-color](./Configure-PPTX-ink-brush-color.cs) |  | Configure PPTX ink brush color |
 | [Configure-PPTX-ink-brush-opacity](./Configure-PPTX-ink-brush-opacity.cs) |  | Configure PPTX ink brush opacity |
 | [Configure-PPTX-ink-brush-thickness](./Configure-PPTX-ink-brush-thickness.cs) |  | Configure PPTX ink brush thickness |
 | [Configure-PPTX-normal-view-properties](./Configure-PPTX-normal-view-properties.cs) |  | Configure PPTX normal view properties |
@@ -130,7 +126,6 @@ working within the **manage-presentation-content** category.
 | [Delete-initial-section-from-PPTX-summary-zoom](./Delete-initial-section-from-PPTX-summary-zoom.cs) |  | Delete initial section from PPTX summary zoom |
 | [Delete-initial-summary-zoom-section-from-PPTX](./Delete-initial-summary-zoom-section-from-PPTX.cs) |  | Delete initial summary zoom section from PPTX |
 | [Delete-notes-from-slide-heading-PPTX](./Delete-notes-from-slide-heading-PPTX.cs) |  | Delete notes from slide heading PPTX |
-| [Delete-notes-from-specific-slide-PPTX](./Delete-notes-from-specific-slide-PPTX.cs) |  | Delete notes from specific slide PPTX |
 | [Delete-PPTX-comment-annotations-programmatically](./Delete-PPTX-comment-annotations-programmatically.cs) |  | Delete PPTX comment annotations programmatically |
 | [Delete-PPTX-comment-heading-preserving-slide-content](./Delete-PPTX-comment-heading-preserving-slide-content.cs) |  | Delete PPTX comment heading preserving slide content |
 | [Delete-PPTX-comment-headings-preserving-layout](./Delete-PPTX-comment-headings-preserving-layout.cs) |  | Delete PPTX comment headings preserving layout |
@@ -166,7 +161,6 @@ working within the **manage-presentation-content** category.
 | [Extract-PPTX-hyperlink-audio-preserving-format](./Extract-PPTX-hyperlink-audio-preserving-format.cs) |  | Extract PPTX hyperlink audio preserving format |
 | [Extract-PPTX-hyperlink-audio-to-file](./Extract-PPTX-hyperlink-audio-to-file.cs) |  | Extract PPTX hyperlink audio to file |
 | [Extract-PPTX-metadata-and-custom-tags](./Extract-PPTX-metadata-and-custom-tags.cs) |  | Extract PPTX metadata and custom tags |
-| [Extract-PPTX-slide-notes-with-formatting](./Extract-PPTX-slide-notes-with-formatting.cs) |  | Extract PPTX slide notes with formatting |
 | [Extract-PPTX-sound-hyperlink-preserving-data](./Extract-PPTX-sound-hyperlink-preserving-data.cs) |  | Extract PPTX sound hyperlink preserving data |
 | [Fix-PPTX-ole-object-frames-position](./Fix-PPTX-ole-object-frames-position.cs) |  | Fix PPTX ole object frames position |
 | [Format-summary-zoom-sections-consistently-PPTX](./Format-summary-zoom-sections-consistently-PPTX.cs) |  | Format summary zoom sections consistently PPTX |
@@ -175,15 +169,12 @@ working within the **manage-presentation-content** category.
 | [Generate-PPTX-summary-zoom-slide-interactive](./Generate-PPTX-summary-zoom-slide-interactive.cs) |  | Generate PPTX summary zoom slide interactive |
 | [Get-PPTX-linked-ole-object-frame-properties](./Get-PPTX-linked-ole-object-frame-properties.cs) |  | Get PPTX linked ole object frame properties |
 | [Get-PPTX-view-properties-programmatically](./Get-PPTX-view-properties-programmatically.cs) |  | Get PPTX view properties programmatically |
-| [Implement-interactive-animation-controls-PPTX](./Implement-interactive-animation-controls-PPTX.cs) |  | Implement interactive animation controls PPTX |
-| [Implement-memory-management-techniques-for-PPTX](./Implement-memory-management-techniques-for-PPTX.cs) |  | Implement memory management techniques for PPTX |
 | [Implement-PPTX-section-zoom-navigation](./Implement-PPTX-section-zoom-navigation.cs) |  | Implement PPTX section zoom navigation |
 | [Insert-custom-properties-into-PPTX-presentation](./Insert-custom-properties-into-PPTX-presentation.cs) |  | Insert custom properties into PPTX presentation |
 | [Insert-delete-PPTX-summary-zoom-heading](./Insert-delete-PPTX-summary-zoom-heading.cs) |  | Insert delete PPTX summary zoom heading |
 | [Insert-external-files-into-PPTX-slides-accessibly](./Insert-external-files-into-PPTX-slides-accessibly.cs) |  | Insert external files into PPTX slides accessibly |
 | [Insert-modern-comment-objects-into-PPTX](./Insert-modern-comment-objects-into-PPTX.cs) |  | Insert modern comment objects into PPTX |
 | [Insert-PPTX-audio-hyperlink-into-slide](./Insert-PPTX-audio-hyperlink-into-slide.cs) |  | Insert PPTX audio hyperlink into slide |
-| [Insert-PPTX-blob-into-presentation-with-integrity](./Insert-PPTX-blob-into-presentation-with-integrity.cs) |  | Insert PPTX blob into presentation with integrity |
 | [Insert-PPTX-blob-into-slide-efficiently](./Insert-PPTX-blob-into-slide-efficiently.cs) |  | Insert PPTX blob into slide efficiently |
 | [Insert-PPTX-image-blob-into-slide](./Insert-PPTX-image-blob-into-slide.cs) |  | Insert PPTX image blob into slide |
 | [Insert-PPTX-ole-object-frames-with-positioning](./Insert-PPTX-ole-object-frames-with-positioning.cs) |  | Insert PPTX ole object frames with positioning |
@@ -210,7 +201,6 @@ working within the **manage-presentation-content** category.
 | [Modify-PPTX-view-settings-programmatically](./Modify-PPTX-view-settings-programmatically.cs) |  | Modify PPTX view settings programmatically |
 | [Modify-PPTX-zoom-frame-behavior-programmatically](./Modify-PPTX-zoom-frame-behavior-programmatically.cs) |  | Modify PPTX zoom frame behavior programmatically |
 | [Optimize-PPTX-blob-memory-usage](./Optimize-PPTX-blob-memory-usage.cs) |  | Optimize PPTX blob memory usage |
-| [Process-PPTX-presentation-live-demo](./Process-PPTX-presentation-live-demo.cs) |  | Process PPTX presentation live demo |
 | [Purge-PPTX-comments-completely-from-presentation](./Purge-PPTX-comments-completely-from-presentation.cs) |  | Purge PPTX comments completely from presentation |
 | [Read-large-PPTX-into-blob](./Read-large-PPTX-into-blob.cs) |  | Read large PPTX into blob |
 | [Read-PPTX-presentation-metadata-at-runtime](./Read-PPTX-presentation-metadata-at-runtime.cs) |  | Read PPTX presentation metadata at runtime |
@@ -233,7 +223,6 @@ working within the **manage-presentation-content** category.
 | [Replace-PPTX-ole-object-embedded-data](./Replace-PPTX-ole-object-embedded-data.cs) |  | Replace PPTX ole object embedded data |
 | [Reply-to-existing-PPTX-slide-comments](./Reply-to-existing-PPTX-slide-comments.cs) |  | Reply to existing PPTX slide comments |
 | [Restore-PPTX-normal-view-properties](./Restore-PPTX-normal-view-properties.cs) |  | Restore PPTX normal view properties |
-| [Retrieve-modify-PPTX-slide-comments](./Retrieve-modify-PPTX-slide-comments.cs) |  | Retrieve modify PPTX slide comments |
 | [Retrieve-PPTX-hyperlink-audio-to-disk](./Retrieve-PPTX-hyperlink-audio-to-disk.cs) |  | Retrieve PPTX hyperlink audio to disk |
 | [Retrieve-PPTX-ole-object-frames](./Retrieve-PPTX-ole-object-frames.cs) |  | Retrieve PPTX ole object frames |
 | [Save-PPTX-built-in-properties-programmatically](./Save-PPTX-built-in-properties-programmatically.cs) |  | Save PPTX built in properties programmatically |
@@ -265,14 +254,13 @@ working within the **manage-presentation-content** category.
 | [Update-PPTX-metadata-and-slide-layout](./Update-PPTX-metadata-and-slide-layout.cs) |  | Update PPTX metadata and slide layout |
 | [Update-PPTX-mutable-hyperlinks-preserving-slide-integrity](./Update-PPTX-mutable-hyperlinks-preserving-slide-integrity.cs) |  | Update PPTX mutable hyperlinks preserving slide integrity |
 | [Update-PPTX-normal-view-properties](./Update-PPTX-normal-view-properties.cs) |  | Update PPTX normal view properties |
-| [Update-PPTX-ole-object-data](./Update-PPTX-ole-object-data.cs) |  | Update PPTX ole object data |
 | [Use-PPTX-blob-storage-for-low-memory](./Use-PPTX-blob-storage-for-low-memory.cs) |  | Use PPTX blob storage for low memory |
 | [Validate-PPTX-blob-image-embedding](./Validate-PPTX-blob-image-embedding.cs) |  | Validate PPTX blob image embedding |
 | [Validate-PPTX-slide-transitions-programmatically](./Validate-PPTX-slide-transitions-programmatically.cs) |  | Validate PPTX slide transitions programmatically |
 
 ## Category Statistics
 
-- Total examples: 233
+- Total examples: 221
 
 ## Key API Surface
 
@@ -286,11 +274,11 @@ working within the **manage-presentation-content** category.
 - `Aspose.Slides.IShape`
 - `Aspose.Slides.FillType.Solid`
 - `Aspose.Slides.IComment`
-- `Aspose.Slides.BackgroundType.OwnBackground`
 - `Aspose.Slides.ISection`
+- `Aspose.Slides.BackgroundType.OwnBackground`
 - `Aspose.Slides.ICommentAuthor`
-- `Aspose.Slides.Ink.Ink`
 - `Aspose.Slides.OleObjectFrame`
+- `Aspose.Slides.Ink.Ink`
 
 ## Common Code Pattern
 
@@ -311,5 +299,5 @@ using (Presentation pres = new Presentation("input.pptx"))
 - Save the presentation using `Presentation.Save(...)`.
 
 <!-- AUTOGENERATED:START -->
-Updated: 2026-03-17
+Updated: 2026-03-20
 <!-- AUTOGENERATED:END -->
