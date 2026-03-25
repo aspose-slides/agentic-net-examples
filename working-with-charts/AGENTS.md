@@ -20,19 +20,19 @@ working within the **working-with-charts** category.
 
 ## Required Namespaces
 
-- `using System;` (327/328 files)
-- `using Aspose.Slides.Export;` (327/328 files)
-- `using Aspose.Slides;` (284/328 files)
-- `using System.IO;` (263/328 files)
-- `using Aspose.Slides.Charts;` (207/328 files)
-- `using System.Drawing;` (40/328 files)
-- `using Aspose.Slides.Animation;` (14/328 files)
-- `using Aspose.Slides.MathText;` (6/328 files)
-- `using System.Collections.Generic;` (2/328 files)
-- `using Aspose.Slides.Import;` (2/328 files)
-- `using Aspose.Slides.SlideShow;` (1/328 files)
-- `using System.Text.RegularExpressions;` (1/328 files)
-- `using Aspose.Slides.Excel;` (1/328 files)
+- `using System;` (329/330 files)
+- `using Aspose.Slides.Export;` (329/330 files)
+- `using Aspose.Slides;` (285/330 files)
+- `using System.IO;` (265/330 files)
+- `using Aspose.Slides.Charts;` (208/330 files)
+- `using System.Drawing;` (40/330 files)
+- `using Aspose.Slides.Animation;` (14/330 files)
+- `using Aspose.Slides.MathText;` (6/330 files)
+- `using System.Collections.Generic;` (2/330 files)
+- `using Aspose.Slides.Import;` (2/330 files)
+- `using Aspose.Slides.SlideShow;` (1/330 files)
+- `using System.Text.RegularExpressions;` (1/330 files)
+- `using Aspose.Slides.Excel;` (1/330 files)
 
 ## Files in this folder
 
@@ -135,6 +135,7 @@ working within the **working-with-charts** category.
 | [Configure-data-label-decimal-precision-in-PPTX](./Configure-data-label-decimal-precision-in-PPTX.cs) |  | Configure data label decimal precision in PPTX |
 | [Configure-data-labels-as-percentages-in-PPTX](./Configure-data-labels-as-percentages-in-PPTX.cs) |  | Configure data labels as percentages in PPTX |
 | [Configure-data-point-labels-in-PPTX](./Configure-data-point-labels-in-PPTX.cs) |  | Configure data point labels in PPTX |
+| [Configure-data-table-font-attributes-in-PPTX](./Configure-data-table-font-attributes-in-PPTX.cs) |  | Configure data table font attributes in PPTX |
 | [Configure-doughnut-chart-center-gap-PPTX](./Configure-doughnut-chart-center-gap-PPTX.cs) |  | Configure doughnut chart center gap PPTX |
 | [Configure-doughnut-chart-inner-radius](./Configure-doughnut-chart-inner-radius.cs) |  | Configure doughnut chart inner radius |
 | [Configure-error-bars-in-PPTX](./Configure-error-bars-in-PPTX.cs) |  | Configure error bars in PPTX |
@@ -281,6 +282,7 @@ working within the **working-with-charts** category.
 | [Link-external-workbook-to-PPTX-chart](./Link-external-workbook-to-PPTX-chart.cs) |  | Link external workbook to PPTX chart |
 | [Link-workbook-cell-to-chart-label-PPTX](./Link-workbook-cell-to-chart-label-PPTX.cs) |  | Link workbook cell to chart label PPTX |
 | [List-PPTX-chart-types-available](./List-PPTX-chart-types-available.cs) |  | List PPTX chart types available |
+| [List-supported-equation-types-in-PPTX](./List-supported-equation-types-in-PPTX.cs) |  | List supported equation types in PPTX |
 | [Manage-callouts-in-PPTX-charts](./Manage-callouts-in-PPTX-charts.cs) |  | Manage callouts in PPTX charts |
 | [Manage-data-markers-in-PPTX](./Manage-data-markers-in-PPTX.cs) |  | Manage data markers in PPTX |
 | [Manage-embedded-worksheet-objects-in-PPTX](./Manage-embedded-worksheet-objects-in-PPTX.cs) |  | Manage embedded worksheet objects in PPTX |
@@ -369,7 +371,7 @@ working within the **working-with-charts** category.
 
 ## Category Statistics
 
-- Total examples: 328
+- Total examples: 330
 
 ## Key API Surface
 
