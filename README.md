@@ -21,7 +21,7 @@ Examples are organized by feature category:
 - `manage-tags-and-custom-data/` - 17 example(s)
 - `math-equations/` - 34 example(s)
 - `vba-macros/` - 22 example(s)
-- `working-with-charts/` - 613 example(s)
+- `working-with-charts/` - 330 example(s)
 - `working-with-shapes/` - 162 example(s)
 - `working-with-slides/` - 110 example(s)
 - `working-with-tables/` - 109 example(s)
