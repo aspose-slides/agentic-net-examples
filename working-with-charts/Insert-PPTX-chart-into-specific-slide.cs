@@ -1,41 +1,47 @@
 using System;
+using System.IO;
 using Aspose.Slides;
-using Aspose.Slides.Export;
 using Aspose.Slides.Charts;
+using Aspose.Slides.Export;
 
 class Program
 {
     static void Main()
     {
-        try
+        // Define input and output file paths
+        string dataDir = "Data";
+        string inputPath = Path.Combine(dataDir, "input.pptx");
+        string outputPath = Path.Combine(dataDir, "output.pptx");
+
+        // Check if the input file exists
+        if (!File.Exists(inputPath))
         {
-            string inputPath = "input.pptx";
-            string outputPath = "output.pptx";
-
-            // Load the existing presentation
-            using (Presentation pres = new Presentation(inputPath))
-            {
-                // Access the specific slide (e.g., second slide)
-                ISlide slide = pres.Slides[1];
-
-                // Add a clustered column chart to the slide
-                IChart chart = slide.Shapes.AddChart(Aspose.Slides.Charts.ChartType.ClusteredColumn, 50, 50, 400, 300);
-
-                // Enable and set the chart title
-                chart.HasTitle = true;
-                chart.ChartTitle.AddTextFrameForOverriding("Sales Data");
-
-                // Enable legend and set its position
-                chart.HasLegend = true;
-                chart.Legend.Position = Aspose.Slides.Charts.LegendPositionType.Right;
-
-                // Save the modified presentation
-                pres.Save(outputPath, SaveFormat.Pptx);
-            }
+            Console.WriteLine("Input file not found: " + inputPath);
+            return;
         }
-        catch (Exception ex)
+
+        // Load the existing presentation
+        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
         {
-            Console.WriteLine("Error: " + ex.Message);
+            // Access the target slide (e.g., first slide)
+            Aspose.Slides.ISlide slide = presentation.Slides[0];
+
+            // Insert a clustered column chart at specified position and size
+            Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(
+                Aspose.Slides.Charts.ChartType.ClusteredColumn,
+                50f,   // X position
+                50f,   // Y position
+                500f,  // Width
+                400f   // Height
+            );
+
+            // Set chart title (optional)
+            chart.HasTitle = true;
+            chart.ChartTitle.AddTextFrameForOverriding("Sample Chart");
+            chart.ChartTitle.TextFrameForOverriding.TextFrameFormat.CenterText = Aspose.Slides.NullableBool.True;
+
+            // Save the modified presentation
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
         }
     }
 }
