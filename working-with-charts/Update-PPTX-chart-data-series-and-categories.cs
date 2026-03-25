@@ -1,53 +1,59 @@
 using System;
+using System.IO;
+using Aspose.Slides;
+using Aspose.Slides.Charts;
 using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        try
+        string inputPath = "input.pptx";
+        string outputPath = "output.pptx";
+
+        if (!File.Exists(inputPath))
         {
-            var pres = new Aspose.Slides.Presentation();
-            var slide = pres.Slides[0];
-
-            // Add a clustered column chart
-            var chart = slide.Shapes.AddChart(Aspose.Slides.Charts.ChartType.ClusteredColumn, 50, 50, 500, 400);
-
-            // Access the chart data workbook
-            var workbook = chart.ChartData.ChartDataWorkbook;
-
-            // Clear default series and categories
-            chart.ChartData.Series.Clear();
-            chart.ChartData.Categories.Clear();
-
-            // Define worksheet index
-            var defaultWorksheetIndex = 0;
-
-            // Add categories
-            chart.ChartData.Categories.Add(workbook.GetCell(defaultWorksheetIndex, 1, 0, "Category 1"));
-            chart.ChartData.Categories.Add(workbook.GetCell(defaultWorksheetIndex, 2, 0, "Category 2"));
-            chart.ChartData.Categories.Add(workbook.GetCell(defaultWorksheetIndex, 3, 0, "Category 3"));
-
-            // Add series
-            var series1 = chart.ChartData.Series.Add(workbook.GetCell(defaultWorksheetIndex, 0, 1, "Series 1"), chart.Type);
-            var series2 = chart.ChartData.Series.Add(workbook.GetCell(defaultWorksheetIndex, 0, 2, "Series 2"), chart.Type);
-
-            // Populate first series data points
-            series1.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 1, 1, 20));
-            series1.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 2, 1, 50));
-            series1.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 3, 1, 30));
-
-            // Populate second series data points
-            series2.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 1, 2, 30));
-            series2.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 2, 2, 10));
-            series2.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, 3, 2, 60));
-
-            // Save the presentation
-            pres.Save("UpdatedChart.pptx", SaveFormat.Pptx);
+            Console.WriteLine("Input file not found: " + inputPath);
+            return;
         }
-        catch (Exception ex)
-        {
-            Console.WriteLine("Error: " + ex.Message);
-        }
+
+        // Load the existing presentation
+        Presentation pres = new Presentation(inputPath);
+
+        // Access the first slide
+        ISlide slide = pres.Slides[0];
+
+        // Add a clustered column chart
+        IChart chart = slide.Shapes.AddChart(ChartType.ClusteredColumn, 100, 100, 600, 400);
+
+        // Clear any default series and categories
+        chart.ChartData.Series.Clear();
+        chart.ChartData.Categories.Clear();
+
+        // Get the chart data workbook
+        IChartDataWorkbook workbook = chart.ChartData.ChartDataWorkbook;
+        int defaultWorksheetIndex = 0;
+
+        // Add categories
+        IChartCategory category1 = chart.ChartData.Categories.Add(workbook.GetCell(defaultWorksheetIndex, "C2", "Category 1"));
+        IChartCategory category2 = chart.ChartData.Categories.Add(workbook.GetCell(defaultWorksheetIndex, "C3", "Category 2"));
+        IChartCategory category3 = chart.ChartData.Categories.Add(workbook.GetCell(defaultWorksheetIndex, "C4", "Category 3"));
+
+        // Add series
+        IChartSeries series1 = chart.ChartData.Series.Add(workbook.GetCell(defaultWorksheetIndex, "D1", "Series 1"), ChartType.ClusteredColumn);
+        IChartSeries series2 = chart.ChartData.Series.Add(workbook.GetCell(defaultWorksheetIndex, "D2", "Series 2"), ChartType.ClusteredColumn);
+
+        // Populate data points for the first series
+        series1.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, "D2", 20));
+        series1.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, "D3", 50));
+        series1.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, "D4", 30));
+
+        // Populate data points for the second series
+        series2.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, "E2", 30));
+        series2.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, "E3", 10));
+        series2.DataPoints.AddDataPointForBarSeries(workbook.GetCell(defaultWorksheetIndex, "E4", 60));
+
+        // Save the updated presentation
+        pres.Save(outputPath, SaveFormat.Pptx);
     }
 }
