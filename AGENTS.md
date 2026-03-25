@@ -26,10 +26,10 @@ When working in this repository:
 
 ## Repository Overview
 
-This repository contains **1736** working code examples demonstrating Aspose.Slides for .NET capabilities.
+This repository contains **2060** working code examples demonstrating Aspose.Slides for .NET capabilities.
 
-**Statistics** (as of 2026-03-21):
-- Total Examples: 1736
+**Statistics** (as of 2026-03-25):
+- Total Examples: 2060
 - Categories: 16
 
 ## Category Details
@@ -83,7 +83,7 @@ This repository contains **1736** working code examples demonstrating Aspose.Sli
 - Guide: [AGENTS.md](./vba-macros/AGENTS.md)
 
 ### working-with-charts
-- Examples: 289
+- Examples: 613
 - Guide: [AGENTS.md](./working-with-charts/AGENTS.md)
 
 ### working-with-shapes
@@ -378,4 +378,4 @@ dotnet run
 
 
 ---
-Generated: 2026-03-21
+Generated: 2026-03-25
