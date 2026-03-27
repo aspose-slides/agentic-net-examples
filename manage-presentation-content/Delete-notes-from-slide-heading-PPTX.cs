@@ -1,36 +1,36 @@
 using System;
+using System.IO;
+using Aspose.Slides;
 using Aspose.Slides.Export;
 
 class Program
 {
     static void Main(string[] args)
     {
-        // Path to the source presentation
-        string sourcePath = "InputPresentation.pptx";
-        // Path to the output presentation
-        string outputPath = "OutputPresentation.pptx";
+        // Input and output file paths
+        string inputPath = Path.Combine(Environment.CurrentDirectory, "input.pptx");
+        string outputPath = Path.Combine(Environment.CurrentDirectory, "output.pptx");
 
-        try
+        // Verify that the input file exists
+        if (!File.Exists(inputPath))
         {
-            // Load the presentation
-            using (var presentation = new Aspose.Slides.Presentation(sourcePath))
-            {
-                // Iterate through all slides
-                for (int i = 0; i < presentation.Slides.Count; i++)
-                {
-                    var slide = presentation.Slides[i];
-                    // Remove notes slide associated with the current slide
-                    var notesManager = slide.NotesSlideManager;
-                    notesManager.RemoveNotesSlide();
-                }
+            Console.WriteLine("Input file not found: " + inputPath);
+            return;
+        }
 
-                // Save the modified presentation
-                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
-            }
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine("An error occurred: " + ex.Message);
-        }
+        // Load the presentation
+        Presentation presentation = new Presentation(inputPath);
+
+        // Remove notes from the first slide
+        INotesSlideManager notesManager = presentation.Slides[0].NotesSlideManager;
+        notesManager.RemoveNotesSlide();
+
+        // Save the modified presentation
+        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+
+        // Clean up resources
+        presentation.Dispose();
+
+        Console.WriteLine("Notes removed. Presentation saved to: " + outputPath);
     }
 }
