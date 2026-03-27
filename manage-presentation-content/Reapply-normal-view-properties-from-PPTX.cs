@@ -1,35 +1,41 @@
 using System;
-using Aspose.Slides;
+using System.IO;
 using Aspose.Slides.Export;
 
-class Program
+namespace RestoreNormalView
 {
-    static void Main()
+    class Program
     {
-        try
+        static void Main(string[] args)
         {
-            // Load the source presentation
-            using (Presentation presentation = new Presentation("input.pptx"))
+            // Define input and output file paths
+            string inputPath = Path.Combine(Directory.GetCurrentDirectory(), "input.pptx");
+            string outputPath = Path.Combine(Directory.GetCurrentDirectory(), "output.pptx");
+
+            // Check if the input file exists
+            if (!File.Exists(inputPath))
             {
-                // Access normal view properties (read‑only property, but its members are writable)
-                INormalViewProperties normalView = presentation.ViewProperties.NormalViewProperties;
-
-                // Restore or modify normal view settings
-                normalView.HorizontalBarState = SplitterBarStateType.Restored;
-                normalView.VerticalBarState = SplitterBarStateType.Maximized;
-                normalView.ShowOutlineIcons = true;
-
-                // Create PPTX save options using the factory
-                SaveOptionsFactory optionsFactory = new SaveOptionsFactory();
-                IPptxOptions pptxOptions = optionsFactory.CreatePptxOptions();
-
-                // Save the presentation with the restored view settings
-                presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx, pptxOptions);
+                Console.WriteLine("Input file does not exist: " + inputPath);
+                return;
             }
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine("Error: " + ex.Message);
+
+            // Load the presentation
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+
+            // Restore normal view properties
+            presentation.ViewProperties.NormalViewProperties.HorizontalBarState = Aspose.Slides.SplitterBarStateType.Restored;
+            presentation.ViewProperties.NormalViewProperties.VerticalBarState = Aspose.Slides.SplitterBarStateType.Maximized;
+            presentation.ViewProperties.NormalViewProperties.RestoredTop.AutoAdjust = true;
+            presentation.ViewProperties.NormalViewProperties.RestoredTop.DimensionSize = 80f;
+            presentation.ViewProperties.NormalViewProperties.ShowOutlineIcons = true;
+
+            // Save the updated presentation
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+
+            // Dispose the presentation object
+            presentation.Dispose();
+
+            Console.WriteLine("Presentation saved to: " + outputPath);
         }
     }
 }
