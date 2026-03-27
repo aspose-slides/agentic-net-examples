@@ -15,7 +15,7 @@ Examples are organized by feature category:
 - `conversion/` - 196 example(s)
 - `design-presentations/` - 126 example(s)
 - `manage-presentation/` - 89 example(s)
-- `manage-presentation-content/` - 221 example(s)
+- `manage-presentation-content/` - 235 example(s)
 - `manage-presentation-media-files/` - 167 example(s)
 - `manage-presentation-text/` - 141 example(s)
 - `manage-tags-and-custom-data/` - 17 example(s)
