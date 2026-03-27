@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
@@ -6,31 +7,29 @@ class Program
 {
     static void Main()
     {
-        try
+        // Define input and output file paths
+        string dataDir = "Data" + Path.DirectorySeparatorChar;
+        string inputPath = dataDir + "input.pptx";
+        string outputPath = dataDir + "output.pptx";
+
+        // Check if the input file exists
+        if (!File.Exists(inputPath))
         {
-            // Paths for input and output presentations
-            string inputPath = "input.pptx";
-            string outputPath = "output.pptx";
-
-            // Load the existing presentation
-            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
-            {
-                // Access document properties
-                Aspose.Slides.IDocumentProperties docProps = presentation.DocumentProperties;
-
-                // Add custom properties
-                docProps.SetCustomPropertyValue("CustomString", "Hello World");
-                docProps.SetCustomPropertyValue("CustomNumber", 123);
-                docProps.SetCustomPropertyValue("CustomDate", DateTime.Now);
-
-                // Save the presentation with the new custom properties
-                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
-            }
+            Console.WriteLine("Input file does not exist: " + inputPath);
+            return;
         }
-        catch (Exception ex)
-        {
-            // Handle any errors that occur during processing
-            Console.WriteLine("Error: " + ex.Message);
-        }
+
+        // Load the presentation
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+        Aspose.Slides.IDocumentProperties documentProperties = presentation.DocumentProperties;
+
+        // Add custom document properties
+        documentProperties["CustomInt"] = 123;
+        documentProperties["CustomString"] = "Hello World";
+        documentProperties["CustomDate"] = DateTime.Now;
+
+        // Save the modified presentation
+        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+        presentation.Dispose();
     }
 }
