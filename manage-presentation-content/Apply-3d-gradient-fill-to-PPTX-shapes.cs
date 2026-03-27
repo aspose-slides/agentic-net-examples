@@ -1,7 +1,6 @@
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
-using System.Drawing;
 
 namespace ThreeDGradientExample
 {
@@ -9,39 +8,36 @@ namespace ThreeDGradientExample
     {
         static void Main(string[] args)
         {
-            try
-            {
-                // Create a new presentation
-                Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation();
+            // Create a new presentation
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-                // Add a rectangle shape
-                Aspose.Slides.IAutoShape shape = pres.Slides[0].Shapes.AddAutoShape(
-                    Aspose.Slides.ShapeType.Rectangle, 200, 150, 250, 250);
+            // Get the first slide
+            Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-                // Set shape text
-                shape.TextFrame.Text = "3D Gradient";
+            // Add an ellipse shape
+            Aspose.Slides.IShape shape = slide.Shapes.AddAutoShape(
+                Aspose.Slides.ShapeType.Ellipse,
+                100,   // X position
+                100,   // Y position
+                300,   // Width
+                200);  // Height
 
-                // Apply gradient fill
-                shape.FillFormat.FillType = Aspose.Slides.FillType.Gradient;
-                shape.FillFormat.GradientFormat.GradientStops.Add(0, Color.Blue);
-                shape.FillFormat.GradientFormat.GradientStops.Add(100, Color.Orange);
+            // Apply gradient fill to the shape
+            shape.FillFormat.FillType = Aspose.Slides.FillType.Gradient;
+            shape.FillFormat.GradientFormat.GradientStops.Add(0, Aspose.Slides.PresetColor.Blue);
+            shape.FillFormat.GradientFormat.GradientStops.Add(100, Aspose.Slides.PresetColor.Orange);
+            shape.FillFormat.GradientFormat.GradientShape = Aspose.Slides.GradientShape.Linear;
+            shape.FillFormat.GradientFormat.GradientDirection = Aspose.Slides.GradientDirection.FromCorner2;
 
-                // Configure 3D format
-                shape.ThreeDFormat.Camera.CameraType = Aspose.Slides.CameraPresetType.OrthographicFront;
-                shape.ThreeDFormat.Camera.SetRotation(20, 30, 40);
-                shape.ThreeDFormat.LightRig.LightType = Aspose.Slides.LightRigPresetType.Flat;
-                shape.ThreeDFormat.LightRig.Direction = Aspose.Slides.LightingDirection.Top;
-                shape.ThreeDFormat.Material = Aspose.Slides.MaterialPresetType.Flat;
-                shape.ThreeDFormat.ExtrusionHeight = 100;
-                shape.ThreeDFormat.ExtrusionColor.Color = Color.Blue;
+            // Apply 3‑D properties
+            shape.ThreeDFormat.Depth = 5;
+            shape.ThreeDFormat.Camera.CameraType = Aspose.Slides.CameraPresetType.OrthographicFront;
+            shape.ThreeDFormat.Camera.SetRotation(20, 30, 0);
+            shape.ThreeDFormat.LightRig.LightType = Aspose.Slides.LightRigPresetType.Flat;
+            shape.ThreeDFormat.LightRig.Direction = Aspose.Slides.LightingDirection.Top;
 
-                // Save the presentation
-                pres.Save("ThreeDGradientShape.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error: " + ex.Message);
-            }
+            // Save the presentation
+            presentation.Save("ThreeDGradient.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
         }
     }
 }
