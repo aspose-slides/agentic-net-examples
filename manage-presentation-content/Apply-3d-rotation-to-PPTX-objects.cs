@@ -1,34 +1,47 @@
 using System;
-using Aspose.Slides;
+using System.IO;
 using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        try
+        // Define input and output file paths
+        string inputPath = "input.pptx";
+        string outputPath = "output.pptx";
+
+        // Load existing presentation if it exists, otherwise create a new one
+        Aspose.Slides.Presentation presentation;
+        if (File.Exists(inputPath))
         {
-            // Create a new presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
-
-            // Add a rectangle shape to the first slide
-            Aspose.Slides.IAutoShape shape = presentation.Slides[0].Shapes.AddAutoShape(
-                Aspose.Slides.ShapeType.Rectangle, 100, 100, 300, 200);
-
-            // Set text for the shape
-            shape.TextFrame.Text = "3D Shape";
-
-            // Apply 3D rotation using the shape's ThreeDFormat
-            shape.ThreeDFormat.Camera.SetRotation(30, 40, 0); // X, Y, Z rotation angles
-            shape.ThreeDFormat.Depth = 50; // Depth of the 3D effect
-            shape.ThreeDFormat.Material = Aspose.Slides.MaterialPresetType.Plastic; // Material preset
-
-            // Save the presentation
-            presentation.Save("3DShape.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            presentation = new Aspose.Slides.Presentation(inputPath);
         }
-        catch (Exception ex)
+        else
         {
-            Console.WriteLine("Error: " + ex.Message);
+            presentation = new Aspose.Slides.Presentation();
         }
+
+        // Get the first slide
+        Aspose.Slides.ISlide slide = presentation.Slides[0];
+
+        // Add a rectangle shape and apply 3D formatting
+        Aspose.Slides.IAutoShape shape = slide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 100, 100, 300, 200);
+        shape.TextFrame.Text = "3D Shape";
+        shape.ThreeDFormat.Depth = 5;
+        shape.ThreeDFormat.Material = Aspose.Slides.MaterialPresetType.Plastic;
+        shape.ThreeDFormat.Camera.CameraType = Aspose.Slides.CameraPresetType.PerspectiveContrastingRightFacing;
+        shape.ThreeDFormat.Camera.SetRotation(20, 30, 40);
+        shape.ThreeDFormat.LightRig.LightType = Aspose.Slides.LightRigPresetType.Balanced;
+        shape.ThreeDFormat.LightRig.Direction = Aspose.Slides.LightingDirection.Top;
+        shape.ThreeDFormat.LightRig.SetRotation(0, 0, 45);
+
+        // Add a chart and set its 3D rotation
+        Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(Aspose.Slides.Charts.ChartType.ClusteredColumn, 50, 350, 400, 300);
+        chart.Rotation3D.RotationX = 30;
+        chart.Rotation3D.RotationY = 45;
+
+        // Save the presentation
+        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+        presentation.Dispose();
     }
 }
