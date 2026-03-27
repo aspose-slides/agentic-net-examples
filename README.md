@@ -24,6 +24,7 @@ Examples are organized by feature category:
 - `working-with-charts/` - 330 example(s)
 - `working-with-shapes/` - 162 example(s)
 - `working-with-slides/` - 110 example(s)
+- `working-with-smartart/` - 116 example(s)
 - `working-with-tables/` - 109 example(s)
 
 Each category contains standalone `.cs` files that can be compiled and run independently.
