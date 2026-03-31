@@ -26,11 +26,12 @@ When working in this repository:
 
 ## Repository Overview
 
-This repository contains **1907** working code examples demonstrating Aspose.Slides for .NET capabilities.
+This repository contains **1940** working code examples demonstrating Aspose.Slides for .NET capabilities.
 
-**Statistics** (as of 2026-03-27):
-- Total Examples: 1907
-- Categories: 17
+**Statistics** (as of 2026-03-31):
+- Version: 26.3.0
+- Total Examples: 1940
+- Categories: 18
 
 ## Category Details
 
@@ -77,6 +78,10 @@ This repository contains **1907** working code examples demonstrating Aspose.Sli
 ### math-equations
 - Examples: 34
 - Guide: [AGENTS.md](./math-equations/AGENTS.md)
+
+### presentation-ink-objects
+- Examples: 33
+- Guide: [AGENTS.md](./presentation-ink-objects/AGENTS.md)
 
 ### vba-macros
 - Examples: 22
@@ -382,4 +387,4 @@ dotnet run
 
 
 ---
-Generated: 2026-03-27
+Generated: 2026-03-31
