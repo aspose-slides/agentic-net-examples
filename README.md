@@ -1,4 +1,5 @@
 # Aspose.Slides for .NET Examples
+        **Version**:26.3.0
 
 AI-friendly repository containing validated C# examples for Aspose.Slides for .NET API.
 
@@ -20,6 +21,7 @@ Examples are organized by feature category:
 - `manage-presentation-text/` - 141 example(s)
 - `manage-tags-and-custom-data/` - 17 example(s)
 - `math-equations/` - 34 example(s)
+- `presentation-ink-objects/` - 33 example(s)
 - `vba-macros/` - 22 example(s)
 - `working-with-charts/` - 330 example(s)
 - `working-with-shapes/` - 162 example(s)
