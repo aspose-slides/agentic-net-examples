@@ -1,5 +1,6 @@
 ---
 name: aspose-slides-examples
+version: 26.3.0
 description: AI-friendly C# code examples for Aspose.Slides for .NET
 language: csharp
 framework: net10.0
