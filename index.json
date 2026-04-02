@@ -2,11 +2,11 @@
   "product": "Aspose.Slides",
   "platform": "net",
   "framework": "net10.0",
-  "version": "26.3.0",
+  "version": "26.4.0",
   "package_version": "AUTO",
   "total_examples": 1940,
   "total_categories": 18,
-  "last_updated": "2026-03-31",
+  "last_updated": "2026-04-02",
   "categories": [
     {
       "name": "3d-presentations",
