@@ -1,76 +1,60 @@
 using System;
-using System.Drawing;
 using Aspose.Slides;
 using Aspose.Slides.Animation;
 using Aspose.Slides.Export;
+using System.Drawing;
 
 class Program
 {
     static void Main()
     {
-        try
-        {
-            string inputPath = "input.pptx";
-            string outputPath = "output.pptx";
+        // Create a new presentation
+        var pres = new Presentation();
 
-            using (Presentation presentation = new Presentation(inputPath))
-            {
-                ISlide slide = presentation.Slides[0];
-                IShape shape = slide.Shapes[0];
+        // Get the first slide
+        var slide = pres.Slides[0];
 
-                // Add a custom effect placeholder
-                IEffect effect = slide.Timeline.MainSequence.AddEffect(
-                    shape,
-                    EffectType.Custom,
-                    EffectSubtype.None,
-                    EffectTriggerType.AfterPrevious);
+        // Add a rectangle shape
+        var shape = slide.Shapes.AddAutoShape(ShapeType.Rectangle, 100, 100, 200, 100);
 
-                // Create a motion effect behavior
-                BehaviorFactory behaviorFactory = new BehaviorFactory();
-                IMotionEffect motionEffect = behaviorFactory.CreateMotionEffect();
+        // Add a custom motion path effect to the shape
+        var effect = slide.Timeline.MainSequence.AddEffect(
+            shape,
+            EffectType.PathUser,
+            EffectSubtype.None,
+            EffectTriggerType.AfterPrevious);
 
-                // Define a simple rectangular motion path
-                MotionPath motionPath = new MotionPath();
-                motionPath.Add(
-                    MotionCommandPathType.MoveTo,
-                    new PointF[] { new PointF(0, 0) },
-                    MotionPathPointsType.Auto,
-                    true);
-                motionPath.Add(
-                    MotionCommandPathType.LineTo,
-                    new PointF[] { new PointF(50, 0) },
-                    MotionPathPointsType.Auto,
-                    true);
-                motionPath.Add(
-                    MotionCommandPathType.LineTo,
-                    new PointF[] { new PointF(50, 50) },
-                    MotionPathPointsType.Auto,
-                    true);
-                motionPath.Add(
-                    MotionCommandPathType.LineTo,
-                    new PointF[] { new PointF(0, 0) },
-                    MotionPathPointsType.Auto,
-                    true);
-                motionPath.Add(
-                    MotionCommandPathType.End,
-                    null,
-                    MotionPathPointsType.Auto,
-                    true);
+        // Set animation duration to 3 seconds (assuming seconds)
+        effect.Timing.Duration = 3.0f;
 
-                // Assign the path to the motion effect
-                motionEffect.Path = motionPath;
-                motionEffect.PathEditMode = MotionPathEditMode.Relative;
+        // Get the motion effect behavior
+        var motionEffect = (IMotionEffect)effect.Behaviors[0];
 
-                // Attach the motion behavior to the effect
-                effect.Behaviors.Add(motionEffect);
+        // Define points for the custom motion path
+        PointF[] pts = new PointF[1];
 
-                // Save the modified presentation
-                presentation.Save(outputPath, SaveFormat.Pptx);
-            }
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine("Error: " + ex.Message);
-        }
+        // Move to start point (0,0)
+        pts[0] = new PointF(0, 0);
+        motionEffect.Path.Add(MotionCommandPathType.MoveTo, pts, MotionPathPointsType.Auto, true);
+
+        // Line to (100,0)
+        pts[0] = new PointF(100, 0);
+        motionEffect.Path.Add(MotionCommandPathType.LineTo, pts, MotionPathPointsType.Auto, true);
+
+        // Line to (100,100)
+        pts[0] = new PointF(100, 100);
+        motionEffect.Path.Add(MotionCommandPathType.LineTo, pts, MotionPathPointsType.Auto, true);
+
+        // Line to (0,100)
+        pts[0] = new PointF(0, 100);
+        motionEffect.Path.Add(MotionCommandPathType.LineTo, pts, MotionPathPointsType.Auto, true);
+
+        // End of path
+        motionEffect.Path.Add(MotionCommandPathType.End, null, MotionPathPointsType.Auto, true);
+
+        // Save the presentation
+        string outPath = System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory(), "CustomMotionPath.pptx");
+        pres.Save(outPath, SaveFormat.Pptx);
+        pres.Dispose();
     }
 }
