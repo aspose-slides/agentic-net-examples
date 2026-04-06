@@ -20,41 +20,59 @@ working within the **animations** category.
 
 ## Required Namespaces
 
-- `using System;` (19/19 files)
-- `using Aspose.Slides.Export;` (19/19 files)
-- `using Aspose.Slides;` (17/19 files)
-- `using Aspose.Slides.Animation;` (14/19 files)
-- `using System.Drawing;` (2/19 files)
-- `using Aspose.Slides.Util;` (2/19 files)
-- `using System.IO;` (1/19 files)
+- `using System;` (34/34 files)
+- `using Aspose.Slides.Export;` (34/34 files)
+- `using Aspose.Slides;` (30/34 files)
+- `using System.IO;` (29/34 files)
+- `using Aspose.Slides.Animation;` (23/34 files)
+- `using System.Drawing;` (3/34 files)
+- `using Aspose.Slides.Charts;` (1/34 files)
+- `using System.Collections.Generic;` (1/34 files)
+- `using System.Text.Json;` (1/34 files)
+- `using System.Xml.Linq;` (1/34 files)
 
 ## Files in this folder
 
 | File | Key APIs | Description |
 |------|----------|-------------|
-| [Add-entrance-animations-to-all-shapes-PPTX](./Add-entrance-animations-to-all-shapes-PPTX.cs) |  | Add entrance animations to all shapes PPTX |
-| [Apply-custom-motion-path-to-shape-PPTX](./Apply-custom-motion-path-to-shape-PPTX.cs) |  | Apply custom motion path to shape PPTX |
-| [Capture-animation-sequence-and-export-PDF](./Capture-animation-sequence-and-export-PDF.cs) |  | Capture animation sequence and export PDF |
-| [Configure-animation-timing-for-PPTX](./Configure-animation-timing-for-PPTX.cs) |  | Configure animation timing for PPTX |
-| [Convert-PPTX-with-animations-into-PDF](./Convert-PPTX-with-animations-into-PDF.cs) |  | Convert PPTX with animations into PDF |
-| [Delete-animation-from-target-shape-PPTX](./Delete-animation-from-target-shape-PPTX.cs) |  | Delete animation from target shape PPTX |
-| [Export-animated-PPTX-slides-to-HTML](./Export-animated-PPTX-slides-to-HTML.cs) |  | Export animated PPTX slides to HTML |
-| [Export-PPTX-with-animations-to-PDF](./Export-PPTX-with-animations-to-PDF.cs) |  | Export PPTX with animations to PDF |
-| [Insert-motion-path-to-new-slide-PPTX](./Insert-motion-path-to-new-slide-PPTX.cs) |  | Insert motion path to new slide PPTX |
-| [List-all-animation-types-in-PPTX](./List-all-animation-types-in-PPTX.cs) |  | List all animation types in PPTX |
-| [List-animation-effects-on-slide-PPTX](./List-animation-effects-on-slide-PPTX.cs) |  | List animation effects on slide PPTX |
-| [Load-PPTX-apply-animations-and-export-PDF](./Load-PPTX-apply-animations-and-export-PDF.cs) |  | Load PPTX apply animations and export PDF |
-| [Load-PPTX-reorder-slide-animations](./Load-PPTX-reorder-slide-animations.cs) |  | Load PPTX reorder slide animations |
-| [Load-PPTX-strip-animations-from-slide](./Load-PPTX-strip-animations-from-slide.cs) |  | Load PPTX strip animations from slide |
-| [Remove-animations-from-PPTX-slides](./Remove-animations-from-PPTX-slides.cs) |  | Remove animations from PPTX slides |
-| [Remove-specific-animation-from-shape-PPTX](./Remove-specific-animation-from-shape-PPTX.cs) |  | Remove specific animation from shape PPTX |
-| [Set-animation-duration-and-delay-PPTX](./Set-animation-duration-and-delay-PPTX.cs) |  | Set animation duration and delay PPTX |
-| [Summarize-animation-effects-on-new-slide-PPTX](./Summarize-animation-effects-on-new-slide-PPTX.cs) |  | Summarize animation effects on new slide PPTX |
-| [Update-animation-effects-on-slide-PPTX](./Update-animation-effects-on-slide-PPTX.cs) |  | Update animation effects on slide PPTX |
+| [Add-animation-timing-to-PDF-metadata](./Add-animation-timing-to-PDF-metadata.cs) |  | Add animation timing to PDF metadata |
+| [Add-click-reveal-bullet-points-animation](./Add-click-reveal-bullet-points-animation.cs) |  | Add click reveal bullet points animation |
+| [Add-color-change-animation-sync-sound](./Add-color-change-animation-sync-sound.cs) |  | Add color change animation sync sound |
+| [Add-custom-bezier-motion-path-animation](./Add-custom-bezier-motion-path-animation.cs) |  | Add custom bezier motion path animation |
+| [Add-custom-motion-path-and-set-duration](./Add-custom-motion-path-and-set-duration.cs) |  | Add custom motion path and set duration |
+| [Add-fade-in-animation-to-title-placeholders](./Add-fade-in-animation-to-title-placeholders.cs) |  | Add fade in animation to title placeholders |
+| [Add-fade-out-animation-to-images](./Add-fade-out-animation-to-images.cs) |  | Add fade out animation to images |
+| [Add-fade-spin-animation-to-chart](./Add-fade-spin-animation-to-chart.cs) |  | Add fade spin animation to chart |
+| [Add-slide-transitions-trigger-animations](./Add-slide-transitions-trigger-animations.cs) |  | Add slide transitions trigger animations |
+| [Add-zoom-rotate-animation-preset](./Add-zoom-rotate-animation-preset.cs) |  | Add zoom rotate animation preset |
+| [Copy-animations-from-one-slide-to-another](./Copy-animations-from-one-slide-to-another.cs) |  | Copy animations from one slide to another |
+| [Create-three-slide-presentation-with-entrance-animations](./Create-three-slide-presentation-with-entrance-animations.cs) |  | Create three slide presentation with entrance animations |
+| [Create-thumbnail-at-animation-start](./Create-thumbnail-at-animation-start.cs) |  | Create thumbnail at animation start |
+| [Detect-unsupported-animation-effects-for-legacy-PPTX](./Detect-unsupported-animation-effects-for-legacy-PPTX.cs) |  | Detect unsupported animation effects for legacy PPTX |
+| [Disable-all-animations-for-faster-transitions](./Disable-all-animations-for-faster-transitions.cs) |  | Disable all animations for faster transitions |
+| [Export-animation-timeline-to-CSV](./Export-animation-timeline-to-CSV.cs) |  | Export animation timeline to CSV |
+| [Export-presentation-to-MP4-with-animations](./Export-presentation-to-MP4-with-animations.cs) |  | Export presentation to MP4 with animations |
+| [Export-slide-animation-timeline-to-JSON](./Export-slide-animation-timeline-to-JSON.cs) |  | Export slide animation timeline to JSON |
+| [Generate-HTML-preview-with-replay-controls](./Generate-HTML-preview-with-replay-controls.cs) |  | Generate HTML preview with replay controls |
+| [Increase-animation-speed-by-fifty-percent](./Increase-animation-speed-by-fifty-percent.cs) |  | Increase animation speed by fifty percent |
+| [Load-animation-settings-from-XML-and-apply](./Load-animation-settings-from-XML-and-apply.cs) |  | Load animation settings from XML and apply |
+| [Log-animation-types-and-shape-names](./Log-animation-types-and-shape-names.cs) |  | Log animation types and shape names |
+| [Merge-presentations-preserve-all-animations](./Merge-presentations-preserve-all-animations.cs) |  | Merge presentations preserve all animations |
+| [Pause-animations-after-each-step-until-click](./Pause-animations-after-each-step-until-click.cs) |  | Pause animations after each step until click |
+| [Remove-exit-animations-keep-entrance-effects](./Remove-exit-animations-keep-entrance-effects.cs) |  | Remove exit animations keep entrance effects |
+| [Render-slide-frames-to-PNG](./Render-slide-frames-to-PNG.cs) |  | Render slide frames to PNG |
+| [Reorder-animations-according-to-shape-zorder](./Reorder-animations-according-to-shape-zorder.cs) |  | Reorder animations according to shape zorder |
+| [Replace-picture-fill-animation-with-wipe](./Replace-picture-fill-animation-with-wipe.cs) |  | Replace picture fill animation with wipe |
+| [Set-click-trigger-for-shape-animation](./Set-click-trigger-for-shape-animation.cs) |  | Set click trigger for shape animation |
+| [Set-easing-curve-for-animation-acceleration](./Set-easing-curve-for-animation-acceleration.cs) |  | Set easing curve for animation acceleration |
+| [Set-entrance-animation-delay-two-seconds](./Set-entrance-animation-delay-two-seconds.cs) |  | Set entrance animation delay two seconds |
+| [Set-looping-background-video-animation-infinite](./Set-looping-background-video-animation-infinite.cs) |  | Set looping background video animation infinite |
+| [Sync-animations-across-multiple-slides](./Sync-animations-across-multiple-slides.cs) |  | Sync animations across multiple slides |
+| [Validate-animations-for-PPTX-2016-compatibility](./Validate-animations-for-PPTX-2016-compatibility.cs) |  | Validate animations for PPTX 2016 compatibility |
 
 ## Category Statistics
 
-- Total examples: 19
+- Total examples: 34
 
 ## Key API Surface
 
@@ -64,15 +82,15 @@ working within the **animations** category.
 - `Aspose.Slides.Animation`
 - `Aspose.Slides.Export.SaveFormat.Pptx`
 - `Aspose.Slides.ISlide`
-- `Aspose.Slides.Animation.ISequence`
-- `Aspose.Slides.IAutoShape`
-- `Aspose.Slides.Animation.EffectSubtype.None`
-- `Aspose.Slides.Export.PdfOptions`
 - `Aspose.Slides.Animation.IEffect`
-- `Aspose.Slides.Animation.EffectType.Fade`
+- `Aspose.Slides.Animation.EffectSubtype.None`
+- `Aspose.Slides.ShapeType.Rectangle`
+- `Aspose.Slides.Paragraph`
 - `Aspose.Slides.Animation.EffectTriggerType.AfterPrevious`
-- `Aspose.Slides.Animation.MotionPathPointsType.Auto`
-- `Aspose.Slides.IShape`
+- `Aspose.Slides.Export.PresentationAnimationsGenerator`
+- `Aspose.Slides.Animation.EffectType`
+- `Aspose.Slides.IAutoShape`
+- `Aspose.Slides.Animation.EffectTriggerType.OnClick`
 
 ## Common Code Pattern
 
@@ -93,5 +111,5 @@ using (Presentation pres = new Presentation("input.pptx"))
 - Save the presentation using `Presentation.Save(...)`.
 
 <!-- AUTOGENERATED:START -->
-Updated: 2026-03-20
+Updated: 2026-04-06
 <!-- AUTOGENERATED:END -->
