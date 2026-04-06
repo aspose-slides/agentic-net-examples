@@ -20,45 +20,151 @@ working within the **comments-and-notes** category.
 
 ## Required Namespaces
 
-- `using Aspose.Slides.Export;` (23/23 files)
-- `using System;` (22/23 files)
-- `using Aspose.Slides;` (21/23 files)
-- `using System.Drawing;` (1/23 files)
-- `using System.Collections.Generic;` (1/23 files)
-- `using System.IO;` (1/23 files)
-- `using System.Text;` (1/23 files)
+- `using System;` (118/118 files)
+- `using Aspose.Slides.Export;` (118/118 files)
+- `using Aspose.Slides;` (108/118 files)
+- `using System.IO;` (107/118 files)
+- `using System.Drawing;` (29/118 files)
+- `using System.Collections.Generic;` (16/118 files)
+- `using System.Text.Json;` (5/118 files)
+- `using System.Text;` (5/118 files)
+- `using System.Threading.Tasks;` (4/118 files)
+- `using System.Net.Http;` (3/118 files)
+- `using System.Threading;` (3/118 files)
+- `using System.Text.RegularExpressions;` (2/118 files)
+- `using System.Xml.Linq;` (2/118 files)
+- `using System.Net;` (2/118 files)
+- `using Aspose.Slides.AI;` (2/118 files)
+- `using Aspose.Slides.Util;` (1/118 files)
+- `using System.Diagnostics;` (1/118 files)
+- `using System.Net.WebSockets;` (1/118 files)
 
 ## Files in this folder
 
 | File | Key APIs | Description |
 |------|----------|-------------|
-| [Add-comment-to-PPTX-slide-with-author](./Add-comment-to-PPTX-slide-with-author.cs) |  | Add comment to PPTX slide with author |
-| [Clear-all-comments-from-PPTX-presentation](./Clear-all-comments-from-PPTX-presentation.cs) |  | Clear all comments from PPTX presentation |
-| [Delete-comment-from-PPTX-slide](./Delete-comment-from-PPTX-slide.cs) |  | Delete comment from PPTX slide |
-| [Delete-selected-comments-from-PPTX-presentation](./Delete-selected-comments-from-PPTX-presentation.cs) |  | Delete selected comments from PPTX presentation |
-| [Delete-speaker-notes-from-PPTX-slide](./Delete-speaker-notes-from-PPTX-slide.cs) |  | Delete speaker notes from PPTX slide |
-| [Delete-specific-comment-from-PPTX-slide](./Delete-specific-comment-from-PPTX-slide.cs) |  | Delete specific comment from PPTX slide |
-| [Discard-comment-from-PPTX-slide](./Discard-comment-from-PPTX-slide.cs) |  | Discard comment from PPTX slide |
-| [Erase-comment-from-PPTX-slide](./Erase-comment-from-PPTX-slide.cs) |  | Erase comment from PPTX slide |
-| [Export-presentation-with-comments-to-PPTX](./Export-presentation-with-comments-to-PPTX.cs) |  | Export presentation with comments to PPTX |
-| [Export-presentation-with-notes-to-PPTX](./Export-presentation-with-notes-to-PPTX.cs) |  | Export presentation with notes to PPTX |
-| [Extract-comment-data-from-PPTX-presentation](./Extract-comment-data-from-PPTX-presentation.cs) |  | Extract comment data from PPTX presentation |
-| [Extract-notes-from-PPTX-slide](./Extract-notes-from-PPTX-slide.cs) |  | Extract notes from PPTX slide |
-| [Generate-consolidated-notes-overview-from-PPTX](./Generate-consolidated-notes-overview-from-PPTX.cs) |  | Generate consolidated notes overview from PPTX |
-| [Get-comment-authors-from-PPTX-presentation](./Get-comment-authors-from-PPTX-presentation.cs) |  | Get comment authors from PPTX presentation |
-| [Insert-speaker-notes-into-PPTX-slide](./Insert-speaker-notes-into-PPTX-slide.cs) |  | Insert speaker notes into PPTX slide |
-| [List-all-comments-from-PPTX-presentation](./List-all-comments-from-PPTX-presentation.cs) |  | List all comments from PPTX presentation |
-| [Purge-speaker-notes-from-PPTX-slide](./Purge-speaker-notes-from-PPTX-slide.cs) |  | Purge speaker notes from PPTX slide |
-| [Remove-all-speaker-notes-from-PPTX-slide](./Remove-all-speaker-notes-from-PPTX-slide.cs) |  | Remove all speaker notes from PPTX slide |
-| [Remove-comments-from-PPTX-presentation](./Remove-comments-from-PPTX-presentation.cs) |  | Remove comments from PPTX presentation |
-| [Set-notes-slide-to-null-in-PPTX](./Set-notes-slide-to-null-in-PPTX.cs) |  | Set notes slide to null in PPTX |
-| [Strip-notes-from-PPTX-slide-preserving-layout](./Strip-notes-from-PPTX-slide-preserving-layout.cs) |  | Strip notes from PPTX slide preserving layout |
-| [Update-comment-content-in-PPTX-presentation](./Update-comment-content-in-PPTX-presentation.cs) |  | Update comment content in PPTX presentation |
-| [Update-notes-content-in-PPTX-slide](./Update-notes-content-in-PPTX-slide.cs) |  | Update notes content in PPTX slide |
+| [Add-page-numbers-to-PDF-note-pages](./Add-page-numbers-to-PDF-note-pages.cs) |  | Add page numbers to PDF note pages |
+| [Add-PPTX-slide-comment-with-metadata](./Add-PPTX-slide-comment-with-metadata.cs) |  | Add PPTX slide comment with metadata |
+| [Add-regulatory-compliance-tag-to-PPTX-comments](./Add-regulatory-compliance-tag-to-PPTX-comments.cs) |  | Add regulatory compliance tag to PPTX comments |
+| [Add-review-timestamp-to-PPTX-notes](./Add-review-timestamp-to-PPTX-notes.cs) |  | Add review timestamp to PPTX notes |
+| [Add-speaker-note-to-title-slide](./Add-speaker-note-to-title-slide.cs) |  | Add speaker note to title slide |
+| [Add-standard-disclaimer-to-PPTX-slide-comments](./Add-standard-disclaimer-to-PPTX-slide-comments.cs) |  | Add standard disclaimer to PPTX slide comments |
+| [Add-watermark-to-PDF-note-pages](./Add-watermark-to-PDF-note-pages.cs) |  | Add watermark to PDF note pages |
+| [Analyze-sentiment-of-PPTX-slide-comments](./Analyze-sentiment-of-PPTX-slide-comments.cs) |  | Analyze sentiment of PPTX slide comments |
+| [Append-timestamp-to-PPTX-slide-notes](./Append-timestamp-to-PPTX-slide-notes.cs) |  | Append timestamp to PPTX slide notes |
+| [Apply-conditional-formatting-to-PPTX-notes](./Apply-conditional-formatting-to-PPTX-notes.cs) |  | Apply conditional formatting to PPTX notes |
+| [Apply-custom-font-to-PPTX-slide-comment](./Apply-custom-font-to-PPTX-slide-comment.cs) |  | Apply custom font to PPTX slide comment |
+| [Apply-custom-icon-to-PPTX-slide-comments](./Apply-custom-icon-to-PPTX-slide-comments.cs) |  | Apply custom icon to PPTX slide comments |
+| [Apply-drop-shadow-to-PPTX-comment-callouts](./Apply-drop-shadow-to-PPTX-comment-callouts.cs) |  | Apply drop shadow to PPTX comment callouts |
+| [Apply-grayscale-filter-to-PDF-note-images](./Apply-grayscale-filter-to-PDF-note-images.cs) |  | Apply grayscale filter to PDF note images |
+| [Apply-text-wrapping-to-PPTX-slide-comments](./Apply-text-wrapping-to-PPTX-slide-comments.cs) |  | Apply text wrapping to PPTX slide comments |
+| [Assign-unique-id-to-PPTX-comment](./Assign-unique-id-to-PPTX-comment.cs) |  | Assign unique id to PPTX comment |
+| [Combine-PPTX-slide-notes-into-PDF](./Combine-PPTX-slide-notes-into-PDF.cs) |  | Combine PPTX slide notes into PDF |
+| [Compare-PPTX-comments-between-revisions](./Compare-PPTX-comments-between-revisions.cs) |  | Compare PPTX comments between revisions |
+| [Compare-PPTX-notes-between-versions](./Compare-PPTX-notes-between-versions.cs) |  | Compare PPTX notes between versions |
+| [Copy-PPTX-slide-comments-with-metadata](./Copy-PPTX-slide-comments-with-metadata.cs) |  | Copy PPTX slide comments with metadata |
+| [Create-audit-log-for-PPTX-comment-changes](./Create-audit-log-for-PPTX-comment-changes.cs) |  | Create audit log for PPTX comment changes |
+| [Create-comment-density-heatmap-dashboard](./Create-comment-density-heatmap-dashboard.cs) |  | Create comment density heatmap dashboard |
+| [Create-pivot-table-of-comment-counts](./Create-pivot-table-of-comment-counts.cs) |  | Create pivot table of comment counts |
+| [Create-PPTX-notes-layout-with-header-footer](./Create-PPTX-notes-layout-with-header-footer.cs) |  | Create PPTX notes layout with header footer |
+| [Create-PPTX-template-with-standard-comments](./Create-PPTX-template-with-standard-comments.cs) |  | Create PPTX template with standard comments |
+| [Create-printable-booklet-of-PPTX-notes](./Create-printable-booklet-of-PPTX-notes.cs) |  | Create printable booklet of PPTX notes |
+| [Create-table-of-contents-slide-from-notes](./Create-table-of-contents-slide-from-notes.cs) |  | Create table of contents slide from notes |
+| [Decrypt-PPTX-slide-comments-after-loading](./Decrypt-PPTX-slide-comments-after-loading.cs) |  | Decrypt PPTX slide comments after loading |
+| [Deserialize-PPTX-slide-comments-from-binary](./Deserialize-PPTX-slide-comments-from-binary.cs) |  | Deserialize PPTX slide comments from binary |
+| [Detect-and-merge-consecutive-duplicate-PPTX-notes](./Detect-and-merge-consecutive-duplicate-PPTX-notes.cs) |  | Detect and merge consecutive duplicate PPTX notes |
+| [Detect-and-remove-consecutive-duplicate-PPTX-notes](./Detect-and-remove-consecutive-duplicate-PPTX-notes.cs) |  | Detect and remove consecutive duplicate PPTX notes |
+| [Detect-overlong-notes-in-PPTX-before-publishing](./Detect-overlong-notes-in-PPTX-before-publishing.cs) |  | Detect overlong notes in PPTX before publishing |
+| [Duplicate-PPTX-slide-with-comments-and-notes](./Duplicate-PPTX-slide-with-comments-and-notes.cs) |  | Duplicate PPTX slide with comments and notes |
+| [Embed-slide-notes-as-hidden-metadata](./Embed-slide-notes-as-hidden-metadata.cs) |  | Embed slide notes as hidden metadata |
+| [Enable-readonly-mode-for-PPTX-comments](./Enable-readonly-mode-for-PPTX-comments.cs) |  | Enable readonly mode for PPTX comments |
+| [Encrypt-PPTX-slide-comments-before-save](./Encrypt-PPTX-slide-comments-before-save.cs) |  | Encrypt PPTX slide comments before save |
+| [Export-combined-comments-notes-to-PDF-pagebreaks](./Export-combined-comments-notes-to-PDF-pagebreaks.cs) |  | Export combined comments notes to PDF pagebreaks |
+| [Export-comment-threads-to-hierarchical-JSON](./Export-comment-threads-to-hierarchical-JSON.cs) |  | Export comment threads to hierarchical JSON |
+| [Export-notes-to-latex-document](./Export-notes-to-latex-document.cs) |  | Export notes to latex document |
+| [Export-PPTX-comments-by-date-to-csv](./Export-PPTX-comments-by-date-to-csv.cs) |  | Export PPTX comments by date to csv |
+| [Export-PPTX-comments-to-markdown](./Export-PPTX-comments-to-markdown.cs) |  | Export PPTX comments to markdown |
+| [Export-PPTX-comments-to-sharepoint-list](./Export-PPTX-comments-to-sharepoint-list.cs) |  | Export PPTX comments to sharepoint list |
+| [Export-PPTX-notes-to-concatenated-HTML](./Export-PPTX-notes-to-concatenated-HTML.cs) |  | Export PPTX notes to concatenated HTML |
+| [Export-PPTX-notes-to-CSV-with-authors](./Export-PPTX-notes-to-CSV-with-authors.cs) |  | Export PPTX notes to CSV with authors |
+| [Export-PPTX-notes-to-handout-view](./Export-PPTX-notes-to-handout-view.cs) |  | Export PPTX notes to handout view |
+| [Export-PPTX-slide-comments-grouped-by-slide](./Export-PPTX-slide-comments-grouped-by-slide.cs) |  | Export PPTX slide comments grouped by slide |
+| [Export-PPTX-slide-comments-to-json](./Export-PPTX-slide-comments-to-json.cs) |  | Export PPTX slide comments to json |
+| [Export-PPTX-slide-notes-to-HTML](./Export-PPTX-slide-notes-to-HTML.cs) |  | Export PPTX slide notes to HTML |
+| [Export-PPTX-slide-notes-to-markdown](./Export-PPTX-slide-notes-to-markdown.cs) |  | Export PPTX slide notes to markdown |
+| [Export-PPTX-slide-notes-to-PDF](./Export-PPTX-slide-notes-to-PDF.cs) |  | Export PPTX slide notes to PDF |
+| [Export-PPTX-slide-notes-to-RTF](./Export-PPTX-slide-notes-to-RTF.cs) |  | Export PPTX slide notes to RTF |
+| [Export-PPTX-slide-notes-to-txt](./Export-PPTX-slide-notes-to-txt.cs) |  | Export PPTX slide notes to txt |
+| [Export-slide-notes-to-JSON-file](./Export-slide-notes-to-JSON-file.cs) |  | Export slide notes to JSON file |
+| [Extract-hidden-slide-notes-to-encrypted-archive](./Extract-hidden-slide-notes-to-encrypted-archive.cs) |  | Extract hidden slide notes to encrypted archive |
+| [Extract-note-urls-to-verification-list](./Extract-note-urls-to-verification-list.cs) |  | Extract note urls to verification list |
+| [Filter-confidential-keywords-from-note-exports](./Filter-confidential-keywords-from-note-exports.cs) |  | Filter confidential keywords from note exports |
+| [Filter-high-priority-PPTX-slide-comments-report](./Filter-high-priority-PPTX-slide-comments-report.cs) |  | Filter high priority PPTX slide comments report |
+| [Filter-notes-by-custom-tag-and-report](./Filter-notes-by-custom-tag-and-report.cs) |  | Filter notes by custom tag and report |
+| [Find-PPTX-slide-notes-by-phrase](./Find-PPTX-slide-notes-by-phrase.cs) |  | Find PPTX slide notes by phrase |
+| [Generate-PPTX-slide-notes-summary-report](./Generate-PPTX-slide-notes-summary-report.cs) |  | Generate PPTX slide notes summary report |
+| [Generate-speaker-notes-from-slide-titles](./Generate-speaker-notes-from-slide-titles.cs) |  | Generate speaker notes from slide titles |
+| [Handle-comment-added-or-modified-events](./Handle-comment-added-or-modified-events.cs) |  | Handle comment added or modified events |
+| [Hide-PPTX-confidential-slide-comments-on-export](./Hide-PPTX-confidential-slide-comments-on-export.cs) |  | Hide PPTX confidential slide comments on export |
+| [Hide-PPTX-draft-slide-comments](./Hide-PPTX-draft-slide-comments.cs) |  | Hide PPTX draft slide comments |
+| [Import-markdown-comments-to-PPTX-slides](./Import-markdown-comments-to-PPTX-slides.cs) |  | Import markdown comments to PPTX slides |
+| [Import-PPTX-slide-comments-from-XML](./Import-PPTX-slide-comments-from-XML.cs) |  | Import PPTX slide comments from XML |
+| [Import-sharepoint-comments-to-PPTX-slides](./Import-sharepoint-comments-to-PPTX-slides.cs) |  | Import sharepoint comments to PPTX slides |
+| [Limit-comment-reply-depth-to-three-levels](./Limit-comment-reply-depth-to-three-levels.cs) |  | Limit comment reply depth to three levels |
+| [List-pptx-slide-comments-and-notes](./List-pptx-slide-comments-and-notes.cs) |  | List pptx slide comments and notes |
+| [List-pptx-slide-comments-to-console](./List-pptx-slide-comments-to-console.cs) |  | List pptx slide comments to console |
+| [Load-CSV-notes-into-PPTX-slides](./Load-CSV-notes-into-PPTX-slides.cs) |  | Load CSV notes into PPTX slides |
+| [Load-HTML-notes-into-PPTX-slides](./Load-HTML-notes-into-PPTX-slides.cs) |  | Load HTML notes into PPTX slides |
+| [Load-PPTX-from-memory-extract-comments](./Load-PPTX-from-memory-extract-comments.cs) |  | Load PPTX from memory extract comments |
+| [Load-PPTX-from-URL-extract-comments-notes](./Load-PPTX-from-URL-extract-comments-notes.cs) |  | Load PPTX from URL extract comments notes |
+| [Load-PPTX-presentation-with-encrypted-comments](./Load-PPTX-presentation-with-encrypted-comments.cs) |  | Load PPTX presentation with encrypted comments |
+| [Load-RTF-notes-into-PPTX-slides](./Load-RTF-notes-into-PPTX-slides.cs) |  | Load RTF notes into PPTX slides |
+| [Lock-PPTX-slide-comments-on-finalized-slides](./Lock-PPTX-slide-comments-on-finalized-slides.cs) |  | Lock PPTX slide comments on finalized slides |
+| [Log-detailed-exception-for-PPTX-comment-failure](./Log-detailed-exception-for-PPTX-comment-failure.cs) |  | Log detailed exception for PPTX comment failure |
+| [Merge-PPTX-notes-into-single-presentation](./Merge-PPTX-notes-into-single-presentation.cs) |  | Merge PPTX notes into single presentation |
+| [Merge-PPTX-presentations-resolve-duplicate-comments](./Merge-PPTX-presentations-resolve-duplicate-comments.cs) |  | Merge PPTX presentations resolve duplicate comments |
+| [Parallelize-PPTX-slide-comment-processing](./Parallelize-PPTX-slide-comment-processing.cs) |  | Parallelize PPTX slide comment processing |
+| [Print-PPTX-notes-only-on-handouts](./Print-PPTX-notes-only-on-handouts.cs) |  | Print PPTX notes only on handouts |
+| [Profile-memory-usage-while-loading-PPTX-notes](./Profile-memory-usage-while-loading-PPTX-notes.cs) |  | Profile memory usage while loading PPTX notes |
+| [Remove-empty-comments-and-notes-from-PPTX](./Remove-empty-comments-and-notes-from-PPTX.cs) |  | Remove empty comments and notes from PPTX |
+| [Remove-PPTX-slide-comments-by-user](./Remove-PPTX-slide-comments-by-user.cs) |  | Remove PPTX slide comments by user |
+| [Remove-PPTX-slide-notes-from-section](./Remove-PPTX-slide-notes-from-section.cs) |  | Remove PPTX slide notes from section |
+| [Rename-comment-authors-using-mapping-file](./Rename-comment-authors-using-mapping-file.cs) |  | Rename comment authors using mapping file |
+| [Render-note-previews-to-HTML-snippets](./Render-note-previews-to-HTML-snippets.cs) |  | Render note previews to HTML snippets |
+| [Render-PPTX-slide-notes-to-PNG](./Render-PPTX-slide-notes-to-PNG.cs) |  | Render PPTX slide notes to PNG |
+| [Replace-deprecated-term-in-PPTX-comments](./Replace-deprecated-term-in-PPTX-comments.cs) |  | Replace deprecated term in PPTX comments |
+| [Retry-load-PPTX-notes-from-corrupted-file](./Retry-load-PPTX-notes-from-corrupted-file.cs) |  | Retry load PPTX notes from corrupted file |
+| [Schedule-PPTX-comments-backup-to-cloud](./Schedule-PPTX-comments-backup-to-cloud.cs) |  | Schedule PPTX comments backup to cloud |
+| [Search-PPTX-slide-comments-and-highlight](./Search-PPTX-slide-comments-and-highlight.cs) |  | Search PPTX slide comments and highlight |
+| [Serialize-PPTX-slide-comments-to-binary](./Serialize-PPTX-slide-comments-to-binary.cs) |  | Serialize PPTX slide comments to binary |
+| [Serialize-PPTX-slide-comments-to-XML](./Serialize-PPTX-slide-comments-to-XML.cs) |  | Serialize PPTX slide comments to XML |
+| [Set-custom-line-height-for-PPTX-notes](./Set-custom-line-height-for-PPTX-notes.cs) |  | Set custom line height for PPTX notes |
+| [Set-custom-margins-for-PDF-note-pages](./Set-custom-margins-for-PDF-note-pages.cs) |  | Set custom margins for PDF note pages |
+| [Set-paragraph-spacing-for-PPTX-slide-notes](./Set-paragraph-spacing-for-PPTX-slide-notes.cs) |  | Set paragraph spacing for PPTX slide notes |
+| [Set-PPTX-notes-background-color](./Set-PPTX-notes-background-color.cs) |  | Set PPTX notes background color |
+| [Show-comment-author-avatars-in-overlay](./Show-comment-author-avatars-in-overlay.cs) |  | Show comment author avatars in overlay |
+| [Summarize-PPTX-slide-comment-authors-count](./Summarize-PPTX-slide-comment-authors-count.cs) |  | Summarize PPTX slide comment authors count |
+| [Summarize-PPTX-slide-comments-with-nlp](./Summarize-PPTX-slide-comments-with-nlp.cs) |  | Summarize PPTX slide comments with nlp |
+| [Sync-comment-edits-in-real-time-websocket](./Sync-comment-edits-in-real-time-websocket.cs) |  | Sync comment edits in real time websocket |
+| [Sync-PPTX-comment-timestamps-with-server](./Sync-PPTX-comment-timestamps-with-server.cs) |  | Sync PPTX comment timestamps with server |
+| [Sync-PPTX-slide-notes-with-cloud-storage](./Sync-PPTX-slide-notes-with-cloud-storage.cs) |  | Sync PPTX slide notes with cloud storage |
+| [Tag-PPTX-slide-comments-with-keywords](./Tag-PPTX-slide-comments-with-keywords.cs) |  | Tag PPTX slide comments with keywords |
+| [Throttle-PPTX-comment-processing-to-prevent-freezes](./Throttle-PPTX-comment-processing-to-prevent-freezes.cs) |  | Throttle PPTX comment processing to prevent freezes |
+| [Track-PPTX-slide-comment-processing-progress](./Track-PPTX-slide-comment-processing-progress.cs) |  | Track PPTX slide comment processing progress |
+| [Translate-PPTX-slide-comments-to-target-language](./Translate-PPTX-slide-comments-to-target-language.cs) |  | Translate PPTX slide comments to target language |
+| [Translate-PPTX-slide-notes-to-french](./Translate-PPTX-slide-notes-to-french.cs) |  | Translate PPTX slide notes to french |
+| [Update-PPTX-slide-comment-text-from-input](./Update-PPTX-slide-comment-text-from-input.cs) |  | Update PPTX slide comment text from input |
+| [Validate-comment-text-for-prohibited-characters](./Validate-comment-text-for-prohibited-characters.cs) |  | Validate comment text for prohibited characters |
+| [Validate-note-bullet-points-before-slide-transition](./Validate-note-bullet-points-before-slide-transition.cs) |  | Validate note bullet points before slide transition |
+| [Validate-note-fonts-against-corporate-style](./Validate-note-fonts-against-corporate-style.cs) |  | Validate note fonts against corporate style |
+| [Validate-note-hyperlinks-before-export](./Validate-note-hyperlinks-before-export.cs) |  | Validate note hyperlinks before export |
+| [Validate-PPTX-comment-add-delete-retrieve](./Validate-PPTX-comment-add-delete-retrieve.cs) |  | Validate PPTX comment add delete retrieve |
+| [Validate-PPTX-slide-comments-before-publishing](./Validate-PPTX-slide-comments-before-publishing.cs) |  | Validate PPTX slide comments before publishing |
+| [Validate-PPTX-slide-note-length](./Validate-PPTX-slide-note-length.cs) |  | Validate PPTX slide note length |
 
 ## Category Statistics
 
-- Total examples: 23
+- Total examples: 118
 
 ## Key API Surface
 
@@ -67,13 +173,16 @@ working within the **comments-and-notes** category.
 - `Aspose.Slides`
 - `Aspose.Slides.Export.SaveFormat.Pptx`
 - `Aspose.Slides.IComment`
-- `Aspose.Slides.ICommentAuthor`
-- `Aspose.Slides.INotesSlideManager`
 - `Aspose.Slides.ISlide`
+- `Aspose.Slides.ICommentAuthor`
 - `Aspose.Slides.CommentAuthor`
-- `Aspose.Slides.Comment`
-- `Aspose.Slides.ICommentCollection`
+- `Aspose.Slides.PptxUnsupportedFormatException`
 - `Aspose.Slides.INotesSlide`
+- `Aspose.Slides.Comment`
+- `Aspose.Slides.INotesSlideManager`
+- `Aspose.Slides.PptUnsupportedFormatException`
+- `Aspose.Slides.Export.PdfOptions`
+- `Aspose.Slides.IModernComment`
 
 ## Common Code Pattern
 
@@ -94,5 +203,5 @@ using (Presentation pres = new Presentation("input.pptx"))
 - Save the presentation using `Presentation.Save(...)`.
 
 <!-- AUTOGENERATED:START -->
-Updated: 2026-03-20
+Updated: 2026-04-06
 <!-- AUTOGENERATED:END -->
