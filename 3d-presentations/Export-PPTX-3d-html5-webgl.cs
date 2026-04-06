@@ -1,0 +1,66 @@
+using System;
+using System.IO;
+using Aspose.Slides;
+using Aspose.Slides.Export;
+
+namespace Html5ExportExample
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Input and output paths
+            string inputPath = "input.pptx";
+            string outputDirectory = "output";
+            string outputHtmlPath = Path.Combine(outputDirectory, "presentation.html");
+
+            // Verify input file exists
+            if (!File.Exists(inputPath))
+            {
+                Console.WriteLine("Input file does not exist: " + inputPath);
+                return;
+            }
+
+            // Ensure output directory exists
+            if (!Directory.Exists(outputDirectory))
+            {
+                Directory.CreateDirectory(outputDirectory);
+            }
+
+            try
+            {
+                // Load presentation
+                Presentation presentation = new Presentation(inputPath);
+
+                // Configure HTML5 export options
+                Html5Options html5Options = new Html5Options()
+                {
+                    // Embed images into the HTML file
+                    EmbedImages = true,
+                    // Specify where external resources (e.g., 3D model files) should be stored
+                    OutputPath = outputDirectory
+                    // Note: Aspose.Slides renders 3D models using WebGL automatically when exporting to HTML5
+                };
+
+                // Save as HTML5
+                presentation.Save(outputHtmlPath, SaveFormat.Html5, html5Options);
+
+                // Dispose presentation
+                presentation.Dispose();
+
+                Console.WriteLine("Presentation exported successfully to: " + outputHtmlPath);
+            }
+            catch (NotSupportedException)
+            {
+                // Format not supported
+                // Format not supported
+                Console.WriteLine("The provided file format is not supported for conversion.");
+            }
+            catch (Exception ex)
+            {
+                // Handle other exceptions (e.g., external URL issues)
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
+        }
+    }
+}

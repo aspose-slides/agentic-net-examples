@@ -20,49 +20,71 @@ working within the **3d-presentations** category.
 
 ## Required Namespaces
 
-- `using Aspose.Slides.Export;` (11/11 files)
-- `using Aspose.Slides;` (10/11 files)
-- `using System;` (10/11 files)
-- `using System.Drawing;` (3/11 files)
-- `using System.IO;` (2/11 files)
+- `using System;` (30/30 files)
+- `using Aspose.Slides.Export;` (30/30 files)
+- `using System.IO;` (28/30 files)
+- `using Aspose.Slides;` (27/30 files)
+- `using System.Drawing;` (2/30 files)
+- `using Aspose.Slides.Animation;` (2/30 files)
+- `using System.Text.Json;` (1/30 files)
+- `using Aspose.Slides.DOM.Ole;` (1/30 files)
 
 ## Files in this folder
 
 | File | Key APIs | Description |
 |------|----------|-------------|
-| [Apply-3d-gradient-fill-to-PPTX-shapes](./Apply-3d-gradient-fill-to-PPTX-shapes.cs) |  | Apply 3d gradient fill to PPTX shapes |
-| [Convert-pptx-with-3d-to-pdf](./Convert-pptx-with-3d-to-pdf.cs) |  | Convert pptx with 3d to pdf |
-| [Create-3d-wordart-text-in-PPTX](./Create-3d-wordart-text-in-PPTX.cs) |  | Create 3d wordart text in PPTX |
-| [Export-3d-slides-from-pptx-to-png](./Export-3d-slides-from-pptx-to-png.cs) |  | Export 3d slides from pptx to png |
-| [Initialize-pptx-for-3d-rendering](./Initialize-pptx-for-3d-rendering.cs) |  | Initialize pptx for 3d rendering |
-| [Load-PPTX-render-3d-interactive-overview](./Load-PPTX-render-3d-interactive-overview.cs) |  | Load PPTX render 3d interactive overview |
-| [Render-3d-objects-from-pptx-to-png](./Render-3d-objects-from-pptx-to-png.cs) |  | Render 3d objects from pptx to png |
-| [Render-3d-shapes-from-pptx-to-jpeg](./Render-3d-shapes-from-pptx-to-jpeg.cs) |  | Render 3d shapes from pptx to jpeg |
-| [Rotate-3d-shapes-in-PPTX-preserving-layout](./Rotate-3d-shapes-in-PPTX-preserving-layout.cs) |  | Rotate 3d shapes in PPTX preserving layout |
-| [Set-depth-and-extrusion-for-PPTX-shapes](./Set-depth-and-extrusion-for-PPTX-shapes.cs) |  | Set depth and extrusion for PPTX shapes |
-| [Transform-2d-shape-to-3d-in-pptx](./Transform-2d-shape-to-3d-in-pptx.cs) |  | Transform 2d shape to 3d in pptx |
+| [Add-PPTX-3d-circular-motion-path](./Add-PPTX-3d-circular-motion-path.cs) |  | Add PPTX 3d circular motion path |
+| [Add-PPTX-3d-cube-set-size](./Add-PPTX-3d-cube-set-size.cs) |  | Add PPTX 3d cube set size |
+| [Adjust-PPTX-3d-ambient-intensity](./Adjust-PPTX-3d-ambient-intensity.cs) |  | Adjust PPTX 3d ambient intensity |
+| [Apply-PPTX-3d-bevel-effect](./Apply-PPTX-3d-bevel-effect.cs) |  | Apply PPTX 3d bevel effect |
+| [Apply-PPTX-3d-matte-material](./Apply-PPTX-3d-matte-material.cs) |  | Apply PPTX 3d matte material |
+| [Batch-convert-PPTX-3d-PDF-order](./Batch-convert-PPTX-3d-PDF-order.cs) |  | Batch convert PPTX 3d PDF order |
+| [Check-PPTX-3d-shapes-have-names](./Check-PPTX-3d-shapes-have-names.cs) |  | Check PPTX 3d shapes have names |
+| [Compress-PPTX-3d-assets-for-distribution](./Compress-PPTX-3d-assets-for-distribution.cs) |  | Compress PPTX 3d assets for distribution |
+| [Create-PPTX-3d-thumbnail-images](./Create-PPTX-3d-thumbnail-images.cs) |  | Create PPTX 3d thumbnail images |
+| [Export-PPTX-3d-html5-webgl](./Export-PPTX-3d-html5-webgl.cs) |  | Export PPTX 3d html5 webgl |
+| [Export-PPTX-3d-models-to-OBJ-files](./Export-PPTX-3d-models-to-OBJ-files.cs) |  | Export PPTX 3d models to OBJ files |
+| [Export-PPTX-3d-rotation-video](./Export-PPTX-3d-rotation-video.cs) |  | Export PPTX 3d rotation video |
+| [Export-PPTX-3d-scene-to-OBJ](./Export-PPTX-3d-scene-to-OBJ.cs) |  | Export PPTX 3d scene to OBJ |
+| [Export-PPTX-3d-slide-to-png-depth](./Export-PPTX-3d-slide-to-png-depth.cs) |  | Export PPTX 3d slide to png depth |
+| [Export-PPTX-3d-slide-to-SVG-paths](./Export-PPTX-3d-slide-to-SVG-paths.cs) |  | Export PPTX 3d slide to SVG paths |
+| [Extract-PPTX-3d-metadata-and-log](./Extract-PPTX-3d-metadata-and-log.cs) |  | Extract PPTX 3d metadata and log |
+| [Handle-PPTX-3d-corrupted-data-exception](./Handle-PPTX-3d-corrupted-data-exception.cs) |  | Handle PPTX 3d corrupted data exception |
+| [Import-PPTX-3d-stl-file](./Import-PPTX-3d-stl-file.cs) |  | Import PPTX 3d stl file |
+| [List-pptx-3d-models-and-enumerate-objects](./List-pptx-3d-models-and-enumerate-objects.cs) |  | List pptx 3d models and enumerate objects |
+| [Load-PPTX-3d-JPEG-texture](./Load-PPTX-3d-JPEG-texture.cs) |  | Load PPTX 3d JPEG texture |
+| [Merge-PPTX-3d-objects-preserve-transformations](./Merge-PPTX-3d-objects-preserve-transformations.cs) |  | Merge PPTX 3d objects preserve transformations |
+| [Remove-PPTX-3d-objects-without-animations](./Remove-PPTX-3d-objects-without-animations.cs) |  | Remove PPTX 3d objects without animations |
+| [Replace-PPTX-3d-default-lights-with-directional](./Replace-PPTX-3d-default-lights-with-directional.cs) |  | Replace PPTX 3d default lights with directional |
+| [Report-PPTX-3d-objects-over-polygon-limit](./Report-PPTX-3d-objects-over-polygon-limit.cs) |  | Report PPTX 3d objects over polygon limit |
+| [Report-PPTX-3d-slide-object-count](./Report-PPTX-3d-slide-object-count.cs) |  | Report PPTX 3d slide object count |
+| [Rotate-PPTX-3d-shapes-around-y-axis](./Rotate-PPTX-3d-shapes-around-y-axis.cs) |  | Rotate PPTX 3d shapes around y axis |
+| [Save-PPTX-3d-flattened-PDF](./Save-PPTX-3d-flattened-PDF.cs) |  | Save PPTX 3d flattened PDF |
+| [Set-PPTX-3d-camera-view-matrix](./Set-PPTX-3d-camera-view-matrix.cs) |  | Set PPTX 3d camera view matrix |
+| [Toggle-PPTX-3d-model-visibility-flag](./Toggle-PPTX-3d-model-visibility-flag.cs) |  | Toggle PPTX 3d model visibility flag |
+| [Validate-PPTX-3d-texture-formats](./Validate-PPTX-3d-texture-formats.cs) |  | Validate PPTX 3d texture formats |
 
 ## Category Statistics
 
-- Total examples: 11
+- Total examples: 30
 
 ## Key API Surface
 
+- `Aspose.Slides`
 - `Aspose.Slides.Export`
 - `Aspose.Slides.Presentation`
-- `Aspose.Slides`
-- `Aspose.Slides.Export.SaveFormat.Pptx`
-- `Aspose.Slides.ShapeType.Rectangle`
 - `Aspose.Slides.ISlide`
-- `Aspose.Slides.LightingDirection.Top`
+- `Aspose.Slides.Export.SaveFormat.Pptx`
+- `Aspose.Slides.IShape`
+- `Aspose.Slides.PptxUnsupportedFormatException`
+- `Aspose.Slides.PptUnsupportedFormatException`
+- `Aspose.Slides.IMasterSlide`
+- `Aspose.Slides.FillType.Solid`
+- `Aspose.Slides.Animation`
 - `Aspose.Slides.IAutoShape`
-- `Aspose.Slides.CameraPresetType.OrthographicFront`
-- `Aspose.Slides.LightRigPresetType.Flat`
-- `Aspose.Slides.FillType.NoFill`
-- `Aspose.Slides.Portion`
+- `Aspose.Slides.IImage`
+- `Aspose.Slides.ShapeType.Rectangle`
 - `Aspose.Slides.MaterialPresetType.Plastic`
-- `Aspose.Slides.ImageFormat.Png`
-- `Aspose.Slides.Export.SaveOptionsFactory`
 
 ## Common Code Pattern
 
@@ -83,5 +105,5 @@ using (Presentation pres = new Presentation("input.pptx"))
 - Save the presentation using `Presentation.Save(...)`.
 
 <!-- AUTOGENERATED:START -->
-Updated: 2026-03-20
+Updated: 2026-04-06
 <!-- AUTOGENERATED:END -->
