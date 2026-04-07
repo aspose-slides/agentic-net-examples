@@ -20,24 +20,24 @@ working within the **comments-and-notes** category.
 
 ## Required Namespaces
 
-- `using System;` (118/118 files)
-- `using Aspose.Slides.Export;` (118/118 files)
-- `using Aspose.Slides;` (108/118 files)
-- `using System.IO;` (107/118 files)
-- `using System.Drawing;` (29/118 files)
-- `using System.Collections.Generic;` (16/118 files)
-- `using System.Text.Json;` (5/118 files)
-- `using System.Text;` (5/118 files)
-- `using System.Threading.Tasks;` (4/118 files)
-- `using System.Net.Http;` (3/118 files)
-- `using System.Threading;` (3/118 files)
-- `using System.Text.RegularExpressions;` (2/118 files)
-- `using System.Xml.Linq;` (2/118 files)
-- `using System.Net;` (2/118 files)
-- `using Aspose.Slides.AI;` (2/118 files)
-- `using Aspose.Slides.Util;` (1/118 files)
-- `using System.Diagnostics;` (1/118 files)
-- `using System.Net.WebSockets;` (1/118 files)
+- `using System;` (120/120 files)
+- `using Aspose.Slides.Export;` (120/120 files)
+- `using Aspose.Slides;` (110/120 files)
+- `using System.IO;` (109/120 files)
+- `using System.Drawing;` (29/120 files)
+- `using System.Collections.Generic;` (17/120 files)
+- `using System.Text.Json;` (5/120 files)
+- `using System.Text;` (5/120 files)
+- `using System.Threading.Tasks;` (4/120 files)
+- `using System.Net.Http;` (3/120 files)
+- `using System.Threading;` (3/120 files)
+- `using System.Text.RegularExpressions;` (2/120 files)
+- `using System.Xml.Linq;` (2/120 files)
+- `using System.Net;` (2/120 files)
+- `using Aspose.Slides.AI;` (2/120 files)
+- `using Aspose.Slides.Util;` (1/120 files)
+- `using System.Diagnostics;` (1/120 files)
+- `using System.Net.WebSockets;` (1/120 files)
 
 ## Files in this folder
 
@@ -53,6 +53,7 @@ working within the **comments-and-notes** category.
 | [Analyze-sentiment-of-PPTX-slide-comments](./Analyze-sentiment-of-PPTX-slide-comments.cs) |  | Analyze sentiment of PPTX slide comments |
 | [Append-timestamp-to-PPTX-slide-notes](./Append-timestamp-to-PPTX-slide-notes.cs) |  | Append timestamp to PPTX slide notes |
 | [Apply-conditional-formatting-to-PPTX-notes](./Apply-conditional-formatting-to-PPTX-notes.cs) |  | Apply conditional formatting to PPTX notes |
+| [Apply-custom-font-family-to-PPTX-notes](./Apply-custom-font-family-to-PPTX-notes.cs) |  | Apply custom font family to PPTX notes |
 | [Apply-custom-font-to-PPTX-slide-comment](./Apply-custom-font-to-PPTX-slide-comment.cs) |  | Apply custom font to PPTX slide comment |
 | [Apply-custom-icon-to-PPTX-slide-comments](./Apply-custom-icon-to-PPTX-slide-comments.cs) |  | Apply custom icon to PPTX slide comments |
 | [Apply-drop-shadow-to-PPTX-comment-callouts](./Apply-drop-shadow-to-PPTX-comment-callouts.cs) |  | Apply drop shadow to PPTX comment callouts |
@@ -88,6 +89,7 @@ working within the **comments-and-notes** category.
 | [Export-PPTX-notes-to-concatenated-HTML](./Export-PPTX-notes-to-concatenated-HTML.cs) |  | Export PPTX notes to concatenated HTML |
 | [Export-PPTX-notes-to-CSV-with-authors](./Export-PPTX-notes-to-CSV-with-authors.cs) |  | Export PPTX notes to CSV with authors |
 | [Export-PPTX-notes-to-handout-view](./Export-PPTX-notes-to-handout-view.cs) |  | Export PPTX notes to handout view |
+| [Export-PPTX-notes-to-XLSX-workbook](./Export-PPTX-notes-to-XLSX-workbook.cs) |  | Export PPTX notes to XLSX workbook |
 | [Export-PPTX-slide-comments-grouped-by-slide](./Export-PPTX-slide-comments-grouped-by-slide.cs) |  | Export PPTX slide comments grouped by slide |
 | [Export-PPTX-slide-comments-to-json](./Export-PPTX-slide-comments-to-json.cs) |  | Export PPTX slide comments to json |
 | [Export-PPTX-slide-notes-to-HTML](./Export-PPTX-slide-notes-to-HTML.cs) |  | Export PPTX slide notes to HTML |
@@ -164,7 +166,7 @@ working within the **comments-and-notes** category.
 
 ## Category Statistics
 
-- Total examples: 118
+- Total examples: 120
 
 ## Key API Surface
 
