@@ -20,19 +20,20 @@ working within the **manage-presentation-content** category.
 
 ## Required Namespaces
 
-- `using System;` (98/98 files)
-- `using Aspose.Slides.Export;` (98/98 files)
-- `using System.IO;` (88/98 files)
-- `using Aspose.Slides;` (83/98 files)
-- `using System.Text.Json;` (3/98 files)
-- `using System.Text;` (2/98 files)
-- `using System.Collections.Generic;` (2/98 files)
-- `using System.Diagnostics;` (2/98 files)
-- `using Aspose.Slides.Vba;` (1/98 files)
-- `using System.Security.Cryptography;` (1/98 files)
-- `using System.Xml;` (1/98 files)
-- `using System.Reflection;` (1/98 files)
-- `using System.Net;` (1/98 files)
+- `using System;` (101/101 files)
+- `using Aspose.Slides.Export;` (101/101 files)
+- `using System.IO;` (89/101 files)
+- `using Aspose.Slides;` (86/101 files)
+- `using System.Text.Json;` (3/101 files)
+- `using System.Text;` (2/101 files)
+- `using System.Collections.Generic;` (2/101 files)
+- `using System.Diagnostics;` (2/101 files)
+- `using Aspose.Slides.Vba;` (1/101 files)
+- `using System.Security.Cryptography;` (1/101 files)
+- `using System.Xml;` (1/101 files)
+- `using System.Reflection;` (1/101 files)
+- `using System.Net;` (1/101 files)
+- `using System.Drawing;` (1/101 files)
 
 ## Files in this folder
 
@@ -50,6 +51,7 @@ working within the **manage-presentation-content** category.
 | [Add-hyperlink-to-second-slide-shape](./Add-hyperlink-to-second-slide-shape.cs) |  | Add hyperlink to second slide shape |
 | [Add-hyperlink-to-video-autoplay](./Add-hyperlink-to-video-autoplay.cs) |  | Add hyperlink to video autoplay |
 | [Add-hyperlink-to-video-placeholder-player](./Add-hyperlink-to-video-placeholder-player.cs) |  | Add hyperlink to video placeholder player |
+| [Add-interactive-table-of-contents-slide](./Add-interactive-table-of-contents-slide.cs) |  | Add interactive table of contents slide |
 | [Add-lastmodified-update-on-slide-add](./Add-lastmodified-update-on-slide-add.cs) |  | Add lastmodified update on slide add |
 | [Add-macro-enabled-lastmodified-update-on-save](./Add-macro-enabled-lastmodified-update-on-save.cs) |  | Add macro enabled lastmodified update on save |
 | [Add-project-startdate-custom-property](./Add-project-startdate-custom-property.cs) |  | Add project startdate custom property |
@@ -83,6 +85,7 @@ working within the **manage-presentation-content** category.
 | [Extract-title-and-author-to-XML-manifest](./Extract-title-and-author-to-XML-manifest.cs) |  | Extract title and author to XML manifest |
 | [Generate-CSV-report-of-presentation-metadata](./Generate-CSV-report-of-presentation-metadata.cs) |  | Generate CSV report of presentation metadata |
 | [Generate-markdown-summary-from-title-and-author](./Generate-markdown-summary-from-title-and-author.cs) |  | Generate markdown summary from title and author |
+| [Generate-summary-report-of-custom-properties](./Generate-summary-report-of-custom-properties.cs) |  | Generate summary report of custom properties |
 | [Get-all-document-properties-and-values](./Get-all-document-properties-and-values.cs) |  | Get all document properties and values |
 | [Handle-delete-nonexistent-custom-property-error](./Handle-delete-nonexistent-custom-property-error.cs) |  | Handle delete nonexistent custom property error |
 | [Hide-ruler-show-grid-on-each-slide](./Hide-ruler-show-grid-on-each-slide.cs) |  | Hide ruler show grid on each slide |
@@ -117,6 +120,7 @@ working within the **manage-presentation-content** category.
 | [Set-creator-property-to-company-name](./Set-creator-property-to-company-name.cs) |  | Set creator property to company name |
 | [Set-decorative-flag-on-master-background-shapes](./Set-decorative-flag-on-master-background-shapes.cs) |  | Set decorative flag on master background shapes |
 | [Set-default-language-to-french-verify-fonts](./Set-default-language-to-french-verify-fonts.cs) |  | Set default language to french verify fonts |
+| [Set-hyperlink-color-using-custom-RGB](./Set-hyperlink-color-using-custom-RGB.cs) |  | Set hyperlink color using custom RGB |
 | [Set-lastprinted-property-after-printing](./Set-lastprinted-property-after-printing.cs) |  | Set lastprinted property after printing |
 | [Set-presentation-view-fullscreen-mode](./Set-presentation-view-fullscreen-mode.cs) |  | Set presentation view fullscreen mode |
 | [Set-presentation-view-mode-to-read-only](./Set-presentation-view-mode-to-read-only.cs) |  | Set presentation view mode to read only |
@@ -139,7 +143,7 @@ working within the **manage-presentation-content** category.
 
 ## Category Statistics
 
-- Total examples: 98
+- Total examples: 101
 
 ## Key API Surface
 
@@ -148,16 +152,16 @@ working within the **manage-presentation-content** category.
 - `Aspose.Slides`
 - `Aspose.Slides.Export.SaveFormat.Pptx`
 - `Aspose.Slides.IDocumentProperties`
+- `Aspose.Slides.IAutoShape`
+- `Aspose.Slides.ISlide`
 - `Aspose.Slides.PptxUnsupportedFormatException`
 - `Aspose.Slides.PptUnsupportedFormatException`
-- `Aspose.Slides.ISlide`
-- `Aspose.Slides.IAutoShape`
 - `Aspose.Slides.IShape`
 - `Aspose.Slides.`
-- `Aspose.Slides.Hyperlink`
 - `Aspose.Slides.ShapeType.Rectangle`
+- `Aspose.Slides.Hyperlink`
 - `Aspose.Slides.IVideoFrame`
-- `Aspose.Slides.IPortion`
+- `Aspose.Slides.IHyperlinkManager`
 
 ## Common Code Pattern
 
