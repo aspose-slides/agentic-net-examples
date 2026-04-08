@@ -20,23 +20,23 @@ working within the **design-presentations** category.
 
 ## Required Namespaces
 
-- `using System;` (155/155 files)
-- `using Aspose.Slides.Export;` (155/155 files)
-- `using Aspose.Slides;` (149/155 files)
-- `using System.IO;` (144/155 files)
-- `using System.Drawing;` (13/155 files)
-- `using System.Collections.Generic;` (5/155 files)
-- `using Aspose.Slides.Util;` (4/155 files)
-- `using Aspose.Slides.Charts;` (3/155 files)
-- `using System.Text.Json;` (3/155 files)
-- `using System.Linq;` (3/155 files)
-- `using System.Diagnostics;` (2/155 files)
-- `using System.Text;` (2/155 files)
-- `using Aspose.Slides.Animation;` (1/155 files)
-- `using System.Net;` (1/155 files)
-- `using System.IO.Compression;` (1/155 files)
-- `using System.Threading.Tasks;` (1/155 files)
-- `using System.Net.Http;` (1/155 files)
+- `using System;` (157/157 files)
+- `using Aspose.Slides.Export;` (157/157 files)
+- `using Aspose.Slides;` (151/157 files)
+- `using System.IO;` (145/157 files)
+- `using System.Drawing;` (15/157 files)
+- `using System.Collections.Generic;` (5/157 files)
+- `using Aspose.Slides.Util;` (4/157 files)
+- `using Aspose.Slides.Charts;` (3/157 files)
+- `using System.Text.Json;` (3/157 files)
+- `using System.Linq;` (3/157 files)
+- `using System.Diagnostics;` (2/157 files)
+- `using System.Text;` (2/157 files)
+- `using Aspose.Slides.Animation;` (1/157 files)
+- `using System.Net;` (1/157 files)
+- `using System.IO.Compression;` (1/157 files)
+- `using System.Threading.Tasks;` (1/157 files)
+- `using System.Net.Http;` (1/157 files)
 
 ## Files in this folder
 
@@ -131,6 +131,7 @@ working within the **design-presentations** category.
 | [Generate-slide-manifest-with-layout-JSON](./Generate-slide-manifest-with-layout-JSON.cs) |  | Generate slide manifest with layout JSON |
 | [Generate-slide-thumbnail-JPEG-with-fallback](./Generate-slide-thumbnail-JPEG-with-fallback.cs) |  | Generate slide thumbnail JPEG with fallback |
 | [Generate-slide-thumbnail-using-theme](./Generate-slide-thumbnail-using-theme.cs) |  | Generate slide thumbnail using theme |
+| [Get-background1-rgb-after-theme-change](./Get-background1-rgb-after-theme-change.cs) |  | Get background1 rgb after theme change |
 | [Get-substitution-empty-when-all-fonts-available](./Get-substitution-empty-when-all-fonts-available.cs) |  | Get substitution empty when all fonts available |
 | [Insert-video-placeholder-with-URL-intro-slide](./Insert-video-placeholder-with-URL-intro-slide.cs) |  | Insert video placeholder with URL intro slide |
 | [Iterate-slides-apply-fallback-save-PNG](./Iterate-slides-apply-fallback-save-PNG.cs) |  | Iterate slides apply fallback save PNG |
@@ -181,6 +182,7 @@ working within the **design-presentations** category.
 | [Set-default-regular-font-compare-pdf](./Set-default-regular-font-compare-pdf.cs) |  | Set default regular font compare pdf |
 | [Set-default-spell-check-language-to-french](./Set-default-spell-check-language-to-french.cs) |  | Set default spell check language to french |
 | [Set-document-properties-author-title-revision](./Set-document-properties-author-title-revision.cs) |  | Set document properties author title revision |
+| [Set-hidden-slide-semi-transparent-gradient](./Set-hidden-slide-semi-transparent-gradient.cs) |  | Set hidden slide semi transparent gradient |
 | [Set-pptx-master-background-to-gray](./Set-pptx-master-background-to-gray.cs) |  | Set pptx master background to gray |
 | [Set-pptx-master-background-to-navy](./Set-pptx-master-background-to-navy.cs) |  | Set pptx master background to navy |
 | [Set-pptx-slide-size-to-widescreen-16-9](./Set-pptx-slide-size-to-widescreen-16-9.cs) |  | Set pptx slide size to widescreen 16 9 |
@@ -200,7 +202,7 @@ working within the **design-presentations** category.
 
 ## Category Statistics
 
-- Total examples: 155
+- Total examples: 157
 
 ## Key API Surface
 
