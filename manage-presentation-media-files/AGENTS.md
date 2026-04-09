@@ -20,211 +20,199 @@ working within the **manage-presentation-media-files** category.
 
 ## Required Namespaces
 
-- `using System;` (167/167 files)
-- `using Aspose.Slides.Export;` (167/167 files)
-- `using Aspose.Slides;` (142/167 files)
-- `using System.IO;` (133/167 files)
-- `using System.Drawing;` (6/167 files)
-- `using Aspose.Slides.DOM.Ole;` (3/167 files)
-- `using System.Linq;` (1/167 files)
-- `using Aspose.Slides.Animation;` (1/167 files)
-- `using Aspose.Slides.Util;` (1/167 files)
-- `using System.Collections.Generic;` (1/167 files)
-- `using System.Net.Http;` (1/167 files)
+- `using System;` (149/149 files)
+- `using Aspose.Slides.Export;` (149/149 files)
+- `using System.IO;` (148/149 files)
+- `using Aspose.Slides;` (135/149 files)
+- `using System.Collections.Generic;` (10/149 files)
+- `using Aspose.Slides.Effects;` (4/149 files)
+- `using System.Drawing;` (4/149 files)
+- `using System.Net;` (3/149 files)
+- `using Aspose.Slides.Animation;` (2/149 files)
+- `using System.Text;` (2/149 files)
+- `using System.Security.Cryptography;` (2/149 files)
+- `using System.IO.Compression;` (2/149 files)
+- `using System.Reflection;` (1/149 files)
+- `using Aspose.Slides.Util;` (1/149 files)
+- `using System.Net.Http;` (1/149 files)
+- `using Aspose.Slides.DOM.Ole;` (1/149 files)
+- `using System.Text.Json;` (1/149 files)
 
 ## Files in this folder
 
 | File | Key APIs | Description |
 |------|----------|-------------|
-| [Access-slide-reference-by-index-from-PPTX](./Access-slide-reference-by-index-from-PPTX.cs) |  | Access slide reference by index from PPTX |
-| [Add-audio-frame-to-PPTX-slide](./Add-audio-frame-to-PPTX-slide.cs) |  | Add audio frame to PPTX slide |
-| [Add-embedded-audio-to-PPTX-slide](./Add-embedded-audio-to-PPTX-slide.cs) |  | Add embedded audio to PPTX slide |
-| [Add-groupshape-with-SVG-image-to-PPTX](./Add-groupshape-with-SVG-image-to-PPTX.cs) |  | Add groupshape with SVG image to PPTX |
-| [Add-image-to-IImages-collection-for-PPTX](./Add-image-to-IImages-collection-for-PPTX.cs) |  | Add image to IImages collection for PPTX |
-| [Add-image-to-PPTX-collection-with-accessibility](./Add-image-to-PPTX-collection-with-accessibility.cs) |  | Add image to PPTX collection with accessibility |
-| [Add-image-to-slide-master-for-PPTX](./Add-image-to-slide-master-for-PPTX.cs) |  | Add image to slide master for PPTX |
-| [Add-ivideo-objects-to-PPTX-presentation](./Add-ivideo-objects-to-PPTX-presentation.cs) |  | Add ivideo objects to PPTX presentation |
-| [Add-logo-to-master-and-propagate-updates](./Add-logo-to-master-and-propagate-updates.cs) |  | Add logo to master and propagate updates |
-| [Add-pictureframe-with-dimensions-to-PPTX-slide](./Add-pictureframe-with-dimensions-to-PPTX-slide.cs) |  | Add pictureframe with dimensions to PPTX slide |
-| [Add-pictureframe-with-original-dimensions-to-PPTX](./Add-pictureframe-with-original-dimensions-to-PPTX.cs) |  | Add pictureframe with original dimensions to PPTX |
-| [Add-unique-audio-to-PPTX-collection](./Add-unique-audio-to-PPTX-collection.cs) |  | Add unique audio to PPTX collection |
-| [Add-video-caption-to-PPTX-slide](./Add-video-caption-to-PPTX-slide.cs) |  | Add video caption to PPTX slide |
-| [Adjust-audio-volume-looping-icon-PPTX](./Adjust-audio-volume-looping-icon-PPTX.cs) |  | Adjust audio volume looping icon PPTX |
-| [Adjust-image-offsets-relative-to-shape-PPTX](./Adjust-image-offsets-relative-to-shape-PPTX.cs) |  | Adjust image offsets relative to shape PPTX |
-| [Adjust-image-scaling-for-pictureframe-PPTX](./Adjust-image-scaling-for-pictureframe-PPTX.cs) |  | Adjust image scaling for pictureframe PPTX |
-| [Adjust-line-thickness-of-pictureframe-in-PPTX](./Adjust-line-thickness-of-pictureframe-in-PPTX.cs) |  | Adjust line thickness of pictureframe in PPTX |
-| [Adjust-pictureframe-position-and-size-in-PPTX](./Adjust-pictureframe-position-and-size-in-PPTX.cs) |  | Adjust pictureframe position and size in PPTX |
-| [Apply-image-background-to-slides-in-PPTX](./Apply-image-background-to-slides-in-PPTX.cs) |  | Apply image background to slides in PPTX |
-| [Apply-line-color-to-pictureframe-in-PPTX](./Apply-line-color-to-pictureframe-in-PPTX.cs) |  | Apply line color to pictureframe in PPTX |
-| [Apply-pictureframe-formatting-properties-in-PPTX](./Apply-pictureframe-formatting-properties-in-PPTX.cs) |  | Apply pictureframe formatting properties in PPTX |
-| [Assign-fill-type-to-shape-in-PPTX](./Assign-fill-type-to-shape-in-PPTX.cs) |  | Assign fill type to shape in PPTX |
-| [Assign-images-to-heading-backgrounds-in-PPTX](./Assign-images-to-heading-backgrounds-in-PPTX.cs) |  | Assign images to heading backgrounds in PPTX |
-| [Assign-video-thumbnail-to-PPTX-slide](./Assign-video-thumbnail-to-PPTX-slide.cs) |  | Assign video thumbnail to PPTX slide |
-| [Attach-audio-stream-to-PPTX-slide](./Attach-audio-stream-to-PPTX-slide.cs) |  | Attach audio stream to PPTX slide |
-| [Compress-images-in-PPTX-to-reduce-size](./Compress-images-in-PPTX-to-reduce-size.cs) |  | Compress images in PPTX to reduce size |
-| [Configure-audio-frame-playmode-volume-PPTX](./Configure-audio-frame-playmode-volume-PPTX.cs) |  | Configure audio frame playmode volume PPTX |
-| [Configure-audio-start-volume-looping-in-PPTX](./Configure-audio-start-volume-looping-in-PPTX.cs) |  | Configure audio start volume looping in PPTX |
-| [Configure-picture-fill-mode-in-PPTX](./Configure-picture-fill-mode-in-PPTX.cs) |  | Configure picture fill mode in PPTX |
-| [Consolidate-duplicate-images-preserve-master-graphics](./Consolidate-duplicate-images-preserve-master-graphics.cs) |  | Consolidate duplicate images preserve master graphics |
-| [Convert-svg-to-shapes-and-export-PDF](./Convert-svg-to-shapes-and-export-PDF.cs) |  | Convert svg to shapes and export PDF |
-| [Convert-svg-to-shapes-in-PPTX](./Convert-svg-to-shapes-in-PPTX.cs) |  | Convert svg to shapes in PPTX |
-| [Create-audio-frames-in-PPTX-slide](./Create-audio-frames-in-PPTX-slide.cs) |  | Create audio frames in PPTX slide |
-| [Create-embedded-video-frame-in-PPTX-slide](./Create-embedded-video-frame-in-PPTX-slide.cs) |  | Create embedded video frame in PPTX slide |
-| [Create-EMF-from-excel-and-insert-into-PPTX](./Create-EMF-from-excel-and-insert-into-PPTX.cs) |  | Create EMF from excel and insert into PPTX |
-| [Create-ivideo-instance-and-set-path-in-PPTX](./Create-ivideo-instance-and-set-path-in-PPTX.cs) |  | Create ivideo instance and set path in PPTX |
-| [Create-pictureframe-from-ippimage-in-PPTX](./Create-pictureframe-from-ippimage-in-PPTX.cs) |  | Create pictureframe from ippimage in PPTX |
-| [Create-pictureframe-with-custom-properties-in-PPTX](./Create-pictureframe-with-custom-properties-in-PPTX.cs) |  | Create pictureframe with custom properties in PPTX |
-| [Create-ppimage-from-svgimage-for-PPTX](./Create-ppimage-from-svgimage-for-PPTX.cs) |  | Create ppimage from svgimage for PPTX |
-| [Create-pptx-shapes-from-svg-export-pdf](./Create-pptx-shapes-from-svg-export-pdf.cs) |  | Create pptx shapes from svg export pdf |
-| [Create-svgimage-and-append-to-imageshapecollection-PPTX](./Create-svgimage-and-append-to-imageshapecollection-PPTX.cs) |  | Create svgimage and append to imageshapecollection PPTX |
-| [Create-video-frame-for-stored-video-PPTX](./Create-video-frame-for-stored-video-PPTX.cs) |  | Create video frame for stored video PPTX |
-| [Customize-audio-shape-thumbnail-in-PPTX](./Customize-audio-shape-thumbnail-in-PPTX.cs) |  | Customize audio shape thumbnail in PPTX |
-| [Customize-pictureframe-formatting-options-in-PPTX](./Customize-pictureframe-formatting-options-in-PPTX.cs) |  | Customize pictureframe formatting options in PPTX |
-| [Define-pictureframe-relative-dimensions-in-PPTX](./Define-pictureframe-relative-dimensions-in-PPTX.cs) |  | Define pictureframe relative dimensions in PPTX |
-| [Embed-audio-into-PPTX-with-timing](./Embed-audio-into-PPTX-with-timing.cs) |  | Embed audio into PPTX with timing |
-| [Embed-local-video-into-PPTX-slide](./Embed-local-video-into-PPTX-slide.cs) |  | Embed local video into PPTX slide |
-| [Export-audio-tracks-from-PPTX](./Export-audio-tracks-from-PPTX.cs) |  | Export audio tracks from PPTX |
-| [Export-embedded-video-to-file-and-PDF](./Export-embedded-video-to-file-and-PDF.cs) |  | Export embedded video to file and PDF |
-| [Export-flash-objects-from-PPTX-slide](./Export-flash-objects-from-PPTX-slide.cs) |  | Export flash objects from PPTX slide |
-| [Export-modified-presentation-to-PPTX-and-PDF](./Export-modified-presentation-to-PPTX-and-PDF.cs) |  | Export modified presentation to PPTX and PDF |
-| [Export-presentation-to-PPTX-and-PDF](./Export-presentation-to-PPTX-and-PDF.cs) |  | Export presentation to PPTX and PDF |
-| [Export-slide-as-raster-image-from-PPTX](./Export-slide-as-raster-image-from-PPTX.cs) |  | Export slide as raster image from PPTX |
-| [Export-svg-vector-from-pictureframe-in-PPTX](./Export-svg-vector-from-pictureframe-in-PPTX.cs) |  | Export svg vector from pictureframe in PPTX |
-| [Extract-and-insert-video-in-PPTX](./Extract-and-insert-video-in-PPTX.cs) |  | Extract and insert video in PPTX |
-| [Extract-audio-from-PPTX-and-preserve-format](./Extract-audio-from-PPTX-and-preserve-format.cs) |  | Extract audio from PPTX and preserve format |
-| [Extract-audio-streams-from-PPTX-slide](./Extract-audio-streams-from-PPTX-slide.cs) |  | Extract audio streams from PPTX slide |
-| [Extract-embedded-flash-from-PPTX-presentation](./Extract-embedded-flash-from-PPTX-presentation.cs) |  | Extract embedded flash from PPTX presentation |
-| [Extract-embedded-images-from-slide-headings-PPTX](./Extract-embedded-images-from-slide-headings-PPTX.cs) |  | Extract embedded images from slide headings PPTX |
-| [Extract-embedded-video-from-heading-PPTX-slide](./Extract-embedded-video-from-heading-PPTX-slide.cs) |  | Extract embedded video from heading PPTX slide |
-| [Extract-embedded-video-from-PPTX-slide](./Extract-embedded-video-from-PPTX-slide.cs) |  | Extract embedded video from PPTX slide |
-| [Extract-embedded-video-from-PPTX-to-file](./Extract-embedded-video-from-PPTX-to-file.cs) |  | Extract embedded video from PPTX to file |
-| [Extract-embedded-video-streams-from-PPTX](./Extract-embedded-video-streams-from-PPTX.cs) |  | Extract embedded video streams from PPTX |
-| [Extract-flash-binary-from-PPTX-presentation](./Extract-flash-binary-from-PPTX-presentation.cs) |  | Extract flash binary from PPTX presentation |
-| [Extract-flash-by-name-from-PPTX](./Extract-flash-by-name-from-PPTX.cs) |  | Extract flash by name from PPTX |
-| [Extract-flash-by-name-to-SWF-PPTX](./Extract-flash-by-name-to-SWF-PPTX.cs) |  | Extract flash by name to SWF PPTX |
-| [Extract-heading-raster-images-from-PPTX](./Extract-heading-raster-images-from-PPTX.cs) |  | Extract heading raster images from PPTX |
-| [Extract-pictureframe-raster-images-to-files](./Extract-pictureframe-raster-images-to-files.cs) |  | Extract pictureframe raster images to files |
-| [Extract-raster-images-from-pictureframe-in-PPTX](./Extract-raster-images-from-pictureframe-in-PPTX.cs) |  | Extract raster images from pictureframe in PPTX |
-| [Extract-slide-transition-audio-from-PPTX-slide](./Extract-slide-transition-audio-from-PPTX-slide.cs) |  | Extract slide transition audio from PPTX slide |
-| [Extract-svg-from-heading-pictureframe-in-PPTX](./Extract-svg-from-heading-pictureframe-in-PPTX.cs) |  | Extract svg from heading pictureframe in PPTX |
-| [Extract-svg-from-pictureframe-in-PPTX](./Extract-svg-from-pictureframe-in-PPTX.cs) |  | Extract svg from pictureframe in PPTX |
-| [Extract-svg-vector-from-pictureframe-in-PPTX](./Extract-svg-vector-from-pictureframe-in-PPTX.cs) |  | Extract svg vector from pictureframe in PPTX |
-| [Fetch-slide-at-index-from-PPTX](./Fetch-slide-at-index-from-PPTX.cs) |  | Fetch slide at index from PPTX |
-| [Fetch-slide-transition-settings-from-PPTX](./Fetch-slide-transition-settings-from-PPTX.cs) |  | Fetch slide transition settings from PPTX |
-| [Find-video-frames-in-PPTX-shapes](./Find-video-frames-in-PPTX-shapes.cs) |  | Find video frames in PPTX shapes |
-| [Format-pictureframe-size-border-alignment-in-PPTX](./Format-pictureframe-size-border-alignment-in-PPTX.cs) |  | Format pictureframe size border alignment in PPTX |
-| [Get-alpha-transparency-of-image-in-PPTX](./Get-alpha-transparency-of-image-in-PPTX.cs) |  | Get alpha transparency of image in PPTX |
-| [Get-embedded-audio-bytes-from-PPTX](./Get-embedded-audio-bytes-from-PPTX.cs) |  | Get embedded audio bytes from PPTX |
-| [Get-embedded-video-contenttype-for-export](./Get-embedded-video-contenttype-for-export.cs) |  | Get embedded video contenttype for export |
-| [Get-heading-image-transparency-in-PPTX](./Get-heading-image-transparency-in-PPTX.cs) |  | Get heading image transparency in PPTX |
-| [Get-or-create-audio-frame-in-PPTX](./Get-or-create-audio-frame-in-PPTX.cs) |  | Get or create audio frame in PPTX |
-| [Get-slide-by-index-from-PPTX](./Get-slide-by-index-from-PPTX.cs) |  | Get slide by index from PPTX |
-| [Get-slide-transition-from-PPTX](./Get-slide-transition-from-PPTX.cs) |  | Get slide transition from PPTX |
-| [Insert-embedded-audio-frame-into-PPTX-slide](./Insert-embedded-audio-frame-into-PPTX-slide.cs) |  | Insert embedded audio frame into PPTX slide |
-| [Insert-EMF-into-PPTX-heading-with-scaling](./Insert-EMF-into-PPTX-heading-with-scaling.cs) |  | Insert EMF into PPTX heading with scaling |
-| [Insert-EMF-into-PPTX-slide-with-positioning](./Insert-EMF-into-PPTX-slide-with-positioning.cs) |  | Insert EMF into PPTX slide with positioning |
-| [Insert-hyperlinked-image-into-PPTX-slide](./Insert-hyperlinked-image-into-PPTX-slide.cs) |  | Insert hyperlinked image into PPTX slide |
-| [Insert-image-into-heading-placeholder-master-PPTX](./Insert-image-into-heading-placeholder-master-PPTX.cs) |  | Insert image into heading placeholder master PPTX |
-| [Insert-image-into-pictureframe-and-save-PPTX](./Insert-image-into-pictureframe-and-save-PPTX.cs) |  | Insert image into pictureframe and save PPTX |
-| [Insert-image-into-PPTX-master-layout](./Insert-image-into-PPTX-master-layout.cs) |  | Insert image into PPTX master layout |
-| [Insert-image-using-addpictureframe-into-PPTX](./Insert-image-using-addpictureframe-into-PPTX.cs) |  | Insert image using addpictureframe into PPTX |
-| [Insert-local-image-into-heading-placeholder-PPTX](./Insert-local-image-into-heading-placeholder-PPTX.cs) |  | Insert local image into heading placeholder PPTX |
-| [Insert-local-image-into-PPTX-slide](./Insert-local-image-into-PPTX-slide.cs) |  | Insert local image into PPTX slide |
-| [Insert-local-video-into-PPTX-slide](./Insert-local-video-into-PPTX-slide.cs) |  | Insert local video into PPTX slide |
-| [Insert-multiple-image-sources-into-PPTX](./Insert-multiple-image-sources-into-PPTX.cs) |  | Insert multiple image sources into PPTX |
-| [Insert-multiple-local-images-into-PPTX-slide](./Insert-multiple-local-images-into-PPTX-slide.cs) |  | Insert multiple local images into PPTX slide |
-| [Insert-online-video-into-PPTX-slide](./Insert-online-video-into-PPTX-slide.cs) |  | Insert online video into PPTX slide |
-| [Insert-pictureframe-and-format-frame-in-PPTX](./Insert-pictureframe-and-format-frame-in-PPTX.cs) |  | Insert pictureframe and format frame in PPTX |
-| [Insert-pictureframe-image-onto-PPTX-slide](./Insert-pictureframe-image-onto-PPTX-slide.cs) |  | Insert pictureframe image onto PPTX slide |
-| [Insert-pictureframe-with-image-into-PPTX-slide](./Insert-pictureframe-with-image-into-PPTX-slide.cs) |  | Insert pictureframe with image into PPTX slide |
-| [Insert-rectangular-autoshape-as-visual-container-PPTX](./Insert-rectangular-autoshape-as-visual-container-PPTX.cs) |  | Insert rectangular autoshape as visual container PPTX |
-| [Insert-rectangular-autoshape-with-styling-PPTX](./Insert-rectangular-autoshape-with-styling-PPTX.cs) |  | Insert rectangular autoshape with styling PPTX |
-| [Insert-SVG-graphic-into-PPTX-slide](./Insert-SVG-graphic-into-PPTX-slide.cs) |  | Insert SVG graphic into PPTX slide |
-| [Insert-svg-image-into-heading-PPTX](./Insert-svg-image-into-heading-PPTX.cs) |  | Insert svg image into heading PPTX |
-| [Insert-video-into-PPTX-slide](./Insert-video-into-PPTX-slide.cs) |  | Insert video into PPTX slide |
-| [Instantiate-ippimage-from-PPTX-into-iimages-collection](./Instantiate-ippimage-from-PPTX-into-iimages-collection.cs) |  | Instantiate ippimage from PPTX into iimages collection |
-| [Instantiate-ivideoframe-object-in-PPTX](./Instantiate-ivideoframe-object-in-PPTX.cs) |  | Instantiate ivideoframe object in PPTX |
-| [Instantiate-pictureframe-using-ippimage-in-PPTX](./Instantiate-pictureframe-using-ippimage-in-PPTX.cs) |  | Instantiate pictureframe using ippimage in PPTX |
-| [Instantiate-ppimage-from-svg-in-pptx](./Instantiate-ppimage-from-svg-in-pptx.cs) |  | Instantiate ppimage from svg in pptx |
-| [Instantiate-presentation-for-PPTX-slides](./Instantiate-presentation-for-PPTX-slides.cs) |  | Instantiate presentation for PPTX slides |
-| [Instantiate-svg-image-object-in-PPTX](./Instantiate-svg-image-object-in-PPTX.cs) |  | Instantiate svg image object in PPTX |
-| [Iterate-over-slides-and-modify-properties-PPTX](./Iterate-over-slides-and-modify-properties-PPTX.cs) |  | Iterate over slides and modify properties PPTX |
-| [Link-external-images-to-PPTX-reduce-size](./Link-external-images-to-PPTX-reduce-size.cs) |  | Link external images to PPTX reduce size |
-| [Load-audio-stream-into-PPTX-slide](./Load-audio-stream-into-PPTX-slide.cs) |  | Load audio stream into PPTX slide |
-| [Load-image-from-file-into-byte-array-PPTX](./Load-image-from-file-into-byte-array-PPTX.cs) |  | Load image from file into byte array PPTX |
-| [Load-presentation-with-embedded-images-PPTX](./Load-presentation-with-embedded-images-PPTX.cs) |  | Load presentation with embedded images PPTX |
-| [Lock-aspect-ratio-of-pictureframe-in-PPTX](./Lock-aspect-ratio-of-pictureframe-in-PPTX.cs) |  | Lock aspect ratio of pictureframe in PPTX |
-| [Manage-audio-frames-in-PPTX](./Manage-audio-frames-in-PPTX.cs) |  | Manage audio frames in PPTX |
-| [Manipulate-video-frame-properties-in-PPTX](./Manipulate-video-frame-properties-in-PPTX.cs) |  | Manipulate video frame properties in PPTX |
-| [Modify-audio-start-looping-and-volume-PPTX](./Modify-audio-start-looping-and-volume-PPTX.cs) |  | Modify audio start looping and volume PPTX |
-| [Persist-changed-presentation-as-PPTX](./Persist-changed-presentation-as-PPTX.cs) |  | Persist changed presentation as PPTX |
-| [Preserve-flash-properties-from-PPTX-presentation](./Preserve-flash-properties-from-PPTX-presentation.cs) |  | Preserve flash properties from PPTX presentation |
-| [Preserve-pixel-data-in-PPTX-to-PDF](./Preserve-pixel-data-in-PPTX-to-PDF.cs) |  | Preserve pixel data in PPTX to PDF |
-| [Programmatically-add-image-to-PPTX-collection](./Programmatically-add-image-to-PPTX-collection.cs) |  | Programmatically add image to PPTX collection |
-| [Programmatically-add-image-to-slide-master-PPTX](./Programmatically-add-image-to-slide-master-PPTX.cs) |  | Programmatically add image to slide master PPTX |
-| [Read-audio-streams-from-PPTX-as-bytes](./Read-audio-streams-from-PPTX-as-bytes.cs) |  | Read audio streams from PPTX as bytes |
-| [Read-image-file-into-byte-array-PPTX](./Read-image-file-into-byte-array-PPTX.cs) |  | Read image file into byte array PPTX |
-| [Read-image-transparency-effect-from-PPTX](./Read-image-transparency-effect-from-PPTX.cs) |  | Read image transparency effect from PPTX |
-| [Remove-embedded-audio-from-PPTX-slide](./Remove-embedded-audio-from-PPTX-slide.cs) |  | Remove embedded audio from PPTX slide |
-| [Render-PPTX-slide-to-image](./Render-PPTX-slide-to-image.cs) |  | Render PPTX slide to image |
-| [Replace-audio-thumbnail-in-PPTX](./Replace-audio-thumbnail-in-PPTX.cs) |  | Replace audio thumbnail in PPTX |
-| [Replace-image-in-PPTX-collection](./Replace-image-in-PPTX-collection.cs) |  | Replace image in PPTX collection |
-| [Replace-image-in-PPTX-with-byte-array](./Replace-image-in-PPTX-with-byte-array.cs) |  | Replace image in PPTX with byte array |
-| [Replace-images-in-PPTX-collection](./Replace-images-in-PPTX-collection.cs) |  | Replace images in PPTX collection |
-| [Replace-linked-images-in-PPTX-collection](./Replace-linked-images-in-PPTX-collection.cs) |  | Replace linked images in PPTX collection |
-| [Replace-logo-in-PPTX-slides-in-bulk](./Replace-logo-in-PPTX-slides-in-bulk.cs) |  | Replace logo in PPTX slides in bulk |
-| [Replace-video-in-PPTX-frame-preserving-geometry](./Replace-video-in-PPTX-frame-preserving-geometry.cs) |  | Replace video in PPTX frame preserving geometry |
-| [Retrieve-audio-from-slide-transition-PPTX](./Retrieve-audio-from-slide-transition-PPTX.cs) |  | Retrieve audio from slide transition PPTX |
-| [Retrieve-slide-at-index-from-PPTX](./Retrieve-slide-at-index-from-PPTX.cs) |  | Retrieve slide at index from PPTX |
-| [Retrieve-svg-from-pictureframe-in-PPTX](./Retrieve-svg-from-pictureframe-in-PPTX.cs) |  | Retrieve svg from pictureframe in PPTX |
-| [Rotate-pictureframe-in-PPTX-by-angle](./Rotate-pictureframe-in-PPTX-by-angle.cs) |  | Rotate pictureframe in PPTX by angle |
-| [Save-edited-presentation-to-PPTX-file](./Save-edited-presentation-to-PPTX-file.cs) |  | Save edited presentation to PPTX file |
-| [Save-embedded-audio-streams-from-PPTX](./Save-embedded-audio-streams-from-PPTX.cs) |  | Save embedded audio streams from PPTX |
-| [Save-flash-objects-from-PPTX-presentation](./Save-flash-objects-from-PPTX-presentation.cs) |  | Save flash objects from PPTX presentation |
-| [Save-modified-presentation-as-PPTX-and-PDF](./Save-modified-presentation-as-PPTX-and-PDF.cs) |  | Save modified presentation as PPTX and PDF |
-| [Save-presentation-as-PPTX-and-export-PDF](./Save-presentation-as-PPTX-and-export-PDF.cs) |  | Save presentation as PPTX and export PDF |
-| [Scale-pictureframe-proportionally-based-on-relative-dimensions](./Scale-pictureframe-proportionally-based-on-relative-dimensions.cs) |  | Scale pictureframe proportionally based on relative dimensions |
-| [Set-audio-playmode-and-volume-in-PPTX](./Set-audio-playmode-and-volume-in-PPTX.cs) |  | Set audio playmode and volume in PPTX |
-| [Set-background-image-on-master-PPTX](./Set-background-image-on-master-PPTX.cs) |  | Set background image on master PPTX |
-| [Set-image-as-shape-fill-in-PPTX](./Set-image-as-shape-fill-in-PPTX.cs) |  | Set image as shape fill in PPTX |
-| [Set-image-dimensions-in-PPTX-slide](./Set-image-dimensions-in-PPTX-slide.cs) |  | Set image dimensions in PPTX slide |
-| [Set-image-offsets-to-shape-edge-PPTX](./Set-image-offsets-to-shape-edge-PPTX.cs) |  | Set image offsets to shape edge PPTX |
-| [Set-image-width-and-height-in-PPTX](./Set-image-width-and-height-in-PPTX.cs) |  | Set image width and height in PPTX |
-| [Set-line-color-of-pictureframe-in-PPTX](./Set-line-color-of-pictureframe-in-PPTX.cs) |  | Set line color of pictureframe in PPTX |
-| [Set-line-width-of-pictureframe-in-PPTX](./Set-line-width-of-pictureframe-in-PPTX.cs) |  | Set line width of pictureframe in PPTX |
-| [Set-pictureframe-rotation-value-in-PPTX](./Set-pictureframe-rotation-value-in-PPTX.cs) |  | Set pictureframe rotation value in PPTX |
-| [Set-relative-size-of-pictureframe-in-PPTX](./Set-relative-size-of-pictureframe-in-PPTX.cs) |  | Set relative size of pictureframe in PPTX |
-| [Set-shape-picture-fill-mode-in-PPTX](./Set-shape-picture-fill-mode-in-PPTX.cs) |  | Set shape picture fill mode in PPTX |
-| [Set-solid-fill-for-shape-in-PPTX](./Set-solid-fill-for-shape-in-PPTX.cs) |  | Set solid fill for shape in PPTX |
-| [Synchronize-audio-frames-with-PPTX-slide](./Synchronize-audio-frames-with-PPTX-slide.cs) |  | Synchronize audio frames with PPTX slide |
-| [Transform-svg-into-shapes-for-PPTX-heading](./Transform-svg-into-shapes-for-PPTX-heading.cs) |  | Transform svg into shapes for PPTX heading |
-| [Update-audio-thumbnail-for-PPTX-slide](./Update-audio-thumbnail-for-PPTX-slide.cs) |  | Update audio thumbnail for PPTX slide |
-| [Update-audio-timing-in-PPTX-slide](./Update-audio-timing-in-PPTX-slide.cs) |  | Update audio timing in PPTX slide |
-| [Update-heading-images-in-PPTX-collection](./Update-heading-images-in-PPTX-collection.cs) |  | Update heading images in PPTX collection |
-| [Update-image-collection-in-PPTX](./Update-image-collection-in-PPTX.cs) |  | Update image collection in PPTX |
-| [Write-modified-presentation-to-PPTX-file](./Write-modified-presentation-to-PPTX-file.cs) |  | Write modified presentation to PPTX file |
+| [Add-audio-frame-pause-on-shape-click](./Add-audio-frame-pause-on-shape-click.cs) |  | Add audio frame pause on shape click |
+| [Add-audio-frame-with-custom-fadein](./Add-audio-frame-with-custom-fadein.cs) |  | Add audio frame with custom fadein |
+| [Add-audio-frame-with-custom-start-offset](./Add-audio-frame-with-custom-start-offset.cs) |  | Add audio frame with custom start offset |
+| [Add-captions-to-video-frames-and-export](./Add-captions-to-video-frames-and-export.cs) |  | Add captions to video frames and export |
+| [Add-flash-object-to-slide-and-hide](./Add-flash-object-to-slide-and-hide.cs) |  | Add flash object to slide and hide |
+| [Add-high-resolution-PNG-picture-frame-thumbnail](./Add-high-resolution-PNG-picture-frame-thumbnail.cs) |  | Add high resolution PNG picture frame thumbnail |
+| [Add-jpeg-image-to-first-slide](./Add-jpeg-image-to-first-slide.cs) |  | Add jpeg image to first slide |
+| [Add-mp3-audio-frames-to-slides-loop](./Add-mp3-audio-frames-to-slides-loop.cs) |  | Add mp3 audio frames to slides loop |
+| [Add-mp3-audio-to-slide-three-loop](./Add-mp3-audio-to-slide-three-loop.cs) |  | Add mp3 audio to slide three loop |
+| [Add-picture-frame-from-embedded-resource](./Add-picture-frame-from-embedded-resource.cs) |  | Add picture frame from embedded resource |
+| [Add-picture-frame-with-rotation-verify-boundingbox](./Add-picture-frame-with-rotation-verify-boundingbox.cs) |  | Add picture frame with rotation verify boundingbox |
+| [Add-picture-frame-with-size-and-position](./Add-picture-frame-with-size-and-position.cs) |  | Add picture frame with size and position |
+| [Add-proportional-scaling-to-picture-frame](./Add-proportional-scaling-to-picture-frame.cs) |  | Add proportional scaling to picture frame |
+| [Add-transparent-picture-frame-overlay](./Add-transparent-picture-frame-overlay.cs) |  | Add transparent picture frame overlay |
+| [Add-video-frame-third-slide-autoplay-loop](./Add-video-frame-third-slide-autoplay-loop.cs) |  | Add video frame third slide autoplay loop |
+| [Add-watermark-picture-frame-to-lower-right](./Add-watermark-picture-frame-to-lower-right.cs) |  | Add watermark picture frame to lower right |
+| [Adjust-crop-margins-to-square-picture-frame](./Adjust-crop-margins-to-square-picture-frame.cs) |  | Adjust crop margins to square picture frame |
+| [Apply-blur-effect-to-picture-frame](./Apply-blur-effect-to-picture-frame.cs) |  | Apply blur effect to picture frame |
+| [Apply-custom-color-overlay-to-picture-frame](./Apply-custom-color-overlay-to-picture-frame.cs) |  | Apply custom color overlay to picture frame |
+| [Apply-drop-shadow-to-picture-frame](./Apply-drop-shadow-to-picture-frame.cs) |  | Apply drop shadow to picture frame |
+| [Apply-fadein-to-video-frames-and-save](./Apply-fadein-to-video-frames-and-save.cs) |  | Apply fadein to video frames and save |
+| [Apply-grayscale-filter-to-all-images](./Apply-grayscale-filter-to-all-images.cs) |  | Apply grayscale filter to all images |
+| [Apply-grayscale-filter-to-picture-frame](./Apply-grayscale-filter-to-picture-frame.cs) |  | Apply grayscale filter to picture frame |
+| [Apply-inversion-filter-to-title-slide-frame](./Apply-inversion-filter-to-title-slide-frame.cs) |  | Apply inversion filter to title slide frame |
+| [Apply-picture-fill-shape-image-collection](./Apply-picture-fill-shape-image-collection.cs) |  | Apply picture fill shape image collection |
+| [Apply-vignette-effect-to-picture-frame](./Apply-vignette-effect-to-picture-frame.cs) |  | Apply vignette effect to picture frame |
+| [Auto-adjust-picture-frame-width-ratio](./Auto-adjust-picture-frame-width-ratio.cs) |  | Auto adjust picture frame width ratio |
+| [Auto-scale-picture-frame-to-fill-slide](./Auto-scale-picture-frame-to-fill-slide.cs) |  | Auto scale picture frame to fill slide |
+| [Batch-delete-hidden-picture-frames](./Batch-delete-hidden-picture-frames.cs) |  | Batch delete hidden picture frames |
+| [Batch-extract-audio-files-to-media-library](./Batch-extract-audio-files-to-media-library.cs) |  | Batch extract audio files to media library |
+| [Batch-extract-flash-objects-csv-report](./Batch-extract-flash-objects-csv-report.cs) |  | Batch extract flash objects csv report |
+| [Batch-replace-picture-frames-using-mapping-dictionary](./Batch-replace-picture-frames-using-mapping-dictionary.cs) |  | Batch replace picture frames using mapping dictionary |
+| [Cache-audio-frame-thumbnails-in-folder](./Cache-audio-frame-thumbnails-in-folder.cs) |  | Cache audio frame thumbnails in folder |
+| [Center-picture-frame-horizontally-and-vertically](./Center-picture-frame-horizontally-and-vertically.cs) |  | Center picture frame horizontally and vertically |
+| [Clone-slide-with-flash-and-preserve-SWF](./Clone-slide-with-flash-and-preserve-SWF.cs) |  | Clone slide with flash and preserve SWF |
+| [Compress-audio-streams-to-128kbps](./Compress-audio-streams-to-128kbps.cs) |  | Compress audio streams to 128kbps |
+| [Compress-picture-frame-image-without-quality-loss](./Compress-picture-frame-image-without-quality-loss.cs) |  | Compress picture frame image without quality loss |
+| [Compress-picture-frame-images-after-slide-ten](./Compress-picture-frame-images-after-slide-ten.cs) |  | Compress picture frame images after slide ten |
+| [Compress-picture-frame-images-losslessly-and-verify](./Compress-picture-frame-images-losslessly-and-verify.cs) |  | Compress picture frame images losslessly and verify |
+| [Compress-picture-frame-images-to-150kb-each](./Compress-picture-frame-images-to-150kb-each.cs) |  | Compress picture frame images to 150kb each |
+| [Convert-picture-frame-images-to-grayscale](./Convert-picture-frame-images-to-grayscale.cs) |  | Convert picture frame images to grayscale |
+| [Convert-SVG-graphic-to-shape-objects](./Convert-SVG-graphic-to-shape-objects.cs) |  | Convert SVG graphic to shape objects |
+| [Convert-svg-picture-frames-to-EMF](./Convert-svg-picture-frames-to-EMF.cs) |  | Convert svg picture frames to EMF |
+| [Convert-svg-picture-frames-to-PNG](./Convert-svg-picture-frames-to-PNG.cs) |  | Convert svg picture frames to PNG |
+| [Convert-video-frames-to-PDF-preserve-placeholders](./Convert-video-frames-to-PDF-preserve-placeholders.cs) |  | Convert video frames to PDF preserve placeholders |
+| [Create-custom-slide-layout-with-video-audio](./Create-custom-slide-layout-with-video-audio.cs) |  | Create custom slide layout with video audio |
+| [Create-SVG-sprite-sheet-from-picture-frames](./Create-SVG-sprite-sheet-from-picture-frames.cs) |  | Create SVG sprite sheet from picture frames |
+| [Crop-picture-frame-top-10pct-bottom-5pct](./Crop-picture-frame-top-10pct-bottom-5pct.cs) |  | Crop picture frame top 10pct bottom 5pct |
+| [Detect-and-log-missing-audio-frame-thumbnails](./Detect-and-log-missing-audio-frame-thumbnails.cs) |  | Detect and log missing audio frame thumbnails |
+| [Detect-broken-media-links-and-remove](./Detect-broken-media-links-and-remove.cs) |  | Detect broken media links and remove |
+| [Detect-duplicate-media-files-and-consolidate](./Detect-duplicate-media-files-and-consolidate.cs) |  | Detect duplicate media files and consolidate |
+| [Detect-excessive-crop-and-reset-picture-frame](./Detect-excessive-crop-and-reset-picture-frame.cs) |  | Detect excessive crop and reset picture frame |
+| [Detect-overlapping-picture-frames-adjust-zorder](./Detect-overlapping-picture-frames-adjust-zorder.cs) |  | Detect overlapping picture frames adjust zorder |
+| [Download-png-image-and-set-slide-background](./Download-png-image-and-set-slide-background.cs) |  | Download png image and set slide background |
+| [Duplicate-picture-frame-with-pixel-offset](./Duplicate-picture-frame-with-pixel-offset.cs) |  | Duplicate picture frame with pixel offset |
+| [Enable-compression-for-all-picture-frames](./Enable-compression-for-all-picture-frames.cs) |  | Enable compression for all picture frames |
+| [Encrypt-presentation-media-with-password](./Encrypt-presentation-media-with-password.cs) |  | Encrypt presentation media with password |
+| [Export-all-media-assets-to-structured-directories](./Export-all-media-assets-to-structured-directories.cs) |  | Export all media assets to structured directories |
+| [Export-audio-frames-per-slide-as-mp3](./Export-audio-frames-per-slide-as-mp3.cs) |  | Export audio frames per slide as mp3 |
+| [Export-image-collection-to-folder-sequentially](./Export-image-collection-to-folder-sequentially.cs) |  | Export image collection to folder sequentially |
+| [Export-media-assets-to-ZIP-preserve-hierarchy](./Export-media-assets-to-ZIP-preserve-hierarchy.cs) |  | Export media assets to ZIP preserve hierarchy |
+| [Export-slide-background-images-preserve-original-format](./Export-slide-background-images-preserve-original-format.cs) |  | Export slide background images preserve original format |
+| [Export-slide-backgrounds-as-high-resolution-PDF](./Export-slide-backgrounds-as-high-resolution-PDF.cs) |  | Export slide backgrounds as high resolution PDF |
+| [Export-slide-png-images-preserve-embedded-media](./Export-slide-png-images-preserve-embedded-media.cs) |  | Export slide png images preserve embedded media |
+| [Export-svg-picture-frame-to-external-file](./Export-svg-picture-frame-to-external-file.cs) |  | Export svg picture frame to external file |
+| [Extract-audio-frame-data-and-save-mp3](./Extract-audio-frame-data-and-save-mp3.cs) |  | Extract audio frame data and save mp3 |
+| [Extract-audio-frames-convert-to-wav](./Extract-audio-frames-convert-to-wav.cs) |  | Extract audio frames convert to wav |
+| [Extract-flash-object-by-name-and-save](./Extract-flash-object-by-name-and-save.cs) |  | Extract flash object by name and save |
+| [Extract-flash-objects-and-archive-zip](./Extract-flash-objects-and-archive-zip.cs) |  | Extract flash objects and archive zip |
+| [Extract-picture-frame-image-and-save-png](./Extract-picture-frame-image-and-save-png.cs) |  | Extract picture frame image and save png |
+| [Extract-SVG-markup-from-picture-frame](./Extract-SVG-markup-from-picture-frame.cs) |  | Extract SVG markup from picture frame |
+| [Extract-video-frame-metadata-duration-resolution](./Extract-video-frame-metadata-duration-resolution.cs) |  | Extract video frame metadata duration resolution |
+| [Extract-video-streams-from-presentation](./Extract-video-streams-from-presentation.cs) |  | Extract video streams from presentation |
+| [Generate-video-frame-thumbnail-with-custom-timestamp](./Generate-video-frame-thumbnail-with-custom-timestamp.cs) |  | Generate video frame thumbnail with custom timestamp |
+| [Insert-audio-frame-stop-on-slide-transition](./Insert-audio-frame-stop-on-slide-transition.cs) |  | Insert audio frame stop on slide transition |
+| [Insert-base64-image-into-slide](./Insert-base64-image-into-slide.cs) |  | Insert base64 image into slide |
+| [Insert-flash-object-with-click-trigger](./Insert-flash-object-with-click-trigger.cs) |  | Insert flash object with click trigger |
+| [Insert-GIF-image-into-slide-once](./Insert-GIF-image-into-slide-once.cs) |  | Insert GIF image into slide once |
+| [Insert-high-resolution-image-and-generate-thumbnails](./Insert-high-resolution-image-and-generate-thumbnails.cs) |  | Insert high resolution image and generate thumbnails |
+| [Insert-image-as-slide-background-with-tint](./Insert-image-as-slide-background-with-tint.cs) |  | Insert image as slide background with tint |
+| [Insert-image-into-placeholder-with-gradient](./Insert-image-into-placeholder-with-gradient.cs) |  | Insert image into placeholder with gradient |
+| [Insert-image-into-slide-master-placeholder](./Insert-image-into-slide-master-placeholder.cs) |  | Insert image into slide master placeholder |
+| [Insert-image-into-slide-master](./Insert-image-into-slide-master.cs) |  | Insert image into slide master |
+| [Insert-network-stream-image-into-picture-frame](./Insert-network-stream-image-into-picture-frame.cs) |  | Insert network stream image into picture frame |
+| [Insert-raster-image-and-apply-hue-shift](./Insert-raster-image-and-apply-hue-shift.cs) |  | Insert raster image and apply hue shift |
+| [Insert-SVG-picture-frame-on-slide-two](./Insert-SVG-picture-frame-on-slide-two.cs) |  | Insert SVG picture frame on slide two |
+| [Insert-SVG-picture-frame-with-45-degree-rotation](./Insert-SVG-picture-frame-with-45-degree-rotation.cs) |  | Insert SVG picture frame with 45 degree rotation |
+| [Insert-video-frame-slide-with-autoplay](./Insert-video-frame-slide-with-autoplay.cs) |  | Insert video frame slide with autoplay |
+| [Iterate-audio-frames-set-volume-per-slide](./Iterate-audio-frames-set-volume-per-slide.cs) |  | Iterate audio frames set volume per slide |
+| [Link-picture-frame-to-cloud-image-url](./Link-picture-frame-to-cloud-image-url.cs) |  | Link picture frame to cloud image url |
+| [Link-picture-frame-to-external-image](./Link-picture-frame-to-external-image.cs) |  | Link picture frame to external image |
+| [List-flash-objects-and-output-sizes](./List-flash-objects-and-output-sizes.cs) |  | List flash objects and output sizes |
+| [List-media-files-with-slide-numbers](./List-media-files-with-slide-numbers.cs) |  | List media files with slide numbers |
+| [List-slides-with-locked-picture-frames](./List-slides-with-locked-picture-frames.cs) |  | List slides with locked picture frames |
+| [Load-pptx-presentation-and-create-presentation](./Load-pptx-presentation-and-create-presentation.cs) |  | Load pptx presentation and create presentation |
+| [Load-presentation-and-remove-audio-frames](./Load-presentation-and-remove-audio-frames.cs) |  | Load presentation and remove audio frames |
+| [Lock-aspect-ratio-of-picture-frame](./Lock-aspect-ratio-of-picture-frame.cs) |  | Lock aspect ratio of picture frame |
+| [Merge-picture-frames-into-composite-image](./Merge-picture-frames-into-composite-image.cs) |  | Merge picture frames into composite image |
+| [Merge-pptx-presentations-with-audio-frames](./Merge-pptx-presentations-with-audio-frames.cs) |  | Merge pptx presentations with audio frames |
+| [Merge-pptx-presentations-with-media-deduplication](./Merge-pptx-presentations-with-media-deduplication.cs) |  | Merge pptx presentations with media deduplication |
+| [Mute-audio-frame-on-confidential-slides](./Mute-audio-frame-on-confidential-slides.cs) |  | Mute audio frame on confidential slides |
+| [Normalize-audio-frame-volume-across-slides](./Normalize-audio-frame-volume-across-slides.cs) |  | Normalize audio frame volume across slides |
+| [Remove-cropped-areas-from-picture-frame](./Remove-cropped-areas-from-picture-frame.cs) |  | Remove cropped areas from picture frame |
+| [Remove-zero-size-picture-frames](./Remove-zero-size-picture-frames.cs) |  | Remove zero size picture frames |
+| [Render-first-picture-frame-thumbnail-per-slide](./Render-first-picture-frame-thumbnail-per-slide.cs) |  | Render first picture frame thumbnail per slide |
+| [Reorder-picture-frames-by-zorder-programmatically](./Reorder-picture-frames-by-zorder-programmatically.cs) |  | Reorder picture frames by zorder programmatically |
+| [Replace-audio-clip-with-mp3-by-index](./Replace-audio-clip-with-mp3-by-index.cs) |  | Replace audio clip with mp3 by index |
+| [Replace-audio-frame-thumbnail-with-placeholder](./Replace-audio-frame-thumbnail-with-placeholder.cs) |  | Replace audio frame thumbnail with placeholder |
+| [Replace-audio-frame-thumbnail-with-waveform-image](./Replace-audio-frame-thumbnail-with-waveform-image.cs) |  | Replace audio frame thumbnail with waveform image |
+| [Replace-flash-object-binary-with-new-SWF](./Replace-flash-object-binary-with-new-SWF.cs) |  | Replace flash object binary with new SWF |
+| [Replace-flash-object-with-placeholder-preserve-position](./Replace-flash-object-with-placeholder-preserve-position.cs) |  | Replace flash object with placeholder preserve position |
+| [Replace-image-in-presentation-with-bmp](./Replace-image-in-presentation-with-bmp.cs) |  | Replace image in presentation with bmp |
+| [Replace-JPEG-images-with-PNG](./Replace-JPEG-images-with-PNG.cs) |  | Replace JPEG images with PNG |
+| [Replace-JPEG-picture-frames-with-WebP](./Replace-JPEG-picture-frames-with-WebP.cs) |  | Replace JPEG picture frames with WebP |
+| [Replace-low-resolution-images-with-high-resolution](./Replace-low-resolution-images-with-high-resolution.cs) |  | Replace low resolution images with high resolution |
+| [Replace-picture-frame-image-with-QR-code](./Replace-picture-frame-image-with-QR-code.cs) |  | Replace picture frame image with QR code |
+| [Replace-picture-frame-image-with-vector](./Replace-picture-frame-image-with-vector.cs) |  | Replace picture frame image with vector |
+| [Replace-video-frames-with-animated-GIF](./Replace-video-frames-with-animated-GIF.cs) |  | Replace video frames with animated GIF |
+| [Report-audio-frame-durations-total-playback](./Report-audio-frame-durations-total-playback.cs) |  | Report audio frame durations total playback |
+| [Report-picture-frame-dimensions-scaling-cropping](./Report-picture-frame-dimensions-scaling-cropping.cs) |  | Report picture frame dimensions scaling cropping |
+| [Report-slide-media-type-size-and-encoding](./Report-slide-media-type-size-and-encoding.cs) |  | Report slide media type size and encoding |
+| [Resize-picture-frame-images-to-800x600](./Resize-picture-frame-images-to-800x600.cs) |  | Resize picture frame images to 800x600 |
+| [Resize-picture-frame-images-to-max-800px](./Resize-picture-frame-images-to-max-800px.cs) |  | Resize picture frame images to max 800px |
+| [Scale-picture-frame-relative-width-height](./Scale-picture-frame-relative-width-height.cs) |  | Scale picture frame relative width height |
+| [Set-audio-frame-hideatshowing-based-on-transition](./Set-audio-frame-hideatshowing-based-on-transition.cs) |  | Set audio frame hideatshowing based on transition |
+| [Set-audio-frame-hideatshowing-for-confidential-slides](./Set-audio-frame-hideatshowing-for-confidential-slides.cs) |  | Set audio frame hideatshowing for confidential slides |
+| [Set-audio-frame-islooped-false-for-video](./Set-audio-frame-islooped-false-for-video.cs) |  | Set audio frame islooped false for video |
+| [Set-audio-frame-loop-on-even-slides](./Set-audio-frame-loop-on-even-slides.cs) |  | Set audio frame loop on even slides |
+| [Set-audio-frame-start-relative-to-transition](./Set-audio-frame-start-relative-to-transition.cs) |  | Set audio frame start relative to transition |
+| [Set-audio-frame-volume-and-autoplay](./Set-audio-frame-volume-and-autoplay.cs) |  | Set audio frame volume and autoplay |
+| [Set-common-logo-as-slide-background](./Set-common-logo-as-slide-background.cs) |  | Set common logo as slide background |
+| [Set-custom-poster-image-for-video-frames](./Set-custom-poster-image-for-video-frames.cs) |  | Set custom poster image for video frames |
+| [Set-picture-frame-border-color-and-thickness](./Set-picture-frame-border-color-and-thickness.cs) |  | Set picture frame border color and thickness |
+| [Set-picture-frame-fill-to-tile-mode](./Set-picture-frame-fill-to-tile-mode.cs) |  | Set picture frame fill to tile mode |
+| [Set-PNG-thumbnail-for-audio-frame](./Set-PNG-thumbnail-for-audio-frame.cs) |  | Set PNG thumbnail for audio frame |
+| [Set-slide-master-background-to-tile](./Set-slide-master-background-to-tile.cs) |  | Set slide master background to tile |
+| [Set-TIFF-background-on-slide-five-stretch](./Set-TIFF-background-on-slide-five-stretch.cs) |  | Set TIFF background on slide five stretch |
+| [Set-video-frame-playback-speed-to-1-5x](./Set-video-frame-playback-speed-to-1-5x.cs) |  | Set video frame playback speed to 1 5x |
+| [Split-SVG-image-into-shape-objects](./Split-SVG-image-into-shape-objects.cs) |  | Split SVG image into shape objects |
+| [Summarize-slide-media-objects-and-sizes](./Summarize-slide-media-objects-and-sizes.cs) |  | Summarize slide media objects and sizes |
+| [Sync-audio-frame-start-to-slide-duration](./Sync-audio-frame-start-to-slide-duration.cs) |  | Sync audio frame start to slide duration |
+| [Unlock-aspect-ratio-of-picture-frame](./Unlock-aspect-ratio-of-picture-frame.cs) |  | Unlock aspect ratio of picture frame |
+| [Update-audio-frame-volume-uniformly](./Update-audio-frame-volume-uniformly.cs) |  | Update audio frame volume uniformly |
+| [Validate-audio-frame-thumbnail-and-report-missing](./Validate-audio-frame-thumbnail-and-report-missing.cs) |  | Validate audio frame thumbnail and report missing |
+| [Validate-media-file-size-before-saving](./Validate-media-file-size-before-saving.cs) |  | Validate media file size before saving |
+| [Validate-picture-frame-aspect-ratio-consistency](./Validate-picture-frame-aspect-ratio-consistency.cs) |  | Validate picture frame aspect ratio consistency |
+| [Validate-picture-frame-image-source-existence](./Validate-picture-frame-image-source-existence.cs) |  | Validate picture frame image source existence |
+| [Validate-slides-have-image-and-report-missing](./Validate-slides-have-image-and-report-missing.cs) |  | Validate slides have image and report missing |
+| [Validate-video-frame-codec-and-report-missing](./Validate-video-frame-codec-and-report-missing.cs) |  | Validate video frame codec and report missing |
 
 ## Category Statistics
 
-- Total examples: 167
+- Total examples: 149
 
 ## Key API Surface
 
-- `Aspose.Slides.Presentation`
 - `Aspose.Slides.Export`
 - `Aspose.Slides`
+- `Aspose.Slides.Presentation`
 - `Aspose.Slides.Export.SaveFormat.Pptx`
+- `Aspose.Slides.IPictureFrame`
 - `Aspose.Slides.ISlide`
 - `Aspose.Slides.IPPImage`
-- `Aspose.Slides.ShapeType.Rectangle`
-- `Aspose.Slides.IPictureFrame`
 - `Aspose.Slides.IShape`
-- `Aspose.Slides.AudioVolumeMode.Loud`
-- `Aspose.Slides.IVideoFrame`
-- `Aspose.Slides.LoadingStreamBehavior.KeepLocked`
-- `Aspose.Slides.IVideo`
+- `Aspose.Slides.ShapeType.Rectangle`
 - `Aspose.Slides.IAudioFrame`
-- `Aspose.Slides.AudioPlayModePreset.Auto`
+- `Aspose.Slides.IImage`
+- `Aspose.Slides.Images.FromFile`
+- `Aspose.Slides.IVideoFrame`
+- `Aspose.Slides.`
+- `Aspose.Slides.PptxUnsupportedFormatException`
 
 ## Common Code Pattern
 
@@ -245,5 +233,5 @@ using (Presentation pres = new Presentation("input.pptx"))
 - Save the presentation using `Presentation.Save(...)`.
 
 <!-- AUTOGENERATED:START -->
-Updated: 2026-03-20
+Updated: 2026-04-09
 <!-- AUTOGENERATED:END -->
