@@ -20,6 +20,7 @@ working within the **presentation-ink-objects** category.
 
 ## Required Namespaces
 
+<<<<<<< gen-presentation-ink-objects-b23e40
 - `using System;` (35/35 files)
 - `using Aspose.Slides.Export;` (35/35 files)
 - `using System.IO;` (34/35 files)
@@ -31,12 +32,28 @@ working within the **presentation-ink-objects** category.
 - `using Aspose.Slides.Theme;` (1/35 files)
 - `using System.Xml.Serialization;` (1/35 files)
 - `using System.Xml;` (1/35 files)
+=======
+- `using System;` (31/31 files)
+- `using Aspose.Slides.Export;` (31/31 files)
+- `using System.IO;` (30/31 files)
+- `using Aspose.Slides;` (29/31 files)
+- `using Aspose.Slides.Ink;` (20/31 files)
+- `using System.Drawing;` (16/31 files)
+- `using System.Collections.Generic;` (4/31 files)
+- `using System.Text.Json;` (2/31 files)
+- `using Aspose.Slides.Theme;` (1/31 files)
+- `using System.Xml.Serialization;` (1/31 files)
+- `using System.Xml;` (1/31 files)
+>>>>>>> release-26.4.0
 
 ## Files in this folder
 
 | File | Key APIs | Description |
 |------|----------|-------------|
+<<<<<<< gen-presentation-ink-objects-b23e40
 | [Add-inkshape-trace-to-collection](./Add-inkshape-trace-to-collection.cs) |  | Add inkshape trace to collection |
+=======
+>>>>>>> release-26.4.0
 | [Adjust-inkshape-brush-size-based-on-zoom](./Adjust-inkshape-brush-size-based-on-zoom.cs) |  | Adjust inkshape brush size based on zoom |
 | [Append-points-to-existing-trace](./Append-points-to-existing-trace.cs) |  | Append points to existing trace |
 | [Calculate-total-inkstroke-length-from-trace](./Calculate-total-inkstroke-length-from-trace.cs) |  | Calculate total inkstroke length from trace |
@@ -60,11 +77,16 @@ working within the **presentation-ink-objects** category.
 | [Remove-trace-points-above-threshold-from-inkshape](./Remove-trace-points-above-threshold-from-inkshape.cs) |  | Remove trace points above threshold from inkshape |
 | [Render-inkshape-on-slide-with-brush](./Render-inkshape-on-slide-with-brush.cs) |  | Render inkshape on slide with brush |
 | [Replace-inkshape-with-new-objects-and-save](./Replace-inkshape-with-new-objects-and-save.cs) |  | Replace inkshape with new objects and save |
+<<<<<<< gen-presentation-ink-objects-b23e40
 | [Replace-inkshape-with-template-on-all-slides](./Replace-inkshape-with-template-on-all-slides.cs) |  | Replace inkshape with template on all slides |
 | [Report-inkshape-dimensions-brush-color-points](./Report-inkshape-dimensions-brush-color-points.cs) |  | Report inkshape dimensions brush color points |
 | [Reset-inkshape-clear-all-traces](./Reset-inkshape-clear-all-traces.cs) |  | Reset inkshape clear all traces |
 | [Rotate-inkshape-trace-by-ninety-degrees](./Rotate-inkshape-trace-by-ninety-degrees.cs) |  | Rotate inkshape trace by ninety degrees |
 | [Scale-inkshape-to-container-preserve-stroke](./Scale-inkshape-to-container-preserve-stroke.cs) |  | Scale inkshape to container preserve stroke |
+=======
+| [Report-inkshape-dimensions-brush-color-points](./Report-inkshape-dimensions-brush-color-points.cs) |  | Report inkshape dimensions brush color points |
+| [Rotate-inkshape-trace-by-ninety-degrees](./Rotate-inkshape-trace-by-ninety-degrees.cs) |  | Rotate inkshape trace by ninety degrees |
+>>>>>>> release-26.4.0
 | [Scale-inkshape-uniformly-keep-brush-size](./Scale-inkshape-uniformly-keep-brush-size.cs) |  | Scale inkshape uniformly keep brush size |
 | [Serialize-inkshape-brush-and-trace-to-XML](./Serialize-inkshape-brush-and-trace-to-XML.cs) |  | Serialize inkshape brush and trace to XML |
 | [Set-inkshape-brush-size](./Set-inkshape-brush-size.cs) |  | Set inkshape brush size |
@@ -74,7 +96,11 @@ working within the **presentation-ink-objects** category.
 
 ## Category Statistics
 
+<<<<<<< gen-presentation-ink-objects-b23e40
 - Total examples: 35
+=======
+- Total examples: 31
+>>>>>>> release-26.4.0
 
 ## Key API Surface
 
@@ -84,12 +110,21 @@ working within the **presentation-ink-objects** category.
 - `Aspose.Slides.Ink`
 - `Aspose.Slides.Presentation`
 - `Aspose.Slides.Export.SaveFormat.Pptx`
+<<<<<<< gen-presentation-ink-objects-b23e40
 - `Aspose.Slides.IShape`
 - `Aspose.Slides.ISlide`
 - `Aspose.Slides.Ink.IInkTrace`
 - `Aspose.Slides.`
 - `Aspose.Slides.FillType.Solid`
 - `Aspose.Slides.Ink.IInkBrush`
+=======
+- `Aspose.Slides.ISlide`
+- `Aspose.Slides.IShape`
+- `Aspose.Slides.Ink.IInkTrace`
+- `Aspose.Slides.FillType.Solid`
+- `Aspose.Slides.Ink.IInkBrush`
+- `Aspose.Slides.`
+>>>>>>> release-26.4.0
 - `Aspose.Slides.IAutoShape`
 - `Aspose.Slides.ShapeType.Line`
 - `Aspose.Slides.LineSketchType.Scribble`
