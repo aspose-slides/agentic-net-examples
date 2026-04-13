@@ -1,85 +1,77 @@
 using System;
 using System.IO;
+using System.Collections.Generic;
+using System.Drawing;
 using System.Text.Json;
 using Aspose.Slides;
 using Aspose.Slides.Export;
-using Aspose.Slides.Ink;
-using System.Drawing;
 
-class Program
+namespace InkImportExample
 {
-    static void Main()
+    class Program
     {
-        // Input JSON file containing trace coordinate data
-        string jsonPath = "traces.json";
-        // Output presentation file
-        string outputPptx = "output.pptx";
-
-        // Verify that the JSON file exists
-        if (!File.Exists(jsonPath))
+        static void Main(string[] args)
         {
-            Console.WriteLine("Input JSON file not found: " + jsonPath);
-            return;
-        }
+            // Path to the JSON file containing ink trace data
+            string jsonFilePath = "inkData.json";
 
-        try
-        {
-            // Read and deserialize JSON content
-            string jsonContent = File.ReadAllText(jsonPath);
-            InkTraceData[] traceData = JsonSerializer.Deserialize<InkTraceData[]>(jsonContent);
-
-            // Create a new presentation
-            Presentation pres = new Presentation();
-            ISlide slide = pres.Slides[0];
-
-            // Create an Ink shape (placeholder rectangle to host the ink)
-            // Note: Aspose.Slides does not provide a direct method to add an Ink shape via the API.
-            // As a workaround, we add a rectangle shape and later replace its content with Ink traces if needed.
-            IAutoShape placeholder = slide.Shapes.AddAutoShape(ShapeType.Rectangle, 100, 100, 400, 300);
-            placeholder.FillFormat.FillType = FillType.NoFill;
-            placeholder.LineFormat.SketchFormat.SketchType = LineSketchType.Scribble;
-
-            // Iterate over each trace and add points to the Ink shape
-            // Since the Ink.Traces collection is read‑only, we cannot directly assign traces.
-            // This example demonstrates how one would process the points; actual Ink reconstruction
-            // would require Aspose.Slides API support for creating InkTrace objects.
-            foreach (InkTraceData trace in traceData)
+            // Verify that the JSON file exists
+            if (!File.Exists(jsonFilePath))
             {
-                // Convert JSON points to PointF array
-                PointF[] points = new PointF[trace.Points.Length];
-                for (int i = 0; i < trace.Points.Length; i++)
-                {
-                    points[i] = new PointF(trace.Points[i].X, trace.Points[i].Y);
-                }
-
-                // Placeholder for creating an InkTrace from points
-                // InkTrace inkTrace = new InkTrace(); // Not directly instantiable with points
-                // Add inkTrace to the Ink shape if API permits
+                Console.WriteLine("Error: JSON file not found at path: " + jsonFilePath);
+                return;
             }
 
-            // Save the presentation
-            pres.Save(outputPptx, SaveFormat.Pptx);
-        }
-        catch (NotSupportedException)
-        {
-            // Format not supported
-            // Comment: The provided file format is not supported by Aspose.Slides.
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine("An error occurred: " + ex.Message);
-        }
-    }
+            // Read and deserialize the JSON content.
+            // Expected format: [[{ "X": 0.0, "Y": 0.0 }, ...], ...] (array of traces, each trace is an array of points)
+            string jsonContent = File.ReadAllText(jsonFilePath);
+            List<List<PointF>> inkTraces = JsonSerializer.Deserialize<List<List<PointF>>>(jsonContent);
 
-    // Helper classes for JSON deserialization
-    private class InkTraceData
-    {
-        public PointData[] Points { get; set; }
-    }
+            // Create a new presentation
+            using (Presentation presentation = new Presentation())
+            {
+                // Get the first slide
+                ISlide slide = presentation.Slides[0];
 
-    private class PointData
-    {
-        public float X { get; set; }
-        public float Y { get; set; }
+                // Add a line shape that will act as a placeholder for the ink strokes
+                // (Aspose.Slides does not provide a direct AddInk method)
+                IShape inkShape = slide.Shapes.AddAutoShape(ShapeType.Line, 50, 50, 400, 0);
+
+                // Cast to AutoShape to access line formatting
+                IAutoShape autoInkShape = inkShape as IAutoShape;
+                if (autoInkShape != null)
+                {
+                    // Configure the line to use a scribble sketch, which visually resembles ink
+                    autoInkShape.LineFormat.SketchFormat.SketchType = LineSketchType.Scribble;
+
+                    // The following demonstrates how you might process the deserialized trace data.
+                    // Direct assignment of trace points to an Ink shape is not exposed in the API,
+                    // so this example only logs the points for illustration.
+                    if (inkTraces != null)
+                    {
+                        int traceIndex = 0;
+                        foreach (List<PointF> trace in inkTraces)
+                        {
+                            Console.WriteLine($"Trace {traceIndex}:");
+                            foreach (PointF point in trace)
+                            {
+                                Console.WriteLine($"  Point X={point.X}, Y={point.Y}");
+                            }
+                            traceIndex++;
+                        }
+                    }
+                }
+
+                // Save the presentation
+                try
+                {
+                    presentation.Save("Output.pptx", SaveFormat.Pptx);
+                }
+                catch (NotSupportedException)
+                {
+                    // Format not supported
+                }
+            }
+        }
     }
 }
