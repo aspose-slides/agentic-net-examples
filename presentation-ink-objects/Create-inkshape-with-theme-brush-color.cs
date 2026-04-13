@@ -2,98 +2,101 @@ using System;
 using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
-using Aspose.Slides.Ink;
+using Aspose.Slides.Theme;
 
-namespace InkShapeFactoryExample
+namespace AsposeSlidesInkFactory
 {
     class Program
     {
         static void Main(string[] args)
         {
-            string inputPath = "input.pptx";
-            string outputPath = "output.pptx";
-            string selectedTheme = "Dark";
-
-            if (!File.Exists(inputPath))
-            {
-                Console.WriteLine("Input file does not exist: " + inputPath);
-                return;
-            }
-
-            Aspose.Slides.Presentation presentation = null;
-            try
-            {
-                presentation = new Aspose.Slides.Presentation(inputPath);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Failed to load presentation. Possible unsupported format. " + ex.Message);
-                return;
-            }
-
-            ApplyThemeToInk(presentation, selectedTheme);
+            string presentationPath = "input.pptx";
+            Presentation pres = null;
 
             try
             {
-                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Failed to save presentation: " + ex.Message);
-            }
-            finally
-            {
-                if (presentation != null)
+                if (File.Exists(presentationPath))
                 {
-                    presentation.Dispose();
+                    pres = new Presentation(presentationPath);
                 }
+                else
+                {
+                    pres = new Presentation();
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle unsupported format or loading errors
+                Console.WriteLine("Failed to load presentation: " + ex.Message);
+                return;
+            }
+
+            // Example usage of the factory method
+            IAutoShape inkShape = CreateInkShape(pres, 0, 50f, 50f, 400f, 2f, "Accent3");
+            if (inkShape != null)
+            {
+                Console.WriteLine("Ink shape created on slide 0.");
+            }
+
+            try
+            {
+                pres.Save("output.pptx", SaveFormat.Pptx);
+            }
+            catch (Exception ex)
+            {
+                // Handle save errors (e.g., unsupported format)
+                Console.WriteLine("Failed to save presentation: " + ex.Message);
             }
         }
 
-        // Factory method that sets the ink brush color based on a theme
-        static void ApplyThemeToInk(Aspose.Slides.Presentation pres, string theme)
+        // Factory method to create an Ink-like shape with brush color based on a theme accent
+        static IAutoShape CreateInkShape(Presentation pres, int slideIndex, float x, float y, float width, float height, string themeAccent)
         {
-            // Assume the first shape on the first slide is an Ink shape
-            Aspose.Slides.ISlide slide = pres.Slides[0];
-            Aspose.Slides.IShape shape = slide.Shapes[0] as Aspose.Slides.Ink.Ink;
-            if (shape == null)
+            if (pres == null || slideIndex < 0 || slideIndex >= pres.Slides.Count)
             {
-                Console.WriteLine("No Ink shape found on the first slide.");
-                return;
+                return null;
             }
 
-            Aspose.Slides.Ink.IInk ink = shape as Aspose.Slides.Ink.IInk;
-            if (ink == null || ink.Traces.Length == 0)
+            ISlide slide = pres.Slides[slideIndex];
+
+            // Add a line shape to emulate ink
+            IAutoShape lineShape = slide.Shapes.AddAutoShape(ShapeType.Line, x, y, width, height);
+
+            // Apply scribble sketch effect to mimic ink strokes
+            lineShape.LineFormat.SketchFormat.SketchType = LineSketchType.Scribble;
+
+            // Determine the scheme color based on user input
+            SchemeColor schemeColor;
+            switch (themeAccent)
             {
-                Console.WriteLine("Ink shape does not contain any traces.");
-                return;
+                case "Accent1":
+                    schemeColor = SchemeColor.Accent1;
+                    break;
+                case "Accent2":
+                    schemeColor = SchemeColor.Accent2;
+                    break;
+                case "Accent3":
+                    schemeColor = SchemeColor.Accent3;
+                    break;
+                case "Accent4":
+                    schemeColor = SchemeColor.Accent4;
+                    break;
+                case "Accent5":
+                    schemeColor = SchemeColor.Accent5;
+                    break;
+                case "Accent6":
+                    schemeColor = SchemeColor.Accent6;
+                    break;
+                default:
+                    // Default to Accent1 if unrecognized
+                    schemeColor = SchemeColor.Accent1;
+                    break;
             }
 
-            Aspose.Slides.Ink.IInkBrush brush = ink.Traces[0].Brush;
-            if (brush == null)
-            {
-                Console.WriteLine("Ink trace does not have a brush.");
-                return;
-            }
+            // Set the line color using the selected theme accent
+            lineShape.LineFormat.FillFormat.SolidFillColor.SchemeColor = schemeColor;
 
-            // Set brush color based on theme
-            if (theme.Equals("Dark", StringComparison.OrdinalIgnoreCase))
-            {
-                brush.Color = System.Drawing.Color.Black;
-            }
-            else if (theme.Equals("Light", StringComparison.OrdinalIgnoreCase))
-            {
-                brush.Color = System.Drawing.Color.White;
-            }
-            else if (theme.Equals("Blue", StringComparison.OrdinalIgnoreCase))
-            {
-                brush.Color = System.Drawing.Color.Blue;
-            }
-            else
-            {
-                // Default color
-                brush.Color = System.Drawing.Color.Gray;
-            }
+            return lineShape;
         }
     }
 }
