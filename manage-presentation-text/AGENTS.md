@@ -20,166 +20,136 @@ working within the **manage-presentation-text** category.
 
 ## Required Namespaces
 
-- `using Aspose.Slides.Export;` (141/141 files)
-- `using System;` (140/141 files)
-- `using Aspose.Slides;` (116/141 files)
-- `using System.IO;` (24/141 files)
-- `using System.Drawing;` (15/141 files)
-- `using Aspose.Slides.Util;` (15/141 files)
-- `using Aspose.Slides.Animation;` (6/141 files)
-- `using System.Text;` (3/141 files)
-- `using System.Text.RegularExpressions;` (2/141 files)
-- `using Aspose.Slides.AI;` (1/141 files)
+- `using System;` (104/104 files)
+- `using Aspose.Slides.Export;` (104/104 files)
+- `using Aspose.Slides;` (96/104 files)
+- `using System.IO;` (86/104 files)
+- `using Aspose.Slides.Util;` (23/104 files)
+- `using System.Text;` (11/104 files)
+- `using System.Drawing;` (9/104 files)
+- `using System.Collections.Generic;` (8/104 files)
+- `using System.Text.Json;` (4/104 files)
+- `using Aspose.Slides.Animation;` (2/104 files)
+- `using Aspose.Slides.Effects;` (2/104 files)
+- `using System.Diagnostics;` (2/104 files)
+- `using System.Globalization;` (1/104 files)
+- `using System.IO.Compression;` (1/104 files)
+- `using System.Text.RegularExpressions;` (1/104 files)
+- `using System.Xml.Linq;` (1/104 files)
+- `using Aspose.Slides.Theme;` (1/104 files)
 
 ## Files in this folder
 
 | File | Key APIs | Description |
 |------|----------|-------------|
-| [Add-bullets-to-slide-and-save-PPTX](./Add-bullets-to-slide-and-save-PPTX.cs) |  | Add bullets to slide and save PPTX |
-| [Add-columns-to-textbox-and-save-PPTX](./Add-columns-to-textbox-and-save-PPTX.cs) |  | Add columns to textbox and save PPTX |
-| [Add-custom-image-bullets-to-PPTX](./Add-custom-image-bullets-to-PPTX.cs) |  | Add custom image bullets to PPTX |
-| [Add-custom-paragraph-animation-to-PPTX](./Add-custom-paragraph-animation-to-PPTX.cs) |  | Add custom paragraph animation to PPTX |
-| [Add-custom-text-animation-to-PPTX](./Add-custom-text-animation-to-PPTX.cs) |  | Add custom text animation to PPTX |
-| [Add-hyperlink-to-textbox-and-export-PPTX](./Add-hyperlink-to-textbox-and-export-PPTX.cs) |  | Add hyperlink to textbox and export PPTX |
-| [Add-modify-delete-paragraphs-in-PPTX](./Add-modify-delete-paragraphs-in-PPTX.cs) |  | Add modify delete paragraphs in PPTX |
-| [Add-multiple-columns-to-textframe-PPTX](./Add-multiple-columns-to-textframe-PPTX.cs) |  | Add multiple columns to textframe PPTX |
-| [Add-numeric-labels-to-slides-save-PPTX](./Add-numeric-labels-to-slides-save-PPTX.cs) |  | Add numeric labels to slides save PPTX |
-| [Add-picture-bullets-and-save-PPTX](./Add-picture-bullets-and-save-PPTX.cs) |  | Add picture bullets and save PPTX |
-| [Add-speaker-note-to-slide-PPTX](./Add-speaker-note-to-slide-PPTX.cs) |  | Add speaker note to slide PPTX |
-| [Add-superscript-and-subscript-to-textruns-PPTX](./Add-superscript-and-subscript-to-textruns-PPTX.cs) |  | Add superscript and subscript to textruns PPTX |
-| [Add-textbox-to-slide-and-save-PPTX](./Add-textbox-to-slide-and-save-PPTX.cs) |  | Add textbox to slide and save PPTX |
-| [Add-textbox-to-slide-with-position-PPTX](./Add-textbox-to-slide-with-position-PPTX.cs) |  | Add textbox to slide with position PPTX |
-| [Adjust-character-spacing-and-export-PPTX](./Adjust-character-spacing-and-export-PPTX.cs) |  | Adjust character spacing and export PPTX |
-| [Adjust-paragraph-line-spacing-and-save-PPTX](./Adjust-paragraph-line-spacing-and-save-PPTX.cs) |  | Adjust paragraph line spacing and save PPTX |
-| [Adjust-placeholder-transparency-and-save-PPTX](./Adjust-placeholder-transparency-and-save-PPTX.cs) |  | Adjust placeholder transparency and save PPTX |
-| [Adjust-shape-to-fit-text-PPTX](./Adjust-shape-to-fit-text-PPTX.cs) |  | Adjust shape to fit text PPTX |
-| [Align-paragraphs-in-slides-and-export-PPTX](./Align-paragraphs-in-slides-and-export-PPTX.cs) |  | Align paragraphs in slides and export PPTX |
-| [Apply-autofit-to-slides-and-save-PPTX](./Apply-autofit-to-slides-and-save-PPTX.cs) |  | Apply autofit to slides and save PPTX |
-| [Apply-background-color-to-text-PPTX](./Apply-background-color-to-text-PPTX.cs) |  | Apply background color to text PPTX |
-| [Apply-background-color-to-text-runs-PPTX](./Apply-background-color-to-text-runs-PPTX.cs) |  | Apply background color to text runs PPTX |
-| [Apply-custom-rotation-to-textframes-export-PPTX](./Apply-custom-rotation-to-textframes-export-PPTX.cs) |  | Apply custom rotation to textframes export PPTX |
-| [Apply-default-text-style-and-save-PPTX](./Apply-default-text-style-and-save-PPTX.cs) |  | Apply default text style and save PPTX |
-| [Apply-hanging-indent-and-save-PPTX](./Apply-hanging-indent-and-save-PPTX.cs) |  | Apply hanging indent and save PPTX |
-| [Apply-hanging-indent-to-paragraph-PPTX](./Apply-hanging-indent-to-paragraph-PPTX.cs) |  | Apply hanging indent to paragraph PPTX |
-| [Apply-highlight-to-text-runs-preserve-PPTX](./Apply-highlight-to-text-runs-preserve-PPTX.cs) |  | Apply highlight to text runs preserve PPTX |
-| [Apply-multilevel-bullets-and-export-PPTX](./Apply-multilevel-bullets-and-export-PPTX.cs) |  | Apply multilevel bullets and export PPTX |
-| [Apply-paragraph-indentation-and-export-PPTX](./Apply-paragraph-indentation-and-export-PPTX.cs) |  | Apply paragraph indentation and export PPTX |
-| [Apply-superscript-and-subscript-formatting-PPTX](./Apply-superscript-and-subscript-formatting-PPTX.cs) |  | Apply superscript and subscript formatting PPTX |
-| [Apply-tabulation-to-text-and-export-PPTX](./Apply-tabulation-to-text-and-export-PPTX.cs) |  | Apply tabulation to text and export PPTX |
-| [Apply-text-animation-to-PPTX](./Apply-text-animation-to-PPTX.cs) |  | Apply text animation to PPTX |
-| [Apply-text-formatting-and-save-PPTX](./Apply-text-formatting-and-save-PPTX.cs) |  | Apply text formatting and save PPTX |
-| [Apply-text-formatting-preserve-slide-layout-PPTX](./Apply-text-formatting-preserve-slide-layout-PPTX.cs) |  | Apply text formatting preserve slide layout PPTX |
-| [Apply-text-rotation-to-shapes-export-PPTX](./Apply-text-rotation-to-shapes-export-PPTX.cs) |  | Apply text rotation to shapes export PPTX |
-| [Apply-text-transparency-and-save-PPTX](./Apply-text-transparency-and-save-PPTX.cs) |  | Apply text transparency and save PPTX |
-| [Apply-text-wrapping-to-textboxes-PPTX](./Apply-text-wrapping-to-textboxes-PPTX.cs) |  | Apply text wrapping to textboxes PPTX |
-| [Assign-placeholder-in-PPTX-and-store-PPTX](./Assign-placeholder-in-PPTX-and-store-PPTX.cs) |  | Assign placeholder in PPTX and store PPTX |
-| [Auto-reduce-font-size-to-fit-PPTX](./Auto-reduce-font-size-to-fit-PPTX.cs) |  | Auto reduce font size to fit PPTX |
-| [Change-font-attributes-and-export-PPTX](./Change-font-attributes-and-export-PPTX.cs) |  | Change font attributes and export PPTX |
-| [Change-paragraph-bullets-and-save-PPTX](./Change-paragraph-bullets-and-save-PPTX.cs) |  | Change paragraph bullets and save PPTX |
-| [Change-picture-bullets-and-save-PPTX](./Change-picture-bullets-and-save-PPTX.cs) |  | Change picture bullets and save PPTX |
-| [Configure-autofit-type-for-textframes-PPTX](./Configure-autofit-type-for-textframes-PPTX.cs) |  | Configure autofit type for textframes PPTX |
-| [Configure-bullet-formatting-for-paragraphs-PPTX](./Configure-bullet-formatting-for-paragraphs-PPTX.cs) |  | Configure bullet formatting for paragraphs PPTX |
-| [Configure-default-language-and-save-PPTX](./Configure-default-language-and-save-PPTX.cs) |  | Configure default language and save PPTX |
-| [Configure-default-text-formatting-PPTX](./Configure-default-text-formatting-PPTX.cs) |  | Configure default text formatting PPTX |
-| [Configure-proofing-language-for-PPTX](./Configure-proofing-language-for-PPTX.cs) |  | Configure proofing language for PPTX |
-| [Configure-tab-stops-for-text-PPTX](./Configure-tab-stops-for-text-PPTX.cs) |  | Configure tab stops for text PPTX |
-| [Configure-vertical-alignment-anchor-for-PPTX](./Configure-vertical-alignment-anchor-for-PPTX.cs) |  | Configure vertical alignment anchor for PPTX |
-| [Convert-paragraphs-to-HTML-from-PPTX](./Convert-paragraphs-to-HTML-from-PPTX.cs) |  | Convert paragraphs to HTML from PPTX |
-| [Create-edit-format-bulleted-numbered-lists-PPTX](./Create-edit-format-bulleted-numbered-lists-PPTX.cs) |  | Create edit format bulleted numbered lists PPTX |
-| [Create-hyperlinked-textbox-and-store-PPTX](./Create-hyperlinked-textbox-and-store-PPTX.cs) |  | Create hyperlinked textbox and store PPTX |
-| [Create-multilevel-bullet-list-and-save-PPTX](./Create-multilevel-bullet-list-and-save-PPTX.cs) |  | Create multilevel bullet list and save PPTX |
-| [Create-overview-presentation-and-save-PPTX](./Create-overview-presentation-and-save-PPTX.cs) |  | Create overview presentation and save PPTX |
-| [Create-overview-slide-and-export-PPTX](./Create-overview-slide-and-export-PPTX.cs) |  | Create overview slide and export PPTX |
-| [Detect-textbox-in-PPTX-and-save-PPTX](./Detect-textbox-in-PPTX-and-save-PPTX.cs) |  | Detect textbox in PPTX and save PPTX |
-| [Disable-auto-resize-for-text-PPTX](./Disable-auto-resize-for-text-PPTX.cs) |  | Disable auto resize for text PPTX |
-| [Disable-autofit-in-PPTX-and-export-PPTX](./Disable-autofit-in-PPTX-and-export-PPTX.cs) |  | Disable autofit in PPTX and export PPTX |
-| [Edit-custom-numbered-list-paragraph-PPTX](./Edit-custom-numbered-list-paragraph-PPTX.cs) |  | Edit custom numbered list paragraph PPTX |
-| [Edit-hierarchical-bullets-and-save-PPTX](./Edit-hierarchical-bullets-and-save-PPTX.cs) |  | Edit hierarchical bullets and save PPTX |
-| [Edit-paragraph-run-properties-and-save-PPTX](./Edit-paragraph-run-properties-and-save-PPTX.cs) |  | Edit paragraph run properties and save PPTX |
-| [Edit-slide-text-preserving-layout-PPTX](./Edit-slide-text-preserving-layout-PPTX.cs) |  | Edit slide text preserving layout PPTX |
-| [Edit-textbox-in-PPTX-and-save-PPTX](./Edit-textbox-in-PPTX-and-save-PPTX.cs) |  | Edit textbox in PPTX and save PPTX |
-| [Enable-autofit-for-textframes-and-optimize-PPTX](./Enable-autofit-for-textframes-and-optimize-PPTX.cs) |  | Enable autofit for textframes and optimize PPTX |
-| [Explain-benefits-of-bullets-in-PPTX](./Explain-benefits-of-bullets-in-PPTX.cs) |  | Explain benefits of bullets in PPTX |
-| [Explain-benefits-of-numbered-lists-in-PPTX](./Explain-benefits-of-numbered-lists-in-PPTX.cs) |  | Explain benefits of numbered lists in PPTX |
-| [Export-paragraph-as-PNG-from-PPTX](./Export-paragraph-as-PNG-from-PPTX.cs) |  | Export paragraph as PNG from PPTX |
-| [Export-paragraph-text-to-HTML-PPTX](./Export-paragraph-text-to-HTML-PPTX.cs) |  | Export paragraph text to HTML PPTX |
-| [Export-paragraphs-from-PPTX-to-HTML](./Export-paragraphs-from-PPTX-to-HTML.cs) |  | Export paragraphs from PPTX to HTML |
-| [Export-presentation-and-preserve-formatting-PPTX](./Export-presentation-and-preserve-formatting-PPTX.cs) |  | Export presentation and preserve formatting PPTX |
-| [Extract-all-caps-text-and-save-PPTX](./Extract-all-caps-text-and-save-PPTX.cs) |  | Extract all caps text and save PPTX |
-| [Extract-all-caps-text-from-PPTX](./Extract-all-caps-text-from-PPTX.cs) |  | Extract all caps text from PPTX |
-| [Extract-all-text-with-formatting-PPTX](./Extract-all-text-with-formatting-PPTX.cs) |  | Extract all text with formatting PPTX |
-| [Extract-data-from-PPTX-and-save-PPTX](./Extract-data-from-PPTX-and-save-PPTX.cs) |  | Extract data from PPTX and save PPTX |
-| [Extract-full-text-with-hierarchy-PPTX](./Extract-full-text-with-hierarchy-PPTX.cs) |  | Extract full text with hierarchy PPTX |
-| [Extract-paragraph-animation-timing-from-PPTX](./Extract-paragraph-animation-timing-from-PPTX.cs) |  | Extract paragraph animation timing from PPTX |
-| [Extract-paragraph-as-PNG-and-embed-PPTX](./Extract-paragraph-as-PNG-and-embed-PPTX.cs) |  | Extract paragraph as PNG and embed PPTX |
-| [Extract-paragraph-from-PPTX-to-HTML](./Extract-paragraph-from-PPTX-to-HTML.cs) |  | Extract paragraph from PPTX to HTML |
-| [Extract-presentation-metadata-and-structure-PPTX](./Extract-presentation-metadata-and-structure-PPTX.cs) |  | Extract presentation metadata and structure PPTX |
-| [Extract-slide-shape-text-elements-PPTX](./Extract-slide-shape-text-elements-PPTX.cs) |  | Extract slide shape text elements PPTX |
-| [Extract-uppercase-text-and-preserve-formatting-PPTX](./Extract-uppercase-text-and-preserve-formatting-PPTX.cs) |  | Extract uppercase text and preserve formatting PPTX |
-| [Find-placeholder-in-PPTX-and-save-PPTX](./Find-placeholder-in-PPTX-and-save-PPTX.cs) |  | Find placeholder in PPTX and save PPTX |
-| [Generate-custom-multilevel-bullets-PPTX](./Generate-custom-multilevel-bullets-PPTX.cs) |  | Generate custom multilevel bullets PPTX |
-| [Get-final-run-properties-from-paragraph-PPTX](./Get-final-run-properties-from-paragraph-PPTX.cs) |  | Get final run properties from paragraph PPTX |
-| [Get-initial-slide-index-and-save-PPTX](./Get-initial-slide-index-and-save-PPTX.cs) |  | Get initial slide index and save PPTX |
-| [Get-paragraph-animation-effects-from-PPTX](./Get-paragraph-animation-effects-from-PPTX.cs) |  | Get paragraph animation effects from PPTX |
-| [Get-slide-text-with-formatting-PPTX](./Get-slide-text-with-formatting-PPTX.cs) |  | Get slide text with formatting PPTX |
-| [Highlight-text-in-PPTX-and-export-PPTX](./Highlight-text-in-PPTX-and-export-PPTX.cs) |  | Highlight text in PPTX and export PPTX |
-| [Identify-regex-patterns-and-apply-highlight-PPTX](./Identify-regex-patterns-and-apply-highlight-PPTX.cs) |  | Identify regex patterns and apply highlight PPTX |
-| [Import-HTML-into-PPTX-paragraphs-preserving-styling](./Import-HTML-into-PPTX-paragraphs-preserving-styling.cs) |  | Import HTML into PPTX paragraphs preserving styling |
-| [Insert-bullet-list-slide-and-save-PPTX](./Insert-bullet-list-slide-and-save-PPTX.cs) |  | Insert bullet list slide and save PPTX |
-| [Insert-bullet-points-with-indentation-PPTX](./Insert-bullet-points-with-indentation-PPTX.cs) |  | Insert bullet points with indentation PPTX |
-| [Insert-columns-into-textbox-and-export-PPTX](./Insert-columns-into-textbox-and-export-PPTX.cs) |  | Insert columns into textbox and export PPTX |
-| [Insert-hyperlinked-textbox-and-save-PPTX](./Insert-hyperlinked-textbox-and-save-PPTX.cs) |  | Insert hyperlinked textbox and save PPTX |
-| [Insert-multiple-columns-into-textbox-PPTX](./Insert-multiple-columns-into-textbox-PPTX.cs) |  | Insert multiple columns into textbox PPTX |
-| [Insert-multiple-paragraphs-into-PPTX](./Insert-multiple-paragraphs-into-PPTX.cs) |  | Insert multiple paragraphs into PPTX |
-| [Insert-multiple-text-portions-into-PPTX](./Insert-multiple-text-portions-into-PPTX.cs) |  | Insert multiple text portions into PPTX |
-| [Insert-note-into-PPTX-and-save-PPTX](./Insert-note-into-PPTX-and-save-PPTX.cs) |  | Insert note into PPTX and save PPTX |
-| [Insert-numbered-list-slide-and-save-PPTX](./Insert-numbered-list-slide-and-save-PPTX.cs) |  | Insert numbered list slide and save PPTX |
-| [Insert-placeholder-in-PPTX-and-generate-PPTX](./Insert-placeholder-in-PPTX-and-generate-PPTX.cs) |  | Insert placeholder in PPTX and generate PPTX |
-| [Insert-sequential-numeric-placeholders-into-PPTX](./Insert-sequential-numeric-placeholders-into-PPTX.cs) |  | Insert sequential numeric placeholders into PPTX |
-| [List-animation-effects-for-paragraph-PPTX](./List-animation-effects-for-paragraph-PPTX.cs) |  | List animation effects for paragraph PPTX |
-| [Localize-text-and-assets-in-PPTX](./Localize-text-and-assets-in-PPTX.cs) |  | Localize text and assets in PPTX |
-| [Manage-bulleted-and-numbered-lists-in-PPTX](./Manage-bulleted-and-numbered-lists-in-PPTX.cs) |  | Manage bulleted and numbered lists in PPTX |
-| [Manage-placeholders-in-PPTX-and-save-PPTX](./Manage-placeholders-in-PPTX-and-save-PPTX.cs) |  | Manage placeholders in PPTX and save PPTX |
-| [Manage-textboxes-in-PPTX-and-dynamic-content](./Manage-textboxes-in-PPTX-and-dynamic-content.cs) |  | Manage textboxes in PPTX and dynamic content |
-| [Modify-slide-text-and-save-PPTX](./Modify-slide-text-and-save-PPTX.cs) |  | Modify slide text and save PPTX |
-| [Parse-HTML-and-insert-paragraphs-into-PPTX](./Parse-HTML-and-insert-paragraphs-into-PPTX.cs) |  | Parse HTML and insert paragraphs into PPTX |
-| [Query-and-modify-font-properties-PPTX](./Query-and-modify-font-properties-PPTX.cs) |  | Query and modify font properties PPTX |
-| [Render-paragraph-as-image-and-embed-PDF](./Render-paragraph-as-image-and-embed-PDF.cs) |  | Render paragraph as image and embed PDF |
-| [Render-paragraph-as-image-and-embed-PPTX](./Render-paragraph-as-image-and-embed-PPTX.cs) |  | Render paragraph as image and embed PPTX |
-| [Replace-placeholder-in-PPTX-and-export-PPTX](./Replace-placeholder-in-PPTX-and-export-PPTX.cs) |  | Replace placeholder in PPTX and export PPTX |
-| [Replace-placeholder-text-and-preserve-layout-PPTX](./Replace-placeholder-text-and-preserve-layout-PPTX.cs) |  | Replace placeholder text and preserve layout PPTX |
-| [Resize-shape-to-fit-text-PPTX](./Resize-shape-to-fit-text-PPTX.cs) |  | Resize shape to fit text PPTX |
-| [Retrieve-slide-by-index-and-output-PPTX](./Retrieve-slide-by-index-and-output-PPTX.cs) |  | Retrieve slide by index and output PPTX |
-| [Retrieve-visible-all-caps-text-PPTX](./Retrieve-visible-all-caps-text-PPTX.cs) |  | Retrieve visible all caps text PPTX |
-| [Rotate-text-objects-in-PPTX](./Rotate-text-objects-in-PPTX.cs) |  | Rotate text objects in PPTX |
-| [Scale-paragraph-image-and-embed-PPTX](./Scale-paragraph-image-and-embed-PPTX.cs) |  | Scale paragraph image and embed PPTX |
-| [Search-regex-and-highlight-text-in-PPTX](./Search-regex-and-highlight-text-in-PPTX.cs) |  | Search regex and highlight text in PPTX |
-| [Set-alpha-transparency-on-text-shapes-PPTX](./Set-alpha-transparency-on-text-shapes-PPTX.cs) |  | Set alpha transparency on text shapes PPTX |
-| [Set-autofit-for-textframes-and-save-PPTX](./Set-autofit-for-textframes-and-save-PPTX.cs) |  | Set autofit for textframes and save PPTX |
-| [Set-character-spacing-for-text-PPTX](./Set-character-spacing-for-text-PPTX.cs) |  | Set character spacing for text PPTX |
-| [Set-custom-prompt-in-placeholder-PPTX](./Set-custom-prompt-in-placeholder-PPTX.cs) |  | Set custom prompt in placeholder PPTX |
-| [Set-default-language-for-spellchecking-PPTX](./Set-default-language-for-spellchecking-PPTX.cs) |  | Set default language for spellchecking PPTX |
-| [Set-image-placeholder-transparency-and-save-PPTX](./Set-image-placeholder-transparency-and-save-PPTX.cs) |  | Set image placeholder transparency and save PPTX |
-| [Set-individual-paragraph-animation-in-PPTX](./Set-individual-paragraph-animation-in-PPTX.cs) |  | Set individual paragraph animation in PPTX |
-| [Set-paragraph-indentation-for-text-runs-PPTX](./Set-paragraph-indentation-for-text-runs-PPTX.cs) |  | Set paragraph indentation for text runs PPTX |
-| [Set-paragraph-line-spacing-in-PPTX](./Set-paragraph-line-spacing-in-PPTX.cs) |  | Set paragraph line spacing in PPTX |
-| [Set-proofing-language-and-save-PPTX](./Set-proofing-language-and-save-PPTX.cs) |  | Set proofing language and save PPTX |
-| [Set-textframe-anchor-and-save-PPTX](./Set-textframe-anchor-and-save-PPTX.cs) |  | Set textframe anchor and save PPTX |
-| [Set-user-rotation-angle-for-textframes-PPTX](./Set-user-rotation-angle-for-textframes-PPTX.cs) |  | Set user rotation angle for textframes PPTX |
-| [Standardize-paragraph-alignment-across-slides-PPTX](./Standardize-paragraph-alignment-across-slides-PPTX.cs) |  | Standardize paragraph alignment across slides PPTX |
-| [Traverse-shapes-to-find-placeholders-PPTX](./Traverse-shapes-to-find-placeholders-PPTX.cs) |  | Traverse shapes to find placeholders PPTX |
-| [Trim-overflowing-text-and-save-PPTX](./Trim-overflowing-text-and-save-PPTX.cs) |  | Trim overflowing text and save PPTX |
-| [Update-language-and-modify-shape-text-PPTX](./Update-language-and-modify-shape-text-PPTX.cs) |  | Update language and modify shape text PPTX |
-| [Update-paragraph-numbered-list-and-save-PPTX](./Update-paragraph-numbered-list-and-save-PPTX.cs) |  | Update paragraph numbered list and save PPTX |
-| [Update-paragraph-styling-and-save-PPTX](./Update-paragraph-styling-and-save-PPTX.cs) |  | Update paragraph styling and save PPTX |
-| [Update-picture-bullet-styles-in-PPTX](./Update-picture-bullet-styles-in-PPTX.cs) |  | Update picture bullet styles in PPTX |
-| [Update-placeholder-in-PPTX-and-output-PPTX](./Update-placeholder-in-PPTX-and-output-PPTX.cs) |  | Update placeholder in PPTX and output PPTX |
-| [Verify-textbox-existence-in-PPTX](./Verify-textbox-existence-in-PPTX.cs) |  | Verify textbox existence in PPTX |
-| [Wrap-text-in-shapes-and-export-PPTX](./Wrap-text-in-shapes-and-export-PPTX.cs) |  | Wrap text in shapes and export PPTX |
+| [Activate-shrink-on-overflow-autofit](./Activate-shrink-on-overflow-autofit.cs) |  | Activate shrink on overflow autofit |
+| [Add-fade-in-animation-to-paragraphs](./Add-fade-in-animation-to-paragraphs.cs) |  | Add fade in animation to paragraphs |
+| [Add-hyperlink-to-paragraph-portion](./Add-hyperlink-to-paragraph-portion.cs) |  | Add hyperlink to paragraph portion |
+| [Add-multilingual-text-to-autoshape-save-pptx](./Add-multilingual-text-to-autoshape-save-pptx.cs) |  | Add multilingual text to autoshape save pptx |
+| [Add-multiple-paragraphs-and-portions-to-textbox](./Add-multiple-paragraphs-and-portions-to-textbox.cs) |  | Add multiple paragraphs and portions to textbox |
+| [Add-rectangle-textbox-with-textframe](./Add-rectangle-textbox-with-textframe.cs) |  | Add rectangle textbox with textframe |
+| [Add-right-aligned-footer-textbox-fixed-width](./Add-right-aligned-footer-textbox-fixed-width.cs) |  | Add right aligned footer textbox fixed width |
+| [Add-underline-styling-to-selected-text](./Add-underline-styling-to-selected-text.cs) |  | Add underline styling to selected text |
+| [Adjust-body-textframe-line-spacing-1-5](./Adjust-body-textframe-line-spacing-1-5.cs) |  | Adjust body textframe line spacing 1 5 |
+| [Adjust-textframe-margins-to-avoid-clipping](./Adjust-textframe-margins-to-avoid-clipping.cs) |  | Adjust textframe margins to avoid clipping |
+| [Apply-45-degree-shadow-to-subtitle-text](./Apply-45-degree-shadow-to-subtitle-text.cs) |  | Apply 45 degree shadow to subtitle text |
+| [Apply-75-percent-opacity-to-subtitle-text](./Apply-75-percent-opacity-to-subtitle-text.cs) |  | Apply 75 percent opacity to subtitle text |
+| [Apply-blue-green-gradient-to-title-text](./Apply-blue-green-gradient-to-title-text.cs) |  | Apply blue green gradient to title text |
+| [Apply-bullet-formatting-to-paragraph-with-symbol](./Apply-bullet-formatting-to-paragraph-with-symbol.cs) |  | Apply bullet formatting to paragraph with symbol |
+| [Apply-custom-bullet-character-to-unordered-lists](./Apply-custom-bullet-character-to-unordered-lists.cs) |  | Apply custom bullet character to unordered lists |
+| [Apply-fade-out-animation-to-final-bullet](./Apply-fade-out-animation-to-final-bullet.cs) |  | Apply fade out animation to final bullet |
+| [Apply-hanging-indent-to-bullet-list](./Apply-hanging-indent-to-bullet-list.cs) |  | Apply hanging indent to bullet list |
+| [Apply-soft-yellow-glow-to-callout-text](./Apply-soft-yellow-glow-to-callout-text.cs) |  | Apply soft yellow glow to callout text |
+| [Assign-picture-bullet-to-paragraph](./Assign-picture-bullet-to-paragraph.cs) |  | Assign picture bullet to paragraph |
+| [Attach-hyperlink-to-entire-textbox](./Attach-hyperlink-to-entire-textbox.cs) |  | Attach hyperlink to entire textbox |
+| [Batch-extract-presentation-text-and-aggregate-report](./Batch-extract-presentation-text-and-aggregate-report.cs) |  | Batch extract presentation text and aggregate report |
+| [Batch-update-placeholder-text-across-slides](./Batch-update-placeholder-text-across-slides.cs) |  | Batch update placeholder text across slides |
+| [Bold-italic-formatting-to-heading-textframes](./Bold-italic-formatting-to-heading-textframes.cs) |  | Bold italic formatting to heading textframes |
+| [Check-autoshape-istextbox-after-adding-text](./Check-autoshape-istextbox-after-adding-text.cs) |  | Check autoshape istextbox after adding text |
+| [Clone-textbox-shape-change-text-and-reposition](./Clone-textbox-shape-change-text-and-reposition.cs) |  | Clone textbox shape change text and reposition |
+| [Configure-autofit-to-resize-shape](./Configure-autofit-to-resize-shape.cs) |  | Configure autofit to resize shape |
+| [Configure-multilevel-bullet-hierarchy-and-indentation](./Configure-multilevel-bullet-hierarchy-and-indentation.cs) |  | Configure multilevel bullet hierarchy and indentation |
+| [Convert-bullets-to-numbered-list-preserving-indentation](./Convert-bullets-to-numbered-list-preserving-indentation.cs) |  | Convert bullets to numbered list preserving indentation |
+| [Create-animated-title-slide-with-bounce-effect](./Create-animated-title-slide-with-bounce-effect.cs) |  | Create animated title slide with bounce effect |
+| [Disable-autofit-for-textbox-with-none](./Disable-autofit-for-textbox-with-none.cs) |  | Disable autofit for textbox with none |
+| [Edit-presentation-placeholder-text-with-textframe](./Edit-presentation-placeholder-text-with-textframe.cs) |  | Edit presentation placeholder text with textframe |
+| [Enable-autofit-shrink-on-overflow-for-placeholders](./Enable-autofit-shrink-on-overflow-for-placeholders.cs) |  | Enable autofit shrink on overflow for placeholders |
+| [Enable-text-wrapping-in-textframe](./Enable-text-wrapping-in-textframe.cs) |  | Enable text wrapping in textframe |
+| [Export-paragraph-to-HTML-using-method](./Export-paragraph-to-HTML-using-method.cs) |  | Export paragraph to HTML using method |
+| [Export-slide-text-to-markdown-files](./Export-slide-text-to-markdown-files.cs) |  | Export slide text to markdown files |
+| [Extract-all-slide-layout-text-to-TXT](./Extract-all-slide-layout-text-to-TXT.cs) |  | Extract all slide layout text to TXT |
+| [Extract-bullet-hierarchy-from-notes-to-JSON](./Extract-bullet-hierarchy-from-notes-to-JSON.cs) |  | Extract bullet hierarchy from notes to JSON |
+| [Extract-cleaned-presentation-text-from-factory](./Extract-cleaned-presentation-text-from-factory.cs) |  | Extract cleaned presentation text from factory |
+| [Extract-comments-from-each-slide-to-JSON](./Extract-comments-from-each-slide-to-JSON.cs) |  | Extract comments from each slide to JSON |
+| [Extract-deduplicated-text-lines-and-save-TXT](./Extract-deduplicated-text-lines-and-save-TXT.cs) |  | Extract deduplicated text lines and save TXT |
+| [Extract-hyperlinks-from-textbox-using-portion](./Extract-hyperlinks-from-textbox-using-portion.cs) |  | Extract hyperlinks from textbox using portion |
+| [Extract-master-slide-text-and-compare-layout](./Extract-master-slide-text-and-compare-layout.cs) |  | Extract master slide text and compare layout |
+| [Extract-master-slide-text-per-slide](./Extract-master-slide-text-per-slide.cs) |  | Extract master slide text per slide |
+| [Extract-slide-texts-to-JSON-array](./Extract-slide-texts-to-JSON-array.cs) |  | Extract slide texts to JSON array |
+| [Extract-text-and-calculate-total-word-count](./Extract-text-and-calculate-total-word-count.cs) |  | Extract text and calculate total word count |
+| [Extract-text-by-language-and-save-files](./Extract-text-by-language-and-save-files.cs) |  | Extract text by language and save files |
+| [Extract-text-by-slide-and-save-documents](./Extract-text-by-slide-and-save-documents.cs) |  | Extract text by slide and save documents |
+| [Extract-text-from-each-slide-and-save](./Extract-text-from-each-slide-and-save.cs) |  | Extract text from each slide and save |
+| [Extract-text-from-file-and-return-JSON](./Extract-text-from-file-and-return-JSON.cs) |  | Extract text from file and return JSON |
+| [Extract-text-from-odp-and-log-duration](./Extract-text-from-odp-and-log-duration.cs) |  | Extract text from odp and log duration |
+| [Extract-text-from-PPTX-and-save-CSV](./Extract-text-from-PPTX-and-save-CSV.cs) |  | Extract text from PPTX and save CSV |
+| [Extract-text-from-presentation-and-compare-count](./Extract-text-from-presentation-and-compare-count.cs) |  | Extract text from presentation and compare count |
+| [Extract-text-from-stream-using-presentationfactory](./Extract-text-from-stream-using-presentationfactory.cs) |  | Extract text from stream using presentationfactory |
+| [Extract-text-from-ZIP-archive-and-summarize](./Extract-text-from-ZIP-archive-and-summarize.cs) |  | Extract text from ZIP archive and summarize |
+| [Extract-text-ordered-by-shape-hierarchy](./Extract-text-ordered-by-shape-hierarchy.cs) |  | Extract text ordered by shape hierarchy |
+| [Extract-text-replace-keywords-and-save](./Extract-text-replace-keywords-and-save.cs) |  | Extract text replace keywords and save |
+| [Extract-text-to-CSV-by-slide](./Extract-text-to-CSV-by-slide.cs) |  | Extract text to CSV by slide |
+| [Extract-textboxes-from-slide-three](./Extract-textboxes-from-slide-three.cs) |  | Extract textboxes from slide three |
+| [Extract-word-count-per-slide-and-rank](./Extract-word-count-per-slide-and-rank.cs) |  | Extract word count per slide and rank |
+| [Generate-HTML-report-from-slide-comments](./Generate-HTML-report-from-slide-comments.cs) |  | Generate HTML report from slide comments |
+| [Generate-table-of-contents-from-slide-titles](./Generate-table-of-contents-from-slide-titles.cs) |  | Generate table of contents from slide titles |
+| [Handle-unsupported-file-extensions-during-text-extraction](./Handle-unsupported-file-extensions-during-text-extraction.cs) |  | Handle unsupported file extensions during text extraction |
+| [Import-HTML-into-paragraph-using-addhtml](./Import-HTML-into-paragraph-using-addhtml.cs) |  | Import HTML into paragraph using addhtml |
+| [Insert-subscript-textbox-on-last-slide](./Insert-subscript-textbox-on-last-slide.cs) |  | Insert subscript textbox on last slide |
+| [Load-multiple-PPTX-files-extract-text-summary](./Load-multiple-PPTX-files-extract-text-summary.cs) |  | Load multiple PPTX files extract text summary |
+| [Load-PPTX-and-replace-phrase-throughout-presentation](./Load-PPTX-and-replace-phrase-throughout-presentation.cs) |  | Load PPTX and replace phrase throughout presentation |
+| [Load-PPTX-set-japanese-language-id-title-shape](./Load-PPTX-set-japanese-language-id-title-shape.cs) |  | Load PPTX set japanese language id title shape |
+| [Load-PPTX-set-language-id-verify-proofing](./Load-PPTX-set-language-id-verify-proofing.cs) |  | Load PPTX set language id verify proofing |
+| [Load-presentation-from-memory-change-text-colors](./Load-presentation-from-memory-change-text-colors.cs) |  | Load presentation from memory change text colors |
+| [Load-presentation-from-memory-stream-modify-placeholder](./Load-presentation-from-memory-stream-modify-placeholder.cs) |  | Load presentation from memory stream modify placeholder |
+| [Load-presentation-set-chinese-language-id](./Load-presentation-set-chinese-language-id.cs) |  | Load presentation set chinese language id |
+| [Log-textframe-count-per-slide](./Log-textframe-count-per-slide.cs) |  | Log textframe count per slide |
+| [Map-slide-index-to-combined-text](./Map-slide-index-to-combined-text.cs) |  | Map slide index to combined text |
+| [Merge-paragraphs-across-slides-into-single-textbox](./Merge-paragraphs-across-slides-into-single-textbox.cs) |  | Merge paragraphs across slides into single textbox |
+| [Prepend-master-slide-text-to-each-slide](./Prepend-master-slide-text-to-each-slide.cs) |  | Prepend master slide text to each slide |
+| [Remove-comments-from-presentation-and-save](./Remove-comments-from-presentation-and-save.cs) |  | Remove comments from presentation and save |
+| [Render-paragraph-as-PNG-image](./Render-paragraph-as-PNG-image.cs) |  | Render paragraph as PNG image |
+| [Replace-confidential-with-red-warning-label](./Replace-confidential-with-red-warning-label.cs) |  | Replace confidential with red warning label |
+| [Replace-numeric-list-with-roman-numerals](./Replace-numeric-list-with-roman-numerals.cs) |  | Replace numeric list with roman numerals |
+| [Replace-placeholder-text-using-regex](./Replace-placeholder-text-using-regex.cs) |  | Replace placeholder text using regex |
+| [Save-presentation-to-memory-stream-with-saveoptions](./Save-presentation-to-memory-stream-with-saveoptions.cs) |  | Save presentation to memory stream with saveoptions |
+| [Serialize-textframe-to-XML-with-formatting](./Serialize-textframe-to-XML-with-formatting.cs) |  | Serialize textframe to XML with formatting |
+| [Set-caption-textframe-line-spacing-1-2](./Set-caption-textframe-line-spacing-1-2.cs) |  | Set caption textframe line spacing 1 2 |
+| [Set-column-spacing-for-balanced-textframe](./Set-column-spacing-for-balanced-textframe.cs) |  | Set column spacing for balanced textframe |
+| [Set-custom-bullet-character-using-unicode](./Set-custom-bullet-character-using-unicode.cs) |  | Set custom bullet character using unicode |
+| [Set-custom-font-family-for-title-textframes](./Set-custom-font-family-for-title-textframes.cs) |  | Set custom font family for title textframes |
+| [Set-custom-numbered-list-style](./Set-custom-numbered-list-style.cs) |  | Set custom numbered list style |
+| [Set-default-text-direction-left-to-right](./Set-default-text-direction-left-to-right.cs) |  | Set default text direction left to right |
+| [Set-english-language-id-second-portion](./Set-english-language-id-second-portion.cs) |  | Set english language id second portion |
+| [Set-french-language-id-for-first-paragraph](./Set-french-language-id-for-first-paragraph.cs) |  | Set french language id for first paragraph |
+| [Set-german-language-id-for-all-shapes](./Set-german-language-id-for-all-shapes.cs) |  | Set german language id for all shapes |
+| [Set-language-id-and-log-paragraph-changes](./Set-language-id-and-log-paragraph-changes.cs) |  | Set language id and log paragraph changes |
+| [Set-paragraph-alignment-to-justified](./Set-paragraph-alignment-to-justified.cs) |  | Set paragraph alignment to justified |
+| [Set-paragraph-left-indent-to-20-points](./Set-paragraph-left-indent-to-20-points.cs) |  | Set paragraph left indent to 20 points |
+| [Set-paragraph-line-spacing-1-5](./Set-paragraph-line-spacing-1-5.cs) |  | Set paragraph line spacing 1 5 |
+| [Set-presentation-placeholder-image-transparency-30-percent](./Set-presentation-placeholder-image-transparency-30-percent.cs) |  | Set presentation placeholder image transparency 30 percent |
+| [Set-right-to-left-for-arabic-paragraphs](./Set-right-to-left-for-arabic-paragraphs.cs) |  | Set right to left for arabic paragraphs |
+| [Set-superscript-formatting-for-chemical-formula](./Set-superscript-formatting-for-chemical-formula.cs) |  | Set superscript formatting for chemical formula |
+| [Set-textbox-background-color-by-paragraph-style](./Set-textbox-background-color-by-paragraph-style.cs) |  | Set textbox background color by paragraph style |
+| [Set-textbox-columns-with-textframe](./Set-textbox-columns-with-textframe.cs) |  | Set textbox columns with textframe |
+| [Validate-non-empty-text-placeholder-per-slide](./Validate-non-empty-text-placeholder-per-slide.cs) |  | Validate non empty text placeholder per slide |
+| [Validate-placeholder-shape-type-before-modification](./Validate-placeholder-shape-type-before-modification.cs) |  | Validate placeholder shape type before modification |
+| [Verify-hidden-textboxes-on-hidden-slide](./Verify-hidden-textboxes-on-hidden-slide.cs) |  | Verify hidden textboxes on hidden slide |
+| [Verify-language-id-persistence-after-save](./Verify-language-id-persistence-after-save.cs) |  | Verify language id persistence after save |
 
 ## Category Statistics
 
-- Total examples: 141
+- Total examples: 104
 
 ## Key API Surface
 
@@ -189,15 +159,15 @@ working within the **manage-presentation-text** category.
 - `Aspose.Slides.Export.SaveFormat.Pptx`
 - `Aspose.Slides.IAutoShape`
 - `Aspose.Slides.ISlide`
-- `Aspose.Slides.Paragraph`
-- `Aspose.Slides.ShapeType.Rectangle`
 - `Aspose.Slides.ITextFrame`
-- `Aspose.Slides.IParagraph`
-- `Aspose.Slides.IShape`
-- `Aspose.Slides.BulletType.Symbol`
+- `Aspose.Slides.ShapeType.Rectangle`
 - `Aspose.Slides.IPortion`
 - `Aspose.Slides.Util`
-- `Aspose.Slides.ITextFrameFormat`
+- `Aspose.Slides.IParagraph`
+- `Aspose.Slides.PptxUnsupportedFormatException`
+- `Aspose.Slides.Paragraph`
+- `Aspose.Slides.PptUnsupportedFormatException`
+- `Aspose.Slides.Portion`
 
 ## Common Code Pattern
 
@@ -218,5 +188,5 @@ using (Presentation pres = new Presentation("input.pptx"))
 - Save the presentation using `Presentation.Save(...)`.
 
 <!-- AUTOGENERATED:START -->
-Updated: 2026-03-20
+Updated: 2026-04-12
 <!-- AUTOGENERATED:END -->
