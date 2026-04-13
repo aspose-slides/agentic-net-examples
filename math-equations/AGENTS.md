@@ -20,74 +20,74 @@ working within the **math-equations** category.
 
 ## Required Namespaces
 
-- `using Aspose.Slides.Export;` (34/34 files)
-- `using System;` (32/34 files)
-- `using Aspose.Slides;` (28/34 files)
-- `using Aspose.Slides.MathText;` (21/34 files)
-- `using System.IO;` (7/34 files)
-- `using System.Drawing;` (2/34 files)
-- `using System.Collections.Generic;` (1/34 files)
+- `using System;` (29/29 files)
+- `using System.IO;` (28/29 files)
+- `using Aspose.Slides.Export;` (28/29 files)
+- `using Aspose.Slides;` (21/29 files)
+- `using Aspose.Slides.MathText;` (16/29 files)
+- `using System.Collections.Generic;` (3/29 files)
+- `using System.Text;` (2/29 files)
+- `using Aspose.Slides.Util;` (2/29 files)
+- `using System.Diagnostics;` (1/29 files)
+- `using System.Threading;` (1/29 files)
+- `using System.Linq;` (1/29 files)
+- `using System.Security.Cryptography;` (1/29 files)
 
 ## Files in this folder
 
 | File | Key APIs | Description |
 |------|----------|-------------|
-| [Add-math-equation-to-PPTX-slide](./Add-math-equation-to-PPTX-slide.cs) |  | Add math equation to PPTX slide |
-| [Add-math-function-to-PPTX-slide](./Add-math-function-to-PPTX-slide.cs) |  | Add math function to PPTX slide |
-| [Add-math-inequality-to-PPTX-slide](./Add-math-inequality-to-PPTX-slide.cs) |  | Add math inequality to PPTX slide |
-| [Add-math-radical-to-PPTX-slide](./Add-math-radical-to-PPTX-slide.cs) |  | Add math radical to PPTX slide |
-| [Add-n-ary-operator-to-PPTX-slide](./Add-n-ary-operator-to-PPTX-slide.cs) |  | Add n ary operator to PPTX slide |
-| [Add-nary-operator-and-integral-PPTX-slide](./Add-nary-operator-and-integral-PPTX-slide.cs) |  | Add nary operator and integral PPTX slide |
-| [Apply-left-right-subscript-superscript-PPTX-slide](./Apply-left-right-subscript-superscript-PPTX-slide.cs) |  | Apply left right subscript superscript PPTX slide |
-| [Apply-math-bounds-using-setlimits-PPTX-slide](./Apply-math-bounds-using-setlimits-PPTX-slide.cs) |  | Apply math bounds using setlimits PPTX slide |
-| [Apply-math-limit-to-PPTX-slide](./Apply-math-limit-to-PPTX-slide.cs) |  | Apply math limit to PPTX slide |
-| [Apply-right-left-subscript-superscript-PPTX-slide](./Apply-right-left-subscript-superscript-PPTX-slide.cs) |  | Apply right left subscript superscript PPTX slide |
-| [Assign-presentation-element-as-argument-PPTX-slide](./Assign-presentation-element-as-argument-PPTX-slide.cs) |  | Assign presentation element as argument PPTX slide |
-| [Calculate-math-transformations-on-PPTX-slide](./Calculate-math-transformations-on-PPTX-slide.cs) |  | Calculate math transformations on PPTX slide |
-| [Create-default-math-equation-PPTX-slide](./Create-default-math-equation-PPTX-slide.cs) |  | Create default math equation PPTX slide |
-| [Create-math-root-expression-in-PPTX-slide](./Create-math-root-expression-in-PPTX-slide.cs) |  | Create math root expression in PPTX slide |
-| [Create-math-symbols-for-PPTX-slide](./Create-math-symbols-for-PPTX-slide.cs) |  | Create math symbols for PPTX slide |
-| [Customize-math-text-in-PPTX-slide](./Customize-math-text-in-PPTX-slide.cs) |  | Customize math text in PPTX slide |
-| [Divide-math-objects-in-PPTX-slide](./Divide-math-objects-in-PPTX-slide.cs) |  | Divide math objects in PPTX slide |
-| [Embed-math-matrix-into-PPTX-slide](./Embed-math-matrix-into-PPTX-slide.cs) |  | Embed math matrix into PPTX slide |
-| [Enclose-math-expression-with-delimiters-PPTX-slide](./Enclose-math-expression-with-delimiters-PPTX-slide.cs) |  | Enclose math expression with delimiters PPTX slide |
-| [Export-math-equation-from-PPTX-to-PDF](./Export-math-equation-from-PPTX-to-PDF.cs) |  | Export math equation from PPTX to PDF |
-| [Extract-math-equations-from-PPTX](./Extract-math-equations-from-PPTX.cs) |  | Extract math equations from PPTX |
-| [Extract-math-objects-from-PPTX-slide](./Extract-math-objects-from-PPTX-slide.cs) |  | Extract math objects from PPTX slide |
-| [Format-subscript-and-superscript-in-PPTX-slide](./Format-subscript-and-superscript-in-PPTX-slide.cs) |  | Format subscript and superscript in PPTX slide |
-| [Generate-vertical-math-array-in-PPTX-slide](./Generate-vertical-math-array-in-PPTX-slide.cs) |  | Generate vertical math array in PPTX slide |
-| [Insert-math-equation-into-PPTX-slide](./Insert-math-equation-into-PPTX-slide.cs) |  | Insert math equation into PPTX slide |
-| [Instantiate-math-fraction-on-PPTX-slide](./Instantiate-math-fraction-on-PPTX-slide.cs) |  | Instantiate math fraction on PPTX slide |
-| [Join-math-elements-on-PPTX-slide](./Join-math-elements-on-PPTX-slide.cs) |  | Join math elements on PPTX slide |
-| [Load-PPTX-presentation-for-math-equations](./Load-PPTX-presentation-for-math-equations.cs) |  | Load PPTX presentation for math equations |
-| [Remove-math-annotations-from-PPTX-slide](./Remove-math-annotations-from-PPTX-slide.cs) |  | Remove math annotations from PPTX slide |
-| [Review-math-equation-support-in-PPTX](./Review-math-equation-support-in-PPTX.cs) |  | Review math equation support in PPTX |
-| [Set-subscript-superscript-using-methods-PPTX-slide](./Set-subscript-superscript-using-methods-PPTX-slide.cs) |  | Set subscript superscript using methods PPTX slide |
-| [Store-math-equations-in-memory-PPTX](./Store-math-equations-in-memory-PPTX.cs) |  | Store math equations in memory PPTX |
-| [Style-math-size-color-PPTX-slide](./Style-math-size-color-PPTX-slide.cs) |  | Style math size color PPTX slide |
-| [Validate-math-equation-structure-in-PPTX-slide](./Validate-math-equation-structure-in-PPTX-slide.cs) |  | Validate math equation structure in PPTX slide |
+| [Apply-superscript-to-mathportion-before-export](./Apply-superscript-to-mathportion-before-export.cs) |  | Apply superscript to mathportion before export |
+| [Capture-mathml-from-memorystream-as-bytearray](./Capture-mathml-from-memorystream-as-bytearray.cs) |  | Capture mathml from memorystream as bytearray |
+| [Check-shapes-for-mathparagraphs-in-PPTX](./Check-shapes-for-mathparagraphs-in-PPTX.cs) |  | Check shapes for mathparagraphs in PPTX |
+| [Clone-presentation-in-memory-for-mathml-export](./Clone-presentation-in-memory-for-mathml-export.cs) |  | Clone presentation in memory for mathml export |
+| [Close-filestream-after-writeasmathml-failure](./Close-filestream-after-writeasmathml-failure.cs) |  | Close filestream after writeasmathml failure |
+| [Convert-memorystream-to-utf8-string](./Convert-memorystream-to-utf8-string.cs) |  | Convert memorystream to utf8 string |
+| [Debug-writeasmathml-output-to-console](./Debug-writeasmathml-output-to-console.cs) |  | Debug writeasmathml output to console |
+| [Ensure-writeasmathml-does-not-modify-original](./Ensure-writeasmathml-does-not-modify-original.cs) |  | Ensure writeasmathml does not modify original |
+| [Export-mathblock-to-mathml-using-memorystream](./Export-mathblock-to-mathml-using-memorystream.cs) |  | Export mathblock to mathml using memorystream |
+| [Export-mathml-from-shapes-with-alttext](./Export-mathml-from-shapes-with-alttext.cs) |  | Export mathml from shapes with alttext |
+| [Export-mathml-to-UNC-share](./Export-mathml-to-UNC-share.cs) |  | Export mathml to UNC share |
+| [Export-mathparagraph-or-mathblock-via-CLI-arguments](./Export-mathparagraph-or-mathblock-via-CLI-arguments.cs) |  | Export mathparagraph or mathblock via CLI arguments |
+| [Export-mathparagraph-to-mathml-with-filestream](./Export-mathparagraph-to-mathml-with-filestream.cs) |  | Export mathparagraph to mathml with filestream |
+| [Find-mathportions-in-PPTX-slides](./Find-mathportions-in-PPTX-slides.cs) |  | Find mathportions in PPTX slides |
+| [Generate-mathml-from-slide-notes](./Generate-mathml-from-slide-notes.cs) |  | Generate mathml from slide notes |
+| [Load-PPTX-presentation-and-extract-math](./Load-PPTX-presentation-and-extract-math.cs) |  | Load PPTX presentation and extract math |
+| [Log-slide-index-shape-mathml-path](./Log-slide-index-shape-mathml-path.cs) |  | Log slide index shape mathml path |
+| [Log-writeasmathml-exception-for-unsupported-mathblock](./Log-writeasmathml-exception-for-unsupported-mathblock.cs) |  | Log writeasmathml exception for unsupported mathblock |
+| [Map-slide-numbers-to-mathml-dictionary](./Map-slide-numbers-to-mathml-dictionary.cs) |  | Map slide numbers to mathml dictionary |
+| [Measure-writeasmathml-execution-time](./Measure-writeasmathml-execution-time.cs) |  | Measure writeasmathml execution time |
+| [Retrieve-mathparagraph-from-detected-mathportion](./Retrieve-mathparagraph-from-detected-mathportion.cs) |  | Retrieve mathparagraph from detected mathportion |
+| [Retry-writeasmathml-on-transient-IO-errors](./Retry-writeasmathml-on-transient-IO-errors.cs) |  | Retry writeasmathml on transient IO errors |
+| [Save-mathml-bytearray-to-XML-file](./Save-mathml-bytearray-to-XML-file.cs) |  | Save mathml bytearray to XML file |
+| [Select-mathportions-with-variable-using-LINQ](./Select-mathportions-with-variable-using-LINQ.cs) |  | Select mathportions with variable using LINQ |
+| [Skip-hidden-slides-during-mathml-export](./Skip-hidden-slides-during-mathml-export.cs) |  | Skip hidden slides during mathml export |
+| [Skip-mathblock-on-writeasmathml-notsupportedexception](./Skip-mathblock-on-writeasmathml-notsupportedexception.cs) |  | Skip mathblock on writeasmathml notsupportedexception |
+| [Summarize-slide-mathparagraph-counts](./Summarize-slide-mathparagraph-counts.cs) |  | Summarize slide mathparagraph counts |
+| [Validate-exported-mathml-against-expected-XML](./Validate-exported-mathml-against-expected-XML.cs) |  | Validate exported mathml against expected XML |
+| [Verify-presentation-file-size-and-checksum](./Verify-presentation-file-size-and-checksum.cs) |  | Verify presentation file size and checksum |
 
 ## Category Statistics
 
-- Total examples: 34
+- Total examples: 29
 
 ## Key API Surface
 
-- `Aspose.Slides.MathText.MathematicalText`
-- `Aspose.Slides.Presentation`
 - `Aspose.Slides.Export`
+- `Aspose.Slides.Presentation`
 - `Aspose.Slides`
-- `Aspose.Slides.MathText.MathBlock`
-- `Aspose.Slides.Export.SaveFormat.Pptx`
 - `Aspose.Slides.MathText`
-- `Aspose.Slides.IAutoShape`
+- `Aspose.Slides.Export.SaveFormat.Pptx`
+- `Aspose.Slides.MathText.MathematicalText`
 - `Aspose.Slides.MathText.MathPortion`
+- `Aspose.Slides.MathText.MathBlock`
 - `Aspose.Slides.MathText.IMathParagraph`
+- `Aspose.Slides.IAutoShape`
 - `Aspose.Slides.ISlide`
-- `Aspose.Slides.Portion`
+- `Aspose.Slides.MathText.MathParagraph`
+- `Aspose.Slides.IShape`
 - `Aspose.Slides.MathText.IMathBlock`
-- `Aspose.Slides.MathText.IMathElement`
-- `Aspose.Slides.FillType.Solid`
+- `Aspose.Slides.IMasterSlide`
 
 ## Common Code Pattern
 
@@ -108,5 +108,5 @@ using (Presentation pres = new Presentation("input.pptx"))
 - Save the presentation using `Presentation.Save(...)`.
 
 <!-- AUTOGENERATED:START -->
-Updated: 2026-03-20
+Updated: 2026-04-13
 <!-- AUTOGENERATED:END -->
