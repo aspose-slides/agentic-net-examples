@@ -1,90 +1,75 @@
 using System;
 using System.IO;
 using System.Xml;
-using System.Drawing;
 using Aspose.Slides;
-using Aspose.Slides.Ink;
 using Aspose.Slides.Export;
+using Aspose.Slides.Ink;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
+        // Input and output file paths
         string inputPath = "input.pptx";
-        string outputPath = "output.pptx";
-        string xmlPath = "inkData.xml";
+        string outputXmlPath = "inkData.xml";
+        string outputPptxPath = "output.pptx";
 
-        // Verify that the input file exists
+        // Verify input file exists
         if (!File.Exists(inputPath))
         {
-            Console.WriteLine("Input file does not exist.");
+            Console.WriteLine("Input file not found: " + inputPath);
             return;
         }
 
         try
         {
-            // Load the presentation
-            using (Presentation presentation = new Presentation(inputPath))
-            {
-                // Prepare XML document to store ink data
-                XmlDocument xmlDoc = new XmlDocument();
-                XmlElement root = xmlDoc.CreateElement("Inks");
-                xmlDoc.AppendChild(root);
+            // Load presentation
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
 
-                // Iterate through slides and shapes
-                for (int i = 0; i < presentation.Slides.Count; i++)
+            // Prepare XML writer settings
+            System.Xml.XmlWriterSettings settings = new System.Xml.XmlWriterSettings();
+            settings.Indent = true;
+
+            using (System.Xml.XmlWriter writer = System.Xml.XmlWriter.Create(outputXmlPath, settings))
+            {
+                writer.WriteStartDocument();
+                writer.WriteStartElement("InkShapes");
+
+                // Iterate through slides and shapes to find Ink shapes
+                for (int slideIndex = 0; slideIndex < presentation.Slides.Count; slideIndex++)
                 {
-                    ISlide slide = presentation.Slides[i];
-                    for (int j = 0; j < slide.Shapes.Count; j++)
+                    Aspose.Slides.ISlide slide = presentation.Slides[slideIndex];
+                    foreach (Aspose.Slides.IShape shape in slide.Shapes)
                     {
-                        IShape shape = slide.Shapes[j];
-                        Ink inkShape = shape as Ink;
+                        Aspose.Slides.Ink.Ink inkShape = shape as Aspose.Slides.Ink.Ink;
                         if (inkShape != null)
                         {
-                            // Create XML element for the ink shape
-                            XmlElement inkElement = xmlDoc.CreateElement("Ink");
-                            inkElement.SetAttribute("SlideIndex", (i + 1).ToString());
-                            inkElement.SetAttribute("ShapeName", inkShape.Name);
-                            root.AppendChild(inkElement);
+                            writer.WriteStartElement("InkShape");
+                            writer.WriteAttributeString("SlideIndex", slideIndex.ToString());
 
-                            // Serialize each trace
-                            IInkTrace[] traces = inkShape.Traces;
-                            for (int t = 0; t < traces.Length; t++)
+                            // Serialize trace information
+                            writer.WriteStartElement("Traces");
+                            foreach (Aspose.Slides.Ink.IInkTrace trace in inkShape.Traces)
                             {
-                                IInkTrace trace = traces[t];
-                                XmlElement traceElement = xmlDoc.CreateElement("Trace");
-                                traceElement.SetAttribute("Index", t.ToString());
-                                inkElement.AppendChild(traceElement);
-
-                                // Serialize brush information
-                                IInkBrush brush = trace.Brush;
-                                XmlElement brushElement = xmlDoc.CreateElement("Brush");
-                                brushElement.SetAttribute("Color", brush.Color.ToArgb().ToString());
-                                brushElement.SetAttribute("Size", brush.Size.ToString());
-                                brushElement.SetAttribute("InkEffect", brush.InkEffect.ToString());
-                                traceElement.AppendChild(brushElement);
-
-                                // Serialize points
-                                XmlElement pointsElement = xmlDoc.CreateElement("Points");
-                                foreach (PointF pt in trace.Points)
-                                {
-                                    XmlElement pointElement = xmlDoc.CreateElement("Point");
-                                    pointElement.SetAttribute("X", pt.X.ToString());
-                                    pointElement.SetAttribute("Y", pt.Y.ToString());
-                                    pointsElement.AppendChild(pointElement);
-                                }
-                                traceElement.AppendChild(pointsElement);
+                                writer.WriteStartElement("Trace");
+                                // Example: serialize trace ID if available (placeholder)
+                                // writer.WriteAttributeString("Id", trace.Id.ToString());
+                                writer.WriteEndElement(); // Trace
                             }
+                            writer.WriteEndElement(); // Traces
+
+                            writer.WriteEndElement(); // InkShape
                         }
                     }
                 }
 
-                // Save the XML data
-                xmlDoc.Save(xmlPath);
-
-                // Save the presentation before exiting
-                presentation.Save(outputPath, SaveFormat.Pptx);
+                writer.WriteEndElement(); // InkShapes
+                writer.WriteEndDocument();
             }
+
+            // Save the (potentially unchanged) presentation before exit
+            presentation.Save(outputPptxPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            presentation.Dispose();
         }
         catch (NotSupportedException)
         {
@@ -92,7 +77,7 @@ class Program
         }
         catch (Exception ex)
         {
-            // Handle other exceptions (e.g., external URL issues)
+            // Handle other exceptions (e.g., file I/O, Aspose.Slides errors)
             Console.WriteLine("Error: " + ex.Message);
         }
     }
