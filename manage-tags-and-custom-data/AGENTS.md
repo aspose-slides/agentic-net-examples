@@ -20,47 +20,86 @@ working within the **manage-tags-and-custom-data** category.
 
 ## Required Namespaces
 
-- `using System;` (17/17 files)
-- `using Aspose.Slides.Export;` (17/17 files)
-- `using Aspose.Slides;` (12/17 files)
-- `using Aspose.Slides.DOM.Ole;` (1/17 files)
+- `using System;` (40/40 files)
+- `using Aspose.Slides.Export;` (40/40 files)
+- `using Aspose.Slides;` (39/40 files)
+- `using System.IO;` (39/40 files)
+- `using System.Collections.Generic;` (9/40 files)
+- `using System.Text.Json;` (3/40 files)
+- `using System.Text;` (2/40 files)
+- `using Aspose.Slides.Charts;` (2/40 files)
+- `using System.IO.Compression;` (1/40 files)
+- `using System.Security.Cryptography;` (1/40 files)
+- `using System.Xml;` (1/40 files)
+- `using System.Xml.Serialization;` (1/40 files)
+- `using System.Text.RegularExpressions;` (1/40 files)
 
 ## Files in this folder
 
 | File | Key APIs | Description |
 |------|----------|-------------|
-| [Add-custom-metadata-tags-to-PPTX](./Add-custom-metadata-tags-to-PPTX.cs) |  | Add custom metadata tags to PPTX |
-| [Analyze-slide-metadata-in-PPTX](./Analyze-slide-metadata-in-PPTX.cs) |  | Analyze slide metadata in PPTX |
-| [Assign-tag-to-slide-in-PPTX](./Assign-tag-to-slide-in-PPTX.cs) |  | Assign tag to slide in PPTX |
-| [Delete-tag-by-key-from-PPTX](./Delete-tag-by-key-from-PPTX.cs) |  | Delete tag by key from PPTX |
-| [Delete-tag-by-name-from-PPTX](./Delete-tag-by-name-from-PPTX.cs) |  | Delete tag by name from PPTX |
-| [Export-tag-data-to-CSV-from-PPTX](./Export-tag-data-to-CSV-from-PPTX.cs) |  | Export tag data to CSV from PPTX |
-| [Extract-tag-names-from-PPTX](./Extract-tag-names-from-PPTX.cs) |  | Extract tag names from PPTX |
-| [Get-all-tag-values-from-PPTX](./Get-all-tag-values-from-PPTX.cs) |  | Get all tag values from PPTX |
-| [Insert-custom-tag-into-PPTX](./Insert-custom-tag-into-PPTX.cs) |  | Insert custom tag into PPTX |
-| [Read-write-data-storage-in-PPTX](./Read-write-data-storage-in-PPTX.cs) |  | Read write data storage in PPTX |
-| [Remove-tag-by-key-from-PPTX](./Remove-tag-by-key-from-PPTX.cs) |  | Remove tag by key from PPTX |
-| [Remove-tag-by-name-from-PPTX](./Remove-tag-by-name-from-PPTX.cs) |  | Remove tag by name from PPTX |
-| [Retrieve-custom-tag-values-from-PPTX](./Retrieve-custom-tag-values-from-PPTX.cs) |  | Retrieve custom tag values from PPTX |
-| [Search-tag-by-value-in-PPTX](./Search-tag-by-value-in-PPTX.cs) |  | Search tag by value in PPTX |
-| [Strip-tags-from-PPTX-preserve-layout](./Strip-tags-from-PPTX-preserve-layout.cs) |  | Strip tags from PPTX preserve layout |
-| [Update-tag-value-in-PPTX](./Update-tag-value-in-PPTX.cs) |  | Update tag value in PPTX |
-| [Validate-tag-consistency-in-PPTX](./Validate-tag-consistency-in-PPTX.cs) |  | Validate tag consistency in PPTX |
+| [Add-tag-to-slide-and-save-presentation](./Add-tag-to-slide-and-save-presentation.cs) |  | Add tag to slide and save presentation |
+| [Add-timestamp-tag-to-slide-on-save](./Add-timestamp-tag-to-slide-on-save.cs) |  | Add timestamp tag to slide on save |
+| [Add-version-tag-to-presentation-batch](./Add-version-tag-to-presentation-batch.cs) |  | Add version tag to presentation batch |
+| [Clean-presentation-charts-remove-custom-data](./Clean-presentation-charts-remove-custom-data.cs) |  | Clean presentation charts remove custom data |
+| [Clean-presentation-remove-all-custom-data](./Clean-presentation-remove-all-custom-data.cs) |  | Clean presentation remove all custom data |
+| [Clone-slide-tags-to-another-slide](./Clone-slide-tags-to-another-slide.cs) |  | Clone slide tags to another slide |
+| [Compress-custom-data-before-embedding](./Compress-custom-data-before-embedding.cs) |  | Compress custom data before embedding |
+| [Control-slide-transition-effects-runtime-tag](./Control-slide-transition-effects-runtime-tag.cs) |  | Control slide transition effects runtime tag |
+| [Copy-custom-data-to-target-presentation](./Copy-custom-data-to-target-presentation.cs) |  | Copy custom data to target presentation |
+| [Create-master-slide-tag-collection-with-defaults](./Create-master-slide-tag-collection-with-defaults.cs) |  | Create master slide tag collection with defaults |
+| [Create-tag-relationship-diagram-and-export-SVG](./Create-tag-relationship-diagram-and-export-SVG.cs) |  | Create tag relationship diagram and export SVG |
+| [Decrypt-custom-data-runtime-display-values-console](./Decrypt-custom-data-runtime-display-values-console.cs) |  | Decrypt custom data runtime display values console |
+| [Encrypt-custom-data-with-AES-in-presentation](./Encrypt-custom-data-with-AES-in-presentation.cs) |  | Encrypt custom data with AES in presentation |
+| [Export-presentation-custom-data-to-JSON](./Export-presentation-custom-data-to-JSON.cs) |  | Export presentation custom data to JSON |
+| [Extract-presentation-tags-for-ML-classification](./Extract-presentation-tags-for-ML-classification.cs) |  | Extract presentation tags for ML classification |
+| [Extract-presentation-tags-output-JSON](./Extract-presentation-tags-output-JSON.cs) |  | Extract presentation tags output JSON |
+| [Fallback-missing-tag-values-with-defaults](./Fallback-missing-tag-values-with-defaults.cs) |  | Fallback missing tag values with defaults |
+| [Filter-slides-by-multiple-tags-and-export](./Filter-slides-by-multiple-tags-and-export.cs) |  | Filter slides by multiple tags and export |
+| [Filter-slides-by-tag-and-export-PDF](./Filter-slides-by-tag-and-export-PDF.cs) |  | Filter slides by tag and export PDF |
+| [Generate-hierarchical-tag-structure-for-slides](./Generate-hierarchical-tag-structure-for-slides.cs) |  | Generate hierarchical tag structure for slides |
+| [Hide-slides-without-tag-during-slideshow](./Hide-slides-without-tag-during-slideshow.cs) |  | Hide slides without tag during slideshow |
+| [Import-custom-data-from-JSON-to-shapes](./Import-custom-data-from-JSON-to-shapes.cs) |  | Import custom data from JSON to shapes |
+| [Lazy-load-custom-data-for-presentation](./Lazy-load-custom-data-for-presentation.cs) |  | Lazy load custom data for presentation |
+| [List-all-presentation-tag-names-to-text](./List-all-presentation-tag-names-to-text.cs) |  | List all presentation tag names to text |
+| [Listen-for-tag-addition-and-removal-runtime](./Listen-for-tag-addition-and-removal-runtime.cs) |  | Listen for tag addition and removal runtime |
+| [Map-database-fields-to-presentation-tags](./Map-database-fields-to-presentation-tags.cs) |  | Map database fields to presentation tags |
+| [Merge-presentation-tag-collections-into-master](./Merge-presentation-tag-collections-into-master.cs) |  | Merge presentation tag collections into master |
+| [Prefix-tag-names-with-project-id](./Prefix-tag-names-with-project-id.cs) |  | Prefix tag names with project id |
+| [Remove-tag-by-name-from-all-slides](./Remove-tag-by-name-from-all-slides.cs) |  | Remove tag by name from all slides |
+| [Resolve-tag-collisions-when-merging-presentations](./Resolve-tag-collisions-when-merging-presentations.cs) |  | Resolve tag collisions when merging presentations |
+| [Search-slide-tags-extract-indices-array](./Search-slide-tags-extract-indices-array.cs) |  | Search slide tags extract indices array |
+| [Serialize-shape-data-to-XML-and-embed](./Serialize-shape-data-to-XML-and-embed.cs) |  | Serialize shape data to XML and embed |
+| [Set-default-tag-for-new-slides](./Set-default-tag-for-new-slides.cs) |  | Set default tag for new slides |
+| [Store-previous-tag-values-for-rollback](./Store-previous-tag-values-for-rollback.cs) |  | Store previous tag values for rollback |
+| [Summarize-slide-tags-to-CSV-report](./Summarize-slide-tags-to-CSV-report.cs) |  | Summarize slide tags to CSV report |
+| [Summarize-tag-usage-per-slide-to-XLSX](./Summarize-tag-usage-per-slide-to-XLSX.cs) |  | Summarize tag usage per slide to XLSX |
+| [Sync-presentation-tag-collections-incrementally](./Sync-presentation-tag-collections-incrementally.cs) |  | Sync presentation tag collections incrementally |
+| [Update-custom-data-on-shape-and-save](./Update-custom-data-on-shape-and-save.cs) |  | Update custom data on shape and save |
+| [Validate-slide-tags-and-throw-exception](./Validate-slide-tags-and-throw-exception.cs) |  | Validate slide tags and throw exception |
+| [Validate-tag-values-with-REGEX-during-entry](./Validate-tag-values-with-REGEX-during-entry.cs) |  | Validate tag values with REGEX during entry |
 
 ## Category Statistics
 
-- Total examples: 17
+- Total examples: 40
 
 ## Key API Surface
 
+- `Aspose.Slides`
 - `Aspose.Slides.Export`
 - `Aspose.Slides.Presentation`
-- `Aspose.Slides`
 - `Aspose.Slides.Export.SaveFormat.Pptx`
-- `Aspose.Slides.ITagCollection`
-- `Aspose.Slides.ISlideCollection`
+- `Aspose.Slides.IAutoShape`
 - `Aspose.Slides.ISlide`
-- `Aspose.Slides.DOM.Ole`
+- `Aspose.Slides.ITagCollection`
+- `Aspose.Slides.ShapeType.Rectangle`
+- `Aspose.Slides.PptxUnsupportedFormatException`
+- `Aspose.Slides.PptUnsupportedFormatException`
+- `Aspose.Slides.SlideShow.TransitionType`
+- `Aspose.Slides.ShapeType.Line`
+- `Aspose.Slides.Charts`
+- `Aspose.Slides.IShape`
+- `Aspose.Slides.Charts.IChart`
 
 ## Common Code Pattern
 
@@ -81,5 +120,5 @@ using (Presentation pres = new Presentation("input.pptx"))
 - Save the presentation using `Presentation.Save(...)`.
 
 <!-- AUTOGENERATED:START -->
-Updated: 2026-03-20
+Updated: 2026-04-13
 <!-- AUTOGENERATED:END -->
