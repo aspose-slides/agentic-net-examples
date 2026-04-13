@@ -20,61 +20,75 @@ working within the **vba-macros** category.
 
 ## Required Namespaces
 
-- `using System;` (22/22 files)
-- `using Aspose.Slides.Export;` (22/22 files)
-- `using Aspose.Slides;` (18/22 files)
-- `using Aspose.Slides.Vba;` (6/22 files)
-- `using System.IO;` (5/22 files)
-- `using Aspose.Slides.DOM.Ole;` (2/22 files)
+- `using System;` (34/34 files)
+- `using Aspose.Slides.Export;` (34/34 files)
+- `using System.IO;` (33/34 files)
+- `using Aspose.Slides;` (32/34 files)
+- `using Aspose.Slides.Vba;` (16/34 files)
+- `using System.Collections.Generic;` (1/34 files)
+- `using System.Text.Json;` (1/34 files)
+- `using System.Text;` (1/34 files)
 
 ## Files in this folder
 
 | File | Key APIs | Description |
 |------|----------|-------------|
-| [Add-speaker-note-to-PPTX](./Add-speaker-note-to-PPTX.cs) |  | Add speaker note to PPTX |
-| [Add-vba-module-to-PPTX](./Add-vba-module-to-PPTX.cs) |  | Add vba module to PPTX |
-| [Check-for-embedded-VBA-in-PPTX](./Check-for-embedded-VBA-in-PPTX.cs) |  | Check for embedded VBA in PPTX |
-| [Check-vba-project-password-in-PPTX](./Check-vba-project-password-in-PPTX.cs) |  | Check vba project password in PPTX |
-| [Clear-VBA-project-from-PPTX](./Clear-VBA-project-from-PPTX.cs) |  | Clear VBA project from PPTX |
-| [Convert-PPTX-to-PDF-preserving-layout](./Convert-PPTX-to-PDF-preserving-layout.cs) |  | Convert PPTX to PDF preserving layout |
-| [Convert-PPTX-with-macros-to-PDF](./Convert-PPTX-with-macros-to-PDF.cs) |  | Convert PPTX with macros to PDF |
-| [Delete-vba-macros-from-PPTX](./Delete-vba-macros-from-PPTX.cs) |  | Delete vba macros from PPTX |
-| [Detect-vba-project-in-PPTX](./Detect-vba-project-in-PPTX.cs) |  | Detect vba project in PPTX |
-| [Embed-vba-macros-into-PPTX](./Embed-vba-macros-into-PPTX.cs) |  | Embed vba macros into PPTX |
-| [Export-edited-PPTX-to-PDF](./Export-edited-PPTX-to-PDF.cs) |  | Export edited PPTX to PDF |
-| [Export-VBA-macros-from-PPTX](./Export-VBA-macros-from-PPTX.cs) |  | Export VBA macros from PPTX |
-| [Extract-VBA-macros-from-PPTX](./Extract-VBA-macros-from-PPTX.cs) |  | Extract VBA macros from PPTX |
-| [Insert-office-references-into-PPTX](./Insert-office-references-into-PPTX.cs) |  | Insert office references into PPTX |
-| [Link-VBA-references-to-PPTX](./Link-VBA-references-to-PPTX.cs) |  | Link VBA references to PPTX |
-| [List-vba-modules-and-macros-in-PPTX](./List-vba-modules-and-macros-in-PPTX.cs) |  | List vba modules and macros in PPTX |
-| [Locate-vba-module-in-PPTX](./Locate-vba-module-in-PPTX.cs) |  | Locate vba module in PPTX |
-| [Remove-vba-macros-from-pptx](./Remove-vba-macros-from-pptx.cs) |  | Remove vba macros from pptx |
-| [Rename-vba-module-in-PPTX](./Rename-vba-module-in-PPTX.cs) |  | Rename vba module in PPTX |
-| [Retrieve-VBA-macros-from-PPTX](./Retrieve-VBA-macros-from-PPTX.cs) |  | Retrieve VBA macros from PPTX |
-| [Strip-vba-from-embedded-documents-in-PPTX](./Strip-vba-from-embedded-documents-in-PPTX.cs) |  | Strip vba from embedded documents in PPTX |
-| [Verify-vba-project-password-in-PPTX](./Verify-vba-project-password-in-PPTX.cs) |  | Verify vba project password in PPTX |
+| [Add-external-type-library-references-to-VBA](./Add-external-type-library-references-to-VBA.cs) |  | Add external type library references to VBA |
+| [Add-multiple-custom-COM-references-and-verify](./Add-multiple-custom-COM-references-and-verify.cs) |  | Add multiple custom COM references and verify |
+| [Add-vba-module-with-error-handling](./Add-vba-module-with-error-handling.cs) |  | Add vba module with error handling |
+| [Associate-hidden-VBA-module-and-verify-visibility](./Associate-hidden-VBA-module-and-verify-visibility.cs) |  | Associate hidden VBA module and verify visibility |
+| [Batch-add-common-VBA-module-to-presentations](./Batch-add-common-VBA-module-to-presentations.cs) |  | Batch add common VBA module to presentations |
+| [Check-password-protection-before-modifying-VBA](./Check-password-protection-before-modifying-VBA.cs) |  | Check password protection before modifying VBA |
+| [Clone-VBA-project-and-attach-to-presentation](./Clone-VBA-project-and-attach-to-presentation.cs) |  | Clone VBA project and attach to presentation |
+| [Convert-presentation-to-HTML-and-verify](./Convert-presentation-to-HTML-and-verify.cs) |  | Convert presentation to HTML and verify |
+| [Convert-presentation-to-PDF-without-macros](./Convert-presentation-to-PDF-without-macros.cs) |  | Convert presentation to PDF without macros |
+| [Copy-VBA-module-and-rename](./Copy-VBA-module-and-rename.cs) |  | Copy VBA module and rename |
+| [Create-standard-VBA-module-with-sample-macro](./Create-standard-VBA-module-with-sample-macro.cs) |  | Create standard VBA module with sample macro |
+| [Create-vba-project-and-embed-macro-bytes](./Create-vba-project-and-embed-macro-bytes.cs) |  | Create vba project and embed macro bytes |
+| [Ensure-macros-are-not-executed-during-load](./Ensure-macros-are-not-executed-during-load.cs) |  | Ensure macros are not executed during load |
+| [Export-VBA-modules-to-JSON-documentation](./Export-VBA-modules-to-JSON-documentation.cs) |  | Export VBA modules to JSON documentation |
+| [Extract-VBA-module-names-from-presentation](./Extract-VBA-module-names-from-presentation.cs) |  | Extract VBA module names from presentation |
+| [Extract-VBA-module-source-and-save-bas](./Extract-VBA-module-source-and-save-bas.cs) |  | Extract VBA module source and save bas |
+| [Generate-vba-module-report-with-sizes](./Generate-vba-module-report-with-sizes.cs) |  | Generate vba module report with sizes |
+| [Implement-slide-interface-in-VBA-class](./Implement-slide-interface-in-VBA-class.cs) |  | Implement slide interface in VBA class |
+| [Insert-timestamp-slide-into-presentations](./Insert-timestamp-slide-into-presentations.cs) |  | Insert timestamp slide into presentations |
+| [List-VBA-modules-and-count-lines](./List-VBA-modules-and-count-lines.cs) |  | List VBA modules and count lines |
+| [Load-presentation-and-get-VBA-project](./Load-presentation-and-get-VBA-project.cs) |  | Load presentation and get VBA project |
+| [Log-slide-changes-to-text-file](./Log-slide-changes-to-text-file.cs) |  | Log slide changes to text file |
+| [Log-VBA-reference-type-library-guids](./Log-VBA-reference-type-library-guids.cs) |  | Log VBA reference type library guids |
+| [Remove-all-VBA-modules-and-save-presentation](./Remove-all-VBA-modules-and-save-presentation.cs) |  | Remove all VBA modules and save presentation |
+| [Remove-external-references-from-VBA-project](./Remove-external-references-from-VBA-project.cs) |  | Remove external references from VBA project |
+| [Remove-vba-module-and-verify-deletion](./Remove-vba-module-and-verify-deletion.cs) |  | Remove vba module and verify deletion |
+| [Rename-vba-module-and-update-references](./Rename-vba-module-and-update-references.cs) |  | Rename vba module and update references |
+| [Save-presentation-with-vba-macro-bytes](./Save-presentation-with-vba-macro-bytes.cs) |  | Save presentation with vba macro bytes |
+| [Skip-macro-extraction-if-VBA-protected](./Skip-macro-extraction-if-VBA-protected.cs) |  | Skip macro extraction if VBA protected |
+| [Unlock-VBA-project-with-decryption-key](./Unlock-VBA-project-with-decryption-key.cs) |  | Unlock VBA project with decryption key |
+| [Update-chart-data-macro-embed-into-presentation](./Update-chart-data-macro-embed-into-presentation.cs) |  | Update chart data macro embed into presentation |
+| [Update-VBA-module-placeholders-and-save](./Update-VBA-module-placeholders-and-save.cs) |  | Update VBA module placeholders and save |
+| [Validate-VBA-project-has-modules](./Validate-VBA-project-has-modules.cs) |  | Validate VBA project has modules |
+| [Verify-no-VBA-macros-after-conversion](./Verify-no-VBA-macros-after-conversion.cs) |  | Verify no VBA macros after conversion |
 
 ## Category Statistics
 
-- Total examples: 22
+- Total examples: 34
 
 ## Key API Surface
 
 - `Aspose.Slides.Presentation`
 - `Aspose.Slides.Export`
 - `Aspose.Slides`
+- `Aspose.Slides.Vba.VbaReferenceOleTypeLib`
 - `Aspose.Slides.Export.SaveFormat.Pptx`
 - `Aspose.Slides.Vba`
-- `Aspose.Slides.LoadOptions`
-- `Aspose.Slides.Vba.IVbaProject`
-- `Aspose.Slides.Vba.VbaProject`
-- `Aspose.Slides.Vba.VbaReferenceOleTypeLib`
-- `Aspose.Slides.Export.PdfOptions`
-- `Aspose.Slides.DOM.Ole`
 - `Aspose.Slides.Vba.IVbaModule`
+- `Aspose.Slides.Vba.VbaProject`
+- `Aspose.Slides.Vba.IVbaProject`
+- `Aspose.Slides.LoadOptions`
 - `Aspose.Slides.ISlide`
-- `Aspose.Slides.INotesSlideManager`
-- `Aspose.Slides.INotesSlide`
+- `Aspose.Slides.PptxUnsupportedFormatException`
+- `Aspose.Slides.Vba.IVbaModuleCollection`
+- `Aspose.Slides.IPresentationInfo`
+- `Aspose.Slides.PresentationFactory.Instance.GetPresentationInfo`
 
 ## Common Code Pattern
 
@@ -95,5 +109,5 @@ using (Presentation pres = new Presentation("input.pptx"))
 - Save the presentation using `Presentation.Save(...)`.
 
 <!-- AUTOGENERATED:START -->
-Updated: 2026-03-20
+Updated: 2026-04-13
 <!-- AUTOGENERATED:END -->
