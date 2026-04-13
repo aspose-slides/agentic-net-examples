@@ -20,75 +20,75 @@ working within the **presentation-ink-objects** category.
 
 ## Required Namespaces
 
-- `using System;` (33/33 files)
-- `using System.IO;` (33/33 files)
-- `using Aspose.Slides.Export;` (33/33 files)
-- `using Aspose.Slides;` (30/33 files)
-- `using Aspose.Slides.Ink;` (27/33 files)
-- `using System.Drawing;` (17/33 files)
-- `using System.Xml;` (2/33 files)
-- `using System.Text.Json;` (2/33 files)
-- `using System.Collections.Generic;` (1/33 files)
+- `using System;` (31/31 files)
+- `using Aspose.Slides.Export;` (31/31 files)
+- `using System.IO;` (30/31 files)
+- `using Aspose.Slides;` (29/31 files)
+- `using Aspose.Slides.Ink;` (20/31 files)
+- `using System.Drawing;` (16/31 files)
+- `using System.Collections.Generic;` (4/31 files)
+- `using System.Text.Json;` (2/31 files)
+- `using Aspose.Slides.Theme;` (1/31 files)
+- `using System.Xml.Serialization;` (1/31 files)
+- `using System.Xml;` (1/31 files)
 
 ## Files in this folder
 
 | File | Key APIs | Description |
 |------|----------|-------------|
-| [Adjust-brush-size-based-on-zoom-level](./Adjust-brush-size-based-on-zoom-level.cs) |  | Adjust brush size based on zoom level |
-| [Append-points-to-trace-to-extend-stroke](./Append-points-to-trace-to-extend-stroke.cs) |  | Append points to trace to extend stroke |
-| [Apply-rotation-matrix-to-inkshape-trace](./Apply-rotation-matrix-to-inkshape-trace.cs) |  | Apply rotation matrix to inkshape trace |
-| [Calculate-total-inkstroke-length-from-trace-points](./Calculate-total-inkstroke-length-from-trace-points.cs) |  | Calculate total inkstroke length from trace points |
-| [Clear-traces-from-inkshape-on-reset](./Clear-traces-from-inkshape-on-reset.cs) |  | Clear traces from inkshape on reset |
+| [Adjust-inkshape-brush-size-based-on-zoom](./Adjust-inkshape-brush-size-based-on-zoom.cs) |  | Adjust inkshape brush size based on zoom |
+| [Append-points-to-existing-trace](./Append-points-to-existing-trace.cs) |  | Append points to existing trace |
+| [Calculate-total-inkstroke-length-from-trace](./Calculate-total-inkstroke-length-from-trace.cs) |  | Calculate total inkstroke length from trace |
 | [Clone-inkshape-modify-brush-color-on-slide](./Clone-inkshape-modify-brush-color-on-slide.cs) |  | Clone inkshape modify brush color on slide |
-| [Copy-traces-between-inkshapes-preserve-brush](./Copy-traces-between-inkshapes-preserve-brush.cs) |  | Copy traces between inkshapes preserve brush |
-| [Create-circular-ink-pattern-with-radius-points](./Create-circular-ink-pattern-with-radius-points.cs) |  | Create circular ink pattern with radius points |
-| [Create-diagonal-ink-pattern-with-loop](./Create-diagonal-ink-pattern-with-loop.cs) |  | Create diagonal ink pattern with loop |
+| [Copy-inkshape-trace-to-another-preserve-brush](./Copy-inkshape-trace-to-another-preserve-brush.cs) |  | Copy inkshape trace to another preserve brush |
+| [Create-circular-ink-trace-with-radius-points](./Create-circular-ink-trace-with-radius-points.cs) |  | Create circular ink trace with radius points |
+| [Create-inkshape-and-assign-brush-color](./Create-inkshape-and-assign-brush-color.cs) |  | Create inkshape and assign brush color |
 | [Create-inkshape-with-theme-brush-color](./Create-inkshape-with-theme-brush-color.cs) |  | Create inkshape with theme brush color |
 | [Create-inkshape-with-transparent-brush](./Create-inkshape-with-transparent-brush.cs) |  | Create inkshape with transparent brush |
-| [Deserialize-inkshape-from-XML-and-apply](./Deserialize-inkshape-from-XML-and-apply.cs) |  | Deserialize inkshape from XML and apply |
+| [Deserialize-inkshape-trace-from-XML](./Deserialize-inkshape-trace-from-XML.cs) |  | Deserialize inkshape trace from XML |
 | [Distinguish-shape-from-inkshape-before-brush](./Distinguish-shape-from-inkshape-before-brush.cs) |  | Distinguish shape from inkshape before brush |
-| [Export-inkshape-trace-coordinates-to-JSON](./Export-inkshape-trace-coordinates-to-JSON.cs) |  | Export inkshape trace coordinates to JSON |
-| [Export-inkshape-trace-data-to-CSV](./Export-inkshape-trace-data-to-CSV.cs) |  | Export inkshape trace data to CSV |
-| [Generate-trace-with-sequential-x-y-points](./Generate-trace-with-sequential-x-y-points.cs) |  | Generate trace with sequential x y points |
-| [Get-count-of-traces-in-inkshape](./Get-count-of-traces-in-inkshape.cs) |  | Get count of traces in inkshape |
-| [Get-width-and-height-of-inkshape](./Get-width-and-height-of-inkshape.cs) |  | Get width and height of inkshape |
-| [Import-inkshape-trace-from-CSV-preserve-brush](./Import-inkshape-trace-from-CSV-preserve-brush.cs) |  | Import inkshape trace from CSV preserve brush |
+| [Export-inkshape-trace-to-CSV-file](./Export-inkshape-trace-to-CSV-file.cs) |  | Export inkshape trace to CSV file |
+| [Export-inkshape-trace-to-JSON-file](./Export-inkshape-trace-to-JSON-file.cs) |  | Export inkshape trace to JSON file |
+| [Generate-diagonal-ink-trace-with-incremental-offsets](./Generate-diagonal-ink-trace-with-incremental-offsets.cs) |  | Generate diagonal ink trace with incremental offsets |
+| [Get-inkshape-container-width-and-height](./Get-inkshape-container-width-and-height.cs) |  | Get inkshape container width and height |
+| [Get-total-trace-count-from-inkshape](./Get-total-trace-count-from-inkshape.cs) |  | Get total trace count from inkshape |
+| [Import-inkshape-trace-from-CSV](./Import-inkshape-trace-from-CSV.cs) |  | Import inkshape trace from CSV |
 | [Import-inkshape-trace-from-JSON](./Import-inkshape-trace-from-JSON.cs) |  | Import inkshape trace from JSON |
-| [Load-presentation-replace-inkshape-save](./Load-presentation-replace-inkshape-save.cs) |  | Load presentation replace inkshape save |
 | [Log-inkshape-trace-duplicate-points](./Log-inkshape-trace-duplicate-points.cs) |  | Log inkshape trace duplicate points |
-| [Remove-traces-from-inkshape-above-point-threshold](./Remove-traces-from-inkshape-above-point-threshold.cs) |  | Remove traces from inkshape above point threshold |
-| [Render-inkshape-with-configured-brush](./Render-inkshape-with-configured-brush.cs) |  | Render inkshape with configured brush |
-| [Replace-inkshape-on-each-slide-using-template](./Replace-inkshape-on-each-slide-using-template.cs) |  | Replace inkshape on each slide using template |
+| [Populate-trace-with-sequential-x-y-points](./Populate-trace-with-sequential-x-y-points.cs) |  | Populate trace with sequential x y points |
+| [Remove-trace-points-above-threshold-from-inkshape](./Remove-trace-points-above-threshold-from-inkshape.cs) |  | Remove trace points above threshold from inkshape |
+| [Render-inkshape-on-slide-with-brush](./Render-inkshape-on-slide-with-brush.cs) |  | Render inkshape on slide with brush |
+| [Replace-inkshape-with-new-objects-and-save](./Replace-inkshape-with-new-objects-and-save.cs) |  | Replace inkshape with new objects and save |
 | [Report-inkshape-dimensions-brush-color-points](./Report-inkshape-dimensions-brush-color-points.cs) |  | Report inkshape dimensions brush color points |
-| [Scale-inkshape-to-fit-container](./Scale-inkshape-to-fit-container.cs) |  | Scale inkshape to fit container |
-| [Scale-inkshape-uniformly-without-changing-brush](./Scale-inkshape-uniformly-without-changing-brush.cs) |  | Scale inkshape uniformly without changing brush |
+| [Rotate-inkshape-trace-by-ninety-degrees](./Rotate-inkshape-trace-by-ninety-degrees.cs) |  | Rotate inkshape trace by ninety degrees |
+| [Scale-inkshape-uniformly-keep-brush-size](./Scale-inkshape-uniformly-keep-brush-size.cs) |  | Scale inkshape uniformly keep brush size |
 | [Serialize-inkshape-brush-and-trace-to-XML](./Serialize-inkshape-brush-and-trace-to-XML.cs) |  | Serialize inkshape brush and trace to XML |
-| [Set-brush-size-for-inkshape](./Set-brush-size-for-inkshape.cs) |  | Set brush size for inkshape |
-| [Validate-brush-size-minimum-for-inkshape](./Validate-brush-size-minimum-for-inkshape.cs) |  | Validate brush size minimum for inkshape |
+| [Set-inkshape-brush-size](./Set-inkshape-brush-size.cs) |  | Set inkshape brush size |
+| [Validate-inkshape-brush-size-minimum](./Validate-inkshape-brush-size-minimum.cs) |  | Validate inkshape brush size minimum |
 | [Validate-inkshape-container-size-against-slide](./Validate-inkshape-container-size-against-slide.cs) |  | Validate inkshape container size against slide |
-| [Validate-inkshape-trace-has-minimum-points](./Validate-inkshape-trace-has-minimum-points.cs) |  | Validate inkshape trace has minimum points |
+| [Validate-inkshape-trace-has-minimum-ten-points](./Validate-inkshape-trace-has-minimum-ten-points.cs) |  | Validate inkshape trace has minimum ten points |
 
 ## Category Statistics
 
-- Total examples: 33
+- Total examples: 31
 
 ## Key API Surface
 
 - `Aspose.Slides`
 - `Aspose.Slides.Export`
+- `Aspose.Slides.Ink.Ink`
 - `Aspose.Slides.Ink`
 - `Aspose.Slides.Presentation`
-- `Aspose.Slides.Ink.Ink`
-- `Aspose.Slides.IShape`
-- `Aspose.Slides.ISlide`
 - `Aspose.Slides.Export.SaveFormat.Pptx`
-- `Aspose.Slides.Ink.IInk`
-- `Aspose.Slides.`
+- `Aspose.Slides.ISlide`
+- `Aspose.Slides.IShape`
 - `Aspose.Slides.Ink.IInkTrace`
+- `Aspose.Slides.FillType.Solid`
 - `Aspose.Slides.Ink.IInkBrush`
+- `Aspose.Slides.`
+- `Aspose.Slides.IAutoShape`
 - `Aspose.Slides.ShapeType.Line`
-- `Aspose.Slides.IShapeCollection`
-- `Aspose.Slides.ILayoutSlide`
+- `Aspose.Slides.LineSketchType.Scribble`
 
 ## Common Code Pattern
 
@@ -109,5 +109,5 @@ using (Presentation pres = new Presentation("input.pptx"))
 - Save the presentation using `Presentation.Save(...)`.
 
 <!-- AUTOGENERATED:START -->
-Updated: 2026-03-31
+Updated: 2026-04-13
 <!-- AUTOGENERATED:END -->

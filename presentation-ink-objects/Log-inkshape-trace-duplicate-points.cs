@@ -1,76 +1,103 @@
 using System;
 using System.IO;
+using System.Collections.Generic;
 using System.Drawing;
 using Aspose.Slides;
-using Aspose.Slides.Ink;
 using Aspose.Slides.Export;
+using Aspose.Slides.Ink;
 
-class Program
+namespace InkTraceDuplicateLogger
 {
-    static void Main()
+    class Program
     {
-        string inputPath = "input.pptx";
-        string outputPath = "output.pptx";
-
-        // Verify that the input file exists
-        if (!File.Exists(inputPath))
+        static void Main(string[] args)
         {
-            Console.WriteLine($"File not found: {inputPath}");
-            return;
-        }
+            // Input and output file paths
+            string inputPath = "input.pptx";
+            string outputPath = "output.pptx";
 
-        try
-        {
-            // Load the presentation
-            using (Presentation pres = new Presentation(inputPath))
+            // Verify that the input file exists
+            if (!File.Exists(inputPath))
             {
-                // Iterate through all slides
-                for (int slideIndex = 0; slideIndex < pres.Slides.Count; slideIndex++)
+                Console.WriteLine("Input file does not exist: " + inputPath);
+                return;
+            }
+
+            try
+            {
+                // Load the presentation
+                using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
                 {
-                    IBaseSlide slide = pres.Slides[slideIndex];
-
-                    // Iterate through all shapes on the slide
-                    for (int shapeIndex = 0; shapeIndex < slide.Shapes.Count; shapeIndex++)
+                    // Iterate through all slides
+                    for (int slideIndex = 0; slideIndex < presentation.Slides.Count; slideIndex++)
                     {
-                        IShape shape = slide.Shapes[shapeIndex];
+                        Aspose.Slides.ISlide slide = presentation.Slides[slideIndex];
 
-                        // Cast shape to Ink if possible
-                        Ink inkShape = shape as Ink;
-                        if (inkShape != null)
+                        // Iterate through all shapes on the slide
+                        for (int shapeIndex = 0; shapeIndex < slide.Shapes.Count; shapeIndex++)
                         {
-                            IInkTrace[] traces = inkShape.Traces;
+                            Aspose.Slides.IShape shape = slide.Shapes[shapeIndex];
 
-                            // Iterate through each trace
-                            for (int traceIdx = 0; traceIdx < traces.Length; traceIdx++)
+                            // Check if the shape is an Ink object
+                            if (shape is Aspose.Slides.Ink.Ink)
                             {
-                                IInkTrace trace = traces[traceIdx];
-                                PointF[] points = trace.Points;
+                                Aspose.Slides.Ink.Ink inkShape = (Aspose.Slides.Ink.Ink)shape;
+                                IInkTrace[] traces = inkShape.Traces;
 
-                                // Detect duplicate points within the trace
-                                for (int i = 0; i < points.Length; i++)
+                                // Process each trace
+                                for (int traceIndex = 0; traceIndex < traces.Length; traceIndex++)
                                 {
-                                    for (int j = i + 1; j < points.Length; j++)
+                                    IInkTrace trace = traces[traceIndex];
+                                    PointF[] points = trace.Points;
+
+                                    // Use a hash set to detect duplicate points
+                                    HashSet<string> pointSet = new HashSet<string>();
+                                    List<PointF> duplicatePoints = new List<PointF>();
+
+                                    for (int pointIndex = 0; pointIndex < points.Length; pointIndex++)
                                     {
-                                        if (points[i].Equals(points[j]))
+                                        PointF pt = points[pointIndex];
+                                        string key = pt.X.ToString("R") + "_" + pt.Y.ToString("R");
+
+                                        if (pointSet.Contains(key))
                                         {
-                                            Console.WriteLine($"Duplicate point found in slide {slideIndex}, shape {shapeIndex} (Ink), trace {traceIdx}: ({points[i].X}, {points[i].Y})");
+                                            duplicatePoints.Add(pt);
+                                        }
+                                        else
+                                        {
+                                            pointSet.Add(key);
+                                        }
+                                    }
+
+                                    // Log duplicates if any
+                                    if (duplicatePoints.Count > 0)
+                                    {
+                                        Console.WriteLine($"Slide {slideIndex + 1}, Shape {shapeIndex + 1} (Ink), Trace {traceIndex + 1} contains duplicate points:");
+                                        foreach (PointF dup in duplicatePoints)
+                                        {
+                                            Console.WriteLine($"    Duplicate Point: X={dup.X}, Y={dup.Y}");
                                         }
                                     }
                                 }
                             }
                         }
                     }
-                }
 
-                // Save the (potentially unchanged) presentation before exit
-                pres.Save(outputPath, SaveFormat.Pptx);
+                    // Save the presentation before exiting
+                    presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                }
             }
-        }
-        catch (Exception ex)
-        {
-            // Handle unsupported format or other errors
-            // Format not supported
-            Console.WriteLine($"Error processing presentation: {ex.Message}");
+            catch (NotSupportedException)
+            {
+                // Format not supported
+                // Comment: The provided file format is not supported for this operation.
+                Console.WriteLine("The presentation format is not supported.");
+            }
+            catch (Exception ex)
+            {
+                // General exception handling
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
         }
     }
 }

@@ -1,61 +1,90 @@
 using System;
 using System.IO;
 using Aspose.Slides;
-using Aspose.Slides.Export;
 using Aspose.Slides.Ink;
+using Aspose.Slides.Export;
 using System.Drawing;
 
-class Program
+namespace AsposeSlidesExample
 {
-    static void Main()
+    class Program
     {
-        string inputPath = "input.pptx";
-        string outputPath = "output.pptx";
-
-        if (!File.Exists(inputPath))
+        static void Main()
         {
-            Console.WriteLine("Input file does not exist.");
-            return;
-        }
+            string inputPath = "input.pptx";
+            string outputPath = "output.pptx";
 
-        try
-        {
-            using (Presentation presentation = new Presentation(inputPath))
+            // Verify that the input file exists
+            if (!File.Exists(inputPath))
             {
-                for (int slideIndex = 0; slideIndex < presentation.Slides.Count; slideIndex++)
+                Console.WriteLine("Input file does not exist: " + inputPath);
+                return;
+            }
+
+            Aspose.Slides.Presentation presentation = null;
+            try
+            {
+                // Load the presentation
+                presentation = new Aspose.Slides.Presentation(inputPath);
+            }
+            catch (Exception ex)
+            {
+                // Handle unsupported format or loading errors
+                Console.WriteLine("Failed to load presentation: " + ex.Message);
+                return;
+            }
+
+            // Iterate through all slides and shapes
+            for (int slideIndex = 0; slideIndex < presentation.Slides.Count; slideIndex++)
+            {
+                Aspose.Slides.ISlide slide = presentation.Slides[slideIndex];
+                for (int shapeIndex = 0; shapeIndex < slide.Shapes.Count; shapeIndex++)
                 {
-                    ISlide slide = presentation.Slides[slideIndex];
-                    for (int shapeIndex = 0; shapeIndex < slide.Shapes.Count; shapeIndex++)
+                    Aspose.Slides.IShape shape = slide.Shapes[shapeIndex];
+
+                    // Check if the shape is an Ink shape
+                    if (shape is Aspose.Slides.Ink.Ink)
                     {
-                        IShape shape = slide.Shapes[shapeIndex];
-                        Ink inkShape = shape as Ink;
-                        if (inkShape != null)
+                        Aspose.Slides.Ink.Ink inkShape = shape as Aspose.Slides.Ink.Ink;
+                        // Ink shapes have read‑only Traces; we can only read brush information
+                        if (inkShape.Traces != null && inkShape.Traces.Length > 0)
                         {
-                            IInkTrace[] traces = inkShape.Traces;
-                            if (traces != null && traces.Length > 0)
-                            {
-                                IInkBrush brush = traces[0].Brush;
-                                brush.Color = Color.Red;
-                            }
+                            Aspose.Slides.Ink.IInkBrush brush = inkShape.Traces[0].Brush;
+                            Console.WriteLine("Ink shape found on slide {0}, shape {1}. InkEffect: {2}", slideIndex + 1, shapeIndex + 1, brush.InkEffect);
+                            // Example: you could change rendering options, but not the brush itself because Traces is read‑only
                         }
-                        else
+                    }
+                    else
+                    {
+                        // Regular shape handling – apply a simple fill color
+                        Aspose.Slides.Shape regularShape = shape as Aspose.Slides.Shape;
+                        if (regularShape != null && regularShape.FillFormat != null)
                         {
-                            if (shape.FillFormat != null)
-                            {
-                                shape.FillFormat.FillType = FillType.Solid;
-                                shape.FillFormat.SolidFillColor.Color = Color.Blue;
-                            }
+                            regularShape.FillFormat.FillType = Aspose.Slides.FillType.Solid;
+                            regularShape.FillFormat.SolidFillColor.Color = Color.Blue;
                         }
                     }
                 }
-
-                presentation.Save(outputPath, SaveFormat.Pptx);
             }
-        }
-        catch (Exception ex)
-        {
-            // Handle unsupported format or other errors
-            Console.WriteLine("An error occurred: " + ex.Message);
+
+            try
+            {
+                // Save the modified presentation
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            }
+            catch (Exception ex)
+            {
+                // Handle save errors (e.g., unsupported format)
+                Console.WriteLine("Failed to save presentation: " + ex.Message);
+            }
+            finally
+            {
+                // Ensure resources are released
+                if (presentation != null)
+                {
+                    presentation.Dispose();
+                }
+            }
         }
     }
 }
