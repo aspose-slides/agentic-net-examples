@@ -20,378 +20,339 @@ working within the **working-with-charts** category.
 
 ## Required Namespaces
 
-- `using Aspose.Slides.Export;` (330/330 files)
-- `using System;` (316/330 files)
-- `using Aspose.Slides;` (281/330 files)
-- `using System.IO;` (211/330 files)
-- `using Aspose.Slides.Charts;` (196/330 files)
-- `using System.Drawing;` (37/330 files)
-- `using Aspose.Slides.Animation;` (14/330 files)
-- `using Aspose.Slides.MathText;` (7/330 files)
-- `using Aspose.Slides.Import;` (3/330 files)
-- `using System.Collections.Generic;` (3/330 files)
-- `using Aspose.Slides.Excel;` (2/330 files)
-- `using System.Text;` (1/330 files)
-- `using Aspose.Slides.DOM.Ole;` (1/330 files)
-- `using System.Text.RegularExpressions;` (1/330 files)
-- `using Aspose.Slides.SmartArt;` (1/330 files)
+- `using Aspose.Slides.Export;` (290/291 files)
+- `using System;` (283/291 files)
+- `using Aspose.Slides;` (264/291 files)
+- `using Aspose.Slides.Charts;` (214/291 files)
+- `using System.IO;` (127/291 files)
+- `using System.Drawing;` (32/291 files)
+- `using Aspose.Slides.Animation;` (24/291 files)
+- `using System.Collections.Generic;` (5/291 files)
+- `using System.Text.Json;` (4/291 files)
+- `using System.Text;` (1/291 files)
+- `using System.Xml;` (1/291 files)
+- `using System.IO.Compression;` (1/291 files)
+- `using System.Threading.Tasks;` (1/291 files)
+- `using Aspose.Slides.Import;` (1/291 files)
+- `using Aspose.Slides.SlideShow;` (1/291 files)
 
 ## Files in this folder
 
 | File | Key APIs | Description |
 |------|----------|-------------|
-| [Access-axes-collection-in-PPTX-chart](./Access-axes-collection-in-PPTX-chart.cs) |  | Access axes collection in PPTX chart |
-| [Add-animation-sequences-to-PPTX-presentation](./Add-animation-sequences-to-PPTX-presentation.cs) |  | Add animation sequences to PPTX presentation |
-| [Add-animation-to-PPTX-chart-objects](./Add-animation-to-PPTX-chart-objects.cs) |  | Add animation to PPTX chart objects |
-| [Add-animation-to-PPTX-chart-series](./Add-animation-to-PPTX-chart-series.cs) |  | Add animation to PPTX chart series |
-| [Add-bubble-series-to-PPTX-chart](./Add-bubble-series-to-PPTX-chart.cs) |  | Add bubble series to PPTX chart |
-| [Add-callout-to-doughnut-chart-PPTX](./Add-callout-to-doughnut-chart-PPTX.cs) |  | Add callout to doughnut chart PPTX |
-| [Add-chart-callout-management-to-PPTX](./Add-chart-callout-management-to-PPTX.cs) |  | Add chart callout management to PPTX |
-| [Add-custom-callout-shapes-to-PPTX](./Add-custom-callout-shapes-to-PPTX.cs) |  | Add custom callout shapes to PPTX |
-| [Add-custom-error-bars-to-PPTX-chart](./Add-custom-error-bars-to-PPTX-chart.cs) |  | Add custom error bars to PPTX chart |
-| [Add-data-labels-to-PPTX-chart](./Add-data-labels-to-PPTX-chart.cs) |  | Add data labels to PPTX chart |
-| [Add-data-points-to-PPTX-pie-chart](./Add-data-points-to-PPTX-pie-chart.cs) |  | Add data points to PPTX pie chart |
-| [Add-data-table-summary-to-PPTX-chart](./Add-data-table-summary-to-PPTX-chart.cs) |  | Add data table summary to PPTX chart |
-| [Add-error-bars-to-PPTX-series](./Add-error-bars-to-PPTX-series.cs) |  | Add error bars to PPTX series |
-| [Add-faq-section-to-existing-PPTX-presentation](./Add-faq-section-to-existing-PPTX-presentation.cs) |  | Add faq section to existing PPTX presentation |
-| [Add-formula-overview-slide-to-PPTX](./Add-formula-overview-slide-to-PPTX.cs) |  | Add formula overview slide to PPTX |
-| [Add-funnel-series-to-PPTX-chart](./Add-funnel-series-to-PPTX-chart.cs) |  | Add funnel series to PPTX chart |
-| [Add-hierarchical-treemap-series-to-PPTX](./Add-hierarchical-treemap-series-to-PPTX.cs) |  | Add hierarchical treemap series to PPTX |
-| [Add-interactive-3d-configurations-to-PPTX-chart](./Add-interactive-3d-configurations-to-PPTX-chart.cs) |  | Add interactive 3d configurations to PPTX chart |
-| [Add-legend-and-title-slide-to-PPTX](./Add-legend-and-title-slide-to-PPTX.cs) |  | Add legend and title slide to PPTX |
-| [Add-modify-remove-embedded-worksheets-in-PPTX](./Add-modify-remove-embedded-worksheets-in-PPTX.cs) |  | Add modify remove embedded worksheets in PPTX |
-| [Add-percentage-data-labels-to-PPTX-charts](./Add-percentage-data-labels-to-PPTX-charts.cs) |  | Add percentage data labels to PPTX charts |
-| [Add-pptx-chart-of-specific-type](./Add-pptx-chart-of-specific-type.cs) |  | Add pptx chart of specific type |
-| [Add-see-also-link-to-PPTX](./Add-see-also-link-to-PPTX.cs) |  | Add see also link to PPTX |
-| [Add-series-animation-timing-to-PPTX](./Add-series-animation-timing-to-PPTX.cs) |  | Add series animation timing to PPTX |
-| [Add-styled-line-shape-to-PPTX-slide](./Add-styled-line-shape-to-PPTX-slide.cs) |  | Add styled line shape to PPTX slide |
-| [Add-trend-lines-to-all-PPTX-charts](./Add-trend-lines-to-all-PPTX-charts.cs) |  | Add trend lines to all PPTX charts |
-| [Add-trend-lines-to-PPTX-series](./Add-trend-lines-to-PPTX-series.cs) |  | Add trend lines to PPTX series |
-| [Add-waterfall-chart-to-PPTX-presentation](./Add-waterfall-chart-to-PPTX-presentation.cs) |  | Add waterfall chart to PPTX presentation |
-| [Adjust-axis-formatting-and-scaling-in-PPTX](./Adjust-axis-formatting-and-scaling-in-PPTX.cs) |  | Adjust axis formatting and scaling in PPTX |
-| [Adjust-axis-label-offset-distance-in-PPTX](./Adjust-axis-label-offset-distance-in-PPTX.cs) |  | Adjust axis label offset distance in PPTX |
-| [Adjust-axis-title-rotation-in-PPTX](./Adjust-axis-title-rotation-in-PPTX.cs) |  | Adjust axis title rotation in PPTX |
-| [Adjust-bubble-chart-properties-in-PPTX](./Adjust-bubble-chart-properties-in-PPTX.cs) |  | Adjust bubble chart properties in PPTX |
-| [Adjust-data-label-decimal-places-in-PPTX](./Adjust-data-label-decimal-places-in-PPTX.cs) |  | Adjust data label decimal places in PPTX |
-| [Adjust-data-table-formatting-in-PPTX](./Adjust-data-table-formatting-in-PPTX.cs) |  | Adjust data table formatting in PPTX |
-| [Adjust-doughnut-center-gap-in-PPTX](./Adjust-doughnut-center-gap-in-PPTX.cs) |  | Adjust doughnut center gap in PPTX |
-| [Adjust-label-position-on-PPTX-slide](./Adjust-label-position-on-PPTX-slide.cs) |  | Adjust label position on PPTX slide |
-| [Adjust-legend-font-point-size-in-PPTX](./Adjust-legend-font-point-size-in-PPTX.cs) |  | Adjust legend font point size in PPTX |
-| [Adjust-plot-area-coordinates-in-PPTX](./Adjust-plot-area-coordinates-in-PPTX.cs) |  | Adjust plot area coordinates in PPTX |
-| [Adjust-pptx-chart-type-data-and-formatting](./Adjust-pptx-chart-type-data-and-formatting.cs) |  | Adjust pptx chart type data and formatting |
-| [Adjust-secondary-plot-settings-pie-bar-PPTX](./Adjust-secondary-plot-settings-pie-bar-PPTX.cs) |  | Adjust secondary plot settings pie bar PPTX |
-| [Adjust-series-overlap-for-PPTX-chart](./Adjust-series-overlap-for-PPTX-chart.cs) |  | Adjust series overlap for PPTX chart |
-| [Alternative-export-math-equations-to-XPS](./Alternative-export-math-equations-to-XPS.cs) |  | Alternative export math equations to XPS |
-| [Append-percentage-sign-to-data-labels-PPTX](./Append-percentage-sign-to-data-labels-PPTX.cs) |  | Append percentage sign to data labels PPTX |
-| [Apply-3d-lighting-to-PPTX-shapes](./Apply-3d-lighting-to-PPTX-shapes.cs) |  | Apply 3d lighting to PPTX shapes |
-| [Apply-3d-rotation-to-PPTX-elements](./Apply-3d-rotation-to-PPTX-elements.cs) |  | Apply 3d rotation to PPTX elements |
-| [Apply-animation-to-category-element-in-PPTX](./Apply-animation-to-category-element-in-PPTX.cs) |  | Apply animation to category element in PPTX |
-| [Apply-arithmetic-operators-to-PPTX-shapes](./Apply-arithmetic-operators-to-PPTX-shapes.cs) |  | Apply arithmetic operators to PPTX shapes |
-| [Apply-arithmetic-operators-to-PPTX-slides](./Apply-arithmetic-operators-to-PPTX-slides.cs) |  | Apply arithmetic operators to PPTX slides |
-| [Apply-boolean-constants-to-control-PPTX-slides](./Apply-boolean-constants-to-control-PPTX-slides.cs) |  | Apply boolean constants to control PPTX slides |
-| [Apply-branch-color-to-chart-point-PPTX](./Apply-branch-color-to-chart-point-PPTX.cs) |  | Apply branch color to chart point PPTX |
-| [Apply-category-animations-to-PPTX-chart](./Apply-category-animations-to-PPTX-chart.cs) |  | Apply category animations to PPTX chart |
-| [Apply-chart-animations-to-PPTX-presentation](./Apply-chart-animations-to-PPTX-presentation.cs) |  | Apply chart animations to PPTX presentation |
-| [Apply-consistent-formatting-to-PPTX-charts](./Apply-consistent-formatting-to-PPTX-charts.cs) |  | Apply consistent formatting to PPTX charts |
-| [Apply-custom-fill-and-border-effects-PPTX](./Apply-custom-fill-and-border-effects-PPTX.cs) |  | Apply custom fill and border effects PPTX |
-| [Apply-custom-formatting-to-pie-chart-PPTX](./Apply-custom-formatting-to-pie-chart-PPTX.cs) |  | Apply custom formatting to pie chart PPTX |
-| [Apply-custom-formatting-to-treemap-points-PPTX](./Apply-custom-formatting-to-treemap-points-PPTX.cs) |  | Apply custom formatting to treemap points PPTX |
-| [Apply-custom-numeric-format-to-PPTX-table](./Apply-custom-numeric-format-to-PPTX-table.cs) |  | Apply custom numeric format to PPTX table |
-| [Apply-custom-styling-to-legend-PPTX](./Apply-custom-styling-to-legend-PPTX.cs) |  | Apply custom styling to legend PPTX |
-| [Apply-default-marker-style-PPTX-chart-series](./Apply-default-marker-style-PPTX-chart-series.cs) |  | Apply default marker style PPTX chart series |
-| [Apply-formatting-to-chart-entities-PPTX](./Apply-formatting-to-chart-entities-PPTX.cs) |  | Apply formatting to chart entities PPTX |
-| [Apply-inverted-fill-to-series-points-PPTX](./Apply-inverted-fill-to-series-points-PPTX.cs) |  | Apply inverted fill to series points PPTX |
-| [Apply-theme-to-PPTX-chart](./Apply-theme-to-PPTX-chart.cs) |  | Apply theme to PPTX chart |
-| [Assign-branch-color-to-data-point-PPTX](./Assign-branch-color-to-data-point-PPTX.cs) |  | Assign branch color to data point PPTX |
-| [Assign-custom-formulas-to-PPTX-chart-series](./Assign-custom-formulas-to-PPTX-chart-series.cs) |  | Assign custom formulas to PPTX chart series |
-| [Assign-data-values-to-PPTX-chart-elements](./Assign-data-values-to-PPTX-chart-elements.cs) |  | Assign data values to PPTX chart elements |
-| [Assign-label-and-fill-to-point-PPTX](./Assign-label-and-fill-to-point-PPTX.cs) |  | Assign label and fill to point PPTX |
-| [Assign-workbook-cell-to-data-label-PPTX](./Assign-workbook-cell-to-data-label-PPTX.cs) |  | Assign workbook cell to data label PPTX |
-| [Attach-external-workbook-to-PPTX-slides](./Attach-external-workbook-to-PPTX-slides.cs) |  | Attach external workbook to PPTX slides |
-| [Auto-assign-pie-slice-colors-PPTX](./Auto-assign-pie-slice-colors-PPTX.cs) |  | Auto assign pie slice colors PPTX |
-| [Bind-external-workbook-to-PPTX-presentation](./Bind-external-workbook-to-PPTX-presentation.cs) |  | Bind external workbook to PPTX presentation |
-| [Build-pie-chart-with-series-formatting-PPTX](./Build-pie-chart-with-series-formatting-PPTX.cs) |  | Build pie chart with series formatting PPTX |
-| [Calculate-embedded-formula-results-in-PPTX](./Calculate-embedded-formula-results-in-PPTX.cs) |  | Calculate embedded formula results in PPTX |
-| [Calculate-parent-element-position-in-PPTX](./Calculate-parent-element-position-in-PPTX.cs) |  | Calculate parent element position in PPTX |
-| [Change-legend-element-font-size-in-PPTX](./Change-legend-element-font-size-in-PPTX.cs) |  | Change legend element font size in PPTX |
-| [Change-series-fill-color-in-PPTX](./Change-series-fill-color-in-PPTX.cs) |  | Change series fill color in PPTX |
-| [Compute-chart-element-values-in-PPTX](./Compute-chart-element-values-in-PPTX.cs) |  | Compute chart element values in PPTX |
-| [Configure-3d-PPTX-chart-axes-and-series](./Configure-3d-PPTX-chart-axes-and-series.cs) |  | Configure 3d PPTX chart axes and series |
-| [Configure-axis-position-in-PPTX](./Configure-axis-position-in-PPTX.cs) |  | Configure axis position in PPTX |
-| [Configure-bubble-chart-size-scaling-in-PPTX](./Configure-bubble-chart-size-scaling-in-PPTX.cs) |  | Configure bubble chart size scaling in PPTX |
-| [Configure-callout-shapes-for-slide-annotations-PPTX](./Configure-callout-shapes-for-slide-annotations-PPTX.cs) |  | Configure callout shapes for slide annotations PPTX |
-| [Configure-category-axis-date-pattern-in-PPTX](./Configure-category-axis-date-pattern-in-PPTX.cs) |  | Configure category axis date pattern in PPTX |
-| [Configure-chart-font-attributes-in-PPTX](./Configure-chart-font-attributes-in-PPTX.cs) |  | Configure chart font attributes in PPTX |
-| [Configure-clustered-column-chart-axes-in-PPTX](./Configure-clustered-column-chart-axes-in-PPTX.cs) |  | Configure clustered column chart axes in PPTX |
-| [Configure-data-point-labels-in-PPTX](./Configure-data-point-labels-in-PPTX.cs) |  | Configure data point labels in PPTX |
-| [Configure-data-table-font-styling-in-PPTX](./Configure-data-table-font-styling-in-PPTX.cs) |  | Configure data table font styling in PPTX |
-| [Configure-error-bars-appearance-and-data-PPTX](./Configure-error-bars-appearance-and-data-PPTX.cs) |  | Configure error bars appearance and data PPTX |
-| [Configure-external-workbook-binding-for-PPTX](./Configure-external-workbook-binding-for-PPTX.cs) |  | Configure external workbook binding for PPTX |
-| [Configure-marker-style-and-size-in-PPTX](./Configure-marker-style-and-size-in-PPTX.cs) |  | Configure marker style and size in PPTX |
-| [Configure-numeric-formatting-for-PPTX-chart-data](./Configure-numeric-formatting-for-PPTX-chart-data.cs) |  | Configure numeric formatting for PPTX chart data |
-| [Configure-plot-area-layout-mode-in-PPTX](./Configure-plot-area-layout-mode-in-PPTX.cs) |  | Configure plot area layout mode in PPTX |
-| [Configure-rotationx-rotationy-depthpercents-in-PPTX](./Configure-rotationx-rotationy-depthpercents-in-PPTX.cs) |  | Configure rotationx rotationy depthpercents in PPTX |
-| [Configure-secondary-plots-pie-and-bar-PPTX](./Configure-secondary-plots-pie-and-bar-PPTX.cs) |  | Configure secondary plots pie and bar PPTX |
-| [Configure-series-animations-in-PPTX-chart](./Configure-series-animations-in-PPTX-chart.cs) |  | Configure series animations in PPTX chart |
-| [Configure-series-gap-width-in-PPTX](./Configure-series-gap-width-in-PPTX.cs) |  | Configure series gap width in PPTX |
-| [Configure-series-inverted-fill-colors-PPTX](./Configure-series-inverted-fill-colors-PPTX.cs) |  | Configure series inverted fill colors PPTX |
-| [Configure-treemap-sunburst-data-points-PPTX](./Configure-treemap-sunburst-data-points-PPTX.cs) |  | Configure treemap sunburst data points PPTX |
-| [Configure-trend-line-properties-in-PPTX](./Configure-trend-line-properties-in-PPTX.cs) |  | Configure trend line properties in PPTX |
-| [Control-data-label-properties-in-PPTX](./Control-data-label-properties-in-PPTX.cs) |  | Control data label properties in PPTX |
-| [Control-series-operations-in-PPTX](./Control-series-operations-in-PPTX.cs) |  | Control series operations in PPTX |
-| [Convert-embedded-equations-to-PDF-document](./Convert-embedded-equations-to-PDF-document.cs) |  | Convert embedded equations to PDF document |
-| [Convert-pptx-equations-to-PDF-preserving-fidelity](./Convert-pptx-equations-to-PDF-preserving-fidelity.cs) |  | Convert pptx equations to PDF preserving fidelity |
-| [Convert-presentation-slides-to-XPS-document](./Convert-presentation-slides-to-XPS-document.cs) |  | Convert presentation slides to XPS document |
-| [Convert-presentation-to-PDF-document](./Convert-presentation-to-PDF-document.cs) |  | Convert presentation to PDF document |
-| [Create-3d-pptx-chart-with-formatting](./Create-3d-pptx-chart-with-formatting.cs) |  | Create 3d pptx chart with formatting |
-| [Create-animated-charts-in-PPTX-presentation](./Create-animated-charts-in-PPTX-presentation.cs) |  | Create animated charts in PPTX presentation |
-| [Create-area-chart-and-customize-in-PPTX](./Create-area-chart-and-customize-in-PPTX.cs) |  | Create area chart and customize in PPTX |
-| [Create-bar-chart-and-embed-in-PPTX](./Create-bar-chart-and-embed-in-PPTX.cs) |  | Create bar chart and embed in PPTX |
-| [Create-box-and-whisker-chart-in-PPTX](./Create-box-and-whisker-chart-in-PPTX.cs) |  | Create box and whisker chart in PPTX |
-| [Create-bubble-chart-and-customize-in-PPTX](./Create-bubble-chart-and-customize-in-PPTX.cs) |  | Create bubble chart and customize in PPTX |
-| [Create-clustered-column-chart-in-PPTX](./Create-clustered-column-chart-in-PPTX.cs) |  | Create clustered column chart in PPTX |
-| [Create-custom-category-animation-in-PPTX](./Create-custom-category-animation-in-PPTX.cs) |  | Create custom category animation in PPTX |
-| [Create-doughnut-chart-and-customize-in-PPTX](./Create-doughnut-chart-and-customize-in-PPTX.cs) |  | Create doughnut chart and customize in PPTX |
-| [Create-external-workbook-and-attach-to-PPTX](./Create-external-workbook-and-attach-to-PPTX.cs) |  | Create external workbook and attach to PPTX |
-| [Create-faq-section-in-PPTX-presentation](./Create-faq-section-in-PPTX-presentation.cs) |  | Create faq section in PPTX presentation |
-| [Create-funnel-chart-in-PPTX-presentation](./Create-funnel-chart-in-PPTX-presentation.cs) |  | Create funnel chart in PPTX presentation |
-| [Create-line-chart-and-embed-in-PPTX](./Create-line-chart-and-embed-in-PPTX.cs) |  | Create line chart and embed in PPTX |
-| [Create-line-charts-in-PPTX-programmatically](./Create-line-charts-in-PPTX-programmatically.cs) |  | Create line charts in PPTX programmatically |
-| [Create-pie-chart-and-configure-series-PPTX](./Create-pie-chart-and-configure-series-PPTX.cs) |  | Create pie chart and configure series PPTX |
-| [Create-pptx-chart-and-configure-data-series](./Create-pptx-chart-and-configure-data-series.cs) |  | Create pptx chart and configure data series |
-| [Create-presentation-with-workbook-overview-chart-PPTX](./Create-presentation-with-workbook-overview-chart-PPTX.cs) |  | Create presentation with workbook overview chart PPTX |
-| [Create-retrieve-update-persist-workbook-data-PPTX](./Create-retrieve-update-persist-workbook-data-PPTX.cs) |  | Create retrieve update persist workbook data PPTX |
-| [Create-scatter-chart-and-customize-in-PPTX](./Create-scatter-chart-and-customize-in-PPTX.cs) |  | Create scatter chart and customize in PPTX |
-| [Create-stock-chart-visualization-in-PPTX](./Create-stock-chart-visualization-in-PPTX.cs) |  | Create stock chart visualization in PPTX |
-| [Create-treemap-chart-in-PPTX](./Create-treemap-chart-in-PPTX.cs) |  | Create treemap chart in PPTX |
-| [Customize-3d-chart-elements-in-PPTX](./Customize-3d-chart-elements-in-PPTX.cs) |  | Customize 3d chart elements in PPTX |
-| [Customize-axis-scaling-and-labels-in-PPTX](./Customize-axis-scaling-and-labels-in-PPTX.cs) |  | Customize axis scaling and labels in PPTX |
-| [Customize-bubble-chart-styling-and-configuration-PPTX](./Customize-bubble-chart-styling-and-configuration-PPTX.cs) |  | Customize bubble chart styling and configuration PPTX |
-| [Customize-bubble-shapes-colors-borders-PPTX](./Customize-bubble-shapes-colors-borders-PPTX.cs) |  | Customize bubble shapes colors borders PPTX |
-| [Customize-callout-shapes-color-and-text-PPTX](./Customize-callout-shapes-color-and-text-PPTX.cs) |  | Customize callout shapes color and text PPTX |
-| [Customize-chart-properties-styles-and-data-PPTX](./Customize-chart-properties-styles-and-data-PPTX.cs) |  | Customize chart properties styles and data PPTX |
-| [Customize-data-label-formatting-in-PPTX](./Customize-data-label-formatting-in-PPTX.cs) |  | Customize data label formatting in PPTX |
-| [Customize-data-markers-for-series-PPTX](./Customize-data-markers-for-series-PPTX.cs) |  | Customize data markers for series PPTX |
-| [Customize-data-table-layout-in-PPTX](./Customize-data-table-layout-in-PPTX.cs) |  | Customize data table layout in PPTX |
-| [Customize-doughnut-chart-data-bindings-in-PPTX](./Customize-doughnut-chart-data-bindings-in-PPTX.cs) |  | Customize doughnut chart data bindings in PPTX |
-| [Customize-error-bars-for-PPTX-series](./Customize-error-bars-for-PPTX-series.cs) |  | Customize error bars for PPTX series |
-| [Customize-legend-appearance-and-behavior-in-PPTX](./Customize-legend-appearance-and-behavior-in-PPTX.cs) |  | Customize legend appearance and behavior in PPTX |
-| [Customize-plot-area-dimensions-and-fill-PPTX](./Customize-plot-area-dimensions-and-fill-PPTX.cs) |  | Customize plot area dimensions and fill PPTX |
-| [Customize-PPTX-chart-colors-and-legend](./Customize-PPTX-chart-colors-and-legend.cs) |  | Customize PPTX chart colors and legend |
-| [Customize-series-axes-and-points-PPTX](./Customize-series-axes-and-points-PPTX.cs) |  | Customize series axes and points PPTX |
-| [Customize-trend-line-appearance-in-PPTX](./Customize-trend-line-appearance-in-PPTX.cs) |  | Customize trend line appearance in PPTX |
-| [Define-custom-data-range-in-PPTX-chart](./Define-custom-data-range-in-PPTX-chart.cs) |  | Define custom data range in PPTX chart |
-| [Define-error-constants-for-PPTX](./Define-error-constants-for-PPTX.cs) |  | Define error constants for PPTX |
-| [Define-marker-properties-for-PPTX-chart](./Define-marker-properties-for-PPTX-chart.cs) |  | Define marker properties for PPTX chart |
-| [Define-numeric-constants-for-PPTX-slides](./Define-numeric-constants-for-PPTX-slides.cs) |  | Define numeric constants for PPTX slides |
-| [Disable-horizontal-axis-in-line-PPTX-chart](./Disable-horizontal-axis-in-line-PPTX-chart.cs) |  | Disable horizontal axis in line PPTX chart |
-| [Disable-vertical-axis-in-line-PPTX-charts](./Disable-vertical-axis-in-line-PPTX-charts.cs) |  | Disable vertical axis in line PPTX charts |
-| [Edit-doughnut-chart-segments-in-PPTX](./Edit-doughnut-chart-segments-in-PPTX.cs) |  | Edit doughnut chart segments in PPTX |
-| [Edit-treemap-sunburst-data-points-PPTX](./Edit-treemap-sunburst-data-points-PPTX.cs) |  | Edit treemap sunburst data points PPTX |
-| [Embed-spreadsheet-formulas-into-PPTX-chart-data](./Embed-spreadsheet-formulas-into-PPTX-chart-data.cs) |  | Embed spreadsheet formulas into PPTX chart data |
-| [Embed-stock-chart-into-PPTX-presentation](./Embed-stock-chart-into-PPTX-presentation.cs) |  | Embed stock chart into PPTX presentation |
-| [Enable-automatic-pie-slice-coloring-PPTX](./Enable-automatic-pie-slice-coloring-PPTX.cs) |  | Enable automatic pie slice coloring PPTX |
-| [Enable-chart-calculation-optimizations-PPTX](./Enable-chart-calculation-optimizations-PPTX.cs) |  | Enable chart calculation optimizations PPTX |
-| [Enable-default-data-point-markers-PPTX](./Enable-default-data-point-markers-PPTX.cs) |  | Enable default data point markers PPTX |
-| [Enable-display-unit-label-value-axis-PPTX](./Enable-display-unit-label-value-axis-PPTX.cs) |  | Enable display unit label value axis PPTX |
-| [Enable-R1C1-table-referencing-in-PPTX](./Enable-R1C1-table-referencing-in-PPTX.cs) |  | Enable R1C1 table referencing in PPTX |
-| [Evaluate-embedded-formulas-in-PPTX](./Evaluate-embedded-formulas-in-PPTX.cs) |  | Evaluate embedded formulas in PPTX |
-| [Evaluate-export-formats-for-PPTX-documents](./Evaluate-export-formats-for-PPTX-documents.cs) |  | Evaluate export formats for PPTX documents |
-| [Execute-predefined-functions-in-PPTX-presentation](./Execute-predefined-functions-in-PPTX-presentation.cs) |  | Execute predefined functions in PPTX presentation |
-| [Explain-chart-calculation-methods-and-data-PPTX](./Explain-chart-calculation-methods-and-data-PPTX.cs) |  | Explain chart calculation methods and data PPTX |
-| [Explain-data-label-properties-in-PPTX](./Explain-data-label-properties-in-PPTX.cs) |  | Explain data label properties in PPTX |
-| [Explain-data-markers-usage-and-configuration-PPTX](./Explain-data-markers-usage-and-configuration-PPTX.cs) |  | Explain data markers usage and configuration PPTX |
-| [Explain-plot-area-properties-in-PPTX](./Explain-plot-area-properties-in-PPTX.cs) |  | Explain plot area properties in PPTX |
-| [Explode-pie-slices-in-PPTX-chart](./Explode-pie-slices-in-PPTX-chart.cs) |  | Explode pie slices in PPTX chart |
-| [Export-all-PPTX-charts-to-image-files](./Export-all-PPTX-charts-to-image-files.cs) |  | Export all PPTX charts to image files |
-| [Export-chart-data-to-CSV-from-PPTX](./Export-chart-data-to-CSV-from-PPTX.cs) |  | Export chart data to CSV from PPTX |
-| [Export-chart-objects-from-PPTX-presentation](./Export-chart-objects-from-PPTX-presentation.cs) |  | Export chart objects from PPTX presentation |
-| [Export-math-equations-to-high-resolution-tiff](./Export-math-equations-to-high-resolution-tiff.cs) |  | Export math equations to high resolution tiff |
-| [Export-math-equations-to-PDF-with-fidelity](./Export-math-equations-to-PDF-with-fidelity.cs) |  | Export math equations to PDF with fidelity |
-| [Export-math-equations-to-PNG-images](./Export-math-equations-to-PNG-images.cs) |  | Export math equations to PNG images |
-| [Export-math-equations-to-XPS-document](./Export-math-equations-to-XPS-document.cs) |  | Export math equations to XPS document |
-| [Export-PPTX-chart-as-image-file](./Export-PPTX-chart-as-image-file.cs) |  | Export PPTX chart as image file |
-| [Export-presentation-charts-into-PPTX-file](./Export-presentation-charts-into-PPTX-file.cs) |  | Export presentation charts into PPTX file |
-| [Export-presentation-slides-to-PNG-images](./Export-presentation-slides-to-PNG-images.cs) |  | Export presentation slides to PNG images |
-| [Extract-data-points-from-PPTX-presentation](./Extract-data-points-from-PPTX-presentation.cs) |  | Extract data points from PPTX presentation |
-| [Extract-embedded-workbook-from-PPTX-presentation](./Extract-embedded-workbook-from-PPTX-presentation.cs) |  | Extract embedded workbook from PPTX presentation |
-| [Extract-maximum-vertical-axis-values-from-PPTX](./Extract-maximum-vertical-axis-values-from-PPTX.cs) |  | Extract maximum vertical axis values from PPTX |
-| [Extract-PPTX-chart-as-high-fidelity-image](./Extract-PPTX-chart-as-high-fidelity-image.cs) |  | Extract PPTX chart as high fidelity image |
-| [Format-axis-labels-in-PPTX-chart](./Format-axis-labels-in-PPTX-chart.cs) |  | Format axis labels in PPTX chart |
-| [Format-chart-elements-programmatically-in-PPTX](./Format-chart-elements-programmatically-in-PPTX.cs) |  | Format chart elements programmatically in PPTX |
-| [Generate-chart-from-csv-data-in-PPTX](./Generate-chart-from-csv-data-in-PPTX.cs) |  | Generate chart from csv data in PPTX |
-| [Generate-high-resolution-PNG-from-math-equations](./Generate-high-resolution-PNG-from-math-equations.cs) |  | Generate high resolution PNG from math equations |
-| [Generate-line-charts-in-PPTX-using-API](./Generate-line-charts-in-PPTX-using-API.cs) |  | Generate line charts in PPTX using API |
-| [Generate-math-equations-in-PPTX-presentation](./Generate-math-equations-in-PPTX-presentation.cs) |  | Generate math equations in PPTX presentation |
-| [Generate-or-modify-chart-objects-in-PPTX](./Generate-or-modify-chart-objects-in-PPTX.cs) |  | Generate or modify chart objects in PPTX |
-| [Generate-pie-chart-data-and-insert-PPTX](./Generate-pie-chart-data-and-insert-PPTX.cs) |  | Generate pie chart data and insert PPTX |
-| [Generate-scatter-chart-axes-and-series-PPTX](./Generate-scatter-chart-axes-and-series-PPTX.cs) |  | Generate scatter chart axes and series PPTX |
-| [Get-chart-parent-coordinates-in-PPTX](./Get-chart-parent-coordinates-in-PPTX.cs) |  | Get chart parent coordinates in PPTX |
-| [Get-external-workbook-location-from-PPTX-chart](./Get-external-workbook-location-from-PPTX-chart.cs) |  | Get external workbook location from PPTX chart |
-| [Get-legend-details-and-formatting-in-PPTX](./Get-legend-details-and-formatting-in-PPTX.cs) |  | Get legend details and formatting in PPTX |
-| [Get-plot-area-dimensions-in-PPTX](./Get-plot-area-dimensions-in-PPTX.cs) |  | Get plot area dimensions in PPTX |
-| [Get-plot-area-size-in-PPTX](./Get-plot-area-size-in-PPTX.cs) |  | Get plot area size in PPTX |
-| [Get-series-auto-fill-color-in-PPTX](./Get-series-auto-fill-color-in-PPTX.cs) |  | Get series auto fill color in PPTX |
-| [Get-vertical-axis-maximum-value-from-PPTX](./Get-vertical-axis-maximum-value-from-PPTX.cs) |  | Get vertical axis maximum value from PPTX |
-| [Hide-horizontal-axis-from-line-PPTX-chart](./Hide-horizontal-axis-from-line-PPTX-chart.cs) |  | Hide horizontal axis from line PPTX chart |
-| [Hide-selected-chart-components-and-legends-PPTX](./Hide-selected-chart-components-and-legends-PPTX.cs) |  | Hide selected chart components and legends PPTX |
-| [Hide-selected-chart-elements-and-layout-PPTX](./Hide-selected-chart-elements-and-layout-PPTX.cs) |  | Hide selected chart elements and layout PPTX |
-| [Hide-vertical-axis-in-line-PPTX-chart](./Hide-vertical-axis-in-line-PPTX-chart.cs) |  | Hide vertical axis in line PPTX chart |
-| [Identify-supported-equation-types-in-PPTX](./Identify-supported-equation-types-in-PPTX.cs) |  | Identify supported equation types in PPTX |
-| [Implement-A1-cell-referencing-in-PPTX](./Implement-A1-cell-referencing-in-PPTX.cs) |  | Implement A1 cell referencing in PPTX |
-| [Implement-category-animation-for-PPTX-chart](./Implement-category-animation-for-PPTX-chart.cs) |  | Implement category animation for PPTX chart |
-| [Implement-comparison-operators-in-PPTX-slides](./Implement-comparison-operators-in-PPTX-slides.cs) |  | Implement comparison operators in PPTX slides |
-| [Implement-predefined-functions-in-PPTX-presentation](./Implement-predefined-functions-in-PPTX-presentation.cs) |  | Implement predefined functions in PPTX presentation |
-| [Implement-proportional-bubble-size-scaling-in-PPTX](./Implement-proportional-bubble-size-scaling-in-PPTX.cs) |  | Implement proportional bubble size scaling in PPTX |
-| [Implement-R1C1-cell-referencing-in-PPTX](./Implement-R1C1-cell-referencing-in-PPTX.cs) |  | Implement R1C1 cell referencing in PPTX |
-| [Implement-worksheet-formulas-in-PPTX-chart](./Implement-worksheet-formulas-in-PPTX-chart.cs) |  | Implement worksheet formulas in PPTX chart |
-| [Import-math-equations-from-PPTX-at-runtime](./Import-math-equations-from-PPTX-at-runtime.cs) |  | Import math equations from PPTX at runtime |
-| [Inject-string-constants-into-PPTX-presentation](./Inject-string-constants-into-PPTX-presentation.cs) |  | Inject string constants into PPTX presentation |
-| [Insert-and-remove-series-in-PPTX](./Insert-and-remove-series-in-PPTX.cs) |  | Insert and remove series in PPTX |
-| [Insert-box-and-whisker-chart-into-PPTX](./Insert-box-and-whisker-chart-into-PPTX.cs) |  | Insert box and whisker chart into PPTX |
-| [Insert-bubble-series-and-points-into-PPTX](./Insert-bubble-series-and-points-into-PPTX.cs) |  | Insert bubble series and points into PPTX |
-| [Insert-callout-shapes-into-PPTX-slide](./Insert-callout-shapes-into-PPTX-slide.cs) |  | Insert callout shapes into PPTX slide |
-| [Insert-chart-into-PPTX-and-assign-formula](./Insert-chart-into-PPTX-and-assign-formula.cs) |  | Insert chart into PPTX and assign formula |
-| [Insert-custom-line-shape-into-PPTX](./Insert-custom-line-shape-into-PPTX.cs) |  | Insert custom line shape into PPTX |
-| [Insert-doughnut-chart-into-PPTX-slide](./Insert-doughnut-chart-into-PPTX-slide.cs) |  | Insert doughnut chart into PPTX slide |
-| [Insert-error-bars-into-PPTX-chart-series](./Insert-error-bars-into-PPTX-chart-series.cs) |  | Insert error bars into PPTX chart series |
-| [Insert-hierarchical-data-into-PPTX](./Insert-hierarchical-data-into-PPTX.cs) |  | Insert hierarchical data into PPTX |
-| [Insert-math-equation-into-PPTX-slide](./Insert-math-equation-into-PPTX-slide.cs) |  | Insert math equation into PPTX slide |
-| [Insert-numeric-constants-into-PPTX-elements](./Insert-numeric-constants-into-PPTX-elements.cs) |  | Insert numeric constants into PPTX elements |
-| [Insert-overview-slide-with-thumbnails-PPTX](./Insert-overview-slide-with-thumbnails-PPTX.cs) |  | Insert overview slide with thumbnails PPTX |
-| [Insert-pie-chart-objects-into-PPTX](./Insert-pie-chart-objects-into-PPTX.cs) |  | Insert pie chart objects into PPTX |
-| [Insert-PPTX-chart-into-specific-slide](./Insert-PPTX-chart-into-specific-slide.cs) |  | Insert PPTX chart into specific slide |
-| [Insert-scatter-chart-preserving-slide-layout-PPTX](./Insert-scatter-chart-preserving-slide-layout-PPTX.cs) |  | Insert scatter chart preserving slide layout PPTX |
-| [Insert-see-also-section-into-PPTX](./Insert-see-also-section-into-PPTX.cs) |  | Insert see also section into PPTX |
-| [Insert-spreadsheet-formula-into-PPTX-chart](./Insert-spreadsheet-formula-into-PPTX-chart.cs) |  | Insert spreadsheet formula into PPTX chart |
-| [Insert-treemap-chart-with-series-to-PPTX](./Insert-treemap-chart-with-series-to-PPTX.cs) |  | Insert treemap chart with series to PPTX |
-| [Insert-trend-line-into-PPTX-slide](./Insert-trend-line-into-PPTX-slide.cs) |  | Insert trend line into PPTX slide |
-| [Insert-trend-lines-into-PPTX-charts](./Insert-trend-lines-into-PPTX-charts.cs) |  | Insert trend lines into PPTX charts |
-| [Integrate-custom-error-bars-into-PPTX-series](./Integrate-custom-error-bars-into-PPTX-series.cs) |  | Integrate custom error bars into PPTX series |
-| [Integrate-error-constants-into-PPTX-presentation](./Integrate-error-constants-into-PPTX-presentation.cs) |  | Integrate error constants into PPTX presentation |
-| [Integrate-external-workbook-into-PPTX-presentation](./Integrate-external-workbook-into-PPTX-presentation.cs) |  | Integrate external workbook into PPTX presentation |
-| [Link-external-workbook-to-PPTX-chart](./Link-external-workbook-to-PPTX-chart.cs) |  | Link external workbook to PPTX chart |
-| [Link-workbook-cell-to-chart-label-PPTX](./Link-workbook-cell-to-chart-label-PPTX.cs) |  | Link workbook cell to chart label PPTX |
-| [List-PPTX-chart-entities-and-properties](./List-PPTX-chart-entities-and-properties.cs) |  | List PPTX chart entities and properties |
-| [List-PPTX-chart-types-and-descriptions](./List-PPTX-chart-types-and-descriptions.cs) |  | List PPTX chart types and descriptions |
-| [Manage-callout-creation-formatting-and-removal-PPTX](./Manage-callout-creation-formatting-and-removal-PPTX.cs) |  | Manage callout creation formatting and removal PPTX |
-| [Manage-data-labels-precisely-in-PPTX](./Manage-data-labels-precisely-in-PPTX.cs) |  | Manage data labels precisely in PPTX |
-| [Manage-data-markers-in-PPTX-chart](./Manage-data-markers-in-PPTX-chart.cs) |  | Manage data markers in PPTX chart |
-| [Manage-embedded-worksheet-objects-in-PPTX](./Manage-embedded-worksheet-objects-in-PPTX.cs) |  | Manage embedded worksheet objects in PPTX |
-| [Manage-series-addition-update-removal-in-PPTX](./Manage-series-addition-update-removal-in-PPTX.cs) |  | Manage series addition update removal in PPTX |
-| [Manage-string-constants-in-PPTX-presentation](./Manage-string-constants-in-PPTX-presentation.cs) |  | Manage string constants in PPTX presentation |
-| [Manipulate-and-evaluate-chart-formulas-in-PPTX](./Manipulate-and-evaluate-chart-formulas-in-PPTX.cs) |  | Manipulate and evaluate chart formulas in PPTX |
-| [Map-dataset-values-to-bubble-sizes-PPTX](./Map-dataset-values-to-bubble-sizes-PPTX.cs) |  | Map dataset values to bubble sizes PPTX |
-| [Modify-chart-axes-scaling-and-labels-PPTX](./Modify-chart-axes-scaling-and-labels-PPTX.cs) |  | Modify chart axes scaling and labels PPTX |
-| [Modify-chart-series-axes-and-points-PPTX](./Modify-chart-series-axes-and-points-PPTX.cs) |  | Modify chart series axes and points PPTX |
-| [Modify-doughnut-chart-colors-and-series-PPTX](./Modify-doughnut-chart-colors-and-series-PPTX.cs) |  | Modify doughnut chart colors and series PPTX |
-| [Modify-plot-area-margins-and-background-PPTX](./Modify-plot-area-margins-and-background-PPTX.cs) |  | Modify plot area margins and background PPTX |
-| [Modify-series-animation-playback-in-PPTX](./Modify-series-animation-playback-in-PPTX.cs) |  | Modify series animation playback in PPTX |
-| [Modify-series-data-in-PPTX-chart](./Modify-series-data-in-PPTX-chart.cs) |  | Modify series data in PPTX chart |
-| [Modify-series-name-in-PPTX](./Modify-series-name-in-PPTX.cs) |  | Modify series name in PPTX |
-| [Modify-specific-legend-font-size-in-PPTX](./Modify-specific-legend-font-size-in-PPTX.cs) |  | Modify specific legend font size in PPTX |
-| [Modify-text-styling-in-PPTX-chart](./Modify-text-styling-in-PPTX-chart.cs) |  | Modify text styling in PPTX chart |
-| [Move-legend-to-desired-location-in-PPTX](./Move-legend-to-desired-location-in-PPTX.cs) |  | Move legend to desired location in PPTX |
-| [Optimize-chart-calculation-performance-PPTX](./Optimize-chart-calculation-performance-PPTX.cs) |  | Optimize chart calculation performance PPTX |
-| [Overview-chart-formatting-options-and-styling-PPTX](./Overview-chart-formatting-options-and-styling-PPTX.cs) |  | Overview chart formatting options and styling PPTX |
-| [Overview-chart-series-properties-and-bindings-PPTX](./Overview-chart-series-properties-and-bindings-PPTX.cs) |  | Overview chart series properties and bindings PPTX |
-| [Overview-error-bars-configuration-and-visualization-PPTX](./Overview-error-bars-configuration-and-visualization-PPTX.cs) |  | Overview error bars configuration and visualization PPTX |
-| [Overview-trend-lines-and-properties-PPTX](./Overview-trend-lines-and-properties-PPTX.cs) |  | Overview trend lines and properties PPTX |
-| [Programmatically-add-callout-to-doughnut-chart-PPTX](./Programmatically-add-callout-to-doughnut-chart-PPTX.cs) |  | Programmatically add callout to doughnut chart PPTX |
-| [Read-workbook-data-and-populate-PPTX-charts](./Read-workbook-data-and-populate-PPTX-charts.cs) |  | Read workbook data and populate PPTX charts |
-| [Read-write-embedded-workbook-data-PPTX](./Read-write-embedded-workbook-data-PPTX.cs) |  | Read write embedded workbook data PPTX |
-| [Reference-table-cells-using-A1-notation-PPTX](./Reference-table-cells-using-A1-notation-PPTX.cs) |  | Reference table cells using A1 notation PPTX |
-| [Refresh-PPTX-chart-data-and-preserve-formatting](./Refresh-PPTX-chart-data-and-preserve-formatting.cs) |  | Refresh PPTX chart data and preserve formatting |
-| [Refresh-PPTX-chart-data-preserving-formatting](./Refresh-PPTX-chart-data-preserving-formatting.cs) |  | Refresh PPTX chart data preserving formatting |
-| [Remove-data-point-values-from-PPTX-chart](./Remove-data-point-values-from-PPTX-chart.cs) |  | Remove data point values from PPTX chart |
-| [Remove-specific-series-from-PPTX-chart](./Remove-specific-series-from-PPTX-chart.cs) |  | Remove specific series from PPTX chart |
-| [Rename-chart-series-in-PPTX-presentation](./Rename-chart-series-in-PPTX-presentation.cs) |  | Rename chart series in PPTX presentation |
-| [Render-data-table-in-PPTX-slide](./Render-data-table-in-PPTX-slide.cs) |  | Render data table in PPTX slide |
-| [Render-math-equations-to-JPEG-images](./Render-math-equations-to-JPEG-images.cs) |  | Render math equations to JPEG images |
-| [Render-math-equations-to-PDF-document](./Render-math-equations-to-PDF-document.cs) |  | Render math equations to PDF document |
-| [Render-numeric-values-and-percentages-in-PPTX](./Render-numeric-values-and-percentages-in-PPTX.cs) |  | Render numeric values and percentages in PPTX |
-| [Render-percent-labels-on-PPTX-slides](./Render-percent-labels-on-PPTX-slides.cs) |  | Render percent labels on PPTX slides |
-| [Render-pptx-equations-to-high-resolution-png](./Render-pptx-equations-to-high-resolution-png.cs) |  | Render pptx equations to high resolution png |
-| [Render-pptx-equations-to-PDF-preserving-formatting](./Render-pptx-equations-to-PDF-preserving-formatting.cs) |  | Render pptx equations to PDF preserving formatting |
-| [Reset-data-point-values-in-PPTX-chart](./Reset-data-point-values-in-PPTX-chart.cs) |  | Reset data point values in PPTX chart |
-| [Retrieve-calculation-results-from-PPTX-presentation](./Retrieve-calculation-results-from-PPTX-presentation.cs) |  | Retrieve calculation results from PPTX presentation |
-| [Retrieve-external-workbook-path-from-PPTX-chart](./Retrieve-external-workbook-path-from-PPTX-chart.cs) |  | Retrieve external workbook path from PPTX chart |
-| [Retrieve-pptx-chart-and-save-as-image](./Retrieve-pptx-chart-and-save-as-image.cs) |  | Retrieve pptx chart and save as image |
-| [Retrieve-series-collection-from-PPTX-chart](./Retrieve-series-collection-from-PPTX-chart.cs) |  | Retrieve series collection from PPTX chart |
-| [Retrieve-series-default-fill-color-PPTX](./Retrieve-series-default-fill-color-PPTX.cs) |  | Retrieve series default fill color PPTX |
-| [Reverse-axis-assignments-for-PPTX-chart](./Reverse-axis-assignments-for-PPTX-chart.cs) |  | Reverse axis assignments for PPTX chart |
-| [Scale-bubble-points-from-data-values-PPTX](./Scale-bubble-points-from-data-values-PPTX.cs) |  | Scale bubble points from data values PPTX |
-| [Set-3d-rotation-and-depth-in-PPTX](./Set-3d-rotation-and-depth-in-PPTX.cs) |  | Set 3d rotation and depth in PPTX |
-| [Set-animation-timing-and-duration-in-PPTX](./Set-animation-timing-and-duration-in-PPTX.cs) |  | Set animation timing and duration in PPTX |
-| [Set-axis-label-spacing-in-PPTX](./Set-axis-label-spacing-in-PPTX.cs) |  | Set axis label spacing in PPTX |
-| [Set-axis-position-in-PPTX-chart](./Set-axis-position-in-PPTX-chart.cs) |  | Set axis position in PPTX chart |
-| [Set-axis-scaling-range-and-intervals-PPTX](./Set-axis-scaling-range-and-intervals-PPTX.cs) |  | Set axis scaling range and intervals PPTX |
-| [Set-axis-title-rotation-angle-in-PPTX](./Set-axis-title-rotation-angle-in-PPTX.cs) |  | Set axis title rotation angle in PPTX |
-| [Set-category-axis-date-format-in-PPTX](./Set-category-axis-date-format-in-PPTX.cs) |  | Set category axis date format in PPTX |
-| [Set-category-axis-parameters-in-PPTX](./Set-category-axis-parameters-in-PPTX.cs) |  | Set category axis parameters in PPTX |
-| [Set-custom-error-bars-in-PPTX-series](./Set-custom-error-bars-in-PPTX-series.cs) |  | Set custom error bars in PPTX series |
-| [Set-data-label-precision-in-PPTX](./Set-data-label-precision-in-PPTX.cs) |  | Set data label precision in PPTX |
-| [Set-data-labels-to-percentage-format-PPTX](./Set-data-labels-to-percentage-format-PPTX.cs) |  | Set data labels to percentage format PPTX |
-| [Set-data-range-for-PPTX-chart](./Set-data-range-for-PPTX-chart.cs) |  | Set data range for PPTX chart |
-| [Set-data-source-type-in-PPTX](./Set-data-source-type-in-PPTX.cs) |  | Set data source type in PPTX |
-| [Set-data-table-font-attributes-in-PPTX](./Set-data-table-font-attributes-in-PPTX.cs) |  | Set data table font attributes in PPTX |
-| [Set-doughnut-center-gap-in-PPTX](./Set-doughnut-center-gap-in-PPTX.cs) |  | Set doughnut center gap in PPTX |
-| [Set-doughnut-inner-radius-in-PPTX](./Set-doughnut-inner-radius-in-PPTX.cs) |  | Set doughnut inner radius in PPTX |
-| [Set-error-bar-style-in-PPTX](./Set-error-bar-style-in-PPTX.cs) |  | Set error bar style in PPTX |
-| [Set-label-and-color-for-point-PPTX](./Set-label-and-color-for-point-PPTX.cs) |  | Set label and color for point PPTX |
-| [Set-label-coordinates-on-PPTX-slide](./Set-label-coordinates-on-PPTX-slide.cs) |  | Set label coordinates on PPTX slide |
-| [Set-legend-font-size-in-PPTX](./Set-legend-font-size-in-PPTX.cs) |  | Set legend font size in PPTX |
-| [Set-legend-position-and-alignment-in-PPTX](./Set-legend-position-and-alignment-in-PPTX.cs) |  | Set legend position and alignment in PPTX |
-| [Set-legend-position-using-layout-parameters-PPTX](./Set-legend-position-using-layout-parameters-PPTX.cs) |  | Set legend position using layout parameters PPTX |
-| [Set-marker-fill-and-border-in-PPTX](./Set-marker-fill-and-border-in-PPTX.cs) |  | Set marker fill and border in PPTX |
-| [Set-marker-style-visibility-and-size-PPTX](./Set-marker-style-visibility-and-size-PPTX.cs) |  | Set marker style visibility and size PPTX |
-| [Set-pie-chart-colors-labels-angles-PPTX](./Set-pie-chart-colors-labels-angles-PPTX.cs) |  | Set pie chart colors labels angles PPTX |
-| [Set-plot-area-fill-and-border-PPTX](./Set-plot-area-fill-and-border-PPTX.cs) |  | Set plot area fill and border PPTX |
-| [Set-plot-area-layout-mode-in-PPTX](./Set-plot-area-layout-mode-in-PPTX.cs) |  | Set plot area layout mode in PPTX |
-| [Set-pptx-chart-type-and-update-properties](./Set-pptx-chart-type-and-update-properties.cs) |  | Set pptx chart type and update properties |
-| [Set-series-fill-color-in-PPTX](./Set-series-fill-color-in-PPTX.cs) |  | Set series fill color in PPTX |
-| [Set-series-gap-width-in-PPTX-chart](./Set-series-gap-width-in-PPTX-chart.cs) |  | Set series gap width in PPTX chart |
-| [Set-series-overlap-in-PPTX-chart](./Set-series-overlap-in-PPTX-chart.cs) |  | Set series overlap in PPTX chart |
-| [Show-data-point-value-in-PPTX](./Show-data-point-value-in-PPTX.cs) |  | Show data point value in PPTX |
-| [Show-data-point-values-all-series-PPTX](./Show-data-point-values-all-series-PPTX.cs) |  | Show data point values all series PPTX |
-| [Show-display-unit-on-value-axis-PPTX](./Show-display-unit-on-value-axis-PPTX.cs) |  | Show display unit on value axis PPTX |
-| [Specify-data-source-type-for-PPTX-binding](./Specify-data-source-type-for-PPTX-binding.cs) |  | Specify data source type for PPTX binding |
-| [Standardize-chart-entity-formatting-in-PPTX](./Standardize-chart-entity-formatting-in-PPTX.cs) |  | Standardize chart entity formatting in PPTX |
-| [Style-borders-and-format-data-table-PPTX](./Style-borders-and-format-data-table-PPTX.cs) |  | Style borders and format data table PPTX |
-| [Swap-data-series-between-axes-in-PPTX](./Swap-data-series-between-axes-in-PPTX.cs) |  | Swap data series between axes in PPTX |
-| [Synchronize-embedded-workbook-data-in-PPTX](./Synchronize-embedded-workbook-data-in-PPTX.cs) |  | Synchronize embedded workbook data in PPTX |
-| [Synchronize-worksheet-formulas-in-PPTX-chart](./Synchronize-worksheet-formulas-in-PPTX-chart.cs) |  | Synchronize worksheet formulas in PPTX chart |
-| [Update-category-axis-scale-and-labels-PPTX](./Update-category-axis-scale-and-labels-PPTX.cs) |  | Update category axis scale and labels PPTX |
-| [Update-chart-data-and-refresh-slide-PPTX](./Update-chart-data-and-refresh-slide-PPTX.cs) |  | Update chart data and refresh slide PPTX |
-| [Update-chart-series-dynamically-in-PPTX](./Update-chart-series-dynamically-in-PPTX.cs) |  | Update chart series dynamically in PPTX |
-| [Update-legend-colors-fonts-borders-in-PPTX](./Update-legend-colors-fonts-borders-in-PPTX.cs) |  | Update legend colors fonts borders in PPTX |
-| [Update-PPTX-chart-data-and-categories](./Update-PPTX-chart-data-and-categories.cs) |  | Update PPTX chart data and categories |
-| [Update-series-values-and-categories-in-PPTX](./Update-series-values-and-categories-in-PPTX.cs) |  | Update series values and categories in PPTX |
-| [Update-workbook-series-values-in-PPTX](./Update-workbook-series-values-in-PPTX.cs) |  | Update workbook series values in PPTX |
-| [Use-comparison-operators-to-control-PPTX-elements](./Use-comparison-operators-to-control-PPTX-elements.cs) |  | Use comparison operators to control PPTX elements |
-| [Use-logical-constants-for-conditional-slide-content-PPTX](./Use-logical-constants-for-conditional-slide-content-PPTX.cs) |  | Use logical constants for conditional slide content PPTX |
+| [Add-3D-bar-chart-with-depth-rotation](./Add-3D-bar-chart-with-depth-rotation.cs) |  | Add 3D bar chart with depth rotation |
+| [Add-arrow-callout-to-pie-slice](./Add-arrow-callout-to-pie-slice.cs) |  | Add arrow callout to pie slice |
+| [Add-average-trendline-to-line-chart-backward-ten](./Add-average-trendline-to-line-chart-backward-ten.cs) |  | Add average trendline to line chart backward ten |
+| [Add-bubble-colors-from-data-series](./Add-bubble-colors-from-data-series.cs) |  | Add bubble colors from data series |
+| [Add-bubble-data-labels-show-exact-value](./Add-bubble-data-labels-show-exact-value.cs) |  | Add bubble data labels show exact value |
+| [Add-callout-annotation-to-pie-chart](./Add-callout-annotation-to-pie-chart.cs) |  | Add callout annotation to pie chart |
+| [Add-callout-styles-based-on-value-thresholds](./Add-callout-styles-based-on-value-thresholds.cs) |  | Add callout styles based on value thresholds |
+| [Add-callout-with-custom-fill-to-scatter](./Add-callout-with-custom-fill-to-scatter.cs) |  | Add callout with custom fill to scatter |
+| [Add-central-total-label-to-doughnut-chart](./Add-central-total-label-to-doughnut-chart.cs) |  | Add central total label to doughnut chart |
+| [Add-currency-symbols-to-data-labels](./Add-currency-symbols-to-data-labels.cs) |  | Add currency symbols to data labels |
+| [Add-custom-error-bars-to-scatter-png](./Add-custom-error-bars-to-scatter-png.cs) |  | Add custom error bars to scatter png |
+| [Add-custom-image-marker-to-line-chart](./Add-custom-image-marker-to-line-chart.cs) |  | Add custom image marker to line chart |
+| [Add-custom-labels-category-value-to-pie](./Add-custom-labels-category-value-to-pie.cs) |  | Add custom labels category value to pie |
+| [Add-custom-line-at-coordinates](./Add-custom-line-at-coordinates.cs) |  | Add custom line at coordinates |
+| [Add-custom-slide-transition-after-chart-animation](./Add-custom-slide-transition-after-chart-animation.cs) |  | Add custom slide transition after chart animation |
+| [Add-custom-tooltip-to-data-points](./Add-custom-tooltip-to-data-points.cs) |  | Add custom tooltip to data points |
+| [Add-data-labels-show-category-and-value](./Add-data-labels-show-category-and-value.cs) |  | Add data labels show category and value |
+| [Add-data-point-callout-showlabelasdatacallout](./Add-data-point-callout-showlabelasdatacallout.cs) |  | Add data point callout showlabelasdatacallout |
+| [Add-data-table-below-chart-font-size](./Add-data-table-below-chart-font-size.cs) |  | Add data table below chart font size |
+| [Add-data-table-to-bar-chart](./Add-data-table-to-bar-chart.cs) |  | Add data table to bar chart |
+| [Add-error-bars-using-standard-deviation](./Add-error-bars-using-standard-deviation.cs) |  | Add error bars using standard deviation |
+| [Add-error-bars-with-custom-values](./Add-error-bars-with-custom-values.cs) |  | Add error bars with custom values |
+| [Add-exploded-slices-to-pie-chart](./Add-exploded-slices-to-pie-chart.cs) |  | Add exploded slices to pie chart |
+| [Add-exponential-trendline-to-line-chart](./Add-exponential-trendline-to-line-chart.cs) |  | Add exponential trendline to line chart |
+| [Add-formatted-callout-to-line-chart](./Add-formatted-callout-to-line-chart.cs) |  | Add formatted callout to line chart |
+| [Add-inner-radius-to-pie-of-pie](./Add-inner-radius-to-pie-of-pie.cs) |  | Add inner radius to pie of pie |
+| [Add-isequence-animation-withprevious-trigger](./Add-isequence-animation-withprevious-trigger.cs) |  | Add isequence animation withprevious trigger |
+| [Add-lighting-and-shadow-to-3D-bubble](./Add-lighting-and-shadow-to-3D-bubble.cs) |  | Add lighting and shadow to 3D bubble |
+| [Add-line-chart-custom-colors-and-markers](./Add-line-chart-custom-colors-and-markers.cs) |  | Add line chart custom colors and markers |
+| [Add-linear-regression-trendline-to-bar-chart](./Add-linear-regression-trendline-to-bar-chart.cs) |  | Add linear regression trendline to bar chart |
+| [Add-linear-trendline-to-first-series](./Add-linear-trendline-to-first-series.cs) |  | Add linear trendline to first series |
+| [Add-moving-average-trendline-to-column-chart](./Add-moving-average-trendline-to-column-chart.cs) |  | Add moving average trendline to column chart |
+| [Add-multiline-callout-to-bubble-chart](./Add-multiline-callout-to-bubble-chart.cs) |  | Add multiline callout to bubble chart |
+| [Add-outlier-marker-shape-to-scatter-series](./Add-outlier-marker-shape-to-scatter-series.cs) |  | Add outlier marker shape to scatter series |
+| [Add-percentage-value-labels-to-doughnut-chart](./Add-percentage-value-labels-to-doughnut-chart.cs) |  | Add percentage value labels to doughnut chart |
+| [Add-polar-chart-with-custom-radii](./Add-polar-chart-with-custom-radii.cs) |  | Add polar chart with custom radii |
+| [Add-polynomial-trendline-order-three-to-scatter](./Add-polynomial-trendline-order-three-to-scatter.cs) |  | Add polynomial trendline order three to scatter |
+| [Add-quadratic-trendline-to-scatter-forward-two](./Add-quadratic-trendline-to-scatter-forward-two.cs) |  | Add quadratic trendline to scatter forward two |
+| [Add-secondary-axis-to-bubble-chart-scaling](./Add-secondary-axis-to-bubble-chart-scaling.cs) |  | Add secondary axis to bubble chart scaling |
+| [Add-secondary-axis-to-column-chart-series](./Add-secondary-axis-to-column-chart-series.cs) |  | Add secondary axis to column chart series |
+| [Add-secondary-axis-to-column-chart-synchronize](./Add-secondary-axis-to-column-chart-synchronize.cs) |  | Add secondary axis to column chart synchronize |
+| [Add-secondary-plot-to-bar-pie-reorder](./Add-secondary-plot-to-bar-pie-reorder.cs) |  | Add secondary plot to bar pie reorder |
+| [Add-secondary-plot-to-bar-pie-threshold](./Add-secondary-plot-to-bar-pie-threshold.cs) |  | Add secondary plot to bar pie threshold |
+| [Add-secondary-plot-to-pie-of-pie](./Add-secondary-plot-to-pie-of-pie.cs) |  | Add secondary plot to pie of pie |
+| [Add-secondary-y-axis-to-column-chart](./Add-secondary-y-axis-to-column-chart.cs) |  | Add secondary y axis to column chart |
+| [Add-secondary-y-axis-to-line-chart](./Add-secondary-y-axis-to-line-chart.cs) |  | Add secondary y axis to line chart |
+| [Add-series-animation-afterprevious-to-isequence](./Add-series-animation-afterprevious-to-isequence.cs) |  | Add series animation afterprevious to isequence |
+| [Add-series-animation-to-charts-in-PPTX](./Add-series-animation-to-charts-in-PPTX.cs) |  | Add series animation to charts in PPTX |
+| [Add-skip-custom-lines-when-plotarea-null](./Add-skip-custom-lines-when-plotarea-null.cs) |  | Add skip custom lines when plotarea null |
+| [Add-standard-deviation-bars-to-series](./Add-standard-deviation-bars-to-series.cs) |  | Add standard deviation bars to series |
+| [Add-trendline-to-line-chart-with-style](./Add-trendline-to-line-chart-with-style.cs) |  | Add trendline to line chart with style |
+| [Add-trendline-to-scatter-chart-with-equation](./Add-trendline-to-scatter-chart-with-equation.cs) |  | Add trendline to scatter chart with equation |
+| [Add-two-second-pause-to-category-animation](./Add-two-second-pause-to-category-animation.cs) |  | Add two second pause to category animation |
+| [Add-value-percentage-labels-to-pie-chart](./Add-value-percentage-labels-to-pie-chart.cs) |  | Add value percentage labels to pie chart |
+| [Adjust-bar-chart-gap-width](./Adjust-bar-chart-gap-width.cs) |  | Adjust bar chart gap width |
+| [Adjust-bubble-chart-width-representation](./Adjust-bubble-chart-width-representation.cs) |  | Adjust bubble chart width representation |
+| [Adjust-data-table-column-width-to-longest](./Adjust-data-table-column-width-to-longest.cs) |  | Adjust data table column width to longest |
+| [Adjust-pie-chart-data-label-position](./Adjust-pie-chart-data-label-position.cs) |  | Adjust pie chart data label position |
+| [Adjust-plot-area-x-and-y-coordinates](./Adjust-plot-area-x-and-y-coordinates.cs) |  | Adjust plot area x and y coordinates |
+| [Apply-bold-style-to-data-table-header](./Apply-bold-style-to-data-table-header.cs) |  | Apply bold style to data table header |
+| [Apply-brand-color-palette-to-doughnut-chart](./Apply-brand-color-palette-to-doughnut-chart.cs) |  | Apply brand color palette to doughnut chart |
+| [Apply-chart-legend-right-position](./Apply-chart-legend-right-position.cs) |  | Apply chart legend right position |
+| [Apply-chart-style-template-to-all-charts](./Apply-chart-style-template-to-all-charts.cs) |  | Apply chart style template to all charts |
+| [Apply-chart-style-template-to-bar-chart](./Apply-chart-style-template-to-bar-chart.cs) |  | Apply chart style template to bar chart |
+| [Apply-conditional-formatting-to-bubble-colors](./Apply-conditional-formatting-to-bubble-colors.cs) |  | Apply conditional formatting to bubble colors |
+| [Apply-conditional-formatting-to-pie-slices](./Apply-conditional-formatting-to-pie-slices.cs) |  | Apply conditional formatting to pie slices |
+| [Apply-corporate-theme-to-all-charts](./Apply-corporate-theme-to-all-charts.cs) |  | Apply corporate theme to all charts |
+| [Apply-custom-date-format-to-category-axis](./Apply-custom-date-format-to-category-axis.cs) |  | Apply custom date format to category axis |
+| [Apply-custom-easing-to-category-animation](./Apply-custom-easing-to-category-animation.cs) |  | Apply custom easing to category animation |
+| [Apply-custom-gradient-fill-to-plot-area](./Apply-custom-gradient-fill-to-plot-area.cs) |  | Apply custom gradient fill to plot area |
+| [Apply-custom-marker-shape-to-scatter-series](./Apply-custom-marker-shape-to-scatter-series.cs) |  | Apply custom marker shape to scatter series |
+| [Apply-element-animation-to-series-point-two-second](./Apply-element-animation-to-series-point-two-second.cs) |  | Apply element animation to series point two second |
+| [Apply-fade-in-animation-to-chart](./Apply-fade-in-animation-to-chart.cs) |  | Apply fade in animation to chart |
+| [Apply-plot-area-border-color](./Apply-plot-area-border-color.cs) |  | Apply plot area border color |
+| [Apply-predefined-labels-to-3d-bubble-chart](./Apply-predefined-labels-to-3d-bubble-chart.cs) |  | Apply predefined labels to 3d bubble chart |
+| [Apply-treemap-intensity-color-palette](./Apply-treemap-intensity-color-palette.cs) |  | Apply treemap intensity color palette |
+| [Calculate-percentage-increase-of-plot-area-width](./Calculate-percentage-increase-of-plot-area-width.cs) |  | Calculate percentage increase of plot area width |
+| [Check-chart-has-trendline](./Check-chart-has-trendline.cs) |  | Check chart has trendline |
+| [Check-data-table-visibility-on-chart](./Check-data-table-visibility-on-chart.cs) |  | Check data table visibility on chart |
+| [Clone-chart-enable-data-table-and-insert](./Clone-chart-enable-data-table-and-insert.cs) |  | Clone chart enable data table and insert |
+| [Clone-chart-modify-title-and-insert](./Clone-chart-modify-title-and-insert.cs) |  | Clone chart modify title and insert |
+| [Clone-chart-series-and-insert-into-slide](./Clone-chart-series-and-insert-into-slide.cs) |  | Clone chart series and insert into slide |
+| [Clone-chart-with-animation-to-another-slide](./Clone-chart-with-animation-to-another-slide.cs) |  | Clone chart with animation to another slide |
+| [Compare-inside-outside-plot-area-widths](./Compare-inside-outside-plot-area-widths.cs) |  | Compare inside outside plot area widths |
+| [Compare-PDF-chart-images-before-after-trendlines](./Compare-PDF-chart-images-before-after-trendlines.cs) |  | Compare PDF chart images before after trendlines |
+| [Configure-axis-label-number-format-with-thousands](./Configure-axis-label-number-format-with-thousands.cs) |  | Configure axis label number format with thousands |
+| [Configure-bubble-chart-size-to-area](./Configure-bubble-chart-size-to-area.cs) |  | Configure bubble chart size to area |
+| [Configure-bubble-chart-width-size-scaling](./Configure-bubble-chart-width-size-scaling.cs) |  | Configure bubble chart width size scaling |
+| [Configure-fixed-constant-error-bars-series](./Configure-fixed-constant-error-bars-series.cs) |  | Configure fixed constant error bars series |
+| [Configure-multi-chart-animation-from-config](./Configure-multi-chart-animation-from-config.cs) |  | Configure multi chart animation from config |
+| [Configure-second-plot-for-pie-of-pie](./Configure-second-plot-for-pie-of-pie.cs) |  | Configure second plot for pie of pie |
+| [Configure-secondary-plot-as-stacked-column](./Configure-secondary-plot-as-stacked-column.cs) |  | Configure secondary plot as stacked column |
+| [Configure-trendline-lengths-five-categories-column-chart](./Configure-trendline-lengths-five-categories-column-chart.cs) |  | Configure trendline lengths five categories column chart |
+| [Configure-x-axis-logarithmic-scale](./Configure-x-axis-logarithmic-scale.cs) |  | Configure x axis logarithmic scale |
+| [Convert-presentation-to-PPTX-with-branding-legend](./Convert-presentation-to-PPTX-with-branding-legend.cs) |  | Convert presentation to PPTX with branding legend |
+| [Create-chart-animation-video-and-save-mp4](./Create-chart-animation-video-and-save-mp4.cs) |  | Create chart animation video and save mp4 |
+| [Create-chart-from-csv-with-default-axis](./Create-chart-from-csv-with-default-axis.cs) |  | Create chart from csv with default axis |
+| [Create-clustered-column-chart-on-slide](./Create-clustered-column-chart-on-slide.cs) |  | Create clustered column chart on slide |
+| [Create-isequence-animation-object-for-chart](./Create-isequence-animation-object-for-chart.cs) |  | Create isequence animation object for chart |
+| [Create-isequence-with-ten-second-total](./Create-isequence-with-ten-second-total.cs) |  | Create isequence with ten second total |
+| [Create-multi-level-category-axis-for-column-chart](./Create-multi-level-category-axis-for-column-chart.cs) |  | Create multi level category axis for column chart |
+| [Create-pie-chart-with-auto-slice-colors](./Create-pie-chart-with-auto-slice-colors.cs) |  | Create pie chart with auto slice colors |
+| [Create-pie-chart-with-grouped-legend](./Create-pie-chart-with-grouped-legend.cs) |  | Create pie chart with grouped legend |
+| [Create-sunburst-chart-with-level-colors](./Create-sunburst-chart-with-level-colors.cs) |  | Create sunburst chart with level colors |
+| [Create-treemap-chart-with-gradient-scale](./Create-treemap-chart-with-gradient-scale.cs) |  | Create treemap chart with gradient scale |
+| [Create-treemap-chart-with-level-colors-programmatically](./Create-treemap-chart-with-level-colors-programmatically.cs) |  | Create treemap chart with level colors programmatically |
+| [Create-uniquely-colored-doughnut-charts](./Create-uniquely-colored-doughnut-charts.cs) |  | Create uniquely colored doughnut charts |
+| [Customize-scatter-plot-markers-shapes-sizes](./Customize-scatter-plot-markers-shapes-sizes.cs) |  | Customize scatter plot markers shapes sizes |
+| [Detect-data-tables-in-charts-log-indices](./Detect-data-tables-in-charts-log-indices.cs) |  | Detect data tables in charts log indices |
+| [Dispose-presentation-and-isequence-objects](./Dispose-presentation-and-isequence-objects.cs) |  | Dispose presentation and isequence objects |
+| [Duplicate-chart-series-and-modify-data-points](./Duplicate-chart-series-and-modify-data-points.cs) |  | Duplicate chart series and modify data points |
+| [Enable-3D-rotation-animation-on-chart](./Enable-3D-rotation-animation-on-chart.cs) |  | Enable 3D rotation animation on chart |
+| [Enable-auto-data-labels-on-pie-chart](./Enable-auto-data-labels-on-pie-chart.cs) |  | Enable auto data labels on pie chart |
+| [Enable-auto-overlap-prevention-for-data-labels](./Enable-auto-overlap-prevention-for-data-labels.cs) |  | Enable auto overlap prevention for data labels |
+| [Enable-auto-scaling-of-bubble-sizes](./Enable-auto-scaling-of-bubble-sizes.cs) |  | Enable auto scaling of bubble sizes |
+| [Enable-data-table-visibility-for-charts](./Enable-data-table-visibility-for-charts.cs) |  | Enable data table visibility for charts |
+| [Enable-data-tables-on-charts-save-PDF](./Enable-data-tables-on-charts-save-PDF.cs) |  | Enable data tables on charts save PDF |
+| [Enable-display-unit-label-on-value-axis](./Enable-display-unit-label-on-value-axis.cs) |  | Enable display unit label on value axis |
+| [Enable-minor-gridlines-on-value-axis](./Enable-minor-gridlines-on-value-axis.cs) |  | Enable minor gridlines on value axis |
+| [Enable-percentage-data-labels-on-chart](./Enable-percentage-data-labels-on-chart.cs) |  | Enable percentage data labels on chart |
+| [Enable-smooth-lines-for-spline-chart](./Enable-smooth-lines-for-spline-chart.cs) |  | Enable smooth lines for spline chart |
+| [Export-all-charts-to-single-PDF](./Export-all-charts-to-single-PDF.cs) |  | Export all charts to single PDF |
+| [Export-all-charts-to-single-SVG](./Export-all-charts-to-single-SVG.cs) |  | Export all charts to single SVG |
+| [Export-animated-chart-as-GIF-for-web](./Export-animated-chart-as-GIF-for-web.cs) |  | Export animated chart as GIF for web |
+| [Export-animated-chart-as-high-resolution-png](./Export-animated-chart-as-high-resolution-png.cs) |  | Export animated chart as high resolution png |
+| [Export-animated-chart-as-TIFF-for-print](./Export-animated-chart-as-TIFF-for-print.cs) |  | Export animated chart as TIFF for print |
+| [Export-animated-chart-to-SVG-for-web](./Export-animated-chart-to-SVG-for-web.cs) |  | Export animated chart to SVG for web |
+| [Export-chart-as-EMF-vector-file](./Export-chart-as-EMF-vector-file.cs) |  | Export chart as EMF vector file |
+| [Export-chart-as-high-resolution-JPEG](./Export-chart-as-high-resolution-JPEG.cs) |  | Export chart as high resolution JPEG |
+| [Export-chart-as-high-resolution-PDF](./Export-chart-as-high-resolution-PDF.cs) |  | Export chart as high resolution PDF |
+| [Export-chart-as-high-resolution-png](./Export-chart-as-high-resolution-png.cs) |  | Export chart as high resolution png |
+| [Export-chart-as-high-resolution-TIFF](./Export-chart-as-high-resolution-TIFF.cs) |  | Export chart as high resolution TIFF |
+| [Export-chart-as-SVG](./Export-chart-as-SVG.cs) |  | Export chart as SVG |
+| [Export-chart-callouts-to-SVG-vectorized](./Export-chart-callouts-to-SVG-vectorized.cs) |  | Export chart callouts to SVG vectorized |
+| [Export-chart-data-series-to-json](./Export-chart-data-series-to-json.cs) |  | Export chart data series to json |
+| [Export-chart-data-series-to-XML](./Export-chart-data-series-to-XML.cs) |  | Export chart data series to XML |
+| [Export-chart-data-to-CSV](./Export-chart-data-to-CSV.cs) |  | Export chart data to CSV |
+| [Export-chart-with-callouts-to-PDF-A](./Export-chart-with-callouts-to-PDF-A.cs) |  | Export chart with callouts to PDF A |
+| [Export-charts-individually-to-PNG-with-callouts](./Export-charts-individually-to-PNG-with-callouts.cs) |  | Export charts individually to PNG with callouts |
+| [Export-charts-to-SVG-by-slide-index](./Export-charts-to-SVG-by-slide-index.cs) |  | Export charts to SVG by slide index |
+| [Export-charts-to-zip-archive-PNG](./Export-charts-to-zip-archive-PNG.cs) |  | Export charts to zip archive PNG |
+| [Export-data-table-from-chart-to-xlsx](./Export-data-table-from-chart-to-xlsx.cs) |  | Export data table from chart to xlsx |
+| [Export-each-chart-to-separate-PNG](./Export-each-chart-to-separate-PNG.cs) |  | Export each chart to separate PNG |
+| [Export-error-bars-to-high-resolution-PNG](./Export-error-bars-to-high-resolution-PNG.cs) |  | Export error bars to high resolution PNG |
+| [Export-error-bars-to-JSON-file](./Export-error-bars-to-JSON-file.cs) |  | Export error bars to JSON file |
+| [Export-modified-presentation-to-PDF-verify-trendlines](./Export-modified-presentation-to-PDF-verify-trendlines.cs) |  | Export modified presentation to PDF verify trendlines |
+| [Export-presentation-charts-to-PDF-verify-trendlines](./Export-presentation-charts-to-PDF-verify-trendlines.cs) |  | Export presentation charts to PDF verify trendlines |
+| [Export-presentation-to-HTML-data-tables-errorbars](./Export-presentation-to-HTML-data-tables-errorbars.cs) |  | Export presentation to HTML data tables errorbars |
+| [Export-presentation-to-PDF-tables-and-errorbars](./Export-presentation-to-PDF-tables-and-errorbars.cs) |  | Export presentation to PDF tables and errorbars |
+| [Export-presentation-to-PNG-with-tables-errorbars](./Export-presentation-to-PNG-with-tables-errorbars.cs) |  | Export presentation to PNG with tables errorbars |
+| [Export-presentation-with-chart-callouts-to-HTML5](./Export-presentation-with-chart-callouts-to-HTML5.cs) |  | Export presentation with chart callouts to HTML5 |
+| [Export-presentation-with-chart-callouts-to-PDF](./Export-presentation-with-chart-callouts-to-PDF.cs) |  | Export presentation with chart callouts to PDF |
+| [Export-presentation-with-chart-callouts-to-PNG](./Export-presentation-with-chart-callouts-to-PNG.cs) |  | Export presentation with chart callouts to PNG |
+| [Export-presentation-with-chart-callouts-to-SVG](./Export-presentation-with-chart-callouts-to-SVG.cs) |  | Export presentation with chart callouts to SVG |
+| [Fallback-plot-area-layouttargettype-to-inside](./Fallback-plot-area-layouttargettype-to-inside.cs) |  | Fallback plot area layouttargettype to inside |
+| [Generate-charts-from-multiple-excel-sheets](./Generate-charts-from-multiple-excel-sheets.cs) |  | Generate charts from multiple excel sheets |
+| [Generate-PNG-thumbnail-for-each-chart](./Generate-PNG-thumbnail-for-each-chart.cs) |  | Generate PNG thumbnail for each chart |
+| [Get-chart-legend-position-and-log](./Get-chart-legend-position-and-log.cs) |  | Get chart legend position and log |
+| [Get-formatted-plot-area-dimensions-from-chart](./Get-formatted-plot-area-dimensions-from-chart.cs) |  | Get formatted plot area dimensions from chart |
+| [Get-plot-area-dimensions-in-points](./Get-plot-area-dimensions-in-points.cs) |  | Get plot area dimensions in points |
+| [Get-vertical-axis-minimum-value](./Get-vertical-axis-minimum-value.cs) |  | Get vertical axis minimum value |
+| [Handle-unsupported-layouttargettype-argumentexception](./Handle-unsupported-layouttargettype-argumentexception.cs) |  | Handle unsupported layouttargettype argumentexception |
+| [Hide-axis-line-keep-tick-marks](./Hide-axis-line-keep-tick-marks.cs) |  | Hide axis line keep tick marks |
+| [Hide-axis-lines-keep-labels](./Hide-axis-lines-keep-labels.cs) |  | Hide axis lines keep labels |
+| [Hide-chart-title-keep-axis-labels](./Hide-chart-title-keep-axis-labels.cs) |  | Hide chart title keep axis labels |
+| [Hide-data-table-on-multi-series-charts](./Hide-data-table-on-multi-series-charts.cs) |  | Hide data table on multi series charts |
+| [Hide-gridlines-on-both-axes](./Hide-gridlines-on-both-axes.cs) |  | Hide gridlines on both axes |
+| [Hide-gridlines-on-secondary-axis](./Hide-gridlines-on-secondary-axis.cs) |  | Hide gridlines on secondary axis |
+| [Hide-horizontal-axis-from-line-chart](./Hide-horizontal-axis-from-line-chart.cs) |  | Hide horizontal axis from line chart |
+| [Hide-plot-area-border-keep-gridlines](./Hide-plot-area-border-keep-gridlines.cs) |  | Hide plot area border keep gridlines |
+| [Hide-plot-area-gridlines-keep-axis-titles](./Hide-plot-area-gridlines-keep-axis-titles.cs) |  | Hide plot area gridlines keep axis titles |
+| [Hide-vertical-axis-from-line-chart](./Hide-vertical-axis-from-line-chart.cs) |  | Hide vertical axis from line chart |
+| [Insert-bubble-chart-with-size-data](./Insert-bubble-chart-with-size-data.cs) |  | Insert bubble chart with size data |
+| [Insert-chart-legend-with-custom-font-size](./Insert-chart-legend-with-custom-font-size.cs) |  | Insert chart legend with custom font size |
+| [Insert-doughnut-chart-multiple-series-inner-radius](./Insert-doughnut-chart-multiple-series-inner-radius.cs) |  | Insert doughnut chart multiple series inner radius |
+| [Insert-dynamic-date-time-title](./Insert-dynamic-date-time-title.cs) |  | Insert dynamic date time title |
+| [Insert-isequence-animation-into-slide-timeline](./Insert-isequence-animation-into-slide-timeline.cs) |  | Insert isequence animation into slide timeline |
+| [Insert-multiple-isequence-objects-into-slide](./Insert-multiple-isequence-objects-into-slide.cs) |  | Insert multiple isequence objects into slide |
+| [Insert-pie-chart-with-percentage-labels](./Insert-pie-chart-with-percentage-labels.cs) |  | Insert pie chart with percentage labels |
+| [Insert-radar-chart-with-polygon-fill-opacity](./Insert-radar-chart-with-polygon-fill-opacity.cs) |  | Insert radar chart with polygon fill opacity |
+| [Link-chart-data-to-external-excel-workbook](./Link-chart-data-to-external-excel-workbook.cs) |  | Link chart data to external excel workbook |
+| [List-chart-titles-and-plot-area-sizes](./List-chart-titles-and-plot-area-sizes.cs) |  | List chart titles and plot area sizes |
+| [List-charts-missing-data-tables-slides](./List-charts-missing-data-tables-slides.cs) |  | List charts missing data tables slides |
+| [Load-CSV-data-into-sunburst-chart](./Load-CSV-data-into-sunburst-chart.cs) |  | Load CSV data into sunburst chart |
+| [Load-JSON-data-into-sunburst-chart](./Load-JSON-data-into-sunburst-chart.cs) |  | Load JSON data into sunburst chart |
+| [Load-pptx-add-3d-bubble-slide](./Load-pptx-add-3d-bubble-slide.cs) |  | Load pptx add 3d bubble slide |
+| [Load-PPTX-find-charts-on-slides](./Load-PPTX-find-charts-on-slides.cs) |  | Load PPTX find charts on slides |
+| [Load-pptx-modify-plot-area-byte-array](./Load-pptx-modify-plot-area-byte-array.cs) |  | Load pptx modify plot area byte array |
+| [Load-PPTX-slide-and-access-chart](./Load-PPTX-slide-and-access-chart.cs) |  | Load PPTX slide and access chart |
+| [Load-presentation-async-add-chart-animations](./Load-presentation-async-add-chart-animations.cs) |  | Load presentation async add chart animations |
+| [Log-animation-steps-to-console-for-debugging](./Log-animation-steps-to-console-for-debugging.cs) |  | Log animation steps to console for debugging |
+| [Log-chart-type-for-each-chart](./Log-chart-type-for-each-chart.cs) |  | Log chart type for each chart |
+| [Map-bubble-colors-to-categorical-series](./Map-bubble-colors-to-categorical-series.cs) |  | Map bubble colors to categorical series |
+| [Read-plot-area-dimensions-from-PPTX-chart](./Read-plot-area-dimensions-from-PPTX-chart.cs) |  | Read plot area dimensions from PPTX chart |
+| [Remove-animations-from-chart-before-adding-new](./Remove-animations-from-chart-before-adding-new.cs) |  | Remove animations from chart before adding new |
+| [Remove-chart-legend-from-presentation](./Remove-chart-legend-from-presentation.cs) |  | Remove chart legend from presentation |
+| [Remove-error-bars-from-chart-before-PNG](./Remove-error-bars-from-chart-before-PNG.cs) |  | Remove error bars from chart before PNG |
+| [Remove-line-chart-series-by-name](./Remove-line-chart-series-by-name.cs) |  | Remove line chart series by name |
+| [Remove-trendlines-from-chart-before-export](./Remove-trendlines-from-chart-before-export.cs) |  | Remove trendlines from chart before export |
+| [Render-chart-to-memory-stream-JPEG](./Render-chart-to-memory-stream-JPEG.cs) |  | Render chart to memory stream JPEG |
+| [Render-chart-to-svg-inspect-trendline](./Render-chart-to-svg-inspect-trendline.cs) |  | Render chart to svg inspect trendline |
+| [Replace-all-charts-with-treemap](./Replace-all-charts-with-treemap.cs) |  | Replace all charts with treemap |
+| [Resize-plot-area-based-on-actual-dimensions](./Resize-plot-area-based-on-actual-dimensions.cs) |  | Resize plot area based on actual dimensions |
+| [Rotate-axis-title-by-angle](./Rotate-axis-title-by-angle.cs) |  | Rotate axis title by angle |
+| [Rotate-chart-title-by-45-degrees](./Rotate-chart-title-by-45-degrees.cs) |  | Rotate chart title by 45 degrees |
+| [Save-chart-as-png-300-dpi](./Save-chart-as-png-300-dpi.cs) |  | Save chart as png 300 dpi |
+| [Save-modified-presentation-with-animations-to-PPTX](./Save-modified-presentation-with-animations-to-PPTX.cs) |  | Save modified presentation with animations to PPTX |
+| [Save-presentation-as-PPTX-with-tables-errorbars](./Save-presentation-as-PPTX-with-tables-errorbars.cs) |  | Save presentation as PPTX with tables errorbars |
+| [Save-selected-chart-to-high-resolution-png](./Save-selected-chart-to-high-resolution-png.cs) |  | Save selected chart to high resolution png |
+| [Serialize-modified-plot-area-to-memory-stream](./Serialize-modified-plot-area-to-memory-stream.cs) |  | Serialize modified plot area to memory stream |
+| [Set-3D-chart-view-elevation-and-rotation](./Set-3D-chart-view-elevation-and-rotation.cs) |  | Set 3D chart view elevation and rotation |
+| [Set-axis-major-unit-to-ten](./Set-axis-major-unit-to-ten.cs) |  | Set axis major unit to ten |
+| [Set-axis-position-using-enumeration](./Set-axis-position-using-enumeration.cs) |  | Set axis position using enumeration |
+| [Set-bubble-border-thickness-and-color](./Set-bubble-border-thickness-and-color.cs) |  | Set bubble border thickness and color |
+| [Set-bubble-chart-minimum-size-five-points](./Set-bubble-chart-minimum-size-five-points.cs) |  | Set bubble chart minimum size five points |
+| [Set-bubble-chart-scaling-to-1-5](./Set-bubble-chart-scaling-to-1-5.cs) |  | Set bubble chart scaling to 1 5 |
+| [Set-bubble-chart-size-range](./Set-bubble-chart-size-range.cs) |  | Set bubble chart size range |
+| [Set-bubble-size-representation-to-area](./Set-bubble-size-representation-to-area.cs) |  | Set bubble size representation to area |
+| [Set-bubble-size-representation-to-width](./Set-bubble-size-representation-to-width.cs) |  | Set bubble size representation to width |
+| [Set-category-axis-to-date](./Set-category-axis-to-date.cs) |  | Set category axis to date |
+| [Set-chart-animation-repeat-three-times](./Set-chart-animation-repeat-three-times.cs) |  | Set chart animation repeat three times |
+| [Set-chart-background-gradient-to-match-theme](./Set-chart-background-gradient-to-match-theme.cs) |  | Set chart background gradient to match theme |
+| [Set-chart-background-gradient-with-custom-colors](./Set-chart-background-gradient-with-custom-colors.cs) |  | Set chart background gradient with custom colors |
+| [Set-chart-background-light-gray](./Set-chart-background-light-gray.cs) |  | Set chart background light gray |
+| [Set-chart-background-solid-color](./Set-chart-background-solid-color.cs) |  | Set chart background solid color |
+| [Set-chart-data-source-to-dynamic-range](./Set-chart-data-source-to-dynamic-range.cs) |  | Set chart data source to dynamic range |
+| [Set-chart-data-source-to-merged-cells](./Set-chart-data-source-to-merged-cells.cs) |  | Set chart data source to merged cells |
+| [Set-chart-data-source-to-named-cells](./Set-chart-data-source-to-named-cells.cs) |  | Set chart data source to named cells |
+| [Set-chart-legend-bottom-horizontal](./Set-chart-legend-bottom-horizontal.cs) |  | Set chart legend bottom horizontal |
+| [Set-chart-legend-bottom-right](./Set-chart-legend-bottom-right.cs) |  | Set chart legend bottom right |
+| [Set-chart-legend-font-size-to-fourteen](./Set-chart-legend-font-size-to-fourteen.cs) |  | Set chart legend font size to fourteen |
+| [Set-chart-legend-size-width-height](./Set-chart-legend-size-width-height.cs) |  | Set chart legend size width height |
+| [Set-chart-legend-to-series-names-only](./Set-chart-legend-to-series-names-only.cs) |  | Set chart legend to series names only |
+| [Set-chart-legend-top-left](./Set-chart-legend-top-left.cs) |  | Set chart legend top left |
+| [Set-chart-legend-top-right](./Set-chart-legend-top-right.cs) |  | Set chart legend top right |
+| [Set-column-chart-data-labels-inside-end](./Set-column-chart-data-labels-inside-end.cs) |  | Set column chart data labels inside end |
+| [Set-custom-error-bars-with-offset-arrays](./Set-custom-error-bars-with-offset-arrays.cs) |  | Set custom error bars with offset arrays |
+| [Set-data-label-background-semi-transparent](./Set-data-label-background-semi-transparent.cs) |  | Set data label background semi transparent |
+| [Set-data-label-background-transparent](./Set-data-label-background-transparent.cs) |  | Set data label background transparent |
+| [Set-data-label-font-bold-and-size](./Set-data-label-font-bold-and-size.cs) |  | Set data label font bold and size |
+| [Set-data-label-number-format-precision](./Set-data-label-number-format-precision.cs) |  | Set data label number format precision |
+| [Set-data-label-offset-from-axis](./Set-data-label-offset-from-axis.cs) |  | Set data label offset from axis |
+| [Set-data-label-separator-to-newline](./Set-data-label-separator-to-newline.cs) |  | Set data label separator to newline |
+| [Set-data-table-font-color-dark-gray](./Set-data-table-font-color-dark-gray.cs) |  | Set data table font color dark gray |
+| [Set-data-table-font-to-arial-10](./Set-data-table-font-to-arial-10.cs) |  | Set data table font to arial 10 |
+| [Set-doughnut-chart-hole-to-fifty-percent](./Set-doughnut-chart-hole-to-fifty-percent.cs) |  | Set doughnut chart hole to fifty percent |
+| [Set-error-bar-cap-style-to-flat](./Set-error-bar-cap-style-to-flat.cs) |  | Set error bar cap style to flat |
+| [Set-error-bar-fill-to-series-color](./Set-error-bar-fill-to-series-color.cs) |  | Set error bar fill to series color |
+| [Set-error-bar-line-style-to-dashdot](./Set-error-bar-line-style-to-dashdot.cs) |  | Set error bar line style to dashdot |
+| [Set-error-bar-line-style-to-dashed](./Set-error-bar-line-style-to-dashed.cs) |  | Set error bar line style to dashed |
+| [Set-error-bar-line-width-2-points](./Set-error-bar-line-width-2-points.cs) |  | Set error bar line width 2 points |
+| [Set-error-bar-transparency-to-fifty-percent](./Set-error-bar-transparency-to-fifty-percent.cs) |  | Set error bar transparency to fifty percent |
+| [Set-error-bars-both-directions-for-column](./Set-error-bars-both-directions-for-column.cs) |  | Set error bars both directions for column |
+| [Set-error-bars-both-directions-for-scatter](./Set-error-bars-both-directions-for-scatter.cs) |  | Set error bars both directions for scatter |
+| [Set-error-bars-percentage-on-line-series](./Set-error-bars-percentage-on-line-series.cs) |  | Set error bars percentage on line series |
+| [Set-legend-overlay-false-for-plot-area](./Set-legend-overlay-false-for-plot-area.cs) |  | Set legend overlay false for plot area |
+| [Set-percentage-symbol-for-data-labels](./Set-percentage-symbol-for-data-labels.cs) |  | Set percentage symbol for data labels |
+| [Set-pie-chart-data-label-percent-decimal](./Set-pie-chart-data-label-percent-decimal.cs) |  | Set pie chart data label percent decimal |
+| [Set-pie-chart-data-labels-outside-end](./Set-pie-chart-data-labels-outside-end.cs) |  | Set pie chart data labels outside end |
+| [Set-pie-chart-start-angle-to-ninety](./Set-pie-chart-start-angle-to-ninety.cs) |  | Set pie chart start angle to ninety |
+| [Set-pie-slice-explosion-to-ten-percent](./Set-pie-slice-explosion-to-ten-percent.cs) |  | Set pie slice explosion to ten percent |
+| [Set-plot-area-background-gradient-semi-transparent](./Set-plot-area-background-gradient-semi-transparent.cs) |  | Set plot area background gradient semi transparent |
+| [Set-plot-area-border-thickness-and-color](./Set-plot-area-border-thickness-and-color.cs) |  | Set plot area border thickness and color |
+| [Set-plot-area-layouttargettype-to-inside](./Set-plot-area-layouttargettype-to-inside.cs) |  | Set plot area layouttargettype to inside |
+| [Set-plot-area-layouttargettype-to-outside](./Set-plot-area-layouttargettype-to-outside.cs) |  | Set plot area layouttargettype to outside |
+| [Set-plot-area-manual-layout](./Set-plot-area-manual-layout.cs) |  | Set plot area manual layout |
+| [Set-scatter-chart-axis-titles-and-fonts](./Set-scatter-chart-axis-titles-and-fonts.cs) |  | Set scatter chart axis titles and fonts |
+| [Set-secondary-plot-to-stacked-bar](./Set-secondary-plot-to-stacked-bar.cs) |  | Set secondary plot to stacked bar |
+| [Set-series-animation-trigger-to-onclick](./Set-series-animation-trigger-to-onclick.cs) |  | Set series animation trigger to onclick |
+| [Set-third-legend-entry-font-size-to-ten](./Set-third-legend-entry-font-size-to-ten.cs) |  | Set third legend entry font size to ten |
+| [Set-trendline-forward-zero-backward-three](./Set-trendline-forward-zero-backward-three.cs) |  | Set trendline forward zero backward three |
+| [Set-vertical-axis-maximum-value](./Set-vertical-axis-maximum-value.cs) |  | Set vertical axis maximum value |
+| [Set-y-axis-logarithmic-scale-line-chart](./Set-y-axis-logarithmic-scale-line-chart.cs) |  | Set y axis logarithmic scale line chart |
+| [Show-value-category-labels-on-stacked-area](./Show-value-category-labels-on-stacked-area.cs) |  | Show value category labels on stacked area |
+| [Skip-charts-without-plot-area-for-trendlines](./Skip-charts-without-plot-area-for-trendlines.cs) |  | Skip charts without plot area for trendlines |
+| [Swap-x-and-y-axes-of-chart](./Swap-x-and-y-axes-of-chart.cs) |  | Swap x and y axes of chart |
+| [Synchronize-chart-animation-with-slide-transition](./Synchronize-chart-animation-with-slide-transition.cs) |  | Synchronize chart animation with slide transition |
+| [Toggle-data-table-visibility-based-on-boolean](./Toggle-data-table-visibility-based-on-boolean.cs) |  | Toggle data table visibility based on boolean |
+| [Toggle-plot-area-layouttargettype-based-on-preference](./Toggle-plot-area-layouttargettype-based-on-preference.cs) |  | Toggle plot area layouttargettype based on preference |
+| [Unlink-data-label-number-format-from-source](./Unlink-data-label-number-format-from-source.cs) |  | Unlink data label number format from source |
+| [Update-chart-series-values-from-CSV](./Update-chart-series-values-from-CSV.cs) |  | Update chart series values from CSV |
+| [Update-marker-shape-per-series-error-bars](./Update-marker-shape-per-series-error-bars.cs) |  | Update marker shape per series error bars |
+| [Update-marker-style-while-keeping-error-bars](./Update-marker-style-while-keeping-error-bars.cs) |  | Update marker style while keeping error bars |
+| [Update-workbook-data-before-chart-animations](./Update-workbook-data-before-chart-animations.cs) |  | Update workbook data before chart animations |
+| [Use-ichartplotarea-to-abstract-plot-area](./Use-ichartplotarea-to-abstract-plot-area.cs) |  | Use ichartplotarea to abstract plot area |
+| [Validate-actual-width-and-height-before-layout](./Validate-actual-width-and-height-before-layout.cs) |  | Validate actual width and height before layout |
+| [Validate-chart-animation-triggers-before-save](./Validate-chart-animation-triggers-before-save.cs) |  | Validate chart animation triggers before save |
+| [Validate-chart-title-before-saving-presentation](./Validate-chart-title-before-saving-presentation.cs) |  | Validate chart title before saving presentation |
+| [Validate-custom-line-positions-by-coordinates](./Validate-custom-line-positions-by-coordinates.cs) |  | Validate custom line positions by coordinates |
+| [Validate-negative-trendline-forward-length-bar](./Validate-negative-trendline-forward-length-bar.cs) |  | Validate negative trendline forward length bar |
+| [Verify-animation-sequence-relative-to-slide-effects](./Verify-animation-sequence-relative-to-slide-effects.cs) |  | Verify animation sequence relative to slide effects |
 
 ## Category Statistics
 
-- Total examples: 330
+- Total examples: 291
 
 ## Key API Surface
 
-- `Aspose.Slides.Presentation`
 - `Aspose.Slides.Export`
+- `Aspose.Slides.Presentation`
 - `Aspose.Slides`
-- `Aspose.Slides.Charts.IChart`
 - `Aspose.Slides.Charts`
+- `Aspose.Slides.Charts.IChart`
 - `Aspose.Slides.Export.SaveFormat.Pptx`
 - `Aspose.Slides.ISlide`
-- `Aspose.Slides.Charts.IChartSeries`
 - `Aspose.Slides.Charts.ChartType.ClusteredColumn`
-- `Aspose.Slides.FillType.Solid`
+- `Aspose.Slides.Charts.IChartSeries`
 - `Aspose.Slides.Charts.IChartDataWorkbook`
-- `Aspose.Slides.IShape`
-- `Aspose.Slides.IAutoShape`
+- `Aspose.Slides.Animation`
 - `Aspose.Slides.Charts.ChartType.Pie`
-- `Aspose.Slides.Charts.DataSourceType.DoubleLiterals`
+- `Aspose.Slides.FillType.Solid`
+- `Aspose.Slides.Animation.EffectSubtype.None`
+- `Aspose.Slides.Animation.EffectTriggerType.AfterPrevious`
 
 ## Common Code Pattern
 
@@ -412,5 +373,5 @@ using (Presentation pres = new Presentation("input.pptx"))
 - Save the presentation using `Presentation.Save(...)`.
 
 <!-- AUTOGENERATED:START -->
-Updated: 2026-03-26
+Updated: 2026-04-14
 <!-- AUTOGENERATED:END -->
