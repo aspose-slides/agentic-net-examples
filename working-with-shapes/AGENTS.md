@@ -20,188 +20,237 @@ working within the **working-with-shapes** category.
 
 ## Required Namespaces
 
-- `using Aspose.Slides.Export;` (162/162 files)
-- `using System;` (161/162 files)
-- `using Aspose.Slides;` (146/162 files)
-- `using System.Drawing;` (23/162 files)
-- `using Aspose.Slides.Util;` (12/162 files)
-- `using Aspose.Slides.Animation;` (9/162 files)
-- `using System.IO;` (9/162 files)
-- `using Aspose.Slides.DOM.Ole;` (2/162 files)
-- `using Aspose.Slides.Effects;` (1/162 files)
-- `using Aspose.Slides.SmartArt;` (1/162 files)
-- `using System.Reflection;` (1/162 files)
+- `using Aspose.Slides.Export;` (205/205 files)
+- `using System;` (203/205 files)
+- `using Aspose.Slides;` (171/205 files)
+- `using System.IO;` (123/205 files)
+- `using System.Drawing;` (44/205 files)
+- `using System.Collections.Generic;` (3/205 files)
+- `using Aspose.Slides.Util;` (2/205 files)
+- `using Aspose.Slides.Effects;` (2/205 files)
+- `using System.Diagnostics;` (2/205 files)
+- `using System.Net.Http;` (1/205 files)
+- `using System.Threading;` (1/205 files)
+- `using System.IO.Compression;` (1/205 files)
+- `using Aspose.Slides.Charts;` (1/205 files)
+- `using System.Text.Json;` (1/205 files)
+- `using System.Text;` (1/205 files)
+- `using Aspose.Slides.Theme;` (1/205 files)
+- `using Aspose.Slides.Animation;` (1/205 files)
 
 ## Files in this folder
 
 | File | Key APIs | Description |
 |------|----------|-------------|
-| [Add-auto-shape-to-group-PPTX](./Add-auto-shape-to-group-PPTX.cs) |  | Add auto shape to group PPTX |
-| [Add-connector-shape-to-PPTX-slide](./Add-connector-shape-to-PPTX-slide.cs) |  | Add connector shape to PPTX slide |
-| [Add-ellipse-shape-position-size-PPTX](./Add-ellipse-shape-position-size-PPTX.cs) |  | Add ellipse shape position size PPTX |
-| [Add-fade-transition-to-shape-PPTX](./Add-fade-transition-to-shape-PPTX.cs) |  | Add fade transition to shape PPTX |
-| [Add-inner-shadow-effect-to-shape-PPTX](./Add-inner-shadow-effect-to-shape-PPTX.cs) |  | Add inner shadow effect to shape PPTX |
-| [Add-paragraph-to-text-frame-PPTX](./Add-paragraph-to-text-frame-PPTX.cs) |  | Add paragraph to text frame PPTX |
-| [Add-rectangle-shape-customize-visual-properties-PPTX](./Add-rectangle-shape-customize-visual-properties-PPTX.cs) |  | Add rectangle shape customize visual properties PPTX |
-| [Add-shadow-effect-to-shape-PPTX](./Add-shadow-effect-to-shape-PPTX.cs) |  | Add shadow effect to shape PPTX |
-| [Add-softedge-effect-to-shape-PPTX](./Add-softedge-effect-to-shape-PPTX.cs) |  | Add softedge effect to shape PPTX |
-| [Add-straight-line-shape-to-PPTX-slide](./Add-straight-line-shape-to-PPTX-slide.cs) |  | Add straight line shape to PPTX slide |
-| [Adjust-font-size-of-all-paragraphs-PPTX](./Adjust-font-size-of-all-paragraphs-PPTX.cs) |  | Adjust font size of all paragraphs PPTX |
-| [Adjust-shape-line-width-PPTX](./Adjust-shape-line-width-PPTX.cs) |  | Adjust shape line width PPTX |
-| [Append-arc-to-geometrypath-PPTX](./Append-arc-to-geometrypath-PPTX.cs) |  | Append arc to geometrypath PPTX |
-| [Append-line-to-geometrypath-PPTX](./Append-line-to-geometrypath-PPTX.cs) |  | Append line to geometrypath PPTX |
-| [Apply-3d-rotation-angles-to-shape-PPTX](./Apply-3d-rotation-angles-to-shape-PPTX.cs) |  | Apply 3d rotation angles to shape PPTX |
-| [Apply-3d-rotation-reflection-softedge-PPTX](./Apply-3d-rotation-reflection-softedge-PPTX.cs) |  | Apply 3d rotation reflection softedge PPTX |
-| [Apply-animation-effect-and-set-timing-PPTX](./Apply-animation-effect-and-set-timing-PPTX.cs) |  | Apply animation effect and set timing PPTX |
-| [Apply-bold-formatting-to-selected-text-PPTX](./Apply-bold-formatting-to-selected-text-PPTX.cs) |  | Apply bold formatting to selected text PPTX |
-| [Apply-ellipse-fill-gradient-PPTX](./Apply-ellipse-fill-gradient-PPTX.cs) |  | Apply ellipse fill gradient PPTX |
-| [Apply-ellipse-stroke-formatting-PPTX](./Apply-ellipse-stroke-formatting-PPTX.cs) |  | Apply ellipse stroke formatting PPTX |
-| [Apply-inner-shadow-to-elements-PPTX](./Apply-inner-shadow-to-elements-PPTX.cs) |  | Apply inner shadow to elements PPTX |
-| [Apply-multiple-visual-effects-to-shape-PPTX](./Apply-multiple-visual-effects-to-shape-PPTX.cs) |  | Apply multiple visual effects to shape PPTX |
-| [Apply-paragraph-styles-and-spacing-PPTX](./Apply-paragraph-styles-and-spacing-PPTX.cs) |  | Apply paragraph styles and spacing PPTX |
-| [Apply-reflection-effect-to-shape-PPTX](./Apply-reflection-effect-to-shape-PPTX.cs) |  | Apply reflection effect to shape PPTX |
-| [Apply-shape-fill-line-shadow-PPTX](./Apply-shape-fill-line-shadow-PPTX.cs) |  | Apply shape fill line shadow PPTX |
-| [Apply-visual-effects-to-shapes-PPTX](./Apply-visual-effects-to-shapes-PPTX.cs) |  | Apply visual effects to shapes PPTX |
-| [Assign-connector-type-to-diagram-shape-PPTX](./Assign-connector-type-to-diagram-shape-PPTX.cs) |  | Assign connector type to diagram shape PPTX |
-| [Build-custom-shape-geometry-fill-stroke-PPTX](./Build-custom-shape-geometry-fill-stroke-PPTX.cs) |  | Build custom shape geometry fill stroke PPTX |
-| [Configure-animation-start-delay-PPTX](./Configure-animation-start-delay-PPTX.cs) |  | Configure animation start delay PPTX |
-| [Convert-connector-to-curved-type-PPTX](./Convert-connector-to-curved-type-PPTX.cs) |  | Convert connector to curved type PPTX |
-| [Copy-shape-deeply-with-properties-PPTX](./Copy-shape-deeply-with-properties-PPTX.cs) |  | Copy shape deeply with properties PPTX |
-| [Create-connector-and-link-shapes-in-PPTX](./Create-connector-and-link-shapes-in-PPTX.cs) |  | Create connector and link shapes in PPTX |
-| [Create-custom-geometry-shape-fill-stroke-PPTX](./Create-custom-geometry-shape-fill-stroke-PPTX.cs) |  | Create custom geometry shape fill stroke PPTX |
-| [Create-geometry-path-for-custom-shape-PPTX](./Create-geometry-path-for-custom-shape-PPTX.cs) |  | Create geometry path for custom shape PPTX |
-| [Create-group-shape-and-add-children-PPTX](./Create-group-shape-and-add-children-PPTX.cs) |  | Create group shape and add children PPTX |
-| [Create-group-shape-and-ungroup-PPTX](./Create-group-shape-and-ungroup-PPTX.cs) |  | Create group shape and ungroup PPTX |
-| [Create-sequential-animations-for-shape-PPTX](./Create-sequential-animations-for-shape-PPTX.cs) |  | Create sequential animations for shape PPTX |
-| [Create-star-shape-using-geometrypath-PPTX](./Create-star-shape-using-geometrypath-PPTX.cs) |  | Create star shape using geometrypath PPTX |
-| [Create-text-portion-and-apply-formatting-PPTX](./Create-text-portion-and-apply-formatting-PPTX.cs) |  | Create text portion and apply formatting PPTX |
-| [Create-thumbnail-of-shape-PPTX](./Create-thumbnail-of-shape-PPTX.cs) |  | Create thumbnail of shape PPTX |
-| [Define-connector-between-two-shapes-in-PPTX](./Define-connector-between-two-shapes-in-PPTX.cs) |  | Define connector between two shapes in PPTX |
-| [Export-slide-thumbnail-to-JPEG-PPTX](./Export-slide-thumbnail-to-JPEG-PPTX.cs) |  | Export slide thumbnail to JPEG PPTX |
-| [Export-slide-thumbnail-to-PNG-PPTX](./Export-slide-thumbnail-to-PNG-PPTX.cs) |  | Export slide thumbnail to PNG PPTX |
-| [Extract-individual-shapes-from-group-PPTX](./Extract-individual-shapes-from-group-PPTX.cs) |  | Extract individual shapes from group PPTX |
-| [Format-custom-shape-stroke-PPTX](./Format-custom-shape-stroke-PPTX.cs) |  | Format custom shape stroke PPTX |
-| [Generate-thumbnail-from-shape-PPTX](./Generate-thumbnail-from-shape-PPTX.cs) |  | Generate thumbnail from shape PPTX |
-| [Get-computed-shape-fill-color-PPTX](./Get-computed-shape-fill-color-PPTX.cs) |  | Get computed shape fill color PPTX |
-| [Get-effective-shadow-effect-of-shape-PPTX](./Get-effective-shadow-effect-of-shape-PPTX.cs) |  | Get effective shadow effect of shape PPTX |
-| [Get-effective-shape-fill-format-PPTX](./Get-effective-shape-fill-format-PPTX.cs) |  | Get effective shape fill format PPTX |
-| [Get-effective-shape-fill-line-shadow-PPTX](./Get-effective-shape-fill-line-shadow-PPTX.cs) |  | Get effective shape fill line shadow PPTX |
-| [Get-effective-shape-line-format-PPTX](./Get-effective-shape-line-format-PPTX.cs) |  | Get effective shape line format PPTX |
-| [Get-effective-shape-visual-properties-PPTX](./Get-effective-shape-visual-properties-PPTX.cs) |  | Get effective shape visual properties PPTX |
-| [Group-multiple-shapes-and-ungroup-PPTX](./Group-multiple-shapes-and-ungroup-PPTX.cs) |  | Group multiple shapes and ungroup PPTX |
-| [Handle-activex-control-event-PPTX](./Handle-activex-control-event-PPTX.cs) |  | Handle activex control event PPTX |
-| [Import-PPTX-and-modify-paragraphs-in-slides](./Import-PPTX-and-modify-paragraphs-in-slides.cs) |  | Import PPTX and modify paragraphs in slides |
-| [Import-PPTX-duplicate-shape-into-group-PPTX](./Import-PPTX-duplicate-shape-into-group-PPTX.cs) |  | Import PPTX duplicate shape into group PPTX |
-| [Insert-activex-control-and-set-properties-PPTX](./Insert-activex-control-and-set-properties-PPTX.cs) |  | Insert activex control and set properties PPTX |
-| [Insert-activex-ole-control-onto-slide-PPTX](./Insert-activex-ole-control-onto-slide-PPTX.cs) |  | Insert activex ole control onto slide PPTX |
-| [Insert-auto-shape-into-group-PPTX](./Insert-auto-shape-into-group-PPTX.cs) |  | Insert auto shape into group PPTX |
-| [Insert-bold-red-text-into-paragraph-PPTX](./Insert-bold-red-text-into-paragraph-PPTX.cs) |  | Insert bold red text into paragraph PPTX |
-| [Insert-connector-shape-into-PPTX-slide](./Insert-connector-shape-into-PPTX-slide.cs) |  | Insert connector shape into PPTX slide |
-| [Insert-custom-shape-with-styling-PPTX](./Insert-custom-shape-with-styling-PPTX.cs) |  | Insert custom shape with styling PPTX |
-| [Insert-ellipse-shape-and-format-PPTX](./Insert-ellipse-shape-and-format-PPTX.cs) |  | Insert ellipse shape and format PPTX |
-| [Insert-line-shape-modify-geometry-format-PPTX](./Insert-line-shape-modify-geometry-format-PPTX.cs) |  | Insert line shape modify geometry format PPTX |
-| [Insert-ole-object-at-coordinates-PPTX](./Insert-ole-object-at-coordinates-PPTX.cs) |  | Insert ole object at coordinates PPTX |
-| [Insert-paragraph-into-shape-PPTX](./Insert-paragraph-into-shape-PPTX.cs) |  | Insert paragraph into shape PPTX |
-| [Insert-rectangle-shape-position-size-PPTX](./Insert-rectangle-shape-position-size-PPTX.cs) |  | Insert rectangle shape position size PPTX |
-| [Insert-text-into-paragraph-at-index-PPTX](./Insert-text-into-paragraph-at-index-PPTX.cs) |  | Insert text into paragraph at index PPTX |
-| [Insert-text-run-into-paragraph-PPTX](./Insert-text-run-into-paragraph-PPTX.cs) |  | Insert text run into paragraph PPTX |
-| [Link-shapes-with-dynamic-connector-PPTX](./Link-shapes-with-dynamic-connector-PPTX.cs) |  | Link shapes with dynamic connector PPTX |
-| [Load-PPTX-add-connector-with-coordinates](./Load-PPTX-add-connector-with-coordinates.cs) |  | Load PPTX add connector with coordinates |
-| [Load-PPTX-add-custom-shape-to-slide](./Load-PPTX-add-custom-shape-to-slide.cs) |  | Load PPTX add custom shape to slide |
-| [Load-PPTX-add-ellipse-fill-color](./Load-PPTX-add-ellipse-fill-color.cs) |  | Load PPTX add ellipse fill color |
-| [Load-PPTX-add-ellipse-to-slide](./Load-PPTX-add-ellipse-to-slide.cs) |  | Load PPTX add ellipse to slide |
-| [Load-PPTX-add-line-shape-dash-pattern](./Load-PPTX-add-line-shape-dash-pattern.cs) |  | Load PPTX add line shape dash pattern |
-| [Load-PPTX-add-rectangle-shape-coordinates](./Load-PPTX-add-rectangle-shape-coordinates.cs) |  | Load PPTX add rectangle shape coordinates |
-| [Load-PPTX-add-rectangle-shape-to-slide](./Load-PPTX-add-rectangle-shape-to-slide.cs) |  | Load PPTX add rectangle shape to slide |
-| [Load-PPTX-adjust-shape-size-PPTX](./Load-PPTX-adjust-shape-size-PPTX.cs) |  | Load PPTX adjust shape size PPTX |
-| [Load-PPTX-and-attach-connector-shape](./Load-PPTX-and-attach-connector-shape.cs) |  | Load PPTX and attach connector shape |
-| [Load-PPTX-and-set-beginshape-endshape](./Load-PPTX-and-set-beginshape-endshape.cs) |  | Load PPTX and set beginshape endshape |
-| [Load-PPTX-apply-bold-to-selected-text](./Load-PPTX-apply-bold-to-selected-text.cs) |  | Load PPTX apply bold to selected text |
-| [Load-PPTX-apply-entrance-animation-to-element](./Load-PPTX-apply-entrance-animation-to-element.cs) |  | Load PPTX apply entrance animation to element |
-| [Load-PPTX-apply-fill-style-to-shape](./Load-PPTX-apply-fill-style-to-shape.cs) |  | Load PPTX apply fill style to shape |
-| [Load-PPTX-apply-shadow-effect-to-shape](./Load-PPTX-apply-shadow-effect-to-shape.cs) |  | Load PPTX apply shadow effect to shape |
-| [Load-PPTX-apply-shadow-to-elements](./Load-PPTX-apply-shadow-to-elements.cs) |  | Load PPTX apply shadow to elements |
-| [Load-PPTX-change-selected-text-color-red](./Load-PPTX-change-selected-text-color-red.cs) |  | Load PPTX change selected text color red |
-| [Load-PPTX-create-200x200-shape-thumbnail](./Load-PPTX-create-200x200-shape-thumbnail.cs) |  | Load PPTX create 200x200 shape thumbnail |
-| [Load-PPTX-create-custom-shape-on-slide](./Load-PPTX-create-custom-shape-on-slide.cs) |  | Load PPTX create custom shape on slide |
-| [Load-PPTX-create-first-slide-thumbnail](./Load-PPTX-create-first-slide-thumbnail.cs) |  | Load PPTX create first slide thumbnail |
-| [Load-PPTX-define-custom-geometry-path](./Load-PPTX-define-custom-geometry-path.cs) |  | Load PPTX define custom geometry path |
-| [Load-PPTX-embed-activex-control-runtime](./Load-PPTX-embed-activex-control-runtime.cs) |  | Load PPTX embed activex control runtime |
-| [Load-PPTX-find-shape-apply-formatting-PPTX](./Load-PPTX-find-shape-apply-formatting-PPTX.cs) |  | Load PPTX find shape apply formatting PPTX |
-| [Load-PPTX-flip-shape-horizontal-vertical](./Load-PPTX-flip-shape-horizontal-vertical.cs) |  | Load PPTX flip shape horizontal vertical |
-| [Load-PPTX-generate-shape-thumbnail-PPTX](./Load-PPTX-generate-shape-thumbnail-PPTX.cs) |  | Load PPTX generate shape thumbnail PPTX |
-| [Load-PPTX-get-computed-shape-properties](./Load-PPTX-get-computed-shape-properties.cs) |  | Load PPTX get computed shape properties |
-| [Load-PPTX-group-shapes-manipulate-unified-object](./Load-PPTX-group-shapes-manipulate-unified-object.cs) |  | Load PPTX group shapes manipulate unified object |
-| [Load-PPTX-insert-activex-button-preserve-content](./Load-PPTX-insert-activex-button-preserve-content.cs) |  | Load PPTX insert activex button preserve content |
-| [Load-PPTX-insert-auto-shape-dimensions](./Load-PPTX-insert-auto-shape-dimensions.cs) |  | Load PPTX insert auto shape dimensions |
-| [Load-PPTX-insert-content-at-location](./Load-PPTX-insert-content-at-location.cs) |  | Load PPTX insert content at location |
-| [Load-PPTX-insert-ellipse-shape-coordinates](./Load-PPTX-insert-ellipse-shape-coordinates.cs) |  | Load PPTX insert ellipse shape coordinates |
-| [Load-PPTX-insert-grouped-shape-onto-slide](./Load-PPTX-insert-grouped-shape-onto-slide.cs) |  | Load PPTX insert grouped shape onto slide |
-| [Load-PPTX-insert-grouped-shape-using-addgroupshape](./Load-PPTX-insert-grouped-shape-using-addgroupshape.cs) |  | Load PPTX insert grouped shape using addgroupshape |
-| [Load-PPTX-insert-line-shape-keep](./Load-PPTX-insert-line-shape-keep.cs) |  | Load PPTX insert line shape keep |
-| [Load-PPTX-insert-line-shape-onto-slide](./Load-PPTX-insert-line-shape-onto-slide.cs) |  | Load PPTX insert line shape onto slide |
-| [Load-PPTX-insert-line-shape-with-coordinates](./Load-PPTX-insert-line-shape-with-coordinates.cs) |  | Load PPTX insert line shape with coordinates |
-| [Load-PPTX-insert-paragraph-align](./Load-PPTX-insert-paragraph-align.cs) |  | Load PPTX insert paragraph align |
-| [Load-PPTX-insert-paragraph-into-slide](./Load-PPTX-insert-paragraph-into-slide.cs) |  | Load PPTX insert paragraph into slide |
-| [Load-PPTX-insert-text-portion-PPTX](./Load-PPTX-insert-text-portion-PPTX.cs) |  | Load PPTX insert text portion PPTX |
-| [Load-PPTX-merge-all-elements-into-group](./Load-PPTX-merge-all-elements-into-group.cs) |  | Load PPTX merge all elements into group |
-| [Load-PPTX-modify-paragraph-text-PPTX](./Load-PPTX-modify-paragraph-text-PPTX.cs) |  | Load PPTX modify paragraph text PPTX |
-| [Load-PPTX-modify-selected-sections](./Load-PPTX-modify-selected-sections.cs) |  | Load PPTX modify selected sections |
-| [Load-PPTX-rectangle-set-border-thickness-PPTX](./Load-PPTX-rectangle-set-border-thickness-PPTX.cs) |  | Load PPTX rectangle set border thickness PPTX |
-| [Load-PPTX-render-shape-to-PNG-thumbnail](./Load-PPTX-render-shape-to-PNG-thumbnail.cs) |  | Load PPTX render shape to PNG thumbnail |
-| [Load-PPTX-retrieve-computed-fill-properties](./Load-PPTX-retrieve-computed-fill-properties.cs) |  | Load PPTX retrieve computed fill properties |
-| [Load-PPTX-rotate-specific-shape](./Load-PPTX-rotate-specific-shape.cs) |  | Load PPTX rotate specific shape |
-| [Load-PPTX-set-inner-shadow-effect](./Load-PPTX-set-inner-shadow-effect.cs) |  | Load PPTX set inner shadow effect |
-| [Load-PPTX-set-shape-fill-blue](./Load-PPTX-set-shape-fill-blue.cs) |  | Load PPTX set shape fill blue |
-| [Load-PPTX-set-shape-fill-solid-color](./Load-PPTX-set-shape-fill-solid-color.cs) |  | Load PPTX set shape fill solid color |
-| [Load-PPTX-set-shape-line-width-PPTX](./Load-PPTX-set-shape-line-width-PPTX.cs) |  | Load PPTX set shape line width PPTX |
-| [Move-rotate-scale-clone-shape-PPTX](./Move-rotate-scale-clone-shape-PPTX.cs) |  | Move rotate scale clone shape PPTX |
-| [Open-PPTX-add-paragraph-to-shape](./Open-PPTX-add-paragraph-to-shape.cs) |  | Open PPTX add paragraph to shape |
-| [Open-PPTX-and-add-connector-between-shapes](./Open-PPTX-and-add-connector-between-shapes.cs) |  | Open PPTX and add connector between shapes |
-| [Open-PPTX-insert-activex-control-configure-PPTX](./Open-PPTX-insert-activex-control-configure-PPTX.cs) |  | Open PPTX insert activex control configure PPTX |
-| [Open-pptx-insert-ellipse-preserve-formatting-PPTX](./Open-pptx-insert-ellipse-preserve-formatting-PPTX.cs) |  | Open pptx insert ellipse preserve formatting PPTX |
-| [Open-PPTX-insert-rectangle-shape-onto-slide](./Open-PPTX-insert-rectangle-shape-onto-slide.cs) |  | Open PPTX insert rectangle shape onto slide |
-| [Open-PPTX-retrieve-shapes-and-connect](./Open-PPTX-retrieve-shapes-and-connect.cs) |  | Open PPTX retrieve shapes and connect |
-| [Position-ellipse-shape-at-coordinates-PPTX](./Position-ellipse-shape-at-coordinates-PPTX.cs) |  | Position ellipse shape at coordinates PPTX |
-| [Retrieve-effective-solid-fill-color-PPTX](./Retrieve-effective-solid-fill-color-PPTX.cs) |  | Retrieve effective solid fill color PPTX |
-| [Retrieve-shape-and-set-animation-PPTX](./Retrieve-shape-and-set-animation-PPTX.cs) |  | Retrieve shape and set animation PPTX |
-| [Rotate-shape-45degrees-horizontal-flip-PPTX](./Rotate-shape-45degrees-horizontal-flip-PPTX.cs) |  | Rotate shape 45degrees horizontal flip PPTX |
-| [Rotate-shape-to-angle-maintain-visuals-PPTX](./Rotate-shape-to-angle-maintain-visuals-PPTX.cs) |  | Rotate shape to angle maintain visuals PPTX |
-| [Save-slide-thumbnail-to-file-PPTX](./Save-slide-thumbnail-to-file-PPTX.cs) |  | Save slide thumbnail to file PPTX |
-| [Scale-shape-proportionally-width-height-PPTX](./Scale-shape-proportionally-width-height-PPTX.cs) |  | Scale shape proportionally width height PPTX |
-| [Set-activex-control-dimensions-width-height-PPTX](./Set-activex-control-dimensions-width-height-PPTX.cs) |  | Set activex control dimensions width height PPTX |
-| [Set-activex-control-property-runtime-PPTX](./Set-activex-control-property-runtime-PPTX.cs) |  | Set activex control property runtime PPTX |
-| [Set-animation-effect-duration-in-seconds-PPTX](./Set-animation-effect-duration-in-seconds-PPTX.cs) |  | Set animation effect duration in seconds PPTX |
-| [Set-connector-type-to-straight-or-curve](./Set-connector-type-to-straight-or-curve.cs) |  | Set connector type to straight or curve |
-| [Set-custom-shape-fill-color-PPTX](./Set-custom-shape-fill-color-PPTX.cs) |  | Set custom shape fill color PPTX |
-| [Set-ellipse-dimensions-width-height-PPTX](./Set-ellipse-dimensions-width-height-PPTX.cs) |  | Set ellipse dimensions width height PPTX |
-| [Set-font-size-of-text-portion-PPTX](./Set-font-size-of-text-portion-PPTX.cs) |  | Set font size of text portion PPTX |
-| [Set-line-color-value-PPTX](./Set-line-color-value-PPTX.cs) |  | Set line color value PPTX |
-| [Set-line-end-coordinate-PPTX](./Set-line-end-coordinate-PPTX.cs) |  | Set line end coordinate PPTX |
-| [Set-line-start-coordinate-PPTX](./Set-line-start-coordinate-PPTX.cs) |  | Set line start coordinate PPTX |
-| [Set-paragraph-alignment-to-center-PPTX](./Set-paragraph-alignment-to-center-PPTX.cs) |  | Set paragraph alignment to center PPTX |
-| [Set-paragraph-indentation-programmatically-PPTX](./Set-paragraph-indentation-programmatically-PPTX.cs) |  | Set paragraph indentation programmatically PPTX |
-| [Set-paragraph-text-content-PPTX](./Set-paragraph-text-content-PPTX.cs) |  | Set paragraph text content PPTX |
-| [Set-rectangle-dimensions-width-height-PPTX](./Set-rectangle-dimensions-width-height-PPTX.cs) |  | Set rectangle dimensions width height PPTX |
-| [Set-rectangle-fill-color-PPTX](./Set-rectangle-fill-color-PPTX.cs) |  | Set rectangle fill color PPTX |
-| [Set-rectangle-position-coordinates-PPTX](./Set-rectangle-position-coordinates-PPTX.cs) |  | Set rectangle position coordinates PPTX |
-| [Set-rectangle-stroke-style-PPTX](./Set-rectangle-stroke-style-PPTX.cs) |  | Set rectangle stroke style PPTX |
-| [Set-shape-fill-rgb-or-theme-PPTX](./Set-shape-fill-rgb-or-theme-PPTX.cs) |  | Set shape fill rgb or theme PPTX |
-| [Set-shape-fill-solid-color-PPTX](./Set-shape-fill-solid-color-PPTX.cs) |  | Set shape fill solid color PPTX |
-| [Set-shape-fill-type-solid-PPTX](./Set-shape-fill-type-solid-PPTX.cs) |  | Set shape fill type solid PPTX |
-| [Set-shape-flip-horizontal-PPTX](./Set-shape-flip-horizontal-PPTX.cs) |  | Set shape flip horizontal PPTX |
-| [Set-shape-height-to-200-PPTX](./Set-shape-height-to-200-PPTX.cs) |  | Set shape height to 200 PPTX |
-| [Set-shape-outline-dash-pattern-PPTX](./Set-shape-outline-dash-pattern-PPTX.cs) |  | Set shape outline dash pattern PPTX |
-| [Set-shape-position-coordinates-PPTX](./Set-shape-position-coordinates-PPTX.cs) |  | Set shape position coordinates PPTX |
-| [Set-shape-rotation-to-45-degrees-PPTX](./Set-shape-rotation-to-45-degrees-PPTX.cs) |  | Set shape rotation to 45 degrees PPTX |
-| [Set-stroke-thickness-value-PPTX](./Set-stroke-thickness-value-PPTX.cs) |  | Set stroke thickness value PPTX |
-| [Set-text-property-of-shape-PPTX](./Set-text-property-of-shape-PPTX.cs) |  | Set text property of shape PPTX |
-| [Style-connector-line-format-in-PPTX](./Style-connector-line-format-in-PPTX.cs) |  | Style connector line format in PPTX |
-| [Transform-shape-translate-rotate-scale-duplicate-PPTX](./Transform-shape-translate-rotate-scale-duplicate-PPTX.cs) |  | Transform shape translate rotate scale duplicate PPTX |
+| [Add-3d-bevel-to-textbox-adjust-depth](./Add-3d-bevel-to-textbox-adjust-depth.cs) |  | Add 3d bevel to textbox adjust depth |
+| [Add-3d-perspective-camera-toplight-cube](./Add-3d-perspective-camera-toplight-cube.cs) |  | Add 3d perspective camera toplight cube |
+| [Add-arrow-line-to-slide-two-customize](./Add-arrow-line-to-slide-two-customize.cs) |  | Add arrow line to slide two customize |
+| [Add-bitmap-pattern-fill-to-diagram-shape](./Add-bitmap-pattern-fill-to-diagram-shape.cs) |  | Add bitmap pattern fill to diagram shape |
+| [Add-connector-between-each-shape-and-title](./Add-connector-between-each-shape-and-title.cs) |  | Add connector between each shape and title |
+| [Add-connector-between-every-shape-pair](./Add-connector-between-every-shape-pair.cs) |  | Add connector between every shape pair |
+| [Add-connector-custom-start-dot-end-verify](./Add-connector-custom-start-dot-end-verify.cs) |  | Add connector custom start dot end verify |
+| [Add-connector-dash-dot-dot-verify](./Add-connector-dash-dot-dot-verify.cs) |  | Add connector dash dot dot verify |
+| [Add-connector-enable-adjustments-set-half-save](./Add-connector-enable-adjustments-set-half-save.cs) |  | Add connector enable adjustments set half save |
+| [Add-connector-enable-handles-modify-both-verify](./Add-connector-enable-handles-modify-both-verify.cs) |  | Add connector enable handles modify both verify |
+| [Add-connector-sequentially-between-each-shape](./Add-connector-sequentially-between-each-shape.cs) |  | Add connector sequentially between each shape |
+| [Add-connector-start-dot-second-disable-reroute](./Add-connector-start-dot-second-disable-reroute.cs) |  | Add connector start dot second disable reroute |
+| [Add-connector-to-each-slide-first-two](./Add-connector-to-each-slide-first-two.cs) |  | Add connector to each slide first two |
+| [Add-curved-connector-angle-to-variable](./Add-curved-connector-angle-to-variable.cs) |  | Add curved connector angle to variable |
+| [Add-curved-connector-end-dot-fifth-site](./Add-curved-connector-end-dot-fifth-site.cs) |  | Add curved connector end dot fifth site |
+| [Add-curved-connector-linewidth-three-verify](./Add-curved-connector-linewidth-three-verify.cs) |  | Add curved connector linewidth three verify |
+| [Add-curved-connector-reroute-and-move-shapes](./Add-curved-connector-reroute-and-move-shapes.cs) |  | Add curved connector reroute and move shapes |
+| [Add-curved-connector-start-dot-third-angle](./Add-curved-connector-start-dot-third-angle.cs) |  | Add curved connector start dot third angle |
+| [Add-custom-shape-picture-fill-to-PPTX](./Add-custom-shape-picture-fill-to-PPTX.cs) |  | Add custom shape picture fill to PPTX |
+| [Add-diagonal-gradient-to-rectangle-verify](./Add-diagonal-gradient-to-rectangle-verify.cs) |  | Add diagonal gradient to rectangle verify |
+| [Add-diagonal-stripe-fill-to-textbox](./Add-diagonal-stripe-fill-to-textbox.cs) |  | Add diagonal stripe fill to textbox |
+| [Add-elbow-connector-start-dot-third-lock](./Add-elbow-connector-start-dot-third-lock.cs) |  | Add elbow connector start dot third lock |
+| [Add-elbow-connector-start-end-reroute](./Add-elbow-connector-start-end-reroute.cs) |  | Add elbow connector start end reroute |
+| [Add-ellipse-3d-bevel-export-PDF](./Add-ellipse-3d-bevel-export-PDF.cs) |  | Add ellipse 3d bevel export PDF |
+| [Add-ellipse-circle-pattern-fill-to-JPEG](./Add-ellipse-circle-pattern-fill-to-JPEG.cs) |  | Add ellipse circle pattern fill to JPEG |
+| [Add-ellipse-default-black-line](./Add-ellipse-default-black-line.cs) |  | Add ellipse default black line |
+| [Add-ellipse-fade-in-animation-click-trigger](./Add-ellipse-fade-in-animation-click-trigger.cs) |  | Add ellipse fade in animation click trigger |
+| [Add-ellipse-line-cap-square-verify-render](./Add-ellipse-line-cap-square-verify-render.cs) |  | Add ellipse line cap square verify render |
+| [Add-ellipse-linewidth-one-soft-edge-five](./Add-ellipse-linewidth-one-soft-edge-five.cs) |  | Add ellipse linewidth one soft edge five |
+| [Add-ellipse-pattern-fill-and-verify-PPTX](./Add-ellipse-pattern-fill-and-verify-PPTX.cs) |  | Add ellipse pattern fill and verify PPTX |
+| [Add-ellipse-picture-fill-from-URL-PPTX](./Add-ellipse-picture-fill-from-URL-PPTX.cs) |  | Add ellipse picture fill from URL PPTX |
+| [Add-ellipse-radial-gradient-background](./Add-ellipse-radial-gradient-background.cs) |  | Add ellipse radial gradient background |
+| [Add-ellipse-radial-gradient-three-colors-90deg](./Add-ellipse-radial-gradient-three-colors-90deg.cs) |  | Add ellipse radial gradient three colors 90deg |
+| [Add-ellipse-rotate-30-degrees-shadow-SVG](./Add-ellipse-rotate-30-degrees-shadow-SVG.cs) |  | Add ellipse rotate 30 degrees shadow SVG |
+| [Add-ellipse-rotate-45-degrees-export-PNG](./Add-ellipse-rotate-45-degrees-export-PNG.cs) |  | Add ellipse rotate 45 degrees export PNG |
+| [Add-ellipse-rotate-y-axis-export-EMF](./Add-ellipse-rotate-y-axis-export-EMF.cs) |  | Add ellipse rotate y axis export EMF |
+| [Add-ellipse-round-cap-glow-TIFF](./Add-ellipse-round-cap-glow-TIFF.cs) |  | Add ellipse round cap glow TIFF |
+| [Add-ellipse-soft-edge-ten-points-save](./Add-ellipse-soft-edge-ten-points-save.cs) |  | Add ellipse soft edge ten points save |
+| [Add-ellipse-to-each-slide-set-alttext](./Add-ellipse-to-each-slide-set-alttext.cs) |  | Add ellipse to each slide set alttext |
+| [Add-gradient-shape-at-coordinates-to-PPTX](./Add-gradient-shape-at-coordinates-to-PPTX.cs) |  | Add gradient shape at coordinates to PPTX |
+| [Add-group-shape-connector-lock-verify](./Add-group-shape-connector-lock-verify.cs) |  | Add group shape connector lock verify |
+| [Add-group-shape-custom-geometry-rotate-angle](./Add-group-shape-custom-geometry-rotate-angle.cs) |  | Add group shape custom geometry rotate angle |
+| [Add-group-shape-ellipse-rectangle-rotate-angle](./Add-group-shape-ellipse-rectangle-rotate-angle.cs) |  | Add group shape ellipse rectangle rotate angle |
+| [Add-group-shape-lock-editing-catch-exception](./Add-group-shape-lock-editing-catch-exception.cs) |  | Add group shape lock editing catch exception |
+| [Add-group-shape-lock-move-verify](./Add-group-shape-lock-move-verify.cs) |  | Add group shape lock move verify |
+| [Add-group-shape-lock-position-catch-exception](./Add-group-shape-lock-position-catch-exception.cs) |  | Add group shape lock position catch exception |
+| [Add-group-shape-lock-resize-allow](./Add-group-shape-lock-resize-allow.cs) |  | Add group shape lock resize allow |
+| [Add-group-shape-lock-ungrouping-move-edit](./Add-group-shape-lock-ungrouping-move-edit.cs) |  | Add group shape lock ungrouping move edit |
+| [Add-group-shape-mixed-types-with-alttext](./Add-group-shape-mixed-types-with-alttext.cs) |  | Add group shape mixed types with alttext |
+| [Add-group-shape-rectangle-ellipse-shadow-five](./Add-group-shape-rectangle-ellipse-shadow-five.cs) |  | Add group shape rectangle ellipse shadow five |
+| [Add-group-shape-rectangle-orange-fill-lock](./Add-group-shape-rectangle-orange-fill-lock.cs) |  | Add group shape rectangle orange fill lock |
+| [Add-group-shape-three-ellipses-lock](./Add-group-shape-three-ellipses-lock.cs) |  | Add group shape three ellipses lock |
+| [Add-line-join-bevel-verify-appearance](./Add-line-join-bevel-verify-appearance.cs) |  | Add line join bevel verify appearance |
+| [Add-line-join-miter-verify-miter-limit](./Add-line-join-miter-verify-miter-limit.cs) |  | Add line join miter verify miter limit |
+| [Add-line-join-round-verify-appearance](./Add-line-join-round-verify-appearance.cs) |  | Add line join round verify appearance |
+| [Add-line-shape-begin-none-end-diamond](./Add-line-shape-begin-none-end-diamond.cs) |  | Add line shape begin none end diamond |
+| [Add-line-shape-begin-open-end-none](./Add-line-shape-begin-open-end-none.cs) |  | Add line shape begin open end none |
+| [Add-line-shape-begin-triangle-end-open](./Add-line-shape-begin-triangle-end-open.cs) |  | Add line shape begin triangle end open |
+| [Add-line-shape-cap-both-ends](./Add-line-shape-cap-both-ends.cs) |  | Add line shape cap both ends |
+| [Add-line-shape-cap-round-verify-appearance](./Add-line-shape-cap-round-verify-appearance.cs) |  | Add line shape cap round verify appearance |
+| [Add-line-shape-color-theme-verify](./Add-line-shape-color-theme-verify.cs) |  | Add line shape color theme verify |
+| [Add-line-shape-color-transparent-verify](./Add-line-shape-color-transparent-verify.cs) |  | Add line shape color transparent verify |
+| [Add-line-shape-custom-dash-array](./Add-line-shape-custom-dash-array.cs) |  | Add line shape custom dash array |
+| [Add-line-shape-custom-dash-sequence-verify](./Add-line-shape-custom-dash-sequence-verify.cs) |  | Add line shape custom dash sequence verify |
+| [Add-line-shape-dash-color-per-slide](./Add-line-shape-dash-color-per-slide.cs) |  | Add line shape dash color per slide |
+| [Add-line-shape-dash-dot-dot-viewer](./Add-line-shape-dash-dot-dot-viewer.cs) |  | Add line shape dash dot dot viewer |
+| [Add-line-shape-email-hyperlink-verify](./Add-line-shape-email-hyperlink-verify.cs) |  | Add line shape email hyperlink verify |
+| [Add-line-shape-hyperlink-to-slide-three](./Add-line-shape-hyperlink-to-slide-three.cs) |  | Add line shape hyperlink to slide three |
+| [Add-line-shape-long-dash-verify-appearance](./Add-line-shape-long-dash-verify-appearance.cs) |  | Add line shape long dash verify appearance |
+| [Add-line-shape-weight-four-bold](./Add-line-shape-weight-four-bold.cs) |  | Add line shape weight four bold |
+| [Add-line-shape-weight-point5-pdf](./Add-line-shape-weight-point5-pdf.cs) |  | Add line shape weight point5 pdf |
+| [Add-line-shape-weight-three-view](./Add-line-shape-weight-three-view.cs) |  | Add line shape weight three view |
+| [Add-outer-shadow-and-glow-to-rectangle](./Add-outer-shadow-and-glow-to-rectangle.cs) |  | Add outer shadow and glow to rectangle |
+| [Add-outer-shadow-four-point-blur-45-degree](./Add-outer-shadow-four-point-blur-45-degree.cs) |  | Add outer shadow four point blur 45 degree |
+| [Add-plain-line-shape-to-first-slide](./Add-plain-line-shape-to-first-slide.cs) |  | Add plain line shape to first slide |
+| [Add-polygon-bevel-top-five-bottom-three](./Add-polygon-bevel-top-five-bottom-three.cs) |  | Add polygon bevel top five bottom three |
+| [Add-rectangle-gradient-fill-effective-readback](./Add-rectangle-gradient-fill-effective-readback.cs) |  | Add rectangle gradient fill effective readback |
+| [Add-rectangle-hyperlink-to-PDF](./Add-rectangle-hyperlink-to-PDF.cs) |  | Add rectangle hyperlink to PDF |
+| [Add-rectangle-hyperlink-to-website-verify](./Add-rectangle-hyperlink-to-website-verify.cs) |  | Add rectangle hyperlink to website verify |
+| [Add-rectangle-linewidth-point75-verify](./Add-rectangle-linewidth-point75-verify.cs) |  | Add rectangle linewidth point75 verify |
+| [Add-rectangle-picture-fill-and-crop](./Add-rectangle-picture-fill-and-crop.cs) |  | Add rectangle picture fill and crop |
+| [Add-rectangle-picture-fill-from-collection](./Add-rectangle-picture-fill-from-collection.cs) |  | Add rectangle picture fill from collection |
+| [Add-rectangle-picture-fill-from-memory-tiling](./Add-rectangle-picture-fill-from-memory-tiling.cs) |  | Add rectangle picture fill from memory tiling |
+| [Add-rectangle-picture-fill-JPEG-30-percent](./Add-rectangle-picture-fill-JPEG-30-percent.cs) |  | Add rectangle picture fill JPEG 30 percent |
+| [Add-rectangle-picture-fill-with-svg](./Add-rectangle-picture-fill-with-svg.cs) |  | Add rectangle picture fill with svg |
+| [Add-rectangle-solid-fill-with-pattern-overlay](./Add-rectangle-solid-fill-with-pattern-overlay.cs) |  | Add rectangle solid fill with pattern overlay |
+| [Add-retry-mechanism-to-thumbnail-generation](./Add-retry-mechanism-to-thumbnail-generation.cs) |  | Add retry mechanism to thumbnail generation |
+| [Add-rounded-rectangle-increase-corner-radius](./Add-rounded-rectangle-increase-corner-radius.cs) |  | Add rounded rectangle increase corner radius |
+| [Add-rounded-rectangle-picture-fill-external](./Add-rounded-rectangle-picture-fill-external.cs) |  | Add rounded rectangle picture fill external |
+| [Add-rounded-rectangle-slide-three-solid-fill](./Add-rounded-rectangle-slide-three-solid-fill.cs) |  | Add rounded rectangle slide three solid fill |
+| [Add-soft-edges-six-point-chart-three](./Add-soft-edges-six-point-chart-three.cs) |  | Add soft edges six point chart three |
+| [Add-star-gradient-fill-blue-green-yellow](./Add-star-gradient-fill-blue-green-yellow.cs) |  | Add star gradient fill blue green yellow |
+| [Add-straight-connector-color-from-fill-PPTX](./Add-straight-connector-color-from-fill-PPTX.cs) |  | Add straight connector color from fill PPTX |
+| [Add-straight-connector-linewidth-five-gradient-PPTX](./Add-straight-connector-linewidth-five-gradient-PPTX.cs) |  | Add straight connector linewidth five gradient PPTX |
+| [Add-straight-connector-long-dash-dot-PPTX](./Add-straight-connector-long-dash-dot-PPTX.cs) |  | Add straight connector long dash dot PPTX |
+| [Add-straight-connector-to-first-dot-stability](./Add-straight-connector-to-first-dot-stability.cs) |  | Add straight connector to first dot stability |
+| [Add-straight-connector-to-PPTX-and-save](./Add-straight-connector-to-PPTX-and-save.cs) |  | Add straight connector to PPTX and save |
+| [Apply-group-shape-shadow-reflection-soft-edges](./Apply-group-shape-shadow-reflection-soft-edges.cs) |  | Apply group shape shadow reflection soft edges |
+| [Apply-uniform-glow-to-all-shapes](./Apply-uniform-glow-to-all-shapes.cs) |  | Apply uniform glow to all shapes |
+| [Assign-email-hyperlink-to-rectangle](./Assign-email-hyperlink-to-rectangle.cs) |  | Assign email hyperlink to rectangle |
+| [Assign-slide-five-hyperlink-to-rectangle](./Assign-slide-five-hyperlink-to-rectangle.cs) |  | Assign slide five hyperlink to rectangle |
+| [Batch-extract-shape-thumbnails-to-zip](./Batch-extract-shape-thumbnails-to-zip.cs) |  | Batch extract shape thumbnails to zip |
+| [Batch-remove-line-shapes-below-one-point](./Batch-remove-line-shapes-below-one-point.cs) |  | Batch remove line shapes below one point |
+| [Batch-replace-rectangle-fills-with-solid-blue](./Batch-replace-rectangle-fills-with-solid-blue.cs) |  | Batch replace rectangle fills with solid blue |
+| [Batch-update-linewidths-preserve-dash-styles](./Batch-update-linewidths-preserve-dash-styles.cs) |  | Batch update linewidths preserve dash styles |
+| [Cache-thumbnail-in-memory-for-repeated-shape](./Cache-thumbnail-in-memory-for-repeated-shape.cs) |  | Cache thumbnail in memory for repeated shape |
+| [Change-ellipse-fill-color-dash-in-PPTX](./Change-ellipse-fill-color-dash-in-PPTX.cs) |  | Change ellipse fill color dash in PPTX |
+| [Clone-shape-gradient-fill-to-next-slide](./Clone-shape-gradient-fill-to-next-slide.cs) |  | Clone shape gradient fill to next slide |
+| [Compare-default-and-custom-scaled-thumbnails](./Compare-default-and-custom-scaled-thumbnails.cs) |  | Compare default and custom scaled thumbnails |
+| [Configure-picture-reflection-two-point-distance-thirty-percent](./Configure-picture-reflection-two-point-distance-thirty-percent.cs) |  | Configure picture reflection two point distance thirty percent |
+| [Configure-thumbnail-ignore-hidden-shapes](./Configure-thumbnail-ignore-hidden-shapes.cs) |  | Configure thumbnail ignore hidden shapes |
+| [Convert-custom-shapes-to-ellipse-preserve-size](./Convert-custom-shapes-to-ellipse-preserve-size.cs) |  | Convert custom shapes to ellipse preserve size |
+| [Create-bounds-thumbnail-with-shadow-memory-stream](./Create-bounds-thumbnail-with-shadow-memory-stream.cs) |  | Create bounds thumbnail with shadow memory stream |
+| [Create-chart-shape-thumbnails-scale-0-8](./Create-chart-shape-thumbnails-scale-0-8.cs) |  | Create chart shape thumbnails scale 0 8 |
+| [Create-thumbnail-from-presentation-shape-index](./Create-thumbnail-from-presentation-shape-index.cs) |  | Create thumbnail from presentation shape index |
+| [Create-thumbnail-from-shape-ID-scale](./Create-thumbnail-from-shape-ID-scale.cs) |  | Create thumbnail from shape ID scale |
+| [Detect-inherited-line-format-and-replace-color](./Detect-inherited-line-format-and-replace-color.cs) |  | Detect inherited line format and replace color |
+| [Disable-connector-adjustment-handles-and-verify](./Disable-connector-adjustment-handles-and-verify.cs) |  | Disable connector adjustment handles and verify |
+| [Duplicate-ellipses-offset-twenty-points-and-save](./Duplicate-ellipses-offset-twenty-points-and-save.cs) |  | Duplicate ellipses offset twenty points and save |
+| [Duplicate-group-shape-fill-light-blue-move](./Duplicate-group-shape-fill-light-blue-move.cs) |  | Duplicate group shape fill light blue move |
+| [Export-group-alttext-to-CSV-from-PPTX](./Export-group-alttext-to-CSV-from-PPTX.cs) |  | Export group alttext to CSV from PPTX |
+| [Export-shape-fill-and-line-to-JSON](./Export-shape-fill-and-line-to-JSON.cs) |  | Export shape fill and line to JSON |
+| [Export-shape-thumbnails-to-BMP-legacy](./Export-shape-thumbnails-to-BMP-legacy.cs) |  | Export shape thumbnails to BMP legacy |
+| [Export-shape-thumbnails-to-JPEG-auto](./Export-shape-thumbnails-to-JPEG-auto.cs) |  | Export shape thumbnails to JPEG auto |
+| [Extract-all-shape-thumbnails-from-PPTX-directory](./Extract-all-shape-thumbnails-from-PPTX-directory.cs) |  | Extract all shape thumbnails from PPTX directory |
+| [Extract-grouped-shape-thumbnails-to-image](./Extract-grouped-shape-thumbnails-to-image.cs) |  | Extract grouped shape thumbnails to image |
+| [Generate-high-resolution-thumbnail-scale-three](./Generate-high-resolution-thumbnail-scale-three.cs) |  | Generate high resolution thumbnail scale three |
+| [Generate-thumbnail-base64-for-HTML](./Generate-thumbnail-base64-for-HTML.cs) |  | Generate thumbnail base64 for HTML |
+| [Get-connector-linewidth-after-custom-layout](./Get-connector-linewidth-after-custom-layout.cs) |  | Get connector linewidth after custom layout |
+| [Get-curved-connector-angle-after-move](./Get-curved-connector-angle-after-move.cs) |  | Get curved connector angle after move |
+| [Get-line-color-effective-after-custom-scheme](./Get-line-color-effective-after-custom-scheme.cs) |  | Get line color effective after custom scheme |
+| [Get-line-dash-effective-data-after-theme](./Get-line-dash-effective-data-after-theme.cs) |  | Get line dash effective data after theme |
+| [Get-line-format-effective-data-after-theme](./Get-line-format-effective-data-after-theme.cs) |  | Get line format effective data after theme |
+| [Get-thumbnail-of-shape-rectangle](./Get-thumbnail-of-shape-rectangle.cs) |  | Get thumbnail of shape rectangle |
+| [Get-thumbnail-with-custom-rectangle-crop](./Get-thumbnail-with-custom-rectangle-crop.cs) |  | Get thumbnail with custom rectangle crop |
+| [Group-three-auto-shapes-set-alttext-lock](./Group-three-auto-shapes-set-alttext-lock.cs) |  | Group three auto shapes set alttext lock |
+| [Handle-missing-shape-ID-thumbnail-error](./Handle-missing-shape-ID-thumbnail-error.cs) |  | Handle missing shape ID thumbnail error |
+| [Insert-ellipse-long-dash-to-PPTX](./Insert-ellipse-long-dash-to-PPTX.cs) |  | Insert ellipse long dash to PPTX |
+| [Insert-ellipse-with-custom-fill-to-PPTX](./Insert-ellipse-with-custom-fill-to-PPTX.cs) |  | Insert ellipse with custom fill to PPTX |
+| [Iterate-shapes-on-third-slide-thumbnail](./Iterate-shapes-on-third-slide-thumbnail.cs) |  | Iterate shapes on third slide thumbnail |
+| [Load-PPTX-change-ellipse-line-color](./Load-PPTX-change-ellipse-line-color.cs) |  | Load PPTX change ellipse line color |
+| [Load-PPTX-duplicate-connectors-offset-fifteen-points](./Load-PPTX-duplicate-connectors-offset-fifteen-points.cs) |  | Load PPTX duplicate connectors offset fifteen points |
+| [Load-PPTX-duplicate-group-shape-move](./Load-PPTX-duplicate-group-shape-move.cs) |  | Load PPTX duplicate group shape move |
+| [Load-PPTX-from-bytearray-save-thumbnail](./Load-PPTX-from-bytearray-save-thumbnail.cs) |  | Load PPTX from bytearray save thumbnail |
+| [Load-PPTX-replace-placeholder-image-and-thumbnail](./Load-PPTX-replace-placeholder-image-and-thumbnail.cs) |  | Load PPTX replace placeholder image and thumbnail |
+| [Load-PPTX-select-rectangle-solid-red-fill](./Load-PPTX-select-rectangle-solid-red-fill.cs) |  | Load PPTX select rectangle solid red fill |
+| [Load-PPTX-shape-by-id-generate-thumbnail](./Load-PPTX-shape-by-id-generate-thumbnail.cs) |  | Load PPTX shape by id generate thumbnail |
+| [Lock-connector-line-format-prevent-color-change](./Lock-connector-line-format-prevent-color-change.cs) |  | Lock connector line format prevent color change |
+| [Log-average-connector-angle-to-console](./Log-average-connector-angle-to-console.cs) |  | Log average connector angle to console |
+| [Log-connector-adjustment-points-from-PPTX](./Log-connector-adjustment-points-from-PPTX.cs) |  | Log connector adjustment points from PPTX |
+| [Log-group-shape-alttext-to-console](./Log-group-shape-alttext-to-console.cs) |  | Log group shape alttext to console |
+| [Log-group-shape-member-count-over-five](./Log-group-shape-member-count-over-five.cs) |  | Log group shape member count over five |
+| [Log-line-fill-gradient-effective-data](./Log-line-fill-gradient-effective-data.cs) |  | Log line fill gradient effective data |
+| [Log-line-gradient-stops-effective-data](./Log-line-gradient-stops-effective-data.cs) |  | Log line gradient stops effective data |
+| [Log-shape-fill-type-and-line-color](./Log-shape-fill-type-and-line-color.cs) |  | Log shape fill type and line color |
+| [Log-thumbnail-generation-start-and-end](./Log-thumbnail-generation-start-and-end.cs) |  | Log thumbnail generation start and end |
+| [Log-thumbnail-with-shape-ID-timestamp](./Log-thumbnail-with-shape-ID-timestamp.cs) |  | Log thumbnail with shape ID timestamp |
+| [Measure-thumbnail-performance-with-and-without-effects](./Measure-thumbnail-performance-with-and-without-effects.cs) |  | Measure thumbnail performance with and without effects |
+| [Replace-connector-colors-with-theme-in-PPTX](./Replace-connector-colors-with-theme-in-PPTX.cs) |  | Replace connector colors with theme in PPTX |
+| [Replace-ellipse-fills-with-red-in-PPTX](./Replace-ellipse-fills-with-red-in-PPTX.cs) |  | Replace ellipse fills with red in PPTX |
+| [Replace-group-alttext-with-id-PPTX](./Replace-group-alttext-with-id-PPTX.cs) |  | Replace group alttext with id PPTX |
+| [Replace-rectangle-fills-with-gray-gradient](./Replace-rectangle-fills-with-gray-gradient.cs) |  | Replace rectangle fills with gray gradient |
+| [Replace-rectangle-fills-with-solid-blue](./Replace-rectangle-fills-with-solid-blue.cs) |  | Replace rectangle fills with solid blue |
+| [Replace-rectangle-picture-fill-preserve-size](./Replace-rectangle-picture-fill-preserve-size.cs) |  | Replace rectangle picture fill preserve size |
+| [Replace-rectangle-solid-orange-title-slide](./Replace-rectangle-solid-orange-title-slide.cs) |  | Replace rectangle solid orange title slide |
+| [Replace-straight-connector-with-curved-preserve-points](./Replace-straight-connector-with-curved-preserve-points.cs) |  | Replace straight connector with curved preserve points |
+| [Report-picture-fill-shapes-with-source](./Report-picture-fill-shapes-with-source.cs) |  | Report picture fill shapes with source |
+| [Reset-shape-formatting-to-default-before-effects](./Reset-shape-formatting-to-default-before-effects.cs) |  | Reset shape formatting to default before effects |
+| [Resize-thumbnails-batch-max-width-200](./Resize-thumbnails-batch-max-width-200.cs) |  | Resize thumbnails batch max width 200 |
+| [Retrieve-connector-adjustment-points-for-PPTX](./Retrieve-connector-adjustment-points-for-PPTX.cs) |  | Retrieve connector adjustment points for PPTX |
+| [Rotate-triangle-45-degrees-verify-bounding-box](./Rotate-triangle-45-degrees-verify-bounding-box.cs) |  | Rotate triangle 45 degrees verify bounding box |
+| [Save-thumbnail-to-UNC-share-handle-permission](./Save-thumbnail-to-UNC-share-handle-permission.cs) |  | Save thumbnail to UNC share handle permission |
+| [Scale-shape-thumbnail-1-5-save-png](./Scale-shape-thumbnail-1-5-save-png.cs) |  | Scale shape thumbnail 1 5 save png |
+| [Set-callout-glow-eight-point-orange](./Set-callout-glow-eight-point-orange.cs) |  | Set callout glow eight point orange |
+| [Set-connector-dash-and-adjust-first-point](./Set-connector-dash-and-adjust-first-point.cs) |  | Set connector dash and adjust first point |
+| [Set-connector-dash-dot-verify](./Set-connector-dash-dot-verify.cs) |  | Set connector dash dot verify |
+| [Set-connector-dash-to-dot-in-PPTX](./Set-connector-dash-to-dot-in-PPTX.cs) |  | Set connector dash to dot in PPTX |
+| [Set-connector-line-join-round](./Set-connector-line-join-round.cs) |  | Set connector line join round |
+| [Set-ellipse-fill-opacity-to-50-percent](./Set-ellipse-fill-opacity-to-50-percent.cs) |  | Set ellipse fill opacity to 50 percent |
+| [Set-ellipse-linewidth-two-points-dashdot-style](./Set-ellipse-linewidth-two-points-dashdot-style.cs) |  | Set ellipse linewidth two points dashdot style |
+| [Set-ellipse-linewidth-two-points](./Set-ellipse-linewidth-two-points.cs) |  | Set ellipse linewidth two points |
+| [Set-group-shape-header-fill-gray](./Set-group-shape-header-fill-gray.cs) |  | Set group shape header fill gray |
+| [Set-line-begin-arrow-short-end-long](./Set-line-begin-arrow-short-end-long.cs) |  | Set line begin arrow short end long |
+| [Set-line-color-green-verify-effective](./Set-line-color-green-verify-effective.cs) |  | Set line color green verify effective |
+| [Set-line-fill-opacity-to-70-verify](./Set-line-fill-opacity-to-70-verify.cs) |  | Set line fill opacity to 70 verify |
+| [Set-line-join-type-round-polyline](./Set-line-join-type-round-polyline.cs) |  | Set line join type round polyline |
+| [Set-master-slide-line-dash-dot-pattern](./Set-master-slide-line-dash-dot-pattern.cs) |  | Set master slide line dash dot pattern |
+| [Set-orthographic-camera-slide-five-shapes](./Set-orthographic-camera-slide-five-shapes.cs) |  | Set orthographic camera slide five shapes |
+| [Set-rectangle-dash-dot-dot-verify](./Set-rectangle-dash-dot-dot-verify.cs) |  | Set rectangle dash dot dot verify |
+| [Set-rectangle-line-dash-solid-then-dashdot](./Set-rectangle-line-dash-solid-then-dashdot.cs) |  | Set rectangle line dash solid then dashdot |
+| [Set-rectangle-linewidth-two-points-readback](./Set-rectangle-linewidth-two-points-readback.cs) |  | Set rectangle linewidth two points readback |
+| [Set-rectangle-picture-fill-uniform-verify](./Set-rectangle-picture-fill-uniform-verify.cs) |  | Set rectangle picture fill uniform verify |
+| [Set-rectangle-solid-red-fill-verify](./Set-rectangle-solid-red-fill-verify.cs) |  | Set rectangle solid red fill verify |
+| [Set-shape-fill-transparency-to-75-percent](./Set-shape-fill-transparency-to-75-percent.cs) |  | Set shape fill transparency to 75 percent |
+| [Set-shape-transparency-second-slide-forty-percent](./Set-shape-transparency-second-slide-forty-percent.cs) |  | Set shape transparency second slide forty percent |
+| [Set-straight-connector-second-point-bend](./Set-straight-connector-second-point-bend.cs) |  | Set straight connector second point bend |
+| [Trigger-activex-thumbnail-generation-from-com](./Trigger-activex-thumbnail-generation-from-com.cs) |  | Trigger activex thumbnail generation from com |
+| [Unlock-locked-group-shapes-in-PPTX](./Unlock-locked-group-shapes-in-PPTX.cs) |  | Unlock locked group shapes in PPTX |
+| [Update-shadow-blur-radius-on-shape](./Update-shadow-blur-radius-on-shape.cs) |  | Update shadow blur radius on shape |
+| [Validate-all-shapes-linewidth-positive-before-save](./Validate-all-shapes-linewidth-positive-before-save.cs) |  | Validate all shapes linewidth positive before save |
+| [Validate-bounds-thumbnail-animations-include](./Validate-bounds-thumbnail-animations-include.cs) |  | Validate bounds thumbnail animations include |
+| [Validate-connector-attachment-after-shape-move](./Validate-connector-attachment-after-shape-move.cs) |  | Validate connector attachment after shape move |
+| [Validate-thumbnail-bounds-do-not-exceed-slide](./Validate-thumbnail-bounds-do-not-exceed-slide.cs) |  | Validate thumbnail bounds do not exceed slide |
+| [Verify-thumbnail-dimensions-for-scaling-inputs](./Verify-thumbnail-dimensions-for-scaling-inputs.cs) |  | Verify thumbnail dimensions for scaling inputs |
+| [Wrap-getthumbnail-call-in-try-catch](./Wrap-getthumbnail-call-in-try-catch.cs) |  | Wrap getthumbnail call in try catch |
 
 ## Category Statistics
 
-- Total examples: 162
+- Total examples: 205
 
 ## Key API Surface
 
@@ -211,15 +260,15 @@ working within the **working-with-shapes** category.
 - `Aspose.Slides.Export.SaveFormat.Pptx`
 - `Aspose.Slides.ISlide`
 - `Aspose.Slides.IAutoShape`
-- `Aspose.Slides.ShapeType.Rectangle`
-- `Aspose.Slides.FillType.Solid`
 - `Aspose.Slides.IShape`
+- `Aspose.Slides.ShapeType.Rectangle`
 - `Aspose.Slides.ShapeType.Ellipse`
-- `Aspose.Slides.IParagraph`
-- `Aspose.Slides.Portion`
-- `Aspose.Slides.Animation.EffectTriggerType.AfterPrevious`
-- `Aspose.Slides.Util`
-- `Aspose.Slides.IPortion`
+- `Aspose.Slides.FillType.Solid`
+- `Aspose.Slides.ImageFormat.Png`
+- `Aspose.Slides.IImage`
+- `Aspose.Slides.IConnector`
+- `Aspose.Slides.IGroupShape`
+- `Aspose.Slides.ShapeType.Line`
 
 ## Common Code Pattern
 
@@ -240,5 +289,5 @@ using (Presentation pres = new Presentation("input.pptx"))
 - Save the presentation using `Presentation.Save(...)`.
 
 <!-- AUTOGENERATED:START -->
-Updated: 2026-03-20
+Updated: 2026-04-14
 <!-- AUTOGENERATED:END -->
