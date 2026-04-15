@@ -4,50 +4,51 @@ using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        // Input and output file paths
         string inputPath = "input.pptx";
         string outputPath = "output.pptx";
 
-        // Verify that the input file exists
         if (!File.Exists(inputPath))
         {
-            Console.WriteLine("Input file does not exist: " + inputPath);
+            Console.WriteLine("Input file does not exist.");
             return;
         }
 
-        // Load the presentation
-        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
+        Aspose.Slides.Presentation pres = null;
         try
         {
-            // Access the first slide
+            pres = new Aspose.Slides.Presentation(inputPath);
             Aspose.Slides.ISlide slide = pres.Slides[0];
-
-            // Iterate through shapes to find SmartArt objects
             foreach (Aspose.Slides.IShape shape in slide.Shapes)
             {
                 if (shape is Aspose.Slides.SmartArt.ISmartArt)
                 {
-                    Aspose.Slides.SmartArt.ISmartArt smartArt = (Aspose.Slides.SmartArt.ISmartArt)shape;
-
-                    // Iterate through all SmartArt nodes
-                    foreach (Aspose.Slides.SmartArt.ISmartArtNode node in smartArt.AllNodes)
+                    Aspose.Slides.SmartArt.ISmartArt smart = (Aspose.Slides.SmartArt.ISmartArt)shape;
+                    foreach (Aspose.Slides.SmartArt.ISmartArtNode node in smart.AllNodes)
                     {
-                        // Set the IsAssistant flag based on external hierarchy data
-                        // (example logic: set all to false)
-                        node.IsAssistant = false;
+                        // Example hierarchy logic: set assistant flag based on external data
+                        // Here we simply clear the assistant flag for demonstration
+                        if (node.IsAssistant)
+                        {
+                            node.IsAssistant = false;
+                        }
                     }
                 }
             }
-
-            // Save the modified presentation
             pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+        }
+        catch (Exception ex)
+        {
+            // Handle unsupported format or other errors
+            // Format not supported
         }
         finally
         {
-            // Ensure resources are released
-            pres.Dispose();
+            if (pres != null)
+            {
+                pres.Dispose();
+            }
         }
     }
 }

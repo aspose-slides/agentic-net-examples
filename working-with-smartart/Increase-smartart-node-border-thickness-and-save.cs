@@ -1,52 +1,67 @@
 using System;
 using System.IO;
+using Aspose.Slides;
 using Aspose.Slides.Export;
 using Aspose.Slides.SmartArt;
 
-class Program
+namespace SmartArtBorderIncrease
 {
-    static void Main(string[] args)
+    class Program
     {
-        string inputPath = "input.pptx";
-        string outputPath = "output.pptx";
-
-        if (!File.Exists(inputPath))
+        static void Main(string[] args)
         {
-            Console.WriteLine("Input file does not exist: " + inputPath);
-            return;
-        }
+            string inputPath = "input.pptx";
+            string outputPath = "output.pptx";
 
-        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
-        {
-            Aspose.Slides.ISlide slide = presentation.Slides[0];
-            Aspose.Slides.SmartArt.ISmartArt smartArt = null;
-
-            foreach (Aspose.Slides.IShape shape in slide.Shapes)
+            if (!File.Exists(inputPath))
             {
-                smartArt = shape as Aspose.Slides.SmartArt.ISmartArt;
-                if (smartArt != null)
-                {
-                    break;
-                }
+                Console.WriteLine("Input file does not exist.");
+                return;
             }
 
-            if (smartArt != null)
+            try
             {
-                Aspose.Slides.SmartArt.ISmartArtNodeCollection allNodes = smartArt.AllNodes;
-                foreach (Aspose.Slides.SmartArt.ISmartArtNode node in allNodes)
+                using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
                 {
-                    Aspose.Slides.SmartArt.ISmartArtShapeCollection shapes = node.Shapes;
-                    foreach (Aspose.Slides.SmartArt.ISmartArtShape shape in shapes)
+                    // Get the first slide
+                    Aspose.Slides.ISlide slide = presentation.Slides[0];
+
+                    // Locate the first SmartArt shape on the slide
+                    Aspose.Slides.SmartArt.ISmartArt smartArt = null;
+                    foreach (Aspose.Slides.IShape shape in slide.Shapes)
                     {
-                        if (shape.LineFormat != null)
+                        smartArt = shape as Aspose.Slides.SmartArt.SmartArt;
+                        if (smartArt != null)
                         {
-                            shape.LineFormat.Width = shape.LineFormat.Width + 1f;
+                            break;
                         }
                     }
+
+                    if (smartArt != null)
+                    {
+                        // Iterate over all nodes and increase border thickness
+                        foreach (Aspose.Slides.SmartArt.ISmartArtNode node in smartArt.AllNodes)
+                        {
+                            foreach (Aspose.Slides.SmartArt.ISmartArtShape smartShape in node.Shapes)
+                            {
+                                // Increase the line (border) width by 1 point
+                                smartShape.LineFormat.Width = smartShape.LineFormat.Width + 1f;
+                            }
+                        }
+                    }
+
+                    // Save the modified presentation
+                    presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
                 }
             }
-
-            presentation.Save(outputPath, SaveFormat.Pptx);
+            catch (NotSupportedException)
+            {
+                // Format not supported
+            }
+            catch (System.Net.WebException)
+            {
+                // Handle external URL or web service errors
+            }
         }
     }
 }

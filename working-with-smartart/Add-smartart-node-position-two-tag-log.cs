@@ -1,5 +1,4 @@
 using System;
-using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 using Aspose.Slides.SmartArt;
@@ -8,24 +7,31 @@ class Program
 {
     static void Main()
     {
-        string outputDir = "Output";
-        if (!Directory.Exists(outputDir))
-        {
-            Directory.CreateDirectory(outputDir);
-        }
-        string outputPath = Path.Combine(outputDir, "SmartArtNodeExample.pptx");
-
+        // Create a new presentation
         Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+
+        // Access the first slide
         Aspose.Slides.ISlide slide = presentation.Slides[0];
-        Aspose.Slides.SmartArt.ISmartArt smartArt = slide.Shapes.AddSmartArt(50, 50, 600, 400, Aspose.Slides.SmartArt.SmartArtLayoutType.StackedList);
 
-        Aspose.Slides.SmartArt.ISmartArtNode newNode = ((Aspose.Slides.SmartArt.SmartArtNodeCollection)smartArt.Nodes).AddNodeByPosition(2);
-        newNode.TextFrame.Text = "UniqueTag_001";
+        // Add a SmartArt diagram of type StackedList
+        Aspose.Slides.SmartArt.ISmartArt smartArt = slide.Shapes.AddSmartArt(50, 50, 400, 300, Aspose.Slides.SmartArt.SmartArtLayoutType.StackedList);
 
-        Console.WriteLine("Added SmartArt node at position: " + newNode.Position);
-        Console.WriteLine("Node tag: " + newNode.TextFrame.Text);
+        // Get a parent node (first root node)
+        Aspose.Slides.SmartArt.ISmartArtNode parentNode = smartArt.AllNodes[0];
 
-        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+        // Add a child node at position 2 (zero‑based)
+        Aspose.Slides.SmartArt.SmartArtNode childNode = (Aspose.Slides.SmartArt.SmartArtNode)((Aspose.Slides.SmartArt.SmartArtNodeCollection)parentNode.ChildNodes).AddNodeByPosition(2);
+
+        // Assign a unique tag using the text frame
+        childNode.TextFrame.Text = "UniqueTag_001";
+
+        // Log the node's identifier (its position)
+        Console.WriteLine("Added node at position: " + childNode.Position);
+
+        // Save the presentation
+        presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+
+        // Clean up
         presentation.Dispose();
     }
 }

@@ -3,30 +3,29 @@ using Aspose.Slides;
 using Aspose.Slides.Export;
 using Aspose.Slides.SmartArt;
 
-namespace OrganizationChartLayoutDemo
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
+        // Create a new presentation
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+
+        // Access the first slide
+        Aspose.Slides.ISlide slide = presentation.Slides[0];
+
+        // Add a SmartArt diagram with a horizontal organization chart layout
+        Aspose.Slides.SmartArt.ISmartArt smartArt = slide.Shapes.AddSmartArt(50, 50, 400, 400, Aspose.Slides.SmartArt.SmartArtLayoutType.HorizontalOrganizationChart);
+
+        // Change the SmartArt layout to a vertical organization chart
+        smartArt.Layout = Aspose.Slides.SmartArt.SmartArtLayoutType.OrganizationChart;
+
+        // Adjust the layout of the root node to left hanging to observe the layout shift
+        if (smartArt.Nodes.Count > 0)
         {
-            // Create a new presentation
-            Presentation presentation = new Presentation();
-
-            // Get the first slide
-            ISlide slide = presentation.Slides[0];
-
-            // Add an Organization Chart SmartArt diagram (horizontal layout by default)
-            ISmartArt smartArt = slide.Shapes.AddSmartArt(50f, 50f, 400f, 300f, SmartArtLayoutType.OrganizationChart);
-
-            // Change the layout of the root node to a vertical hanging layout (Left Hanging)
-            // This shifts the organization chart from horizontal to vertical
-            smartArt.Nodes[0].OrganizationChartLayout = OrganizationChartLayoutType.LeftHanging;
-
-            // Define output file path
-            string outputPath = "OrganizationChartLayoutShift.pptx";
-
-            // Save the presentation
-            presentation.Save(outputPath, SaveFormat.Pptx);
+            smartArt.Nodes[0].OrganizationChartLayout = Aspose.Slides.SmartArt.OrganizationChartLayoutType.LeftHanging;
         }
+
+        // Save the presentation
+        presentation.Save("OrganizationChartShift.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }

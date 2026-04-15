@@ -1,54 +1,71 @@
 using System;
-using System.IO;
 using System.Drawing;
+using Aspose.Slides;
 using Aspose.Slides.Export;
+using Aspose.Slides.SmartArt;
 
-class Program
+namespace SmartArtRandomFill
 {
-    static void Main()
+    class Program
     {
-        // Output directory
-        string outputDir = "Output";
-        if (!Directory.Exists(outputDir))
+        static void Main()
         {
-            Directory.CreateDirectory(outputDir);
-        }
+            // Create a new presentation
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-        // Create a new presentation
-        using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation())
-        {
             // Get the first slide
             Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-            // Add a SmartArt diagram
-            Aspose.Slides.SmartArt.ISmartArt smartArt = slide.Shapes.AddSmartArt(
-                50, 50, 400, 300,
-                Aspose.Slides.SmartArt.SmartArtLayoutType.BasicBlockList);
+            // Add a SmartArt diagram of type ClosedChevronProcess
+            Aspose.Slides.SmartArt.ISmartArt chevron = slide.Shapes.AddSmartArt(10, 10, 800, 60, Aspose.Slides.SmartArt.SmartArtLayoutType.ClosedChevronProcess);
 
-            // Random color generator
-            Random random = new Random();
+            // Add several nodes with sample text
+            for (int i = 0; i < 5; i++)
+            {
+                Aspose.Slides.SmartArt.ISmartArtNode node = chevron.AllNodes.AddNode();
+                node.TextFrame.Text = "Node " + (i + 1).ToString();
+            }
 
-            // Assign a random fill color to each shape in each node
-            foreach (Aspose.Slides.SmartArt.ISmartArtNode node in smartArt.AllNodes)
+            // Random number generator for colors
+            System.Random random = new System.Random();
+
+            // Assign a random solid fill color to each shape within each node
+            foreach (Aspose.Slides.SmartArt.ISmartArtNode node in chevron.AllNodes)
             {
                 foreach (Aspose.Slides.SmartArt.ISmartArtShape shape in node.Shapes)
                 {
                     shape.FillFormat.FillType = Aspose.Slides.FillType.Solid;
-                    int r = random.Next(256);
-                    int g = random.Next(256);
-                    int b = random.Next(256);
-                    shape.FillFormat.SolidFillColor.Color = Color.FromArgb(r, g, b);
+                    // Generate random RGB values
+                    int r = random.Next(0, 256);
+                    int g = random.Next(0, 256);
+                    int b = random.Next(0, 256);
+                    shape.FillFormat.SolidFillColor.Color = System.Drawing.Color.FromArgb(r, g, b);
                 }
             }
 
-            // Save the presentation (required before exit)
-            string pptxPath = Path.Combine(outputDir, "result.pptx");
-            presentation.Save(pptxPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            // Save the presentation
+            try
+            {
+                presentation.Save("SmartArtRandomFill.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            }
+            catch (NotSupportedException)
+            {
+                // Format not supported
+            }
 
-            // Export the slide as PNG
-            Aspose.Slides.IImage slideImage = slide.GetImage();
-            string pngPath = Path.Combine(outputDir, "slide.png");
-            slideImage.Save(pngPath, Aspose.Slides.ImageFormat.Png);
+            // Export the slide as a high‑resolution PNG (2x scaling)
+            try
+            {
+                Aspose.Slides.IImage slideImage = slide.GetImage(2f, 2f);
+                slideImage.Save("SmartArtRandomFill.png", Aspose.Slides.ImageFormat.Png);
+            }
+            catch (NotSupportedException)
+            {
+                // Image format not supported
+            }
+
+            // Dispose the presentation
+            presentation.Dispose();
         }
     }
 }

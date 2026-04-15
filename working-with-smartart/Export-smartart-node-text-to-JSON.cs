@@ -1,104 +1,99 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
+using System.Collections.Generic;
+using System.Text.Json;
 using Aspose.Slides;
 using Aspose.Slides.Export;
-using System.Text.Json;
+using Aspose.Slides.SmartArt;
 
-namespace SmartArtExport
+class Program
 {
-    class Program
+    static void Main()
     {
-        // Class representing a node for JSON serialization
-        private class NodeInfo
-        {
-            public int Position { get; set; }
-            public string Text { get; set; }
-            public List<NodeInfo> Children { get; set; }
+        string inputPath = "input.pptx";
+        string outputPath = "smartart.json";
 
-            public NodeInfo()
-            {
-                Children = new List<NodeInfo>();
-            }
+        if (!File.Exists(inputPath))
+        {
+            Console.WriteLine("Input file does not exist: " + inputPath);
+            return;
         }
 
-        static void Main(string[] args)
+        try
         {
-            // Input and output file paths
-            string inputPath = "input.pptx";
-            string jsonOutputPath = "smartart.json";
-            string presentationOutputPath = "output.pptx";
-
-            // Verify input file exists
-            if (!File.Exists(inputPath))
+            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
             {
-                Console.WriteLine("Input file not found: " + inputPath);
-                return;
-            }
+                List<NodeInfo> allSmartArtData = new List<NodeInfo>();
 
-            // Load presentation
-            Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
-
-            // List to hold all SmartArt node hierarchies
-            List<NodeInfo> smartArtData = new List<NodeInfo>();
-
-            // Iterate through slides and shapes to find SmartArt objects
-            for (int slideIndex = 0; slideIndex < pres.Slides.Count; slideIndex++)
-            {
-                Aspose.Slides.ISlide slide = pres.Slides[slideIndex];
-                foreach (Aspose.Slides.IShape shape in slide.Shapes)
+                foreach (Aspose.Slides.ISlide slide in presentation.Slides)
                 {
-                    if (shape is Aspose.Slides.SmartArt.SmartArt)
+                    foreach (Aspose.Slides.IShape shape in slide.Shapes)
                     {
-                        Aspose.Slides.SmartArt.SmartArt smartArt = (Aspose.Slides.SmartArt.SmartArt)shape;
-
-                        // Process each root node
-                        foreach (Aspose.Slides.SmartArt.ISmartArtNode rootNode in smartArt.Nodes)
+                        if (shape is Aspose.Slides.SmartArt.ISmartArt smartArt)
                         {
-                            NodeInfo nodeInfo = ProcessNode(rootNode);
-                            smartArtData.Add(nodeInfo);
+                            foreach (Aspose.Slides.SmartArt.ISmartArtNode rootNode in smartArt.Nodes)
+                            {
+                                NodeInfo nodeInfo = ProcessNode(rootNode);
+                                allSmartArtData.Add(nodeInfo);
+                            }
                         }
                     }
                 }
+
+                string json = JsonSerializer.Serialize(allSmartArtData, new JsonSerializerOptions { WriteIndented = true });
+                File.WriteAllText(outputPath, json);
+                Console.WriteLine("SmartArt data exported to " + outputPath);
+
+                // Save presentation before exit
+                presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
             }
+        }
+        catch (NotSupportedException ex)
+        {
+            // Format not supported
+            Console.WriteLine("The file format is not supported: " + ex.Message);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error: " + ex.Message);
+        }
+    }
 
-            // Serialize hierarchy to JSON
-            string jsonString = JsonSerializer.Serialize(smartArtData, new JsonSerializerOptions { WriteIndented = true });
-            File.WriteAllText(jsonOutputPath, jsonString);
+    private static NodeInfo ProcessNode(Aspose.Slides.SmartArt.ISmartArtNode node)
+    {
+        NodeInfo info = new NodeInfo();
+        // Use Position as identifier
+        info.Id = node.Position;
 
-            // Save presentation before exit
-            pres.Save(presentationOutputPath, Aspose.Slides.Export.SaveFormat.Pptx);
-            pres.Dispose();
-
-            Console.WriteLine("SmartArt text exported to JSON file: " + jsonOutputPath);
+        // Get text from the first shape of the node, if any
+        if (node.Shapes.Count > 0)
+        {
+            Aspose.Slides.SmartArt.ISmartArtShape shape = node.Shapes[0];
+            if (shape.TextFrame != null)
+            {
+                info.Text = shape.TextFrame.Text;
+            }
         }
 
-        // Recursive method to convert SmartArt node to NodeInfo
-        private static NodeInfo ProcessNode(Aspose.Slides.SmartArt.ISmartArtNode smartNode)
+        // Recursively process child nodes
+        foreach (Aspose.Slides.SmartArt.ISmartArtNode child in node.ChildNodes)
         {
-            NodeInfo info = new NodeInfo();
+            info.Children.Add(ProcessNode(child));
+        }
 
-            // Use Position as identifier
-            info.Position = smartNode.Position;
+        return info;
+    }
 
-            // Extract text if available
-            if (smartNode.TextFrame != null && smartNode.TextFrame.Text != null)
-            {
-                info.Text = smartNode.TextFrame.Text;
-            }
-            else
-            {
-                info.Text = string.Empty;
-            }
+    private class NodeInfo
+    {
+        public int Id { get; set; }
+        public string Text { get; set; }
+        public List<NodeInfo> Children { get; set; }
 
-            // Process child nodes recursively
-            foreach (Aspose.Slides.SmartArt.ISmartArtNode child in smartNode.ChildNodes)
-            {
-                NodeInfo childInfo = ProcessNode(child);
-                info.Children.Add(childInfo);
-            }
-
-            return info;
+        public NodeInfo()
+        {
+            Children = new List<NodeInfo>();
+            Text = string.Empty;
         }
     }
 }

@@ -1,44 +1,53 @@
 using System;
 using System.IO;
+using Aspose.Slides;
 using Aspose.Slides.Export;
+using Aspose.Slides.SmartArt;
 
-class Program
+namespace OrgChartExample
 {
-    static void Main()
+    class Program
     {
-        // Input and output file paths
-        string inputPath = "input.pptx";
-        string outputPptx = "output.pptx";
-        string outputPng = "slide.png";
-
-        // Load existing presentation if it exists; otherwise create a new one
-        Aspose.Slides.Presentation pres;
-        if (File.Exists(inputPath))
+        static void Main(string[] args)
         {
-            pres = new Aspose.Slides.Presentation(inputPath);
+            // Define output directory
+            string outputDir = "Output";
+            if (!Directory.Exists(outputDir))
+            {
+                Directory.CreateDirectory(outputDir);
+            }
+
+            // Create a new presentation
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+
+            // Get the first slide
+            Aspose.Slides.ISlide slide = presentation.Slides[0];
+
+            // Add an Organization Chart SmartArt diagram
+            Aspose.Slides.SmartArt.ISmartArt smartArt = slide.Shapes.AddSmartArt(
+                50,    // X position
+                50,    // Y position
+                400,   // Width
+                300,   // Height
+                Aspose.Slides.SmartArt.SmartArtLayoutType.OrganizationChart);
+
+            // Set the organization chart layout type to Horizontal (Standart)
+            if (smartArt.Nodes.Count > 0)
+            {
+                smartArt.Nodes[0].OrganizationChartLayout = Aspose.Slides.SmartArt.OrganizationChartLayoutType.Standart;
+            }
+
+            // Save the presentation
+            string presentationPath = Path.Combine(outputDir, "OrgChart.pptx");
+            presentation.Save(presentationPath, Aspose.Slides.Export.SaveFormat.Pptx);
+
+            // Render the slide as PNG
+            Aspose.Slides.IImage slideImage = slide.GetImage();
+            string pngPath = Path.Combine(outputDir, "OrgChart.png");
+            slideImage.Save(pngPath, Aspose.Slides.ImageFormat.Png);
+
+            // Dispose resources
+            presentation.Dispose();
         }
-        else
-        {
-            pres = new Aspose.Slides.Presentation();
-        }
-
-        // Access the first slide
-        Aspose.Slides.ISlide slide = pres.Slides[0];
-
-        // Add a SmartArt diagram and set its layout to Horizontal Organization Chart
-        Aspose.Slides.SmartArt.ISmartArt smartArt = slide.Shapes.AddSmartArt(0, 0, 400, 400, Aspose.Slides.SmartArt.SmartArtLayoutType.BasicBlockList);
-        smartArt.Layout = Aspose.Slides.SmartArt.SmartArtLayoutType.HorizontalOrganizationChart;
-
-        // Save the modified presentation
-        pres.Save(outputPptx, Aspose.Slides.Export.SaveFormat.Pptx);
-
-        // Export the first slide as a PNG image
-        using (Aspose.Slides.IImage image = slide.GetImage())
-        {
-            image.Save(outputPng, Aspose.Slides.ImageFormat.Png);
-        }
-
-        // Clean up resources
-        pres.Dispose();
     }
 }
