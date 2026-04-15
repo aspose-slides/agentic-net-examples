@@ -1,15 +1,16 @@
 using System;
 using System.IO;
 using Aspose.Slides;
+using Aspose.Slides.SmartArt;
 using Aspose.Slides.Export;
 
-namespace SmartArtLayoutChanger
+namespace AsposeSlidesExample
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Define input and output file paths
+            // Input and output file paths
             string inputPath = "input.pptx";
             string outputPath = "output.pptx";
 
@@ -20,34 +21,53 @@ namespace SmartArtLayoutChanger
                 return;
             }
 
-            // Load the presentation
-            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
+            try
             {
-                // Iterate through all slides
-                foreach (Aspose.Slides.ISlide slide in presentation.Slides)
+                // Load the presentation
+                using (Presentation presentation = new Presentation(inputPath))
                 {
-                    // Iterate through all shapes on the slide
-                    foreach (Aspose.Slides.IShape shape in slide.Shapes)
+                    // Iterate through all slides
+                    for (int slideIndex = 0; slideIndex < presentation.Slides.Count; slideIndex++)
                     {
-                        // Check if the shape is a SmartArt diagram
-                        if (shape is Aspose.Slides.SmartArt.ISmartArt)
-                        {
-                            Aspose.Slides.SmartArt.ISmartArt smartArt = (Aspose.Slides.SmartArt.ISmartArt)shape;
+                        ISlide slide = presentation.Slides[slideIndex];
+                        IShapeCollection shapes = slide.Shapes;
 
-                            // If the SmartArt layout is BasicCycle, change it to PictureAccentBlocks
-                            if (smartArt.Layout == Aspose.Slides.SmartArt.SmartArtLayoutType.BasicCycle)
+                        // Iterate through all shapes on the slide
+                        for (int shapeIndex = 0; shapeIndex < shapes.Count; shapeIndex++)
+                        {
+                            // Try to cast the shape to ISmartArt
+                            ISmartArt smartArt = shapes[shapeIndex] as ISmartArt;
+                            if (smartArt != null)
                             {
-                                smartArt.Layout = Aspose.Slides.SmartArt.SmartArtLayoutType.PictureAccentBlocks;
+                                // Check if the SmartArt layout is BasicCycle
+                                if (smartArt.Layout == SmartArtLayoutType.BasicCycle)
+                                {
+                                    // Change layout to PictureAccentBlocks
+                                    smartArt.Layout = SmartArtLayoutType.PictureAccentBlocks;
+                                }
                             }
                         }
                     }
+
+                    // Save the modified presentation
+                    presentation.Save(outputPath, SaveFormat.Pptx);
                 }
-
-                // Save the modified presentation
-                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
             }
-
-            Console.WriteLine("Presentation saved to: " + outputPath);
+            catch (PptxUnsupportedFormatException)
+            {
+                // The file format is not supported
+                Console.WriteLine("The presentation format is not supported.");
+            }
+            catch (PptUnsupportedFormatException)
+            {
+                // The file format is not supported
+                Console.WriteLine("The presentation format is not supported.");
+            }
+            catch (Exception ex)
+            {
+                // General exception handling
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
         }
     }
 }
