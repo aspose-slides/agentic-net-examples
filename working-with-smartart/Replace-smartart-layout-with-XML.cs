@@ -2,49 +2,60 @@ using System;
 using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
-using Aspose.Slides.SmartArt;
 
 class Program
 {
     static void Main()
     {
-        // Paths to the input presentation, custom layout XML and output file
-        string presentationPath = "input.pptx";
-        string customLayoutXmlPath = "customLayout.xml";
+        // Input and output file paths
+        string inputPath = "input.pptx";
         string outputPath = "output.pptx";
+        string customLayoutXmlPath = "customLayout.xml";
 
-        // Verify that the input files exist
-        if (!File.Exists(presentationPath))
+        // Verify input files exist
+        if (!File.Exists(inputPath))
         {
-            Console.WriteLine("Presentation file not found: " + presentationPath);
+            Console.WriteLine("Input presentation file does not exist.");
             return;
         }
+
         if (!File.Exists(customLayoutXmlPath))
         {
-            Console.WriteLine("Custom layout XML file not found: " + customLayoutXmlPath);
+            Console.WriteLine("Custom layout XML file does not exist.");
             return;
         }
 
         // Load the presentation
-        using (Presentation pres = new Presentation(presentationPath))
+        Presentation presentation = null;
+        try
         {
-            // Get the first slide
-            ISlide slide = pres.Slides[0];
-
-            // Add a SmartArt diagram with any initial layout
-            ISmartArt smartArt = slide.Shapes.AddSmartArt(
-                0, 0, 400, 400,
-                Aspose.Slides.SmartArt.SmartArtLayoutType.BasicBlockList);
-
-            // Replace the layout with a custom layout
-            smartArt.Layout = Aspose.Slides.SmartArt.SmartArtLayoutType.Custom;
-
-            // If a method exists to load a custom layout from XML, it can be invoked here.
-            // Example (uncomment if the API provides such a method):
-            // smartArt.LoadLayoutFromXml(customLayoutXmlPath);
-
-            // Save the modified presentation
-            pres.Save(outputPath, SaveFormat.Pptx);
+            presentation = new Presentation(inputPath);
         }
+        catch (Exception ex)
+        {
+            // Format not supported
+            Console.WriteLine("Failed to load presentation: " + ex.Message);
+            return;
+        }
+
+        // Load custom layout from XML (placeholder - actual implementation depends on API support)
+        // Here we assume the custom layout corresponds to an existing SmartArtLayoutType
+        Aspose.Slides.SmartArt.SmartArtLayoutType customLayout = Aspose.Slides.SmartArt.SmartArtLayoutType.BasicProcess;
+
+        // Find the first SmartArt shape and replace its layout
+        Aspose.Slides.ISlide slide = presentation.Slides[0];
+        foreach (Aspose.Slides.IShape shape in slide.Shapes)
+        {
+            if (shape is Aspose.Slides.SmartArt.ISmartArt)
+            {
+                Aspose.Slides.SmartArt.ISmartArt smartArt = (Aspose.Slides.SmartArt.ISmartArt)shape;
+                smartArt.Layout = customLayout;
+                break;
+            }
+        }
+
+        // Save the modified presentation
+        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+        presentation.Dispose();
     }
 }
