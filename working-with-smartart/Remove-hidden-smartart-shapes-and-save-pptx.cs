@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
+using Aspose.Slides.SmartArt;
 
 namespace RemoveHiddenSmartArt
 {
@@ -9,47 +10,57 @@ namespace RemoveHiddenSmartArt
     {
         static void Main(string[] args)
         {
-            // Validate arguments
-            if (args.Length < 2)
-            {
-                Console.WriteLine("Usage: RemoveHiddenSmartArt <input-pptx> <output-pptx>");
-                return;
-            }
+            // Input and output file paths
+            string inputPath = "input.pptx";
+            string outputPath = "output_cleaned.pptx";
 
-            string inputPath = args[0];
-            string outputPath = args[1];
-
-            // Check if input file exists
+            // Check if the input file exists
             if (!File.Exists(inputPath))
             {
-                Console.WriteLine($"Input file does not exist: {inputPath}");
+                Console.WriteLine("Input file does not exist: " + inputPath);
                 return;
             }
 
-            // Load the presentation
-            Presentation presentation = new Presentation(inputPath);
-
-            // Iterate through all slides
-            foreach (ISlide slide in presentation.Slides)
+            try
             {
-                // Iterate backwards to safely remove shapes
-                for (int i = slide.Shapes.Count - 1; i >= 0; i--)
+                // Load the presentation
+                using (Presentation pres = new Presentation(inputPath))
                 {
-                    IShape shape = slide.Shapes[i];
-                    // Identify SmartArt shapes that are hidden
-                    if (shape is Aspose.Slides.SmartArt.ISmartArt && shape.Hidden)
+                    // Iterate through all slides
+                    for (int slideIndex = 0; slideIndex < pres.Slides.Count; slideIndex++)
                     {
-                        // Remove the hidden SmartArt shape
-                        slide.Shapes.Remove(shape);
+                        ISlide slide = pres.Slides[slideIndex];
+
+                        // Iterate through shapes in reverse order to safely remove them
+                        for (int shapeIndex = slide.Shapes.Count - 1; shapeIndex >= 0; shapeIndex--)
+                        {
+                            IShape shape = slide.Shapes[shapeIndex];
+
+                            // Cast shape to SmartArt
+                            SmartArt smartArt = shape as SmartArt;
+
+                            // If it's a SmartArt shape and hidden, remove it
+                            if (smartArt != null && smartArt.Hidden)
+                            {
+                                slide.Shapes.RemoveAt(shapeIndex);
+                            }
+                        }
                     }
+
+                    // Save the cleaned presentation
+                    pres.Save(outputPath, SaveFormat.Pptx);
                 }
             }
-
-            // Save the cleaned presentation
-            presentation.Save(outputPath, SaveFormat.Pptx);
-
-            // Release resources
-            presentation.Dispose();
+            catch (Aspose.Slides.PptxUnsupportedFormatException)
+            {
+                // Format not supported
+                Console.WriteLine("The presentation format is not supported.");
+            }
+            catch (Exception ex)
+            {
+                // General exception handling
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
         }
     }
 }
