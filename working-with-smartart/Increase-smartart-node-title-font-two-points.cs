@@ -2,46 +2,74 @@ using System;
 using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
+using Aspose.Slides.SmartArt;
 
-class Program
+namespace SmartArtFontIncrease
 {
-    static void Main()
+    class Program
     {
-        var inputPath = "input.pptx";
-        var outputPath = "output.pptx";
-
-        if (!File.Exists(inputPath))
+        static void Main(string[] args)
         {
-            Console.WriteLine("Input file does not exist.");
-            return;
-        }
+            // Input and output file paths
+            string inputPath = "input.pptx";
+            string outputPath = "output.pptx";
 
-        var presentation = new Aspose.Slides.Presentation(inputPath);
-
-        foreach (var slide in presentation.Slides)
-        {
-            foreach (var shape in slide.Shapes)
+            // Verify that the input file exists
+            if (!File.Exists(inputPath))
             {
-                if (shape is Aspose.Slides.SmartArt.ISmartArt smartArt)
+                Console.WriteLine("Input file does not exist: " + inputPath);
+                return;
+            }
+
+            try
+            {
+                // Load the presentation
+                using (Presentation presentation = new Presentation(inputPath))
                 {
-                    foreach (var node in smartArt.AllNodes)
+                    // Iterate through all slides
+                    foreach (ISlide slide in presentation.Slides)
                     {
-                        var textFrame = node.TextFrame;
-                        if (textFrame != null && textFrame.Paragraphs.Count > 0)
+                        // Iterate through all shapes on the slide
+                        foreach (IShape shape in slide.Shapes)
                         {
-                            var paragraph = textFrame.Paragraphs[0];
-                            if (paragraph.Portions.Count > 0)
+                            // Check if the shape is a SmartArt diagram
+                            if (shape is ISmartArt)
                             {
-                                var portion = paragraph.Portions[0];
-                                portion.PortionFormat.FontHeight += 2;
+                                ISmartArt smartArt = (ISmartArt)shape;
+
+                                // Iterate through all SmartArt nodes (including child nodes)
+                                foreach (ISmartArtNode node in smartArt.AllNodes)
+                                {
+                                    // Access the text frame of the node
+                                    ITextFrame textFrame = node.TextFrame;
+                                    if (textFrame == null) continue;
+
+                                    // Iterate through all paragraphs in the text frame
+                                    foreach (IParagraph paragraph in textFrame.Paragraphs)
+                                    {
+                                        // Iterate through all portions (runs) in the paragraph
+                                        foreach (IPortion portion in paragraph.Portions)
+                                        {
+                                            // Increase the font height by 2 points
+                                            float currentHeight = portion.PortionFormat.FontHeight;
+                                            portion.PortionFormat.FontHeight = currentHeight + 2f;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
+
+                    // Save the modified presentation
+                    presentation.Save(outputPath, SaveFormat.Pptx);
                 }
             }
+            catch (Exception ex)
+            {
+                // Handle unsupported format or other errors
+                Console.WriteLine("An error occurred: " + ex.Message);
+                // Comment: format not supported or other issue
+            }
         }
-
-        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
-        presentation.Dispose();
     }
 }
