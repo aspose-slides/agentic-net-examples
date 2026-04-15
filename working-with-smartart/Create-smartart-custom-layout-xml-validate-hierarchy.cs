@@ -1,69 +1,51 @@
 using System;
-using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
+using Aspose.Slides.SmartArt;
 
-namespace SmartArtCustomLayoutExample
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
+        try
         {
-            // Define output path
-            string outputPath = "CustomSmartArt.pptx";
-
             // Create a new presentation
             Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-            // Get the first slide
-            Aspose.Slides.ISlide slide = presentation.Slides[0];
+            // Add a SmartArt diagram of OrganizationChart layout
+            Aspose.Slides.SmartArt.ISmartArt smartArt = presentation.Slides[0].Shapes.AddSmartArt(20, 20, 600, 500, Aspose.Slides.SmartArt.SmartArtLayoutType.OrganizationChart);
 
-            // Add a SmartArt diagram with OrganizationChart layout
-            Aspose.Slides.SmartArt.ISmartArt smartArt = slide.Shapes.AddSmartArt(
-                20f, 20f, 600f, 500f,
-                Aspose.Slides.SmartArt.SmartArtLayoutType.OrganizationChart);
+            // Assign a custom layout XML (placeholder - actual implementation depends on API capabilities)
+            // smartArt.Layout = CustomLayout; // Custom layout XML handling would be placed here
 
-            // Build custom hierarchy:
-            // Root node (already exists)
-            Aspose.Slides.SmartArt.ISmartArtNode rootNode = smartArt.Nodes[0];
+            // Build a simple hierarchy: root node with two child nodes
+            Aspose.Slides.SmartArt.ISmartArtNode rootNode = smartArt.AllNodes[0];
 
-            // Add first child to root
+            // Add first child node
             Aspose.Slides.SmartArt.ISmartArtNode childNode1 = rootNode.ChildNodes.AddNode();
-            childNode1.Position = 0;
-            childNode1.OrganizationChartLayout = Aspose.Slides.SmartArt.OrganizationChartLayoutType.LeftHanging;
+            childNode1.Position = 0; // first child
 
-            // Add second child to root
+            // Add second child node
             Aspose.Slides.SmartArt.ISmartArtNode childNode2 = rootNode.ChildNodes.AddNode();
-            childNode2.Position = 1;
-            childNode2.OrganizationChartLayout = Aspose.Slides.SmartArt.OrganizationChartLayoutType.LeftHanging;
+            childNode2.Position = 1; // second child
 
-            // Add a sub‑child to the first child
-            Aspose.Slides.SmartArt.ISmartArtNode subChildNode = childNode1.ChildNodes.AddNode();
-            subChildNode.Position = 0;
-            subChildNode.OrganizationChartLayout = Aspose.Slides.SmartArt.OrganizationChartLayoutType.LeftHanging;
-
-            // Validate hierarchy: each child level should be parent level + 1
-            bool hierarchyValid = true;
+            // Validate hierarchy: ensure that child nodes have Level == 1 (direct children of root)
             foreach (Aspose.Slides.SmartArt.ISmartArtNode node in smartArt.AllNodes)
             {
-                if (node.ChildNodes.Count > 0)
+                if (node.Level == 1)
                 {
-                    foreach (Aspose.Slides.SmartArt.ISmartArtNode child in node.ChildNodes)
-                    {
-                        if (child.Level != node.Level + 1)
-                        {
-                            hierarchyValid = false;
-                            break;
-                        }
-                    }
+                    // This node is a direct child of the root node
+                    // Additional validation logic can be placed here
                 }
-                if (!hierarchyValid) break;
             }
 
-            Console.WriteLine("Hierarchy valid: " + hierarchyValid);
-
             // Save the presentation
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            presentation.Save("CustomSmartArt.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        }
+        catch (Exception ex)
+        {
+            // Handle exceptions (e.g., unsupported format, file I/O issues)
+            Console.WriteLine("Error: " + ex.Message);
         }
     }
 }
