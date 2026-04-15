@@ -5,47 +5,87 @@ using Aspose.Slides;
 using Aspose.Slides.Export;
 using Aspose.Slides.SmartArt;
 
-class Program
+namespace AsposeSlidesSmartArtRandomFill
 {
-    static void Main()
+    class Program
     {
-        // Create a new presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
-
-        // Get the first slide
-        Aspose.Slides.ISlide slide = presentation.Slides[0];
-
-        // Add a SmartArt diagram to the slide
-        Aspose.Slides.SmartArt.ISmartArt smartArt = slide.Shapes.AddSmartArt(10, 10, 800, 60, Aspose.Slides.SmartArt.SmartArtLayoutType.ClosedChevronProcess);
-
-        // Random number generator for colors
-        System.Random random = new System.Random();
-
-        // Add several nodes and assign random fill colors to each shape in the node
-        for (int i = 0; i < 5; i++)
+        static void Main(string[] args)
         {
-            Aspose.Slides.SmartArt.ISmartArtNode node = smartArt.AllNodes.AddNode();
-            node.TextFrame.Text = "Node " + i;
+            string inputPath = "input.pptx";
+            string outputPresentationPath = "output.pptx";
+            string outputImagePath = "output.png";
 
-            foreach (Aspose.Slides.SmartArt.ISmartArtShape shape in node.Shapes)
+            // Check if the input file exists
+            if (!File.Exists(inputPath))
             {
-                shape.FillFormat.FillType = Aspose.Slides.FillType.Solid;
-                shape.FillFormat.SolidFillColor.Color = System.Drawing.Color.FromArgb(random.Next(256), random.Next(256), random.Next(256));
+                Console.WriteLine("Input file does not exist: " + inputPath);
+                return;
+            }
+
+            try
+            {
+                // Load the presentation
+                using (Presentation presentation = new Presentation(inputPath))
+                {
+                    // Assume the first slide contains a SmartArt diagram
+                    ISlide slide = presentation.Slides[0];
+                    // Find the first SmartArt shape on the slide
+                    ISmartArt smartArt = null;
+                    foreach (IShape shape in slide.Shapes)
+                    {
+                        smartArt = shape as ISmartArt;
+                        if (smartArt != null)
+                        {
+                            break;
+                        }
+                    }
+
+                    if (smartArt == null)
+                    {
+                        Console.WriteLine("No SmartArt diagram found on the first slide.");
+                    }
+                    else
+                    {
+                        // Random number generator for colors
+                        Random random = new Random();
+
+                        // Iterate through all nodes in the SmartArt diagram
+                        foreach (ISmartArtNode node in smartArt.AllNodes)
+                        {
+                            // Each node can contain multiple shapes; apply fill to each shape
+                            foreach (IShape nodeShape in node.Shapes)
+                            {
+                                // Set solid fill type
+                                nodeShape.FillFormat.FillType = FillType.Solid;
+                                // Generate a random color
+                                Color randomColor = Color.FromArgb(
+                                    random.Next(256),
+                                    random.Next(256),
+                                    random.Next(256));
+                                // Apply the random color
+                                nodeShape.FillFormat.SolidFillColor.Color = randomColor;
+                            }
+                        }
+                    }
+
+                    // Save the modified presentation (required before exit)
+                    presentation.Save(outputPresentationPath, SaveFormat.Pptx);
+
+                    // Export the first slide as PNG
+                    IImage slideImage = slide.GetImage();
+                    slideImage.Save(outputImagePath, Aspose.Slides.ImageFormat.Png);
+                }
+            }
+            catch (NotSupportedException)
+            {
+                // Format not supported
+                // Comment: The requested file format is not supported.
+            }
+            catch (Exception ex)
+            {
+                // Handle other exceptions (e.g., external URL issues)
+                Console.WriteLine("An error occurred: " + ex.Message);
             }
         }
-
-        // Save the presentation (optional)
-        presentation.Save("SmartArtRandomColors.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
-
-        // Export the slide as a high‑resolution PNG (2x scaling)
-        float scaleX = 2f;
-        float scaleY = 2f;
-        using (Aspose.Slides.IImage image = slide.GetImage(scaleX, scaleY))
-        {
-            image.Save("SlideHighRes.png", Aspose.Slides.ImageFormat.Png);
-        }
-
-        // Dispose the presentation
-        presentation.Dispose();
     }
 }
