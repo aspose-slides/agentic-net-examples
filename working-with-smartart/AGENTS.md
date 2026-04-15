@@ -20,21 +20,21 @@ working within the **working-with-smartart** category.
 
 ## Required Namespaces
 
-- `using System;` (114/114 files)
-- `using Aspose.Slides.Export;` (114/114 files)
-- `using Aspose.Slides;` (100/114 files)
-- `using System.IO;` (87/114 files)
-- `using Aspose.Slides.SmartArt;` (73/114 files)
-- `using System.Drawing;` (10/114 files)
-- `using System.Collections.Generic;` (10/114 files)
-- `using System.Text.Json;` (4/114 files)
-- `using System.Xml;` (1/114 files)
-- `using System.Net.Http;` (1/114 files)
-- `using System.Net;` (1/114 files)
-- `using System.Diagnostics;` (1/114 files)
-- `using System.IO.Compression;` (1/114 files)
-- `using Aspose.Slides.Util;` (1/114 files)
-- `using System.Xml.Linq;` (1/114 files)
+- `using System;` (118/118 files)
+- `using Aspose.Slides.Export;` (118/118 files)
+- `using Aspose.Slides;` (103/118 files)
+- `using System.IO;` (90/118 files)
+- `using Aspose.Slides.SmartArt;` (76/118 files)
+- `using System.Drawing;` (12/118 files)
+- `using System.Collections.Generic;` (10/118 files)
+- `using System.Text.Json;` (4/118 files)
+- `using System.Xml;` (1/118 files)
+- `using System.Net.Http;` (1/118 files)
+- `using System.Net;` (1/118 files)
+- `using System.Diagnostics;` (1/118 files)
+- `using System.IO.Compression;` (1/118 files)
+- `using Aspose.Slides.Util;` (1/118 files)
+- `using System.Xml.Linq;` (1/118 files)
 
 ## Files in this folder
 
@@ -58,6 +58,7 @@ working within the **working-with-smartart** category.
 | [Add-three-child-nodes-and-set-positions](./Add-three-child-nodes-and-set-positions.cs) |  | Add three child nodes and set positions |
 | [Apply-picture-fill-to-smartart-node](./Apply-picture-fill-to-smartart-node.cs) |  | Apply picture fill to smartart node |
 | [Apply-pictureaccentblocks-layout-and-fill-nodes](./Apply-pictureaccentblocks-layout-and-fill-nodes.cs) |  | Apply pictureaccentblocks layout and fill nodes |
+| [Apply-random-fill-to-smartart-export-PNG](./Apply-random-fill-to-smartart-export-PNG.cs) |  | Apply random fill to smartart export PNG |
 | [Apply-smartart-node-angle-gradient-verify](./Apply-smartart-node-angle-gradient-verify.cs) |  | Apply smartart node angle gradient verify |
 | [Apply-smartart-node-three-stop-gradient-verify](./Apply-smartart-node-three-stop-gradient-verify.cs) |  | Apply smartart node three stop gradient verify |
 | [Assign-pictures-to-organizationchart-nodes-verify](./Assign-pictures-to-organizationchart-nodes-verify.cs) |  | Assign pictures to organizationchart nodes verify |
@@ -65,6 +66,7 @@ working within the **working-with-smartart** category.
 | [Assign-unique-ids-to-smartart-nodes](./Assign-unique-ids-to-smartart-nodes.cs) |  | Assign unique ids to smartart nodes |
 | [Assign-url-images-to-organizationchart-nodes](./Assign-url-images-to-organizationchart-nodes.cs) |  | Assign url images to organizationchart nodes |
 | [Batch-convert-smartart-diagrams-to-PNG](./Batch-convert-smartart-diagrams-to-PNG.cs) |  | Batch convert smartart diagrams to PNG |
+| [Boost-smartart-node-fill-opacity-by-ten-percent](./Boost-smartart-node-fill-opacity-by-ten-percent.cs) |  | Boost smartart node fill opacity by ten percent |
 | [Change-organizationchart-vertical-from-horizontal-layout](./Change-organizationchart-vertical-from-horizontal-layout.cs) |  | Change organizationchart vertical from horizontal layout |
 | [Clear-assistant-flag-from-organizationchart-node](./Clear-assistant-flag-from-organizationchart-node.cs) |  | Clear assistant flag from organizationchart node |
 | [Clone-smartart-apply-custom-theme-compare-output](./Clone-smartart-apply-custom-theme-compare-output.cs) |  | Clone smartart apply custom theme compare output |
@@ -99,6 +101,7 @@ working within the **working-with-smartart** category.
 | [Delete-smartart-node-at-index-and-reflow](./Delete-smartart-node-at-index-and-reflow.cs) |  | Delete smartart node at index and reflow |
 | [Depthfirst-traverse-smartart-collect-node-titles](./Depthfirst-traverse-smartart-collect-node-titles.cs) |  | Depthfirst traverse smartart collect node titles |
 | [Detect-hidden-nodes-and-log-indices](./Detect-hidden-nodes-and-log-indices.cs) |  | Detect hidden nodes and log indices |
+| [Embed-smartart-child-node-thumbnails-into-summary](./Embed-smartart-child-node-thumbnails-into-summary.cs) |  | Embed smartart child node thumbnails into summary |
 | [Export-smartart-child-node-thumbnails-into-folders](./Export-smartart-child-node-thumbnails-into-folders.cs) |  | Export smartart child node thumbnails into folders |
 | [Export-smartart-hierarchy-to-JSON](./Export-smartart-hierarchy-to-JSON.cs) |  | Export smartart hierarchy to JSON |
 | [Export-smartart-node-data-to-csv](./Export-smartart-node-data-to-csv.cs) |  | Export smartart node data to csv |
@@ -128,6 +131,7 @@ working within the **working-with-smartart** category.
 | [Log-hidden-smartart-node-indices-for-debug](./Log-hidden-smartart-node-indices-for-debug.cs) |  | Log hidden smartart node indices for debug |
 | [Log-smartart-layout-types-from-all-slides](./Log-smartart-layout-types-from-all-slides.cs) |  | Log smartart layout types from all slides |
 | [Log-smartart-node-position-from-parent](./Log-smartart-node-position-from-parent.cs) |  | Log smartart node position from parent |
+| [Promote-first-child-after-node-removal](./Promote-first-child-after-node-removal.cs) |  | Promote first child after node removal |
 | [Remove-assistant-nodes-and-reassign-subordinates](./Remove-assistant-nodes-and-reassign-subordinates.cs) |  | Remove assistant nodes and reassign subordinates |
 | [Remove-assistant-nodes-recalculate-reporting-save-PPTX](./Remove-assistant-nodes-recalculate-reporting-save-PPTX.cs) |  | Remove assistant nodes recalculate reporting save PPTX |
 | [Remove-hidden-smartart-shapes-and-save-pptx](./Remove-hidden-smartart-shapes-and-save-pptx.cs) |  | Remove hidden smartart shapes and save pptx |
@@ -157,7 +161,7 @@ working within the **working-with-smartart** category.
 
 ## Category Statistics
 
-- Total examples: 114
+- Total examples: 118
 
 ## Key API Surface
 
@@ -174,8 +178,8 @@ working within the **working-with-smartart** category.
 - `Aspose.Slides.SmartArt.ISmartArtShape`
 - `Aspose.Slides.SmartArt.SmartArtLayoutType.BasicBlockList`
 - `Aspose.Slides.IImage`
-- `Aspose.Slides.SmartArt.SmartArtNode`
 - `Aspose.Slides.ImageFormat.Png`
+- `Aspose.Slides.SmartArt.SmartArtNode`
 
 ## Common Code Pattern
 
