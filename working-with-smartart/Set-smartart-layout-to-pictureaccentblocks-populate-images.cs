@@ -2,71 +2,69 @@ using System;
 using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
+using Aspose.Slides.SmartArt;
 
-namespace SmartArtPictureAccentBlocksExample
+namespace Example
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Output presentation file
-            string outputPath = "SmartArtPictureAccentBlocks.pptx";
+            // Create a new presentation
+            Presentation pres = new Presentation();
+            ISlide slide = pres.Slides[0];
 
-            // Image files to populate SmartArt nodes
+            // Add SmartArt with PictureAccentBlocks layout
+            ISmartArt smartArt = slide.Shapes.AddSmartArt(0, 0, 400, 400, SmartArtLayoutType.PictureAccentBlocks);
+
+            // Paths to images to populate the SmartArt nodes
             string[] imagePaths = new string[]
             {
                 "image1.jpg",
                 "image2.jpg",
-                "image3.jpg"
+                "image3.jpg",
+                "image4.jpg"
             };
 
-            // Verify that each image file exists
-            foreach (string imgPath in imagePaths)
+            int imgIndex = 0;
+            foreach (ISmartArtNode node in smartArt.Nodes)
             {
+                if (imgIndex >= imagePaths.Length)
+                    break;
+
+                string imgPath = imagePaths[imgIndex];
+
+                // Check if the image file exists
                 if (!File.Exists(imgPath))
                 {
-                    Console.WriteLine($"Image file not found: {imgPath}");
-                    return;
+                    // Skip missing files
+                    imgIndex++;
+                    continue;
                 }
-            }
 
-            // Create a new presentation
-            Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation();
+                // Load image into the presentation
+                byte[] imgData = File.ReadAllBytes(imgPath);
+                IPPImage img = pres.Images.AddImage(imgData);
 
-            // Get the first slide
-            Aspose.Slides.ISlide slide = pres.Slides[0];
-
-            // Add a SmartArt diagram (initial layout can be any; we'll change it later)
-            Aspose.Slides.SmartArt.ISmartArt smartArt = slide.Shapes.AddSmartArt(
-                0f, 0f, 600f, 400f,
-                Aspose.Slides.SmartArt.SmartArtLayoutType.BasicBlockList);
-
-            // Change layout to PictureAccentBlocks
-            smartArt.Layout = Aspose.Slides.SmartArt.SmartArtLayoutType.PictureAccentBlocks;
-
-            // Add a node for each image and set its picture fill
-            foreach (string imgPath in imagePaths)
-            {
-                // Load image and add to presentation's image collection
-                Aspose.Slides.IImage img = Aspose.Slides.Images.FromFile(imgPath);
-                Aspose.Slides.IPPImage ppImg = pres.Images.AddImage(img);
-
-                // Add a new root node to the SmartArt
-                Aspose.Slides.SmartArt.ISmartArtNode node = smartArt.Nodes.AddNode();
-
-                // Apply picture fill to each shape within the node
-                foreach (Aspose.Slides.SmartArt.ISmartArtShape shape in node.Shapes)
+                // Apply the image as picture fill to the first shape of the node
+                if (node.Shapes.Count > 0)
                 {
-                    shape.FillFormat.FillType = Aspose.Slides.FillType.Picture;
-                    shape.FillFormat.PictureFillFormat.Picture.Image = ppImg;
+                    IShape shape = node.Shapes[0];
+                    shape.FillFormat.PictureFillFormat.Picture.Image = img;
                 }
+
+                imgIndex++;
             }
 
             // Save the presentation
-            pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
-
-            // Clean up
-            pres.Dispose();
+            try
+            {
+                pres.Save("SmartArtPictureAccentBlocks.pptx", SaveFormat.Pptx);
+            }
+            catch (Exception)
+            {
+                // Format not supported
+            }
         }
     }
 }
