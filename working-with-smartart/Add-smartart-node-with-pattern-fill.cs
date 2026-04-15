@@ -1,41 +1,54 @@
 using System;
 using System.IO;
+using System.Drawing;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 using Aspose.Slides.SmartArt;
-using System.Drawing;
 
-class Program
+namespace SmartArtPatternExample
 {
-    static void Main()
+    class Program
     {
-        // Create a new presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
-
-        // Get the first slide
-        Aspose.Slides.ISlide slide = presentation.Slides[0];
-
-        // Add a SmartArt diagram
-        Aspose.Slides.SmartArt.ISmartArt chevron = slide.Shapes.AddSmartArt(10, 10, 800, 60, Aspose.Slides.SmartArt.SmartArtLayoutType.ClosedChevronProcess);
-
-        // Add a new node to the SmartArt
-        Aspose.Slides.SmartArt.ISmartArtNode node = chevron.AllNodes.AddNode();
-        node.TextFrame.Text = "Pattern Node";
-
-        // Apply pattern fill to each shape of the node
-        foreach (Aspose.Slides.SmartArt.ISmartArtShape shape in node.Shapes)
+        static void Main(string[] args)
         {
-            shape.FillFormat.FillType = Aspose.Slides.FillType.Pattern;
-            shape.FillFormat.PatternFormat.PatternStyle = Aspose.Slides.PatternStyle.DiagonalCross;
-            shape.FillFormat.PatternFormat.ForeColor.Color = Color.Blue;
-            shape.FillFormat.PatternFormat.BackColor.Color = Color.Yellow;
+            // Create a new presentation
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+
+            // Get the first slide
+            Aspose.Slides.ISlide slide = presentation.Slides[0];
+
+            // Add a SmartArt diagram to the slide
+            Aspose.Slides.SmartArt.ISmartArt smartArt = slide.Shapes.AddSmartArt(
+                0f, 0f, 400f, 400f,
+                Aspose.Slides.SmartArt.SmartArtLayoutType.BasicBlockList);
+
+            // Add a new node to the SmartArt
+            Aspose.Slides.SmartArt.ISmartArtNode newNode = smartArt.Nodes.AddNode();
+
+            // Get the first shape of the newly added node
+            Aspose.Slides.SmartArt.ISmartArtShape nodeShape = newNode.Shapes[0];
+
+            // Set the fill type to Pattern
+            nodeShape.FillFormat.FillType = Aspose.Slides.FillType.Pattern;
+
+            // Configure the pattern fill
+            nodeShape.FillFormat.PatternFormat.PatternStyle = Aspose.Slides.PatternStyle.DarkHorizontal;
+            nodeShape.FillFormat.PatternFormat.ForeColor.Color = Color.Red;
+            nodeShape.FillFormat.PatternFormat.BackColor.Color = Color.Yellow;
+
+            // Save the presentation
+            try
+            {
+                presentation.Save("SmartArtPattern.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            }
+            catch (NotSupportedException)
+            {
+                // Format not supported
+            }
+            catch (Exception)
+            {
+                // Handle other exceptions (e.g., I/O errors)
+            }
         }
-
-        // Save the presentation
-        string outputPath = "SmartArtPatternNode.pptx";
-        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
-
-        // Dispose the presentation
-        presentation.Dispose();
     }
 }
