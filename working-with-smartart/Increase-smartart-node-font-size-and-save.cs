@@ -1,63 +1,41 @@
 using System;
-using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 using Aspose.Slides.SmartArt;
 
-namespace SmartArtFontSizeIncrease
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
+        // Create a new presentation
+        Presentation presentation = new Presentation();
+
+        // Get the first slide
+        ISlide slide = presentation.Slides[0];
+
+        // Add a SmartArt diagram
+        ISmartArt smartArt = slide.Shapes.AddSmartArt(10, 10, 400, 300, SmartArtLayoutType.BasicCycle);
+
+        // Iterate over all SmartArt nodes and increase font size by 2 points
+        foreach (ISmartArtNode node in smartArt.AllNodes)
         {
-            // Input and output file paths
-            string inputPath = "input.pptx";
-            string outputPath = "output.pptx";
-
-            // Verify input file exists
-            if (!File.Exists(inputPath))
+            if (node.TextFrame != null && node.TextFrame.Paragraphs != null)
             {
-                Console.WriteLine("Input file does not exist: " + inputPath);
-                return;
-            }
-
-            // Load presentation
-            Presentation presentation = new Presentation(inputPath);
-
-            // Find the first SmartArt shape on the first slide
-            ISmartArt smartArt = null;
-            foreach (IShape shape in presentation.Slides[0].Shapes)
-            {
-                if (shape is ISmartArt)
-                {
-                    smartArt = (ISmartArt)shape;
-                    break;
-                }
-            }
-
-            if (smartArt == null)
-            {
-                Console.WriteLine("No SmartArt shape found in the presentation.");
-                presentation.Dispose();
-                return;
-            }
-
-            // Iterate over all SmartArt nodes and increase font size by 2 points
-            foreach (ISmartArtNode node in smartArt.AllNodes)
-            {
-                ITextFrame textFrame = node.TextFrame;
-                foreach (IParagraph paragraph in textFrame.Paragraphs)
+                foreach (IParagraph paragraph in node.TextFrame.Paragraphs)
                 {
                     foreach (IPortion portion in paragraph.Portions)
                     {
-                        portion.PortionFormat.FontHeight += 2;
+                        float currentSize = portion.PortionFormat.FontHeight;
+                        portion.PortionFormat.FontHeight = currentSize + 2;
                     }
                 }
             }
-
-            // Save the modified presentation
-            presentation.Save(outputPath, SaveFormat.Pptx);
-            presentation.Dispose();
         }
+
+        // Save the presentation
+        presentation.Save("SmartArtFontIncrease.pptx", SaveFormat.Pptx);
+
+        // Dispose the presentation
+        presentation.Dispose();
     }
 }
