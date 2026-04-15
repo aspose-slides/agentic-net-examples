@@ -1,65 +1,74 @@
 using System;
 using System.IO;
-using Aspose.Slides;
 using Aspose.Slides.Export;
 
 class Program
 {
     static void Main()
     {
+        // Input and output file paths
         string inputPath = "input.pptx";
         string outputPath = "output.pptx";
 
+        // Verify input file exists
         if (!File.Exists(inputPath))
         {
             Console.WriteLine("Input file does not exist.");
             return;
         }
 
-        Presentation pres = new Presentation(inputPath);
-        ISlide slide = pres.Slides[0];
-
-        // Find the first SmartArt shape on the slide
-        Aspose.Slides.SmartArt.ISmartArt smartArt = null;
-        foreach (IShape shape in slide.Shapes)
+        try
         {
-            if (shape is Aspose.Slides.SmartArt.ISmartArt)
-            {
-                smartArt = (Aspose.Slides.SmartArt.ISmartArt)shape;
-                break;
-            }
-        }
+            // Load presentation
+            Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
+            Aspose.Slides.ISlide slide = pres.Slides[0];
 
-        if (smartArt != null)
-        {
-            // Clone the SmartArt shape and place it at (250,150)
-            IShape clonedShape = slide.Shapes.AddClone(smartArt, 250f, 150f);
-
-            // Ensure the cloned shape does not intersect any other shape
-            bool intersect;
-            do
+            // Locate the first SmartArt shape on the slide
+            Aspose.Slides.SmartArt.ISmartArt smartArt = null;
+            foreach (Aspose.Slides.IShape shape in slide.Shapes)
             {
-                intersect = false;
-                foreach (IShape otherShape in slide.Shapes)
+                if (shape is Aspose.Slides.SmartArt.ISmartArt)
                 {
-                    if (otherShape == clonedShape)
-                        continue;
+                    smartArt = (Aspose.Slides.SmartArt.ISmartArt)shape;
+                    break;
+                }
+            }
 
-                    if (otherShape.X < clonedShape.X + clonedShape.Width &&
-                        otherShape.X + otherShape.Width > clonedShape.X &&
-                        otherShape.Y < clonedShape.Y + clonedShape.Height &&
-                        otherShape.Y + otherShape.Height > clonedShape.Y)
+            if (smartArt != null)
+            {
+                // Clone the SmartArt shape to the desired coordinates (250,150)
+                Aspose.Slides.IShape clonedShape = slide.Shapes.AddClone(smartArt, 250f, 150f);
+
+                // Ensure the cloned shape does not intersect any other shapes
+                foreach (Aspose.Slides.IShape other in slide.Shapes)
+                {
+                    if (other != clonedShape)
                     {
-                        // Move the cloned shape down by 20 points and re‑check
-                        clonedShape.Y += 20f;
-                        intersect = true;
-                        break;
+                        bool intersect = !(clonedShape.X + clonedShape.Width <= other.X ||
+                                           clonedShape.X >= other.X + other.Width ||
+                                           clonedShape.Y + clonedShape.Height <= other.Y ||
+                                           clonedShape.Y >= other.Y + other.Height);
+                        while (intersect)
+                        {
+                            // Move the cloned shape down until it no longer intersects
+                            clonedShape.Y += 20f;
+                            intersect = !(clonedShape.X + clonedShape.Width <= other.X ||
+                                           clonedShape.X >= other.X + other.Width ||
+                                           clonedShape.Y + clonedShape.Height <= other.Y ||
+                                           clonedShape.Y >= other.Y + other.Height);
+                        }
                     }
                 }
-            } while (intersect);
-        }
+            }
 
-        pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
-        pres.Dispose();
+            // Save the modified presentation
+            pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            pres.Dispose();
+        }
+        catch (Exception ex)
+        {
+            // Handle unsupported format or other errors
+            Console.WriteLine("Error: " + ex.Message);
+        }
     }
 }
