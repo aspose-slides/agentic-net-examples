@@ -2,56 +2,74 @@ using System;
 using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
+using Aspose.Slides.SmartArt;
 
-namespace SmartArtHiddenValidation
+namespace ValidateSmartArtHidden
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Define input and output file paths
+            // Input presentation and external theme files
             string inputPath = "input.pptx";
+            string themePath = "theme.thmx";
             string outputPath = "output.pptx";
 
-            // Verify that the input file exists
+            // Verify that the input files exist
             if (!File.Exists(inputPath))
             {
-                Console.WriteLine("Input file does not exist: " + inputPath);
+                Console.WriteLine("Input presentation file not found: " + inputPath);
                 return;
             }
 
-            // Load the presentation
-            Presentation presentation = new Presentation(inputPath);
-
-            // Apply a theme change (example: modify a line style color)
-            // This demonstrates applying a theme before validation
-            presentation.MasterTheme.FormatScheme.LineStyles[0].FillFormat.SolidFillColor.Color = System.Drawing.Color.Red;
-
-            // Expected visibility after theme application
-            bool expectedHidden = false; // set the expected value as needed
-
-            // Iterate through shapes to find SmartArt and validate its Hidden property
-            ISlide slide = presentation.Slides[0];
-            foreach (IShape shape in slide.Shapes)
+            if (!File.Exists(themePath))
             {
-                if (shape is Aspose.Slides.SmartArt.ISmartArt)
-                {
-                    Aspose.Slides.SmartArt.ISmartArt smartArt = (Aspose.Slides.SmartArt.ISmartArt)shape;
-                    bool actualHidden = smartArt.Hidden;
-
-                    if (actualHidden == expectedHidden)
-                    {
-                        Console.WriteLine("SmartArt hidden property matches expected value: " + actualHidden);
-                    }
-                    else
-                    {
-                        Console.WriteLine("SmartArt hidden property does NOT match expected value. Expected: " + expectedHidden + ", Actual: " + actualHidden);
-                    }
-                }
+                Console.WriteLine("Theme file not found: " + themePath);
+                return;
             }
 
-            // Save the presentation
-            presentation.Save(outputPath, SaveFormat.Pptx);
+            try
+            {
+                // Load the presentation
+                Presentation pres = new Presentation(inputPath);
+
+                // Get the first slide
+                ISlide slide = pres.Slides[0];
+
+                // Add a SmartArt diagram to the slide
+                ISmartArt smartArt = slide.Shapes.AddSmartArt(0, 0, 400, 400, SmartArtLayoutType.BasicBlockList);
+
+                // Set the Hidden property to true (expected visibility)
+                smartArt.Hidden = true;
+
+                // Apply the external theme to the first master slide
+                IMasterSlide newMaster = pres.Masters[0].ApplyExternalThemeToDependingSlides(themePath);
+
+                // Validate that the Hidden property remains as expected after applying the theme
+                bool isHidden = smartArt.Hidden;
+                if (isHidden)
+                {
+                    Console.WriteLine("SmartArt hidden property is correctly set to true after applying the theme.");
+                }
+                else
+                {
+                    Console.WriteLine("SmartArt hidden property does not match the expected value after applying the theme.");
+                }
+
+                // Save the presentation before exiting
+                pres.Save(outputPath, SaveFormat.Pptx);
+            }
+            catch (PptxReadException ex)
+            {
+                // Handle errors related to reading the presentation or theme files
+                Console.WriteLine("Error reading PPTX or theme file: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                // Handle other exceptions (e.g., unsupported format)
+                // Format not supported
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
         }
     }
 }
