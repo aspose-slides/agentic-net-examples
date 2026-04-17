@@ -27,11 +27,11 @@ When working in this repository:
 
 ## Repository Overview
 
-This repository contains **2518** working code examples demonstrating Aspose.Slides for .NET capabilities.
+This repository contains **3958** working code examples demonstrating Aspose.Slides for .NET capabilities.
 
-**Statistics** (as of 2026-04-07):
+**Statistics** (as of 2026-04-17):
 - Version: 26.4.0
-- Total Examples: 2518
+- Total Examples: 3958
 - Categories: 18
 
 ## Category Details
@@ -53,59 +53,59 @@ This repository contains **2518** working code examples demonstrating Aspose.Sli
 - Guide: [AGENTS.md](./conversion/AGENTS.md)
 
 ### design-presentations
-- Examples: 126
+- Examples: 283
 - Guide: [AGENTS.md](./design-presentations/AGENTS.md)
 
 ### manage-presentation
-- Examples: 89
+- Examples: 153
 - Guide: [AGENTS.md](./manage-presentation/AGENTS.md)
 
 ### manage-presentation-content
-- Examples: 235
+- Examples: 336
 - Guide: [AGENTS.md](./manage-presentation-content/AGENTS.md)
 
 ### manage-presentation-media-files
-- Examples: 167
+- Examples: 316
 - Guide: [AGENTS.md](./manage-presentation-media-files/AGENTS.md)
 
 ### manage-presentation-text
-- Examples: 141
+- Examples: 245
 - Guide: [AGENTS.md](./manage-presentation-text/AGENTS.md)
 
 ### manage-tags-and-custom-data
-- Examples: 17
+- Examples: 57
 - Guide: [AGENTS.md](./manage-tags-and-custom-data/AGENTS.md)
 
 ### math-equations
-- Examples: 34
+- Examples: 63
 - Guide: [AGENTS.md](./math-equations/AGENTS.md)
 
 ### presentation-ink-objects
-- Examples: 33
+- Examples: 59
 - Guide: [AGENTS.md](./presentation-ink-objects/AGENTS.md)
 
 ### vba-macros
-- Examples: 22
+- Examples: 56
 - Guide: [AGENTS.md](./vba-macros/AGENTS.md)
 
 ### working-with-charts
-- Examples: 330
+- Examples: 621
 - Guide: [AGENTS.md](./working-with-charts/AGENTS.md)
 
 ### working-with-shapes
-- Examples: 162
+- Examples: 370
 - Guide: [AGENTS.md](./working-with-shapes/AGENTS.md)
 
 ### working-with-slides
-- Examples: 110
+- Examples: 230
 - Guide: [AGENTS.md](./working-with-slides/AGENTS.md)
 
 ### working-with-smartart
-- Examples: 116
+- Examples: 202
 - Guide: [AGENTS.md](./working-with-smartart/AGENTS.md)
 
 ### working-with-tables
-- Examples: 109
+- Examples: 140
 - Guide: [AGENTS.md](./working-with-tables/AGENTS.md)
 
 
@@ -388,4 +388,4 @@ dotnet run
 
 
 ---
-Generated: 2026-04-07
+Generated: 2026-04-17
