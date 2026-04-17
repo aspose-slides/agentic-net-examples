@@ -1,0 +1,55 @@
+using System;
+using System.IO;
+using Aspose.Slides;
+using Aspose.Slides.Export;
+
+namespace ExportPresentationZip
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Define input and output file paths
+            string inputFilePath = Path.Combine(Directory.GetCurrentDirectory(), "input.pptx");
+            string outputFilePath = Path.Combine(Directory.GetCurrentDirectory(), "output-zip64.pptx");
+
+            // Verify that the input file exists
+            if (!File.Exists(inputFilePath))
+            {
+                Console.WriteLine("Input file does not exist: " + inputFilePath);
+                return;
+            }
+
+            try
+            {
+                // Load the presentation
+                Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputFilePath);
+
+                // Save the presentation as a ZIP64 package while preserving all document properties
+                presentation.Save(
+                    outputFilePath,
+                    Aspose.Slides.Export.SaveFormat.Pptx,
+                    new Aspose.Slides.Export.PptxOptions()
+                    {
+                        Zip64Mode = Aspose.Slides.Export.Zip64Mode.Always
+                    });
+
+                // Dispose the presentation object
+                presentation.Dispose();
+
+                Console.WriteLine("Presentation exported successfully to: " + outputFilePath);
+            }
+            catch (NotSupportedException)
+            {
+                // Format not supported
+                // Comment: The provided file format is not supported for this operation.
+                Console.WriteLine("The file format is not supported.");
+            }
+            catch (Exception ex)
+            {
+                // General exception handling
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
+        }
+    }
+}

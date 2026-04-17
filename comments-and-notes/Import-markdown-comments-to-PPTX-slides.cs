@@ -1,0 +1,72 @@
+using System;
+using System.IO;
+using System.Collections.Generic;
+using System.Drawing;
+using Aspose.Slides;
+using Aspose.Slides.Export;
+
+namespace SlideCommentImporter
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Input markdown file containing comments
+            string inputPath = "comments.md";
+            if (!File.Exists(inputPath))
+            {
+                Console.WriteLine("Input file not found: " + inputPath);
+                return;
+            }
+
+            // Read all lines from the markdown file
+            string[] lines = File.ReadAllLines(inputPath);
+
+            // Create a new presentation
+            Presentation presentation = new Presentation();
+
+            // Ensure there is at least one slide
+            presentation.Slides.AddEmptySlide(presentation.LayoutSlides[0]);
+
+            // Map to store authors to avoid duplicates
+            Dictionary<string, ICommentAuthor> authorMap = new Dictionary<string, ICommentAuthor>();
+
+            // Process each line: expected format "AuthorName|Initials|CommentText"
+            foreach (string line in lines)
+            {
+                if (string.IsNullOrWhiteSpace(line))
+                    continue;
+
+                string[] parts = line.Split(new char[] { '|' }, 3);
+                if (parts.Length != 3)
+                    continue; // Skip malformed lines
+
+                string authorName = parts[0].Trim();
+                string authorInitials = parts[1].Trim();
+                string commentText = parts[2].Trim();
+
+                ICommentAuthor author;
+                if (!authorMap.TryGetValue(authorName, out author))
+                {
+                    author = presentation.CommentAuthors.AddAuthor(authorName, authorInitials);
+                    authorMap.Add(authorName, author);
+                }
+
+                // Add modern comment to the first slide at a fixed position
+                author.Comments.AddModernComment(
+                    commentText,
+                    presentation.Slides[0],
+                    null,
+                    new PointF(100, 100),
+                    DateTime.Now);
+            }
+
+            // Save the presentation
+            string outputPath = "output.pptx";
+            presentation.Save(outputPath, SaveFormat.Pptx);
+            presentation.Dispose();
+
+            Console.WriteLine("Presentation saved to: " + outputPath);
+        }
+    }
+}
