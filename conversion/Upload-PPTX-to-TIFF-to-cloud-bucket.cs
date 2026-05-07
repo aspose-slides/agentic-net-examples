@@ -1,0 +1,74 @@
+using System;
+using System.IO;
+using System.Net.Http;
+using System.Threading.Tasks;
+using Aspose.Slides;
+using Aspose.Slides.Export;
+
+class Program
+{
+    static async Task Main(string[] args)
+    {
+        // Input PPTX file path
+        string inputPath = "input.pptx";
+        // Output TIFF file path
+        string outputTiffPath = "output.tiff";
+        // Cloud storage upload endpoint (example)
+        string bucketUrl = "https://example.com/upload";
+
+        // Verify that the input file exists
+        if (!File.Exists(inputPath))
+        {
+            Console.WriteLine("Input file does not exist.");
+            return;
+        }
+
+        try
+        {
+            // Load the presentation
+            using (Presentation pres = new Presentation(inputPath))
+            {
+                // Save the presentation as a multi‑page TIFF image
+                pres.Save(outputTiffPath, SaveFormat.Tiff);
+            }
+        }
+        catch (NotSupportedException)
+        {
+            // Comment: format not supported
+            Console.WriteLine("The file format is not supported for conversion.");
+            return;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error during conversion: " + ex.Message);
+            return;
+        }
+
+        // Upload the generated TIFF to a cloud storage bucket
+        try
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                using (FileStream fileStream = new FileStream(outputTiffPath, FileMode.Open, FileAccess.Read))
+                {
+                    using (StreamContent content = new StreamContent(fileStream))
+                    {
+                        content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("image/tiff");
+                        HttpResponseMessage response = await client.PostAsync(bucketUrl, content);
+                        response.EnsureSuccessStatusCode();
+                        Console.WriteLine("Upload successful.");
+                    }
+                }
+            }
+        }
+        catch (HttpRequestException)
+        {
+            // Handle exception for external web service
+            Console.WriteLine("Failed to upload to cloud storage.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Unexpected error: " + ex.Message);
+        }
+    }
+}
