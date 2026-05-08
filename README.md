@@ -24,7 +24,7 @@ Examples are organized by feature category:
 - `presentation-ink-objects/` - 35 example(s)
 - `secure-presentations/` - 29 example(s)
 - `vba-macros/` - 34 example(s)
-- `working-with-charts/` - 291 example(s)
+- `working-with-charts/` - 463 example(s)
 - `working-with-shapes/` - 208 example(s)
 - `working-with-slides/` - 120 example(s)
 - `working-with-smartart/` - 117 example(s)
