@@ -23,25 +23,24 @@ namespace ClearFontSubstitution
             try
             {
                 // Load the presentation
-                using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
+                using (Presentation presentation = new Presentation(inputPath))
                 {
                     // Clear all font substitution rules
-                    Aspose.Slides.IFontSubstRuleCollection emptySubstRules = new Aspose.Slides.FontSubstRuleCollection();
-                    presentation.FontsManager.FontSubstRuleList = emptySubstRules;
+                    presentation.FontsManager.FontSubstRuleList = new FontSubstRuleCollection();
 
-                    // Save the presentation (ensure SaveFormat is referenced from Aspose.Slides.Export)
-                    presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    // Save the modified presentation
+                    presentation.Save(outputPath, SaveFormat.Pptx);
                 }
             }
-            catch (NotSupportedException)
+            catch (PptxUnsupportedFormatException)
             {
                 // Format not supported
-                Console.WriteLine("The specified file format is not supported.");
+                // (Comment: The provided file format is not supported by Aspose.Slides.)
             }
             catch (Exception ex)
             {
-                // General exception handling (e.g., I/O errors, network issues)
-                Console.WriteLine("An error occurred: " + ex.Message);
+                // General exception handling
+                Console.WriteLine("Error: " + ex.Message);
             }
         }
     }
