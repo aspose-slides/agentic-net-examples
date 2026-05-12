@@ -1,0 +1,52 @@
+using System;
+using System.IO;
+using Aspose.Slides;
+using Aspose.Slides.Export;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        string inputPath = "input.pptx";
+        string outputCsv = "font_substitutions.csv";
+
+        // Verify input file exists
+        if (!File.Exists(inputPath))
+        {
+            Console.WriteLine("Input file does not exist.");
+            return;
+        }
+
+        try
+        {
+            // Load presentation
+            Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
+
+            // Create CSV file and write header
+            using (StreamWriter writer = new StreamWriter(outputCsv, false))
+            {
+                writer.WriteLine("SlideIndex,OriginalFont,SubstitutedFont");
+
+                // Iterate through each slide (1‑based index)
+                for (int slideIndex = 1; slideIndex <= pres.Slides.Count; slideIndex++)
+                {
+                    int[] targetSlides = new int[] { slideIndex };
+                    foreach (Aspose.Slides.FontSubstitutionInfo fontSubstitution in pres.FontsManager.GetSubstitutions(targetSlides))
+                    {
+                        writer.WriteLine(slideIndex + "," + fontSubstitution.OriginalFontName + "," + fontSubstitution.SubstitutedFontName);
+                    }
+                }
+            }
+
+            // Save presentation before exit (no modifications made)
+            pres.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            pres.Dispose();
+        }
+        catch (Exception ex)
+        {
+            // If the format is not supported, Aspose.Slides may throw an exception
+            // Format not supported
+            Console.WriteLine("An error occurred: " + ex.Message);
+        }
+    }
+}
