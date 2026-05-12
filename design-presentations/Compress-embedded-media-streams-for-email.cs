@@ -3,13 +3,13 @@ using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-namespace CompressMediaDemo
+namespace CompressMediaExample
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Define input and output file paths
+            // Input and output file paths
             string inputPath = "input.pptx";
             string outputPath = "output_compressed.pptx";
 
@@ -22,25 +22,44 @@ namespace CompressMediaDemo
 
             try
             {
-                // Load the presentation with options to delete embedded binary objects (audio, video, etc.)
-                LoadOptions loadOptions = new LoadOptions();
-                loadOptions.DeleteEmbeddedBinaryObjects = true; // Removes binary objects to reduce size
+                // Load the presentation
+                using (Presentation pres = new Presentation(inputPath))
+                {
+                    // Iterate through all slides
+                    for (int i = 0; i < pres.Slides.Count; i++)
+                    {
+                        ISlide slide = pres.Slides[i];
 
-                Presentation presentation = new Presentation(inputPath, loadOptions);
+                        // Iterate through all shapes on the slide
+                        for (int j = 0; j < slide.Shapes.Count; j++)
+                        {
+                            IShape shape = slide.Shapes[j];
 
-                // Save the optimized presentation
-                presentation.Save(outputPath, SaveFormat.Pptx);
+                            // If the shape is a picture frame, compress its image
+                            IPictureFrame pictureFrame = shape as IPictureFrame;
+                            if (pictureFrame != null)
+                            {
+                                // Compress the picture using Dpi96 (minimum size) and delete cropped areas
+                                pictureFrame.PictureFormat.CompressImage(true, PicturesCompression.Dpi96);
+                            }
+                        }
+                    }
 
-                // Dispose the presentation object
-                presentation.Dispose();
+                    // Save the optimized presentation
+                    pres.Save(outputPath, SaveFormat.Pptx);
+                }
 
                 Console.WriteLine("Presentation compressed and saved to: " + outputPath);
             }
-            catch (NotSupportedException)
+            catch (PptxUnsupportedFormatException)
             {
-                // Format not supported
-                // Comment: The provided file format is not supported for compression.
-                Console.WriteLine("The file format is not supported for compression.");
+                // Format not supported for PPTX
+                Console.WriteLine("The presentation format is not supported (PPTX).");
+            }
+            catch (PptUnsupportedFormatException)
+            {
+                // Format not supported for PPT
+                Console.WriteLine("The presentation format is not supported (PPT).");
             }
             catch (Exception ex)
             {
