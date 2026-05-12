@@ -3,52 +3,53 @@ using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-class Program
+namespace AudioExtractionExample
 {
-    static void Main()
+    class Program
     {
-        // Path to the input presentation
-        string inputPath = "input.pptx";
-        // Folder where extracted audio files will be saved
-        string outputFolder = "ExtractedAudios";
-
-        // Verify that the input file exists
-        if (!File.Exists(inputPath))
+        static void Main(string[] args)
         {
-            Console.WriteLine("Input file does not exist: " + inputPath);
-            return;
-        }
+            // Input presentation path
+            string inputPath = "input.pptx";
+            // Output folder for extracted audio files
+            string outputFolder = "ExtractedAudios";
 
-        try
-        {
-            // Load the presentation
-            using (Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath))
+            // Verify that the input file exists
+            if (!File.Exists(inputPath))
             {
-                // Ensure the output directory exists
-                Directory.CreateDirectory(outputFolder);
+                Console.WriteLine("The specified presentation file does not exist.");
+                return;
+            }
+
+            // Ensure the output directory exists
+            Directory.CreateDirectory(outputFolder);
+
+            try
+            {
+                // Load the presentation
+                Presentation pres = new Presentation(inputPath);
 
                 // Iterate through all embedded audio clips
                 for (int i = 0; i < pres.Audios.Count; i++)
                 {
-                    Aspose.Slides.IAudio audio = pres.Audios[i];
+                    IAudio audio = pres.Audios[i];
                     if (audio != null && audio.BinaryData != null)
                     {
-                        // Determine a file name for the extracted audio
-                        string outPath = Path.Combine(outputFolder, "audio_" + i + ".wav");
-                        // Write the audio binary data to disk
-                        File.WriteAllBytes(outPath, audio.BinaryData);
+                        string audioFilePath = Path.Combine(outputFolder, $"audio_{i}.bin");
+                        File.WriteAllBytes(audioFilePath, audio.BinaryData);
                     }
                 }
 
-                // Save the presentation before exiting (overwrites the original file)
-                pres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                // Save the presentation before exiting (no changes made)
+                pres.Save(inputPath, SaveFormat.Pptx);
+                pres.Dispose();
             }
-        }
-        catch (Exception ex)
-        {
-            // If the file format is not supported, handle accordingly
-            // Format not supported
-            Console.WriteLine("Error: " + ex.Message);
+            catch (Exception ex)
+            {
+                // Handle unsupported format or other errors
+                // Format not supported
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
         }
     }
 }
