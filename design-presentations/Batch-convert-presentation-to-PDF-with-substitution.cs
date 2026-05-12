@@ -3,72 +3,99 @@ using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-class Program
+namespace BatchConvertToPdf
 {
-    static void Main(string[] args)
+    class Program
     {
-        // Define input and output directories
-        string inputDirectory = "InputPresentations";
-        string outputDirectory = "OutputPDFs";
-
-        // Verify input directory exists
-        if (!Directory.Exists(inputDirectory))
+        static void Main(string[] args)
         {
-            Console.WriteLine("Input directory does not exist: " + inputDirectory);
-            return;
-        }
+            // Determine input directory
+            string inputDirectory = (args.Length > 0 && !String.IsNullOrEmpty(args[0])) ? args[0] : "InputPresentations";
 
-        // Create output directory if it does not exist
-        if (!Directory.Exists(outputDirectory))
-        {
-            Directory.CreateDirectory(outputDirectory);
-        }
-
-        // Supported presentation file extensions
-        string[] supportedExtensions = new string[] { ".ppt", ".pptx", ".odp", ".pot", ".potx", ".pptm", ".otp" };
-
-        // Process each file in the input directory
-        string[] files = Directory.GetFiles(inputDirectory);
-        foreach (string filePath in files)
-        {
-            string extension = Path.GetExtension(filePath).ToLowerInvariant();
-
-            // Skip unsupported formats
-            if (Array.IndexOf(supportedExtensions, extension) < 0)
+            // Verify input directory exists
+            if (!Directory.Exists(inputDirectory))
             {
-                Console.WriteLine("Skipping unsupported file format: " + filePath);
-                continue;
+                Console.WriteLine("Input directory not found: " + inputDirectory);
+                return;
             }
 
-            try
+            // Load external fonts (adds system font folders and any custom folders previously added)
+            string[] fontFolders = FontsLoader.GetFontFolders();
+            FontsLoader.LoadExternalFonts(fontFolders);
+
+            // Prepare output directory
+            string outputDirectory = Path.Combine(inputDirectory, "OutputPdf");
+            if (!Directory.Exists(outputDirectory))
             {
-                // Load the presentation
-                using (Presentation presentation = new Presentation(filePath))
+                Directory.CreateDirectory(outputDirectory);
+            }
+
+            // Get all presentation files (ppt, pptx, odp, etc.)
+            string[] presentationFiles = Directory.GetFiles(inputDirectory, "*.*", SearchOption.TopDirectoryOnly);
+            foreach (string filePath in presentationFiles)
+            {
+                // Filter supported presentation extensions
+                string extension = Path.GetExtension(filePath).ToLowerInvariant();
+                if (extension != ".ppt" && extension != ".pptx" && extension != ".odp" && extension != ".pptm" && extension != ".ppsx")
                 {
-                    // Create a font substitution rule for missing fonts
-                    IFontData sourceFont = new FontData("Arial");
-                    IFontData destinationFont = new FontData("Times New Roman");
-                    FontSubstRule substitutionRule = new FontSubstRule(sourceFont, destinationFont, FontSubstCondition.WhenInaccessible);
-                    IFontSubstRuleCollection substitutionRules = new FontSubstRuleCollection();
-                    substitutionRules.Add(substitutionRule);
-                    presentation.FontsManager.FontSubstRuleList = substitutionRules;
-
-                    // Configure PDF options (set default regular font as fallback)
-                    PdfOptions pdfOptions = new PdfOptions();
-                    pdfOptions.DefaultRegularFont = "Arial";
-
-                    // Determine output PDF path
-                    string outputFilePath = Path.Combine(outputDirectory, Path.GetFileNameWithoutExtension(filePath) + ".pdf");
-
-                    // Save the presentation as PDF
-                    presentation.Save(outputFilePath, Aspose.Slides.Export.SaveFormat.Pdf, pdfOptions);
-                    Console.WriteLine("Converted: " + filePath + " -> " + outputFilePath);
+                    // Skip unsupported formats
+                    continue;
                 }
-            }
-            catch (Exception ex)
-            {
-                // Handle errors such as unsupported format or I/O issues
-                Console.WriteLine("Error processing file '" + filePath + "': " + ex.Message);
+
+                // Verify file exists (redundant but follows rule)
+                if (!File.Exists(filePath))
+                {
+                    Console.WriteLine("Input file not found: " + filePath);
+                    continue;
+                }
+
+                try
+                {
+                    // Set load options with default font substitution
+                    LoadOptions loadOptions = new LoadOptions();
+                    loadOptions.DefaultRegularFont = "Arial";
+
+                    // Load presentation with load options
+                    using (Presentation presentation = new Presentation(filePath, loadOptions))
+                    {
+                        // Prepare PDF options (optional customizations)
+                        PdfOptions pdfOptions = new PdfOptions();
+                        pdfOptions.DefaultRegularFont = "Arial";
+
+                        // Determine output PDF path
+                        string fileNameWithoutExt = Path.GetFileNameWithoutExtension(filePath);
+                        string outputPath = Path.Combine(outputDirectory, fileNameWithoutExt + ".pdf");
+
+                        // Ensure output directory exists (already created above)
+                        string outputDir = Path.GetDirectoryName(outputPath);
+                        if (!Directory.Exists(outputDir))
+                        {
+                            Directory.CreateDirectory(outputDir);
+                        }
+
+                        // Save presentation as PDF
+                        presentation.Save(outputPath, SaveFormat.Pdf, pdfOptions);
+                        Console.WriteLine("Converted: " + filePath + " -> " + outputPath);
+                    }
+                }
+                catch (DirectoryNotFoundException dirEx)
+                {
+                    Console.WriteLine("Directory not found: " + dirEx.Message);
+                }
+                catch (FileNotFoundException fileEx)
+                {
+                    Console.WriteLine("File not found: " + fileEx.Message);
+                }
+                catch (NotSupportedException notSupEx)
+                {
+                    // Format not supported
+                    Console.WriteLine("Format not supported for file: " + filePath);
+                }
+                catch (Exception ex)
+                {
+                    // General exception handling
+                    Console.WriteLine("Error processing file " + filePath + ": " + ex.Message);
+                }
             }
         }
     }
