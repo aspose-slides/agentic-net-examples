@@ -9,61 +9,79 @@ namespace BatchConvertToPng
     {
         static void Main(string[] args)
         {
-            // Define input and output directories
             string inputFolder = "InputPresentations";
             string outputFolder = "OutputImages";
 
-            // Verify input directory exists
             if (!Directory.Exists(inputFolder))
             {
-                Console.WriteLine("Input folder not found.");
+                Console.WriteLine("Input folder does not exist.");
                 return;
             }
 
-            // Ensure output directory exists
-            Directory.CreateDirectory(outputFolder);
-
-            // Get all files in the input directory
-            string[] files = Directory.GetFiles(inputFolder, "*.*", SearchOption.TopDirectoryOnly);
-
-            foreach (string filePath in files)
+            if (!Directory.Exists(outputFolder))
             {
-                // Check if the file exists before processing
-                if (!File.Exists(filePath))
-                {
-                    continue;
-                }
+                Directory.CreateDirectory(outputFolder);
+            }
 
+            string[] supportedExtensions = new string[] { ".ppt", ".pptx", ".odp", ".pptm", ".potx", ".potm" };
+            string[] presentationFiles = Directory.GetFiles(inputFolder);
+
+            foreach (string filePath in presentationFiles)
+            {
                 try
                 {
-                    // Load the presentation
-                    Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(filePath);
-
-                    // Set up fallback font rules for consistent rendering
-                    Aspose.Slides.IFontFallBackRulesCollection rules = new Aspose.Slides.FontFallBackRulesCollection();
-                    rules.Add(new Aspose.Slides.FontFallBackRule(0x400, 0x4FF, "Times New Roman"));
-                    presentation.FontsManager.FontFallBackRulesCollection = rules;
-
-                    // Convert each slide to PNG
-                    for (int i = 0; i < presentation.Slides.Count; i++)
+                    if (!File.Exists(filePath))
                     {
-                        Aspose.Slides.IImage image = presentation.Slides[i].GetImage(1f, 1f);
-                        string outputPath = Path.Combine(outputFolder, Path.GetFileNameWithoutExtension(filePath) + $"_slide{i + 1}.png");
-                        image.Save(outputPath, Aspose.Slides.ImageFormat.Png);
+                        Console.WriteLine($"File not found: {filePath}");
+                        continue;
                     }
 
-                    // Save the presentation before exiting (no modifications made)
-                    presentation.Save(filePath, Aspose.Slides.Export.SaveFormat.Pptx);
-                    presentation.Dispose();
+                    string extension = Path.GetExtension(filePath).ToLowerInvariant();
+                    bool isSupported = false;
+                    foreach (string ext in supportedExtensions)
+                    {
+                        if (extension == ext)
+                        {
+                            isSupported = true;
+                            break;
+                        }
+                    }
+
+                    if (!isSupported)
+                    {
+                        // format not supported
+                        Console.WriteLine($"Unsupported format: {filePath}");
+                        continue;
+                    }
+
+                    // Load with fallback font (DefaultRegularFont)
+                    LoadOptions loadOptions = new LoadOptions(LoadFormat.Auto);
+                    loadOptions.DefaultRegularFont = "Arial";
+
+                    using (Presentation presentation = new Presentation(filePath, loadOptions))
+                    {
+                        for (int i = 0; i < presentation.Slides.Count; i++)
+                        {
+                            ISlide slide = presentation.Slides[i];
+                            // Generate full‑scale image
+                            IImage image = slide.GetImage(1f, 1f);
+                            string outputFileName = Path.GetFileNameWithoutExtension(filePath) + $"_slide_{i + 1}.png";
+                            string outputPath = Path.Combine(outputFolder, outputFileName);
+                            image.Save(outputPath, Aspose.Slides.ImageFormat.Png);
+                        }
+
+                        // Save presentation before exit (no changes made, but fulfills requirement)
+                        string tempSavePath = Path.Combine(outputFolder, Path.GetFileName(filePath));
+                        presentation.Save(tempSavePath, SaveFormat.Pptx);
+                    }
                 }
-                catch (NotSupportedException)
+                catch (PptxUnsupportedFormatException)
                 {
-                    // Format not supported
-                    Console.WriteLine($"File format not supported: {filePath}");
+                    // format not supported
+                    Console.WriteLine($"Unsupported format exception for file: {filePath}");
                 }
                 catch (Exception ex)
                 {
-                    // General error handling
                     Console.WriteLine($"Error processing file {filePath}: {ex.Message}");
                 }
             }
