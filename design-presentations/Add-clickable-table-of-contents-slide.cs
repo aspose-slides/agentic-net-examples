@@ -1,65 +1,103 @@
 using System;
+using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-class Program
+namespace AddClickableTOC
 {
-    static void Main()
+    class Program
     {
-        // Create a new presentation (slide 0 will be the TOC)
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        static void Main(string[] args)
+        {
+            // Define input and output file paths
+            string inputPath = "input.pptx";
+            string outputPath = "output.pptx";
 
-        // ----- TOC slide (slide 0) -----
-        Aspose.Slides.ISlide tocSlide = presentation.Slides[0];
-        Aspose.Slides.IAutoShape tocShape = (Aspose.Slides.IAutoShape)tocSlide.Shapes.AddAutoShape(
-            Aspose.Slides.ShapeType.Rectangle, 50, 50, 600, 300);
-        tocShape.AddTextFrame("Table of Contents");
+            // Verify that the input file exists
+            if (!File.Exists(inputPath))
+            {
+                Console.WriteLine("Input file does not exist: " + inputPath);
+                return;
+            }
 
-        // ----- Section 1 slide -----
-        Aspose.Slides.ISlide sectionSlide1 = presentation.Slides.AddEmptySlide(presentation.LayoutSlides[0]);
-        Aspose.Slides.IAutoShape titleShape1 = (Aspose.Slides.IAutoShape)sectionSlide1.Shapes.AddAutoShape(
-            Aspose.Slides.ShapeType.Rectangle, 50, 50, 600, 100);
-        titleShape1.AddTextFrame("Section 1");
+            try
+            {
+                // Load the presentation
+                Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
 
-        // ----- Section 2 slide -----
-        Aspose.Slides.ISlide sectionSlide2 = presentation.Slides.AddEmptySlide(presentation.LayoutSlides[0]);
-        Aspose.Slides.IAutoShape titleShape2 = (Aspose.Slides.IAutoShape)sectionSlide2.Shapes.AddAutoShape(
-            Aspose.Slides.ShapeType.Rectangle, 50, 50, 600, 100);
-        titleShape2.AddTextFrame("Section 2");
+                // Create a new slide for the Table of Contents at the beginning
+                Aspose.Slides.ISlide tocSlide = presentation.Slides.InsertClone(0, presentation.Slides[0]);
 
-        // ----- Section 3 slide -----
-        Aspose.Slides.ISlide sectionSlide3 = presentation.Slides.AddEmptySlide(presentation.LayoutSlides[0]);
-        Aspose.Slides.IAutoShape titleShape3 = (Aspose.Slides.IAutoShape)sectionSlide3.Shapes.AddAutoShape(
-            Aspose.Slides.ShapeType.Rectangle, 50, 50, 600, 100);
-        titleShape3.AddTextFrame("Section 3");
+                // Set a title for the TOC slide
+                Aspose.Slides.IAutoShape titleShape = tocSlide.Shapes.AddAutoShape(ShapeType.Rectangle, 50, 20, 600, 50);
+                titleShape.AddTextFrame("Table of Contents");
+                titleShape.TextFrame.Paragraphs[0].Portions[0].PortionFormat.FontHeight = 24;
+                titleShape.TextFrame.Paragraphs[0].ParagraphFormat.Alignment = TextAlignment.Center;
 
-        // ----- Add TOC entries with internal hyperlinks -----
-        // Entry for Section 1
-        tocShape.TextFrame.Paragraphs.Add(new Aspose.Slides.Paragraph());
-        tocShape.TextFrame.Paragraphs[1].Portions.Add(new Aspose.Slides.Portion());
-        tocShape.TextFrame.Paragraphs[1].Portions[0].Text = "Section 1";
-        Aspose.Slides.IHyperlinkManager hlManager1 = tocShape.TextFrame.Paragraphs[1].Portions[0].PortionFormat.HyperlinkManager;
-        hlManager1.SetInternalHyperlinkClick(sectionSlide1);
+                // Variables for positioning the list items
+                float startY = 80;
+                float lineHeight = 30;
+                int itemIndex = 0;
 
-        // Entry for Section 2
-        tocShape.TextFrame.Paragraphs.Add(new Aspose.Slides.Paragraph());
-        tocShape.TextFrame.Paragraphs[2].Portions.Add(new Aspose.Slides.Portion());
-        tocShape.TextFrame.Paragraphs[2].Portions[0].Text = "Section 2";
-        Aspose.Slides.IHyperlinkManager hlManager2 = tocShape.TextFrame.Paragraphs[2].Portions[0].PortionFormat.HyperlinkManager;
-        hlManager2.SetInternalHyperlinkClick(sectionSlide2);
+                // Iterate through all slides (skip the newly added TOC slide)
+                for (int i = 1; i < presentation.Slides.Count; i++)
+                {
+                    Aspose.Slides.ISlide slide = presentation.Slides[i];
+                    string headingText = null;
 
-        // Entry for Section 3
-        tocShape.TextFrame.Paragraphs.Add(new Aspose.Slides.Paragraph());
-        tocShape.TextFrame.Paragraphs[3].Portions.Add(new Aspose.Slides.Portion());
-        tocShape.TextFrame.Paragraphs[3].Portions[0].Text = "Section 3";
-        Aspose.Slides.IHyperlinkManager hlManager3 = tocShape.TextFrame.Paragraphs[3].Portions[0].PortionFormat.HyperlinkManager;
-        hlManager3.SetInternalHyperlinkClick(sectionSlide3);
+                    // Search for a title placeholder shape on the slide
+                    foreach (Aspose.Slides.IShape shape in slide.Shapes)
+                    {
+                        if (shape.Placeholder != null && shape.Placeholder.Type == PlaceholderType.Title)
+                        {
+                            Aspose.Slides.IAutoShape autoShape = shape as Aspose.Slides.IAutoShape;
+                            if (autoShape != null && autoShape.TextFrame != null)
+                            {
+                                headingText = autoShape.TextFrame.Text;
+                                break;
+                            }
+                        }
+                    }
 
-        // Save the presentation
-        string outputPath = "TableOfContents.pptx";
-        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    // If a title was found, add an entry to the TOC slide
+                    if (!string.IsNullOrEmpty(headingText))
+                    {
+                        float posY = startY + (itemIndex * lineHeight);
+                        Aspose.Slides.IAutoShape entryShape = tocSlide.Shapes.AddAutoShape(ShapeType.Rectangle, 70, posY, 560, lineHeight);
+                        entryShape.AddTextFrame(headingText);
+                        entryShape.TextFrame.Paragraphs[0].Portions[0].PortionFormat.FontHeight = 14;
+                        entryShape.TextFrame.Paragraphs[0].ParagraphFormat.Alignment = TextAlignment.Left;
 
-        // Dispose the presentation
-        presentation.Dispose();
+                        // Create an internal hyperlink to the target slide
+                        try
+                        {
+                            entryShape.HyperlinkClick = new Aspose.Slides.Hyperlink(slide);
+                        }
+                        catch (Exception ex)
+                        {
+                            // Handle any exception that may occur while setting the hyperlink
+                            Console.WriteLine("Failed to set hyperlink for slide " + (i + 1) + ": " + ex.Message);
+                        }
+
+                        itemIndex++;
+                    }
+                }
+
+                // Save the modified presentation
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                presentation.Dispose();
+            }
+            catch (NotSupportedException)
+            {
+                // Format not supported
+                // Comment: The provided file format is not supported by Aspose.Slides.
+                Console.WriteLine("The file format is not supported.");
+            }
+            catch (Exception ex)
+            {
+                // General exception handling (including external URL or web service errors)
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
+        }
     }
 }
