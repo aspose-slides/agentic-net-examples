@@ -3,54 +3,77 @@ using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-class Program
+namespace AddHeaderFooter
 {
-    static void Main()
+    class Program
     {
-        string dataDir = "Data";
-        string inputPath = Path.Combine(dataDir, "input.pptx");
-        string outputPath = Path.Combine(dataDir, "output.pptx");
-
-        if (!File.Exists(inputPath))
+        static void Main(string[] args)
         {
-            Console.WriteLine("Input file does not exist: " + inputPath);
-            return;
-        }
+            // Input and output file paths
+            string inputPath = "input.pptx";
+            string outputPath = "output.pptx";
 
-        try
-        {
-            Presentation presentation = new Presentation(inputPath);
-
-            for (int i = 0; i < presentation.Slides.Count; i++)
+            // Verify that the input file exists
+            if (!File.Exists(inputPath))
             {
-                IBaseSlideHeaderFooterManager manager = presentation.Slides[i].HeaderFooterManager;
-
-                if (!manager.IsFooterVisible)
-                {
-                    manager.SetFooterVisibility(true);
-                }
-                if (!manager.IsSlideNumberVisible)
-                {
-                    manager.SetSlideNumberVisibility(true);
-                }
-                if (!manager.IsDateTimeVisible)
-                {
-                    manager.SetDateTimeVisibility(true);
-                }
-
-                manager.SetFooterText("Custom Footer Text");
-                manager.SetDateTimeText(DateTime.Now.ToString("yyyy-MM-dd"));
+                Console.WriteLine("Input file does not exist: " + inputPath);
+                return;
             }
 
-            // Ensure slide numbers are visible for the whole presentation
-            presentation.HeaderFooterManager.SetAllSlideNumbersVisibility(true);
+            try
+            {
+                // Load the presentation
+                using (Presentation presentation = new Presentation(inputPath))
+                {
+                    // Set the current date/time for date-time placeholders (optional)
+                    presentation.CurrentDateTime = DateTime.Now;
 
-            presentation.Save(outputPath, SaveFormat.Pptx);
-        }
-        catch (Exception ex)
-        {
-            // Handle unsupported format or other errors
-            Console.WriteLine("Error: " + ex.Message);
+                    // Iterate through each slide and configure header/footer
+                    for (int i = 0; i < presentation.Slides.Count; i++)
+                    {
+                        ISlide slide = presentation.Slides[i];
+                        ISlideHeaderFooterManager headerFooter = slide.HeaderFooterManager;
+
+                        // Ensure footer placeholder is visible and set custom text
+                        if (!headerFooter.IsFooterVisible)
+                        {
+                            headerFooter.SetFooterVisibility(true);
+                        }
+                        headerFooter.SetFooterText("Custom Footer Text");
+
+                        // Ensure date-time placeholder is visible and set current date
+                        if (!headerFooter.IsDateTimeVisible)
+                        {
+                            headerFooter.SetDateTimeVisibility(true);
+                        }
+                        headerFooter.SetDateTimeText(DateTime.Now.ToString("D"));
+
+                        // Ensure slide number placeholder is visible
+                        if (!headerFooter.IsSlideNumberVisible)
+                        {
+                            headerFooter.SetSlideNumberVisibility(true);
+                        }
+                    }
+
+                    // Save the modified presentation
+                    presentation.Save(outputPath, SaveFormat.Pptx);
+                }
+            }
+            catch (Aspose.Slides.PptxUnsupportedFormatException)
+            {
+                // The file format is not supported for PPTX
+                Console.WriteLine("The input file format is not supported (PPTX).");
+            }
+            catch (Aspose.Slides.PptUnsupportedFormatException)
+            {
+                // The file format is not supported for PPT
+                Console.WriteLine("The input file format is not supported (PPT).");
+            }
+            catch (Exception ex)
+            {
+                // General exception handling
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
         }
     }
 }
