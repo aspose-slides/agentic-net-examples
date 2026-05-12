@@ -1,60 +1,67 @@
 using System;
 using System.IO;
-using Aspose.Slides;
 using Aspose.Slides.Export;
-using Aspose.Slides.Util;
 
-namespace ReplaceBulletPoints
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            string inputPath = args.Length > 0 ? args[0] : "input.pptx";
-            if (!File.Exists(inputPath))
-            {
-                Console.WriteLine("Input file does not exist: " + inputPath);
-                return;
-            }
+        string inputPath = "input.pptx";
+        string outputPath = "output.pptx";
 
-            try
+        if (args.Length >= 1)
+        {
+            inputPath = args[0];
+        }
+        if (args.Length >= 2)
+        {
+            outputPath = args[1];
+        }
+
+        if (!File.Exists(inputPath))
+        {
+            Console.WriteLine("Input file does not exist: " + inputPath);
+            return;
+        }
+
+        try
+        {
+            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
             {
-                using (Presentation pres = new Presentation(inputPath))
+                // Iterate through all slides
+                foreach (Aspose.Slides.ISlide slide in presentation.Slides)
                 {
-                    // Iterate through all slides
-                    for (int s = 0; s < pres.Slides.Count; s++)
+                    // Iterate through all shapes on the slide
+                    foreach (Aspose.Slides.IShape shape in slide.Shapes)
                     {
-                        Aspose.Slides.ISlide slide = pres.Slides[s];
-                        // Get all text boxes on the slide
-                        ITextFrame[] textFrames = SlideUtil.GetAllTextBoxes(slide);
-                        foreach (ITextFrame textFrame in textFrames)
+                        // Process only AutoShape objects that contain a TextFrame
+                        Aspose.Slides.IAutoShape autoShape = shape as Aspose.Slides.IAutoShape;
+                        if (autoShape != null && autoShape.TextFrame != null)
                         {
-                            // Process each paragraph in the text frame
-                            for (int p = 0; p < textFrame.Paragraphs.Count; p++)
+                            Aspose.Slides.ITextFrame textFrame = autoShape.TextFrame;
+                            // Replace each paragraph's bullet with a numbered bullet, preserving depth
+                            for (int i = 0; i < textFrame.Paragraphs.Count; i++)
                             {
-                                IParagraph paragraph = textFrame.Paragraphs[p];
-                                // Set bullet type to numbered list
+                                Aspose.Slides.IParagraph paragraph = textFrame.Paragraphs[i];
                                 paragraph.ParagraphFormat.Bullet.Type = Aspose.Slides.BulletType.Numbered;
-                                // Start numbering from 1 for each paragraph (or you can customize based on indentation)
-                                paragraph.ParagraphFormat.Bullet.NumberedBulletStartWith = 1;
-                                // Apply default indentation shifts to keep original indentation levels
-                                paragraph.ParagraphFormat.Bullet.ApplyDefaultParagraphIndentsShifts();
+                                // Keep existing indentation level (Depth) unchanged
+                                paragraph.ParagraphFormat.Bullet.NumberedBulletStartWith = (short)1;
                             }
                         }
                     }
-
-                    // Save the modified presentation
-                    string outputPath = "output.pptx";
-                    pres.Save(outputPath, SaveFormat.Pptx);
-                    Console.WriteLine("Presentation saved to: " + outputPath);
                 }
+
+                // Save the modified presentation
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
             }
-            catch (Exception ex)
-            {
-                // Handle unsupported format or other errors
-                Console.WriteLine("An error occurred: " + ex.Message);
-                // If the format is not supported, comment: format not supported
-            }
+        }
+        catch (NotSupportedException)
+        {
+            // format not supported
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error: " + ex.Message);
         }
     }
 }
