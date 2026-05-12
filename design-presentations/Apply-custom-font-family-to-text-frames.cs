@@ -1,0 +1,81 @@
+using System;
+using System.IO;
+using Aspose.Slides;
+using Aspose.Slides.Export;
+
+class Program
+{
+    static void Main()
+    {
+        string inputPath = "input.pptx";
+        string outputPath = "output.pptx";
+        string customFontFamily = "Arial";
+
+        if (!File.Exists(inputPath))
+        {
+            Console.WriteLine("Input file does not exist.");
+            return;
+        }
+
+        try
+        {
+            using (Presentation presentation = new Presentation(inputPath))
+            {
+                foreach (ISlide slide in presentation.Slides)
+                {
+                    foreach (IShape shape in slide.Shapes)
+                    {
+                        if (shape is IAutoShape autoShape && autoShape.TextFrame != null)
+                        {
+                            ITextFrame textFrame = autoShape.TextFrame;
+                            foreach (IParagraph paragraph in textFrame.Paragraphs)
+                            {
+                                foreach (IPortion portion in paragraph.Portions)
+                                {
+                                    // Change only the font family, keep other formatting intact
+                                    portion.PortionFormat.LatinFont = new FontData(customFontFamily);
+                                }
+                            }
+                        }
+                        else if (shape is IGroupShape groupShape)
+                        {
+                            ProcessGroupShape(groupShape, customFontFamily);
+                        }
+                    }
+                }
+
+                // Save the modified presentation
+                presentation.Save(outputPath, SaveFormat.Pptx);
+            }
+        }
+        catch (Aspose.Slides.PptxUnsupportedFormatException)
+        {
+            // Format not supported
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error: " + ex.Message);
+        }
+    }
+
+    static void ProcessGroupShape(IGroupShape groupShape, string fontFamily)
+    {
+        foreach (IShape shape in groupShape.Shapes)
+        {
+            if (shape is IAutoShape autoShape && autoShape.TextFrame != null)
+            {
+                foreach (IParagraph paragraph in autoShape.TextFrame.Paragraphs)
+                {
+                    foreach (IPortion portion in paragraph.Portions)
+                    {
+                        portion.PortionFormat.LatinFont = new FontData(fontFamily);
+                    }
+                }
+            }
+            else if (shape is IGroupShape innerGroup)
+            {
+                ProcessGroupShape(innerGroup, fontFamily);
+            }
+        }
+    }
+}

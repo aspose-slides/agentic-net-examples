@@ -1,0 +1,63 @@
+using System;
+using System.IO;
+using Aspose.Slides;
+using Aspose.Slides.Export;
+
+namespace SlideBackgroundTileExample
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Define data directory and ensure it exists
+            string dataDir = Path.Combine(Directory.GetCurrentDirectory(), "Data");
+            if (!Directory.Exists(dataDir))
+            {
+                Directory.CreateDirectory(dataDir);
+            }
+
+            // Define image path for background
+            string imagePath = Path.Combine(dataDir, "background.jpg");
+
+            // Check if the image file exists
+            if (!File.Exists(imagePath))
+            {
+                Console.WriteLine("Image file not found: " + imagePath);
+                return;
+            }
+
+            // Create a new presentation
+            Presentation pres = new Presentation();
+
+            try
+            {
+                // Load image and add to presentation's image collection
+                IImage img = Images.FromFile(imagePath);
+                IPPImage ppImg = pres.Images.AddImage(img);
+
+                // Apply tiled picture fill to each slide background
+                foreach (ISlide slide in pres.Slides)
+                {
+                    slide.Background.Type = BackgroundType.OwnBackground;
+                    slide.Background.FillFormat.FillType = FillType.Picture;
+                    slide.Background.FillFormat.PictureFillFormat.PictureFillMode = PictureFillMode.Tile;
+                    slide.Background.FillFormat.PictureFillFormat.Picture.Image = ppImg;
+                }
+
+                // Save the presentation
+                string outPath = Path.Combine(dataDir, "TiledBackgroundPresentation.pptx");
+                pres.Save(outPath, SaveFormat.Pptx);
+            }
+            catch (Exception ex)
+            {
+                // Handle unsupported format or other exceptions
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                // Ensure resources are released
+                pres.Dispose();
+            }
+        }
+    }
+}
