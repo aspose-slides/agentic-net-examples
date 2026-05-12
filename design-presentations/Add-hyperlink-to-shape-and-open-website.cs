@@ -10,25 +10,35 @@ class Program
         Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
         // Add a rectangle shape to the first slide
-        Aspose.Slides.IAutoShape shape = presentation.Slides[0].Shapes.AddAutoShape(
-            Aspose.Slides.ShapeType.Rectangle, 150, 150, 150, 50);
-        shape.AddTextFrame("Click Here");
+        Aspose.Slides.IAutoShape shape = (Aspose.Slides.IAutoShape)presentation.Slides[0].Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 100, 100, 200, 50);
 
-        // Set an external hyperlink that opens a website when the shape is clicked
-        Aspose.Slides.IHyperlinkManager hyperlinkManager = shape.HyperlinkManager;
-        hyperlinkManager.SetExternalHyperlinkClick("https://www.example.com");
+        // Add text to the shape
+        shape.AddTextFrame("Click here");
 
-        // Save the presentation (handle unsupported format exception)
+        // Set an external hyperlink that opens when the shape is clicked
         try
         {
-            presentation.Save("HyperlinkShape.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            shape.HyperlinkManager.SetExternalHyperlinkClick("https://www.example.com");
         }
-        catch (NotSupportedException)
+        catch (Exception ex)
         {
-            // Format not supported
+            // Handle any exception that occurs while setting the hyperlink
+            Console.WriteLine("Error setting hyperlink: " + ex.Message);
         }
 
-        // Dispose the presentation before exiting
+        // Save the presentation
+        try
+        {
+            presentation.Save("HyperlinkDemo.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        }
+        catch (Exception ex)
+        {
+            // Handle format not supported or other save errors
+            // Format not supported
+            Console.WriteLine("Error saving presentation: " + ex.Message);
+        }
+
+        // Dispose the presentation object
         presentation.Dispose();
     }
 }
