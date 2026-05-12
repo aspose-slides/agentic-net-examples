@@ -4,44 +4,55 @@ using Aspose.Slides;
 using Aspose.Slides.Export;
 using System.Drawing;
 
-class Program
+namespace ApplySolidBackground
 {
-    static void Main()
+    class Program
     {
-        string inputPath = "input.pptx";
-        string outputPath = "output.pptx";
-
-        if (!File.Exists(inputPath))
+        static void Main(string[] args)
         {
-            Console.WriteLine("Input file does not exist.");
-            return;
-        }
-
-        Aspose.Slides.Presentation presentation = null;
-        try
-        {
-            presentation = new Aspose.Slides.Presentation(inputPath);
-        }
-        catch (Exception)
-        {
-            // format not supported
-            Console.WriteLine("File format not supported.");
-            return;
-        }
-
-        for (int i = 0; i < presentation.Slides.Count; i++)
-        {
-            Aspose.Slides.IBackgroundEffectiveData effective = presentation.Slides[i].Background.GetEffective();
-            if (effective.FillFormat.FillType != Aspose.Slides.FillType.Solid)
+            // Create a new presentation
+            using (Presentation presentation = new Presentation())
             {
-                // Apply solid background to slide that does not inherit from master
-                presentation.Slides[i].Background.Type = Aspose.Slides.BackgroundType.OwnBackground;
-                presentation.Slides[i].Background.FillFormat.FillType = Aspose.Slides.FillType.Solid;
-                presentation.Slides[i].Background.FillFormat.SolidFillColor.Color = Color.LightGray;
+                // Iterate through all slides
+                for (int i = 0; i < presentation.Slides.Count; i++)
+                {
+                    ISlide slide = presentation.Slides[i];
+
+                    // If the slide does not have its own background (inherits from master)
+                    if (slide.Background.Type != BackgroundType.OwnBackground)
+                    {
+                        // Set the slide to use its own background
+                        slide.Background.Type = BackgroundType.OwnBackground;
+
+                        // Set fill type to solid
+                        slide.Background.FillFormat.FillType = FillType.Solid;
+
+                        // Apply a solid color (e.g., LightGray)
+                        slide.Background.FillFormat.SolidFillColor.Color = Color.LightGray;
+                    }
+                }
+
+                // Save the presentation
+                try
+                {
+                    presentation.Save("OutputPresentation.pptx", SaveFormat.Pptx);
+                }
+                catch (Aspose.Slides.PptxUnsupportedFormatException ex)
+                {
+                    // Handle unsupported PPTX format
+                    Console.WriteLine("Unsupported PPTX format: " + ex.Message);
+                }
+                catch (Aspose.Slides.PptUnsupportedFormatException ex)
+                {
+                    // Handle unsupported PPT format
+                    Console.WriteLine("Unsupported PPT format: " + ex.Message);
+                }
+                catch (Exception ex)
+                {
+                    // General exception handling
+                    Console.WriteLine("An error occurred: " + ex.Message);
+                }
             }
         }
-
-        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
-        presentation.Dispose();
     }
 }
