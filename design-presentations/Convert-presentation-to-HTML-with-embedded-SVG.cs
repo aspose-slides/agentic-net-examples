@@ -3,45 +3,54 @@ using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-class Program
+namespace PresentationToHtml
 {
-    static void Main()
+    class Program
     {
-        string inputPath = "input.pptx";
-        string outputHtml = "output.html";
-
-        // Verify that the input file exists
-        if (!File.Exists(inputPath))
+        static void Main(string[] args)
         {
-            Console.WriteLine("Input file does not exist.");
-            return;
-        }
+            // Define input and output paths
+            string inputPath = "input.pptx";
+            string outputHtml = "output.html";
 
-        try
-        {
-            Presentation presentation = new Presentation(inputPath);
+            // Verify input file exists
+            if (!File.Exists(inputPath))
+            {
+                Console.WriteLine("Input file does not exist: " + inputPath);
+                return;
+            }
 
-            // Create HTML controller for embedding SVG graphics
-            VideoPlayerHtmlController controller = new VideoPlayerHtmlController(string.Empty, outputHtml, string.Empty);
-            HtmlOptions htmlOptions = new HtmlOptions(controller);
-            SVGOptions svgOptions = new SVGOptions(controller);
+            try
+            {
+                // Load presentation
+                Presentation presentation = new Presentation(inputPath);
 
-            htmlOptions.HtmlFormatter = HtmlFormatter.CreateCustomFormatter(controller);
-            htmlOptions.SlideImageFormat = SlideImageFormat.Svg(svgOptions);
+                // Set up HTML controller for embedding SVG graphics
+                string baseUri = "";
+                VideoPlayerHtmlController controller = new VideoPlayerHtmlController("", outputHtml, baseUri);
 
-            // Save presentation as HTML with embedded SVG
-            presentation.Save(outputHtml, SaveFormat.Html, htmlOptions);
-            presentation.Dispose();
-        }
-        catch (NotSupportedException)
-        {
-            // Format not supported
-            Console.WriteLine("The file format is not supported.");
-        }
-        catch (Exception ex)
-        {
-            // General error handling
-            Console.WriteLine("An error occurred: " + ex.Message);
+                // Configure HTML and SVG options
+                HtmlOptions htmlOptions = new HtmlOptions(controller);
+                SVGOptions svgOptions = new SVGOptions(controller);
+                htmlOptions.HtmlFormatter = HtmlFormatter.CreateCustomFormatter(controller);
+                htmlOptions.SlideImageFormat = SlideImageFormat.Svg(svgOptions);
+
+                // Save presentation as HTML with embedded SVG
+                presentation.Save(outputHtml, SaveFormat.Html, htmlOptions);
+
+                // Clean up
+                presentation.Dispose();
+            }
+            catch (NotSupportedException)
+            {
+                // Format not supported
+                Console.WriteLine("The presentation format is not supported for conversion.");
+            }
+            catch (Exception ex)
+            {
+                // General exception handling
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
         }
     }
 }
