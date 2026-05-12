@@ -3,50 +3,46 @@ using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-namespace RenderPresentationToPdf
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
+        // Input and output file paths
+        string inputPath = "input.pptx";
+        string outputPath = "output.pdf";
+
+        // Check if the input file exists
+        if (!File.Exists(inputPath))
         {
-            // Input and output file paths
-            string inputPath = "input.pptx";
-            string outputPath = "output.pdf";
+            Console.WriteLine("Input file does not exist.");
+            return;
+        }
 
-            // Verify that the input file exists
-            if (!File.Exists(inputPath))
-            {
-                Console.WriteLine("Input file does not exist: " + inputPath);
-                return;
-            }
+        try
+        {
+            // Load the presentation
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
 
-            try
-            {
-                // Load the presentation with fallback font settings
-                LoadOptions loadOptions = new LoadOptions();
-                loadOptions.DefaultRegularFont = "Arial";
-                using (Presentation presentation = new Presentation(inputPath, loadOptions))
-                {
-                    // Configure PDF export options with fallback font
-                    PdfOptions pdfOptions = new PdfOptions();
-                    pdfOptions.DefaultRegularFont = "Arial";
+            // Create a collection of fallback font rules
+            Aspose.Slides.IFontFallBackRulesCollection rules = new Aspose.Slides.FontFallBackRulesCollection();
 
-                    // Save the presentation as PDF using the correct SaveFormat enum
-                    presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pdf, pdfOptions);
-                }
+            // Add a fallback rule (example: Unicode range for emojis to "Segoe UI Emoji")
+            rules.Add(new Aspose.Slides.FontFallBackRule(0x1F600, 0x1F64F, "Segoe UI Emoji"));
 
-                Console.WriteLine("Presentation successfully rendered to PDF: " + outputPath);
-            }
-            catch (PptxUnsupportedFormatException)
-            {
-                // Handle unsupported file format
-                Console.WriteLine("The provided file format is not supported for conversion.");
-            }
-            catch (Exception ex)
-            {
-                // Handle other exceptions (e.g., network errors, I/O errors)
-                Console.WriteLine("An error occurred: " + ex.Message);
-            }
+            // Assign the fallback rules collection to the presentation's FontsManager
+            presentation.FontsManager.FontFallBackRulesCollection = rules;
+
+            // Save the presentation as PDF
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pdf);
+
+            // Dispose the presentation
+            presentation.Dispose();
+        }
+        catch (Exception ex)
+        {
+            // Handle unsupported format or other errors
+            // format not supported
+            Console.WriteLine("Error: " + ex.Message);
         }
     }
 }
