@@ -3,29 +3,44 @@ using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-class Program
+namespace Example
 {
-    static void Main()
+    class Program
     {
-        string inputPath = "input.pptx";
-        string outputPath = "output.pptx";
-
-        if (!File.Exists(inputPath))
+        static void Main(string[] args)
         {
-            Console.WriteLine("Input file does not exist.");
-            return;
-        }
+            string inputPath = "input.pptx";
+            string outputPath = "output.pptx";
 
-        try
-        {
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+            // Check if the input file exists
+            if (!File.Exists(inputPath))
+            {
+                Console.WriteLine("Input file does not exist.");
+                return;
+            }
+
+            Aspose.Slides.Presentation presentation = null;
+            try
+            {
+                // Load the presentation
+                presentation = new Aspose.Slides.Presentation(inputPath);
+            }
+            catch (Exception ex)
+            {
+                // Handle loading errors (e.g., unsupported format)
+                Console.WriteLine("Failed to load presentation: " + ex.Message);
+                return;
+            }
+
+            // Retrieve embedded fonts
             Aspose.Slides.IFontData[] embeddedFonts = presentation.FontsManager.GetEmbeddedFonts();
 
             if (embeddedFonts != null && embeddedFonts.Length > 0)
             {
                 foreach (Aspose.Slides.IFontData font in embeddedFonts)
                 {
-                    Console.WriteLine("Embedded Font: " + font.FontName);
+                    // Log each embedded font name
+                    Console.WriteLine("Embedded font: " + font.FontName);
                 }
             }
             else
@@ -33,18 +48,19 @@ class Program
                 Console.WriteLine("No embedded fonts found.");
             }
 
-            // Save presentation before exit
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            try
+            {
+                // Save the presentation before exiting
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            }
+            catch (Exception ex)
+            {
+                // Handle save errors (e.g., unsupported format)
+                Console.WriteLine("Failed to save presentation: " + ex.Message);
+            }
+
+            // Dispose the presentation
             presentation.Dispose();
-        }
-        catch (NotSupportedException)
-        {
-            // format not supported
-            Console.WriteLine("File format not supported.");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine("Error processing presentation: " + ex.Message);
         }
     }
 }
