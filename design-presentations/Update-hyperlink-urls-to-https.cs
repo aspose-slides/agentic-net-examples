@@ -7,41 +7,67 @@ namespace UpdateHyperlinks
 {
     class Program
     {
-        static void Main()
+        static void Main(string[] args)
         {
-            var inputPath = "input.pptx";
-            var outputPath = "output.pptx";
+            // Input and output file paths
+            string inputPath = "input.pptx";
+            string outputPath = "output.pptx";
 
+            // Verify input file exists
             if (!File.Exists(inputPath))
             {
                 Console.WriteLine("Input file does not exist.");
                 return;
             }
 
+            Presentation presentation = null;
             try
             {
-                using (var presentation = new Aspose.Slides.Presentation(inputPath))
+                // Load the presentation
+                presentation = new Presentation(inputPath);
+            }
+            catch (Exception ex)
+            {
+                // Handle unsupported format or loading errors
+                Console.WriteLine("Failed to load presentation: " + ex.Message);
+                // Format not supported
+                return;
+            }
+
+            // Iterate through all slides and shapes to update hyperlink URLs to HTTPS
+            for (int slideIndex = 0; slideIndex < presentation.Slides.Count; slideIndex++)
+            {
+                ISlide slide = presentation.Slides[slideIndex];
+                for (int shapeIndex = 0; shapeIndex < slide.Shapes.Count; shapeIndex++)
                 {
-                    foreach (var slide in presentation.Slides)
+                    IShape shape = slide.Shapes[shapeIndex];
+                    if (shape is IAutoShape)
                     {
-                        foreach (var shape in slide.Shapes)
+                        IAutoShape autoShape = (IAutoShape)shape;
+                        if (autoShape.TextFrame != null)
                         {
-                            if (shape is Aspose.Slides.IAutoShape autoShape && autoShape.TextFrame != null)
+                            for (int paraIndex = 0; paraIndex < autoShape.TextFrame.Paragraphs.Count; paraIndex++)
                             {
-                                var paragraphs = autoShape.TextFrame.Paragraphs;
-                                for (int p = 0; p < paragraphs.Count; p++)
+                                IParagraph paragraph = autoShape.TextFrame.Paragraphs[paraIndex];
+                                for (int portionIndex = 0; portionIndex < paragraph.Portions.Count; portionIndex++)
                                 {
-                                    var portions = paragraphs[p].Portions;
-                                    for (int po = 0; po < portions.Count; po++)
+                                    IPortion portion = paragraph.Portions[portionIndex];
+                                    IHyperlink existingLink = portion.PortionFormat.HyperlinkClick;
+                                    if (existingLink != null && !string.IsNullOrEmpty(existingLink.ExternalUrl))
                                     {
-                                        var hyperlink = portions[po].PortionFormat.HyperlinkClick;
-                                        if (hyperlink != null)
+                                        string url = existingLink.ExternalUrl;
+                                        if (url.StartsWith("http://", StringComparison.OrdinalIgnoreCase))
                                         {
-                                            var url = (hyperlink as Aspose.Slides.Hyperlink)?.ExternalUrl;
-                                            if (!string.IsNullOrEmpty(url) && url.StartsWith("http://"))
+                                            string httpsUrl = "https://" + url.Substring(7);
+                                            try
                                             {
-                                                var newUrl = "https://" + url.Substring(7);
-                                                portions[po].PortionFormat.HyperlinkClick = new Aspose.Slides.Hyperlink(newUrl);
+                                                IHyperlinkManager manager = portion.PortionFormat.HyperlinkManager;
+                                                manager.SetExternalHyperlinkClick(httpsUrl);
+                                            }
+                                            catch (Exception linkEx)
+                                            {
+                                                // Handle external URL setting exception
+                                                Console.WriteLine("Failed to set HTTPS hyperlink: " + linkEx.Message);
                                             }
                                         }
                                     }
@@ -49,19 +75,26 @@ namespace UpdateHyperlinks
                             }
                         }
                     }
-
-                    presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
                 }
             }
-            catch (NotSupportedException)
+
+            // Save the updated presentation
+            try
             {
-                // Format not supported
-                Console.WriteLine("File format not supported.");
+                presentation.Save(outputPath, SaveFormat.Pptx);
             }
-            catch (Exception ex)
+            catch (Exception saveEx)
             {
-                // General error handling
-                Console.WriteLine("An error occurred: " + ex.Message);
+                // Handle save errors
+                Console.WriteLine("Failed to save presentation: " + saveEx.Message);
+            }
+            finally
+            {
+                // Ensure resources are released
+                if (presentation != null)
+                {
+                    presentation.Dispose();
+                }
             }
         }
     }
