@@ -3,53 +3,57 @@ using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-namespace Example
+namespace AsposeSlidesExample
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Paths for input presentation, thumbnail output, and saved presentation
-            string inputPath = "input.pptx";
+            // Input presentation file path
+            string presentationPath = "input.pptx";
+            // Output thumbnail image path
             string thumbnailPath = "thumbnail.png";
-            string outputPath = "output.pptx";
+            // Path to save the presentation after processing
+            string savedPresentationPath = "output.pptx";
 
             // Verify that the input file exists
-            if (!File.Exists(inputPath))
+            if (!File.Exists(presentationPath))
             {
-                Console.WriteLine("Input file does not exist: " + inputPath);
+                Console.WriteLine("Presentation file not found: " + presentationPath);
                 return;
             }
 
             try
             {
-                // Set default Asian font via LoadOptions
+                // Configure load options with a default Asian font
                 LoadOptions loadOptions = new LoadOptions();
                 loadOptions.DefaultAsianFont = "Arial Unicode MS";
 
-                // Load the presentation with the specified load options
-                using (Presentation presentation = new Presentation(inputPath, loadOptions))
+                // Load the presentation using the specified load options
+                using (Presentation presentation = new Presentation(presentationPath, loadOptions))
                 {
-                    // Access the first slide
+                    // Access the first slide in the presentation
                     ISlide slide = presentation.Slides[0];
 
-                    // Generate a thumbnail image using GetImage (GetThumbnail is not available)
+                    // Generate a full‑scale thumbnail image of the slide
                     IImage thumbnail = slide.GetImage(1f, 1f);
+
+                    // Save the thumbnail as a PNG file
                     thumbnail.Save(thumbnailPath, Aspose.Slides.ImageFormat.Png);
 
-                    // Save the presentation before exiting (optional, demonstrates lifecycle rule)
-                    presentation.Save(outputPath, SaveFormat.Pptx);
+                    // Save the presentation (required before exiting)
+                    presentation.Save(savedPresentationPath, SaveFormat.Pptx);
                 }
             }
             catch (NotSupportedException)
             {
                 // Handle unsupported file format
-                Console.WriteLine("The file format is not supported.");
+                Console.WriteLine("The specified file format is not supported.");
             }
             catch (Exception ex)
             {
-                // General exception handling
-                Console.WriteLine("Error: " + ex.Message);
+                // General error handling
+                Console.WriteLine("An error occurred: " + ex.Message);
             }
         }
     }
