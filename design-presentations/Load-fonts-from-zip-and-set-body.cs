@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.IO.Compression;
+using System.Collections.Generic;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
@@ -10,27 +11,21 @@ namespace FontFromZipExample
     {
         static void Main(string[] args)
         {
-            // Input files
+            // Paths
             string zipPath = "fonts.zip";
-            string presentationPath = "input.pptx";
-            string outputPath = "output.pptx";
+            string outputPath = "PresentationWithCustomFont.pptx";
 
-            // Verify input files exist
+            // Check if zip file exists
             if (!File.Exists(zipPath))
             {
-                Console.WriteLine("Zip archive not found: " + zipPath);
-                return;
-            }
-            if (!File.Exists(presentationPath))
-            {
-                Console.WriteLine("Presentation file not found: " + presentationPath);
+                Console.WriteLine("Font zip archive not found: " + zipPath);
                 return;
             }
 
+            // Load font files from zip into memory
+            List<byte[]> fontDataList = new List<byte[]>();
             try
             {
-                // Load font binaries from zip archive
-                System.Collections.Generic.List<byte[]> fontBytesList = new System.Collections.Generic.List<byte[]>();
                 using (ZipArchive archive = ZipFile.OpenRead(zipPath))
                 {
                     foreach (ZipArchiveEntry entry in archive.Entries)
@@ -38,43 +33,93 @@ namespace FontFromZipExample
                         if (entry.FullName.EndsWith(".ttf", StringComparison.OrdinalIgnoreCase) ||
                             entry.FullName.EndsWith(".otf", StringComparison.OrdinalIgnoreCase))
                         {
-                            using (Stream stream = entry.Open())
-                            using (MemoryStream ms = new MemoryStream())
+                            using (Stream entryStream = entry.Open())
                             {
-                                stream.CopyTo(ms);
-                                fontBytesList.Add(ms.ToArray());
+                                using (MemoryStream ms = new MemoryStream())
+                                {
+                                    entryStream.CopyTo(ms);
+                                    fontDataList.Add(ms.ToArray());
+                                }
                             }
                         }
                     }
                 }
-
-                // Prepare load options with memory fonts
-                LoadOptions loadOptions = new LoadOptions();
-                loadOptions.DocumentLevelFontSources.MemoryFonts = fontBytesList.ToArray();
-
-                // Optionally set a default regular font (body font) if known
-                // Here we assume the first font's family name is "CustomFont"
-                loadOptions.DefaultRegularFont = "CustomFont";
-
-                // Load presentation with the specified fonts
-                Presentation presentation = new Presentation(presentationPath, loadOptions);
-
-                // Save the presentation
-                presentation.Save(outputPath, SaveFormat.Pptx);
-
-                // Clean up
-                presentation.Dispose();
-            }
-            catch (NotSupportedException)
-            {
-                // Format not supported
-                Console.WriteLine("The provided file format is not supported.");
             }
             catch (Exception ex)
             {
-                // General exception handling
-                Console.WriteLine("An error occurred: " + ex.Message);
+                Console.WriteLine("Error reading zip archive: " + ex.Message);
+                return;
             }
+
+            if (fontDataList.Count == 0)
+            {
+                Console.WriteLine("No font files found in the zip archive.");
+                return;
+            }
+
+            // Load fonts into Aspose.Slides font cache
+            try
+            {
+                foreach (byte[] fontBytes in fontDataList)
+                {
+                    FontsLoader.LoadExternalFont(fontBytes);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error loading fonts: " + ex.Message);
+                return;
+            }
+
+            // Create a new presentation
+            Presentation pres = null;
+            try
+            {
+                pres = new Presentation();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error creating presentation: " + ex.Message);
+                return;
+            }
+
+            // Add a slide and a rectangle shape with text
+            ISlide slide = pres.Slides.AddEmptySlide(pres.Slides[0].LayoutSlide);
+            IAutoShape autoShape = (IAutoShape)slide.Shapes.AddAutoShape(
+                ShapeType.Rectangle, 50, 50, 400, 100);
+            autoShape.AddTextFrame("Sample text using custom font.");
+
+            // Set the body font to the first loaded custom font (by name)
+            // Assuming the font name is known; replace "CustomFontName" with actual name
+            string customFontName = "CustomFontName";
+            IParagraph paragraph = autoShape.TextFrame.Paragraphs[0];
+            foreach (IPortion portion in paragraph.Portions)
+            {
+                portion.PortionFormat.LatinFont = new FontData(customFontName);
+            }
+
+            // Save the presentation
+            try
+            {
+                pres.Save(outputPath, SaveFormat.Pptx);
+            }
+            catch (Exception ex)
+            {
+                // Handle format not supported or other save errors
+                Console.WriteLine("Error saving presentation: " + ex.Message);
+            }
+            finally
+            {
+                // Ensure resources are released
+                if (pres != null)
+                {
+                    pres.Dispose();
+                }
+                // Clear loaded fonts from cache
+                FontsLoader.ClearCache();
+            }
+
+            Console.WriteLine("Presentation saved to: " + outputPath);
         }
     }
 }
