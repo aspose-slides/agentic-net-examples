@@ -20,207 +20,214 @@ working within the **design-presentations** category.
 
 ## Required Namespaces
 
-- `using System;` (157/157 files)
-- `using Aspose.Slides.Export;` (157/157 files)
-- `using Aspose.Slides;` (151/157 files)
-- `using System.IO;` (145/157 files)
-- `using System.Drawing;` (15/157 files)
-- `using System.Collections.Generic;` (5/157 files)
-- `using Aspose.Slides.Util;` (4/157 files)
-- `using Aspose.Slides.Charts;` (3/157 files)
-- `using System.Text.Json;` (3/157 files)
-- `using System.Linq;` (3/157 files)
-- `using System.Diagnostics;` (2/157 files)
-- `using System.Text;` (2/157 files)
-- `using Aspose.Slides.Animation;` (1/157 files)
-- `using System.Net;` (1/157 files)
-- `using System.IO.Compression;` (1/157 files)
-- `using System.Threading.Tasks;` (1/157 files)
-- `using System.Net.Http;` (1/157 files)
+- `using Aspose.Slides.Export;` (161/161 files)
+- `using System;` (160/161 files)
+- `using Aspose.Slides;` (153/161 files)
+- `using System.IO;` (151/161 files)
+- `using System.Drawing;` (15/161 files)
+- `using System.Collections.Generic;` (6/161 files)
+- `using System.Text.Json;` (3/161 files)
+- `using System.Linq;` (2/161 files)
+- `using System.Diagnostics;` (2/161 files)
+- `using Aspose.Slides.LowCode;` (2/161 files)
+- `using Aspose.Slides.Charts;` (2/161 files)
+- `using System.Text;` (2/161 files)
+- `using Aspose.Slides.Util;` (2/161 files)
+- `using Aspose.Slides.SmartArt;` (1/161 files)
+- `using System.Net;` (1/161 files)
+- `using System.IO.Compression;` (1/161 files)
+- `using Aspose.Slides.Theme;` (1/161 files)
+- `using System.Threading.Tasks;` (1/161 files)
+- `using Aspose.Slides.Effects;` (1/161 files)
+- `using System.Net.Http;` (1/161 files)
 
 ## Files in this folder
 
 | File | Key APIs | Description |
 |------|----------|-------------|
-| [Add-bold-font-folder-and-export-XPS](./Add-bold-font-folder-and-export-XPS.cs) |  | Add bold font folder and export XPS |
-| [Add-branding-XML-part-to-PPTX](./Add-branding-XML-part-to-PPTX.cs) |  | Add branding XML part to PPTX |
-| [Add-cjk-fallback-font-and-export-PDF](./Add-cjk-fallback-font-and-export-PDF.cs) |  | Add cjk fallback font and export PDF |
+| [Add-bold-fonts-and-export-to-XPS](./Add-bold-fonts-and-export-to-XPS.cs) |  | Add bold fonts and export to XPS |
+| [Add-branding-metadata-XML-part-to-presentation](./Add-branding-metadata-XML-part-to-presentation.cs) |  | Add branding metadata XML part to presentation |
+| [Add-byte-font-embed-and-generate-pdf-preview](./Add-byte-font-embed-and-generate-pdf-preview.cs) |  | Add byte font embed and generate pdf preview |
 | [Add-clickable-table-of-contents-slide](./Add-clickable-table-of-contents-slide.cs) |  | Add clickable table of contents slide |
-| [Add-company-logo-to-master-and-propagate](./Add-company-logo-to-master-and-propagate.cs) |  | Add company logo to master and propagate |
-| [Add-custom-animation-to-title-slide-group](./Add-custom-animation-to-title-slide-group.cs) |  | Add custom animation to title slide group |
+| [Add-drop-shadow-to-picture-shapes](./Add-drop-shadow-to-picture-shapes.cs) |  | Add drop shadow to picture shapes |
 | [Add-fade-transition-to-all-slides](./Add-fade-transition-to-all-slides.cs) |  | Add fade transition to all slides |
-| [Add-font-from-bytes-and-generate-PDF](./Add-font-from-bytes-and-generate-PDF.cs) |  | Add font from bytes and generate PDF |
+| [Add-font-fallback-rules-and-save-presentation](./Add-font-fallback-rules-and-save-presentation.cs) |  | Add font fallback rules and save presentation |
 | [Add-header-footer-with-slide-number-date](./Add-header-footer-with-slide-number-date.cs) |  | Add header footer with slide number date |
 | [Add-hyperlink-to-shape-and-open-website](./Add-hyperlink-to-shape-and-open-website.cs) |  | Add hyperlink to shape and open website |
-| [Add-multiple-fallback-fonts-and-export-PDF](./Add-multiple-fallback-fonts-and-export-PDF.cs) |  | Add multiple fallback fonts and export PDF |
-| [Add-network-fallback-fonts-and-render-PDF](./Add-network-fallback-fonts-and-render-PDF.cs) |  | Add network fallback fonts and render PDF |
-| [Add-speaker-notes-to-slides-from-data](./Add-speaker-notes-to-slides-from-data.cs) |  | Add speaker notes to slides from data |
-| [Add-true-type-font-from-memory](./Add-true-type-font-from-memory.cs) |  | Add true type font from memory |
-| [Add-watermark-to-presentations-and-export-PDF](./Add-watermark-to-presentations-and-export-PDF.cs) |  | Add watermark to presentations and export PDF |
-| [Add-wildcard-fallback-rule-and-export-PDF](./Add-wildcard-fallback-rule-and-export-PDF.cs) |  | Add wildcard fallback rule and export PDF |
-| [Apply-3D-rotation-to-frames-second-slide](./Apply-3D-rotation-to-frames-second-slide.cs) |  | Apply 3D rotation to frames second slide |
-| [Apply-arabic-fallback-font-and-render-PDF](./Apply-arabic-fallback-font-and-render-PDF.cs) |  | Apply arabic fallback font and render PDF |
-| [Apply-corporate-theme-and-export-PDF-a](./Apply-corporate-theme-and-export-PDF-a.cs) |  | Apply corporate theme and export PDF a |
+| [Add-network-share-fallback-fonts-and-render](./Add-network-share-fallback-fonts-and-render.cs) |  | Add network share fallback fonts and render |
+| [Add-speaker-notes-from-external-data](./Add-speaker-notes-from-external-data.cs) |  | Add speaker notes from external data |
+| [Add-watermark-to-presentation-and-export-pdf](./Add-watermark-to-presentation-and-export-pdf.cs) |  | Add watermark to presentation and export pdf |
+| [Adjust-master-slide-background-transparency-half](./Adjust-master-slide-background-transparency-half.cs) |  | Adjust master slide background transparency half |
+| [Analyze-slide-background-colors-and-fonts](./Analyze-slide-background-colors-and-fonts.cs) |  | Analyze slide background colors and fonts |
+| [Apply-3d-rotation-to-picture-frames](./Apply-3d-rotation-to-picture-frames.cs) |  | Apply 3d rotation to picture frames |
+| [Apply-arabic-fallback-and-export-to-SVG](./Apply-arabic-fallback-and-export-to-SVG.cs) |  | Apply arabic fallback and export to SVG |
+| [Apply-arabic-fallback-fonts-and-ensure-RTL](./Apply-arabic-fallback-fonts-and-ensure-RTL.cs) |  | Apply arabic fallback fonts and ensure RTL |
+| [Apply-corporate-theme-and-export-to-PDF-A](./Apply-corporate-theme-and-export-to-PDF-A.cs) |  | Apply corporate theme and export to PDF A |
+| [Apply-custom-animation-to-title-slide-group](./Apply-custom-animation-to-title-slide-group.cs) |  | Apply custom animation to title slide group |
 | [Apply-custom-font-family-to-text-frames](./Apply-custom-font-family-to-text-frames.cs) |  | Apply custom font family to text frames |
-| [Apply-drop-shadow-to-pictures-preserve-dimensions](./Apply-drop-shadow-to-pictures-preserve-dimensions.cs) |  | Apply drop shadow to pictures preserve dimensions |
-| [Apply-fallback-font-to-slide-PNG](./Apply-fallback-font-to-slide-PNG.cs) |  | Apply fallback font to slide PNG |
-| [Apply-font-replacement-before-rendering-PDF](./Apply-font-replacement-before-rendering-PDF.cs) |  | Apply font replacement before rendering PDF |
-| [Apply-grayscale-effect-to-image-shapes](./Apply-grayscale-effect-to-image-shapes.cs) |  | Apply grayscale effect to image shapes |
+| [Apply-fallback-and-save-slides-PNG](./Apply-fallback-and-save-slides-PNG.cs) |  | Apply fallback and save slides PNG |
+| [Apply-fallback-fonts-and-export-to-JPEG](./Apply-fallback-fonts-and-export-to-JPEG.cs) |  | Apply fallback fonts and export to JPEG |
+| [Apply-global-font-replacement-before-rendering](./Apply-global-font-replacement-before-rendering.cs) |  | Apply global font replacement before rendering |
+| [Apply-grayscale-effect-to-picture-shapes](./Apply-grayscale-effect-to-picture-shapes.cs) |  | Apply grayscale effect to picture shapes |
+| [Apply-japanese-fallback-font-mincho](./Apply-japanese-fallback-font-mincho.cs) |  | Apply japanese fallback font mincho |
 | [Apply-linear-gradient-to-specific-slide](./Apply-linear-gradient-to-specific-slide.cs) |  | Apply linear gradient to specific slide |
-| [Apply-MS-mincho-fallback-font-to-japanese](./Apply-MS-mincho-fallback-font-to-japanese.cs) |  | Apply MS mincho fallback font to japanese |
 | [Apply-picture-fill-tiled-to-all-slides](./Apply-picture-fill-tiled-to-all-slides.cs) |  | Apply picture fill tiled to all slides |
 | [Apply-solid-background-to-nonmaster-slides](./Apply-solid-background-to-nonmaster-slides.cs) |  | Apply solid background to nonmaster slides |
-| [Apply-uniform-16-9-slide-size-scale](./Apply-uniform-16-9-slide-size-scale.cs) |  | Apply uniform 16 9 slide size scale |
-| [Assert-font-fallback-rules-count-in-PDF](./Assert-font-fallback-rules-count-in-PDF.cs) |  | Assert font fallback rules count in PDF |
-| [Assign-font-fallback-rules-then-render-PDF](./Assign-font-fallback-rules-then-render-PDF.cs) |  | Assign font fallback rules then render PDF |
+| [Assign-default-background-to-unfilled-slides](./Assign-default-background-to-unfilled-slides.cs) |  | Assign default background to unfilled slides |
+| [Assign-font-fallback-rules-and-render-presentation](./Assign-font-fallback-rules-and-render-presentation.cs) |  | Assign font fallback rules and render presentation |
 | [Batch-convert-PPT-to-PPTX-with-theme](./Batch-convert-PPT-to-PPTX-with-theme.cs) |  | Batch convert PPT to PPTX with theme |
 | [Batch-convert-presentation-to-PDF-with-substitution](./Batch-convert-presentation-to-PDF-with-substitution.cs) |  | Batch convert presentation to PDF with substitution |
 | [Batch-convert-presentation-to-PNG-with-fallback](./Batch-convert-presentation-to-PNG-with-fallback.cs) |  | Batch convert presentation to PNG with fallback |
-| [Batch-embed-font-and-create-PNG-thumbnails](./Batch-embed-font-and-create-PNG-thumbnails.cs) |  | Batch embed font and create PNG thumbnails |
-| [Clear-all-fallback-rules-and-save-PPTX](./Clear-all-fallback-rules-and-save-PPTX.cs) |  | Clear all fallback rules and save PPTX |
-| [Clear-fallback-fonts-and-restore-default-rendering](./Clear-fallback-fonts-and-restore-default-rendering.cs) |  | Clear fallback fonts and restore default rendering |
+| [Change-PPTX-master-slide-background-to-navy](./Change-PPTX-master-slide-background-to-navy.cs) |  | Change PPTX master slide background to navy |
+| [Check-custom-font-embeddings-and-report-missing](./Check-custom-font-embeddings-and-report-missing.cs) |  | Check custom font embeddings and report missing |
+| [Clear-fallback-fonts-and-verify-original-rendering](./Clear-fallback-fonts-and-verify-original-rendering.cs) |  | Clear fallback fonts and verify original rendering |
+| [Clear-fallback-rules-and-save-PPTX](./Clear-fallback-rules-and-save-PPTX.cs) |  | Clear fallback rules and save PPTX |
 | [Clear-substitution-rules-before-loading-presentation](./Clear-substitution-rules-before-loading-presentation.cs) |  | Clear substitution rules before loading presentation |
-| [Clone-theme-modify-accents-and-apply](./Clone-theme-modify-accents-and-apply.cs) |  | Clone theme modify accents and apply |
-| [Compare-fallback-font-enabled-and-disabled-performance](./Compare-fallback-font-enabled-and-disabled-performance.cs) |  | Compare fallback font enabled and disabled performance |
-| [Compare-pptx-font-compression-size-difference](./Compare-pptx-font-compression-size-difference.cs) |  | Compare pptx font compression size difference |
-| [Compare-thumbnail-dimensions-default-vs-embedded](./Compare-thumbnail-dimensions-default-vs-embedded.cs) |  | Compare thumbnail dimensions default vs embedded |
-| [Compress-embedded-fonts-in-pptx](./Compress-embedded-fonts-in-pptx.cs) |  | Compress embedded fonts in pptx |
+| [Clone-theme-modify-accent-colors-and-apply](./Clone-theme-modify-accent-colors-and-apply.cs) |  | Clone theme modify accent colors and apply |
+| [Compare-default-thumbnails-to-embedded-font-dimensions](./Compare-default-thumbnails-to-embedded-font-dimensions.cs) |  | Compare default thumbnails to embedded font dimensions |
+| [Compare-fallback-font-enabled-vs-disabled-performance](./Compare-fallback-font-enabled-vs-disabled-performance.cs) |  | Compare fallback font enabled vs disabled performance |
+| [Compare-line-breaking-serif-vs-sans](./Compare-line-breaking-serif-vs-sans.cs) |  | Compare line breaking serif vs sans |
+| [Compare-uncompressed-and-compressed-embedded-font-sizes](./Compare-uncompressed-and-compressed-embedded-font-sizes.cs) |  | Compare uncompressed and compressed embedded font sizes |
+| [Compress-embedded-fonts-in-presentation](./Compress-embedded-fonts-in-presentation.cs) |  | Compress embedded fonts in presentation |
 | [Compress-embedded-media-streams-for-email](./Compress-embedded-media-streams-for-email.cs) |  | Compress embedded media streams for email |
-| [Configure-fallback-rules-and-render-PNG](./Configure-fallback-rules-and-render-PNG.cs) |  | Configure fallback rules and render PNG |
+| [Configure-fallback-and-render-presentation-PNG](./Configure-fallback-and-render-presentation-PNG.cs) |  | Configure fallback and render presentation PNG |
+| [Configure-fallback-fonts-and-export-to-PDF](./Configure-fallback-fonts-and-export-to-PDF.cs) |  | Configure fallback fonts and export to PDF |
 | [Configure-japanese-fallback-font-collection](./Configure-japanese-fallback-font-collection.cs) |  | Configure japanese fallback font collection |
-| [Configure-loadoptions-fallback-font-and-export-PDF](./Configure-loadoptions-fallback-font-and-export-PDF.cs) |  | Configure loadoptions fallback font and export PDF |
+| [Confirm-getsubstitution-empty-list-with-all-fonts](./Confirm-getsubstitution-empty-list-with-all-fonts.cs) |  | Confirm getsubstitution empty list with all fonts |
 | [Convert-presentation-to-HTML-with-embedded-SVG](./Convert-presentation-to-HTML-with-embedded-SVG.cs) |  | Convert presentation to HTML with embedded SVG |
-| [Convert-presentation-to-multiple-SVG-slides](./Convert-presentation-to-multiple-SVG-slides.cs) |  | Convert presentation to multiple SVG slides |
 | [Create-custom-slide-layout-with-header-footer](./Create-custom-slide-layout-with-header-footer.cs) |  | Create custom slide layout with header footer |
-| [Create-gallery-slide-thumbnails-at-200x150](./Create-gallery-slide-thumbnails-at-200x150.cs) |  | Create gallery slide thumbnails at 200x150 |
-| [Create-gradient-master-apply-to-slides](./Create-gradient-master-apply-to-slides.cs) |  | Create gradient master apply to slides |
-| [Create-memory-font-from-bytes-and-apply](./Create-memory-font-from-bytes-and-apply.cs) |  | Create memory font from bytes and apply |
-| [Create-slide-with-CSV-chart](./Create-slide-with-CSV-chart.cs) |  | Create slide with CSV chart |
-| [Create-table-5rows-3cols](./Create-table-5rows-3cols.cs) |  | Create table 5rows 3cols |
-| [Decrypt-presentation-modify-chart-data-series-reencrypt](./Decrypt-presentation-modify-chart-data-series-reencrypt.cs) |  | Decrypt presentation modify chart data series reencrypt |
-| [Define-cyrillic-fallback-rule-with-russian-fonts](./Define-cyrillic-fallback-rule-with-russian-fonts.cs) |  | Define cyrillic fallback rule with russian fonts |
-| [Define-emoji-fallback-rule-and-export-PNG](./Define-emoji-fallback-rule-and-export-PNG.cs) |  | Define emoji fallback rule and export PNG |
-| [Define-font-fallback-list-and-apply](./Define-font-fallback-list-and-apply.cs) |  | Define font fallback list and apply |
+| [Create-emoji-fallback-and-export-PNG](./Create-emoji-fallback-and-export-PNG.cs) |  | Create emoji fallback and export PNG |
+| [Create-gradient-master-and-apply-to-slides](./Create-gradient-master-and-apply-to-slides.cs) |  | Create gradient master and apply to slides |
+| [Create-json-manifest-for-slide-layouts](./Create-json-manifest-for-slide-layouts.cs) |  | Create json manifest for slide layouts |
+| [Create-slide-thumbnails-using-theme-background](./Create-slide-thumbnails-using-theme-background.cs) |  | Create slide thumbnails using theme background |
+| [Create-slide-with-predefined-layout-CSV-chart](./Create-slide-with-predefined-layout-CSV-chart.cs) |  | Create slide with predefined layout CSV chart |
+| [Create-table-five-rows-three-columns](./Create-table-five-rows-three-columns.cs) |  | Create table five rows three columns |
+| [Decrypt-presentation-modify-chart-data-reencrypt](./Decrypt-presentation-modify-chart-data-reencrypt.cs) |  | Decrypt presentation modify chart data reencrypt |
+| [Define-fallback-font-order-and-save](./Define-fallback-font-order-and-save.cs) |  | Define fallback font order and save |
 | [Define-font-substitution-rules-for-inaccessible-fonts](./Define-font-substitution-rules-for-inaccessible-fonts.cs) |  | Define font substitution rules for inaccessible fonts |
-| [Define-greek-hebrew-fallback-and-render-SVG](./Define-greek-hebrew-fallback-and-render-SVG.cs) |  | Define greek hebrew fallback and render SVG |
-| [Define-korean-fallback-rule-with-hangul-font](./Define-korean-fallback-rule-with-hangul-font.cs) |  | Define korean fallback rule with hangul font |
-| [Define-single-fallback-font-rule](./Define-single-fallback-font-rule.cs) |  | Define single fallback font rule |
-| [Delete-font-fallback-rule-and-update-PDF](./Delete-font-fallback-rule-and-update-PDF.cs) |  | Delete font fallback rule and update PDF |
-| [Detect-custom-fonts-and-log-paths](./Detect-custom-fonts-and-log-paths.cs) |  | Detect custom fonts and log paths |
+| [Detect-custom-fonts-in-presentation](./Detect-custom-fonts-in-presentation.cs) |  | Detect custom fonts in presentation |
 | [Detect-custom-XML-parts-and-list-metadata](./Detect-custom-XML-parts-and-list-metadata.cs) |  | Detect custom XML parts and list metadata |
 | [Detect-duplicate-slide-layouts-and-consolidate](./Detect-duplicate-slide-layouts-and-consolidate.cs) |  | Detect duplicate slide layouts and consolidate |
-| [Detect-slide-background-and-assign-default-color](./Detect-slide-background-and-assign-default-color.cs) |  | Detect slide background and assign default color |
 | [Duplicate-first-slide-and-append-to-end](./Duplicate-first-slide-and-append-to-end.cs) |  | Duplicate first slide and append to end |
-| [Duplicate-master-slide-and-set-dark-gradient](./Duplicate-master-slide-and-set-dark-gradient.cs) |  | Duplicate master slide and set dark gradient |
-| [Embed-all-fonts-and-export-PDF](./Embed-all-fonts-and-export-PDF.cs) |  | Embed all fonts and export PDF |
-| [Embed-custom-fonts-into-pptx-and-preserve](./Embed-custom-fonts-into-pptx-and-preserve.cs) |  | Embed custom fonts into pptx and preserve |
+| [Duplicate-master-slide-set-dark-gradient](./Duplicate-master-slide-set-dark-gradient.cs) |  | Duplicate master slide set dark gradient |
+| [Embed-all-fonts-and-generate-pdf](./Embed-all-fonts-and-generate-pdf.cs) |  | Embed all fonts and generate pdf |
+| [Embed-font-and-generate-png-thumbnails](./Embed-font-and-generate-png-thumbnails.cs) |  | Embed font and generate png thumbnails |
+| [Embed-memory-truetype-font-into-presentation](./Embed-memory-truetype-font-into-presentation.cs) |  | Embed memory truetype font into presentation |
+| [Embed-remote-fonts-into-presentation-for-PDF](./Embed-remote-fonts-into-presentation-for-PDF.cs) |  | Embed remote fonts into presentation for PDF |
 | [Encrypt-presentation-with-password-and-restrict-editing](./Encrypt-presentation-with-password-and-restrict-editing.cs) |  | Encrypt presentation with password and restrict editing |
 | [Export-chart-data-series-to-CSV](./Export-chart-data-series-to-CSV.cs) |  | Export chart data series to CSV |
-| [Export-pptx-to-pdf-with-theme-colors](./Export-pptx-to-pdf-with-theme-colors.cs) |  | Export pptx to pdf with theme colors |
-| [Export-presentation-to-300DPI-JPEG-images](./Export-presentation-to-300DPI-JPEG-images.cs) |  | Export presentation to 300DPI JPEG images |
-| [Export-presentation-to-BMP-with-theme-colors](./Export-presentation-to-BMP-with-theme-colors.cs) |  | Export presentation to BMP with theme colors |
-| [Export-presentation-to-highresolution-JPEG-images](./Export-presentation-to-highresolution-JPEG-images.cs) |  | Export presentation to highresolution JPEG images |
-| [Export-presentation-to-PDF-A-embedded-fonts](./Export-presentation-to-PDF-A-embedded-fonts.cs) |  | Export presentation to PDF A embedded fonts |
-| [Export-presentation-to-SVG-preserve-embedded-fonts](./Export-presentation-to-SVG-preserve-embedded-fonts.cs) |  | Export presentation to SVG preserve embedded fonts |
-| [Export-presentation-to-XPS-with-embedded-fonts](./Export-presentation-to-XPS-with-embedded-fonts.cs) |  | Export presentation to XPS with embedded fonts |
-| [Export-slide-notes-to-DOCX](./Export-slide-notes-to-DOCX.cs) |  | Export slide notes to DOCX |
-| [Export-slide-to-PNG-with-theme-background](./Export-slide-to-PNG-with-theme-background.cs) |  | Export slide to PNG with theme background |
-| [Export-slides-to-highresolution-PNG-with-transparent-background](./Export-slides-to-highresolution-PNG-with-transparent-background.cs) |  | Export slides to highresolution PNG with transparent background |
+| [Export-PPTX-slides-as-high-resolution-JPEG](./Export-PPTX-slides-as-high-resolution-JPEG.cs) |  | Export PPTX slides as high resolution JPEG |
+| [Export-PPTX-slides-as-high-resolution-PNG](./Export-PPTX-slides-as-high-resolution-PNG.cs) |  | Export PPTX slides as high resolution PNG |
+| [Export-PPTX-to-BMP-preserving-theme-colors](./Export-PPTX-to-BMP-preserving-theme-colors.cs) |  | Export PPTX to BMP preserving theme colors |
+| [Export-PPTX-to-PDF-A-embedding-fonts](./Export-PPTX-to-PDF-A-embedding-fonts.cs) |  | Export PPTX to PDF A embedding fonts |
+| [Export-PPTX-to-PDF-preserving-theme-colors](./Export-PPTX-to-PDF-preserving-theme-colors.cs) |  | Export PPTX to PDF preserving theme colors |
+| [Export-PPTX-to-SVG-with-embedded-fonts](./Export-PPTX-to-SVG-with-embedded-fonts.cs) |  | Export PPTX to SVG with embedded fonts |
+| [Export-PPTX-to-XPS-embedding-all-fonts](./Export-PPTX-to-XPS-embedding-all-fonts.cs) |  | Export PPTX to XPS embedding all fonts |
+| [Export-presentation-slides-as-individual-SVG](./Export-presentation-slides-as-individual-SVG.cs) |  | Export presentation slides as individual SVG |
+| [Export-presentation-to-high-dpi-JPEG](./Export-presentation-to-high-dpi-JPEG.cs) |  | Export presentation to high dpi JPEG |
+| [Export-slide-notes-to-DOCX-document](./Export-slide-notes-to-DOCX-document.cs) |  | Export slide notes to DOCX document |
+| [Export-slides-as-high-resolution-PNG-with-transparency](./Export-slides-as-high-resolution-PNG-with-transparency.cs) |  | Export slides as high resolution PNG with transparency |
 | [Extract-embedded-audio-and-save-to-folder](./Extract-embedded-audio-and-save-to-folder.cs) |  | Extract embedded audio and save to folder |
-| [Extract-slide-text-and-export-plain-text](./Extract-slide-text-and-export-plain-text.cs) |  | Extract slide text and export plain text |
-| [Generate-slide-manifest-with-layout-JSON](./Generate-slide-manifest-with-layout-JSON.cs) |  | Generate slide manifest with layout JSON |
-| [Generate-slide-thumbnail-JPEG-with-fallback](./Generate-slide-thumbnail-JPEG-with-fallback.cs) |  | Generate slide thumbnail JPEG with fallback |
-| [Generate-slide-thumbnail-using-theme](./Generate-slide-thumbnail-using-theme.cs) |  | Generate slide thumbnail using theme |
-| [Get-background1-rgb-after-theme-change](./Get-background1-rgb-after-theme-change.cs) |  | Get background1 rgb after theme change |
-| [Get-substitution-empty-when-all-fonts-available](./Get-substitution-empty-when-all-fonts-available.cs) |  | Get substitution empty when all fonts available |
-| [Insert-video-placeholder-with-URL-intro-slide](./Insert-video-placeholder-with-URL-intro-slide.cs) |  | Insert video placeholder with URL intro slide |
-| [Iterate-slides-apply-fallback-save-PNG](./Iterate-slides-apply-fallback-save-PNG.cs) |  | Iterate slides apply fallback save PNG |
+| [Extract-text-from-slides-and-save-summary](./Extract-text-from-slides-and-save-summary.cs) |  | Extract text from slides and save summary |
+| [Generate-slide-thumbnails-200x150-pixels](./Generate-slide-thumbnails-200x150-pixels.cs) |  | Generate slide thumbnails 200x150 pixels |
+| [Generate-smartart-thumbnail-with-fallback-fonts-JPEG](./Generate-smartart-thumbnail-with-fallback-fonts-JPEG.cs) |  | Generate smartart thumbnail with fallback fonts JPEG |
+| [Get-effective-rgb-of-schemecolor-background1](./Get-effective-rgb-of-schemecolor-background1.cs) |  | Get effective rgb of schemecolor background1 |
+| [Handle-missing-fallback-font-files-during-initialization](./Handle-missing-fallback-font-files-during-initialization.cs) |  | Handle missing fallback font files during initialization |
+| [Handle-missing-fallback-fonts-during-XPS](./Handle-missing-fallback-fonts-during-XPS.cs) |  | Handle missing fallback fonts during XPS |
+| [Insert-company-logo-into-master-slide-propagate](./Insert-company-logo-into-master-slide-propagate.cs) |  | Insert company logo into master slide propagate |
+| [Insert-video-placeholder-into-intro-slide](./Insert-video-placeholder-into-intro-slide.cs) |  | Insert video placeholder into intro slide |
+| [List-available-font-families-after-memory-load](./List-available-font-families-after-memory-load.cs) |  | List available font families after memory load |
 | [List-embedded-fonts-and-log-names](./List-embedded-fonts-and-log-names.cs) |  | List embedded fonts and log names |
-| [List-font-families-after-adding-memory-font](./List-font-families-after-adding-memory-font.cs) |  | List font families after adding memory font |
-| [List-remove-duplicate-compress-embedded-fonts](./List-remove-duplicate-compress-embedded-fonts.cs) |  | List remove duplicate compress embedded fonts |
-| [List-slide-backgrounds-and-custom-fonts](./List-slide-backgrounds-and-custom-fonts.cs) |  | List slide backgrounds and custom fonts |
-| [Load-fallback-fonts-from-custom-directory](./Load-fallback-fonts-from-custom-directory.cs) |  | Load fallback fonts from custom directory |
-| [Load-fonts-from-multiple-directories-and-verify](./Load-fonts-from-multiple-directories-and-verify.cs) |  | Load fonts from multiple directories and verify |
+| [List-embedded-fonts-remove-duplicates-compress](./List-embedded-fonts-remove-duplicates-compress.cs) |  | List embedded fonts remove duplicates compress |
+| [Load-custom-font-directory-and-register-fonts](./Load-custom-font-directory-and-register-fonts.cs) |  | Load custom font directory and register fonts |
+| [Load-external-truetype-fonts-into-PPTX](./Load-external-truetype-fonts-into-PPTX.cs) |  | Load external truetype fonts into PPTX |
 | [Load-fonts-from-zip-and-set-body](./Load-fonts-from-zip-and-set-body.cs) |  | Load fonts from zip and set body |
-| [Load-pptx-from-bytes-and-update-master](./Load-pptx-from-bytes-and-update-master.cs) |  | Load pptx from bytes and update master |
-| [Load-pptx-from-disk-and-modify](./Load-pptx-from-disk-and-modify.cs) |  | Load pptx from disk and modify |
+| [Load-memory-font-and-set-body](./Load-memory-font-and-set-body.cs) |  | Load memory font and set body |
+| [Load-PPTX-from-bytes-modify-master-background](./Load-PPTX-from-bytes-modify-master-background.cs) |  | Load PPTX from bytes modify master background |
+| [Load-pptx-from-stream-and-list-titles](./Load-pptx-from-stream-and-list-titles.cs) |  | Load pptx from stream and list titles |
+| [Load-pptx-presentation-from-disk-and-modify](./Load-pptx-presentation-from-disk-and-modify.cs) |  | Load pptx presentation from disk and modify |
 | [Load-presentation-apply-fallback-stream-SVG](./Load-presentation-apply-fallback-stream-SVG.cs) |  | Load presentation apply fallback stream SVG |
-| [Load-presentation-before-configuring-fonts](./Load-presentation-before-configuring-fonts.cs) |  | Load presentation before configuring fonts |
-| [Load-presentation-from-stream-and-list-titles](./Load-presentation-from-stream-and-list-titles.cs) |  | Load presentation from stream and list titles |
-| [Load-presentation-serialize-fontsmanager-json](./Load-presentation-serialize-fontsmanager-json.cs) |  | Load presentation serialize fontsmanager json |
+| [Load-presentation-defaultregularfont-compare-pdf-metrics](./Load-presentation-defaultregularfont-compare-pdf-metrics.cs) |  | Load presentation defaultregularfont compare pdf metrics |
+| [Load-presentation-from-disk-and-edit-text](./Load-presentation-from-disk-and-edit-text.cs) |  | Load presentation from disk and edit text |
+| [Load-presentation-from-file-before-font-configuration](./Load-presentation-from-file-before-font-configuration.cs) |  | Load presentation from file before font configuration |
 | [Load-presentation-with-asian-font-thumbnail](./Load-presentation-with-asian-font-thumbnail.cs) |  | Load presentation with asian font thumbnail |
 | [Load-presentation-with-custom-font-to-PDF](./Load-presentation-with-custom-font-to-PDF.cs) |  | Load presentation with custom font to PDF |
-| [Load-true-type-fonts-from-network](./Load-true-type-fonts-from-network.cs) |  | Load true type fonts from network |
-| [Log-font-substitution-per-slide-to-CSV](./Log-font-substitution-per-slide-to-CSV.cs) |  | Log font substitution per slide to CSV |
+| [Load-presentation-with-custom-fonts-json](./Load-presentation-with-custom-fonts-json.cs) |  | Load presentation with custom fonts json |
+| [Log-font-substitutions-per-slide-to-CSV](./Log-font-substitutions-per-slide-to-CSV.cs) |  | Log font substitutions per slide to CSV |
 | [Log-substituted-fonts-after-rendering](./Log-substituted-fonts-after-rendering.cs) |  | Log substituted fonts after rendering |
-| [Map-arabic-glyphs-to-OTF-for-SVG](./Map-arabic-glyphs-to-OTF-for-SVG.cs) |  | Map arabic glyphs to OTF for SVG |
-| [Map-multiple-original-fonts-to-replacement-font](./Map-multiple-original-fonts-to-replacement-font.cs) |  | Map multiple original fonts to replacement font |
-| [Measure-fallback-font-performance-without-and-with](./Measure-fallback-font-performance-without-and-with.cs) |  | Measure fallback font performance without and with |
-| [Measure-line-breaking-after-switching-default-font](./Measure-line-breaking-after-switching-default-font.cs) |  | Measure line breaking after switching default font |
+| [Map-hyperlink-scheme-color-to-teal](./Map-hyperlink-scheme-color-to-teal.cs) |  | Map hyperlink scheme color to teal |
+| [Map-multiple-original-fonts-to-replacement](./Map-multiple-original-fonts-to-replacement.cs) |  | Map multiple original fonts to replacement |
+| [Measure-rendering-time-fallback-enabled-vs-disabled](./Measure-rendering-time-fallback-enabled-vs-disabled.cs) |  | Measure rendering time fallback enabled vs disabled |
+| [Measure-text-width-for-layout-calculations](./Measure-text-width-for-layout-calculations.cs) |  | Measure text width for layout calculations |
 | [Merge-multiple-pptx-files-into-single-deck](./Merge-multiple-pptx-files-into-single-deck.cs) |  | Merge multiple pptx files into single deck |
-| [Preserve-cambria-math-equations-during-PDF](./Preserve-cambria-math-equations-during-PDF.cs) |  | Preserve cambria math equations during PDF |
-| [Prioritize-fallback-fonts-by-language-script](./Prioritize-fallback-fonts-by-language-script.cs) |  | Prioritize fallback fonts by language script |
-| [Register-asian-font-folder-and-export-PNG](./Register-asian-font-folder-and-export-PNG.cs) |  | Register asian font folder and export PNG |
-| [Register-user-font-folder-and-render-PDF](./Register-user-font-folder-and-render-PDF.cs) |  | Register user font folder and render PDF |
-| [Remove-embedded-font-and-verify-size](./Remove-embedded-font-and-verify-size.cs) |  | Remove embedded font and verify size |
+| [Preserve-cambria-math-equations-during-PDF-conversion](./Preserve-cambria-math-equations-during-PDF-conversion.cs) |  | Preserve cambria math equations during PDF conversion |
+| [Prioritize-fallback-order-by-script-and-export](./Prioritize-fallback-order-by-script-and-export.cs) |  | Prioritize fallback order by script and export |
+| [Prioritize-font-directories-and-verify-selected-font](./Prioritize-font-directories-and-verify-selected-font.cs) |  | Prioritize font directories and verify selected font |
+| [Register-asian-font-folder-and-export-png](./Register-asian-font-folder-and-export-png.cs) |  | Register asian font folder and export png |
+| [Register-user-font-folder-and-initialize-fonts](./Register-user-font-folder-and-initialize-fonts.cs) |  | Register user font folder and initialize fonts |
+| [Remove-embedded-font-and-verify-size-decrease](./Remove-embedded-font-and-verify-size-decrease.cs) |  | Remove embedded font and verify size decrease |
+| [Remove-fallback-rule-by-font-name](./Remove-fallback-rule-by-font-name.cs) |  | Remove fallback rule by font name |
 | [Remove-hidden-slides-and-save-presentation](./Remove-hidden-slides-and-save-presentation.cs) |  | Remove hidden slides and save presentation |
 | [Render-presentation-to-PDF-with-fallback-fonts](./Render-presentation-to-PDF-with-fallback-fonts.cs) |  | Render presentation to PDF with fallback fonts |
-| [Render-presentation-to-TIFF-with-fallback-fonts](./Render-presentation-to-TIFF-with-fallback-fonts.cs) |  | Render presentation to TIFF with fallback fonts |
-| [Render-slides-asynchronously-with-fallback-fonts-active](./Render-slides-asynchronously-with-fallback-fonts-active.cs) |  | Render slides asynchronously with fallback fonts active |
-| [Replace-all-slide-fonts-with-custom-font](./Replace-all-slide-fonts-with-custom-font.cs) |  | Replace all slide fonts with custom font |
+| [Render-presentation-to-TIFF-with-fallback](./Render-presentation-to-TIFF-with-fallback.cs) |  | Render presentation to TIFF with fallback |
+| [Render-slides-asynchronously-with-fallback-fonts](./Render-slides-asynchronously-with-fallback-fonts.cs) |  | Render slides asynchronously with fallback fonts |
+| [Replace-all-embedded-fonts-with-licensed-font](./Replace-all-embedded-fonts-with-licensed-font.cs) |  | Replace all embedded fonts with licensed font |
 | [Replace-bullet-points-with-numbered-lists](./Replace-bullet-points-with-numbered-lists.cs) |  | Replace bullet points with numbered lists |
-| [Replace-default-background-with-tiled-image](./Replace-default-background-with-tiled-image.cs) |  | Replace default background with tiled image |
 | [Replace-default-color-scheme-with-corporate-palette](./Replace-default-color-scheme-with-corporate-palette.cs) |  | Replace default color scheme with corporate palette |
-| [Replace-default-title-font-with-custom-font](./Replace-default-title-font-with-custom-font.cs) |  | Replace default title font with custom font |
-| [Replace-embedded-fonts-with-licensed-font](./Replace-embedded-fonts-with-licensed-font.cs) |  | Replace embedded fonts with licensed font |
-| [Replace-embedded-video-with-lower-bitrate](./Replace-embedded-video-with-lower-bitrate.cs) |  | Replace embedded video with lower bitrate |
-| [Replace-fonts-in-master-slides-and-notes](./Replace-fonts-in-master-slides-and-notes.cs) |  | Replace fonts in master slides and notes |
-| [Replace-picture-fill-with-solid-color](./Replace-picture-fill-with-solid-color.cs) |  | Replace picture fill with solid color |
+| [Replace-default-title-font-with-custom](./Replace-default-title-font-with-custom.cs) |  | Replace default title font with custom |
+| [Replace-embedded-videos-with-lower-bitrate](./Replace-embedded-videos-with-lower-bitrate.cs) |  | Replace embedded videos with lower bitrate |
+| [Replace-fonts-in-master-slides-layouts-notes](./Replace-fonts-in-master-slides-layouts-notes.cs) |  | Replace fonts in master slides layouts notes |
+| [Replace-picture-fill-backgrounds-with-solid-color](./Replace-picture-fill-backgrounds-with-solid-color.cs) |  | Replace picture fill backgrounds with solid color |
 | [Replace-placeholder-text-with-dynamic-values](./Replace-placeholder-text-with-dynamic-values.cs) |  | Replace placeholder text with dynamic values |
-| [Reset-font-fallbacks-and-verify-defaults](./Reset-font-fallbacks-and-verify-defaults.cs) |  | Reset font fallbacks and verify defaults |
-| [Set-default-regular-font-and-measure-width](./Set-default-regular-font-and-measure-width.cs) |  | Set default regular font and measure width |
-| [Set-default-regular-font-compare-pdf](./Set-default-regular-font-compare-pdf.cs) |  | Set default regular font compare pdf |
-| [Set-default-spell-check-language-to-french](./Set-default-spell-check-language-to-french.cs) |  | Set default spell check language to french |
-| [Set-document-properties-author-title-revision](./Set-document-properties-author-title-revision.cs) |  | Set document properties author title revision |
-| [Set-hidden-slide-semi-transparent-gradient](./Set-hidden-slide-semi-transparent-gradient.cs) |  | Set hidden slide semi transparent gradient |
-| [Set-pptx-master-background-to-gray](./Set-pptx-master-background-to-gray.cs) |  | Set pptx master background to gray |
-| [Set-pptx-master-background-to-navy](./Set-pptx-master-background-to-navy.cs) |  | Set pptx master background to navy |
-| [Set-pptx-slide-size-to-widescreen-16-9](./Set-pptx-slide-size-to-widescreen-16-9.cs) |  | Set pptx slide size to widescreen 16 9 |
+| [Replace-specific-font-with-custom-during-export](./Replace-specific-font-with-custom-during-export.cs) |  | Replace specific font with custom during export |
+| [Reset-fallback-fonts-and-verify-default](./Reset-fallback-fonts-and-verify-default.cs) |  | Reset fallback fonts and verify default |
+| [Set-cyrillic-fallback-font-collection](./Set-cyrillic-fallback-font-collection.cs) |  | Set cyrillic fallback font collection |
+| [Set-default-language-to-french-text-frames](./Set-default-language-to-french-text-frames.cs) |  | Set default language to french text frames |
+| [Set-document-author-title-revision-before-save](./Set-document-author-title-revision-before-save.cs) |  | Set document author title revision before save |
+| [Set-greek-hebrew-fallback-and-export-svg](./Set-greek-hebrew-fallback-and-export-svg.cs) |  | Set greek hebrew fallback and export svg |
+| [Set-hidden-slide-background-to-semi-transparent-gradient](./Set-hidden-slide-background-to-semi-transparent-gradient.cs) |  | Set hidden slide background to semi transparent gradient |
+| [Set-korean-fallback-font-for-PDF](./Set-korean-fallback-font-for-PDF.cs) |  | Set korean fallback font for PDF |
+| [Set-picture-fill-from-stream-with-transparency](./Set-picture-fill-from-stream-with-transparency.cs) |  | Set picture fill from stream with transparency |
+| [Set-PPTX-font-fallback-list](./Set-PPTX-font-fallback-list.cs) |  | Set PPTX font fallback list |
+| [Set-PPTX-master-slides-gray-background](./Set-PPTX-master-slides-gray-background.cs) |  | Set PPTX master slides gray background |
+| [Set-PPTX-slide-size-to-widescreen](./Set-PPTX-slide-size-to-widescreen.cs) |  | Set PPTX slide size to widescreen |
+| [Set-PPTX-theme-accent1-to-bright-orange](./Set-PPTX-theme-accent1-to-bright-orange.cs) |  | Set PPTX theme accent1 to bright orange |
+| [Set-PPTX-theme-major-font](./Set-PPTX-theme-major-font.cs) |  | Set PPTX theme major font |
+| [Set-presentation-slide-size-to-16-9](./Set-presentation-slide-size-to-16-9.cs) |  | Set presentation slide size to 16 9 |
 | [Set-slide-transition-duration-to-two-seconds](./Set-slide-transition-duration-to-two-seconds.cs) |  | Set slide transition duration to two seconds |
-| [Set-theme-accent1-to-bright-orange](./Set-theme-accent1-to-bright-orange.cs) |  | Set theme accent1 to bright orange |
-| [Set-theme-major-font-using-fontdata](./Set-theme-major-font-using-fontdata.cs) |  | Set theme major font using fontdata |
-| [Throw-exception-on-missing-fallback-font-PDF](./Throw-exception-on-missing-fallback-font-PDF.cs) |  | Throw exception on missing fallback font PDF |
-| [Throw-exception-on-missing-fallback-font-XPS](./Throw-exception-on-missing-fallback-font-XPS.cs) |  | Throw exception on missing fallback font XPS |
+| [Set-tiled-image-background-for-all-slides](./Set-tiled-image-background-for-all-slides.cs) |  | Set tiled image background for all slides |
+| [Test-font-fallback-collection-count](./Test-font-fallback-collection-count.cs) |  | Test font fallback collection count |
+| [Test-wildcard-font-fallback-rules](./Test-wildcard-font-fallback-rules.cs) |  | Test wildcard font fallback rules |
+| [Update-fallback-font-list-and-export-PDF](./Update-fallback-font-list-and-export-PDF.cs) |  | Update fallback font list and export PDF |
 | [Update-hyperlink-urls-to-https](./Update-hyperlink-urls-to-https.cs) |  | Update hyperlink urls to https |
-| [Validate-asian-font-defaults-pptx-png](./Validate-asian-font-defaults-pptx-png.cs) |  | Validate asian font defaults pptx png |
-| [Validate-embedded-custom-fonts-and-report-missing](./Validate-embedded-custom-fonts-and-report-missing.cs) |  | Validate embedded custom fonts and report missing |
-| [Validate-embedded-fonts-preserved-in-PDF](./Validate-embedded-fonts-preserved-in-PDF.cs) |  | Validate embedded fonts preserved in PDF |
+| [Validate-asian-fonts-keep-PPTX-after-PNG](./Validate-asian-fonts-keep-PPTX-after-PNG.cs) |  | Validate asian fonts keep PPTX after PNG |
+| [Validate-embedded-fonts-after-PDF-conversion](./Validate-embedded-fonts-after-PDF-conversion.cs) |  | Validate embedded fonts after PDF conversion |
 | [Validate-external-image-links-and-replace-broken](./Validate-external-image-links-and-replace-broken.cs) |  | Validate external image links and replace broken |
-| [Validate-slide-title-placeholder-present](./Validate-slide-title-placeholder-present.cs) |  | Validate slide title placeholder present |
+| [Validate-slide-title-placeholder-per-slide](./Validate-slide-title-placeholder-per-slide.cs) |  | Validate slide title placeholder per slide |
 | [Verify-fallback-fonts-not-embedded-in-PPTX](./Verify-fallback-fonts-not-embedded-in-PPTX.cs) |  | Verify fallback fonts not embedded in PPTX |
 | [Verify-remove-embedded-font-updates-font-table](./Verify-remove-embedded-font-updates-font-table.cs) |  | Verify remove embedded font updates font table |
 
 ## Category Statistics
 
-- Total examples: 157
+- Total examples: 161
 
 ## Key API Surface
 
-- `Aspose.Slides.Export`
 - `Aspose.Slides`
+- `Aspose.Slides.Export`
 - `Aspose.Slides.Presentation`
 - `Aspose.Slides.Export.SaveFormat.Pptx`
-- `Aspose.Slides.FontFallBackRule`
 - `Aspose.Slides.IFontData`
-- `Aspose.Slides.FontFallBackRulesCollection`
-- `Aspose.Slides.ImageFormat.Png`
-- `Aspose.Slides.IFontFallBackRulesCollection`
-- `Aspose.Slides.IImage`
 - `Aspose.Slides.IAutoShape`
-- `Aspose.Slides.ISlide`
+- `Aspose.Slides.ImageFormat.Png`
+- `Aspose.Slides.FontFallBackRule`
 - `Aspose.Slides.PptxUnsupportedFormatException`
-- `Aspose.Slides.`
-- `Aspose.Slides.ShapeType.Rectangle`
+- `Aspose.Slides.ISlide`
+- `Aspose.Slides.IFontFallBackRulesCollection`
+- `Aspose.Slides.FontFallBackRulesCollection`
+- `Aspose.Slides.Export.PdfOptions`
+- `Aspose.Slides.LoadOptions`
+- `Aspose.Slides.IImage`
 
 ## Common Code Pattern
 
@@ -241,5 +248,5 @@ using (Presentation pres = new Presentation("input.pptx"))
 - Save the presentation using `Presentation.Save(...)`.
 
 <!-- AUTOGENERATED:START -->
-Updated: 2026-04-07
+Updated: 2026-05-12
 <!-- AUTOGENERATED:END -->
