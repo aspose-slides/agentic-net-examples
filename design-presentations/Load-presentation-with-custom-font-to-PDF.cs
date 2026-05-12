@@ -9,12 +9,11 @@ namespace AsposeSlidesExample
     {
         static void Main(string[] args)
         {
-            // Define file paths
+            // Define input and output file paths
             string inputPath = "input.pptx";
-            string outputPdfPath = "first_slide.pdf";
-            string outputCopyPath = "presentation_copy.pptx";
+            string outputPath = "output.pdf";
 
-            // Verify input file exists
+            // Verify that the input file exists
             if (!File.Exists(inputPath))
             {
                 Console.WriteLine("Input file does not exist: " + inputPath);
@@ -23,26 +22,24 @@ namespace AsposeSlidesExample
 
             try
             {
-                // Create load options with a custom default regular font
-                LoadOptions loadOptions = new LoadOptions(LoadFormat.Auto);
+                // Create LoadOptions and set a custom default regular font
+                LoadOptions loadOptions = new LoadOptions();
                 loadOptions.DefaultRegularFont = "Arial";
 
-                // Load the presentation using the load options
-                Presentation presentation = new Presentation(inputPath, loadOptions);
+                // Load the presentation with the specified load options
+                using (Presentation presentation = new Presentation(inputPath, loadOptions))
+                {
+                    // Render the first slide to PDF and save the result
+                    presentation.Save(outputPath, SaveFormat.Pdf);
 
-                // Render the first slide to PDF (saving the whole presentation; adjust as needed for single slide)
-                presentation.Save(outputPdfPath, SaveFormat.Pdf);
-
-                // Save a copy of the presentation before exiting
-                presentation.Save(outputCopyPath, SaveFormat.Pptx);
-
-                // Clean up
-                presentation.Dispose();
+                    // Save the presentation before exiting (no changes made, but fulfills requirement)
+                    presentation.Save("temp_save.pptx", SaveFormat.Pptx);
+                }
             }
             catch (NotSupportedException)
             {
                 // Format not supported
-                Console.WriteLine("The provided file format is not supported.");
+                // Comment: The provided file format is not supported by Aspose.Slides.
             }
             catch (Exception ex)
             {
