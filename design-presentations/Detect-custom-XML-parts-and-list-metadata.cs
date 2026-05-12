@@ -3,58 +3,62 @@ using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-namespace CustomXmlPartsDemo
+namespace DetectCustomXmlParts
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Define input presentation path (use first argument if provided)
-            string inputPath;
-            if (args != null && args.Length > 0 && !string.IsNullOrEmpty(args[0]))
-            {
-                inputPath = args[0];
-            }
-            else
-            {
-                inputPath = "input.pptx";
-            }
+            // Path to the presentation file
+            string presentationPath = "sample.pptx";
 
             // Verify that the file exists
-            if (!File.Exists(inputPath))
+            if (!File.Exists(presentationPath))
             {
-                Console.WriteLine("The specified presentation file does not exist: " + inputPath);
+                Console.WriteLine("File not found: " + presentationPath);
                 return;
             }
 
             try
             {
                 // Load the presentation
-                using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
+                using (Presentation presentation = new Presentation(presentationPath))
                 {
                     // Retrieve all custom XML parts
-                    Aspose.Slides.ICustomXmlPart[] customParts = presentation.AllCustomXmlParts;
+                    ICustomXmlPart[] customParts = presentation.AllCustomXmlParts;
 
-                    Console.WriteLine("Number of custom XML parts: " + customParts.Length);
-
-                    // List each custom XML part's ID and XML content
-                    foreach (Aspose.Slides.ICustomXmlPart part in customParts)
+                    if (customParts.Length == 0)
                     {
-                        Console.WriteLine("Part ID: " + part.ItemId);
-                        Console.WriteLine("XML Content:");
-                        Console.WriteLine(part.XmlAsString);
-                        Console.WriteLine(new string('-', 40));
+                        Console.WriteLine("No custom XML parts found.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Custom XML parts found: " + customParts.Length);
+                        for (int i = 0; i < customParts.Length; i++)
+                        {
+                            ICustomXmlPart part = customParts[i];
+                            Console.WriteLine($"Part {i + 1}:");
+                            Console.WriteLine("  ItemId: " + part.ItemId);
+                            Console.WriteLine("  XML Content:");
+                            Console.WriteLine(part.XmlAsString);
+                        }
                     }
 
-                    // Save the presentation (no modifications made)
-                    presentation.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    // Save the presentation before exiting
+                    presentation.Save(presentationPath, SaveFormat.Pptx);
                 }
+            }
+            catch (Aspose.Slides.PptxUnsupportedFormatException ex)
+            {
+                Console.WriteLine("Unsupported PPTX format: " + ex.Message);
+            }
+            catch (Aspose.Slides.PptUnsupportedFormatException ex)
+            {
+                Console.WriteLine("Unsupported PPT format: " + ex.Message);
             }
             catch (Exception ex)
             {
-                // Handle unsupported format or other errors
                 Console.WriteLine("An error occurred: " + ex.Message);
-                // If the format is not supported, the exception message will indicate it.
             }
         }
     }
