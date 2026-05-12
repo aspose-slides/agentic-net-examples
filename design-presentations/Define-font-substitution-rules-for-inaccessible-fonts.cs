@@ -3,7 +3,7 @@ using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-namespace DefineFontSubstitution
+namespace FontSubstitutionExample
 {
     class Program
     {
@@ -12,7 +12,7 @@ namespace DefineFontSubstitution
             string inputPath = "input.pptx";
             string outputPath = "output.pptx";
 
-            // Check if the input file exists
+            // Verify that the input file exists
             if (!File.Exists(inputPath))
             {
                 Console.WriteLine("Input file does not exist: " + inputPath);
@@ -24,37 +24,32 @@ namespace DefineFontSubstitution
                 // Load the presentation
                 using (Presentation presentation = new Presentation(inputPath))
                 {
-                    // Get existing substitution rule list or create a new one
-                    IFontSubstRuleCollection substRules = presentation.FontsManager.FontSubstRuleList;
-                    if (substRules == null)
-                    {
-                        substRules = new FontSubstRuleCollection();
-                        presentation.FontsManager.FontSubstRuleList = substRules;
-                    }
+                    // Create a new collection for font substitution rules
+                    IFontSubstRuleCollection substitutionRules = new FontSubstRuleCollection();
 
-                    // Define a substitution rule: replace "Arial" with "Times New Roman" when the source font is inaccessible
-                    IFontData sourceFont = new FontData("Arial");
-                    IFontData destFont = new FontData("Times New Roman");
-                    FontSubstRule rule = new FontSubstRule(sourceFont, destFont, Aspose.Slides.FontSubstCondition.WhenInaccessible);
+                    // Define a rule: replace "MissingFont" with "Arial" when the source font is inaccessible
+                    IFontData sourceFont = new FontData("MissingFont");
+                    IFontData destFont = new FontData("Arial");
+                    FontSubstRule rule = new FontSubstRule(sourceFont, destFont, FontSubstCondition.WhenInaccessible);
 
                     // Add the rule to the collection
-                    substRules.Add(rule);
+                    substitutionRules.Add(rule);
 
-                    // Save the presentation
-                    presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    // Assign the collection to the presentation's FontsManager
+                    presentation.FontsManager.FontSubstRuleList = substitutionRules;
+
+                    // Save the modified presentation
+                    presentation.Save(outputPath, SaveFormat.Pptx);
                 }
-
-                Console.WriteLine("Presentation saved successfully to " + outputPath);
             }
             catch (NotSupportedException)
             {
                 // Format not supported
-                // Format not supported.
-                Console.WriteLine("The file format is not supported.");
+                Console.WriteLine("The specified file format is not supported.");
             }
             catch (Exception ex)
             {
-                // Handle other exceptions (e.g., web service errors)
+                // General exception handling
                 Console.WriteLine("An error occurred: " + ex.Message);
             }
         }
