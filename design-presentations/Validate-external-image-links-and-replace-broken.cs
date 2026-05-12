@@ -4,74 +4,92 @@ using System.Net.Http;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-class Program
+namespace ValidateExternalImages
 {
-    static void Main(string[] args)
+    class Program
     {
-        // Input presentation path, output path, and placeholder image path
-        string inputPath = args.Length > 0 ? args[0] : "input.pptx";
-        string outputPath = args.Length > 1 ? args[1] : "output.pptx";
-        string placeholderPath = args.Length > 2 ? args[2] : "placeholder.png";
+        static void Main(string[] args)
+        {
+            // Input and output file paths
+            string inputPath = args.Length > 0 ? args[0] : "input.pptx";
+            string outputPath = args.Length > 1 ? args[1] : "output.pptx";
 
-        // Validate input files
-        if (!File.Exists(inputPath))
-        {
-            Console.WriteLine("Input file does not exist.");
-            return;
-        }
-        if (!File.Exists(placeholderPath))
-        {
-            Console.WriteLine("Placeholder image does not exist.");
-            return;
-        }
+            // Verify input file exists
+            if (!File.Exists(inputPath))
+            {
+                Console.WriteLine("Input file does not exist: " + inputPath);
+                return;
+            }
 
-        try
-        {
-            using (Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath))
+            // Placeholder image path (must exist)
+            string placeholderPath = "placeholder.png";
+            if (!File.Exists(placeholderPath))
+            {
+                Console.WriteLine("Placeholder image not found: " + placeholderPath);
+                return;
+            }
+
+            // Load presentation
+            using (Presentation pres = new Presentation(inputPath))
             {
                 HttpClient httpClient = new HttpClient();
 
                 // Iterate through all slides and shapes
-                foreach (Aspose.Slides.ISlide slide in pres.Slides)
+                foreach (ISlide slide in pres.Slides)
                 {
-                    foreach (Aspose.Slides.IShape shape in slide.Shapes)
+                    foreach (IShape shape in slide.Shapes)
                     {
-                        Aspose.Slides.ISlidesPicture picture = shape as Aspose.Slides.ISlidesPicture;
-                        if (picture != null && !string.IsNullOrEmpty(picture.LinkPathLong))
+                        // Process only picture shapes
+                        if (shape is ISlidesPicture picture)
                         {
-                            try
+                            string link = picture.LinkPathLong;
+                            if (!string.IsNullOrEmpty(link))
                             {
-                                // Try to access the external image URL
-                                HttpResponseMessage response = httpClient.GetAsync(picture.LinkPathLong).Result;
-                                if (!response.IsSuccessStatusCode)
+                                try
                                 {
-                                    throw new Exception("Image not reachable");
+                                    // Attempt to download the external image
+                                    HttpResponseMessage response = httpClient.GetAsync(link).Result;
+                                    if (response.IsSuccessStatusCode)
+                                    {
+                                        byte[] imageData = response.Content.ReadAsByteArrayAsync().Result;
+                                        IPPImage img = pres.Images.AddImage(imageData);
+                                        picture.Image = img;
+                                        picture.LinkPathLong = string.Empty; // Clear broken link
+                                    }
+                                    else
+                                    {
+                                        // Replace with placeholder on failed download
+                                        byte[] placeholderData = File.ReadAllBytes(placeholderPath);
+                                        IPPImage placeholderImg = pres.Images.AddImage(placeholderData);
+                                        picture.Image = placeholderImg;
+                                        picture.LinkPathLong = string.Empty;
+                                    }
                                 }
-                                // Image is accessible; no action needed
-                            }
-                            catch
-                            {
-                                // Replace broken link with placeholder image
-                                byte[] placeholderData = File.ReadAllBytes(placeholderPath);
-                                Aspose.Slides.IPPImage placeholderImage = pres.Images.AddImage(placeholderData);
-                                picture.Image = placeholderImage;
-                                picture.LinkPathLong = null;
+                                catch (HttpRequestException)
+                                {
+                                    // Network error – replace with placeholder
+                                    byte[] placeholderData = File.ReadAllBytes(placeholderPath);
+                                    IPPImage placeholderImg = pres.Images.AddImage(placeholderData);
+                                    picture.Image = placeholderImg;
+                                    picture.LinkPathLong = string.Empty;
+                                }
                             }
                         }
                     }
                 }
 
                 // Save the modified presentation
-                pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                try
+                {
+                    pres.Save(outputPath, SaveFormat.Pptx);
+                }
+                catch (Exception ex)
+                {
+                    // Format not supported or other save error
+                    // Comment: format not supported
+                    Console.WriteLine("Error saving presentation: " + ex.Message);
+                }
             }
-        }
-        catch (NotSupportedException)
-        {
-            // Format not supported
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine("Error: " + ex.Message);
         }
     }
 }
