@@ -10,27 +10,23 @@ namespace ExportChartDataSeriesToCSV
     {
         static void Main(string[] args)
         {
-            // Check if presentation path is provided
-            if (args.Length == 0)
-            {
-                Console.WriteLine("Please provide the path to the presentation file as an argument.");
-                return;
-            }
+            // Input presentation file path
+            string inputPath = "input.pptx";
 
-            string presentationPath = args[0];
-
-            // Verify that the file exists
-            if (!File.Exists(presentationPath))
+            // Verify that the input file exists
+            if (!File.Exists(inputPath))
             {
-                Console.WriteLine($"File not found: {presentationPath}");
+                Console.WriteLine("Input file does not exist: " + inputPath);
                 return;
             }
 
             try
             {
                 // Load the presentation
-                using (Presentation pres = new Presentation(presentationPath))
+                using (Presentation pres = new Presentation(inputPath))
                 {
+                    int chartCounter = 0;
+
                     // Iterate through all slides
                     for (int slideIndex = 0; slideIndex < pres.Slides.Count; slideIndex++)
                     {
@@ -39,69 +35,72 @@ namespace ExportChartDataSeriesToCSV
                         // Iterate through all shapes on the slide
                         for (int shapeIndex = 0; shapeIndex < slide.Shapes.Count; shapeIndex++)
                         {
-                            // Check if the shape is a chart
-                            IChart chart = slide.Shapes[shapeIndex] as IChart;
+                            IShape shape = slide.Shapes[shapeIndex];
+
+                            // Process only chart shapes
+                            IChart chart = shape as IChart;
                             if (chart == null)
                                 continue;
 
-                            // Get the series collection
+                            // Get the series collection of the chart
                             IChartSeriesCollection seriesCollection = chart.ChartData.Series;
 
-                            // Iterate through each series
-                            for (int seriesIndex = 0; seriesIndex < seriesCollection.Count; seriesIndex++)
+                            // Export each series to a separate CSV file
+                            for (int seriesIdx = 0; seriesIdx < seriesCollection.Count; seriesIdx++)
                             {
-                                IChartSeries series = seriesCollection[seriesIndex];
+                                IChartSeries series = seriesCollection[seriesIdx];
 
-                                // Prepare CSV file name
-                                string csvFileName = $"Chart_Slide{slideIndex + 1}_Shape{shapeIndex + 1}_Series{seriesIndex + 1}.csv";
+                                // Build CSV file name (e.g., Chart_0_Series_0.csv)
+                                string csvFileName = $"Chart_{chartCounter}_Series_{seriesIdx}.csv";
 
-                                // Write series data to CSV
                                 using (StreamWriter writer = new StreamWriter(csvFileName))
                                 {
-                                    // Write header (optional)
+                                    // Write CSV header
                                     writer.WriteLine("Category,Value");
 
-                                    // Iterate through data points of the series
-                                    for (int pointIndex = 0; pointIndex < series.DataPoints.Count; pointIndex++)
+                                    // Export data points of the series
+                                    for (int pointIdx = 0; pointIdx < series.DataPoints.Count; pointIdx++)
                                     {
-                                        // Attempt to retrieve the value; if unavailable, write empty
-                                        string value = string.Empty;
+                                        IChartDataPoint dataPoint = series.DataPoints[pointIdx];
+
+                                        // Attempt to retrieve the value; fallback to placeholder if unavailable
+                                        string value = "0";
+
                                         try
                                         {
-                                            // The Value property may be of type IChartDataCell; retrieve its numeric value if possible
-                                            IChartDataCell cell = series.DataPoints[pointIndex].Value as IChartDataCell;
-                                            if (cell != null && cell.Value != null)
-                                                value = cell.Value.ToString();
+                                            // Many chart types store the value in the first cell of the data point
+                                            // This may vary; adjust as needed for specific chart types
+                                            if (dataPoint.Value != null && dataPoint.Value.Data != null)
+                                                value = dataPoint.Value.Data.ToString();
                                         }
                                         catch
                                         {
-                                            // Ignore any errors while reading cell value
+                                            // Ignore any errors while reading the value
                                         }
 
-                                        // Write a line to CSV (Category placeholder)
-                                        writer.WriteLine($"{pointIndex + 1},{value}");
+                                        // Write the data point to CSV (Category index used as placeholder)
+                                        writer.WriteLine($"{pointIdx},{value}");
                                     }
                                 }
-
-                                Console.WriteLine($"Exported series {seriesIndex + 1} of chart on slide {slideIndex + 1} to {csvFileName}");
                             }
+
+                            chartCounter++;
                         }
                     }
 
-                    // Save the presentation (no changes made, but required by rule)
-                    string outputPath = Path.Combine(Path.GetDirectoryName(presentationPath), "Exported_" + Path.GetFileName(presentationPath));
-                    pres.Save(outputPath, SaveFormat.Pptx);
+                    // Save the presentation (required by the task)
+                    pres.Save("output.pptx", SaveFormat.Pptx);
                 }
             }
             catch (NotSupportedException)
             {
                 // Format not supported
-                // Comment: The provided file format is not supported by Aspose.Slides.
+                // Comment: format not supported
             }
             catch (Exception ex)
             {
-                // General exception handling (including possible web service errors)
-                Console.WriteLine($"An error occurred: {ex.Message}");
+                // General exception handling (e.g., external URL issues)
+                Console.WriteLine("An error occurred: " + ex.Message);
             }
         }
     }
