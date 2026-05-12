@@ -7,13 +7,10 @@ class Program
 {
     static void Main()
     {
-        // Paths and font names
         string inputPath = "input.pptx";
         string outputPath = "output.pptx";
-        string sourceFontName = "Arial";
-        string destFontName = "Times New Roman";
+        string customFontFamily = "Arial";
 
-        // Verify input file exists
         if (!File.Exists(inputPath))
         {
             Console.WriteLine("Input file does not exist.");
@@ -22,27 +19,63 @@ class Program
 
         try
         {
-            // Load presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+            using (Presentation presentation = new Presentation(inputPath))
+            {
+                foreach (ISlide slide in presentation.Slides)
+                {
+                    foreach (IShape shape in slide.Shapes)
+                    {
+                        if (shape is IAutoShape autoShape && autoShape.TextFrame != null)
+                        {
+                            ITextFrame textFrame = autoShape.TextFrame;
+                            foreach (IParagraph paragraph in textFrame.Paragraphs)
+                            {
+                                foreach (IPortion portion in paragraph.Portions)
+                                {
+                                    // Change only the font family, keep other formatting intact
+                                    portion.PortionFormat.LatinFont = new FontData(customFontFamily);
+                                }
+                            }
+                        }
+                        else if (shape is IGroupShape groupShape)
+                        {
+                            ProcessGroupShape(groupShape, customFontFamily);
+                        }
+                    }
+                }
 
-            // Define source and destination fonts
-            Aspose.Slides.IFontData sourceFont = new Aspose.Slides.FontData(sourceFontName);
-            Aspose.Slides.IFontData destFont = new Aspose.Slides.FontData(destFontName);
-
-            // Replace font across the presentation while preserving formatting
-            presentation.FontsManager.ReplaceFont(sourceFont, destFont);
-
-            // Save the modified presentation
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
-            presentation.Dispose();
+                // Save the modified presentation
+                presentation.Save(outputPath, SaveFormat.Pptx);
+            }
         }
-        catch (NotSupportedException)
+        catch (Aspose.Slides.PptxUnsupportedFormatException)
         {
-            // Format not supported.
+            // Format not supported
         }
         catch (Exception ex)
         {
             Console.WriteLine("Error: " + ex.Message);
+        }
+    }
+
+    static void ProcessGroupShape(IGroupShape groupShape, string fontFamily)
+    {
+        foreach (IShape shape in groupShape.Shapes)
+        {
+            if (shape is IAutoShape autoShape && autoShape.TextFrame != null)
+            {
+                foreach (IParagraph paragraph in autoShape.TextFrame.Paragraphs)
+                {
+                    foreach (IPortion portion in paragraph.Portions)
+                    {
+                        portion.PortionFormat.LatinFont = new FontData(fontFamily);
+                    }
+                }
+            }
+            else if (shape is IGroupShape innerGroup)
+            {
+                ProcessGroupShape(innerGroup, fontFamily);
+            }
         }
     }
 }
