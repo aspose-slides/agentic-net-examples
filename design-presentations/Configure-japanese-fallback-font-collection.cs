@@ -1,35 +1,57 @@
 using System;
+using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-class Program
+namespace AsposeSlidesFallbackExample
 {
-    static void Main()
+    class Program
     {
-        // Create a new presentation
-        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation();
-
-        // Create a fallback rules collection
-        Aspose.Slides.IFontFallBackRulesCollection rules = new Aspose.Slides.FontFallBackRulesCollection();
-
-        // Define three fonts to prioritize for the Japanese Unicode range (0x3040 - 0x30FF)
-        string[] japaneseFonts = new string[] { "MS Mincho", "MS Gothic", "Yu Gothic" };
-        rules.Add(new Aspose.Slides.FontFallBackRule(0x3040u, 0x30FFu, japaneseFonts));
-
-        // Assign the collection to the presentation's FontsManager
-        pres.FontsManager.FontFallBackRulesCollection = rules;
-
-        // Save the presentation
-        try
+        static void Main(string[] args)
         {
-            pres.Save("JapaneseFallback.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
-        }
-        catch (Exception)
-        {
-            // Format not supported
-        }
+            try
+            {
+                // Create a new presentation
+                Presentation presentation = new Presentation();
 
-        // Dispose the presentation
-        pres.Dispose();
+                // Get the fallback rules collection from the FontsManager
+                IFontFallBackRulesCollection fallbackRules = presentation.FontsManager.FontFallBackRulesCollection;
+
+                // Japanese Unicode range (Hiragana and Katakana)
+                uint rangeStart = 0x3040;
+                uint rangeEnd = 0x30FF;
+
+                // Define three prioritized fonts for the fallback rule
+                string[] japaneseFonts = new string[] { "MS Mincho", "MS Gothic", "Yu Gothic" };
+                FontFallBackRule japaneseRule = new FontFallBackRule(rangeStart, rangeEnd, japaneseFonts);
+
+                // Add the rule to the collection
+                fallbackRules.Add(japaneseRule);
+
+                // (Optional) assign the modified collection back to the manager
+                presentation.FontsManager.FontFallBackRulesCollection = fallbackRules;
+
+                // Define output file path
+                string outputPath = "FallbackExample.pptx";
+
+                // Ensure the output directory exists
+                string outputDirectory = Path.GetDirectoryName(Path.GetFullPath(outputPath));
+                if (!Directory.Exists(outputDirectory))
+                {
+                    Directory.CreateDirectory(outputDirectory);
+                }
+
+                // Save the presentation
+                presentation.Save(outputPath, SaveFormat.Pptx);
+            }
+            catch (NotSupportedException)
+            {
+                // format not supported
+            }
+            catch (Exception)
+            {
+                // Handle other exceptions (e.g., I/O errors)
+            }
+        }
     }
 }
