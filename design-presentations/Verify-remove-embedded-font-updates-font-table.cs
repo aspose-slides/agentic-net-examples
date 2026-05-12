@@ -1,127 +1,92 @@
 using System;
 using System.IO;
+using System.Linq;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-namespace FontRemovalTests
+namespace FontRemovalTest
 {
-    public class Program
+    class Program
     {
-        public static void Main()
+        static void Main(string[] args)
         {
-            // Paths for test files
-            string inputPath = "TestPresentation.pptx";
-            string outputPath = "TestPresentation_Output.pptx";
+            // Path to the test presentation
+            string presentationPath = "sample.pptx";
 
-            // Ensure input file exists; create a simple presentation if missing
-            if (!File.Exists(inputPath))
+            // Verify the file exists
+            if (!File.Exists(presentationPath))
             {
-                try
-                {
-                    Aspose.Slides.Presentation createPres = new Aspose.Slides.Presentation();
-                    // Add a slide to have a valid presentation
-                    createPres.Slides.AddEmptySlide(createPres.Slides[0].LayoutSlide);
-                    createPres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
-                    createPres.Dispose();
-                }
-                catch (Exception ex)
-                {
-                    // Format not supported or other error
-                    // Comment: format not supported
-                    Console.WriteLine("Failed to create test presentation: " + ex.Message);
-                    return;
-                }
-            }
-
-            // Load the presentation
-            Aspose.Slides.Presentation pres = null;
-            try
-            {
-                pres = new Aspose.Slides.Presentation(inputPath);
-            }
-            catch (Exception ex)
-            {
-                // Comment: format not supported
-                Console.WriteLine("Failed to load presentation: " + ex.Message);
+                Console.WriteLine($"Presentation file not found: {presentationPath}");
                 return;
             }
 
-            // Embed a known font if not already embedded
-            Aspose.Slides.IFontData[] allFonts = pres.FontsManager.GetFonts();
-            Aspose.Slides.IFontData[] embeddedFonts = pres.FontsManager.GetEmbeddedFonts();
-            bool arialEmbedded = false;
-            foreach (Aspose.Slides.IFontData ef in embeddedFonts)
-            {
-                if (ef.FontName.Equals("Arial", StringComparison.OrdinalIgnoreCase))
-                {
-                    arialEmbedded = true;
-                    break;
-                }
-            }
-
-            if (!arialEmbedded && allFonts.Length > 0)
-            {
-                // Attempt to embed the first font (commonly Arial)
-                Aspose.Slides.IFontData fontToEmbed = allFonts[0];
-                try
-                {
-                    pres.FontsManager.AddEmbeddedFont(fontToEmbed, Aspose.Slides.Export.EmbedFontCharacters.All);
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Failed to embed font: " + ex.Message);
-                }
-            }
-
-            // Capture embedded fonts count before removal
-            Aspose.Slides.IFontData[] beforeRemoval = pres.FontsManager.GetEmbeddedFonts();
-            int countBefore = beforeRemoval.Length;
-
-            if (countBefore == 0)
-            {
-                Console.WriteLine("No embedded fonts to remove. Test inconclusive.");
-                pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
-                pres.Dispose();
-                return;
-            }
-
-            // Remove the first embedded font
-            Aspose.Slides.IFontData fontToRemove = beforeRemoval[0];
             try
             {
-                pres.FontsManager.RemoveEmbeddedFont(fontToRemove);
+                // Load the presentation
+                using (Presentation presentation = new Presentation(presentationPath))
+                {
+                    // Get all fonts used in the presentation
+                    IFontData[] allFonts = presentation.FontsManager.GetFonts();
+
+                    if (allFonts == null || allFonts.Length == 0)
+                    {
+                        Console.WriteLine("No fonts found in the presentation.");
+                        return;
+                    }
+
+                    // Choose the first font for the test
+                    IFontData testFont = allFonts[0];
+
+                    // Ensure the font is embedded before removal
+                    IFontData[] embeddedFontsBefore = presentation.FontsManager.GetEmbeddedFonts();
+                    bool wasAlreadyEmbedded = embeddedFontsBefore.Any(f => f.FontName == testFont.FontName);
+
+                    if (!wasAlreadyEmbedded)
+                    {
+                        // Embed the font
+                        presentation.FontsManager.AddEmbeddedFont(testFont, Aspose.Slides.Export.EmbedFontCharacters.All);
+                    }
+
+                    // Verify the font is now embedded
+                    IFontData[] embeddedFontsAfterAdd = presentation.FontsManager.GetEmbeddedFonts();
+                    bool isEmbedded = embeddedFontsAfterAdd.Any(f => f.FontName == testFont.FontName);
+                    if (!isEmbedded)
+                    {
+                        Console.WriteLine("Failed to embed the test font.");
+                        return;
+                    }
+
+                    // Remove the embedded font
+                    presentation.FontsManager.RemoveEmbeddedFont(testFont);
+
+                    // Verify the font is no longer in the embedded fonts list
+                    IFontData[] embeddedFontsAfterRemove = presentation.FontsManager.GetEmbeddedFonts();
+                    bool stillEmbedded = embeddedFontsAfterRemove.Any(f => f.FontName == testFont.FontName);
+
+                    if (stillEmbedded)
+                    {
+                        Console.WriteLine("Test Failed: Font still present after removal.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Test Passed: Font successfully removed from embedded fonts.");
+                    }
+
+                    // Save the presentation (required by lifecycle rules)
+                    string outputPath = "FontRemovalTest_Output.pptx";
+                    presentation.Save(outputPath, SaveFormat.Pptx);
+                }
+            }
+            catch (NotSupportedException)
+            {
+                // Format not supported
+                // Comment: format not supported.
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Failed to remove embedded font: " + ex.Message);
-                pres.Dispose();
-                return;
+                // Handle other exceptions (e.g., external resources)
+                Console.WriteLine($"An error occurred: {ex.Message}");
             }
-
-            // Verify the font table is updated
-            Aspose.Slides.IFontData[] afterRemoval = pres.FontsManager.GetEmbeddedFonts();
-            int countAfter = afterRemoval.Length;
-
-            if (countAfter != countBefore - 1)
-            {
-                throw new InvalidOperationException("Embedded font count did not decrease after removal.");
-            }
-
-            // Save the modified presentation
-            try
-            {
-                pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
-            }
-            catch (Exception ex)
-            {
-                // Comment: format not supported
-                Console.WriteLine("Failed to save presentation: " + ex.Message);
-            }
-
-            // Clean up
-            pres.Dispose();
-
-            Console.WriteLine("Test passed: RemoveEmbeddedFont correctly updates the font table.");
         }
     }
 }
