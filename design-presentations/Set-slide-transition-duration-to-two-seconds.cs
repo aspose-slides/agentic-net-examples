@@ -1,59 +1,32 @@
 using System;
 using System.IO;
+using Aspose.Slides;
 using Aspose.Slides.Export;
 
-namespace AsposeSlidesDemo
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
+        string outputPath = "output.pptx";
+        try
         {
-            // Paths for input and output presentations
-            string inputPath = "input.pptx";
-            string outputPath = "output.pptx";
+            // Create a new presentation
+            Presentation pres = new Presentation();
 
-            Aspose.Slides.Presentation presentation = null;
-            try
+            // Set transition duration to 2000 milliseconds (2 seconds) for each slide
+            foreach (ISlide slide in pres.Slides)
             {
-                // Load existing presentation if the file exists; otherwise create a new one
-                if (File.Exists(inputPath))
-                {
-                    presentation = new Aspose.Slides.Presentation(inputPath);
-                }
-                else
-                {
-                    presentation = new Aspose.Slides.Presentation();
-                }
+                slide.SlideShowTransition.Duration = 2000;
+            }
 
-                // Set transition duration to 2000 milliseconds (2 seconds) for each slide
-                int slideCount = presentation.Slides.Count;
-                for (int i = 0; i < slideCount; i++)
-                {
-                    Aspose.Slides.ISlideShowTransition transition = presentation.Slides[i].SlideShowTransition;
-                    transition.Duration = 2000;
-                }
-
-                // Save the modified presentation
-                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
-            }
-            catch (NotSupportedException notSupEx)
-            {
-                // Format not supported
-                Console.WriteLine("The file format is not supported: " + notSupEx.Message);
-            }
-            catch (Exception ex)
-            {
-                // Handle other exceptions (e.g., external URL loading)
-                Console.WriteLine("An error occurred: " + ex.Message);
-            }
-            finally
-            {
-                // Ensure resources are released
-                if (presentation != null)
-                {
-                    presentation.Dispose();
-                }
-            }
+            // Save the presentation
+            pres.Save(outputPath, SaveFormat.Pptx);
+            pres.Dispose();
+        }
+        catch (Exception ex)
+        {
+            // Handle exceptions (e.g., unsupported format)
+            Console.WriteLine("Error: " + ex.Message);
         }
     }
 }
