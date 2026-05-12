@@ -9,60 +9,54 @@ namespace SlideBackgroundTileExample
     {
         static void Main(string[] args)
         {
-            // Define data directory and image file
+            // Define data directory and ensure it exists
             string dataDir = Path.Combine(Directory.GetCurrentDirectory(), "Data");
-            string imageFileName = "background.jpg";
-            string imagePath = Path.Combine(dataDir, imageFileName);
-            string outputPath = Path.Combine(dataDir, "PresentationWithTiledBackground.pptx");
-
-            // Ensure data directory exists
             if (!Directory.Exists(dataDir))
             {
                 Directory.CreateDirectory(dataDir);
             }
 
-            // Verify that the image file exists
+            // Define image path for background
+            string imagePath = Path.Combine(dataDir, "background.jpg");
+
+            // Check if the image file exists
             if (!File.Exists(imagePath))
             {
                 Console.WriteLine("Image file not found: " + imagePath);
                 return;
             }
 
+            // Create a new presentation
+            Presentation pres = new Presentation();
+
             try
             {
-                // Create a new presentation
-                Presentation pres = new Presentation();
-
-                // Load the image and add it to the presentation's image collection
+                // Load image and add to presentation's image collection
                 IImage img = Images.FromFile(imagePath);
                 IPPImage ppImg = pres.Images.AddImage(img);
 
-                // Apply tiled picture fill to each slide's background
+                // Apply tiled picture fill to each slide background
                 foreach (ISlide slide in pres.Slides)
                 {
                     slide.Background.Type = BackgroundType.OwnBackground;
                     slide.Background.FillFormat.FillType = FillType.Picture;
-                    IPictureFillFormat picFill = slide.Background.FillFormat.PictureFillFormat;
-                    picFill.Picture.Image = ppImg;
-                    picFill.PictureFillMode = PictureFillMode.Tile;
-                    // Optional: set alignment and scaling for seamless tiling
-                    picFill.TileAlignment = RectangleAlignment.TopLeft;
-                    picFill.TileScaleX = 100;
-                    picFill.TileScaleY = 100;
+                    slide.Background.FillFormat.PictureFillFormat.PictureFillMode = PictureFillMode.Tile;
+                    slide.Background.FillFormat.PictureFillFormat.Picture.Image = ppImg;
                 }
 
                 // Save the presentation
-                pres.Save(outputPath, SaveFormat.Pptx);
-                pres.Dispose();
-
-                Console.WriteLine("Presentation saved successfully to: " + outputPath);
+                string outPath = Path.Combine(dataDir, "TiledBackgroundPresentation.pptx");
+                pres.Save(outPath, SaveFormat.Pptx);
             }
             catch (Exception ex)
             {
-                // Handle unsupported format or other errors
+                // Handle unsupported format or other exceptions
                 Console.WriteLine("An error occurred: " + ex.Message);
-                // Format not supported comment
-                // The provided file format may not be supported by Aspose.Slides.
+            }
+            finally
+            {
+                // Ensure resources are released
+                pres.Dispose();
             }
         }
     }
