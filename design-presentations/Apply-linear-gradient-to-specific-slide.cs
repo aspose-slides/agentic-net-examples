@@ -1,39 +1,30 @@
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
-using System.Drawing;
 
 class Program
 {
     static void Main()
     {
         // Create a new presentation
-        Presentation pres = new Presentation();
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-        // Define output file path
-        string outputPath = "GradientBackground.pptx";
+        // Access the first slide
+        Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-        // Set background to gradient on the first slide
-        pres.Slides[0].Background.Type = BackgroundType.OwnBackground;
-        pres.Slides[0].Background.FillFormat.FillType = FillType.Gradient;
-        pres.Slides[0].Background.FillFormat.GradientFormat.TileFlip = TileFlip.FlipBoth;
+        // Set the slide background to a gradient
+        slide.Background.Type = Aspose.Slides.BackgroundType.OwnBackground;
+        slide.Background.FillFormat.FillType = Aspose.Slides.FillType.Gradient;
 
-        // Set custom linear gradient angle (in degrees)
-        pres.Slides[0].Background.FillFormat.GradientFormat.LinearGradientAngle = 45f;
+        // Set a custom gradient angle (in degrees)
+        slide.Background.FillFormat.GradientFormat.LinearGradientAngle = 45f;
 
-        // Add gradient stops with custom colors
-        pres.Slides[0].Background.FillFormat.GradientFormat.GradientStops.Add(0.0f, PresetColor.Purple);
-        pres.Slides[0].Background.FillFormat.GradientFormat.GradientStops.Add(1.0f, PresetColor.Red);
+        // Define gradient colors
+        slide.Background.FillFormat.GradientFormat.GradientStops.Add(0.0f, Aspose.Slides.PresetColor.Purple);
+        slide.Background.FillFormat.GradientFormat.GradientStops.Add(1.0f, Aspose.Slides.PresetColor.Red);
 
         // Save the presentation
-        try
-        {
-            pres.Save(outputPath, SaveFormat.Pptx);
-        }
-        catch (Exception ex)
-        {
-            // Handle errors such as unsupported format
-            Console.WriteLine("Error saving presentation: " + ex.Message);
-        }
+        string outputPath = "GradientBackground.pptx";
+        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
     }
 }
