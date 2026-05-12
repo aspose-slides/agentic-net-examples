@@ -3,53 +3,55 @@ using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-class Program
+namespace RemoveHiddenSlides
 {
-    static void Main(string[] args)
+    class Program
     {
-        // Define input and output file paths
-        string inputPath = "input.pptx";
-        string outputPath = "output.pptx";
-
-        // Verify that the input file exists
-        if (!File.Exists(inputPath))
+        static void Main(string[] args)
         {
-            Console.WriteLine("Input file does not exist.");
-            return;
-        }
+            // Input and output file paths
+            string inputPath = "input.pptx";
+            string outputPath = "output_cleaned.pptx";
 
-        try
-        {
-            // Load the presentation
-            using (Presentation presentation = new Presentation(inputPath))
+            // Verify that the input file exists
+            if (!File.Exists(inputPath))
             {
-                // Iterate backwards to safely remove hidden slides
-                for (int i = presentation.Slides.Count - 1; i >= 0; i--)
+                Console.WriteLine("Input file does not exist: " + inputPath);
+                return;
+            }
+
+            try
+            {
+                // Load the presentation
+                using (Presentation presentation = new Presentation(inputPath))
                 {
-                    ISlide slide = presentation.Slides[i];
-                    if (slide.Hidden)
+                    // Remove hidden slides by iterating backwards
+                    for (int i = presentation.Slides.Count - 1; i >= 0; i--)
                     {
-                        slide.Remove();
+                        ISlide slide = presentation.Slides[i];
+                        // Hidden slides are identified by the Hidden property
+                        if (slide.Hidden)
+                        {
+                            slide.Remove();
+                        }
                     }
+
+                    // Save the cleaned presentation
+                    presentation.Save(outputPath, SaveFormat.Pptx);
                 }
 
-                // Save the cleaned presentation
-                presentation.Save(outputPath, SaveFormat.Pptx);
+                Console.WriteLine("Presentation saved without hidden slides: " + outputPath);
             }
-        }
-        // Handle unsupported format exceptions
-        catch (Aspose.Slides.PptxUnsupportedFormatException)
-        {
-            // Format not supported
-        }
-        catch (Aspose.Slides.PptUnsupportedFormatException)
-        {
-            // Format not supported
-        }
-        // General exception handling
-        catch (Exception ex)
-        {
-            Console.WriteLine("Error: " + ex.Message);
+            catch (PptxUnsupportedFormatException)
+            {
+                // Format not supported
+                Console.WriteLine("The presentation format is not supported.");
+            }
+            catch (Exception ex)
+            {
+                // General exception handling
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
         }
     }
 }
