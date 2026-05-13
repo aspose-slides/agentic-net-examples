@@ -1,0 +1,63 @@
+using System;
+using System.IO;
+using Aspose.Slides;
+using Aspose.Slides.Export;
+
+namespace ReplaceGroupShapeAltText
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Define input and output file paths
+            string inputPath = "input.pptx";
+            string outputPath = "output.pptx";
+
+            // Verify that the input file exists
+            if (!File.Exists(inputPath))
+            {
+                Console.WriteLine("Input file not found: " + inputPath);
+                return;
+            }
+
+            Aspose.Slides.Presentation presentation = null;
+            try
+            {
+                // Load the presentation
+                presentation = new Aspose.Slides.Presentation(inputPath);
+            }
+            catch (Exception ex)
+            {
+                // Handle unsupported format or loading errors
+                Console.WriteLine("Failed to load presentation: " + ex.Message);
+                // Format not supported
+                return;
+            }
+
+            // Iterate through all slides and shapes to replace group shape AlternativeText
+            for (int slideIndex = 0; slideIndex < presentation.Slides.Count; slideIndex++)
+            {
+                ISlide slide = presentation.Slides[slideIndex];
+                for (int shapeIndex = 0; shapeIndex < slide.Shapes.Count; shapeIndex++)
+                {
+                    IShape shape = slide.Shapes[shapeIndex];
+                    if (shape is IGroupShape)
+                    {
+                        IGroupShape groupShape = (IGroupShape)shape;
+                        // Generate a unique identifier for the group shape
+                        string newAltText = "GroupShape_" + slideIndex + "_" + shapeIndex;
+                        groupShape.AlternativeText = newAltText;
+                    }
+                }
+            }
+
+            // Save the modified presentation
+            presentation.Save(outputPath, SaveFormat.Pptx);
+
+            // Dispose the presentation object
+            presentation.Dispose();
+
+            Console.WriteLine("Presentation saved to: " + outputPath);
+        }
+    }
+}
