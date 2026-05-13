@@ -29,7 +29,7 @@ When working in this repository:
 
 This repository contains **2266** working code examples demonstrating Aspose.Slides for .NET capabilities.
 
-**Statistics** (as of 2026-05-12):
+**Statistics** (as of 2026-05-13):
 - Version: 26.5.0
 - Total Examples: 2266
 - Categories: 19
@@ -392,4 +392,4 @@ dotnet run
 
 
 ---
-Generated: 2026-05-12
+Generated: 2026-05-13
