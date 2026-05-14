@@ -26,7 +26,7 @@ Examples are organized by feature category:
 - `vba-macros/` - 34 example(s)
 - `working-with-charts/` - 463 example(s)
 - `working-with-shapes/` - 208 example(s)
-- `working-with-slides/` - 120 example(s)
+- `working-with-slides/` - 123 example(s)
 - `working-with-smartart/` - 117 example(s)
 - `working-with-tables/` - 31 example(s)
 
