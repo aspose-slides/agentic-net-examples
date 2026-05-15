@@ -1,84 +1,65 @@
 using System;
 using System.IO;
 using System.Net.Http;
-using System.Security.Cryptography.X509Certificates;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
 class Program
 {
-    static async System.Threading.Tasks.Task Main(string[] args)
+    static void Main()
     {
-        // Paths for certificate and output presentation
-        string certificatePath = "testsignature1.pfx";
-        string certificatePassword = "testpass1";
-        string outputPresentationPath = "SignedPresentation.pptx";
+        string inputPath = Path.Combine(Directory.GetCurrentDirectory(), "input.pptx");
+        string outputPath = Path.Combine(Directory.GetCurrentDirectory(), "SignedOutput.pptx");
+        string pfxPath = Path.Combine(Directory.GetCurrentDirectory(), "certificate.pfx");
+        string pfxPassword = "password";
 
-        // Verify that the certificate file exists
-        if (!File.Exists(certificatePath))
+        if (!File.Exists(inputPath))
         {
-            Console.WriteLine("Certificate file not found: " + certificatePath);
+            Console.WriteLine("Input file does not exist.");
+            return;
+        }
+        if (!File.Exists(pfxPath))
+        {
+            Console.WriteLine("Certificate file does not exist.");
             return;
         }
 
-        // Retrieve current UTC time from a trusted server
-        DateTime trustedTime;
+        DateTime serverTime;
         try
         {
-            using (HttpClient httpClient = new HttpClient())
+            using (HttpClient client = new HttpClient())
             {
-                // Example trusted time service
-                HttpResponseMessage response = httpClient.GetAsync("http://worldtimeapi.org/api/timezone/Etc/UTC").Result;
+                HttpResponseMessage response = client.GetAsync("http://worldtimeapi.org/api/ip").Result;
                 response.EnsureSuccessStatusCode();
                 string json = response.Content.ReadAsStringAsync().Result;
-
-                // Simple extraction of the "datetime" field
-                int startIndex = json.IndexOf("\"datetime\":\"");
-                if (startIndex >= 0)
+                int idx = json.IndexOf("\"datetime\":\"");
+                if (idx >= 0)
                 {
-                    startIndex += "\"datetime\":\"".Length;
-                    int endIndex = json.IndexOf('"', startIndex);
-                    string dateTimeString = json.Substring(startIndex, endIndex - startIndex);
-                    trustedTime = DateTime.Parse(dateTimeString, null, System.Globalization.DateTimeStyles.AdjustToUniversal);
+                    int start = idx + "\"datetime\":\"".Length;
+                    int end = json.IndexOf('"', start);
+                    string datetimeStr = json.Substring(start, end - start);
+                    serverTime = DateTime.Parse(datetimeStr, null, System.Globalization.DateTimeStyles.RoundtripKind);
                 }
                 else
                 {
-                    trustedTime = DateTime.UtcNow;
+                    serverTime = DateTime.UtcNow;
                 }
             }
         }
         catch (Exception ex)
         {
-            // Handle any errors while contacting the external service
-            Console.WriteLine("Failed to obtain trusted time: " + ex.Message);
-            trustedTime = DateTime.UtcNow; // Fallback to local UTC time
+            Console.WriteLine("Failed to retrieve server time: " + ex.Message);
+            serverTime = DateTime.UtcNow;
         }
 
-        // Create presentation, add digital signature with timestamp comment, and save
-        try
+        using (Presentation pres = new Presentation(inputPath))
         {
-            using (Presentation presentation = new Presentation())
-            {
-                DigitalSignature digitalSignature = new DigitalSignature(certificatePath, certificatePassword);
-                digitalSignature.Comments = "Signed at UTC time: " + trustedTime.ToString("yyyy-MM-dd HH:mm:ss") + " (trusted server)";
-                presentation.DigitalSignatures.Add(digitalSignature);
-                presentation.Save(outputPresentationPath, SaveFormat.Pptx);
-            }
-        }
-        catch (PptxUnsupportedFormatException)
-        {
-            // Format not supported
-            Console.WriteLine("The presentation format is not supported.");
-        }
-        catch (PptUnsupportedFormatException)
-        {
-            // Format not supported
-            Console.WriteLine("The presentation format is not supported.");
-        }
-        catch (Exception ex)
-        {
-            // General error handling
-            Console.WriteLine("Error: " + ex.Message);
+            pres.CurrentDateTime = serverTime;
+
+            Aspose.Slides.DigitalSignature signature = new Aspose.Slides.DigitalSignature(pfxPath, pfxPassword);
+            signature.Comments = "Signed at " + serverTime.ToString("o");
+            pres.DigitalSignatures.Add(signature);
+            pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
         }
     }
 }
