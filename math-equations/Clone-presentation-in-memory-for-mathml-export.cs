@@ -1,60 +1,70 @@
 using System;
 using System.IO;
+using Aspose.Slides;
 using Aspose.Slides.Export;
+using Aspose.Slides.MathText;
 
-class Program
+namespace AsposeSlidesMathMLExport
 {
-    static void Main()
+    class Program
     {
-        string inputPath = "input.pptx";
-        string outputMathMlPath = "output.mathml";
-
-        if (!File.Exists(inputPath))
+        static void Main(string[] args)
         {
-            Console.WriteLine("Input file does not exist.");
-            return;
-        }
+            string sourcePath = "input.pptx";
+            string tempPath = "temp_clone.pptx";
+            string mathMlPath = "output.xml";
 
-        try
-        {
-            Aspose.Slides.Presentation srcPres = new Aspose.Slides.Presentation(inputPath);
-            Aspose.Slides.Presentation destPres = new Aspose.Slides.Presentation();
-
-            for (int i = 0; i < srcPres.Slides.Count; i++)
+            if (!File.Exists(sourcePath))
             {
-                Aspose.Slides.ISlide sourceSlide = srcPres.Slides[i];
-                Aspose.Slides.IMasterSlide sourceMaster = sourceSlide.LayoutSlide.MasterSlide;
-                Aspose.Slides.IMasterSlide destMaster = destPres.Masters.AddClone(sourceMaster);
-                destPres.Slides.AddClone(sourceSlide, destMaster, true);
+                Console.WriteLine("Source file does not exist.");
+                return;
             }
 
-            destPres.Save("cloned.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
-
-            using (FileStream mathMlStream = new FileStream(outputMathMlPath, FileMode.Create, FileAccess.Write))
+            try
             {
-                foreach (Aspose.Slides.ISlide slide in destPres.Slides)
+                using (Presentation srcPres = new Presentation(sourcePath))
                 {
-                    foreach (Aspose.Slides.IShape shape in slide.Shapes)
+                    using (Presentation tempPres = new Presentation())
                     {
-                        if (shape is Aspose.Slides.MathText.IMathParagraph)
+                        // Clone slide with its master to temporary presentation
+                        ISlide sourceSlide = srcPres.Slides[0];
+                        IMasterSlide sourceMaster = sourceSlide.LayoutSlide.MasterSlide;
+                        IMasterSlide destMaster = tempPres.Masters.AddClone(sourceMaster);
+                        tempPres.Slides.AddClone(sourceSlide, destMaster, true);
+
+                        // Save temporary presentation before exit
+                        tempPres.Save(tempPath, SaveFormat.Pptx);
+
+                        // Attempt to export MathML from the first shape if it is a MathParagraph
+                        IMathParagraph mathParagraph = tempPres.Slides[0].Shapes[0] as IMathParagraph;
+                        if (mathParagraph != null)
                         {
-                            Aspose.Slides.MathText.IMathParagraph mathParagraph = (Aspose.Slides.MathText.IMathParagraph)shape;
-                            mathParagraph.WriteAsMathMl(mathMlStream);
+                            using (FileStream fs = new FileStream(mathMlPath, FileMode.Create, FileAccess.Write))
+                            {
+                                mathParagraph.WriteAsMathMl(fs);
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("No MathParagraph found on the cloned slide.");
                         }
                     }
                 }
-            }
 
-            srcPres.Dispose();
-            destPres.Dispose();
-        }
-        catch (NotSupportedException)
-        {
-            // format not supported
-        }
-        catch (Exception)
-        {
-            // handle other exceptions
+                // Clean up temporary file if desired
+                if (File.Exists(tempPath))
+                {
+                    File.Delete(tempPath);
+                }
+            }
+            catch (NotSupportedException)
+            {
+                // Format not supported
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
         }
     }
 }
