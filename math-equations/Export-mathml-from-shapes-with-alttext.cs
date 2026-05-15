@@ -1,47 +1,81 @@
 using System;
 using System.IO;
+using Aspose.Slides;
+using Aspose.Slides.MathText;
 using Aspose.Slides.Export;
 using Aspose.Slides.Util;
 
-class Program
+namespace ExportMathML
 {
-    static void Main()
+    class Program
     {
-        var inputPath = "input.pptx";
-        var outputDir = "output";
-
-        if (!File.Exists(inputPath))
+        static void Main(string[] args)
         {
-            Console.WriteLine("Input file not found.");
-            return;
-        }
+            // Input and output presentation files
+            string inputPath = "input.pptx";
+            string outputPath = "output.pptx";
 
-        if (!Directory.Exists(outputDir))
-        {
-            Directory.CreateDirectory(outputDir);
-        }
-
-        try
-        {
-            var pres = new Aspose.Slides.Presentation(inputPath);
-
-            foreach (var slide in pres.Slides)
+            // Verify input file exists
+            if (!File.Exists(inputPath))
             {
-                foreach (var shape in slide.Shapes)
+                Console.WriteLine("Input file not found: " + inputPath);
+                return;
+            }
+
+            Presentation pres = null;
+            try
+            {
+                // Load presentation
+                pres = new Presentation(inputPath);
+            }
+            catch (Exception ex)
+            {
+                // Handle unsupported format or loading errors
+                Console.WriteLine("Failed to load presentation: " + ex.Message);
+                return;
+            }
+
+            // Iterate through slides and shapes
+            for (int slideIndex = 0; slideIndex < pres.Slides.Count; slideIndex++)
+            {
+                ISlide slide = pres.Slides[slideIndex];
+                for (int shapeIndex = 0; shapeIndex < slide.Shapes.Count; shapeIndex++)
                 {
+                    IShape shape = slide.Shapes[shapeIndex];
+
+                    // Process only shapes that have alternative text defined
                     if (!string.IsNullOrEmpty(shape.AlternativeText))
                     {
-                        var autoShape = shape as Aspose.Slides.IAutoShape;
+                        // Check if shape is a math shape (IAutoShape with MathPortion)
+                        IAutoShape autoShape = shape as IAutoShape;
                         if (autoShape != null && autoShape.TextFrame != null && autoShape.TextFrame.Paragraphs.Count > 0)
                         {
-                            var portion = autoShape.TextFrame.Paragraphs[0].Portions[0] as Aspose.Slides.MathText.MathPortion;
-                            if (portion != null)
+                            IParagraph paragraph = autoShape.TextFrame.Paragraphs[0];
+                            if (paragraph.Portions.Count > 0)
                             {
-                                var mathParagraph = portion.MathParagraph;
-                                var outPath = Path.Combine(outputDir, $"{shape.AlternativeText}.xml");
-                                using (var stream = new FileStream(outPath, FileMode.Create, FileAccess.Write))
+                                IPortion portion = paragraph.Portions[0];
+                                MathPortion mathPortion = portion as MathPortion;
+                                if (mathPortion != null)
                                 {
-                                    mathParagraph.WriteAsMathMl(stream);
+                                    IMathParagraph mathParagraph = mathPortion.MathParagraph;
+                                    if (mathParagraph != null)
+                                    {
+                                        // Export MathML to a file named after the alternative text
+                                        string safeAltText = shape.AlternativeText.Replace(Path.GetInvalidFileNameChars(), '_');
+                                        string mathmlPath = safeAltText + ".xml";
+                                        try
+                                        {
+                                            using (FileStream fs = new FileStream(mathmlPath, FileMode.Create, FileAccess.Write))
+                                            {
+                                                mathParagraph.WriteAsMathMl(fs);
+                                            }
+                                            Console.WriteLine("Exported MathML for shape with alt text '{0}' to {1}", shape.AlternativeText, mathmlPath);
+                                        }
+                                        catch (Exception exportEx)
+                                        {
+                                            Console.WriteLine("Failed to export MathML for shape '{0}': {1}", shape.AlternativeText, exportEx.Message);
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -49,13 +83,36 @@ class Program
                 }
             }
 
-            pres.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
-            pres.Dispose();
+            // Save presentation before exit
+            try
+            {
+                pres.Save(outputPath, SaveFormat.Pptx);
+                Console.WriteLine("Presentation saved to " + outputPath);
+            }
+            catch (Exception saveEx)
+            {
+                Console.WriteLine("Failed to save presentation: " + saveEx.Message);
+            }
+            finally
+            {
+                if (pres != null)
+                {
+                    pres.Dispose();
+                }
+            }
         }
-        catch (Exception ex)
+    }
+
+    // Helper extension to replace invalid filename characters
+    static class StringExtensions
+    {
+        public static string Replace(this string str, char[] chars, char replacement)
         {
-            // Handle unsupported format or other exceptions
-            Console.WriteLine($"Error: {ex.Message}");
+            foreach (char c in chars)
+            {
+                str = str.Replace(c.ToString(), replacement.ToString());
+            }
+            return str;
         }
     }
 }
