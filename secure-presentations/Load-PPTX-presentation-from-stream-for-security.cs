@@ -3,68 +3,83 @@ using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-class Program
+namespace AsposeSlidesDemo
 {
-    static void Main()
+    class Program
     {
-        // Define input file path
-        string inputFile = Path.Combine(Directory.GetCurrentDirectory(), "input.pptx");
-        if (!File.Exists(inputFile))
+        static void Main(string[] args)
         {
-            Console.WriteLine("Input file does not exist.");
-            return;
-        }
+            // Define input file path
+            string inputFile = Path.Combine(Directory.GetCurrentDirectory(), "input.pptx");
+            if (!File.Exists(inputFile))
+            {
+                Console.WriteLine("Input file does not exist.");
+                return;
+            }
 
-        try
-        {
-            // Open file stream for the presentation
-            FileStream fileStream = new FileStream(inputFile, FileMode.Open, FileAccess.Read);
-            // Load presentation from the stream
-            Presentation presentation = new Presentation(fileStream);
-            fileStream.Close();
+            // Load presentation from file stream
+            FileStream fileStream = null;
+            Presentation presentation = null;
+            try
+            {
+                fileStream = new FileStream(inputFile, FileMode.Open, FileAccess.Read, FileShare.Read);
+                presentation = new Presentation(fileStream);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error loading presentation: " + ex.Message);
+                return;
+            }
+            finally
+            {
+                if (fileStream != null)
+                {
+                    fileStream.Close();
+                }
+            }
 
-            // Get presentation info without loading the full presentation
+            // Check protection status
             IPresentationInfo presentationInfo = PresentationFactory.Instance.GetPresentationInfo(inputFile);
-
-            // Check write protection
             bool isWriteProtected = presentationInfo.IsWriteProtected == NullableBool.True;
             bool isWriteProtectedByPassword = false;
             if (isWriteProtected)
             {
-                // Example write protection password
-                string writePassword = "writePass";
-                isWriteProtectedByPassword = presentationInfo.CheckWriteProtection(writePassword);
-                Console.WriteLine("Write protection password valid: " + isWriteProtectedByPassword);
+                // Replace "writePass" with actual password if needed
+                isWriteProtectedByPassword = presentationInfo.CheckWriteProtection("writePass");
             }
 
-            // Check open password protection
             bool isPasswordProtected = presentationInfo.IsPasswordProtected;
             if (isPasswordProtected)
             {
-                // Example open password
-                string openPassword = "openPass";
-                bool isOpenPasswordCorrect = presentationInfo.CheckPassword(openPassword);
-                Console.WriteLine("Open password correct: " + isOpenPasswordCorrect);
+                // Replace "openPass" with actual password if needed
+                bool isOpenPasswordCorrect = presentationInfo.CheckPassword("openPass");
             }
 
-            // Remove write protection if the loaded presentation is write protected
+            // Remove write protection if present
             if (presentation.ProtectionManager.IsWriteProtected)
             {
                 presentation.ProtectionManager.RemoveWriteProtection();
-                Console.WriteLine("Write protection removed.");
             }
 
-            // Save the presentation before exiting
+            // Save presentation before exit
             string outputFile = Path.Combine(Directory.GetCurrentDirectory(), "output.pptx");
-            presentation.Save(outputFile, SaveFormat.Pptx);
-            presentation.Dispose();
-            Console.WriteLine("Presentation saved to " + outputFile);
-        }
-        catch (Exception ex)
-        {
-            // Handle unsupported format or other errors
-            // Format not supported
-            Console.WriteLine("An error occurred: " + ex.Message);
+            try
+            {
+                presentation.Save(outputFile, SaveFormat.Pptx);
+            }
+            catch (Exception ex)
+            {
+                // Handle format not supported
+                Console.WriteLine("Error saving presentation: " + ex.Message);
+                // Format not supported
+            }
+            finally
+            {
+                if (presentation != null)
+                {
+                    presentation.Dispose();
+                }
+            }
         }
     }
 }
