@@ -5,64 +5,67 @@ using Aspose.Slides;
 using Aspose.Slides.Export;
 using Aspose.Slides.MathText;
 
-class Program
+namespace AsposeSlidesMathMlExample
 {
-    static void Main()
+    class Program
     {
-        // Create a new presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
-
-        // Add a math shape to the first slide
-        Aspose.Slides.IAutoShape mathShape = presentation.Slides[0].Shapes.AddMathShape(0, 0, 720, 150);
-
-        // Retrieve the math paragraph from the shape
-        Aspose.Slides.MathText.IMathParagraph mathParagraph = ((Aspose.Slides.MathText.MathPortion)mathShape.TextFrame.Paragraphs[0].Portions[0]).MathParagraph;
-
-        // Add a simple fraction to the paragraph
-        Aspose.Slides.MathText.MathBlock fraction = new Aspose.Slides.MathText.MathBlock(new Aspose.Slides.MathText.MathematicalText("x").Divide("y"));
-        mathParagraph.Add(fraction);
-
-        // Write MathML to a file with retry logic for transient I/O errors
-        string mathMlPath = "mathml.xml";
-        int maxRetries = 3;
-        int attempt = 0;
-        bool success = false;
-        while (attempt < maxRetries && !success)
+        static void Main(string[] args)
         {
+            // Create a new presentation
+            Presentation presentation = new Presentation();
+
+            // Add a math shape to the first slide
+            IAutoShape mathShape = presentation.Slides[0].Shapes.AddMathShape(0f, 0f, 720f, 150f);
+
+            // Get the MathParagraph from the shape
+            IMathParagraph mathParagraph = ((MathPortion)mathShape.TextFrame.Paragraphs[0].Portions[0]).MathParagraph;
+
+            // Example: add a simple fraction to the paragraph
+            MathBlock fraction = new MathBlock(new MathematicalText("x").Divide("y"));
+            mathParagraph.Add(fraction);
+
+            // Define output MathML file path
+            string outputMathMlPath = "mathml_output.xml";
+
+            // Retry logic parameters
+            int maxRetries = 3;
+            int delayMilliseconds = 500;
+
+            // Write MathML with retry on transient I/O errors
+            for (int attempt = 0; attempt < maxRetries; attempt++)
+            {
+                try
+                {
+                    using (FileStream stream = new FileStream(outputMathMlPath, FileMode.Create, FileAccess.Write, FileShare.None))
+                    {
+                        mathParagraph.WriteAsMathMl(stream);
+                    }
+                    // Success, exit retry loop
+                    break;
+                }
+                catch (IOException)
+                {
+                    // Transient I/O error, retry after delay unless last attempt
+                    if (attempt == maxRetries - 1)
+                    {
+                        // Rethrow after final attempt
+                        throw;
+                    }
+                    Thread.Sleep(delayMilliseconds);
+                }
+            }
+
+            // Save the presentation
             try
             {
-                using (FileStream stream = new FileStream(mathMlPath, FileMode.Create, FileAccess.Write))
-                {
-                    mathParagraph.WriteAsMathMl(stream);
-                }
-                success = true;
+                presentation.Save("output.pptx", SaveFormat.Pptx);
             }
-            catch (IOException)
+            catch (NotSupportedException)
             {
-                attempt++;
-                if (attempt >= maxRetries)
-                {
-                    Console.WriteLine("Failed to write MathML after multiple attempts.");
-                }
-                else
-                {
-                    Thread.Sleep(500); // Wait before retrying
-                }
+                // Format not supported
             }
-        }
 
-        // Save the presentation
-        try
-        {
-            presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
-        }
-        catch (NotSupportedException)
-        {
-            // Format not supported
-            Console.WriteLine("The specified format is not supported.");
-        }
-        finally
-        {
+            // Dispose presentation resources
             presentation.Dispose();
         }
     }
