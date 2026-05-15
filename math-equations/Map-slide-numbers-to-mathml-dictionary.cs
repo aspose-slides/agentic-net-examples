@@ -1,19 +1,20 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 using Aspose.Slides.MathText;
 
-namespace SlidesMathMlExporter
+namespace MathMlExporter
 {
     class Program
     {
-        static void Main()
+        static void Main(string[] args)
         {
+            // Input presentation path
             string inputPath = "input.pptx";
 
+            // Verify that the file exists
             if (!File.Exists(inputPath))
             {
                 Console.WriteLine("Input file does not exist.");
@@ -22,72 +23,79 @@ namespace SlidesMathMlExporter
 
             try
             {
-                Dictionary<int, string> mathMlMap = ExportMathMl(inputPath);
-                foreach (KeyValuePair<int, string> entry in mathMlMap)
+                // Export MathML strings for each slide
+                Dictionary<int, string> slideMathMl = ExportMathMl(inputPath);
+
+                // Display the results
+                foreach (KeyValuePair<int, string> kvp in slideMathMl)
                 {
-                    Console.WriteLine($"Slide {entry.Key} MathML:");
-                    Console.WriteLine(entry.Value);
+                    Console.WriteLine($"Slide {kvp.Key} MathML:");
+                    Console.WriteLine(kvp.Value);
+                    Console.WriteLine();
                 }
             }
             catch (NotSupportedException)
             {
                 // Format not supported
-                Console.WriteLine("The file format is not supported.");
+                // Comment: format not supported.
+                Console.WriteLine("The presentation format is not supported.");
             }
             catch (Exception ex)
             {
+                // General exception handling
                 Console.WriteLine($"An error occurred: {ex.Message}");
             }
         }
 
+        // Returns a dictionary mapping slide numbers (1‑based) to MathML strings
         static Dictionary<int, string> ExportMathMl(string presentationPath)
         {
             Dictionary<int, string> result = new Dictionary<int, string>();
 
+            // Load the presentation
             using (Presentation presentation = new Presentation(presentationPath))
             {
-                // Save presentation before exit as required
-                presentation.Save("temp_saved.pptx", SaveFormat.Pptx);
-
+                // Iterate through all slides
                 for (int i = 0; i < presentation.Slides.Count; i++)
                 {
                     ISlide slide = presentation.Slides[i];
-                    StringBuilder slideMathMl = new StringBuilder();
+                    string mathMl = string.Empty;
 
+                    // Search for the first math shape on the slide
                     foreach (IShape shape in slide.Shapes)
                     {
-                        IAutoShape autoShape = shape as IAutoShape;
-                        if (autoShape == null || autoShape.TextFrame == null)
-                            continue;
-
-                        foreach (IParagraph paragraph in autoShape.TextFrame.Paragraphs)
+                        if (shape is IAutoShape)
                         {
-                            foreach (IPortion portion in paragraph.Portions)
+                            IAutoShape autoShape = (IAutoShape)shape;
+                            if (autoShape.TextFrame != null &&
+                                autoShape.TextFrame.Paragraphs.Count > 0 &&
+                                autoShape.TextFrame.Paragraphs[0].Portions.Count > 0)
                             {
-                                MathPortion mathPortion = portion as MathPortion;
-                                if (mathPortion == null)
-                                    continue;
-
-                                IMathParagraph mathParagraph = mathPortion.MathParagraph;
-                                using (MemoryStream ms = new MemoryStream())
+                                MathPortion mathPortion = autoShape.TextFrame.Paragraphs[0].Portions[0] as MathPortion;
+                                if (mathPortion != null)
                                 {
-                                    mathParagraph.WriteAsMathMl(ms);
-                                    ms.Position = 0;
-                                    using (StreamReader reader = new StreamReader(ms, Encoding.UTF8))
+                                    IMathParagraph mathParagraph = mathPortion.MathParagraph;
+                                    using (MemoryStream ms = new MemoryStream())
                                     {
-                                        string mathMl = reader.ReadToEnd();
-                                        slideMathMl.AppendLine(mathMl);
+                                        mathParagraph.WriteAsMathMl(ms);
+                                        ms.Position = 0;
+                                        using (StreamReader reader = new StreamReader(ms))
+                                        {
+                                            mathMl = reader.ReadToEnd();
+                                        }
                                     }
+                                    break; // Math shape found, stop searching this slide
                                 }
                             }
                         }
                     }
 
-                    if (slideMathMl.Length > 0)
-                    {
-                        result.Add(i + 1, slideMathMl.ToString());
-                    }
+                    // Store the MathML (empty string if no math shape found)
+                    result.Add(i + 1, mathMl);
                 }
+
+                // Save the presentation before exiting (no modifications made)
+                presentation.Save(presentationPath, SaveFormat.Pptx);
             }
 
             return result;
