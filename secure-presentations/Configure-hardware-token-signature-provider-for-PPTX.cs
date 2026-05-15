@@ -4,70 +4,59 @@ using System.Security.Cryptography.X509Certificates;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-namespace SecurePresentationExample
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
+        var outputDir = "Output";
+        if (!Directory.Exists(outputDir))
         {
-            // Paths for input and output presentations
-            string inputPath = "input.pptx";
-            string outputPath = "signed_output.pptx";
+            Directory.CreateDirectory(outputDir);
+        }
 
-            // Verify that the input file exists
-            if (!File.Exists(inputPath))
-            {
-                Console.WriteLine("Input file does not exist: " + inputPath);
-                return;
-            }
+        var outputPath = Path.Combine(outputDir, "SignedPresentation.pptx");
 
+        using (var presentation = new Presentation())
+        {
             try
             {
-                // Load the presentation from the file
-                using (Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath))
+                // Retrieve certificate from hardware token (example using thumbprint)
+                var thumbprint = "YOUR_CERT_THUMBPRINT";
+                var store = new X509Store(StoreName.My, StoreLocation.CurrentUser);
+                store.Open(OpenFlags.ReadOnly);
+                var certificate = (X509Certificate2)null;
+                foreach (var cert in store.Certificates)
                 {
-                    // Open the user's personal certificate store to locate the hardware token certificate
-                    X509Store store = new X509Store(StoreName.My, StoreLocation.CurrentUser);
-                    store.Open(OpenFlags.ReadOnly);
-
-                    // Replace the thumbprint with the actual thumbprint of the hardware token certificate
-                    X509Certificate2Collection certs = store.Certificates.Find(
-                        X509FindType.FindByThumbprint,
-                        "YOUR_CERT_THUMBPRINT",
-                        false);
-
-                    if (certs.Count == 0)
+                    if (cert.Thumbprint.Equals(thumbprint, StringComparison.OrdinalIgnoreCase))
                     {
-                        Console.WriteLine("Certificate not found in hardware token.");
-                        return;
+                        certificate = cert;
+                        break;
                     }
-
-                    // Use the first matching certificate
-                    X509Certificate2 cert = certs[0];
-
-                    // Create a digital signature using the certificate
-                    Aspose.Slides.DigitalSignature signature = new Aspose.Slides.DigitalSignature(cert);
-                    signature.Comments = "Signed with hardware token.";
-
-                    // Add the signature to the presentation
-                    pres.DigitalSignatures.Add(signature);
-
-                    // Save the signed presentation
-                    pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
                 }
+                store.Close();
+
+                if (certificate == null)
+                {
+                    Console.WriteLine("Certificate not found on hardware token.");
+                    return;
+                }
+
+                // Create digital signature using the hardware token certificate
+                var signature = new DigitalSignature(certificate);
+                signature.Comments = "Signed using hardware token.";
+
+                // Add signature to the presentation
+                presentation.DigitalSignatures.Add(signature);
+
+                // Save the signed presentation
+                presentation.Save(outputPath, SaveFormat.Pptx);
+                Console.WriteLine("Presentation signed and saved to " + outputPath);
             }
-            // Handle unsupported file format exceptions
-            catch (Aspose.Slides.PptxUnsupportedFormatException ex)
+            catch (NotSupportedException)
             {
-                // Format not supported comment
-                Console.WriteLine("PPTX format not supported: " + ex.Message);
+                // Format not supported
+                // comment that format not supported
             }
-            catch (Aspose.Slides.PptUnsupportedFormatException ex)
-            {
-                // Format not supported comment
-                Console.WriteLine("PPT format not supported: " + ex.Message);
-            }
-            // General exception handling (including possible web service errors)
             catch (Exception ex)
             {
                 Console.WriteLine("Error: " + ex.Message);
