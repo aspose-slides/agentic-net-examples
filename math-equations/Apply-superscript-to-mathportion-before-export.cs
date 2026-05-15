@@ -1,63 +1,49 @@
 using System;
 using System.IO;
 using Aspose.Slides;
-using Aspose.Slides.MathText;
 using Aspose.Slides.Export;
+using Aspose.Slides.MathText;
 
-namespace Example
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
+        try
         {
-            string outputPath = "math_superscript.pptx";
-
-            // Delete existing file if it exists
-            if (File.Exists(outputPath))
+            // Create a new presentation
+            using (Presentation presentation = new Presentation())
             {
-                try
-                {
-                    File.Delete(outputPath);
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Unable to delete existing file: " + ex.Message);
-                }
+                // Add a math shape to the first slide
+                IAutoShape mathShape = presentation.Slides[0].Shapes.AddMathShape(0, 0, 500, 50);
+
+                // Retrieve the math paragraph from the first MathPortion
+                IMathParagraph mathParagraph = ((MathPortion)mathShape.TextFrame.Paragraphs[0].Portions[0]).MathParagraph;
+
+                // Create base mathematical text
+                IMathElement baseElement = new MathematicalText("E=mc");
+
+                // Apply superscript to the base element
+                IMathSuperscriptElement superscriptElement = baseElement.SetSuperscript("2");
+
+                // Wrap the superscript element in a math block and add it to the paragraph
+                IMathBlock mathBlock = new MathBlock(superscriptElement);
+                mathParagraph.Add(mathBlock);
+
+                // Save the presentation
+                string outPath = "SuperscriptMath.pptx";
+                presentation.Save(outPath, SaveFormat.Pptx);
+                Console.WriteLine("Presentation saved to " + Path.GetFullPath(outPath));
             }
-
-            try
-            {
-                // Create a new presentation
-                using (Presentation presentation = new Presentation())
-                {
-                    // Add a math shape to the first slide
-                    IAutoShape mathShape = presentation.Slides[0].Shapes.AddMathShape(0, 0, 400, 100);
-
-                    // Retrieve the math paragraph from the first portion
-                    IMathParagraph mathParagraph = (mathShape.TextFrame.Paragraphs[0].Portions[0] as MathPortion).MathParagraph;
-
-                    // Create a superscript element: "c" with superscript "2"
-                    IMathSuperscriptElement superscriptElement = new MathematicalText("c").SetSuperscript("2");
-
-                    // Wrap the superscript element in a MathBlock
-                    MathBlock superscriptBlock = new MathBlock(superscriptElement);
-
-                    // Add the block to the math paragraph
-                    mathParagraph.Add(superscriptBlock);
-
-                    // Save the presentation
-                    presentation.Save(outputPath, SaveFormat.Pptx);
-                }
-            }
-            catch (NotSupportedException)
-            {
-                // Format not supported
-                Console.WriteLine("The requested file format is not supported.");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("An error occurred: " + ex.Message);
-            }
+        }
+        catch (NotSupportedException)
+        {
+            // Format not supported
+            Console.WriteLine("The requested file format is not supported.");
+        }
+        catch (Exception ex)
+        {
+            // General exception handling (e.g., file I/O, Aspose errors)
+            Console.WriteLine("An error occurred: " + ex.Message);
         }
     }
 }
