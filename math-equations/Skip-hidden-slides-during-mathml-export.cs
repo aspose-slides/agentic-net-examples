@@ -1,6 +1,5 @@
 using System;
 using System.IO;
-using System.Collections.Generic;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
@@ -8,55 +7,62 @@ namespace AsposeSlidesExample
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
+            // Define input presentation path
             string inputPath = "input.pptx";
-            string outputPath = "output.pptx";
 
+            // Verify that the input file exists
             if (!File.Exists(inputPath))
             {
                 Console.WriteLine("Input file does not exist: " + inputPath);
                 return;
             }
 
+            // Define output directory for SVG files
+            string outputDir = Path.Combine(Environment.CurrentDirectory, "SvgOutput");
+            if (!Directory.Exists(outputDir))
+            {
+                Directory.CreateDirectory(outputDir);
+            }
+
+            // Format string for naming SVG files
+            string formatString = Path.Combine(outputDir, "slide_{0}.svg");
+
+            // Load the presentation
+            Presentation pres = new Presentation(inputPath);
+
+            // Iterate through slides and export only non‑hidden slides to SVG
+            for (int index = 0; index < pres.Slides.Count; index++)
+            {
+                ISlide slide = pres.Slides[index];
+
+                // Use the Hidden property (ISlide does not have IsHidden)
+                if (slide.Hidden)
+                {
+                    // Skip hidden slide
+                    continue;
+                }
+
+                using (FileStream stream = new FileStream(string.Format(formatString, index), FileMode.Create, FileAccess.Write))
+                {
+                    slide.WriteAsSvg(stream);
+                }
+            }
+
+            // Save the presentation (required by lifecycle rule)
             try
             {
-                using (Presentation presentation = new Presentation(inputPath))
-                {
-                    List<int> visibleSlideIndices = new List<int>();
-
-                    for (int i = 0; i < presentation.Slides.Count; i++)
-                    {
-                        ISlide slide = presentation.Slides[i];
-                        if (!slide.Hidden)
-                        {
-                            // Slides are 1-based for the Save method
-                            visibleSlideIndices.Add(i + 1);
-                        }
-                    }
-
-                    if (visibleSlideIndices.Count == 0)
-                    {
-                        Console.WriteLine("No visible slides to export.");
-                    }
-                    else
-                    {
-                        int[] slidesArray = visibleSlideIndices.ToArray();
-                        presentation.Save(outputPath, slidesArray, SaveFormat.Pptx);
-                        Console.WriteLine("Exported visible slides to: " + outputPath);
-                    }
-                }
+                string savedPath = Path.Combine(outputDir, "ProcessedPresentation.pptx");
+                pres.Save(savedPath, SaveFormat.Pptx);
             }
             catch (NotSupportedException)
             {
                 // Format not supported
-                Console.WriteLine("The specified format is not supported for export.");
             }
-            catch (Exception ex)
-            {
-                // General exception handling
-                Console.WriteLine("An error occurred: " + ex.Message);
-            }
+
+            // Clean up
+            pres.Dispose();
         }
     }
 }
