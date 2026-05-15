@@ -2,64 +2,42 @@ using System;
 using System.IO;
 using System.Diagnostics;
 using Aspose.Slides;
-using Aspose.Slides.Export;
 using Aspose.Slides.MathText;
+using Aspose.Slides.Export;
 
-namespace MathMlExportPerformance
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
-        {
-            // Create a new presentation
-            Presentation presentation = new Presentation();
+        // Create a new presentation
+        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation();
 
-            // Add a Math shape to the first slide
-            IAutoShape mathShape = presentation.Slides[0].Shapes.AddMathShape(0, 0, 500, 50);
+        // Add a math shape to the first slide
+        Aspose.Slides.IAutoShape mathShape = pres.Slides[0].Shapes.AddMathShape(0, 0, 500, 50);
 
-            // Get the MathParagraph from the shape
-            IMathParagraph mathParagraph = ((MathPortion)mathShape.TextFrame.Paragraphs[0].Portions[0]).MathParagraph;
+        // Retrieve the math paragraph from the shape
+        Aspose.Slides.MathText.IMathParagraph mathParagraph = ((Aspose.Slides.MathText.MathPortion)mathShape.TextFrame.Paragraphs[0].Portions[0]).MathParagraph;
 
-            // Build a simple equation: a + b = c
-            mathParagraph.Add(
-                new MathematicalText("a")
+        // Build a simple equation: a + b = c
+        mathParagraph.Add(
+            new Aspose.Slides.MathText.MathematicalText("a")
                 .Join("+")
-                .Join(new MathematicalText("b"))
+                .Join(new Aspose.Slides.MathText.MathematicalText("b"))
                 .Join("=")
-                .Join(new MathematicalText("c"))
-            );
+                .Join(new Aspose.Slides.MathText.MathematicalText("c"))
+        );
 
-            // Measure execution time of WriteAsMathMl
-            Stopwatch stopwatch = new Stopwatch();
-            try
-            {
-                stopwatch.Start();
-                using (MemoryStream stream = new MemoryStream())
-                {
-                    mathParagraph.WriteAsMathMl(stream);
-                }
-                stopwatch.Stop();
-                Console.WriteLine($"WriteAsMathMl execution time: {stopwatch.ElapsedMilliseconds} ms");
-            }
-            catch (Exception ex)
-            {
-                // Handle any exceptions that may occur during export
-                Console.WriteLine($"Error during MathML export: {ex.Message}");
-            }
-
-            // Save the presentation
-            try
-            {
-                presentation.Save("MathExport.pptx", SaveFormat.Pptx);
-            }
-            catch (NotSupportedException)
-            {
-                // Format not supported
-                // Comment: format not supported
-            }
-
-            // Clean up
-            presentation.Dispose();
+        // Measure execution time of WriteAsMathMl
+        using (System.IO.MemoryStream stream = new System.IO.MemoryStream())
+        {
+            System.Diagnostics.Stopwatch stopwatch = System.Diagnostics.Stopwatch.StartNew();
+            mathParagraph.WriteAsMathMl(stream);
+            stopwatch.Stop();
+            Console.WriteLine("WriteAsMathMl execution time (ms): " + stopwatch.ElapsedMilliseconds);
         }
+
+        // Save the presentation
+        pres.Save("MathExport.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        pres.Dispose();
     }
 }
