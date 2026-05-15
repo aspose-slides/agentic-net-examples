@@ -23,49 +23,50 @@ working within the **math-equations** category.
 - `using System;` (29/29 files)
 - `using System.IO;` (28/29 files)
 - `using Aspose.Slides.Export;` (28/29 files)
-- `using Aspose.Slides;` (21/29 files)
-- `using Aspose.Slides.MathText;` (16/29 files)
-- `using System.Collections.Generic;` (3/29 files)
+- `using Aspose.Slides;` (23/29 files)
+- `using Aspose.Slides.MathText;` (22/29 files)
 - `using System.Text;` (2/29 files)
-- `using Aspose.Slides.Util;` (2/29 files)
+- `using System.Collections.Generic;` (2/29 files)
+- `using Aspose.Slides.Util;` (1/29 files)
 - `using System.Diagnostics;` (1/29 files)
 - `using System.Threading;` (1/29 files)
 - `using System.Linq;` (1/29 files)
 - `using System.Security.Cryptography;` (1/29 files)
+- `using System.Collections;` (1/29 files)
 
 ## Files in this folder
 
 | File | Key APIs | Description |
 |------|----------|-------------|
 | [Apply-superscript-to-mathportion-before-export](./Apply-superscript-to-mathportion-before-export.cs) |  | Apply superscript to mathportion before export |
-| [Capture-mathml-from-memorystream-as-bytearray](./Capture-mathml-from-memorystream-as-bytearray.cs) |  | Capture mathml from memorystream as bytearray |
-| [Check-shapes-for-mathparagraphs-in-PPTX](./Check-shapes-for-mathparagraphs-in-PPTX.cs) |  | Check shapes for mathparagraphs in PPTX |
+| [Choose-export-mode-for-mathparagraph-or-mathblock](./Choose-export-mode-for-mathparagraph-or-mathblock.cs) |  | Choose export mode for mathparagraph or mathblock |
 | [Clone-presentation-in-memory-for-mathml-export](./Clone-presentation-in-memory-for-mathml-export.cs) |  | Clone presentation in memory for mathml export |
-| [Close-filestream-after-writeasmathml-failure](./Close-filestream-after-writeasmathml-failure.cs) |  | Close filestream after writeasmathml failure |
+| [Compare-exported-mathml-with-expected-XML](./Compare-exported-mathml-with-expected-XML.cs) |  | Compare exported mathml with expected XML |
+| [Convert-mathblock-to-mathml-using-bytearray](./Convert-mathblock-to-mathml-using-bytearray.cs) |  | Convert mathblock to mathml using bytearray |
 | [Convert-memorystream-to-utf8-string](./Convert-memorystream-to-utf8-string.cs) |  | Convert memorystream to utf8 string |
-| [Debug-writeasmathml-output-to-console](./Debug-writeasmathml-output-to-console.cs) |  | Debug writeasmathml output to console |
-| [Ensure-writeasmathml-does-not-modify-original](./Ensure-writeasmathml-does-not-modify-original.cs) |  | Ensure writeasmathml does not modify original |
-| [Export-mathblock-to-mathml-using-memorystream](./Export-mathblock-to-mathml-using-memorystream.cs) |  | Export mathblock to mathml using memorystream |
+| [Ensure-filestream-closed-when-writing-mathml](./Ensure-filestream-closed-when-writing-mathml.cs) |  | Ensure filestream closed when writing mathml |
 | [Export-mathml-from-shapes-with-alttext](./Export-mathml-from-shapes-with-alttext.cs) |  | Export mathml from shapes with alttext |
-| [Export-mathml-to-UNC-share](./Export-mathml-to-UNC-share.cs) |  | Export mathml to UNC share |
-| [Export-mathparagraph-or-mathblock-via-CLI-arguments](./Export-mathparagraph-or-mathblock-via-CLI-arguments.cs) |  | Export mathparagraph or mathblock via CLI arguments |
+| [Export-mathml-to-network-share-using-unc](./Export-mathml-to-network-share-using-unc.cs) |  | Export mathml to network share using unc |
 | [Export-mathparagraph-to-mathml-with-filestream](./Export-mathparagraph-to-mathml-with-filestream.cs) |  | Export mathparagraph to mathml with filestream |
-| [Find-mathportions-in-PPTX-slides](./Find-mathportions-in-PPTX-slides.cs) |  | Find mathportions in PPTX slides |
-| [Generate-mathml-from-slide-notes](./Generate-mathml-from-slide-notes.cs) |  | Generate mathml from slide notes |
-| [Load-PPTX-presentation-and-extract-math](./Load-PPTX-presentation-and-extract-math.cs) |  | Load PPTX presentation and extract math |
-| [Log-slide-index-shape-mathml-path](./Log-slide-index-shape-mathml-path.cs) |  | Log slide index shape mathml path |
-| [Log-writeasmathml-exception-for-unsupported-mathblock](./Log-writeasmathml-exception-for-unsupported-mathblock.cs) |  | Log writeasmathml exception for unsupported mathblock |
+| [Find-mathportion-shapes-in-PPTX-slides](./Find-mathportion-shapes-in-PPTX-slides.cs) |  | Find mathportion shapes in PPTX slides |
+| [Generate-mathml-from-PPTX-notes](./Generate-mathml-from-PPTX-notes.cs) |  | Generate mathml from PPTX notes |
+| [Get-mathparagraph-from-mathportion](./Get-mathparagraph-from-mathportion.cs) |  | Get mathparagraph from mathportion |
+| [Inspect-shape-textframes-for-mathparagraphs](./Inspect-shape-textframes-for-mathparagraphs.cs) |  | Inspect shape textframes for mathparagraphs |
+| [Load-PPTX-presentation-and-extract-math-equations](./Load-PPTX-presentation-and-extract-math-equations.cs) |  | Load PPTX presentation and extract math equations |
+| [Log-exported-mathml-to-console](./Log-exported-mathml-to-console.cs) |  | Log exported mathml to console |
+| [Log-slide-index-shape-and-mathml-path](./Log-slide-index-shape-and-mathml-path.cs) |  | Log slide index shape and mathml path |
+| [Log-unsupported-mathblock-errors-during-export](./Log-unsupported-mathblock-errors-during-export.cs) |  | Log unsupported mathblock errors during export |
 | [Map-slide-numbers-to-mathml-dictionary](./Map-slide-numbers-to-mathml-dictionary.cs) |  | Map slide numbers to mathml dictionary |
 | [Measure-writeasmathml-execution-time](./Measure-writeasmathml-execution-time.cs) |  | Measure writeasmathml execution time |
-| [Retrieve-mathparagraph-from-detected-mathportion](./Retrieve-mathparagraph-from-detected-mathportion.cs) |  | Retrieve mathparagraph from detected mathportion |
 | [Retry-writeasmathml-on-transient-IO-errors](./Retry-writeasmathml-on-transient-IO-errors.cs) |  | Retry writeasmathml on transient IO errors |
-| [Save-mathml-bytearray-to-XML-file](./Save-mathml-bytearray-to-XML-file.cs) |  | Save mathml bytearray to XML file |
-| [Select-mathportions-with-variable-using-LINQ](./Select-mathportions-with-variable-using-LINQ.cs) |  | Select mathportions with variable using LINQ |
+| [Save-mathml-bytearray-to-xml-with-filestream](./Save-mathml-bytearray-to-xml-with-filestream.cs) |  | Save mathml bytearray to xml with filestream |
+| [Select-mathportion-by-variable-using-LINQ](./Select-mathportion-by-variable-using-LINQ.cs) |  | Select mathportion by variable using LINQ |
 | [Skip-hidden-slides-during-mathml-export](./Skip-hidden-slides-during-mathml-export.cs) |  | Skip hidden slides during mathml export |
-| [Skip-mathblock-on-writeasmathml-notsupportedexception](./Skip-mathblock-on-writeasmathml-notsupportedexception.cs) |  | Skip mathblock on writeasmathml notsupportedexception |
-| [Summarize-slide-mathparagraph-counts](./Summarize-slide-mathparagraph-counts.cs) |  | Summarize slide mathparagraph counts |
-| [Validate-exported-mathml-against-expected-XML](./Validate-exported-mathml-against-expected-XML.cs) |  | Validate exported mathml against expected XML |
-| [Verify-presentation-file-size-and-checksum](./Verify-presentation-file-size-and-checksum.cs) |  | Verify presentation file size and checksum |
+| [Skip-mathblock-on-failure-during-writeasmathml](./Skip-mathblock-on-failure-during-writeasmathml.cs) |  | Skip mathblock on failure during writeasmathml |
+| [Summarize-slide-mathparagraph-counts-per-slide](./Summarize-slide-mathparagraph-counts-per-slide.cs) |  | Summarize slide mathparagraph counts per slide |
+| [Validate-pptx-size-and-checksum-after-export](./Validate-pptx-size-and-checksum-after-export.cs) |  | Validate pptx size and checksum after export |
+| [Verify-original-presentation-unchanged-after-writeasmathml](./Verify-original-presentation-unchanged-after-writeasmathml.cs) |  | Verify original presentation unchanged after writeasmathml |
+| [Write-mathblock-to-mathml-using-stream](./Write-mathblock-to-mathml-using-stream.cs) |  | Write mathblock to mathml using stream |
 
 ## Category Statistics
 
@@ -74,20 +75,20 @@ working within the **math-equations** category.
 ## Key API Surface
 
 - `Aspose.Slides.Export`
-- `Aspose.Slides.Presentation`
 - `Aspose.Slides`
 - `Aspose.Slides.MathText`
-- `Aspose.Slides.Export.SaveFormat.Pptx`
 - `Aspose.Slides.MathText.MathematicalText`
+- `Aspose.Slides.Presentation`
 - `Aspose.Slides.MathText.MathPortion`
-- `Aspose.Slides.MathText.MathBlock`
-- `Aspose.Slides.MathText.IMathParagraph`
 - `Aspose.Slides.IAutoShape`
+- `Aspose.Slides.Export.SaveFormat.Pptx`
+- `Aspose.Slides.MathText.IMathParagraph`
 - `Aspose.Slides.ISlide`
-- `Aspose.Slides.MathText.MathParagraph`
 - `Aspose.Slides.IShape`
-- `Aspose.Slides.MathText.IMathBlock`
-- `Aspose.Slides.IMasterSlide`
+- `Aspose.Slides.IParagraph`
+- `Aspose.Slides.ITextFrame`
+- `Aspose.Slides.MathText.IMathElement`
+- `Aspose.Slides.IPortion`
 
 ## Common Code Pattern
 
@@ -108,5 +109,5 @@ using (Presentation pres = new Presentation("input.pptx"))
 - Save the presentation using `Presentation.Save(...)`.
 
 <!-- AUTOGENERATED:START -->
-Updated: 2026-04-13
+Updated: 2026-05-15
 <!-- AUTOGENERATED:END -->
