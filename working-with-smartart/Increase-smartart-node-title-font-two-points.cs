@@ -2,13 +2,12 @@ using System;
 using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
-using Aspose.Slides.SmartArt;
 
-namespace SmartArtFontIncrease
+namespace SmartArtFontSizeIncrease
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             // Input and output file paths
             string inputPath = "input.pptx";
@@ -17,58 +16,55 @@ namespace SmartArtFontIncrease
             // Verify that the input file exists
             if (!File.Exists(inputPath))
             {
-                Console.WriteLine("Input file does not exist: " + inputPath);
+                Console.WriteLine("Input file does not exist.");
                 return;
             }
 
             try
             {
                 // Load the presentation
-                using (Presentation presentation = new Presentation(inputPath))
+                Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+
+                // Iterate through all slides
+                foreach (Aspose.Slides.ISlide slide in presentation.Slides)
                 {
-                    // Iterate through all slides
-                    foreach (ISlide slide in presentation.Slides)
+                    // Iterate through all shapes on the slide
+                    foreach (Aspose.Slides.IShape shape in slide.Shapes)
                     {
-                        // Iterate through all shapes on the slide
-                        foreach (IShape shape in slide.Shapes)
+                        // Check if the shape is a SmartArt diagram
+                        Aspose.Slides.SmartArt.ISmartArt smartArt = shape as Aspose.Slides.SmartArt.ISmartArt;
+                        if (smartArt != null)
                         {
-                            // Check if the shape is a SmartArt diagram
-                            if (shape is ISmartArt)
+                            // Iterate through all nodes in the SmartArt
+                            foreach (Aspose.Slides.SmartArt.ISmartArtNode node in smartArt.AllNodes)
                             {
-                                ISmartArt smartArt = (ISmartArt)shape;
-
-                                // Iterate through all SmartArt nodes (including child nodes)
-                                foreach (ISmartArtNode node in smartArt.AllNodes)
+                                // Ensure the node has a TextFrame
+                                if (node.TextFrame != null)
                                 {
-                                    // Access the text frame of the node
-                                    ITextFrame textFrame = node.TextFrame;
-                                    if (textFrame == null) continue;
-
-                                    // Iterate through all paragraphs in the text frame
-                                    foreach (IParagraph paragraph in textFrame.Paragraphs)
+                                    // Iterate through all paragraphs and portions to adjust font size
+                                    foreach (Aspose.Slides.IParagraph paragraph in node.TextFrame.Paragraphs)
                                     {
-                                        // Iterate through all portions (runs) in the paragraph
-                                        foreach (IPortion portion in paragraph.Portions)
+                                        foreach (Aspose.Slides.IPortion portion in paragraph.Portions)
                                         {
-                                            // Increase the font height by 2 points
-                                            float currentHeight = portion.PortionFormat.FontHeight;
-                                            portion.PortionFormat.FontHeight = currentHeight + 2f;
+                                            float currentSize = portion.PortionFormat.FontHeight;
+                                            portion.PortionFormat.FontHeight = currentSize + 2f; // Increase by 2 points
                                         }
                                     }
                                 }
                             }
                         }
                     }
-
-                    // Save the modified presentation
-                    presentation.Save(outputPath, SaveFormat.Pptx);
                 }
+
+                // Save the modified presentation
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                presentation.Dispose();
             }
             catch (Exception ex)
             {
                 // Handle unsupported format or other errors
-                Console.WriteLine("An error occurred: " + ex.Message);
-                // Comment: format not supported or other issue
+                // Format not supported.
+                Console.WriteLine("Error: " + ex.Message);
             }
         }
     }
