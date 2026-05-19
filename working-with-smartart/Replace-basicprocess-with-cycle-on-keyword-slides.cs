@@ -3,76 +3,88 @@ using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 using Aspose.Slides.SmartArt;
-using Aspose.Slides.Util;
 
-namespace ReplaceSmartArtExample
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main()
+        // Input and output file paths
+        string inputPath = "input.pptx";
+        string outputPath = "output.pptx";
+
+        // Verify input file exists
+        if (!File.Exists(inputPath))
         {
-            // Input and output file paths
-            string inputPath = "input.pptx";
-            string outputPath = "output.pptx";
+            Console.WriteLine("Input file does not exist.");
+            return;
+        }
 
-            // Verify that the input file exists
-            if (!File.Exists(inputPath))
-            {
-                Console.WriteLine("Input file does not exist: " + inputPath);
-                return;
-            }
+        // Load presentation with exception handling for unsupported formats
+        Presentation presentation = null;
+        try
+        {
+            presentation = new Presentation(inputPath);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Failed to load presentation: " + ex.Message);
+            return;
+        }
 
-            try
+        // Keywords to search for in slide text
+        string[] keywords = new string[] { "Keyword1", "Keyword2" };
+
+        // Iterate through slides
+        foreach (ISlide slide in presentation.Slides)
+        {
+            bool slideContainsKeyword = false;
+
+            // Check if slide contains any of the keywords
+            foreach (IShape shape in slide.Shapes)
             {
-                // Load the presentation
-                using (Presentation presentation = new Presentation(inputPath))
+                if (shape is IAutoShape autoShape && autoShape.TextFrame != null)
                 {
-                    // Iterate through all slides
-                    for (int slideIndex = 0; slideIndex < presentation.Slides.Count; slideIndex++)
+                    string text = autoShape.TextFrame.Text;
+                    if (!string.IsNullOrEmpty(text))
                     {
-                        ISlide slide = presentation.Slides[slideIndex];
-
-                        // Check if the slide contains the target keyword in any text box
-                        ITextFrame[] keywordFrames = SlideUtil.GetTextBoxesContainsText(slide, "Keyword", false);
-                        if (keywordFrames.Length == 0)
+                        foreach (string kw in keywords)
                         {
-                            continue; // No keyword on this slide, skip
-                        }
-
-                        // Iterate through shapes on the slide to find SmartArt with BasicProcess layout
-                        for (int shapeIndex = 0; shapeIndex < slide.Shapes.Count; shapeIndex++)
-                        {
-                            IShape shape = slide.Shapes[shapeIndex];
-
-                            // Cast the shape to SmartArt if possible
-                            Aspose.Slides.SmartArt.SmartArt smartArt = shape as Aspose.Slides.SmartArt.SmartArt;
-                            if (smartArt != null)
+                            if (text.IndexOf(kw, StringComparison.OrdinalIgnoreCase) >= 0)
                             {
-                                // Check for BasicProcess layout
-                                if (smartArt.Layout == SmartArtLayoutType.BasicProcess)
-                                {
-                                    // Replace layout with BasicCycle
-                                    smartArt.Layout = SmartArtLayoutType.BasicCycle;
-                                    Console.WriteLine($"Replaced SmartArt layout on slide {slideIndex + 1}");
-                                }
+                                slideContainsKeyword = true;
+                                break;
                             }
                         }
                     }
+                }
+                if (slideContainsKeyword)
+                    break;
+            }
 
-                    // Save the modified presentation
-                    presentation.Save(outputPath, SaveFormat.Pptx);
+            if (!slideContainsKeyword)
+                continue;
+
+            // Replace SmartArt layout from BasicProcess to BasicCycle
+            foreach (IShape shape in slide.Shapes)
+            {
+                if (shape is ISmartArt smartArt)
+                {
+                    if (smartArt.Layout == SmartArtLayoutType.BasicProcess)
+                    {
+                        smartArt.Layout = SmartArtLayoutType.BasicCycle;
+                    }
                 }
             }
-            catch (NotSupportedException)
-            {
-                // Format not supported – handle accordingly
-                Console.WriteLine("The provided file format is not supported.");
-            }
-            catch (Exception ex)
-            {
-                // General exception handling
-                Console.WriteLine("An error occurred: " + ex.Message);
-            }
+        }
+
+        // Save the modified presentation
+        try
+        {
+            presentation.Save(outputPath, SaveFormat.Pptx);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Failed to save presentation: " + ex.Message);
         }
     }
 }
