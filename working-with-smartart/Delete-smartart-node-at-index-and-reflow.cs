@@ -1,7 +1,5 @@
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.SmartArt;
 using Aspose.Slides.Export;
 
 namespace DeleteSmartArtNode
@@ -10,9 +8,10 @@ namespace DeleteSmartArtNode
     {
         static void Main(string[] args)
         {
-            // Input and output file paths
-            string inputPath = "input.pptx";
-            string outputPath = "output.pptx";
+            // Define input and output file paths
+            string dataDir = "Data";
+            string inputPath = Path.Combine(dataDir, "input.pptx");
+            string outputPath = Path.Combine(dataDir, "output.pptx");
 
             // Verify that the input file exists
             if (!File.Exists(inputPath))
@@ -24,47 +23,36 @@ namespace DeleteSmartArtNode
             try
             {
                 // Load the presentation
-                using (Presentation presentation = new Presentation(inputPath))
+                using (Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath))
                 {
-                    // Get the first slide (use ISlide as per compiler rule)
-                    Aspose.Slides.ISlide slide = presentation.Slides[0];
+                    // Retrieve the first slide (use ISlide to avoid CS0266)
+                    Aspose.Slides.ISlide slide = pres.Slides[0];
 
-                    // Add a SmartArt diagram if none exists (for demonstration)
-                    // This creates a BasicBlockList layout SmartArt
+                    // Add a SmartArt diagram (for demonstration purposes)
                     Aspose.Slides.SmartArt.ISmartArt smartArt = slide.Shapes.AddSmartArt(
-                        0f, 0f, 400f, 400f,
+                        0, 0, 400, 400,
                         Aspose.Slides.SmartArt.SmartArtLayoutType.BasicBlockList);
 
-                    // Index of the node to delete (zero‑based)
-                    int nodeIndexToDelete = 1; // delete the second root node
+                    // Add a few nodes so that there is a node to delete
+                    smartArt.Nodes.AddNode(); // Node at index 0
+                    smartArt.Nodes.AddNode(); // Node at index 1
+                    smartArt.Nodes.AddNode(); // Node at index 2
 
-                    // Ensure the index is within the collection bounds
-                    if (nodeIndexToDelete >= 0 && nodeIndexToDelete < smartArt.Nodes.Count)
-                    {
-                        // Remove the node; the diagram automatically reflows
-                        smartArt.Nodes.RemoveNode(nodeIndexToDelete);
+                    // Delete the node at position 1 (second node)
+                    smartArt.Nodes.RemoveNode(1);
 
-                        // Optionally reapply the same layout to force hierarchy update
-                        smartArt.Layout = Aspose.Slides.SmartArt.SmartArtLayoutType.BasicBlockList;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Node index out of range.");
-                    }
+                    // Re-apply the current layout to reflow the hierarchy
+                    Aspose.Slides.SmartArt.SmartArtLayoutType currentLayout = smartArt.Layout;
+                    smartArt.Layout = currentLayout;
 
                     // Save the modified presentation
-                    presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
                 }
-            }
-            catch (NotSupportedException)
-            {
-                // Format not supported
-                Console.WriteLine("The file format is not supported.");
             }
             catch (Exception ex)
             {
-                // Handle other exceptions (e.g., I/O, Aspose.Slides internal errors)
-                Console.WriteLine("An error occurred: " + ex.Message);
+                // Handle any errors (e.g., unsupported format, I/O issues)
+                Console.WriteLine("Error: " + ex.Message);
             }
         }
     }
