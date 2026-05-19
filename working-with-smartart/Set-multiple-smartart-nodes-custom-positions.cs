@@ -4,57 +4,89 @@ using Aspose.Slides;
 using Aspose.Slides.Export;
 using Aspose.Slides.SmartArt;
 
-class Program
+namespace SetMultipleSmartArtNodesCustomPositions
 {
-    static void Main()
+    class Program
     {
-        try
+        static void Main()
         {
-            // Create a new presentation
-            Presentation presentation = new Presentation();
+            // Define input and output file paths
+            string dataDir = "Data";
+            string inputPath = Path.Combine(dataDir, "input.pptx");
+            string outputPath = Path.Combine(dataDir, "output.pptx");
 
-            // Add a SmartArt diagram of OrganizationChart layout
-            ISmartArt smartArt = presentation.Slides[0].Shapes.AddSmartArt(20, 20, 600, 500, SmartArtLayoutType.OrganizationChart);
+            // Ensure the data directory exists
+            if (!Directory.Exists(dataDir))
+            {
+                Directory.CreateDirectory(dataDir);
+            }
 
-            // Adjust the first node's shape position
-            ISmartArtNode node = smartArt.AllNodes[1];
-            ISmartArtShape shape = node.Shapes[1];
+            // Load existing presentation if it exists; otherwise create a new one
+            Aspose.Slides.Presentation presentation;
+            if (File.Exists(inputPath))
+            {
+                try
+                {
+                    presentation = new Aspose.Slides.Presentation(inputPath);
+                }
+                catch (Exception ex)
+                {
+                    // Handle any loading errors (e.g., unsupported format)
+                    Console.WriteLine("Error loading presentation: " + ex.Message);
+                    return;
+                }
+            }
+            else
+            {
+                presentation = new Aspose.Slides.Presentation();
+            }
+
+            // Add a SmartArt diagram to the first slide
+            Aspose.Slides.ISlide slide = presentation.Slides[0];
+            Aspose.Slides.SmartArt.ISmartArt smartArt = slide.Shapes.AddSmartArt(20, 20, 600, 500, Aspose.Slides.SmartArt.SmartArtLayoutType.OrganizationChart);
+
+            // Adjust positions of child node shapes
+            // Node 1
+            Aspose.Slides.SmartArt.ISmartArtNode node = smartArt.AllNodes[1];
+            Aspose.Slides.SmartArt.ISmartArtShape shape = node.Shapes[1];
             shape.X += (shape.Width * 2);
             shape.Y -= (shape.Height / 2);
 
-            // Adjust the second node's shape width
+            // Node 2
             node = smartArt.AllNodes[2];
             shape = node.Shapes[1];
             shape.Width += (shape.Width / 2);
 
-            // Adjust the third node's shape height
+            // Node 3
             node = smartArt.AllNodes[3];
             shape = node.Shapes[1];
             shape.Height += (shape.Height / 2);
 
-            // Rotate the fourth node's shape
+            // Node 4
             node = smartArt.AllNodes[4];
             shape = node.Shapes[1];
             shape.Rotation = 90;
 
             // Save the presentation
-            string outputPath = "CustomSmartArt.pptx";
-            presentation.Save(outputPath, SaveFormat.Pptx);
-        }
-        catch (FileNotFoundException ex)
-        {
-            // Input file not found
-            Console.WriteLine("Input file not found: " + ex.Message);
-        }
-        catch (NotSupportedException ex)
-        {
-            // format not supported
-            Console.WriteLine("Format not supported: " + ex.Message);
-        }
-        catch (Exception ex)
-        {
-            // General error handling
-            Console.WriteLine("Error: " + ex.Message);
+            try
+            {
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            }
+            catch (NotSupportedException)
+            {
+                // Format not supported
+                Console.WriteLine("The specified format is not supported.");
+            }
+            catch (Exception ex)
+            {
+                // General exception handling
+                Console.WriteLine("Error saving presentation: " + ex.Message);
+            }
+            finally
+            {
+                // Ensure resources are released
+                presentation.Dispose();
+            }
         }
     }
 }
