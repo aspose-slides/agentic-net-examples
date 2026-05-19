@@ -5,24 +5,21 @@ using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        // Define input and output file paths
         string inputPath = "input.pptx";
         string outputPath = "output.pptx";
 
-        // Check if the input file exists
         if (!File.Exists(inputPath))
         {
             Console.WriteLine("Input file does not exist.");
             return;
         }
 
-        // Load the presentation
-        Presentation presentation = null;
+        Aspose.Slides.Presentation presentation = null;
         try
         {
-            presentation = new Presentation(inputPath);
+            presentation = new Aspose.Slides.Presentation(inputPath);
         }
         catch (Exception ex)
         {
@@ -30,41 +27,33 @@ class Program
             return;
         }
 
-        // Change the layout of any SmartArt shape on the first slide
-        try
+        Aspose.Slides.ISlide slide = presentation.Slides[0];
+        foreach (Aspose.Slides.IShape shape in slide.Shapes)
         {
-            ISlide slide = presentation.Slides[0];
-            foreach (IShape shape in slide.Shapes)
+            if (shape is Aspose.Slides.SmartArt.ISmartArt)
             {
-                if (shape is Aspose.Slides.SmartArt.ISmartArt)
+                Aspose.Slides.SmartArt.ISmartArt smartArt = (Aspose.Slides.SmartArt.ISmartArt)shape;
+                try
                 {
-                    Aspose.Slides.SmartArt.ISmartArt smartArt = (Aspose.Slides.SmartArt.ISmartArt)shape;
-                    // Attempt to set a new layout
                     smartArt.Layout = Aspose.Slides.SmartArt.SmartArtLayoutType.BasicProcess;
+                }
+                catch (Exception ex)
+                {
+                    // Property might be read‑only
+                    Console.WriteLine("Failed to change layout: " + ex.Message);
                 }
             }
         }
-        catch (Exception ex)
-        {
-            // Capture exception if the Layout property is read‑only or other errors occur
-            Console.WriteLine("Error changing SmartArt layout: " + ex.Message);
-        }
 
-        // Save the modified presentation
         try
         {
-            presentation.Save(outputPath, SaveFormat.Pptx);
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
         }
         catch (Exception ex)
         {
             Console.WriteLine("Failed to save presentation: " + ex.Message);
         }
-        finally
-        {
-            if (presentation != null)
-            {
-                presentation.Dispose();
-            }
-        }
+
+        presentation.Dispose();
     }
 }
