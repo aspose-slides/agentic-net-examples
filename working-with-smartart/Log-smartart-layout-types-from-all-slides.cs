@@ -3,56 +3,68 @@ using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-namespace SmartArtLayoutLogger
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
+        // Input and output file paths
+        string inputPath = "input.pptx";
+        string outputPath = "output.pptx";
+
+        // Verify input file exists
+        if (!File.Exists(inputPath))
         {
-            // Define input and output file paths
-            string inputPath = "input.pptx";
-            string outputPath = "output.pptx";
+            Console.WriteLine("Input file does not exist.");
+            return;
+        }
 
-            // Check if the input file exists
-            if (!File.Exists(inputPath))
-            {
-                Console.WriteLine("Input file not found: " + inputPath);
-                return;
-            }
+        // Load presentation with exception handling for unsupported formats
+        Presentation presentation = null;
+        try
+        {
+            presentation = new Presentation(inputPath);
+        }
+        catch (Exception ex)
+        {
+            // Format not supported or other load error
+            Console.WriteLine("Failed to load presentation: " + ex.Message);
+            return;
+        }
 
-            try
+        // Iterate through all slides
+        for (int slideIndex = 0; slideIndex < presentation.Slides.Count; slideIndex++)
+        {
+            ISlide slide = presentation.Slides[slideIndex];
+
+            // Iterate through all shapes on the slide
+            for (int shapeIndex = 0; shapeIndex < slide.Shapes.Count; shapeIndex++)
             {
-                // Load the presentation
-                using (Presentation presentation = new Presentation(inputPath))
+                IShape shape = slide.Shapes[shapeIndex];
+
+                // Check if the shape is a SmartArt diagram
+                if (shape is Aspose.Slides.SmartArt.ISmartArt)
                 {
-                    // Iterate through all slides
-                    for (int slideIndex = 0; slideIndex < presentation.Slides.Count; slideIndex++)
-                    {
-                        ISlide slide = presentation.Slides[slideIndex];
-
-                        // Iterate through all shapes on the slide
-                        foreach (IShape shape in slide.Shapes)
-                        {
-                            // Check if the shape is a SmartArt diagram
-                            if (shape is Aspose.Slides.SmartArt.ISmartArt)
-                            {
-                                Aspose.Slides.SmartArt.ISmartArt smartArt = (Aspose.Slides.SmartArt.ISmartArt)shape;
-
-                                // Log the layout type of the SmartArt
-                                Console.WriteLine("Slide " + slideIndex + ": SmartArt layout = " + smartArt.Layout.ToString());
-                            }
-                        }
-                    }
-
-                    // Save the presentation before exiting
-                    presentation.Save(outputPath, SaveFormat.Pptx);
+                    Aspose.Slides.SmartArt.ISmartArt smartArt = (Aspose.Slides.SmartArt.ISmartArt)shape;
+                    // Log the layout type of the SmartArt shape
+                    Console.WriteLine($"Slide {slideIndex + 1}, Shape {shapeIndex + 1}: Layout = {smartArt.Layout}");
                 }
             }
-            catch (Exception ex)
+        }
+
+        // Save the presentation before exiting
+        try
+        {
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Failed to save presentation: " + ex.Message);
+        }
+        finally
+        {
+            if (presentation != null)
             {
-                // Handle unsupported file format or other errors
-                // Format not supported
-                Console.WriteLine("An error occurred: " + ex.Message);
+                presentation.Dispose();
             }
         }
     }
