@@ -1,57 +1,46 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
-using System.Text.Json;
 using Aspose.Slides;
 using Aspose.Slides.Export;
-using Aspose.Slides.SmartArt;
 
 class Program
 {
     static void Main()
     {
         string inputPath = "input.pptx";
-        string outputPath = "smartart.json";
+        string outputJson = "smartart.json";
+        string outputPptx = "output.pptx";
 
         if (!File.Exists(inputPath))
         {
-            Console.WriteLine("Input file does not exist: " + inputPath);
+            Console.WriteLine("Input file does not exist.");
             return;
         }
 
         try
         {
-            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
-            {
-                List<NodeInfo> allSmartArtData = new List<NodeInfo>();
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+            Aspose.Slides.ISlide slide = presentation.Slides[0];
+            List<object> nodesList = new List<object>();
 
-                foreach (Aspose.Slides.ISlide slide in presentation.Slides)
+            foreach (Aspose.Slides.IShape shape in slide.Shapes)
+            {
+                if (shape is Aspose.Slides.SmartArt.SmartArt)
                 {
-                    foreach (Aspose.Slides.IShape shape in slide.Shapes)
+                    Aspose.Slides.SmartArt.SmartArt smartArt = (Aspose.Slides.SmartArt.SmartArt)shape;
+                    foreach (Aspose.Slides.SmartArt.ISmartArtNode rootNode in smartArt.AllNodes)
                     {
-                        if (shape is Aspose.Slides.SmartArt.ISmartArt smartArt)
-                        {
-                            foreach (Aspose.Slides.SmartArt.ISmartArtNode rootNode in smartArt.Nodes)
-                            {
-                                NodeInfo nodeInfo = ProcessNode(rootNode);
-                                allSmartArtData.Add(nodeInfo);
-                            }
-                        }
+                        nodesList.Add(ProcessNode(rootNode));
                     }
                 }
-
-                string json = JsonSerializer.Serialize(allSmartArtData, new JsonSerializerOptions { WriteIndented = true });
-                File.WriteAllText(outputPath, json);
-                Console.WriteLine("SmartArt data exported to " + outputPath);
-
-                // Save presentation before exit
-                presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
             }
-        }
-        catch (NotSupportedException ex)
-        {
-            // Format not supported
-            Console.WriteLine("The file format is not supported: " + ex.Message);
+
+            string json = System.Text.Json.JsonSerializer.Serialize(nodesList, new System.Text.Json.JsonSerializerOptions { WriteIndented = true });
+            File.WriteAllText(outputJson, json);
+
+            presentation.Save(outputPptx, Aspose.Slides.Export.SaveFormat.Pptx);
+            presentation.Dispose();
         }
         catch (Exception ex)
         {
@@ -59,41 +48,20 @@ class Program
         }
     }
 
-    private static NodeInfo ProcessNode(Aspose.Slides.SmartArt.ISmartArtNode node)
+    static object ProcessNode(Aspose.Slides.SmartArt.ISmartArtNode node)
     {
-        NodeInfo info = new NodeInfo();
-        // Use Position as identifier
-        info.Id = node.Position;
-
-        // Get text from the first shape of the node, if any
-        if (node.Shapes.Count > 0)
-        {
-            Aspose.Slides.SmartArt.ISmartArtShape shape = node.Shapes[0];
-            if (shape.TextFrame != null)
-            {
-                info.Text = shape.TextFrame.Text;
-            }
-        }
-
-        // Recursively process child nodes
+        List<object> childList = new List<object>();
         foreach (Aspose.Slides.SmartArt.ISmartArtNode child in node.ChildNodes)
         {
-            info.Children.Add(ProcessNode(child));
+            childList.Add(ProcessNode(child));
         }
 
-        return info;
-    }
-
-    private class NodeInfo
-    {
-        public int Id { get; set; }
-        public string Text { get; set; }
-        public List<NodeInfo> Children { get; set; }
-
-        public NodeInfo()
+        return new
         {
-            Children = new List<NodeInfo>();
-            Text = string.Empty;
-        }
+            Text = node.TextFrame != null ? node.TextFrame.Text : null,
+            Level = node.Level,
+            Position = node.Position,
+            Children = childList
+        };
     }
 }
