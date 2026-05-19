@@ -1,45 +1,48 @@
 using System;
-using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 using Aspose.Slides.SmartArt;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        string outputPath = "ClonedSmartArt.pptx";
-
-        // Create a new presentation
-        Presentation pres = new Presentation();
-
-        // Get the first slide
-        ISlide slide = pres.Slides[0];
-
-        // Add a SmartArt shape to the slide
-        ISmartArt smartArt = slide.Shapes.AddSmartArt(0, 0, 400, 400, SmartArtLayoutType.BasicBlockList);
-
-        // Clone the SmartArt shape and move the clone to coordinates (100, 200)
-        IShape clonedShape = slide.Shapes.AddClone(smartArt, 100, 200);
-
-        // Verify that the cloned shape does not overlap the original
-        ISmartArt clonedSmartArt = clonedShape as ISmartArt;
-        if (clonedSmartArt != null && (smartArt.X != clonedSmartArt.X || smartArt.Y != clonedSmartArt.Y))
-        {
-            // No overlap confirmed
-        }
-
-        // Save the presentation
         try
         {
-            pres.Save(outputPath, SaveFormat.Pptx);
-        }
-        catch (Exception)
-        {
-            // Format not supported
-        }
+            // Create a new presentation
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-        // Dispose the presentation
-        pres.Dispose();
+            // Get the first slide
+            Aspose.Slides.ISlide slide = presentation.Slides[0];
+
+            // Add a SmartArt diagram to the slide
+            Aspose.Slides.SmartArt.ISmartArt smartArt = slide.Shapes.AddSmartArt(
+                0, 0, 400, 400,
+                Aspose.Slides.SmartArt.SmartArtLayoutType.BasicBlockList);
+
+            // Clone the SmartArt shape and move the clone to (100, 200)
+            Aspose.Slides.IShape clonedShape = slide.Shapes.AddClone(smartArt, 100, 200);
+
+            // Verify that the cloned shape does not overlap the original
+            float originalRight = smartArt.X + smartArt.Width;
+            float originalBottom = smartArt.Y + smartArt.Height;
+            float cloneRight = clonedShape.X + clonedShape.Width;
+            float cloneBottom = clonedShape.Y + clonedShape.Height;
+
+            bool noOverlap = (clonedShape.X >= originalRight) ||
+                             (smartArt.X >= cloneRight) ||
+                             (clonedShape.Y >= originalBottom) ||
+                             (smartArt.Y >= cloneBottom);
+
+            Console.WriteLine("No overlap: " + noOverlap);
+
+            // Save the presentation
+            presentation.Save("CloneSmartArt_out.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        }
+        catch (Exception ex)
+        {
+            // Handle any errors (e.g., unsupported format)
+            Console.WriteLine("Error: " + ex.Message);
+        }
     }
 }
