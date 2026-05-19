@@ -2,107 +2,117 @@ using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Text.Json;
+using Aspose.Slides;
 using Aspose.Slides.Export;
+using Aspose.Slides.SmartArt;
 
-namespace SmartArtExport
+namespace SmartArtHierarchyExport
 {
+    // Simple DTO for JSON serialization
+    public class SmartArtNodeInfo
+    {
+        public int SlideIndex { get; set; }
+        public string SmartArtName { get; set; }
+        public int NodeId { get; set; }
+        public int ParentId { get; set; }
+        public string Text { get; set; }
+    }
+
     class Program
     {
-        static void Main()
+        static void Main(string[] args)
         {
-            // Input and output file paths
             string inputPath = "input.pptx";
-            string jsonOutputPath = "smartart_structure.json";
+            string jsonOutputPath = "smartart_hierarchy.json";
+            string presentationSavePath = "output.pptx";
 
-            // Verify input file exists
+            // Check if input file exists
             if (!File.Exists(inputPath))
             {
-                Console.WriteLine("Input file does not exist.");
+                Console.WriteLine("Input file does not exist: " + inputPath);
                 return;
             }
 
             try
             {
                 // Load presentation
-                var presentation = new Aspose.Slides.Presentation(inputPath);
-
-                // Find the first SmartArt shape
-                Aspose.Slides.SmartArt.ISmartArt smartArt = null;
-                foreach (var shape in presentation.Slides[0].Shapes)
+                using (Presentation pres = new Presentation(inputPath))
                 {
-                    if (shape is Aspose.Slides.SmartArt.SmartArt)
+                    List<SmartArtNodeInfo> nodeInfos = new List<SmartArtNodeInfo>();
+
+                    // Iterate through slides
+                    for (int slideIndex = 0; slideIndex < pres.Slides.Count; slideIndex++)
                     {
-                        smartArt = (Aspose.Slides.SmartArt.SmartArt)shape;
-                        break;
+                        ISlide slide = pres.Slides[slideIndex];
+
+                        // Iterate through shapes on the slide
+                        for (int shapeIndex = 0; shapeIndex < slide.Shapes.Count; shapeIndex++)
+                        {
+                            IShape shape = slide.Shapes[shapeIndex];
+
+                            // Identify SmartArt shapes
+                            if (shape is SmartArt)
+                            {
+                                SmartArt smartArt = (SmartArt)shape;
+                                string smartArtName = smartArt.Name;
+
+                                // Process all nodes recursively
+                                ProcessNodeCollection(smartArt.AllNodes, -1, slideIndex, smartArtName, nodeInfos);
+                            }
+                        }
                     }
-                }
 
-                if (smartArt == null)
-                {
-                    Console.WriteLine("No SmartArt diagram found in the presentation.");
-                    presentation.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
-                    presentation.Dispose();
-                    return;
-                }
-
-                // Helper class to hold node information
-                var nodes = new List<NodeInfo>();
-                int nextId = 1;
-
-                // Recursive traversal to build hierarchy
-                void Traverse(Aspose.Slides.SmartArt.ISmartArtNode node, int? parentId)
-                {
-                    int currentId = nextId++;
-                    var nodeInfo = new NodeInfo
+                    // Serialize hierarchy to JSON
+                    JsonSerializerOptions options = new JsonSerializerOptions
                     {
-                        Id = currentId,
-                        Text = node.TextFrame?.Text,
-                        ParentId = parentId,
-                        Children = new List<int>()
+                        WriteIndented = true
                     };
-                    nodes.Add(nodeInfo);
+                    string json = JsonSerializer.Serialize(nodeInfos, options);
+                    File.WriteAllText(jsonOutputPath, json);
+                    Console.WriteLine("SmartArt hierarchy exported to: " + jsonOutputPath);
 
-                    // Process child nodes
-                    foreach (var child in node.ChildNodes)
-                    {
-                        Traverse(child, currentId);
-                        // After child is added, record its Id in parent's Children list
-                        nodeInfo.Children.Add(nextId - 1);
-                    }
+                    // Save presentation (no modifications made, but required by rules)
+                    pres.Save(presentationSavePath, Aspose.Slides.Export.SaveFormat.Pptx);
                 }
-
-                // Start traversal from root nodes
-                foreach (var rootNode in smartArt.AllNodes)
-                {
-                    Traverse(rootNode, null);
-                }
-
-                // Serialize hierarchy to JSON
-                var jsonOptions = new JsonSerializerOptions { WriteIndented = true };
-                string json = JsonSerializer.Serialize(nodes, jsonOptions);
-                File.WriteAllText(jsonOutputPath, json);
-                Console.WriteLine($"SmartArt hierarchy exported to {jsonOutputPath}");
-
-                // Save presentation before exit
-                presentation.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
-                presentation.Dispose();
+            }
+            catch (PptxUnsupportedFormatException)
+            {
+                // Format not supported
+                Console.WriteLine("The presentation format is not supported (PPTX).");
+            }
+            catch (PptUnsupportedFormatException)
+            {
+                // Format not supported
+                Console.WriteLine("The presentation format is not supported (PPT).");
             }
             catch (Exception ex)
             {
-                // Handle unsupported format or other errors
-                Console.WriteLine($"Error processing presentation: {ex.Message}");
-                // Format not supported comment
-                // The provided file format is not supported by Aspose.Slides.
+                // General exception handling
+                Console.WriteLine("An error occurred: " + ex.Message);
             }
         }
 
-        // Class representing a node in the exported JSON
-        private class NodeInfo
+        // Recursive method to traverse SmartArt nodes
+        private static void ProcessNodeCollection(ISmartArtNodeCollection nodes, int parentId, int slideIndex, string smartArtName, List<SmartArtNodeInfo> nodeInfos)
         {
-            public int Id { get; set; }
-            public string Text { get; set; }
-            public int? ParentId { get; set; }
-            public List<int> Children { get; set; }
+            foreach (ISmartArtNode node in nodes)
+            {
+                int nodeId = node.Position;
+                string text = node.TextFrame?.Text;
+
+                SmartArtNodeInfo info = new SmartArtNodeInfo
+                {
+                    SlideIndex = slideIndex,
+                    SmartArtName = smartArtName,
+                    NodeId = nodeId,
+                    ParentId = parentId,
+                    Text = text
+                };
+                nodeInfos.Add(info);
+
+                // Recursively process child nodes
+                ProcessNodeCollection(node.ChildNodes, nodeId, slideIndex, smartArtName, nodeInfos);
+            }
         }
     }
 }
