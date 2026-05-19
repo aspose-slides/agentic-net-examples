@@ -5,56 +5,54 @@ using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        // Define input and output file paths
+        // Path to the input presentation
         string inputPath = "input.pptx";
-        string outputPath = "output.pptx";
 
-        // Verify that the input file exists
+        // Verify that the file exists
         if (!File.Exists(inputPath))
         {
-            Console.WriteLine("Input file does not exist: " + inputPath);
+            Console.WriteLine("File does not exist: " + inputPath);
             return;
         }
 
         try
         {
             // Load the presentation
-            using (Presentation pres = new Presentation(inputPath))
+            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
             {
                 // Iterate through all slides
-                for (int slideIndex = 0; slideIndex < pres.Slides.Count; slideIndex++)
+                for (int slideIndex = 0; slideIndex < presentation.Slides.Count; slideIndex++)
                 {
-                    ISlide slide = pres.Slides[slideIndex];
+                    Aspose.Slides.ISlide slide = presentation.Slides[slideIndex];
 
                     // Iterate through all shapes on the slide
-                    for (int shapeIndex = 0; shapeIndex < slide.Shapes.Count; shapeIndex++)
+                    foreach (Aspose.Slides.IShape shape in slide.Shapes)
                     {
-                        IShape shape = slide.Shapes[shapeIndex];
-
-                        // Check if the shape is a SmartArt and if it is hidden
-                        Aspose.Slides.SmartArt.SmartArt smartArt = shape as Aspose.Slides.SmartArt.SmartArt;
-                        if (smartArt != null && smartArt.Hidden)
+                        // Check if the shape is a SmartArt object
+                        if (shape is Aspose.Slides.SmartArt.ISmartArt)
                         {
-                            // Log the slide index (1‑based)
-                            Console.WriteLine("Hidden SmartArt found on slide index: " + (slideIndex + 1));
+                            Aspose.Slides.SmartArt.ISmartArt smartArt = (Aspose.Slides.SmartArt.ISmartArt)shape;
+
+                            // Check if the SmartArt shape is hidden
+                            if (shape.Hidden)
+                            {
+                                // Log the slide number (index) where the hidden SmartArt is found
+                                Console.WriteLine("Hidden SmartArt found on slide number: " + slide.SlideNumber);
+                            }
                         }
                     }
                 }
 
                 // Save the presentation before exiting
-                pres.Save(outputPath, SaveFormat.Pptx);
+                presentation.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
             }
-        }
-        catch (NotSupportedException)
-        {
-            // Format not supported
-            Console.WriteLine("The presentation format is not supported.");
         }
         catch (Exception ex)
         {
-            // General error handling
+            // Handle unsupported format or other errors
+            // Format not supported.
             Console.WriteLine("Error: " + ex.Message);
         }
     }
