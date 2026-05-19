@@ -2,60 +2,74 @@ using System;
 using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
+using Aspose.Slides.SmartArt;
 
-class Program
+namespace ReplaceSmartArtLayout
 {
-    static void Main()
+    class Program
     {
-        // Input and output file paths
-        string inputPath = "input.pptx";
-        string outputPath = "output.pptx";
-        string customLayoutXmlPath = "customLayout.xml";
-
-        // Verify input files exist
-        if (!File.Exists(inputPath))
+        static void Main(string[] args)
         {
-            Console.WriteLine("Input presentation file does not exist.");
-            return;
-        }
+            // Input and output file paths
+            string inputPath = "input.pptx";
+            string outputPath = "output.pptx";
+            string customLayoutXml = "customLayout.xml";
 
-        if (!File.Exists(customLayoutXmlPath))
-        {
-            Console.WriteLine("Custom layout XML file does not exist.");
-            return;
-        }
-
-        // Load the presentation
-        Presentation presentation = null;
-        try
-        {
-            presentation = new Presentation(inputPath);
-        }
-        catch (Exception ex)
-        {
-            // Format not supported
-            Console.WriteLine("Failed to load presentation: " + ex.Message);
-            return;
-        }
-
-        // Load custom layout from XML (placeholder - actual implementation depends on API support)
-        // Here we assume the custom layout corresponds to an existing SmartArtLayoutType
-        Aspose.Slides.SmartArt.SmartArtLayoutType customLayout = Aspose.Slides.SmartArt.SmartArtLayoutType.BasicProcess;
-
-        // Find the first SmartArt shape and replace its layout
-        Aspose.Slides.ISlide slide = presentation.Slides[0];
-        foreach (Aspose.Slides.IShape shape in slide.Shapes)
-        {
-            if (shape is Aspose.Slides.SmartArt.ISmartArt)
+            // Verify input file exists
+            if (!File.Exists(inputPath))
             {
-                Aspose.Slides.SmartArt.ISmartArt smartArt = (Aspose.Slides.SmartArt.ISmartArt)shape;
-                smartArt.Layout = customLayout;
-                break;
+                Console.WriteLine("Input file not found: " + inputPath);
+                return;
+            }
+
+            try
+            {
+                // Load the presentation
+                Presentation pres = new Presentation(inputPath);
+
+                // Assume we work with the first slide
+                ISlide slide = pres.Slides[0];
+
+                // Find the first SmartArt shape on the slide
+                ISmartArt smartArt = null;
+                foreach (IShape shape in slide.Shapes)
+                {
+                    if (shape is ISmartArt)
+                    {
+                        smartArt = (ISmartArt)shape;
+                        break;
+                    }
+                }
+
+                if (smartArt == null)
+                {
+                    Console.WriteLine("No SmartArt shape found on the slide.");
+                }
+                else
+                {
+                    // Replace the layout with a custom layout defined in an XML file.
+                    // Aspose.Slides does not expose a direct method to load a layout from XML,
+                    // so this part is represented as a placeholder for the actual implementation.
+                    // Example: smartArt.LoadCustomLayout(customLayoutXml);
+                    // For demonstration, set the layout to Custom.
+                    smartArt.Layout = SmartArtLayoutType.Custom;
+
+                    // Additional code to apply the XML-defined layout would go here.
+                }
+
+                // Save the modified presentation
+                pres.Save(outputPath, SaveFormat.Pptx);
+            }
+            catch (NotSupportedException)
+            {
+                // Handle unsupported file format
+                Console.WriteLine("The provided file format is not supported.");
+            }
+            catch (Exception ex)
+            {
+                // General exception handling (including possible web service errors)
+                Console.WriteLine("An error occurred: " + ex.Message);
             }
         }
-
-        // Save the modified presentation
-        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
-        presentation.Dispose();
     }
 }
