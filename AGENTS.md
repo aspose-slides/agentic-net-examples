@@ -1,6 +1,6 @@
 ---
 name: aspose-slides-examples
-version: 26.5.0
+version: 26.6.0
 description: AI-friendly C# code examples for Aspose.Slides for .NET
 language: csharp
 framework: net10.0
@@ -29,8 +29,8 @@ When working in this repository:
 
 This repository contains **2273** working code examples demonstrating Aspose.Slides for .NET capabilities.
 
-**Statistics** (as of 2026-05-19):
-- Version: 26.5.0
+**Statistics** (as of 2026-06-19):
+- Version: 26.6.0
 - Total Examples: 2273
 - Categories: 19
 
@@ -167,146 +167,6 @@ Check with a human before doing any of these:
 
 ## Common Mistakes (Anti-Patterns)
 
-### cs0103-imageformat-not-found
-
-```csharp
-// WRONG
-Used ImageFormat enum without namespace qualification (ImageFormat.Png)
-```
-
-```csharp
-// CORRECT
-Qualified enum with full namespace (Aspose.Slides.ImageFormat.Png) or added appropriate using
-```
-
-Reference ImageFormat via its full namespace (Aspose.Slides.ImageFormat) or include a using for Aspose.Slides to resolve the enum
-
-### cs0234-missing-namespace-aspose-slides-saveformat
-
-```csharp
-// WRONG
-Aspose.Slides.SaveFormat used for SaveFormat enum
-```
-
-```csharp
-// CORRECT
-Aspose.Slides.Export.SaveFormat used for SaveFormat enum
-```
-
-Reference SaveFormat via the Aspose.Slides.Export namespace (e.g., Aspose.Slides.Export.SaveFormat.Pptx) instead of Aspose.Slides.SaveFormat
-
-### cs1069-image-not-found-in-system-drawing
-
-```csharp
-// WRONG
-Using System.Drawing.Image and slide.GetThumbnail() which depends on System.Drawing.Common
-```
-
-```csharp
-// CORRECT
-Use Aspose.Slides.IImage slide.GetImage() and Aspose.Slides.ImageFormat for saving PNG
-```
-
-Replace System.Drawing.Image with Aspose.Slides.IImage and call slide.GetImage() instead of GetThumbnail(), then save with Aspose.Slides.ImageFormat
-
-### cs0234-saveformat-not-found-in-aspose-slides-namespace
-
-```csharp
-// WRONG
-Used Aspose.Slides.SaveFormat.Html (wrong namespace) and passed HtmlOptions unnecessarily
-```
-
-```csharp
-// CORRECT
-Reference Aspose.Slides.Export.SaveFormat.Html (or import Aspose.Slides.Export) and call presentation.Save with that enum
-```
-
-Always import and use Aspose.Slides.Export namespace for SaveFormat enum when saving presentations
-
-### htmloptions-does-not-contain-a-definition-for-embedimages
-
-```csharp
-// WRONG
-Instantiate HtmlOptions and assign htmlOptions.EmbedImages = true;
-```
-
-```csharp
-// CORRECT
-Instantiate Html5Options (or a version of HtmlOptions that supports EmbedImages) and set EmbedImages = true, then save using SaveFormat.Html5.
-```
-
-For HTML export with embedded images, use Aspose.Slides.Export.Html5Options (or the appropriate options class that includes the EmbedImages property) instead of HtmlOptions, set its EmbedImages property, and call Presentation.Save with SaveFormat.Html5.
-
-### cs0234-saveformat-not-found-in-aspose-slides
-
-```csharp
-// WRONG
-presentation.Save(..., Aspose.Slides.SaveFormat.Html, ...)
-```
-
-```csharp
-// CORRECT
-presentation.Save(..., Aspose.Slides.Export.SaveFormat.Html, ...)
-```
-
-Reference SaveFormat from Aspose.Slides.Export namespace instead of Aspose.Slides
-
-### html5options-does-not-contain-htmlformatter
-
-```csharp
-// WRONG
-Instantiate Html5Options and assign HtmlFormatter property; then save with SaveFormat.Html5
-```
-
-```csharp
-// CORRECT
-Instantiate HtmlOptions, assign HtmlFormatter, and save with SaveFormat.Html
-```
-
-When using HtmlFormatter, use HtmlOptions (or the options class that defines HtmlFormatter) and the matching SaveFormat.Html instead of Html5Options/Html5
-
-### cs0266-cannot-implicitly-convert-type-embedallfontshtmlcontroller-to-ihtmlformatter
-
-```csharp
-// WRONG
-Assigning a new EmbedAllFontsHtmlController instance directly to HtmlOptions.HtmlFormatter
-```
-
-```csharp
-// CORRECT
-Assigning HtmlFormatter.CreateDocumentFormatter(...) (or another factory method) to HtmlOptions.HtmlFormatter
-```
-
-Use the HtmlFormatter factory method to obtain an IHtmlFormatter instance instead of instantiating EmbedAllFontsHtmlController directly
-
-### cs0234-saveformat-not-found-in-aspose-slides-namespace
-
-```csharp
-// WRONG
-presentation.Save(outputPath, Aspose.Slides.SaveFormat.Html, options) // wrong namespace and extra parameter
-```
-
-```csharp
-// CORRECT
-presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Html) // correct namespace, proper overload
-```
-
-Use Aspose.Slides.Export.SaveFormat (or add using Aspose.Slides.Export) when calling Presentation.Save and match the overload signature
-
-### htmloptions-does-not-contain-a-definition-for-embedimages
-
-```csharp
-// WRONG
-HtmlOptions htmlOptions = new HtmlOptions(); htmlOptions.EmbedImages = true;
-```
-
-```csharp
-// CORRECT
-HtmlOptions htmlOptions = new HtmlOptions { HtmlFormatter = HtmlFormatter.CreateCustomFormatter(new EmbedAllFontsHtmlController(new string[0])) }; htmlOptions.SlideImageFormat = SlideImageFormat.Bitmap(150f, ImageFormat.Jpeg);
-```
-
-Replace the nonexistent HtmlOptions.EmbedImages property with a custom HtmlFormatter (e.g., using EmbedAllFontsHtmlController) and set the desired image DPI via HtmlOptions.SlideImageFormat = SlideImageFormat.Bitmap(dpi, ImageFormat.Jpeg).
-
 
 
 ## Domain Knowledge
@@ -392,4 +252,4 @@ dotnet run
 
 
 ---
-Generated: 2026-05-19
+Generated: 2026-06-19
