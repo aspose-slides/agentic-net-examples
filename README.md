@@ -1,4 +1,4 @@
-# Aspose.Slides for .NET Examples (V26.5.0)
+# Aspose.Slides for .NET Examples (V26.6.0)
        
 
 AI-friendly repository containing validated C# examples for Aspose.Slides for .NET API.
