@@ -1,0 +1,40 @@
+{
+  "name": "Aspose.Slides for .NET Examples",
+  "description": "Build-validated standalone C# examples for Aspose.Slides for .NET presentation automation.",
+  "repository": "https://github.com/aspose-slides/agentic-net-examples",
+  "docs": {
+    "agent_instructions": "./AGENTS.md",
+    "llms": "./llms.txt",
+    "index": "./index.json",
+    "openapi": "./openapi.json",
+    "connection": "./docs/agent-connection.md"
+  },
+  "capabilities": [
+    "create PPTX presentations",
+    "convert PPTX to PDF, HTML, TIFF, SVG, PNG, and JPEG",
+    "edit slides, shapes, charts, tables, SmartArt, and text",
+    "extract media, comments, notes, metadata, tags, and VBA macros",
+    "secure and validate presentations"
+  ],
+  "categories": [
+    "3d-presentations",
+    "animations",
+    "comments-and-notes",
+    "conversion",
+    "design-presentations",
+    "manage-presentation",
+    "manage-presentation-content",
+    "manage-presentation-media-files",
+    "manage-presentation-text",
+    "manage-tags-and-custom-data",
+    "math-equations",
+    "presentation-ink-objects",
+    "secure-presentations",
+    "vba-macros",
+    "working-with-charts",
+    "working-with-shapes",
+    "working-with-slides",
+    "working-with-smartart",
+    "working-with-tables"
+  ]
+}
