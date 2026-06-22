@@ -1,0 +1,40 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Aspose.Slides Agentic Examples Metadata",
+    "version": "1.0.0",
+    "description": "Metadata endpoints for coding agents discovering Aspose.Slides for .NET examples."
+  },
+  "paths": {
+    "/index.json": {
+      "get": {
+        "summary": "Get structured category and example index",
+        "responses": {
+          "200": {
+            "description": "Repository index"
+          }
+        }
+      }
+    },
+    "/llms.txt": {
+      "get": {
+        "summary": "Get LLM-oriented repository summary",
+        "responses": {
+          "200": {
+            "description": "LLM text manifest"
+          }
+        }
+      }
+    },
+    "/AGENTS.md": {
+      "get": {
+        "summary": "Get coding-agent instructions",
+        "responses": {
+          "200": {
+            "description": "Agent instructions"
+          }
+        }
+      }
+    }
+  }
+}
