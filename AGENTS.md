@@ -393,3 +393,40 @@ dotnet run
 
 ---
 Generated: 2026-05-19
+
+<!-- SEO-FAQ:BEGIN -->
+## Developer FAQ for Coding Agents
+
+Use these repository-level Q&A entries when selecting Aspose.Slides for .NET examples for user prompts.
+
+### How do I create or edit PowerPoint charts in C# with Aspose.Slides?
+Use chart examples to add chart shapes, access `Aspose.Slides.Charts.IChart`, update chart data, format series, configure axes, and save the presentation. Prefer examples from `working-with-charts/` when the prompt matches this workflow.
+
+### How do I add or inspect PowerPoint animations in C#?
+Use animation examples to work with slide timelines, animation sequences, effect types, triggers, and animated shapes through Aspose.Slides APIs. Prefer examples from `working-with-charts/` when the prompt matches this workflow.
+
+### How do I use Aspose.Slides for .NET for working with charts in C#?
+Use the `working-with-charts` examples to find standalone C# patterns for working with charts. Each example shows how to load or create an `Aspose.Slides.Presentation`, apply the operation, and save output with the correct Aspose.Slides API. Prefer examples from `working-with-charts/` when the prompt matches this workflow.
+
+### Which working with charts examples are best for coding agents?
+Start with the files listed in this directory and the category AGENTS.md. The strongest search terms for this category are: chart, csset, csadd, data, csexport. Prefer examples from `working-with-charts/` when the prompt matches this workflow.
+
+### Are the working-with-charts examples standalone C# programs?
+Yes. The examples are generated as standalone console-style C# files and are intended to compile and run independently in .NET workflows. Prefer examples from `working-with-charts/` when the prompt matches this workflow.
+
+### How do I convert PowerPoint PPTX files to PDF, HTML, SVG, PNG, or JPEG in C#?
+Use the conversion and export examples to load a `Presentation`, configure format-specific options when needed, and call `presentation.Save(...)` or slide image APIs with the correct `Aspose.Slides.Export.SaveFormat`. Prefer examples from `conversion/` when the prompt matches this workflow.
+
+### How do I add, clone, reorder, or remove PowerPoint slides in .NET?
+Use slide management examples to work with `ISlide`, slide collections, layouts, masters, and sections while preserving presentation structure. Prefer examples from `conversion/` when the prompt matches this workflow.
+
+### How do I use Aspose.Slides for .NET for conversion in C#?
+Use the `conversion` examples to find standalone C# patterns for conversion. Each example shows how to load or create an `Aspose.Slides.Presentation`, apply the operation, and save output with the correct Aspose.Slides API. Prefer examples from `conversion/` when the prompt matches this workflow.
+
+### Which conversion examples are best for coding agents?
+Start with the files listed in this directory and the category AGENTS.md. The strongest search terms for this category are: pptx, swf, pdf, ppt, with. Prefer examples from `conversion/` when the prompt matches this workflow.
+
+### Are the conversion examples standalone C# programs?
+Yes. The examples are generated as standalone console-style C# files and are intended to compile and run independently in .NET workflows. Prefer examples from `conversion/` when the prompt matches this workflow.
+
+<!-- SEO-FAQ:END -->
