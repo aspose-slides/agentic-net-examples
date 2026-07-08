@@ -1,76 +1,68 @@
 using System;
 using System.IO;
-using System.Drawing;
 using Aspose.Slides;
 using Aspose.Slides.Export;
+using System.Drawing;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
         string inputPath = "input.pptx";
         string outputPath = "output.pptx";
 
-        Aspose.Slides.Presentation presentation = null;
-        try
+        // Verify input file exists
+        if (!File.Exists(inputPath))
         {
-            // Load existing presentation if it exists, otherwise create a new one
-            if (File.Exists(inputPath))
-            {
-                presentation = new Aspose.Slides.Presentation(inputPath);
-            }
-            else
-            {
-                presentation = new Aspose.Slides.Presentation();
-            }
-        }
-        catch (Exception ex)
-        {
-            // Handle loading errors (e.g., unsupported format)
-            Console.WriteLine("Error loading presentation: " + ex.Message);
+            Console.WriteLine("Input file does not exist: " + inputPath);
             return;
         }
 
-        // Iterate over all slides
-        foreach (Aspose.Slides.ISlide slide in presentation.Slides)
+        try
         {
-            // Iterate over all shapes on the slide
-            foreach (Aspose.Slides.IShape shape in slide.Shapes)
+            // Load the presentation
+            using (Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath))
             {
-                // Cast to IAutoShape to access ShapeType and LineFormat
-                Aspose.Slides.IAutoShape autoShape = shape as Aspose.Slides.IAutoShape;
-                if (autoShape != null && autoShape.ShapeType == Aspose.Slides.ShapeType.Ellipse)
+                // Iterate over all slides
+                for (int slideIndex = 0; slideIndex < pres.Slides.Count; slideIndex++)
                 {
-                    // If the ellipse has no line (width == 0), assign a default black line
-                    if (autoShape.LineFormat != null && autoShape.LineFormat.Width == 0)
+                    Aspose.Slides.ISlide slide = pres.Slides[slideIndex];
+                    // Iterate over all shapes on the slide
+                    for (int shapeIndex = 0; shapeIndex < slide.Shapes.Count; shapeIndex++)
                     {
-                        autoShape.LineFormat.Width = 1;
-                        if (autoShape.LineFormat.FillFormat != null)
+                        Aspose.Slides.IShape shape = slide.Shapes[shapeIndex];
+                        // Process only AutoShape objects
+                        if (shape is Aspose.Slides.IAutoShape)
                         {
-                            autoShape.LineFormat.FillFormat.FillType = Aspose.Slides.FillType.Solid;
-                            autoShape.LineFormat.FillFormat.SolidFillColor.Color = Color.Black;
+                            Aspose.Slides.IAutoShape autoShape = (Aspose.Slides.IAutoShape)shape;
+                            // Identify ellipses
+                            if (autoShape.ShapeType == Aspose.Slides.ShapeType.Ellipse)
+                            {
+                                // Check if the shape has no line defined
+                                if (autoShape.LineFormat.IsFormatNotDefined)
+                                {
+                                    // Assign a default black line
+                                    autoShape.LineFormat.Width = 1.0;
+                                    autoShape.LineFormat.FillFormat.FillType = Aspose.Slides.FillType.Solid;
+                                    autoShape.LineFormat.FillFormat.SolidFillColor.Color = System.Drawing.Color.Black;
+                                }
+                            }
                         }
                     }
                 }
+
+                // Save the modified presentation
+                pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
             }
         }
-
-        try
+        catch (System.NotSupportedException)
         {
-            // Save the modified presentation
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            // Format not supported
         }
         catch (Exception ex)
         {
-            // Handle saving errors (e.g., unsupported format)
-            Console.WriteLine("Error saving presentation: " + ex.Message);
-        }
-        finally
-        {
-            if (presentation != null)
-            {
-                presentation.Dispose();
-            }
+            // Handle other exceptions (e.g., web service errors)
+            Console.WriteLine("Error: " + ex.Message);
         }
     }
 }
