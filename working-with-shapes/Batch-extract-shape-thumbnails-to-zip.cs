@@ -4,78 +4,63 @@ using System.IO.Compression;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-class Program
+namespace BatchShapeThumbnails
 {
-    static void Main()
+    class Program
     {
-        // Input folder containing PPT/PPTX files
-        string inputDirectory = "InputPpts";
-        // Output ZIP file path
-        string outputZipPath = "ShapeThumbnails.zip";
-
-        // Verify input directory exists
-        if (!Directory.Exists(inputDirectory))
+        static void Main(string[] args)
         {
-            Console.WriteLine("Input directory does not exist.");
-            return;
-        }
+            string inputDirectory = "InputPpts";
+            string outputZipPath = "ShapeThumbnails.zip";
 
-        // Create ZIP archive for thumbnails
-        using (FileStream zipFileStream = new FileStream(outputZipPath, FileMode.Create))
-        using (ZipArchive zipArchive = new ZipArchive(zipFileStream, ZipArchiveMode.Create))
-        {
-            // Get all PowerPoint files in the directory
-            string[] pptFiles = Directory.GetFiles(inputDirectory, "*.ppt*");
-            foreach (string pptFile in pptFiles)
+            if (!Directory.Exists(inputDirectory))
             {
-                // Ensure the file exists
-                if (!File.Exists(pptFile))
-                {
-                    continue;
-                }
+                Console.WriteLine("Input directory does not exist.");
+                return;
+            }
 
-                try
+            using (FileStream zipToOpen = new FileStream(outputZipPath, FileMode.Create))
+            using (ZipArchive archive = new ZipArchive(zipToOpen, ZipArchiveMode.Update))
+            {
+                string[] pptFiles = Directory.GetFiles(inputDirectory);
+                foreach (string pptPath in pptFiles)
                 {
-                    // Load the presentation
-                    Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(pptFile);
-
-                    // Iterate through slides
-                    for (int slideIndex = 0; slideIndex < pres.Slides.Count; slideIndex++)
+                    try
                     {
-                        Aspose.Slides.ISlide slide = pres.Slides[slideIndex];
-
-                        // Iterate through shapes on the slide
-                        for (int shapeIndex = 0; shapeIndex < slide.Shapes.Count; shapeIndex++)
+                        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(pptPath);
+                        int slideNumber = 1;
+                        foreach (Aspose.Slides.ISlide slide in pres.Slides)
                         {
-                            Aspose.Slides.IShape shape = slide.Shapes[shapeIndex];
-
-                            // Generate thumbnail for the shape
-                            Aspose.Slides.IImage shapeImage = shape.GetImage(Aspose.Slides.ShapeThumbnailBounds.Shape, 1f, 1f);
-
-                            // Define entry name inside the ZIP
-                            string entryName = $"{Path.GetFileNameWithoutExtension(pptFile)}_slide{slideIndex + 1}_shape{shapeIndex + 1}.png";
-
-                            // Add image to ZIP archive
-                            ZipArchiveEntry entry = zipArchive.CreateEntry(entryName);
-                            using (Stream entryStream = entry.Open())
+                            int shapeIndex = 0;
+                            foreach (Aspose.Slides.IShape shape in slide.Shapes)
                             {
-                                shapeImage.Save(entryStream, Aspose.Slides.ImageFormat.Png);
+                                Aspose.Slides.IImage shapeImage = shape.GetImage();
+                                if (shapeImage != null)
+                                {
+                                    string entryName = $"{Path.GetFileNameWithoutExtension(pptPath)}_slide{slideNumber}_shape{shapeIndex}.png";
+                                    ZipArchiveEntry entry = archive.CreateEntry(entryName);
+                                    using (Stream entryStream = entry.Open())
+                                    {
+                                        shapeImage.Save(entryStream, Aspose.Slides.ImageFormat.Png);
+                                    }
+                                    shapeImage.Dispose();
+                                }
+                                shapeIndex++;
                             }
+                            slideNumber++;
                         }
+                        // Save presentation before exit (no modifications)
+                        pres.Save(pptPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                        pres.Dispose();
                     }
-
-                    // Save presentation before exiting (no modifications made)
-                    string tempSavePath = Path.Combine(Path.GetDirectoryName(pptFile), Path.GetFileNameWithoutExtension(pptFile) + "_temp.pptx");
-                    pres.Save(tempSavePath, Aspose.Slides.Export.SaveFormat.Pptx);
-                    pres.Dispose();
-                }
-                catch (NotSupportedException)
-                {
-                    // Format not supported
-                }
-                catch (Exception)
-                {
-                    // Handle other exceptions if necessary
+                    catch (NotSupportedException)
+                    {
+                        // Format not supported
+                    }
+                    catch (Exception)
+                    {
+                        // Handle other exceptions if needed
+                    }
                 }
             }
         }
