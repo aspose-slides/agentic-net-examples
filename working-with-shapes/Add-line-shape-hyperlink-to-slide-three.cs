@@ -2,25 +2,47 @@ using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-class Program
+namespace HyperlinkLineExample
 {
-    static void Main()
+    class Program
     {
-        // Create a new presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        static void Main(string[] args)
+        {
+            // Output file path
+            string outputPath = "LineHyperlink.pptx";
 
-        // Add a second slide to navigate to
-        Aspose.Slides.ISlide targetSlide = presentation.Slides.AddEmptySlide(presentation.Slides[0].LayoutSlide);
+            // Create a new presentation
+            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation())
+            {
+                // Get reference to the first slide
+                Aspose.Slides.ISlide firstSlide = presentation.Slides[0];
 
-        // Add a line shape on the first slide
-        Aspose.Slides.IAutoShape lineShape = (Aspose.Slides.IAutoShape)presentation.Slides[0].Shapes.AddAutoShape(Aspose.Slides.ShapeType.Line, 50, 150, 300, 0);
+                // Add a second slide to navigate to
+                Aspose.Slides.ISlide secondSlide = presentation.Slides.AddEmptySlide(presentation.Slides[0].LayoutSlide);
 
-        // Assign internal hyperlink to the target slide
-        lineShape.HyperlinkClick = new Aspose.Slides.Hyperlink(targetSlide);
-        lineShape.HyperlinkClick.Tooltip = "Go to slide 2";
+                // Add a line shape on the first slide
+                Aspose.Slides.IAutoShape lineShape = (Aspose.Slides.IAutoShape)firstSlide.Shapes.AddAutoShape(
+                    Aspose.Slides.ShapeType.Line, 50, 100, 300, 0);
 
-        // Save the presentation
-        presentation.Save("LineHyperlink.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
-        presentation.Dispose();
+                // Assign an internal hyperlink that jumps to the second slide
+                lineShape.HyperlinkClick = new Aspose.Slides.Hyperlink(secondSlide);
+                lineShape.HyperlinkClick.Tooltip = "Navigate to Slide 2";
+
+                // Save the presentation
+                try
+                {
+                    presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                }
+                catch (Exception ex)
+                {
+                    // Handle cases where the format is not supported
+                    // (e.g., SaveFormat not available for the current version)
+                    Console.WriteLine("Error saving presentation: " + ex.Message);
+                }
+            }
+
+            // Indicate completion
+            Console.WriteLine("Presentation saved to " + outputPath);
+        }
     }
 }
