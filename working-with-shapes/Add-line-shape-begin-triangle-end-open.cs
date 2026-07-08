@@ -1,33 +1,23 @@
 using System;
-using Aspose.Slides;
 using Aspose.Slides.Export;
+using System.Drawing;
 
 class Program
 {
     static void Main()
     {
-        // Output file path
         string outputPath = "ArrowLine.pptx";
-
-        // Create a new presentation
-        Presentation pres = new Presentation();
-
-        // Access the first slide
-        ISlide slide = pres.Slides[0];
-
-        // Add a line shape to the slide
-        IAutoShape line = (IAutoShape)slide.Shapes.AddAutoShape(ShapeType.Line, 50, 150, 300, 0);
-
-        // Set the begin arrow style to Triangle
-        line.LineFormat.BeginArrowheadStyle = LineArrowheadStyle.Triangle;
-
-        // Set the end arrow style to Open
-        line.LineFormat.EndArrowheadStyle = LineArrowheadStyle.Open;
-
-        // Save the presentation
-        pres.Save(outputPath, SaveFormat.Pptx);
-
-        // Clean up
+        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation();
+        Aspose.Slides.ISlide slide = pres.Slides[0];
+        Aspose.Slides.IAutoShape line = (Aspose.Slides.IAutoShape)slide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Line, 50, 150, 300, 0);
+        line.LineFormat.Style = Aspose.Slides.LineStyle.ThickBetweenThin;
+        line.LineFormat.Width = 10;
+        line.LineFormat.DashStyle = Aspose.Slides.LineDashStyle.DashDot;
+        line.LineFormat.BeginArrowheadStyle = Aspose.Slides.LineArrowheadStyle.Triangle;
+        line.LineFormat.EndArrowheadStyle = Aspose.Slides.LineArrowheadStyle.Open;
+        line.LineFormat.FillFormat.FillType = Aspose.Slides.FillType.Solid;
+        line.LineFormat.FillFormat.SolidFillColor.Color = Color.Maroon;
+        pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
         pres.Dispose();
     }
 }
