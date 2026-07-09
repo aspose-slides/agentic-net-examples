@@ -2,52 +2,50 @@ using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-namespace ConnectShapeExample
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
+        // Create a new presentation
+        Presentation presentation = new Presentation();
+
+        // Access the shapes collection for the first slide
+        IShapeCollection shapes = presentation.Slides[0].Shapes;
+
+        // Add an ellipse shape
+        IAutoShape ellipse = shapes.AddAutoShape(ShapeType.Ellipse, 0, 100, 100, 100);
+
+        // Add a rectangle shape
+        IAutoShape rectangle = shapes.AddAutoShape(ShapeType.Rectangle, 100, 300, 100, 100);
+
+        // Add a bent connector shape
+        IConnector connector = shapes.AddConnector(ShapeType.BentConnector2, 0, 0, 10, 10);
+
+        // Connect the shapes using the connector
+        connector.StartShapeConnectedTo = ellipse;
+        connector.EndShapeConnectedTo = rectangle;
+
+        // Assign the start connection site to the second site (index 1) if available
+        uint wantedIndex = 1;
+        if (ellipse.ConnectionSiteCount > wantedIndex)
         {
-            // Create a new presentation
-            Presentation presentation = new Presentation();
-
-            // Get the shape collection of the first slide
-            IShapeCollection shapes = presentation.Slides[0].Shapes;
-
-            // Add an ellipse shape
-            IAutoShape ellipse = shapes.AddAutoShape(ShapeType.Ellipse, 50, 50, 100, 100);
-
-            // Add a rectangle shape
-            IAutoShape rectangle = shapes.AddAutoShape(ShapeType.Rectangle, 200, 200, 100, 100);
-
-            // Add a bent connector
-            IConnector connector = shapes.AddConnector(ShapeType.BentConnector2, 0, 0, 10, 10);
-
-            // Connect the start of the connector to the ellipse
-            connector.StartShapeConnectedTo = ellipse;
-
-            // Ensure the ellipse has at least two connection sites
-            if (ellipse.ConnectionSiteCount > 1)
-            {
-                // Set the start connection site index to the second site (index 1)
-                connector.StartShapeConnectionSiteIndex = 1;
-            }
-
-            // (Reroute is intentionally not called to disable automatic rerouting)
-
-            // Save the presentation
-            try
-            {
-                presentation.Save("ConnectedShapes.pptx", SaveFormat.Pptx);
-            }
-            catch (System.NotSupportedException)
-            {
-                // Format not supported
-            }
-            finally
-            {
-                presentation.Dispose();
-            }
+            connector.StartShapeConnectionSiteIndex = wantedIndex;
         }
+
+        // Do not call Reroute to disable automatic rerouting
+
+        // Save the presentation
+        string outputPath = "ConnectorExample.pptx";
+        try
+        {
+            presentation.Save(outputPath, SaveFormat.Pptx);
+        }
+        catch (Exception)
+        {
+            // Format not supported or other error handling
+        }
+
+        // Clean up
+        presentation.Dispose();
     }
 }
