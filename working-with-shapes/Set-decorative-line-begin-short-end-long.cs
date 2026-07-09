@@ -1,5 +1,4 @@
 using System;
-using Aspose.Slides;
 using Aspose.Slides.Export;
 
 class Program
@@ -7,38 +6,35 @@ class Program
     static void Main()
     {
         // Create a new presentation
-        Presentation presentation = new Presentation();
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-        // Get the first slide
-        ISlide slide = presentation.Slides[0];
+        // Access the first slide
+        Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-        // Add an arrow-shaped line to the slide
-        IAutoShape line = slide.Shapes.AddAutoShape(ShapeType.Line, 50, 150, 300, 0);
-        line.LineFormat.Style = LineStyle.ThickBetweenThin;
+        // Add a line shape to the slide
+        Aspose.Slides.IAutoShape line = (Aspose.Slides.IAutoShape)slide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Line, 50, 150, 300, 0);
+
+        // Configure line formatting
+        line.LineFormat.Style = Aspose.Slides.LineStyle.ThickBetweenThin;
         line.LineFormat.Width = 10;
-        line.LineFormat.DashStyle = LineDashStyle.DashDot;
-        line.LineFormat.BeginArrowheadLength = LineArrowheadLength.Short;
-        line.LineFormat.BeginArrowheadStyle = LineArrowheadStyle.Oval;
-        line.LineFormat.EndArrowheadLength = LineArrowheadLength.Long;
-        line.LineFormat.EndArrowheadStyle = LineArrowheadStyle.Triangle;
-        line.LineFormat.FillFormat.FillType = FillType.Solid;
+        line.LineFormat.DashStyle = Aspose.Slides.LineDashStyle.DashDot;
+        line.LineFormat.BeginArrowheadLength = Aspose.Slides.LineArrowheadLength.Short;
+        line.LineFormat.BeginArrowheadStyle = Aspose.Slides.LineArrowheadStyle.Oval;
+        line.LineFormat.EndArrowheadLength = Aspose.Slides.LineArrowheadLength.Long;
+        line.LineFormat.EndArrowheadStyle = Aspose.Slides.LineArrowheadStyle.Triangle;
+        line.LineFormat.FillFormat.FillType = Aspose.Slides.FillType.Solid;
         line.LineFormat.FillFormat.SolidFillColor.Color = System.Drawing.Color.Maroon;
 
-        // Define output path
-        string outputPath = "ArrowLine.pptx";
-
-        // Save the presentation with exception handling
+        // Save the presentation
+        string outputPath = "DecorativeLine.pptx";
         try
         {
-            presentation.Save(outputPath, SaveFormat.Pptx);
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
         }
-        catch (NotSupportedException)
+        catch (Exception ex)
         {
-            // Format not supported
-        }
-        catch (Exception)
-        {
-            // Handle other exceptions (e.g., file I/O errors)
+            // Handle exceptions (e.g., unsupported format)
+            // Format not supported.
         }
     }
 }
