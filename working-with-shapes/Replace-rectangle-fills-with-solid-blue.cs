@@ -2,62 +2,65 @@ using System;
 using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
+using System.Drawing;
 
-namespace ReplaceRectangleFills
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        // Input and output file paths
+        string inputPath = "input.pptx";
+        string outputPath = "output.pptx";
+
+        // Verify input file exists
+        if (!File.Exists(inputPath))
         {
-            // Input presentation path
-            string inputPath = "input.pptx";
-            // Output presentation path
-            string outputPath = "output.pptx";
+            Console.WriteLine("Input file does not exist.");
+            return;
+        }
 
-            // Check if the input file exists
-            if (!File.Exists(inputPath))
+        try
+        {
+            // Load the presentation
+            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
             {
-                Console.WriteLine("Input file does not exist: " + inputPath);
-                return;
-            }
-
-            try
-            {
-                // Load the presentation
-                using (Presentation pres = new Presentation(inputPath))
+                // Iterate through all slides
+                int slideCount = presentation.Slides.Count;
+                for (int i = 0; i < slideCount; i++)
                 {
-                    // Iterate through all slides
-                    for (int slideIndex = 0; slideIndex < pres.Slides.Count; slideIndex++)
+                    Aspose.Slides.ISlide slide = presentation.Slides[i];
+
+                    // Iterate through all shapes on the slide
+                    int shapeCount = slide.Shapes.Count;
+                    for (int j = 0; j < shapeCount; j++)
                     {
-                        ISlide slide = pres.Slides[slideIndex];
+                        Aspose.Slides.IShape shape = slide.Shapes[j];
 
-                        // Iterate through all shapes on the slide
-                        for (int shapeIndex = 0; shapeIndex < slide.Shapes.Count; shapeIndex++)
+                        // Process only rectangle auto shapes
+                        if (shape is Aspose.Slides.IAutoShape)
                         {
-                            IShape shape = slide.Shapes[shapeIndex];
-
-                            // Process only AutoShape objects (they have ShapeType property)
-                            IAutoShape autoShape = shape as IAutoShape;
-                            if (autoShape != null && autoShape.ShapeType == ShapeType.Rectangle)
+                            Aspose.Slides.IAutoShape autoShape = (Aspose.Slides.IAutoShape)shape;
+                            if (autoShape.ShapeType == Aspose.Slides.ShapeType.Rectangle)
                             {
-                                // Set fill to solid blue
-                                autoShape.FillFormat.FillType = FillType.Solid;
+                                // Set solid blue fill
+                                autoShape.FillFormat.FillType = Aspose.Slides.FillType.Solid;
                                 autoShape.FillFormat.SolidFillColor.Color = System.Drawing.Color.Blue;
                             }
                         }
                     }
-
-                    // Save the modified presentation
-                    pres.Save(outputPath, SaveFormat.Pptx);
                 }
+
+                // Save the modified presentation
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
             }
-            catch (Exception ex)
-            {
-                // Handle exceptions (e.g., unsupported format, I/O errors)
-                Console.WriteLine("An error occurred: " + ex.Message);
-                // If the format is not supported, comment accordingly
-                // Format not supported.
-            }
+        }
+        catch (NotSupportedException)
+        {
+            // Format not supported
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error: " + ex.Message);
         }
     }
 }
