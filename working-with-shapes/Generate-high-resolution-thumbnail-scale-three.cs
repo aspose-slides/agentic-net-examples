@@ -3,49 +3,53 @@ using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-class Program
+namespace ThumbnailGenerator
 {
-    static void Main()
+    class Program
     {
-        // Path to the input presentation
-        string inputPath = "input.pptx";
-
-        // Verify that the input file exists
-        if (!File.Exists(inputPath))
+        static void Main(string[] args)
         {
-            Console.WriteLine("Input file does not exist.");
-            return;
-        }
+            // Input presentation path
+            string inputPath = "input.pptx";
 
-        try
-        {
-            // Load the presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
-
-            // Scaling factor of three for high‑resolution thumbnails
-            int scaleX = 3;
-            int scaleY = scaleX;
-
-            // Export each slide as a JPEG image with the specified scale
-            foreach (Aspose.Slides.ISlide slide in presentation.Slides)
+            // Verify that the input file exists
+            if (!File.Exists(inputPath))
             {
-                using (Aspose.Slides.IImage thumbnail = slide.GetImage(scaleX, scaleY))
-                {
-                    string imageFileName = string.Format("Slide_{0}.jpg", slide.SlideNumber);
-                    thumbnail.Save(imageFileName, Aspose.Slides.ImageFormat.Jpeg);
-                }
+                Console.WriteLine("Input file does not exist.");
+                return;
             }
 
-            // Save the presentation before exiting (no modifications made)
-            presentation.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
-        }
-        catch (NotSupportedException)
-        {
-            // Format not supported
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine("Error: " + ex.Message);
+            try
+            {
+                // Load the presentation
+                Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+
+                // Scaling factor of three for high‑resolution thumbnails
+                int scaleX = 3;
+                int scaleY = 3;
+
+                // Export each slide as a high‑resolution JPEG thumbnail
+                foreach (Aspose.Slides.ISlide slide in presentation.Slides)
+                {
+                    using (Aspose.Slides.IImage thumbnail = slide.GetImage((float)scaleX, (float)scaleY))
+                    {
+                        string imageFileName = String.Format("Slide_{0}.jpg", slide.SlideNumber);
+                        thumbnail.Save(imageFileName, Aspose.Slides.ImageFormat.Jpeg);
+                    }
+                }
+
+                // Save the (unchanged) presentation before exiting
+                presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+                presentation.Dispose();
+            }
+            catch (NotSupportedException)
+            {
+                // Format not supported
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
         }
     }
 }
