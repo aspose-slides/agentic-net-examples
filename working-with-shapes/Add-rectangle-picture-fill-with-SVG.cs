@@ -3,59 +3,55 @@ using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-class Program
+namespace AsposeSlidesExample
 {
-    static void Main(string[] args)
+    class Program
     {
-        // Define input SVG and output PPTX paths
-        string dataDir = Path.Combine(Directory.GetCurrentDirectory(), "Data");
-        string svgPath = Path.Combine(dataDir, "image.svg");
-        string outputPath = Path.Combine(dataDir, "output.pptx");
-
-        // Ensure data directory exists
-        if (!Directory.Exists(dataDir))
+        static void Main(string[] args)
         {
-            Directory.CreateDirectory(dataDir);
-        }
+            string svgFilePath = "example.svg";
+            string outputPath = "RectangleWithSvgFill.pptx";
 
-        // Verify SVG file exists
-        if (!File.Exists(svgPath))
-        {
-            Console.WriteLine("SVG file not found: " + svgPath);
-            return;
-        }
+            if (!File.Exists(svgFilePath))
+            {
+                Console.WriteLine("SVG file not found: " + svgFilePath);
+                return;
+            }
 
-        try
-        {
-            // Create a new presentation
-            Presentation pres = new Presentation();
+            try
+            {
+                using (Presentation presentation = new Presentation())
+                {
+                    ISlide slide = presentation.Slides[0];
 
-            // Get the first slide
-            ISlide slide = pres.Slides[0];
+                    // Load SVG image and add it to the presentation's image collection
+                    SvgImage svgImage = new SvgImage(svgFilePath);
+                    IPPImage svgAddedImage = presentation.Images.AddImage(svgImage);
 
-            // Add a rectangle shape
-            IAutoShape shape = slide.Shapes.AddAutoShape(ShapeType.Rectangle, 100, 100, 400, 300);
+                    // Add a rectangle shape
+                    IAutoShape rectangle = slide.Shapes.AddAutoShape(
+                        ShapeType.Rectangle, 50f, 50f, 300f, 200f);
 
-            // Set fill type to picture
-            shape.FillFormat.FillType = FillType.Picture;
+                    // Set fill type to picture and assign the SVG image as fill source
+                    rectangle.FillFormat.FillType = FillType.Picture;
+                    rectangle.FillFormat.PictureFillFormat.Picture.Image = svgAddedImage;
 
-            // Load SVG content and create SVG image object
-            string svgContent = File.ReadAllText(svgPath);
-            ISvgImage svgImage = new SvgImage(svgContent);
+                    // Save the presentation
+                    presentation.Save(outputPath, SaveFormat.Pptx);
+                }
 
-            // Add SVG image to the presentation's image collection
-            IPPImage ppImg = pres.Images.AddImage(svgImage);
-
-            // Use the SVG image as the picture fill source
-            shape.FillFormat.PictureFillFormat.Picture.Image = ppImg;
-
-            // Save the presentation
-            pres.Save(outputPath, SaveFormat.Pptx);
-        }
-        catch (Exception ex)
-        {
-            // Handle unsupported format or other errors
-            Console.WriteLine("An error occurred: " + ex.Message);
+                Console.WriteLine("Presentation saved to: " + outputPath);
+            }
+            catch (NotSupportedException ex)
+            {
+                // Format not supported
+                Console.WriteLine("The requested format is not supported: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                // General exception handling
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
         }
     }
 }
