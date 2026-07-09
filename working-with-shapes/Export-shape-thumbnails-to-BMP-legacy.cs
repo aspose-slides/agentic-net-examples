@@ -6,33 +6,48 @@ namespace ShapeThumbnailExport
 {
     class Program
     {
-        static void Main()
+        static void Main(string[] args)
         {
-            // Output file paths
-            string outputPptx = "ShapeThumbnailDemo.pptx";
+            // Define output file names
+            string outputPptx = "ShapeThumbnailExport.pptx";
             string outputBmp = "ShapeThumbnail.bmp";
 
-            // Create a new presentation
-            Presentation pres = new Presentation();
+            try
+            {
+                // Create a new presentation
+                Presentation pres = new Presentation();
 
-            // Get the first slide
-            ISlide slide = pres.Slides[0];
+                // Access the first slide
+                ISlide slide = pres.Slides[0];
 
-            // Add a rectangle shape to the slide
-            IAutoShape shape = slide.Shapes.AddAutoShape(ShapeType.Rectangle, 100, 100, 300, 200);
-            shape.FillFormat.FillType = FillType.NoFill;
-            shape.LineFormat.SketchFormat.SketchType = LineSketchType.Scribble;
+                // Add a rectangle shape to the slide
+                IAutoShape shape = slide.Shapes.AddAutoShape(ShapeType.Rectangle, 50, 50, 200, 100);
 
-            // Generate a thumbnail image of the shape with scaling factors
-            float scaleX = 1f;
-            float scaleY = 1f;
-            IImage shapeImage = shape.GetImage(ShapeThumbnailBounds.Shape, scaleX, scaleY);
+                // Set shape fill to no fill
+                shape.FillFormat.FillType = FillType.NoFill;
 
-            // Save the shape thumbnail as BMP
-            shapeImage.Save(outputBmp, Aspose.Slides.ImageFormat.Bmp);
+                // Set shape line to scribble sketch type
+                shape.LineFormat.SketchFormat.SketchType = LineSketchType.Scribble;
 
-            // Save the presentation
-            pres.Save(outputPptx, SaveFormat.Pptx);
+                // Generate a thumbnail image of the shape with full scale
+                IImage shapeImage = shape.GetImage(ShapeThumbnailBounds.Shape, 1f, 1f);
+
+                // Save the shape thumbnail as BMP
+                shapeImage.Save(outputBmp, Aspose.Slides.ImageFormat.Bmp);
+
+                // Save the presentation
+                pres.Save(outputPptx, SaveFormat.Pptx);
+            }
+            catch (NotSupportedException)
+            {
+                // Format not supported
+                Console.WriteLine("The requested image format is not supported.");
+            }
+            catch (Exception ex)
+            {
+                // Handle other exceptions (e.g., file I/O issues)
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
         }
     }
 }
