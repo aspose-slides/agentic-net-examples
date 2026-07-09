@@ -1,27 +1,19 @@
 using System;
-using Aspose.Slides;
 using Aspose.Slides.Export;
 
 class Program
 {
     static void Main()
     {
+        string outputPath = "LineShape.pptx";
         try
         {
-            Presentation pres = new Presentation();
-            ISlide slide = pres.Slides[0];
-            IAutoShape line = (IAutoShape)slide.Shapes.AddAutoShape(ShapeType.Line, 50, 150, 300, 0);
-            line.LineFormat.Style = LineStyle.ThickBetweenThin;
-            line.LineFormat.Width = 10;
-            line.LineFormat.DashStyle = LineDashStyle.DashDot;
-            line.LineFormat.BeginArrowheadLength = LineArrowheadLength.Short;
-            line.LineFormat.BeginArrowheadStyle = LineArrowheadStyle.Open;
-            line.LineFormat.EndArrowheadLength = LineArrowheadLength.Long;
-            line.LineFormat.EndArrowheadStyle = LineArrowheadStyle.None;
-            line.LineFormat.FillFormat.FillType = FillType.Solid;
-            line.LineFormat.FillFormat.SolidFillColor.Color = System.Drawing.Color.Black;
-            string outputPath = "LineShape.pptx";
-            pres.Save(outputPath, SaveFormat.Pptx);
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+            Aspose.Slides.ISlide slide = presentation.Slides[0];
+            Aspose.Slides.IAutoShape line = (Aspose.Slides.IAutoShape)slide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Line, 50, 150, 300, 0);
+            line.LineFormat.BeginArrowheadStyle = Aspose.Slides.LineArrowheadStyle.Open;
+            line.LineFormat.EndArrowheadStyle = Aspose.Slides.LineArrowheadStyle.None;
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
         }
         catch (Exception ex)
         {
