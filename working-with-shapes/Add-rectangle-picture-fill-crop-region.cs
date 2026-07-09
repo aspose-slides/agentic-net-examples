@@ -1,66 +1,57 @@
 using System;
 using System.IO;
-using Aspose.Slides;
 using Aspose.Slides.Export;
 
-namespace AsposeSlidesExample
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
+        string presentationPath = "PictureFillExample.pptx";
+        string imagePath = "sample.jpg";
+
+        if (!File.Exists(imagePath))
         {
-            // Define paths
-            string dataDir = Path.Combine(Directory.GetCurrentDirectory(), "Data");
-            string imagePath = Path.Combine(dataDir, "image.jpg");
-            string outputPath = Path.Combine(dataDir, "output.pptx");
+            Console.WriteLine("Image file not found: " + imagePath);
+            return;
+        }
 
-            // Ensure data directory exists
-            if (!Directory.Exists(dataDir))
+        try
+        {
+            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation())
             {
-                Directory.CreateDirectory(dataDir);
-            }
-
-            // Check if the input image exists
-            if (!File.Exists(imagePath))
-            {
-                Console.WriteLine("Input image file not found: " + imagePath);
-                return;
-            }
-
-            try
-            {
-                // Create a new presentation
-                Presentation presentation = new Presentation();
-
-                // Get the first slide
-                ISlide slide = presentation.Slides[0];
-
-                // Load the image
-                IImage img = Images.FromFile(imagePath);
-                IPPImage ppImg = presentation.Images.AddImage(img);
+                Aspose.Slides.ISlide slide = presentation.Slides[0];
 
                 // Add a rectangle shape
-                IAutoShape shape = slide.Shapes.AddAutoShape(ShapeType.Rectangle, 100, 100, 400, 300);
+                Aspose.Slides.IAutoShape rectangle = slide.Shapes.AddAutoShape(
+                    Aspose.Slides.ShapeType.Rectangle, 50, 50, 400, 300);
 
-                // Apply picture fill to the rectangle
-                shape.FillFormat.FillType = FillType.Picture;
-                IPictureFillFormat picFill = shape.FillFormat.PictureFillFormat;
-                picFill.Picture.Image = ppImg;
+                // Set fill type to picture
+                rectangle.FillFormat.FillType = Aspose.Slides.FillType.Picture;
 
-                // Crop the picture within the shape to focus on a region
-                picFill.CropTop = 0.1f;    // Crop 10% from top
-                picFill.CropBottom = 0.1f; // Crop 10% from bottom
-                picFill.CropLeft = 0.2f;   // Crop 20% from left
-                picFill.CropRight = 0.2f;  // Crop 20% from right
+                // Load image and assign to shape fill
+                using (FileStream imageStream = new FileStream(imagePath, FileMode.Open, FileAccess.Read))
+                {
+                    Aspose.Slides.IPPImage image = presentation.Images.AddImage(imageStream);
+                    rectangle.FillFormat.PictureFillFormat.Picture.Image = image;
+                }
+
+                // Crop picture within the shape (10% from each side)
+                rectangle.FillFormat.PictureFillFormat.CropTop = 0.1f;
+                rectangle.FillFormat.PictureFillFormat.CropBottom = 0.1f;
+                rectangle.FillFormat.PictureFillFormat.CropLeft = 0.1f;
+                rectangle.FillFormat.PictureFillFormat.CropRight = 0.1f;
 
                 // Save the presentation
-                presentation.Save(outputPath, SaveFormat.Pptx);
+                presentation.Save(presentationPath, Aspose.Slides.Export.SaveFormat.Pptx);
             }
-            catch (Exception ex)
-            {
-                // Handle unsupported format or other errors
-                Console.WriteLine("An error occurred: " + ex.Message);
-            }
+        }
+        catch (NotSupportedException)
+        {
+            // Format not supported
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error: " + ex.Message);
         }
     }
 }
