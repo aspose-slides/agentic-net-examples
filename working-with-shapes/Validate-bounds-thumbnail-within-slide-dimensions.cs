@@ -8,8 +8,8 @@ class Program
     static void Main()
     {
         // Define input and output file paths
-        var inputPath = "input.pptx";
-        var outputPath = "output.pptx";
+        string inputPath = "input.pptx";
+        string outputPath = "output.pptx";
 
         // Verify that the input file exists
         if (!File.Exists(inputPath))
@@ -21,31 +21,34 @@ class Program
         try
         {
             // Load the presentation
-            var presentation = new Aspose.Slides.Presentation(inputPath);
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
 
             // Iterate through each slide
-            foreach (var slide in presentation.Slides)
+            for (int i = 0; i < presentation.Slides.Count; i++)
             {
-                var slideWidth = presentation.SlideSize.Size.Width;
-                var slideHeight = presentation.SlideSize.Size.Height;
+                Aspose.Slides.ISlide slide = presentation.Slides[i];
 
-                // Iterate through each shape on the slide
-                foreach (var shape in slide.Shapes)
+                // Generate a thumbnail with full scale (1:1)
+                Aspose.Slides.IImage thumbnail = slide.GetImage(1f, 1f);
+
+                // Retrieve slide dimensions
+                int slideWidth = (int)presentation.SlideSize.Size.Width;
+                int slideHeight = (int)presentation.SlideSize.Size.Height;
+
+                // Validate that thumbnail does not exceed slide dimensions
+                if (thumbnail.Width > slideWidth || thumbnail.Height > slideHeight)
                 {
-                    // Generate a thumbnail using bounds‑based rendering (shape bounds)
-                    var scaleX = 1f;
-                    var scaleY = 1f;
-                    var thumbnail = shape.GetImage(Aspose.Slides.ShapeThumbnailBounds.Shape, scaleX, scaleY);
-
-                    // Validate that the thumbnail does not exceed slide dimensions
-                    if (thumbnail.Width > slideWidth || thumbnail.Height > slideHeight)
-                    {
-                        Console.WriteLine($"Thumbnail of a shape exceeds slide dimensions on slide {slide.SlideNumber}.");
-                    }
-
-                    // Release the thumbnail resources
-                    thumbnail.Dispose();
+                    Console.WriteLine($"Thumbnail for slide {slide.SlideNumber} exceeds slide dimensions.");
                 }
+                else
+                {
+                    Console.WriteLine($"Thumbnail for slide {slide.SlideNumber} is within slide dimensions.");
+                }
+
+                // Save the thumbnail as JPEG
+                string thumbPath = $"slide_{slide.SlideNumber}_thumb.jpg";
+                thumbnail.Save(thumbPath, Aspose.Slides.ImageFormat.Jpeg);
+                thumbnail.Dispose();
             }
 
             // Save the presentation before exiting
@@ -55,12 +58,10 @@ class Program
         catch (NotSupportedException)
         {
             // Format not supported
-            Console.WriteLine("The file format is not supported.");
         }
         catch (Exception ex)
         {
-            // Handle other exceptions
-            Console.WriteLine($"An error occurred: {ex.Message}");
+            Console.WriteLine("Error: " + ex.Message);
         }
     }
 }
