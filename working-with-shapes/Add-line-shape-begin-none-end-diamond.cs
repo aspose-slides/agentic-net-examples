@@ -15,26 +15,12 @@ class Program
         // Add a line shape to the slide
         IAutoShape line = (IAutoShape)slide.Shapes.AddAutoShape(ShapeType.Line, 50, 150, 300, 0);
 
-        // Configure arrowheads: begin none, end diamond
+        // Configure arrowheads: no begin arrow, diamond end arrow
         line.LineFormat.BeginArrowheadStyle = LineArrowheadStyle.None;
         line.LineFormat.EndArrowheadStyle = LineArrowheadStyle.Diamond;
 
-        // Define output path
+        // Save the presentation
         string outputPath = "LineWithDiamondArrow.pptx";
-
-        // Save the presentation with exception handling
-        try
-        {
-            presentation.Save(outputPath, SaveFormat.Pptx);
-        }
-        catch (Exception ex)
-        {
-            // Handle errors such as unsupported format
-            Console.WriteLine("Error saving presentation: " + ex.Message);
-        }
-        finally
-        {
-            presentation.Dispose();
-        }
+        presentation.Save(outputPath, SaveFormat.Pptx);
     }
 }
