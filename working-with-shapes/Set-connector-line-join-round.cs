@@ -7,35 +7,29 @@ class Program
     static void Main()
     {
         // Create a new presentation
-        Presentation presentation = new Presentation();
+        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-        // Access the first slide
-        ISlide slide = presentation.Slides[0];
+        // Access the shape collection of the first slide
+        Aspose.Slides.IShapeCollection shapes = presentation.Slides[0].Shapes;
 
         // Add sample shapes
-        IShapeCollection shapes = slide.Shapes;
-        IAutoShape ellipse = shapes.AddAutoShape(ShapeType.Ellipse, 0, 100, 100, 100);
-        IAutoShape rectangle = shapes.AddAutoShape(ShapeType.Rectangle, 200, 300, 100, 100);
+        Aspose.Slides.IAutoShape ellipse = shapes.AddAutoShape(Aspose.Slides.ShapeType.Ellipse, 0, 100, 100, 100);
+        Aspose.Slides.IAutoShape rectangle = shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 100, 300, 100, 100);
 
-        // Add connectors between shapes
-        IConnector connector1 = shapes.AddConnector(ShapeType.BentConnector2, 0, 0, 10, 10);
-        connector1.StartShapeConnectedTo = ellipse;
-        connector1.EndShapeConnectedTo = rectangle;
-        connector1.Reroute();
+        // Add a connector between the shapes
+        Aspose.Slides.IConnector connector = shapes.AddConnector(Aspose.Slides.ShapeType.BentConnector2, 0, 0, 10, 10);
+        connector.StartShapeConnectedTo = ellipse;
+        connector.EndShapeConnectedTo = rectangle;
+        connector.Reroute();
 
-        IConnector connector2 = shapes.AddConnector(ShapeType.BentConnector2, 150, 150, 10, 10);
-        connector2.StartShapeConnectedTo = ellipse;
-        connector2.EndShapeConnectedTo = rectangle;
-        connector2.Reroute();
-
-        // Set line join style to Round for all connectors
+        // Set line join style to round for all connectors in the slide
         for (int i = 0; i < shapes.Count; i++)
         {
-            IShape shape = shapes[i];
-            if (shape is IConnector)
+            Aspose.Slides.IShape shape = shapes[i];
+            if (shape is Aspose.Slides.IConnector)
             {
-                IConnector connector = (IConnector)shape;
-                connector.LineFormat.JoinStyle = LineJoinStyle.Round;
+                Aspose.Slides.IConnector conn = (Aspose.Slides.IConnector)shape;
+                conn.LineFormat.JoinStyle = Aspose.Slides.LineJoinStyle.Round;
             }
         }
 
@@ -43,11 +37,11 @@ class Program
         string outputPath = "ConnectorsRoundJoinStyle.pptx";
         try
         {
-            presentation.Save(outputPath, SaveFormat.Pptx);
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
         }
-        catch (NotSupportedException)
+        catch (Exception)
         {
-            // Format not supported
+            // Handle exceptions such as unsupported format
         }
     }
 }
