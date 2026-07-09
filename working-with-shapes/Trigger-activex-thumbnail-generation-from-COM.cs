@@ -3,61 +3,73 @@ using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-class Program
+namespace AsposeSlidesExample
 {
-    static void Main()
+    class Program
     {
-        // Define file paths
-        string inputPath = Path.Combine(Directory.GetCurrentDirectory(), "input.pptx");
-        string outputPptx = Path.Combine(Directory.GetCurrentDirectory(), "output.pptx");
-        string outputPng = Path.Combine(Directory.GetCurrentDirectory(), "shape_thumbnail.png");
-
-        // Load existing presentation if it exists, otherwise create a new one
-        Presentation pres = null;
-        try
+        static void Main(string[] args)
         {
-            if (File.Exists(inputPath))
+            // Define input and output file paths
+            string inputPath = Path.Combine(Directory.GetCurrentDirectory(), "input.pptx");
+            string outputPptx = Path.Combine(Directory.GetCurrentDirectory(), "output.pptx");
+            string outputPng = Path.Combine(Directory.GetCurrentDirectory(), "shape_thumbnail.png");
+
+            // Verify that the input file exists
+            if (!File.Exists(inputPath))
             {
-                pres = new Presentation(inputPath);
+                Console.WriteLine("Input file not found: " + inputPath);
+                return;
             }
-            else
+
+            try
             {
-                pres = new Presentation();
+                // Load the presentation that contains ActiveX controls
+                Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
+                Aspose.Slides.ISlide slide = pres.Slides[0];
+
+                // Iterate through ActiveX controls on the slide
+                foreach (Aspose.Slides.IControl ctrl in slide.Controls)
+                {
+                    // Trigger thumbnail generation when a control with a specific name is found
+                    if (ctrl.Name == "GenerateThumbnail")
+                    {
+                        // Create a rectangle shape on the slide
+                        Aspose.Slides.IAutoShape shape = slide.Shapes.AddAutoShape(
+                            Aspose.Slides.ShapeType.Rectangle,
+                            100,   // X position
+                            100,   // Y position
+                            200,   // Width
+                            100);  // Height
+
+                        // Configure shape appearance
+                        shape.FillFormat.FillType = Aspose.Slides.FillType.NoFill;
+                        shape.LineFormat.SketchFormat.SketchType = Aspose.Slides.LineSketchType.Scribble;
+
+                        // Generate thumbnail image for the shape
+                        Aspose.Slides.IImage shapeImage = shape.GetImage(
+                            Aspose.Slides.ShapeThumbnailBounds.Shape,
+                            1f,    // Scale X
+                            1f);   // Scale Y
+
+                        // Save the thumbnail as PNG
+                        shapeImage.Save(outputPng, Aspose.Slides.ImageFormat.Png);
+                    }
+                }
+
+                // Save the modified presentation
+                pres.Save(outputPptx, Aspose.Slides.Export.SaveFormat.Pptx);
+                pres.Dispose();
+            }
+            catch (NotSupportedException)
+            {
+                // Format not supported
+                // Comment: The provided file format is not supported by Aspose.Slides.
+            }
+            catch (Exception ex)
+            {
+                // Handle other exceptions (e.g., COM interop issues)
+                Console.WriteLine("An error occurred: " + ex.Message);
             }
         }
-        catch (Exception ex)
-        {
-            // Handle unsupported format or loading errors
-            Console.WriteLine("Failed to load presentation: " + ex.Message);
-            return;
-        }
-
-        // Access the first slide
-        ISlide slide = pres.Slides[0];
-
-        // Add a rectangle shape that will be used for thumbnail generation
-        IAutoShape shape = slide.Shapes.AddAutoShape(ShapeType.Rectangle, 100, 100, 200, 100);
-        shape.FillFormat.FillType = FillType.NoFill;
-        shape.LineFormat.SketchFormat.SketchType = LineSketchType.Scribble;
-
-        // In a legacy COM‑based application, an ActiveX control could invoke this code.
-        // Here we simulate the trigger by directly generating the thumbnail.
-
-        // Generate thumbnail for the shape
-        IImage shapeImage = shape.GetImage(ShapeThumbnailBounds.Shape, 1f, 1f);
-        shapeImage.Save(outputPng, Aspose.Slides.ImageFormat.Png);
-
-        // Save the presentation before exiting
-        try
-        {
-            pres.Save(outputPptx, SaveFormat.Pptx);
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine("Failed to save presentation: " + ex.Message);
-        }
-
-        // Clean up resources
-        pres.Dispose();
     }
 }
