@@ -3,51 +3,81 @@ using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-class Program
+namespace AsposeSlidesExample
 {
-    static void Main()
+    class Program
     {
-        string dataDir = Path.Combine(Directory.GetCurrentDirectory(), "Data");
-        if (!Directory.Exists(dataDir))
+        static void Main(string[] args)
         {
-            Directory.CreateDirectory(dataDir);
-        }
+            // Define paths
+            string dataDir = Path.Combine(Directory.GetCurrentDirectory(), "Data");
+            string imageFileName = "sample.jpg";
+            string imagePath = Path.Combine(dataDir, imageFileName);
+            string outputPath = Path.Combine(dataDir, "output.pptx");
 
-        string imageFileName = "sample.jpg";
-        string imagePath = Path.Combine(dataDir, imageFileName);
-        if (!File.Exists(imagePath))
-        {
-            Console.WriteLine("Image file not found: " + imagePath);
-            return;
-        }
+            // Ensure data directory exists
+            if (!Directory.Exists(dataDir))
+            {
+                Directory.CreateDirectory(dataDir);
+            }
 
-        string outputFileName = "output.pptx";
-        string outPath = Path.Combine(dataDir, outputFileName);
+            // Verify input image exists
+            if (!File.Exists(imagePath))
+            {
+                Console.WriteLine("Input image not found: " + imagePath);
+                return;
+            }
 
-        try
-        {
-            Presentation pres = new Presentation();
-            ISlide slide = pres.Slides[0];
-            IImage img = Images.FromFile(imagePath);
-            IPPImage imgx = pres.Images.AddImage(img);
-            IAutoShape shape = slide.Shapes.AddAutoShape(ShapeType.Rectangle, 100, 100, imgx.Width, imgx.Height);
-            shape.FillFormat.FillType = FillType.Picture;
-            shape.FillFormat.PictureFillFormat.PictureFillMode = PictureFillMode.Stretch;
-            shape.FillFormat.PictureFillFormat.StretchOffsetLeft = 0;
-            shape.FillFormat.PictureFillFormat.StretchOffsetRight = 0;
-            shape.FillFormat.PictureFillFormat.StretchOffsetTop = 0;
-            shape.FillFormat.PictureFillFormat.StretchOffsetBottom = 0;
+            try
+            {
+                // Create a new presentation
+                Presentation pres = new Presentation();
 
-            // Verify that the picture fill mode is set to Stretch (uniform scaling preserves aspect ratio)
-            bool aspectRatioPreserved = shape.FillFormat.PictureFillFormat.PictureFillMode == PictureFillMode.Stretch;
-            Console.WriteLine("Aspect ratio preserved: " + aspectRatioPreserved);
+                // Get the first slide
+                ISlide slide = pres.Slides[0];
 
-            pres.Save(outPath, SaveFormat.Pptx);
-            pres.Dispose();
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine("Error: " + ex.Message);
+                // Load image and add to presentation resources
+                IImage img = Images.FromFile(imagePath);
+                IPPImage ppImg = pres.Images.AddImage(img);
+
+                // Add a picture frame with the image dimensions
+                IPictureFrame pictureFrame = slide.Shapes.AddPictureFrame(
+                    ShapeType.Rectangle,
+                    100f, // X position
+                    100f, // Y position
+                    ppImg.Width,
+                    ppImg.Height,
+                    ppImg);
+
+                // Set fill to picture and stretch mode
+                pictureFrame.FillFormat.FillType = FillType.Picture;
+                pictureFrame.FillFormat.PictureFillFormat.PictureFillMode = PictureFillMode.Stretch;
+
+                // Lock aspect ratio to preserve it during stretch
+                pictureFrame.PictureFrameLock.AspectRatioLocked = true;
+
+                // Verify that aspect ratio remains unchanged
+                float imageAspect = (float)ppImg.Width / ppImg.Height;
+                float frameAspect = pictureFrame.Width / pictureFrame.Height;
+                // If the aspect ratios differ significantly, it indicates a problem
+                if (Math.Abs(imageAspect - frameAspect) > 0.01f)
+                {
+                    Console.WriteLine("Warning: Aspect ratio may have changed.");
+                }
+
+                // Save the presentation
+                pres.Save(outputPath, SaveFormat.Pptx);
+                pres.Dispose();
+
+                Console.WriteLine("Presentation saved to: " + outputPath);
+            }
+            catch (Exception ex)
+            {
+                // Handle unsupported format or other errors
+                Console.WriteLine("An error occurred: " + ex.Message);
+                // Format not supported comment
+                // The provided file format may not be supported by Aspose.Slides.
+            }
         }
     }
 }
