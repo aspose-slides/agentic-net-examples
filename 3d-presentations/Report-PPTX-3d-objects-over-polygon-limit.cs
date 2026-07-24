@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Report PPTX 3d objects over polygon limit using C#
+//
+// Description:
+// Demonstrates how to scan a PowerPoint presentation for 3‑D shapes whose
+// polygon count exceeds a defined threshold, reporting the slide number,
+// shape name and polygon count. The example uses Aspose.Slides for .NET to
+// load, inspect and optionally save the presentation in a console application.
+// Developers can adapt this pattern to validate 3‑D content before publishing
+// or to enforce polygon‑count limits in automated workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, 3D objects, Polygon limit,
+// Presentation analysis, Office Automation, Shape inspection
+//
+// Use Cases:
+// - Detect and report 3‑D shapes that exceed polygon limits in PPTX files.
+// - Integrate polygon‑count validation into CI/CD pipelines for presentations.
+// - Build tools that enforce rendering performance constraints for 3‑D content.
+// - Automate quality checks for PowerPoint files before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
