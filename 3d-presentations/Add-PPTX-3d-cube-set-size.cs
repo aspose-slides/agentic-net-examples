@@ -1,3 +1,21 @@
+// -----------------------------------------------------------------------------
+// Example: Add PPTX 3d cube set size using C#
+//
+// Description:
+// Demonstrates how to add a 3‑D cube of a specific size to a PPTX file using
+// C# and Aspose.Slides for .NET. The example creates a new presentation,
+// inserts a rectangular shape, configures its 3‑D format to form a cube with
+// width, height and depth of 2 cm, applies a fill color, and saves the result.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, 3D, Cube, Size, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate insertion of sized 3‑D cubes into PowerPoint presentations.
+// - Build C# utilities for precise 3‑D shape creation in PPTX files.
+// - Generate or modify PPTX content programmatically in .NET applications.
+// - Validate 3‑D formatting and dimensions before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
