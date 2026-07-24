@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Report PPTX 3D slide object count using C#
+//
+// Description:
+// Demonstrates how to count 3‑dimensional objects on each slide of a PPTX file
+// using C# and Aspose.Slides for .NET. The example loads a presentation, iterates
+// through its slides, checks each shape for a ThreeDFormat, reports the count per
+// slide, and saves the presentation. This pattern can be used to audit or
+// validate 3D content in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Report, 3D, Slide, Object,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Generate reports of 3D object usage in PowerPoint presentations.
+// - Validate that slides contain the expected number of 3D elements.
+// - Build automation tools for PPTX content analysis in .NET applications.
+// - Integrate 3D object counting into larger presentation processing workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
