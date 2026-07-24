@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX 3D rotation video using C#
+//
+// Description:
+// Demonstrates how to add a 3D rotation animation to a shape in a PPTX file,
+// generate animation frames at a specified frame rate, and save the frames as PNG
+// images using Aspose.Slides for .NET. The example also saves the modified
+// presentation. The generated PNG sequence can later be combined into a video
+// (e.g., with FFmpeg) to produce a rotation video of the 3‑D object.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, 3D rotation, animation, video export,
+// frame generation, PNG, presentation processing, .NET
+//
+// Use Cases:
+// - Automate creation of rotation videos from PowerPoint 3‑D objects.
+// - Generate frame sequences for further video encoding.
+// - Integrate 3‑D animation export into C# tools and services.
+// - Validate and preview 3‑D animations programmatically.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
