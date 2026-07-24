@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Batch convert PPTX to PDF order using C#
+//
+// Description:
+// Demonstrates how to batch convert PPTX files to PDF while preserving slide
+// order using Aspose.Slides for .NET. The example loads each presentation,
+// saves it as a PDF, and writes the output to a dedicated folder. This pattern
+// can be used to automate PPTX workflows, validate results, or integrate
+// presentation conversion into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, PDF, Aspose.Slides for .NET, Batch, Convert, Presentation
+// Processing, Office Automation
+//
+// Use Cases:
+// - Automate batch conversion of PPTX files to PDF preserving slide order.
+// - Build C# utilities for PowerPoint presentation processing.
+// - Generate PDF versions of presentations in .NET applications.
+// - Validate and transform presentation files before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;

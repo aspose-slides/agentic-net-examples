@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Remove PPTX 3d objects without animations using C#
+//
+// Description:
+// Demonstrates how to remove 3‑D objects that have no animation effects from a
+// PowerPoint presentation using Aspose.Slides for .NET. The example loads a
+// PPTX file, scans each slide for shapes with a ThreeDFormat, checks the slide
+// timeline for associated animation effects, removes the shapes that have no
+// animations, and saves the modified presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove, 3D Objects, Without,
+// Animations, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Clean up PPTX files by deleting unused 3‑D shapes.
+// - Prepare presentations for environments that do not support 3‑D objects.
+// - Automate preprocessing of PowerPoint files before publishing.
+// - Integrate 3‑D object removal into .NET based document workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

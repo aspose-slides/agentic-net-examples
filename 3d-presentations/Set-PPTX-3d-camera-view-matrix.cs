@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set PPTX 3d camera view matrix using C#
+//
+// Description:
+// Demonstrates how to set a 3D camera view matrix (via rotation) for shapes
+// that have 3D formatting in a PPTX file using C# and Aspose.Slides for .NET.
+// The example loads a presentation, iterates through slides and shapes, applies
+// a predefined rotation to the camera of each 3D shape, and saves the result.
+// This pattern can be used to automate 3D camera adjustments in PowerPoint
+// presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, 3D, Camera, View Matrix, Rotation,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting a 3D camera view matrix for PPTX files.
+// - Build C# tools that modify 3D camera properties in PowerPoint presentations.
+// - Generate or transform PPTX files with custom 3D camera angles in .NET applications.
+// - Validate and preview 3D camera settings before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

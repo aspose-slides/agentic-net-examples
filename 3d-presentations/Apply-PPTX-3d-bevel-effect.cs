@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Apply PPTX 3d bevel effect using C#
+//
+// Description:
+// Demonstrates how to apply a 3‑D bevel effect to a shape in a PowerPoint
+// presentation using C# and Aspose.Slides for .NET. The example creates a new
+// presentation, adds an ellipse, configures fill and line formatting, applies
+// 3‑D bevel, camera and lighting settings, and saves the result as a PPTX file.
+// Developers can use this pattern to automate PPTX bevel styling, generate
+// presentations programmatically, or validate 3‑D visual effects.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, 3D, Bevel, Effect,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate applying 3‑D bevel effects to shapes in PowerPoint files.
+// - Build C# utilities for PowerPoint presentation styling.
+// - Generate or transform PPTX files with custom 3‑D visual effects.
+// - Validate presentation rendering before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.Drawing;
 using Aspose.Slides;

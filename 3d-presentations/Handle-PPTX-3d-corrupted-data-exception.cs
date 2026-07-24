@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Handle PPTX 3d corrupted data exception using C#
+//
+// Description:
+// Demonstrates how to detect and handle a corrupted 3D data exception in a PPTX
+// file using C# and Aspose.Slides for .NET. The example loads a presentation,
+// optionally processes it, and saves the result while catching specific
+// Aspose.Slides exceptions for corrupted files and unsupported formats.
+// This pattern helps developers build robust PowerPoint automation tools.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Handle, Pptx, Corrupted, Data,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate handling of PPTX files that may contain corrupted 3D data.
+// - Build C# utilities for safe PowerPoint presentation processing.
+// - Generate or transform PPTX files while gracefully handling format issues.
+// - Validate and log presentation integrity before further integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

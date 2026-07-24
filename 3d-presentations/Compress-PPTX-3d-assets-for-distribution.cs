@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Compress PPTX 3D assets for distribution using C#
+//
+// Description:
+// Demonstrates how to compress a PowerPoint presentation while preserving
+// embedded 3‑D assets using Aspose.Slides for .NET. The sample loads a PPTX file,
+// applies low‑code font compression (which keeps 3‑D objects intact), and saves
+// the result as a smaller PPTX suitable for distribution.
+//
+// Keywords:
+// C#, Aspose.Slides, PPTX, 3D assets, compression, console application, 
+// presentation processing, LowCode Compress, Embedded fonts
+//
+// Use Cases:
+// - Reduce the size of PPTX files that contain 3‑D models before sharing.
+// - Automate PPTX preparation in build or CI pipelines.
+// - Build command‑line tools for PowerPoint asset optimization.
+// - Integrate presentation compression into larger .NET solutions.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;

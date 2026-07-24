@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Create PPTX 3D thumbnail images using C#
+//
+// Description:
+// Demonstrates how to generate JPEG thumbnail images for each slide of a
+// PPTX presentation, including 3D slides, using Aspose.Slides for .NET.
+// The example loads a presentation, calculates scaling factors to produce
+// thumbnails of a desired size, saves the images to a folder, and optionally
+// saves the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Thumbnail, Images, 3D,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of thumbnail previews for PPTX files containing 3D content.
+// - Build C# utilities for PowerPoint slide image extraction.
+// - Integrate slide thumbnail generation into .NET applications or services.
+// - Prepare visual assets for web galleries, documentation, or content management.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX 3d slide to SVG paths using C#
+//
+// Description:
+// Demonstrates how to export a 3D slide from a PPTX file to SVG paths using
+// C# and Aspose.Slides for .NET. The example loads a presentation, selects the
+// first slide (which may contain 3D objects), and writes it as an SVG file
+// with default export options. This pattern can be used to automate PPTX
+// workflows, validate results, or integrate presentation logic into .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SVG, Export, 3D, Slide,
+// Paths, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate export of a 3D slide from PPTX to SVG paths.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

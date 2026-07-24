@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX 3d slide to png depth using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file, locate the first slide containing a
+// shape with 3‑D formatting, and export that slide to a high‑resolution PNG
+// image that preserves depth shading. The example also saves the original
+// presentation after processing. This pattern can be used in console
+// applications to automate PowerPoint 3‑D slide extraction and image generation
+// with Aspose.Slides for .NET.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Export, 3D, Slide, Depth,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate export of a 3‑D PowerPoint slide to a depth‑preserving PNG.
+// - Build C# utilities for extracting and converting 3‑D slide content.
+// - Integrate PPTX 3‑D processing into .NET applications.
+// - Validate and preview 3‑D slide rendering before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

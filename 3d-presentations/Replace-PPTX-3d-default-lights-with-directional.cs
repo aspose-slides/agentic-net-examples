@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Replace PPTX 3d default lights with directional using C#
+//
+// Description:
+// Demonstrates how to replace the default 3D lighting of shapes in a PPTX
+// presentation with a single directional light using C# and Aspose.Slides for .NET.
+// The example loads a presentation, iterates through all shapes on each slide,
+// modifies the ThreeDFormat lighting settings, and saves the updated file.
+// This pattern can be used to automate lighting adjustments in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Replace, 3D Lights, Directional Light,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate replacement of default 3D lights with a directional light in PPTX files.
+// - Build C# utilities for PowerPoint presentation processing and styling.
+// - Generate or transform PPTX files with customized 3D lighting in .NET applications.
+// - Validate and standardize presentation lighting before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

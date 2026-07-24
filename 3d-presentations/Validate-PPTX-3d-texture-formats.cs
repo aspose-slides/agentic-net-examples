@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Validate PPTX 3d texture formats using C#
+//
+// Description:
+// Demonstrates how to validate the texture file formats used by 3‑D objects 
+// in a PPTX presentation with Aspose.Slides for .NET. The example loads a 
+// presentation, iterates through all slides and shapes, checks each shape that 
+// has a ThreeDFormat, and provides a placeholder where texture format validation 
+// can be performed. The presentation is then saved, allowing integration into 
+// automated validation pipelines.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Validate, 3D, Texture, Formats, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate validation of texture formats used by 3‑D objects in PPTX files.
+// - Build .NET tools that enforce texture‑format compliance before publishing.
+// - Integrate texture‑format checks into CI/CD pipelines for PowerPoint assets.
+// - Extend the placeholder to enforce specific corporate image standards.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

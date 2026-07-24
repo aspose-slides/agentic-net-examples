@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Save PPTX 3d flattened PDF using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file, configure PDF export options to flatten
+// 3‑D objects into static raster images, and save the result as a PDF using
+// Aspose.Slides for .NET. The example includes basic file existence checks and
+// exception handling suitable for console applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Save, Flattened 3D, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Convert PPTX presentations containing 3‑D models to PDF with flattened graphics.
+// - Automate generation of PDF reports from PowerPoint files in .NET environments.
+// - Ensure compatibility of exported PDFs across viewers by rasterizing 3‑D content.
+// - Integrate PPTX to PDF conversion into build pipelines or server‑side services.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -26,9 +46,11 @@ namespace AsposeSlidesPdfExport
                 Presentation presentation = new Presentation(inputFilePath);
 
                 // Configure PDF options to flatten 3D objects into static images
-                PdfOptions pdfOptions = new PdfOptions();
-                pdfOptions.SaveMetafilesAsPng = true; // Rasterize metafiles (including 3D objects)
-                pdfOptions.IncludeOleData = false;    // Do not include OLE data
+                PdfOptions pdfOptions = new PdfOptions
+                {
+                    SaveMetafilesAsPng = true, // Rasterize metafiles (including 3D objects)
+                    IncludeOleData = false     // Do not include OLE data
+                };
 
                 // Save the presentation as PDF
                 presentation.Save(outputFilePath, SaveFormat.Pdf, pdfOptions);

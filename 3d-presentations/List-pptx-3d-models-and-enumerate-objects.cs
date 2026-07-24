@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: List pptx 3d models and enumerate objects using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file, enumerate all 3‑D shapes, retrieve
+// their effective 3‑D properties (depth, extrusion height, light rig and camera
+// settings), count the total number of 3‑D objects and save the presentation.
+// The example uses Aspose.Slides for .NET in a console application and can be
+// adapted for automation, validation or integration scenarios.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, List, 3D Models, Enumerate,
+// Presentation Processing, Office Automation, ThreeDFormat, IThreeDFormatEffectiveData
+//
+// Use Cases:
+// - Automate discovery and reporting of 3‑D objects in PowerPoint files.
+// - Build tools that validate or transform PPTX presentations containing 3‑D shapes.
+// - Integrate 3‑D shape analysis into .NET applications or CI pipelines.
+// - Generate processed copies of presentations after extracting 3‑D metadata.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;

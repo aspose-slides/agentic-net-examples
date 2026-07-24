@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Import STL 3D model into a PPTX using C#
+//
+// Description:
+// Demonstrates how to embed an STL 3D model file into a PowerPoint presentation
+// as an OLE object using Aspose.Slides for .NET. The example creates a new
+// presentation, adds the STL file as an OLE object covering the entire slide,
+// disables the default icon representation, and saves the result as a PPTX file.
+// This pattern can be used to automate the inclusion of 3D models in PowerPoint
+// presentations within .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, STL, 3D model, Aspose.Slides for .NET, OLE object, 
+// Presentation automation, Office Automation
+//
+// Use Cases:
+// - Automate embedding STL 3D models into PowerPoint slides.
+// - Build C# tools for creating or enhancing PPTX files with 3D content.
+// - Integrate 3D model visualization into .NET presentation workflows.
+// - Validate and process STL files for inclusion in Office documents.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

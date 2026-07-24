@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX 3D HTML5 WebGL using C#
+//
+// Description:
+// Demonstrates how to export a PPTX file containing 3D content to an HTML5
+// WebGL representation using C# and Aspose.Slides for .NET. The example shows
+// the required presentation-processing steps for PowerPoint files and
+// produces the requested output in a standalone console application. Developers
+// can use this pattern to automate PPTX workflows, validate results, or integrate
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Html5, WebGL, 3D, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate export of PPTX 3D presentations to HTML5 WebGL.
+// - Build C# tools for PowerPoint presentation processing with 3D content.
+// - Generate or transform PPTX files in .NET applications while preserving 3D models.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -38,7 +59,7 @@ namespace Html5ExportExample
                     // Embed images into the HTML file
                     EmbedImages = true,
                     // Specify where external resources (e.g., 3D model files) should be stored
-                    OutputPath = outputDirectory
+                    OutputPath = outputDirectory,
                     // Note: Aspose.Slides renders 3D models using WebGL automatically when exporting to HTML5
                 };
 
@@ -52,7 +73,6 @@ namespace Html5ExportExample
             }
             catch (NotSupportedException)
             {
-                // Format not supported
                 // Format not supported
                 Console.WriteLine("The provided file format is not supported for conversion.");
             }
