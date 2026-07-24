@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Load PPTX 3D JPEG texture using C#
+//
+// Description:
+// Demonstrates how to load an existing PPTX file, add a JPEG image as a texture
+// to a 3‑D rectangle shape, configure basic 3‑D material and extrusion settings,
+// and save the modified presentation using Aspose.Slides for .NET. The example
+// includes file existence checks and error handling suitable for console
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, JPEG, Load, Texture, 3D, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Apply a JPEG texture to a 3‑D shape in an existing PowerPoint file.
+// - Automate texture mapping for 3‑D objects in presentations.
+// - Build .NET tools that modify PPTX files with custom 3‑D visual effects.
+// - Validate and preview 3‑D texture integration before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
