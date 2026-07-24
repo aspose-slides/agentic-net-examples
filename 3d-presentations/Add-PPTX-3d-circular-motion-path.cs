@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add PPTX 3d circular motion path using C#
+//
+// Description:
+// Demonstrates how to add a 3‑D circular motion path to a shape in a PPTX file 
+// using C# and Aspose.Slides for .NET. The example creates a new presentation, 
+// inserts a rectangle shape with 3‑D extrusion, builds a circular motion path 
+// composed of eight line segments, applies the path as a motion animation, and 
+// saves the result as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, 3D, Circular Motion Path, Animation, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding 3‑D circular motion paths to PowerPoint slides.
+// - Build C# utilities for enriching presentations with custom animations.
+// - Generate or modify PPTX files programmatically in .NET applications.
+// - Validate and preview motion effects before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Drawing;
