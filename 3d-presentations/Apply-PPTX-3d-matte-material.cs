@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Apply PPTX 3d matte material using C#
+//
+// Description:
+// Demonstrates how to apply a matte material to 3‑D shapes in a PPTX file using
+// C# and Aspose.Slides for .NET. The example creates a sample presentation with a
+// 3‑D rectangle when the input file is missing, otherwise it loads an existing
+// presentation, iterates through all shapes, and sets the material of any shape
+// that has a ThreeDFormat to MaterialPresetType.Matte. The result is saved as a
+// new PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, 3D, Matte, Material, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automatically apply matte material to all 3‑D objects in a presentation.
+// - Generate sample PPTX files with 3‑D shapes for testing.
+// - Integrate PPTX material adjustments into .NET automation pipelines.
+// - Validate and transform existing presentations before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
