@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Adjust PPTX 3D ambient intensity using C#
+//
+// Description:
+// Demonstrates how to increase the ambient lighting of 3‑D formatted shapes
+// in a PowerPoint presentation using C# and Aspose.Slides for .NET. The
+// example loads an existing PPTX file, modifies the LightRig settings of each
+// shape that has 3‑D formatting to a brighter preset, and saves the result.
+// This pattern can be used to programmatically enhance the visual appearance
+// of 3‑D objects in presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, 3D, Ambient Intensity, LightRig,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Increase ambient lighting of 3‑D shapes in bulk.
+// - Build C# utilities for PowerPoint visual enhancements.
+// - Automate PPTX transformations that involve 3‑D formatting.
+// - Validate and adjust 3‑D lighting before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
