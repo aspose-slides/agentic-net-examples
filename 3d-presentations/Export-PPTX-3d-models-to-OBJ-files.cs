@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX 3d models to OBJ files using C#
+//
+// Description:
+// Demonstrates how to locate 3D models within a PPTX presentation and
+// export them to OBJ files using C# and Aspose.Slides for .NET. The example
+// iterates through slides and shapes, identifies shapes with a 3D format,
+// and provides a placeholder for custom OBJ extraction logic. It also
+// saves the presentation after processing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, 3D models, OBJ, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of 3D models from PPTX files to OBJ format.
+// - Build C# utilities for PowerPoint 3D content processing.
+// - Integrate 3D model handling into .NET applications.
+// - Validate and transform PPTX presentations containing 3D shapes.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
