@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Check PPTX 3D shapes have names using C#
+//
+// Description:
+// Demonstrates how to verify that all 3‑D shapes in a PPTX file have non‑empty
+// names using C# and Aspose.Slides for .NET. The example iterates through each
+// slide and shape, assigns a default name to any 3‑D shape lacking one, and
+// saves the validated presentation. This pattern can be used to ensure proper
+// naming of 3‑D objects before further processing or publishing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Check, Pptx, Shapes, Have, Names,
+// 3D, Validation, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Validate that 3‑D shapes in a presentation have names.
+// - Automatically assign default names to unnamed 3‑D shapes.
+// - Prepare PPTX files for downstream automation or publishing.
+// - Integrate shape‑name validation into .NET PowerPoint processing tools.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
