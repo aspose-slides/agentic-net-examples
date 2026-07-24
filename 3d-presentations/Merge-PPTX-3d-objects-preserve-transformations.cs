@@ -1,3 +1,28 @@
+// -----------------------------------------------------------------------------
+// Example: Merge PPTX 3d objects preserve transformations using C#
+//
+// Description:
+// Demonstrates how to merge PPTX presentations while preserving 3D object
+// transformations using C# and Aspose.Slides for .NET. The example loads two
+// source presentations, clones their first slides together with the associated
+// master slides into a new presentation, and saves the merged result. This
+// approach maintains the original 3D object positions, rotations, and scaling
+// defined in the source files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Merge, 3D objects, Preserve,
+// Transformations, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate merging of PPTX files that contain 3D objects without losing
+//   transformation data.
+// - Build C# utilities for consolidating presentations while retaining visual
+//   fidelity of 3D content.
+// - Integrate PPTX merging functionality into .NET applications that handle
+//   complex slide assets.
+// - Validate and test presentation workflows involving 3D graphics before
+//   publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
