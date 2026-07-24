@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Extract PPTX metadata and log using C#
+//
+// Description:
+// Demonstrates how to extract basic PPTX metadata such as author and creation
+// date and log the information using C# and Aspose.Slides for .NET. The example
+// loads a presentation, reads document properties, writes them to the console,
+// and saves a copy of the presentation. This pattern can be used to automate
+// metadata extraction, validation, or logging in PowerPoint processing workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Extract, Metadata, Document
+// Properties, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of PPTX author and creation time.
+// - Build C# tools for logging PowerPoint presentation metadata.
+// - Validate presentation properties before publishing or integration.
+// - Generate copies of presentations while preserving original metadata.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
