@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Toggle PPTX 3d model visibility flag using C#
+//
+// Description:
+// Demonstrates how to toggle the visibility of 3‑D models in a PPTX file by
+// adjusting the extrusion height of shapes that have a ThreeDFormat. The
+// example loads a presentation, optionally sets the visibility based on a
+// command‑line argument, and saves the modified file. It uses Aspose.Slides for
+// .NET and can be integrated into automation scripts or desktop tools.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Toggle, 3D Model, Visibility,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Programmatically hide or show 3‑D objects in PowerPoint slides.
+// - Build .NET utilities for batch processing of PPTX files.
+// - Validate 3‑D model settings before publishing presentations.
+// - Integrate 3‑D visibility control into larger document‑generation workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
