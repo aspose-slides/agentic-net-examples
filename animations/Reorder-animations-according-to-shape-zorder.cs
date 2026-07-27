@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Reorder animations according to shape zorder using C#
+//
+// Description:
+// Demonstrates how to reorder animation effects so that they follow the
+// Z‑order of shapes in each slide using Aspose.Slides for .NET. The example
+// loads a PPTX file, iterates through its slides and shapes, removes existing
+// effects, and re‑adds a generic Appear effect in the correct order. The
+// processed presentation is saved as a new PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Reorder, Animations, Shape,
+// Z‑order, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Reorder animation effects to match visual stacking of shapes.
+// - Build automated tools for PPTX cleanup or preparation.
+// - Integrate animation ordering logic into .NET applications.
+// - Validate and adjust presentation workflows before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
