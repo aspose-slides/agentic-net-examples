@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Generate HTML preview with replay controls using C#
+//
+// Description:
+// Demonstrates how to generate an HTML5 preview of a PowerPoint presentation
+// with animation and replay controls using C# and Aspose.Slides for .NET.
+// The example loads a PPTX file, enables slide show animation, and saves the
+// result as an HTML5 file that can be viewed in a browser with playback
+// controls.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, HTML, Generate, Html, Preview,
+// Replay, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate generation of HTML5 previews with animation replay for PPTX files.
+// - Build C# utilities for PowerPoint presentation processing and web preview.
+// - Integrate presentation conversion into .NET applications.
+// - Validate and preview slide animations before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

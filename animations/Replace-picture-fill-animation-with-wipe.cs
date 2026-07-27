@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Replace picture fill animation with wipe using C#
+//
+// Description:
+// Demonstrates how to replace picture fill animations (animations applied to
+// picture frames) with a wipe effect using C# and Aspose.Slides for .NET.
+// The example loads a PPTX file, iterates through all slides and main
+// sequence effects, changes the effect type for picture frames to
+// EffectType.Wipe while preserving timing, and saves the modified presentation.
+// This pattern can be used in console applications or integrated into larger
+// .NET solutions for PowerPoint automation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Replace, Picture Frame, Fill,
+// Animation, Wipe Effect, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of picture fill animations to wipe effects.
+// - Build C# utilities for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate and adjust animation sequences before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

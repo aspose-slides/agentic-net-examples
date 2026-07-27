@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Copy animations from one slide to another using C#
+//
+// Description:
+// Demonstrates how to copy animations from the first slide to the second slide 
+// (or a newly created blank slide) using C# and Aspose.Slides for .NET. The 
+// example loads an existing presentation, transfers each animation effect 
+// from the source slide to the target slide while preserving timing and other 
+// properties, and saves the result as a new PPTX file. This pattern can be used 
+// to automate animation duplication, build slide‑processing tools, or integrate 
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Copy, Animations, Slide, 
+// Another, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate copying animations from one slide to another within a presentation.
+// - Build C# utilities for PowerPoint animation management.
+// - Generate or transform PPTX files while preserving animation timing.
+// - Validate and test presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

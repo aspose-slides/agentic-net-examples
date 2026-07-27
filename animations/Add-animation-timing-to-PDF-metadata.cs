@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add animation timing to PDF metadata using C#
+//
+// Description:
+// Demonstrates how to calculate total animation duration for each slide in a
+// PowerPoint presentation, store the durations as custom document properties,
+// and save the presentation as a PDF using Aspose.Slides for .NET. This example
+// shows the required steps for extracting animation timing, updating metadata,
+// and exporting to PDF in a standalone console application.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Animation, Timing,
+// Metadata, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Extract slide animation timings and embed them into PDF metadata.
+// - Automate PowerPoint to PDF conversion while preserving custom properties.
+// - Build .NET tools for presentation analysis and reporting.
+// - Validate animation sequences before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

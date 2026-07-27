@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add custom motion path and set duration using C#
+//
+// Description:
+// Demonstrates how to add a custom motion path to a shape and set the animation
+// duration using C# and Aspose.Slides for .NET. The example creates a new
+// presentation, inserts a rectangle, applies a user-defined motion path effect,
+// configures its duration, and saves the result as a PPTX file. This pattern can
+// be used to automate PowerPoint animation creation in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Custom Motion Path, Duration,
+// Animation, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding custom motion paths and setting animation durations.
+// - Build C# tools for PowerPoint animation processing.
+// - Generate or modify PPTX files with custom animations in .NET applications.
+// - Validate and test presentation workflows before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Drawing;

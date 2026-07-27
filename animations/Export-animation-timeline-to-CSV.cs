@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export animation timeline to CSV using C#
+//
+// Description:
+// Demonstrates how to export the animation timeline of a PowerPoint presentation
+// to a CSV file using C# and Aspose.Slides for .NET. The example loads a PPTX,
+// iterates through each slide's animation sequence, extracts effect details such
+// as type, subtype, trigger, and duration, writes them to a CSV, and saves the
+// presentation. This pattern helps automate analysis of slide animations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Animation, Timeline, CSV,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Analyze or audit animation effects across slides.
+// - Generate reports of animation sequences for review or documentation.
+// - Integrate animation data extraction into .NET tools or CI pipelines.
+// - Convert animation metadata into CSV for further processing or visualization.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

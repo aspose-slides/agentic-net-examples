@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add slide transitions using C#
+//
+// Description:
+// Demonstrates how to add slide transitions to a PowerPoint presentation using
+// C# and Aspose.Slides for .NET. The example creates a new presentation, clones
+// the first slide to generate additional slides, applies different transition
+// types and timing settings to each slide, and saves the result as a PPTX file.
+// This pattern can be used to automate slide transition configuration in .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Slide, Transitions, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate the addition of slide transitions to presentations.
+// - Build C# tools for PowerPoint presentation enhancement.
+// - Generate or modify PPTX files with custom slide transitions in .NET applications.
+// - Prepare presentations with predefined transition effects before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

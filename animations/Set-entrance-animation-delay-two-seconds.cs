@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set entrance animation delay two seconds using C#
+//
+// Description:
+// Demonstrates how to set a default entrance animation delay of two seconds 
+// for all slides in a PowerPoint presentation using Aspose.Slides for .NET. 
+// The example loads an existing PPTX file, configures the PresentationAnimationsGenerator 
+// with a 2000 ms delay, applies it to the presentation, and saves the result. 
+// This pattern can be used to automate animation timing adjustments in .NET 
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Entrance, Animation, Delay, 
+// Seconds, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting a uniform entrance animation delay of two seconds.
+// - Build C# tools for adjusting animation timings in PowerPoint files.
+// - Generate or transform PPTX presentations with consistent animation behavior.
+// - Validate and preprocess presentation workflows before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

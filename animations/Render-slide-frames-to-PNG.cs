@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Render animated slide frames to PNG using C#
+//
+// Description:
+// Demonstrates how to extract each animation frame from a PowerPoint presentation
+// and save them as PNG images using Aspose.Slides for .NET. The example loads an
+// animated PPTX file, creates a PresentationAnimationsGenerator and a
+// PresentationPlayer to step through the animation at a defined frame rate, and
+// writes each generated frame to the "Frames" directory. The original presentation
+// is then saved unchanged. This pattern can be used to automate frame extraction,
+// create video sources, or perform visual validation of slide animations.
+//
+// Keywords:
+// C#, Aspose.Slides, PPTX, animation, frames, PNG, rendering, PresentationAnimationsGenerator, PresentationPlayer, slide processing
+//
+// Use Cases:
+// - Extract animation frames from PowerPoint slides for further processing.
+// - Generate image sequences for video creation or GIFs.
+// - Validate slide animations programmatically.
+// - Build tools that need per-frame visual output of presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

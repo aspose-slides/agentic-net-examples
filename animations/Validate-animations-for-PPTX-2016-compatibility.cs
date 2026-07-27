@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Validate animations for PPTX 2016 compatibility using C#
+//
+// Description:
+// Demonstrates how to validate animations for PPTX 2016 compatibility using C# 
+// and Aspose.Slides for .NET. The example iterates through each slide's 
+// animation timeline, enumerates the main sequence effects, and outputs their 
+// types, providing a basis for further compatibility checks.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Validate, Animations, Pptx, 
+// 2016, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate validation of slide animations for PPTX 2016 compatibility.
+// - Build C# tools for PowerPoint presentation analysis.
+// - Integrate animation checks into .NET applications or CI pipelines.
+// - Generate reports on animation types before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

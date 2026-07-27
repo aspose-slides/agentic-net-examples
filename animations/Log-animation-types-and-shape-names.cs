@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Log animation types and shape names using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, iterate through each slide,
+// enumerate the main animation sequence, and log each effect's type together with
+// the name of its target shape. The example also shows how to save the presentation
+// after processing using Aspose.Slides for .NET. This pattern can be used to audit
+// or analyze animations in PPTX files.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Animation, EffectType, Shape, Logging,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Audit animation effects and associated shapes in existing presentations.
+// - Build tools that generate reports on slide animations.
+// - Validate animation sequences before publishing.
+// - Integrate animation analysis into .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

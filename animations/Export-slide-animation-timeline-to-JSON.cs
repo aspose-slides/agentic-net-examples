@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export slide animation timeline to JSON using C#
+//
+// Description:
+// Demonstrates how to read a PowerPoint presentation, extract basic
+// information about each slide's animation timeline (main sequence count,
+// interactive sequences count, and text animations count) and serialize this
+// data to a JSON file using Aspose.Slides for .NET. The example also shows
+// how to save the original presentation unchanged.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, JSON, Export, Slide, Animation,
+// Timeline, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Generate a JSON report of animation details for each slide.
+// - Integrate slide animation analysis into .NET automation tools.
+// - Validate or audit animation settings before publishing.
+// - Build utilities that process PPTX files and output structured data.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;

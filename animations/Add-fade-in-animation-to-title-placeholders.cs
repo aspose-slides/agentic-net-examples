@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add fade in animation to title placeholders using C#
+//
+// Description:
+// Demonstrates how to add a fade‑in animation effect to title placeholders in a
+// PowerPoint presentation using C# and Aspose.Slides for .NET. The example
+// loads an existing PPTX file, iterates through its slides and shapes, identifies
+// title placeholders, applies a fade‑in animation, and saves the modified file.
+// This pattern can be used to automate animation enhancements in PPTX workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Fade, Animation, Title,
+// Placeholders, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automatically add fade‑in animations to title placeholders in batch PPTX files.
+// - Build .NET tools that enhance slide presentations with predefined animations.
+// - Integrate animation logic into PowerPoint generation or transformation pipelines.
+// - Validate and preview presentation animations before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

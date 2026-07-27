@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Load animation settings from XML and apply using C#
+//
+// Description:
+// Demonstrates loading animation definitions from an XML file and applying
+// them to a PowerPoint presentation using Aspose.Slides for .NET. The console
+// application reads a PPTX file, parses animation parameters (shape index,
+// effect type, subtype, trigger) from XML, adds the corresponding effects to
+// the first slide, and saves the modified presentation.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, XML, Animation, Effect, Timeline, 
+// Presentation Automation, Office Automation
+//
+// Use Cases:
+// - Apply batch animation settings defined in XML to existing PPTX files.
+// - Create command‑line tools for updating slide animations programmatically.
+// - Integrate XML‑driven animation configuration into .NET presentation workflows.
+// - Validate and test animation definitions before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Xml.Linq;
