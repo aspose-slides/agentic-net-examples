@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set click trigger for shape animation using C#
+//
+// Description:
+// Demonstrates how to add a rectangle shape to a slide and assign an
+// OnClick animation trigger using Aspose.Slides for .NET. The example creates
+// a new presentation, adds a shape, applies an Appear effect with a click
+// trigger, and saves the result as a PPTX file. This pattern can be used to
+// automate PowerPoint animation workflows in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Click Trigger, Shape Animation,
+// Timeline, Effect, Presentation Automation, Office Automation
+//
+// Use Cases:
+// - Programmatically set click-triggered animations for shapes.
+// - Build C# utilities for PowerPoint presentation creation or modification.
+// - Generate PPTX files with custom animation sequences.
+// - Validate animation settings before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Animation;
