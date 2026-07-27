@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set easing curve for animation acceleration using C#
+//
+// Description:
+// Demonstrates how to set easing curve for animation acceleration using C# and 
+// Aspose.Slides for .NET. The example creates a presentation, adds a rectangle 
+// shape with text, applies a FloatUp animation effect, and configures the 
+// acceleration and deceleration timing properties to achieve smooth easing. 
+// The resulting PPTX file is saved to the local file system.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Easing, Curve, Animation, 
+// Acceleration, Deceleration, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting easing curves for animation acceleration and deceleration.
+// - Build C# tools for PowerPoint presentation processing with custom animation timing.
+// - Generate or transform PPTX files in .NET applications with specific animation effects.
+// - Validate animation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
