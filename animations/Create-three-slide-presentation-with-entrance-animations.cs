@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Create three slide presentation with entrance animations using C#
+//
+// Description:
+// Demonstrates how to create a three‑slide PowerPoint presentation where each
+// slide contains a rectangle shape with a different entrance animation (Appear,
+// Fly, Zoom) using Aspose.Slides for .NET. The example shows creating a blank
+// layout, adding shapes, applying animation effects, and saving the file as a
+// PPTX document in a console application.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Three Slides, Entrance Animation,
+// Appear, Fly, Zoom, Presentation Automation, Office Automation
+//
+// Use Cases:
+// - Generate a multi‑slide presentation with predefined entrance animations.
+// - Automate PowerPoint content creation for training, marketing, or reporting.
+// - Build .NET tools that programmatically add animation effects to slides.
+// - Validate animation workflows before manual editing or publishing.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides.Export;
 using Aspose.Slides.Animation;
