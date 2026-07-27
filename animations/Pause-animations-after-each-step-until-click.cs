@@ -1,3 +1,21 @@
+// -----------------------------------------------------------------------------
+// Example: Pause animations after each step until click using C#
+//
+// Description:
+// Demonstrates how to set each animation effect in a PowerPoint presentation
+// to pause until the next mouse click using Aspose.Slides for .NET. The program
+// loads an existing PPTX file, updates the AfterAnimationType of all effects
+// to HideOnNextMouseClick, and saves the modified presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Pause Animations, AfterAnimationType, HideOnNextMouseClick, Presentation Processing
+//
+// Use Cases:
+// - Modify existing presentations to require a click between animation steps.
+// - Automate preparation of slide decks for interactive delivery.
+// - Integrate animation pause settings into .NET based PowerPoint tooling.
+// - Ensure consistent click‑to‑advance behavior across all slides.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
