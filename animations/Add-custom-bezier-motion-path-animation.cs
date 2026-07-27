@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Add custom bezier motion path animation using C#
+//
+// Description:
+// Demonstrates how to add a custom Bezier motion path animation to a shape 
+// using Aspose.Slides for .NET. The example creates a presentation, adds a 
+// rectangle with text, defines a Bezier curve motion path, and saves the 
+// result as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Custom Bezier, Motion Path, 
+// Animation, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding custom Bezier motion path animations to PowerPoint slides.
+// - Build C# tools for advanced animation scripting in presentations.
+// - Generate or modify PPTX files with custom motion paths in .NET applications.
+// - Validate and test animation workflows before deployment.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
