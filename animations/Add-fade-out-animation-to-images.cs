@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add fade out animation to images using C#
+//
+// Description:
+// Demonstrates how to add a fade‑out exit animation to picture frames (images) 
+// in a PowerPoint presentation using C# and Aspose.Slides for .NET. The example 
+// loads an existing PPTX file, iterates through its slides and shapes, applies a 
+// fade‑out effect to each image, sets the animation duration, and saves the 
+// modified presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Fade, Animation, Images, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding fade‑out animations to images in PPTX files.
+// - Build .NET tools for PowerPoint presentation enhancement.
+// - Generate or transform PPTX files with custom animation effects.
+// - Validate and preview presentation workflows before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
