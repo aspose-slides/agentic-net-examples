@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Increase animation speed by fifty percent using C#
+//
+// Description:
+// Demonstrates how to increase the speed of all slide animations by fifty
+// percent using C# and Aspose.Slides for .NET. The example processes each
+// presentation file in an input folder, modifies the timing of both main
+// sequence and interactive sequence effects, and saves the updated files to an
+// output folder.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Increase, Animation, Speed,
+// Fifty Percent, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Batch accelerate animation playback in multiple PowerPoint files.
+// - Create tools that adjust animation timing for faster presentations.
+// - Integrate animation speed adjustments into .NET automation pipelines.
+// - Prepare PPTX files for time‑constrained presentations or demos.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
