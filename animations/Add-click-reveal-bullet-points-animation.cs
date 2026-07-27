@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Add click reveal bullet points animation using C#
+//
+// Description:
+// Demonstrates how to add click‑triggered fly‑in animations to individual bullet
+// points in a PowerPoint slide using Aspose.Slides for .NET. The example creates
+// a new presentation, inserts a rectangle shape with a text frame containing
+// three bullet paragraphs, and applies a left‑to‑right fly animation that
+// starts on mouse click for each bullet. The resulting PPTX file can be used
+// to automate presentation creation or to integrate animated content into
+// .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Click, Reveal, Bullet, Points,
+// Animation, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate the addition of click‑reveal bullet point animations.
+// - Build C# tools for generating animated PowerPoint presentations.
+// - Integrate slide animation logic into .NET applications.
+// - Create or modify PPTX files with custom animation sequences.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
