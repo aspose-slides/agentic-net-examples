@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Merge presentations preserve all animations using C#
+//
+// Description:
+// Demonstrates how to merge two PowerPoint presentations while preserving all
+// animations using C# and Aspose.Slides for .NET. The example loads two source
+// PPTX files, clones their slides (including animation timelines) into a new
+// presentation, and saves the merged result. This pattern can be used to
+// automate PPTX workflows, validate results, or integrate presentation logic
+// into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Merge, Presentations, Preserve,
+// Animations, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate merging of presentations while keeping existing animations.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
