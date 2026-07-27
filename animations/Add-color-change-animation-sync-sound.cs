@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add color change animation with synchronized sound using C#
+//
+// Description:
+// Demonstrates how to add a rectangle shape, apply a Change Fill Color animation,
+// and synchronize that animation with an audio clip using Aspose.Slides for .NET.
+// The example loads an existing PPTX, adds the shape and animation, links the
+// sound, and saves the result as a new presentation. It can be used as a
+// standalone console application for automating PowerPoint workflows.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Animation, ChangeFillColor, SyncSound,
+// Audio, RectangleShape, PresentationProcessing, OfficeAutomation
+//
+// Use Cases:
+// - Add color change animation to a shape and play a sound simultaneously.
+// - Build .NET utilities that enrich PPTX files with synchronized media.
+// - Automate generation of presentations with animated and audio effects.
+// - Test or validate animation‑sound synchronization in PowerPoint files.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;
