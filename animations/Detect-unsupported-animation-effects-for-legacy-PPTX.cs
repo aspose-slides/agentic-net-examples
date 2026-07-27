@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Detect unsupported animation effects for legacy PPTX using C#
+//
+// Description:
+// Demonstrates how to detect animation effects that are not supported in older
+// PowerPoint versions within a PPTX file using C# and Aspose.Slides for .NET.
+// The example loads a presentation, scans each slide's main animation sequence
+// for specific unsupported effects, reports their locations, and saves the
+// presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Detect, Unsupported, Animation,
+// Effects, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Identify legacy‑incompatible animation effects in PPTX files.
+// - Automate validation of presentations before distribution to older PowerPoint versions.
+// - Integrate animation compatibility checks into .NET build or CI pipelines.
+// - Generate reports of unsupported animations for content remediation.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;
