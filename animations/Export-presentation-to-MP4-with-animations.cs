@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Export presentation to MP4 with animations using C#
+//
+// Description:
+// Demonstrates how to export a PowerPoint presentation (PPTX) to an MP4 video
+// while preserving slide animations, using Aspose.Slides for .NET. The example
+// loads an input file, generates animation data, resolves the MP4 save format
+// at runtime, and saves the resulting video. It includes basic error handling
+// for missing files and unsupported formats.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, MP4, Video, Animations,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX presentations to MP4 videos with animations.
+// - Build .NET tools for generating video content from PowerPoint files.
+// - Integrate presentation-to-video functionality into larger applications.
+// - Validate that slide animations are correctly rendered in exported videos.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
