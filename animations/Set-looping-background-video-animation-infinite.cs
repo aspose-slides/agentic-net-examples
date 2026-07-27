@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Set looping background video animation infinite using C#
+//
+// Description:
+// Demonstrates how to set a looping background video animation to play infinitely 
+// using C# and Aspose.Slides for .NET. The example creates a new presentation, 
+// adds a video file as a background video frame, configures it to start 
+// automatically and loop forever, and saves the result as a PPTX file. This 
+// pattern is useful for automating PowerPoint workflows that require continuous 
+// background video playback.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Looping, Background, Video, 
+// Animation, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting a looping background video animation infinite.
+// - Build C# tools for PowerPoint presentation processing with continuous video.
+// - Generate or transform PPTX files that include background videos in .NET 
+//   applications.
+// - Validate presentation workflows involving video playback before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
