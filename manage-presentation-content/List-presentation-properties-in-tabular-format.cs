@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: List presentation properties in tabular format using C#
+//
+// Description:
+// Demonstrates how to list both built‑in and custom presentation properties in a
+// console application using Aspose.Slides for .NET. The example loads a PPTX file,
+// prints built‑in properties, formats custom properties into a table, and saves
+// the presentation back to disk. This pattern helps developers automate PPTX
+// metadata extraction, validation, and reporting tasks.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, List, Presentation, Properties,
+// Tabular, DocumentProperties, CustomProperties, Metadata, Office Automation
+//
+// Use Cases:
+// - Extract and display presentation metadata for reporting or auditing.
+// - Build tools that validate required document properties before publishing.
+// - Automate the collection of custom property values across multiple PPTX files.
+// - Integrate presentation property handling into .NET applications or CI pipelines.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
