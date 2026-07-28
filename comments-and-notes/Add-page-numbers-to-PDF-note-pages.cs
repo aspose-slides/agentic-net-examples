@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add page numbers to PDF note pages using C#
+//
+// Description:
+// Demonstrates how to add slide numbers to the notes pages of a PDF generated
+// from a PowerPoint presentation using C# and Aspose.Slides for .NET. The
+// example ensures each slide has a notes slide, enables slide number visibility
+// on those notes slides, and configures PDF export to include the notes pages
+// with the slide numbers displayed.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Page Numbers, Note Pages,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate the addition of slide numbers to PDF note pages.
+// - Build C# utilities for processing PowerPoint presentations and exporting
+//   them to PDF with annotated notes.
+// - Generate PDFs with detailed slide information for documentation or review.
+// - Validate and enhance presentation workflows before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
