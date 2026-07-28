@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set Greek Hebrew fallback and export SVG using C#
+//
+// Description:
+// Demonstrates how to configure Greek and Hebrew font fallback rules and export
+// each slide of a PowerPoint presentation to SVG using Aspose.Slides for .NET.
+// The example also saves the modified presentation. This pattern can be used
+// to ensure proper rendering of multilingual content and to generate SVG assets
+// from PPTX files in a console application.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SVG, Greek, Hebrew, FontFallback,
+// Export, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Apply Greek and Hebrew font fallback to a presentation.
+// - Export slides as SVG files for web or documentation purposes.
+// - Automate PPTX processing and SVG generation in .NET tools.
+// - Validate multilingual presentation rendering before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
