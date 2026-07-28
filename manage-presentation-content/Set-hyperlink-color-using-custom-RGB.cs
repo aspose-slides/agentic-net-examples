@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set hyperlink color using custom RGB using C#
+//
+// Description:
+// Demonstrates how to create a new presentation, add a rectangle shape with a
+// text frame, assign an external hyperlink to the text, and set a custom
+// hyperlink color using an RGB solid fill (red) via Aspose.Slides for .NET.
+// The example includes saving the presentation to a PPTX file and proper
+// resource cleanup.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, Hyperlink, RGB, Custom Color,
+// FillType.Solid, Presentation Automation, Office Automation
+//
+// Use Cases:
+// - Apply custom RGB colors to hyperlinks in generated PowerPoint slides.
+// - Build .NET utilities that programmatically style hyperlink text.
+// - Automate creation of PPTX files with branded hyperlink colors.
+// - Validate hyperlink formatting in presentation processing pipelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.Drawing;
 using Aspose.Slides;
