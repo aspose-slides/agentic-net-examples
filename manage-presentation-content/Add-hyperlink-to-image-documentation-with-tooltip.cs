@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add hyperlink to image documentation with tooltip using C#
+//
+// Description:
+// Demonstrates how to add a hyperlink with a tooltip to an image in a PowerPoint
+// presentation using C# and Aspose.Slides for .NET. The example creates a new
+// presentation, inserts an image, assigns an external URL hyperlink and a tooltip
+// to the image, and saves the result as a PPTX file. This pattern can be used to
+// automate documentation linking within slides.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Hyperlink, Image, Tooltip,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding hyperlinks with tooltips to images in PowerPoint slides.
+// - Build C# utilities for enhancing presentation interactivity.
+// - Generate or modify PPTX files programmatically in .NET applications.
+// - Validate and test presentation content before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
