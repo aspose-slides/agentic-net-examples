@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set connector line style thickness dash color using C#
+//
+// Description:
+// Demonstrates how to set a connector's line style—including thickness, dash
+// pattern, and color—using C# and Aspose.Slides for .NET. The example creates a
+// new presentation, adds a bent connector, configures its line format, and
+// saves the result as a PPTX file. This pattern can be used to automate
+// PowerPoint presentation styling in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Connector, Line, Style,
+// Thickness, Dash, Color, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting connector line thickness, dash style, and color.
+// - Build C# utilities for PowerPoint presentation styling.
+// - Generate or modify PPTX files programmatically in .NET.
+// - Validate visual consistency of connectors before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.Drawing;
 using Aspose.Slides;
