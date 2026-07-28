@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Remove PPTX slide comments by a specific author using C#
+//
+// Description:
+// Demonstrates how to delete all slide comments authored by a given user from a
+// PowerPoint presentation using Aspose.Slides for .NET. The example loads a PPTX
+// file, locates the comment author by name, removes each of their comments from
+// every slide, optionally removes the author from the presentation, and saves the
+// modified file. This pattern can be used in console utilities or integrated into
+// larger .NET applications for automated presentation cleanup.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove, Slide, Comments, Author, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Clean up or redact comments from a specific user in PPTX files.
+// - Build C# tools for managing PowerPoint comment metadata.
+// - Automate preparation of presentations before distribution.
+// - Integrate comment removal into document workflow pipelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
