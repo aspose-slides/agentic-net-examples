@@ -1,3 +1,28 @@
+// -----------------------------------------------------------------------------
+// Example: Set Korean fallback font for PDF using C#
+//
+// Description:
+// Demonstrates how to configure a Korean (Hangul) fallback font for PDF
+// export using Aspose.Slides for .NET. The example loads a PPTX file, adds a
+// font fallback rule that maps the Hangul Unicode range to "Malgun Gothic",
+// saves an intermediate PPTX (required by the fallback rule lifecycle), and
+// then exports the presentation to PDF with the specified fallback font.
+// This pattern can be used in console utilities or automated workflows that
+// need proper Korean text rendering in PDF output.
+//
+// Keywords:
+// C#, Aspose.Slides, PDF, Korean, Hangul, Fallback Font, FontFallBackRule,
+// Presentation Processing, PowerPoint, .NET
+//
+// Use Cases:
+// - Ensure Korean characters render correctly when converting PPTX to PDF.
+// - Build command‑line tools for batch processing of presentations with
+//   language‑specific fallback fonts.
+// - Integrate Korean font fallback handling into .NET applications that
+//   generate PDFs from PowerPoint files.
+// - Automate validation of PDF output for multilingual presentations.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
