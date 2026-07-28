@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Detect and remove consecutive duplicate PPTX notes using C#
+//
+// Description:
+// Demonstrates how to detect and remove consecutive duplicate PPTX notes using 
+// C# and Aspose.Slides for .NET. The example loads a presentation, iterates 
+// through its slides, compares each slide's notes with the previous slide's 
+// notes, removes the notes from any slide that has identical consecutive notes, 
+// and saves the modified presentation. This pattern can be used to automate 
+// PPTX note cleanup in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Detect, Remove, Consecutive, 
+// Duplicate, Notes, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate detection and removal of consecutive duplicate notes in PPTX files.
+// - Build C# utilities for cleaning up PowerPoint presentations.
+// - Integrate note deduplication into larger .NET document processing workflows.
+// - Ensure presentation consistency before publishing or distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
