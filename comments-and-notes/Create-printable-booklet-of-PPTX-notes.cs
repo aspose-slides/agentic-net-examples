@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Create printable PDF handout booklet from PPTX using C#
+//
+// Description:
+// Demonstrates how to generate a printable PDF booklet from a PPTX file using
+// C# and Aspose.Slides for .NET. The example loads a presentation, configures
+// PDF export options for a handout layout with two slides per page, and saves
+// the result as a PDF file. This pattern can be used to automate the creation
+// of printable handouts or booklets from PowerPoint presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Handout, Booklet, Export,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of printable PDF handouts from PPTX files.
+// - Build C# tools for PowerPoint presentation export.
+// - Generate PDF booklets with specific slide layouts in .NET applications.
+// - Integrate presentation conversion into automated workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
