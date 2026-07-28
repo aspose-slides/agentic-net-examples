@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set presentation view mode to read only using C#
+//
+// Description:
+// Demonstrates how to set a PowerPoint presentation's view mode to read‑only
+// by enabling the ReadOnlyRecommended flag using Aspose.Slides for .NET. The
+// example creates a new presentation, configures it for read‑only recommendation,
+// and saves the file as a PPTX. This pattern can be used in console utilities
+// or automated workflows that need to protect presentations from editing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Presentation, View Mode, Read‑Only,
+// ReadOnlyRecommended, Presentation Protection, Office Automation
+//
+// Use Cases:
+// - Generate read‑only PowerPoint files programmatically.
+// - Protect presentations from accidental edits in automated pipelines.
+// - Build .NET tools that enforce read‑only settings before distribution.
+// - Integrate presentation protection into larger document processing systems.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
