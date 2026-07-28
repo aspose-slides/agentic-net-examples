@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Apply custom font family to PPTX notes using C#
+//
+// Description:
+// Demonstrates how to replace an existing font family with a custom font family
+// throughout a PowerPoint presentation, including slide notes, using Aspose.Slides
+// for .NET. The example handles both missing source files (by creating a new
+// presentation) and existing presentations, then saves the result.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Font Replacement, Custom Font,
+// Notes, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Ensure consistent font usage across slides and notes in a PPTX file.
+// - Automate font family updates for corporate branding in PowerPoint decks.
+// - Build .NET tools that modify or standardize fonts in existing presentations.
+// - Generate new presentations with a predefined font when source files are absent.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
