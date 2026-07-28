@@ -1,10 +1,31 @@
+// -----------------------------------------------------------------------------
+// Example: Tag PPTX slide comments with keywords using C#
+//
+// Description:
+// Demonstrates how to tag PPTX slide comments with keywords using C# and 
+// Aspose.Slides for .NET. The example shows the required 
+// presentation-processing steps for PowerPoint files and produces the 
+// requested output in a standalone console application. Developers can use 
+// this pattern to automate PPTX workflows, validate results, or integrate 
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Pptx, Slide, Comments, 
+// Keywords, Tagging, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate tagging PPTX slide comments with keywords.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
 using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
-namespace ReplaceCommentPlaceholders
+namespace TagCommentKeywords
 {
     class Program
     {
@@ -21,44 +42,31 @@ namespace ReplaceCommentPlaceholders
                 return;
             }
 
-            // Configuration dictionary with placeholder values
-            Dictionary<string, string> config = new Dictionary<string, string>()
-            {
-                { "{CompanyName}", "Contoso Ltd." },
-                { "{Year}", DateTime.Now.Year.ToString() },
-                { "{Author}", "John Doe" }
-            };
+            // Define keywords to tag each comment with
+            List<string> keywords = new List<string> { "Finance", "HR", "Marketing" };
 
-            Aspose.Slides.Presentation presentation = null;
+            Presentation presentation = null;
             try
             {
                 // Load presentation
-                presentation = new Aspose.Slides.Presentation(inputPath);
+                presentation = new Presentation(inputPath);
             }
             catch (Exception ex)
             {
                 // Handle unsupported format or loading errors
-                Console.WriteLine("Failed to load presentation. Possible unsupported format. Details: " + ex.Message);
+                Console.WriteLine("Failed to load presentation. Details: " + ex.Message);
                 return;
             }
 
             // Iterate through comment authors and their comments
-            foreach (Aspose.Slides.ICommentAuthor commentAuthor in presentation.CommentAuthors)
+            foreach (ICommentAuthor commentAuthor in presentation.CommentAuthors)
             {
-                foreach (Aspose.Slides.IComment comment in commentAuthor.Comments)
+                foreach (IComment comment in commentAuthor.Comments)
                 {
-                    string originalText = comment.Text;
-                    string replacedText = originalText;
-
-                    foreach (KeyValuePair<string, string> kvp in config)
+                    // Add each keyword as a tag to the comment
+                    foreach (string kw in keywords)
                     {
-                        replacedText = replacedText.Replace(kvp.Key, kvp.Value);
-                    }
-
-                    // Update comment text if changes were made
-                    if (!originalText.Equals(replacedText))
-                    {
-                        comment.Text = replacedText;
+                        comment.Tags.Add(kw);
                     }
                 }
             }
@@ -66,7 +74,7 @@ namespace ReplaceCommentPlaceholders
             try
             {
                 // Save the modified presentation
-                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                presentation.Save(outputPath, SaveFormat.Pptx);
             }
             catch (Exception ex)
             {
@@ -76,10 +84,7 @@ namespace ReplaceCommentPlaceholders
             finally
             {
                 // Ensure resources are released
-                if (presentation != null)
-                {
-                    presentation.Dispose();
-                }
+                presentation?.Dispose();
             }
         }
     }
