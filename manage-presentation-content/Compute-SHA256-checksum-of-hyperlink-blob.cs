@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Compute SHA256 checksum of hyperlink sound blob using C#
+//
+// Description:
+// Demonstrates how to compute the SHA‑256 checksum of a hyperlink's embedded
+// sound (binary BLOB) in a PowerPoint presentation using Aspose.Slides for .NET.
+// The example loads a PPTX file, accesses the first shape's hyperlink, extracts
+// the sound data, calculates its SHA‑256 hash, and outputs the checksum. It also
+// saves the presentation after processing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Compute, SHA256, Checksum,
+// Hyperlink, Sound, Blob, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Verify integrity of embedded audio linked to a hyperlink.
+// - Automate validation of hyperlink sound resources in PPTX files.
+// - Build .NET tools for auditing or processing PowerPoint presentations.
+// - Integrate checksum calculation into PowerPoint workflow automation.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Security.Cryptography;
