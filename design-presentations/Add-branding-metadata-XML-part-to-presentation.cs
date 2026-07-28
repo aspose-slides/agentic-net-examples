@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add branding metadata XML part to presentation using C#
+//
+// Description:
+// Demonstrates how to add branding metadata XML part to a PowerPoint presentation 
+// using C# and Aspose.Slides for .NET. The example loads an existing PPTX file 
+// (or creates a new one if it does not exist), inserts a custom XML part that 
+// contains branding information, and saves the modified presentation.
+// This pattern can be used to embed custom metadata into PPTX files for 
+// downstream processing, compliance, or branding purposes.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Branding, Metadata, Part, 
+// Presentation, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding branding metadata XML part to presentations.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;
