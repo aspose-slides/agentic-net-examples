@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set picture fill from stream with transparency using C#
+//
+// Description:
+// Demonstrates how to set a picture fill for a slide background from a file
+// stream and apply transparency using Aspose.Slides for .NET. The example
+// loads an image, assigns it as the background fill of the first slide, and
+// modifies its opacity via an image transform operation. The resulting
+// presentation is saved as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Picture Fill, Stream, 
+// Transparency, Image Transform, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting slide background images from streams with custom transparency.
+// - Build .NET tools for PowerPoint presentation processing that require dynamic image fills.
+// - Generate or transform PPTX files with picture backgrounds in server-side applications.
+// - Validate presentation workflows involving image streams and visual effects.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -40,9 +61,9 @@ namespace SetPictureFillBackground
                         // Assign the loaded image to the picture fill
                         slide.Background.FillFormat.PictureFillFormat.Picture.Image = pictureImage;
 
-                        // Apply 30% transparency using AlphaModulateFixed effect
+                        // Apply 30% opacity (70% transparency) using AlphaModulateFixed effect
                         IImageTransformOperationCollection transformOps = slide.Background.FillFormat.PictureFillFormat.Picture.ImageTransform;
-                        // Amount is a percentage (0.0f – 1.0f). 0.3f corresponds to 30% opacity (70% transparent)
+                        // Amount is a percentage (0.0f – 1.0f). 0.3f corresponds to 30% opacity.
                         transformOps.AddAlphaModulateFixedEffect(0.3f);
                     }
 
