@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Load CSV notes into PPTX slides using C#
+//
+// Description:
+// Demonstrates how to read a CSV file containing slide numbers and note
+// texts, and add those notes to the corresponding slides of an existing PPTX
+// presentation using Aspose.Slides for .NET. The example validates input files,
+// iterates through the CSV entries, creates or updates notes slides, and
+// saves the result as a new PPTX file. This pattern can be used to automate
+// bulk note insertion or migration from external data sources.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load CSV, Notes, Slides,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Bulk import of speaker notes from CSV into PowerPoint presentations.
+// - Build .NET tools for automating note management in PPTX files.
+// - Integrate external note data sources into existing slide decks.
+// - Validate and transform presentation content programmatically.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;
