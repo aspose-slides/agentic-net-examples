@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Batch convert presentation to PNG with fallback using C#
+//
+// Description:
+// Demonstrates how to batch convert PowerPoint presentations to PNG images
+// using Aspose.Slides for .NET with a fallback font. The example processes
+// all supported presentation files in an input directory, generates a PNG
+// image for each slide, and saves the images to an output directory. It also
+// saves a copy of the original presentation to the output folder, illustrating
+// how to work with presentations in a console application.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Batch, Convert, 
+// Presentation, Fallback Font, Image Export, Office Automation
+//
+// Use Cases:
+// - Automate batch conversion of presentations to PNG images with font fallback.
+// - Build .NET tools for processing PowerPoint files in bulk.
+// - Generate slide images for web previews or documentation.
+// - Ensure consistent rendering when original fonts are unavailable.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
