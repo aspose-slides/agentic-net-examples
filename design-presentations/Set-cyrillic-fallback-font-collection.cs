@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set Cyrillic fallback font collection using C#
+//
+// Description:
+// Demonstrates how to configure a Cyrillic fallback font collection for a
+// presentation using Aspose.Slides for .NET. The example creates a new
+// presentation, defines fallback rules for the Cyrillic Unicode block, assigns
+// them to the FontsManager, and saves the result as a PPTX file. This pattern
+// can be used to ensure proper font rendering for Cyrillic text in automated
+// PowerPoint workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Cyrillic, Fallback, Font,
+// Collection, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Configure Cyrillic fallback fonts for generated presentations.
+// - Build .NET tools that guarantee correct Cyrillic text rendering.
+// - Automate PPTX creation or modification with custom font fallback rules.
+// - Validate font fallback configurations before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
