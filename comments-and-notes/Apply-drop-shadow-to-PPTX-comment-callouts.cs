@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Apply drop shadow to PPTX comment callouts using C#
+//
+// Description:
+// Demonstrates how to apply a drop shadow effect to modern comment callouts
+// in a PowerPoint presentation using Aspose.Slides for .NET. The example
+// creates a presentation, adds a comment with a callout shape, configures
+// an outer shadow effect, and saves the result as a PPTX file. This pattern
+// can be used to automate visual enhancements of comments in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, Drop, Shadow, Comment,
+// Callout, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate applying drop shadow to PPTX comment callouts.
+// - Build C# utilities for enhancing PowerPoint comment visuals.
+// - Generate or transform PPTX files with styled comment callouts in .NET applications.
+// - Validate and preview presentation comment formatting before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.Drawing;
 using Aspose.Slides.Export;
