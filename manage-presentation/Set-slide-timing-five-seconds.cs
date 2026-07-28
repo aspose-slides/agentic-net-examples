@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set slide timing five seconds using C#
+//
+// Description:
+// Demonstrates how to create a presentation, add empty slides based on layout
+// slides, configure each slide to advance automatically after five seconds with
+// a Fade transition, enable slide show timings, and save the result as a PPTX
+// file using Aspose.Slides for .NET. This pattern can be used to automate slide
+// timing configuration in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Slide, Timing, Five, Seconds,
+// Presentation, Transition, Fade, Automation
+//
+// Use Cases:
+// - Programmatically set a uniform slide advance interval of five seconds.
+// - Add slides dynamically based on existing layouts.
+// - Apply consistent transition effects across all slides.
+// - Generate or modify PPTX files in .NET applications with automated timings.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
