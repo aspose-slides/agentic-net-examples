@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Compare line breaking serif vs sans using C#
+//
+// Description:
+// Demonstrates how to compare line breaking behavior of serif and sans‑serif
+// fonts in a PowerPoint presentation using C# and Aspose.Slides for .NET.
+// The example adds a rectangle with long text, saves the presentation twice
+// with different default regular fonts (Times New Roman and Arial) and
+// produces two output files for visual comparison.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Compare, Line Breaking, Serif,
+// Sans‑Serif, Font Impact, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Visual comparison of line breaking between serif and sans‑serif fonts.
+// - Automated generation of test presentations to evaluate typography.
+// - Integration of font‑impact analysis into .NET PowerPoint workflows.
+// - Validation of default font settings in presentation automation.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
