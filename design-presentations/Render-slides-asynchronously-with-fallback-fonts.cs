@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Render slides asynchronously with fallback fonts using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, configure font fallback
+// rules, render each slide to a PNG image asynchronously, and save the
+// processed presentation using Aspose.Slides for .NET. The example is a
+// self‑contained console application suitable for automating slide rendering
+// workflows where specific fonts may be missing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Render, Slides, Asynchronously,
+// Fallback, FontFallback, Presentation Processing, Office Automation, Image,
+// PNG, Console Application
+//
+// Use Cases:
+// - Automate rendering of presentation slides to images with font fallback support.
+// - Build .NET tools that generate slide thumbnails or previews.
+// - Integrate slide rendering into CI pipelines for documentation validation.
+// - Create utilities that ensure consistent visual output despite missing fonts.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Threading.Tasks;
