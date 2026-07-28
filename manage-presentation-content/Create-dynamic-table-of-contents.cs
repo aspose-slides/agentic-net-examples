@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Create dynamic table of contents using C#
+//
+// Description:
+// Demonstrates how to generate a PowerPoint presentation with a dynamic
+// Table of Contents (TOC) slide using Aspose.Slides for .NET. The example
+// creates sample slides, inserts a TOC slide, populates it with slide titles,
+// reorders slides, and updates the TOC to reflect the new order. It can be
+// used as a standalone console application for automating PPTX workflows.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Table of Contents, Dynamic TOC,
+// Slide Reordering, Presentation Automation, Office Automation
+//
+// Use Cases:
+// - Automatically generate a TOC for newly created presentations.
+// - Update TOC after slide reordering or content changes.
+// - Build .NET tools that manipulate PowerPoint files programmatically.
+// - Validate presentation structure before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -38,8 +58,9 @@ namespace DynamicTocExample
                     UpdateTableOfContents(pres, tocSlide);
 
                     // Reorder some slides (move slide 5 to position 2)
-                    ISlide slideToMove = pres.Slides[5]; // original index after adding TOC (0 TOC, 1-5 content)
-                    pres.Slides.Reorder(2, slideToMove);
+                    // After inserting the TOC, slide indices are: 0=TOC, 1-5=content slides
+                    // Move slide at index 5 (original slide 5) to index 2
+                    pres.Slides.Reorder(5, 2);
 
                     // Update TOC after reordering
                     UpdateTableOfContents(pres, tocSlide);
