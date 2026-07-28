@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Modify master theme accent colors and save presentation using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, modify the master theme's
+// accent colors, and save the updated file using Aspose.Slides for .NET. The
+// example illustrates the essential steps for presentation processing in a
+// console application, enabling developers to programmatically adjust theme
+// colors in PPTX files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Theme, Accent Colors, Presentation
+// Processing, Office Automation
+//
+// Use Cases:
+// - Programmatically change accent colors of a presentation's master theme.
+// - Build C# utilities for customizing PowerPoint theme colors.
+// - Automate batch processing of PPTX files to apply corporate color schemes.
+// - Validate and test theme modifications before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
