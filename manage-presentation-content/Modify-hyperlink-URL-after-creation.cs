@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Modify hyperlink URL after creation using C#
+//
+// Description:
+// Demonstrates how to modify a hyperlink URL after it has been created on a
+// text portion within a shape using C# and Aspose.Slides for .NET. The example
+// creates a new presentation, adds a rectangle with a text frame, assigns an
+// initial hyperlink, then replaces it with a new hyperlink and updates the
+// tooltip. The presentation is saved as a PPTX file, illustrating a typical
+// workflow for mutable hyperlink handling in automated PowerPoint processing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Modify, Hyperlink, After,
+// Creation, Presentation Processing, Office Automation, HyperlinkClick
+//
+// Use Cases:
+// - Programmatically update hyperlink URLs in existing PowerPoint content.
+// - Build C# utilities that need to adjust links after initial creation.
+// - Automate PPTX generation where link destinations may change during runtime.
+// - Validate and test hyperlink behavior in presentation workflows.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides.Export;
 
