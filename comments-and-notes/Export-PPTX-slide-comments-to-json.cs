@@ -1,9 +1,30 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX slide comments to JSON using C#
+//
+// Description:
+// Demonstrates how to export all slide comments from a PPTX file to a JSON
+// document using C# and Aspose.Slides for .NET. The example loads a presentation,
+// iterates through each comment author and their comments, collects relevant
+// information, and serializes the data to a formatted JSON file. This pattern
+// can be used to automate comment extraction, integrate with reporting tools,
+// or perform presentation analysis in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, JSON, Slide, Comments,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of PPTX slide comments to JSON for reporting.
+// - Build C# utilities for PowerPoint presentation analysis.
+// - Integrate comment data into .NET applications or services.
+// - Validate and audit presentation content before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Text.Json;
 using Aspose.Slides;
-using Aspose.Slides.Export;
 
 class CommentInfo
 {
@@ -28,22 +49,22 @@ class Program
 
         try
         {
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
-            List<CommentInfo> commentList = new List<CommentInfo>();
+            using var presentation = new Presentation(inputPath);
+            var commentList = new List<CommentInfo>();
 
-            foreach (object authorObj in presentation.CommentAuthors)
+            foreach (CommentAuthor author in presentation.CommentAuthors)
             {
-                Aspose.Slides.CommentAuthor author = (Aspose.Slides.CommentAuthor)authorObj;
-                foreach (object commentObj in author.Comments)
+                foreach (Comment comment in author.Comments)
                 {
-                    Aspose.Slides.Comment comment = (Aspose.Slides.Comment)commentObj;
-                    if (comment.Slide != null && comment.Slide.Hidden)
+                    if (comment.Slide != null)
                     {
-                        CommentInfo info = new CommentInfo();
-                        info.SlideNumber = comment.Slide.SlideNumber;
-                        info.AuthorName = author.Name;
-                        info.Text = comment.Text;
-                        info.CreatedTime = comment.CreatedTime;
+                        var info = new CommentInfo
+                        {
+                            SlideNumber = comment.Slide.SlideNumber,
+                            AuthorName = author.Name,
+                            Text = comment.Text,
+                            CreatedTime = comment.CreatedTime
+                        };
                         commentList.Add(info);
                     }
                 }
@@ -51,10 +72,6 @@ class Program
 
             string json = JsonSerializer.Serialize(commentList, new JsonSerializerOptions { WriteIndented = true });
             File.WriteAllText(outputPath, json);
-
-            // Save presentation before exit as required
-            presentation.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
-            presentation.Dispose();
         }
         catch (Exception ex)
         {
