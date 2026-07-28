@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Merge PPTX presentations resolve duplicate comments using C#
+//
+// Description:
+// Demonstrates how to merge two PPTX presentations while preserving and
+// resolving duplicate comment authors using C# and Aspose.Slides for .NET.
+// The example loads two source presentations, creates unique author names,
+// maps comments to the new authors, clones slides, transfers comments, and
+// saves the merged presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Merge, Comments, Duplicate Authors,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Merge multiple PowerPoint files into a single presentation.
+// - Preserve and correctly reassign comments when author names collide.
+// - Automate comment handling during presentation consolidation.
+// - Build .NET tools for PowerPoint comment management and workflow automation.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;
