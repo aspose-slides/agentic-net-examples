@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Apply motion path slide transition using C#
+//
+// Description:
+// Demonstrates how to add a shape with a Fly entrance effect and a custom
+// motion path, then apply a slide transition using Aspose.Slides for .NET.
+// The example loads an existing PPTX, modifies the first slide, and saves the
+// result as a new file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Motion Path, Slide Transition,
+// Animation, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Add custom motion path animations to shapes programmatically.
+// - Apply slide transitions while building or modifying presentations.
+// - Automate PPTX enhancements in .NET applications.
+// - Validate and test animation workflows before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
