@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Remove temp custom properties from PPTX batch using C#
+//
+// Description:
+// Demonstrates how to remove temporary custom properties (those prefixed with
+// "Temp_") from a batch of PowerPoint presentations using C# and Aspose.Slides
+// for .NET. The example loads each supported presentation from an input folder,
+// deletes matching custom properties, and saves the cleaned files to an output
+// folder.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove, Temp, Custom, 
+// Properties, Batch Processing, Presentation Automation
+//
+// Use Cases:
+// - Clean up temporary custom properties from multiple PowerPoint files.
+// - Prepare presentations for publishing or distribution.
+// - Integrate property cleanup into automated .NET build or CI pipelines.
+// - Ensure compliance with corporate naming conventions for custom properties.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
