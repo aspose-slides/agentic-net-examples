@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Apply predefined theme to all slides using C#
+//
+// Description:
+// Demonstrates how to apply an external .thmx theme file to the first master
+// slide of a presentation, which propagates the theme to all dependent slides
+// using Aspose.Slides for .NET. The example loads an existing PPTX, checks for
+// the presence of the theme file, applies the theme, and saves the updated
+// presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, External Theme, .thmx,
+// Slides, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Programmatically apply a corporate .thmx theme to existing presentations.
+// - Automate batch theming of PPTX files in .NET applications.
+// - Ensure consistent slide appearance across a deck after theme changes.
+// - Integrate theme application into PowerPoint processing pipelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
