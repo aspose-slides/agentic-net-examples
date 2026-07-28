@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Assign font fallback rules and render presentation using C#
+//
+// Description:
+// Demonstrates how to assign a font fallback rule for a specific Unicode range
+// (Cyrillic) to a presentation and then save the modified file using Aspose.Slides
+// for .NET. The example loads an existing PPTX, configures the FontsManager with
+// fallback rules, and writes the result to a new file.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, FontFallback, FontFallBackRule, 
+// FontFallBackRulesCollection, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Ensure proper font rendering for characters not available in the original font.
+// - Automate font fallback configuration in batch PowerPoint processing.
+// - Build .NET tools that modify and re‑save presentations with custom font handling.
+// - Validate and render presentations with multilingual content.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
