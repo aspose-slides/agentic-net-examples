@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Check custom font embeddings and report missing using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, enumerate all fonts used,
+// identify which custom fonts are not embedded, and report the missing fonts.
+// The example uses Aspose.Slides for .NET and runs as a standalone console
+// application, suitable for automating PPTX validation workflows.
+//
+// Keywords:
+// C#, .NET, PowerPoint, PPTX, Aspose.Slides, Font Embedding, Missing Fonts,
+// Presentation Validation, Office Automation
+//
+// Use Cases:
+// - Detect and list custom fonts that are used but not embedded in a PPTX.
+// - Build validation tools for PowerPoint files in .NET environments.
+// - Ensure presentations meet embedding requirements before distribution.
+// - Integrate font‑embedding checks into automated CI/CD pipelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Linq;
