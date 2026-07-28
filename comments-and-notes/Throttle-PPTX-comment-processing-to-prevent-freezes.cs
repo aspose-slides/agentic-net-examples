@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Throttle PPTX comment processing to prevent freezes using C#
+//
+// Description:
+// Demonstrates how to throttle PPTX comment processing to prevent freezes 
+// using C# and Aspose.Slides for .NET. The example adds comment authors, 
+// comments, and replies to a presentation, processes them with a delay to 
+// avoid UI freezes, and saves the resulting file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Throttle, Pptx, Comment, 
+// Processing, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate throttle PPTX comment processing to prevent freezes.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Threading;
