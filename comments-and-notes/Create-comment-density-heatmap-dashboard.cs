@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Create comment density heatmap dashboard using C#
+//
+// Description:
+// Demonstrates how to generate a comment density heatmap dashboard for a PowerPoint
+// presentation using C# and Aspose.Slides for .NET. The example loads a PPTX file,
+// calculates the number of comments on each slide, maps comment density to a red‑tone
+// heat‑map background, and saves the resulting presentation. This pattern can be used
+// to visualize comment distribution across slides in automated workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Comment, Density, Heatmap,
+// Dashboard, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Visualize comment density across slides as a heat‑map.
+// - Automate creation of presentation dashboards highlighting review activity.
+// - Integrate comment analysis into .NET PowerPoint processing tools.
+// - Generate reports for stakeholders to identify heavily commented slides.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Drawing;
