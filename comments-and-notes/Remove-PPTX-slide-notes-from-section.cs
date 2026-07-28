@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Remove PPTX slide notes from a specific section using C#
+//
+// Description:
+// Demonstrates how to remove slide notes from all slides within a specified
+// section of a PPTX presentation using C# and Aspose.Slides for .NET. The
+// example loads a presentation, locates the target section by name, iterates
+// through its slides, deletes any associated notes, and saves the result as a
+// new file. This pattern can be used to automate note cleanup in PowerPoint
+// files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove, Slide, Notes, Section,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Remove slide notes from a particular section of a presentation.
+// - Build C# utilities for cleaning up PPTX files before distribution.
+// - Integrate note removal into larger PowerPoint automation workflows.
+// - Prepare presentations for publishing where notes should be omitted.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
