@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add network share fallback fonts and render using C#
+//
+// Description:
+// Demonstrates how to load fallback fonts from a network share, configure
+// font fallback rules for Unicode ranges (e.g., emojis), render the first slide
+// of a PowerPoint presentation to a PNG image, and save the modified presentation
+// using Aspose.Slides for .NET. The example includes handling of missing input files,
+// error handling for font loading, and cleanup of the font cache.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Network Share, Fallback Fonts,
+// FontFallBackRules, Rendering, Slide to Image, Presentation Processing
+//
+// Use Cases:
+// - Load custom fonts from a network location for presentation rendering.
+// - Define font fallback rules for specific Unicode ranges.
+// - Convert a slide to an image file.
+// - Save a presentation after applying font settings.
+// - Automate PowerPoint processing in .NET applications.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
