@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Backup document properties to CSV using C#
+//
+// Description:
+// Demonstrates how to backup document properties to a CSV file using C# and 
+// Aspose.Slides for .NET. The example loads a PowerPoint presentation, writes 
+// built‑in and custom document properties to a CSV file, optionally updates 
+// selected properties, and saves the modified presentation. This pattern can be 
+// used to archive presentation metadata, automate property management, or 
+// integrate PowerPoint metadata handling into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Backup, Document, Properties, 
+// CSV, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Export presentation metadata to CSV for reporting or archival.
+// - Automate backup and restoration of PowerPoint document properties.
+// - Build .NET tools that modify or validate PPTX metadata.
+// - Integrate document property handling into larger Office automation workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Text;
