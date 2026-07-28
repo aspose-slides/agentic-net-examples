@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Validate embedded fonts after PDF conversion using C#
+//
+// Description:
+// Demonstrates how to embed missing fonts in a PowerPoint presentation,
+// convert the presentation to PDF with full font embedding, and then
+// validate that the fonts remain embedded after the conversion using
+// Aspose.Slides for .NET. The example includes file existence checks,
+// font embedding logic, PDF export settings, and simple console output.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Validate, Embedded, Fonts,
+// After, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate validation of embedded fonts after PDF conversion.
+// - Build C# tools for PowerPoint presentation processing and PDF export.
+// - Ensure font compliance before publishing or distribution of PDFs.
+// - Integrate font embedding checks into .NET applications handling PPTX files.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -18,15 +39,15 @@ class Program
 
         try
         {
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+            Presentation presentation = new Presentation(inputPath);
 
             // Embed all fonts that are not already embedded
-            Aspose.Slides.IFontData[] allFonts = presentation.FontsManager.GetFonts();
-            Aspose.Slides.IFontData[] embeddedFonts = presentation.FontsManager.GetEmbeddedFonts();
-            foreach (Aspose.Slides.IFontData font in allFonts)
+            IFontData[] allFonts = presentation.FontsManager.GetFonts();
+            IFontData[] embeddedFonts = presentation.FontsManager.GetEmbeddedFonts();
+            foreach (IFontData font in allFonts)
             {
                 bool isEmbedded = false;
-                foreach (Aspose.Slides.IFontData ef in embeddedFonts)
+                foreach (IFontData ef in embeddedFonts)
                 {
                     if (ef.Equals(font))
                     {
@@ -36,18 +57,20 @@ class Program
                 }
                 if (!isEmbedded)
                 {
-                    presentation.FontsManager.AddEmbeddedFont(font, Aspose.Slides.Export.EmbedFontCharacters.All);
+                    presentation.FontsManager.AddEmbeddedFont(font, EmbedFontCharacters.All);
                 }
             }
 
             // Save to PDF with default regular font and full font embedding
-            Aspose.Slides.Export.PdfOptions pdfOptions = new Aspose.Slides.Export.PdfOptions();
-            pdfOptions.DefaultRegularFont = "Arial";
-            pdfOptions.EmbedFullFonts = true;
-            presentation.Save(outputPdfPath, Aspose.Slides.Export.SaveFormat.Pdf, pdfOptions);
+            PdfOptions pdfOptions = new PdfOptions
+            {
+                DefaultRegularFont = "Arial",
+                EmbedFullFonts = true
+            };
+            presentation.Save(outputPdfPath, SaveFormat.Pdf, pdfOptions);
 
             // Validate that embedded fonts are still present
-            Aspose.Slides.IFontData[] embeddedAfter = presentation.FontsManager.GetEmbeddedFonts();
+            IFontData[] embeddedAfter = presentation.FontsManager.GetEmbeddedFonts();
             Console.WriteLine("Number of embedded fonts after PDF conversion: " + embeddedAfter.Length);
 
             presentation.Dispose();
