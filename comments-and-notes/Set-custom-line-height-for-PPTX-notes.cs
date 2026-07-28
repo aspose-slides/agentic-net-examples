@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Set custom line height for PPTX notes using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file, (placeholder) adjust the line height
+// of notes on a slide, and export the presentation as a handout PDF using
+// Aspose.Slides for .NET. The example also shows how to save the potentially
+// modified presentation back to PPTX format.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Custom Line Height, Notes,
+// Handout, PDF, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting custom line height for notes in PPTX files.
+// - Generate handout PDFs with specific layout options.
+// - Integrate PowerPoint note manipulation into .NET applications.
+// - Validate and transform presentations before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
