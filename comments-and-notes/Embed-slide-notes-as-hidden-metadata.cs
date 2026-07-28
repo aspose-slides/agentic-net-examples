@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Embed slide notes as hidden metadata using C#
+//
+// Description:
+// Demonstrates how to collect notes from each slide in a PowerPoint presentation
+// and store them as a custom document property, effectively embedding the notes
+// as hidden metadata. The example uses Aspose.Slides for .NET to load, process,
+// and save the presentation.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Embed, Slide Notes, Hidden Metadata,
+// Custom Document Property, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Preserve slide notes without displaying them in the presentation.
+// - Enable downstream applications to retrieve notes via metadata.
+// - Automate embedding of slide notes for archival or compliance purposes.
+// - Integrate note extraction and storage into .NET PowerPoint workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
