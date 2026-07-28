@@ -1,3 +1,27 @@
+// -----------------------------------------------------------------------------
+// Example: Set PPTX font fallback list using C#
+//
+// Description:
+// Demonstrates how to define and apply a font fallback rule collection to a
+// PowerPoint presentation using Aspose.Slides for .NET. The example creates a
+// fallback rule for a specific Unicode range, adds alternative fonts, assigns
+// the rule collection to the presentation's FontsManager, and saves the
+// modified file. This pattern can be used in console applications or other
+// .NET tools that need to ensure proper font rendering for characters not
+// covered by the primary font.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Font fallback, Unicode range, Font
+// management, Presentation processing, .NET automation
+//
+// Use Cases:
+// - Ensure correct display of characters from specific Unicode blocks in PPTX
+//   files.
+// - Automate font fallback configuration for batch processing of presentations.
+// - Integrate font fallback handling into custom PowerPoint generation tools.
+// - Validate and adjust font settings before publishing presentations.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
