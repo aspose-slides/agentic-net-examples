@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set PPTX notes background color using C#
+//
+// Description:
+// Demonstrates how to set the background color of the notes master slide in a
+// PPTX file using C# and Aspose.Slides for .NET. The example loads an existing
+// presentation, ensures a notes master slide exists, applies a solid light blue
+// background to the notes master, and saves the modified presentation. This
+// pattern can be used to customize note slide appearance programmatically.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Notes Master, Background Color,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting a custom background color for notes pages in PPTX files.
+// - Build .NET tools that standardize the appearance of PowerPoint notes.
+// - Integrate notes styling into presentation generation workflows.
+// - Ensure consistent branding across notes sections of presentations.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
