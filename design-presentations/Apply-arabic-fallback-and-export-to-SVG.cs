@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Apply Arabic font fallback and export slides to SVG using C#
+//
+// Description:
+// Demonstrates how to add a font fallback rule for Arabic Unicode characters
+// (U+0600–U+06FF) using Aspose.Slides for .NET, export each slide of a PPTX
+// presentation to individual SVG files, and save the modified presentation.
+// The example illustrates loading a presentation, configuring the FontsManager,
+// creating an output directory, writing SVG files, and persisting the updated
+// PPTX.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, SVG, FontFallback, Arabic, Unicode, 
+// Slide Export, Presentation Processing, .NET
+//
+// Use Cases:
+// - Apply Arabic font fallback to ensure correct rendering of Arabic text.
+// - Export PowerPoint slides to SVG for web or vector graphics workflows.
+// - Automate PPTX processing and conversion in C# console applications.
+// - Integrate font fallback configuration into existing .NET presentation pipelines.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
