@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Generate CSV report of presentation metadata using C#
+//
+// Description:
+// Demonstrates how to scan a folder of PowerPoint presentations, extract
+// metadata such as Title, Author, and the count of custom document properties,
+// and generate a CSV report. The example also shows how to preserve the
+// original file format by re‑saving each presentation after processing using
+// Aspose.Slides for .NET.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, CSV, Report, Presentation,
+// Metadata, DocumentProperties, Office Automation
+//
+// Use Cases:
+// - Automate creation of CSV inventories of presentation metadata.
+// - Build .NET tools for batch processing and validation of PowerPoint files.
+// - Integrate presentation metadata extraction into CI/CD pipelines.
+// - Preserve original presentation formats while performing analysis.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Text;
