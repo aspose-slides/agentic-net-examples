@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Validate PPTX slide comments before publishing using C#
+//
+// Description:
+// Demonstrates how to validate PPTX slide comments before publishing using C# 
+// and Aspose.Slides for .NET. The example loads a presentation, checks each 
+// slide for existing comments, adds a default comment when none are found, 
+// and saves the validated presentation. This pattern helps automate 
+// comment validation in PowerPoint workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Validate, Slide, Comments, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Ensure every slide contains at least one comment before publishing.
+// - Automate validation of slide comments in .NET applications.
+// - Integrate comment checks into PowerPoint processing pipelines.
+// - Generate default comments for slides lacking annotations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
