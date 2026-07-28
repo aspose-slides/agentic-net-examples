@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Generate slide thumbnails 200x150 pixels using C#
+//
+// Description:
+// Demonstrates how to generate 200x150 pixel JPEG thumbnails for each slide
+// in a PowerPoint presentation using C# and Aspose.Slides for .NET. The
+// example loads a PPTX file, creates a thumbnail image for every slide with
+// the specified dimensions, saves the images to a folder, and finally saves
+// the (unchanged) presentation. This pattern can be used to automate PPTX
+// workflows, create preview images, or integrate slide rendering into .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Generate, Slide, Thumbnails,
+// 200X150, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate generation of slide thumbnails sized 200x150 pixels.
+// - Build C# tools for PowerPoint presentation preview creation.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Drawing;
