@@ -1,3 +1,21 @@
+// -----------------------------------------------------------------------------
+// Example: Set default language to French and verify fonts using C#
+//
+// Description:
+// Demonstrates how to set the default text language of a presentation to French,
+// add a shape with French text, retrieve the language ID of the text portion, and
+// list font substitutions to verify language‑specific fonts using Aspose.Slides for .NET.
+// The example loads an existing PPTX, modifies it, and saves the result.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Default Language, French, Font Substitution, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting the default language of a presentation to French.
+// - Verify that language‑specific fonts are correctly substituted.
+// - Build C# tools for PowerPoint presentation localization and font management.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
