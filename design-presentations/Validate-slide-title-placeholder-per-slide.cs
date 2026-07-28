@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Validate slide title placeholder per slide using C#
+//
+// Description:
+// Demonstrates how to iterate through all slides in a PowerPoint presentation,
+// check that each slide contains at least one centered title placeholder, and
+// report any missing titles. The example also saves the (potentially unchanged)
+// presentation to a new file. This pattern helps automate validation of PPTX
+// files using Aspose.Slides for .NET.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Validate, Slide Title, Placeholder, 
+// Presentation Validation, Office Automation
+//
+// Use Cases:
+// - Verify that every slide in a presentation has a title placeholder before publishing.
+// - Integrate slide title validation into CI/CD pipelines for presentation assets.
+// - Build command‑line tools that audit PPTX files for required placeholders.
+// - Ensure consistency of slide layouts in automated PowerPoint generation workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
