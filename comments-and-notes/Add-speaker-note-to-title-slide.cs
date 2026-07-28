@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add speaker note to title slide using C#
+//
+// Description:
+// Demonstrates how to add a speaker notes slide to the title slide of a new
+// presentation, populate it with bullet points (including a hyperlink) using
+// Aspose.Slides for .NET, and save the result as a PPTX file. The example
+// illustrates creating a presentation, accessing the first slide, adding a
+// notes slide, editing the notes text frame, and handling save exceptions.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Speaker Note, Title Slide,
+// NotesSlide, Bullet, Hyperlink, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Programmatically add speaker notes with formatted bullet points to a slide.
+// - Include clickable hyperlinks within speaker notes.
+// - Automate generation of presentation templates with predefined notes.
+// - Build .NET utilities for PowerPoint content enrichment and validation.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
