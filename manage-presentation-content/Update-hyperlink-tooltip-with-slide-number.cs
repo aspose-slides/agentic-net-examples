@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Update hyperlink tooltip with slide number using C#
+//
+// Description:
+// Demonstrates how to update the tooltip (ScreenTip) of all hyperlinks in a
+// presentation to include the slide number using C# and Aspose.Slides for .NET.
+// The example loads presentations, iterates through each slide and shape, updates
+// hyperlink tooltips, and saves the modified files to an organized output folder.
+// Developers can use this pattern to automate PPTX workflows, ensure consistent
+// hyperlink information, or integrate presentation processing into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Update, Hyperlink, Tooltip, 
+// Slide Number, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate updating hyperlink tooltips with slide numbers.
+// - Build C# tools for PowerPoint presentation processing and quality checks.
+// - Generate or transform PPTX files with consistent hyperlink metadata.
+// - Validate and enhance presentation navigation before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -34,7 +56,35 @@ class Program
                 // Load the presentation
                 using (Presentation pres = new Presentation(filePath))
                 {
-                    // Retrieve the Category property
+                    // Update hyperlink tooltips with slide numbers
+                    foreach (ISlide slide in pres.Slides)
+                    {
+                        foreach (IShape shape in slide.Shapes)
+                        {
+                            // Update shape-level hyperlink tooltip
+                            if (shape.HyperlinkClick != null)
+                            {
+                                shape.HyperlinkClick.ScreenTip = $"Slide {slide.SlideNumber}";
+                            }
+
+                            // Update text portion hyperlinks tooltip
+                            if (shape is IAutoShape autoShape && autoShape.TextFrame != null)
+                            {
+                                foreach (IParagraph paragraph in autoShape.TextFrame.Paragraphs)
+                                {
+                                    foreach (IPortion portion in paragraph.Portions)
+                                    {
+                                        if (portion.PortionFormat?.HyperlinkClick != null)
+                                        {
+                                            portion.PortionFormat.HyperlinkClick.ScreenTip = $"Slide {slide.SlideNumber}";
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    // Retrieve the Category property for organizing output
                     IDocumentProperties docProps = pres.DocumentProperties;
                     string category = docProps.Category;
                     if (string.IsNullOrEmpty(category))
@@ -49,7 +99,7 @@ class Program
                     string fileName = Path.GetFileName(filePath);
                     string destPath = Path.Combine(targetDir, fileName);
 
-                    // Save the presentation to the destination folder
+                    // Save the updated presentation
                     pres.Save(destPath, SaveFormat.Pptx);
                 }
             }
