@@ -1,5 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX slide notes to HTML using C#
+//
+// Description:
+// Demonstrates how to export PPTX slide notes to HTML using C# and 
+// Aspose.Slides for .NET. The example creates a presentation, adds a slide with
+// notes, and saves only the notes as an HTML file in a standalone console
+// application. Developers can use this pattern to automate PPTX workflows,
+// extract slide notes for documentation, or integrate presentation logic into
+// .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, HTML, Export, Pptx, Slide, 
+// Notes, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate export of PPTX slide notes to HTML.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Extract slide notes for documentation or reporting purposes.
+// -----------------------------------------------------------------------------
+
 using System;
-using System.Drawing;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
@@ -8,52 +29,23 @@ class Program
     static void Main()
     {
         // Create a new presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
-
-        // Add an empty slide
-        presentation.Slides.AddEmptySlide(presentation.LayoutSlides[0]);
-
-        // Add comment authors
-        Aspose.Slides.ICommentAuthor author1 = presentation.CommentAuthors.AddAuthor("Author_1", "A1");
-        Aspose.Slides.ICommentAuthor author2 = presentation.CommentAuthors.AddAuthor("Author_2", "A2");
-
-        // Define comment position
-        System.Drawing.PointF position = new System.Drawing.PointF(10f, 10f);
-
-        // Add a root comment
-        Aspose.Slides.IComment comment1 = author1.Comments.AddComment("Root comment", presentation.Slides[0], position, DateTime.Now);
-
-        // Add first reply to the root comment
-        Aspose.Slides.IComment reply1 = author2.Comments.AddComment("First reply to root", presentation.Slides[0], position, DateTime.Now);
-        reply1.ParentComment = comment1;
-
-        // Add second reply to the root comment
-        Aspose.Slides.IComment reply2 = author2.Comments.AddComment("Second reply to root", presentation.Slides[0], position, DateTime.Now);
-        reply2.ParentComment = comment1;
-
-        // Add a sub-reply to the second reply
-        Aspose.Slides.IComment subReply = author1.Comments.AddComment("Sub-reply to second reply", presentation.Slides[0], position, DateTime.Now);
-        subReply.ParentComment = reply2;
-
-        // Display the comment hierarchy
-        Aspose.Slides.ISlide slide = presentation.Slides[0];
-        Aspose.Slides.IComment[] comments = slide.GetSlideComments(null);
-        for (int i = 0; i < comments.Length; i++)
+        using (Presentation presentation = new Presentation())
         {
-            Aspose.Slides.IComment current = comments[i];
-            while (current.ParentComment != null)
+            // Access the first slide (automatically added)
+            ISlide slide = presentation.Slides[0];
+
+            // Add notes to the slide
+            INotesSlide notesSlide = slide.NotesSlideManager.NotesSlide;
+            notesSlide.TextFrame.Text = "These are the notes for the first slide.\nThey can contain multiple lines of text.";
+
+            // Configure HTML export options to include only notes
+            HtmlOptions htmlOptions = new HtmlOptions
             {
-                Console.Write("\t");
-                current = current.ParentComment;
-            }
-            Console.Write("{0} : {1}", comments[i].Author.Name, comments[i].Text);
-            Console.WriteLine();
+                NotesCommentsLayout = NotesCommentsLayoutType.NotesOnly
+            };
+
+            // Save only the notes as an HTML file
+            presentation.Save("SlideNotes.html", SaveFormat.Html, htmlOptions);
         }
-
-        // Save the presentation
-        presentation.Save("ThreadedComments.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
-
-        // Dispose the presentation
-        presentation.Dispose();
     }
 }
