@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Set lastprinted property after printing using C#
+//
+// Description:
+// Demonstrates how to set the LastPrinted document property after a printing
+// operation using C# and Aspose.Slides for .NET. The example loads a PPTX file,
+// simulates a print step, updates the LastPrinted property to the current date
+// and time, and saves the modified presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, LastPrinted, Property, After,
+// Printing, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate updating the LastPrinted property after printing a presentation.
+// - Build C# utilities for PowerPoint document metadata management.
+// - Integrate presentation processing into .NET applications.
+// - Ensure accurate print timestamps in PPTX files.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
