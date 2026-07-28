@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Track PPTX slide comment processing progress using C#
+//
+// Description:
+// Demonstrates how to track the processing progress of slide comments in a PPTX
+// file using C# and Aspose.Slides for .NET. The example loads a presentation,
+// counts all comments, iterates through them while reporting progress, and
+// saves the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Track, Pptx, Slide, Comment,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Monitor comment processing progress in automated PowerPoint workflows.
+// - Build tools that need to report status while handling slide comments.
+// - Integrate comment analysis or transformation into .NET applications.
+// - Validate and log comment handling before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
