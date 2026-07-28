@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Insert video placeholder into intro slide using C#
+//
+// Description:
+// Demonstrates how to insert a video placeholder that streams from an external
+// URL into the introductory slide of a PowerPoint presentation using C# and
+// Aspose.Slides for .NET. The example creates a new presentation, adds a video
+// frame referencing a YouTube embed URL, configures automatic playback, and
+// optionally attaches a hyperlink. The resulting PPTX file can be opened in
+// PowerPoint to verify the placeholder.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Insert, Video, Placeholder,
+// Intro Slide, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate insertion of streaming video placeholders into intro slides.
+// - Build .NET tools for PowerPoint presentation generation or modification.
+// - Generate PPTX files with embedded video frames for e‑learning or marketing.
+// - Validate video playback settings in automated presentation workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Net;
