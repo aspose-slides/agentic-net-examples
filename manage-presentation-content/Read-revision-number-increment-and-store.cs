@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Read revision number increment and store using C#
+//
+// Description:
+// Demonstrates how to read the current revision number of a PowerPoint presentation,
+// increment it, and store the updated value using Aspose.Slides for .NET. The example
+// loads an existing PPTX file, modifies its document properties, and saves the
+// result to a new file. This pattern is useful for automating version tracking
+// in presentation workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Read, Revision, Number, Increment,
+// Document Properties, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate revision number increment for PowerPoint files.
+// - Build C# tools that manage presentation versioning.
+// - Integrate revision tracking into .NET applications handling PPTX files.
+// - Ensure consistent document metadata before publishing or archiving.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
