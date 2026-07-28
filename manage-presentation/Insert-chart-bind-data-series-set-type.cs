@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Insert chart bind data series set type using C#
+//
+// Description:
+// Demonstrates how to insert a chart, bind data series, and set the chart type 
+// using C# and Aspose.Slides for .NET. The example creates a new presentation, 
+// adds a clustered column chart, clears default data, defines series and 
+// categories, populates data points, and saves the file as a PPTX. This pattern 
+// can be used to automate chart creation and data binding in PowerPoint 
+// presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Insert, Chart, Bind, Data Series, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate insertion of charts with bound data series in PPTX files.
+// - Build C# tools for generating or updating PowerPoint presentations with 
+//   custom chart data.
+// - Integrate chart creation into .NET applications for reporting or analytics.
+// - Validate chart data binding workflows before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
