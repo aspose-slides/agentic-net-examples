@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add hyperlink to rectangle shapes using C#
+//
+// Description:
+// Demonstrates how to add an external hyperlink to rectangle AutoShape objects
+// in a PowerPoint presentation using Aspose.Slides for .NET. The example loads
+// an existing PPTX file, iterates through its slides and shapes, identifies
+// rectangle shapes, assigns a click hyperlink, and saves the modified file.
+// This pattern can be used to programmatically enrich presentations with
+// navigation or external web links.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Hyperlink, Rectangle, AutoShape, Shapes,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Programmatically add external web links to rectangle shapes in PPTX files.
+// - Automate hyperlink insertion during presentation generation or editing.
+// - Build .NET tools for bulk updating of PowerPoint content.
+// - Ensure consistent hyperlink application across multiple slides.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
