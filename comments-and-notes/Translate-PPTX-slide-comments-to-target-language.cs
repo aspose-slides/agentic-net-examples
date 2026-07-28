@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Translate PPTX slide comments to target language using C#
+//
+// Description:
+// Demonstrates how to translate slide comments in a PPTX presentation to a
+// target language using Aspose.Slides for .NET and the Slides AI integration.
+// The example loads a presentation, uses an OpenAI web client via SlidesAIAgent
+// to translate comments (and other translatable content) into the specified
+// language, and saves the translated file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Slides AI, OpenAI, Translate,
+// Slide Comments, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate translation of PPTX slide comments for multilingual audiences.
+// - Build .NET tools that integrate AI translation into PowerPoint workflows.
+// - Prepare localized presentations by translating notes and comments.
+// - Validate and process presentation content before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
