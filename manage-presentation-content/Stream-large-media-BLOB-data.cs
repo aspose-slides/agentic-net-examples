@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Stream large media BLOB data using C#
+//
+// Description:
+// Demonstrates how to stream large media BLOB data (videos) from a PowerPoint
+// presentation using Aspose.Slides for .NET. The example loads a PPTX file,
+// extracts each embedded video as a stream, writes the video data to separate
+// files, and then saves the presentation. This pattern can be used to handle
+// large media BLOBs without loading the entire content into memory.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Stream, Large Media, Blob,
+// Video Extraction, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Extract and save embedded videos from PPTX files.
+// - Process large media BLOBs in a memory‑efficient way.
+// - Build tools that need to archive or analyze presentation media.
+// - Automate PPTX workflows that involve media handling.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
