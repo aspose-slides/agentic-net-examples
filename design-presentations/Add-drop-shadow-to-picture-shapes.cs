@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add drop shadow to picture shapes using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, iterate through its
+// slides and picture shapes, apply a preset drop shadow effect to each picture
+// shape, and save the modified presentation using Aspose.Slides for .NET.
+// This console application can be used to automate the addition of drop
+// shadows to pictures in PPTX files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Drop Shadow, Picture Shapes,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automatically add drop shadows to all picture shapes in a presentation.
+// - Integrate picture styling into .NET PowerPoint processing pipelines.
+// - Prepare PPTX files with consistent visual effects before distribution.
+// - Validate and transform presentations in batch operations.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
