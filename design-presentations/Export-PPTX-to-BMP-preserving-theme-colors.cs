@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX to BMP preserving theme colors using C#
+//
+// Description:
+// Demonstrates how to export each slide of a PPTX file to BMP images while
+// preserving the presentation's theme colors using Aspose.Slides for .NET.
+// The example loads a presentation, iterates through its slides, converts each
+// slide to a BMP image, and saves the images to an output folder. It also
+// shows how to save the presentation after processing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, BMP, Aspose.Slides for .NET, Export, Theme Colors,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Convert PPTX slides to BMP format while keeping theme colors intact.
+// - Automate batch image extraction from PowerPoint presentations.
+// - Integrate slide-to-image conversion into .NET applications.
+// - Prepare slide images for further processing or publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
