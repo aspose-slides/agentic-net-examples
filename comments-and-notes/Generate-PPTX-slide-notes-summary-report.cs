@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Synchronize PPTX slide notes with external CMS using C#
+//
+// Description:
+// Demonstrates how to load a PPTX presentation, iterate through its slides,
+// ensure each slide has a notes slide, retrieve the notes text, and post the
+// notes to an external CMS via a REST API using HttpClient. The updated
+// presentation is then saved. This pattern can be used to automate notes
+// extraction and synchronization in .NET applications with Aspose.Slides for .NET.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Slide Notes, REST API, CMS,
+// HttpClient, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Synchronize slide notes with an external content management system.
+// - Automate extraction and upload of PowerPoint notes in .NET tools.
+// - Build C# utilities for PowerPoint presentation processing and integration.
+// - Validate and update slide notes programmatically before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Net.Http;
