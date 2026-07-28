@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add sourcefile custom property to PPTX using C#
+//
+// Description:
+// Demonstrates how to add a custom document property named "SourceFile" to
+// each PPTX file in a specified folder using C# and Aspose.Slides for .NET.
+// The example loads each presentation, sets the property to the original file
+// name, and saves the file, enabling traceability of source files in PowerPoint
+// documents.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SourceFile, Custom Property,
+// Document Properties, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Add source file metadata to existing PPTX presentations.
+// - Automate batch processing of PowerPoint files to embed origin information.
+// - Build .NET tools for managing and tracking presentation assets.
+// - Ensure PPTX files contain custom properties for downstream workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
