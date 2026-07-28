@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Summarize PPTX slide comment authors count using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file, enumerate its comment authors, 
+// display each author's name together with the number of comments they have 
+// made, and finally save the presentation. The example uses Aspose.Slides for 
+// .NET and can serve as a basis for automating comment analysis in PowerPoint 
+// files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Comment Authors, Summarize, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Generate reports of comment activity per author in a presentation.
+// - Build tools that validate or audit comments before publishing.
+// - Integrate comment summarization into larger .NET PowerPoint workflows.
+// - Automate saving of presentations after analysis.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
