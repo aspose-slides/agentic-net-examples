@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Validate asian fonts keep PPTX after PNG using C#
+//
+// Description:
+// Demonstrates how to validate that Asian fonts are preserved and the PPTX file
+// remains unchanged after exporting each slide to PNG using Aspose.Slides for .NET.
+// The example loads a presentation with a default Asian font, exports slides to
+// PNG images, saves the presentation without modifications, and compares the
+// file bytes before and after the operation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Validate, Asian, Fonts, 
+// Keep, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Verify that exporting slides to PNG does not alter the original PPTX.
+// - Ensure Asian fonts are correctly applied during processing.
+// - Automate validation of presentation integrity in .NET applications.
+// - Build tools for PPTX workflow testing and automation.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
