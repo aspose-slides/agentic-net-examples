@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Rename comment authors using mapping file using C#
+//
+// Description:
+// Demonstrates how to rename comment authors in a PowerPoint presentation
+// using a CSV mapping file with Aspose.Slides for .NET. The example loads a
+// presentation, reads a mapping of old author names to new author names, updates
+// the comment authors accordingly, and saves the modified presentation. This
+// console application can be used to automate batch processing of PPTX files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Rename, Comment, Authors,
+// Mapping, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Batch rename comment authors in multiple presentations.
+// - Integrate comment author updates into CI/CD pipelines for documentation.
+// - Prepare presentations for publishing with standardized author names.
+// - Automate PPTX metadata cleanup before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;
