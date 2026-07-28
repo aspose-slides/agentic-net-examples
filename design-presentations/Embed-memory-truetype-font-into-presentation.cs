@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Embed memory truetype font into presentation using C#
+//
+// Description:
+// Demonstrates how to embed a TrueType font loaded from memory into a PowerPoint
+// presentation using Aspose.Slides for .NET. The example loads an existing PPTX,
+// reads a .ttf file into a byte array, embeds the font (all characters) into the
+// presentation, and saves the result as a new PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Embed, Memory, Truetype, Font,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate embedding of memory-loaded TrueType fonts into presentations.
+// - Build C# utilities for PowerPoint presentation processing.
+// - Generate or transform PPTX files with embedded fonts in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

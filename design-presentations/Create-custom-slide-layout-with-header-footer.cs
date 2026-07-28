@@ -1,3 +1,27 @@
+// -----------------------------------------------------------------------------
+// Example: Create custom slide layout with header footer using C#
+//
+// Description:
+// Demonstrates how to create a custom slide layout that includes header, footer,
+// and a content placeholder using C# and Aspose.Slides for .NET. The example
+// creates a new presentation, defines a custom layout on the master slide,
+// configures footer and date-time placeholders, adds a content placeholder,
+// inserts a slide based on this layout, and saves the result as a PPTX file.
+// This pattern can be used to automate PowerPoint layout creation and
+// manipulation in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Custom Slide Layout, Header,
+// Footer, Content Placeholder, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of custom slide layouts with header/footer in PowerPoint.
+// - Build .NET tools for generating or modifying PPTX files with predefined
+//   layouts.
+// - Integrate custom slide designs into presentation generation workflows.
+// - Validate and test slide layout configurations before deployment.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

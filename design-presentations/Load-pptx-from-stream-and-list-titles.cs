@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Load pptx from stream and list slide titles using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file from a FileStream, enumerate each slide
+// to find title placeholders, output the titles to the console, and save the
+// presentation using Aspose.Slides for .NET. The example illustrates typical
+// presentation-processing steps for PowerPoint files in a standalone console
+// application. Developers can adapt this pattern to automate PPTX workflows,
+// extract metadata, or integrate presentation handling into .NET solutions.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, Stream, List Titles, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate loading PPTX from a stream and extracting slide titles.
+// - Build C# tools for PowerPoint presentation analysis.
+// - Generate or modify PPTX files in .NET applications.
+// - Validate presentation content before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

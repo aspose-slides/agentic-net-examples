@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Reset fallback fonts and verify default using C#
+//
+// Description:
+// Demonstrates how to clear all font fallback rules in a presentation and
+// verify that the default fonts are applied using Aspose.Slides for .NET.
+// The example loads an existing PPTX file, removes any custom fallback
+// configurations, saves the modified presentation, and confirms successful
+// processing via console output.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Reset, Fallback, Fonts, Verify,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate the removal of custom font fallback settings in PPTX files.
+// - Build C# utilities for PowerPoint presentation cleanup before distribution.
+// - Ensure presentations rely on default system fonts for consistent rendering.
+// - Integrate font fallback management into .NET-based document workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

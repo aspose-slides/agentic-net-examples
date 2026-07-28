@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Create slide thumbnails using theme background using C#
+//
+// Description:
+// Demonstrates how to create slide thumbnails using theme background using C# 
+// and Aspose.Slides for .NET. The example shows the required 
+// presentation-processing steps for PowerPoint files and produces the 
+// requested output in a standalone console application. Developers can use 
+// this pattern to automate PPTX workflows, validate results, or integrate 
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Slide, Thumbnails, Theme, 
+// Background, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate create slide thumbnails using theme background.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

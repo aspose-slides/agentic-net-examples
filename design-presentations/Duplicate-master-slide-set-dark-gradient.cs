@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Duplicate master slide set dark gradient using C#
+//
+// Description:
+// Demonstrates how to duplicate a master slide and apply a dark gradient background
+// using C# and Aspose.Slides for .NET. The example loads an existing PPTX file,
+// clones the first master slide, modifies the cloned master’s background to a dark
+// gradient, and saves the result as a new presentation. This pattern can be used
+// to programmatically extend slide master collections and customize their appearance.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Duplicate, Master Slide, Dark Gradient,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate duplication of master slides with custom gradient backgrounds.
+// - Build .NET tools for enhancing PowerPoint master slide designs.
+// - Generate or modify PPTX files with specific visual themes in batch processes.
+// - Validate and preview master slide changes before publishing presentations.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -24,18 +45,18 @@ namespace AsposeSlidesDemo
                 Presentation pres = new Presentation(inputPath);
 
                 // Get the first master slide
-                Aspose.Slides.IMasterSlide sourceMaster = pres.Masters[0];
+                IMasterSlide sourceMaster = pres.Masters[0];
 
                 // Clone the master slide and insert at the end of the masters collection
-                Aspose.Slides.IMasterSlide clonedMaster = pres.Masters.InsertClone(pres.Masters.Count, sourceMaster);
+                IMasterSlide clonedMaster = pres.Masters.InsertClone(pres.Masters.Count, sourceMaster);
 
                 // Modify the cloned master background to a dark gradient
-                clonedMaster.Background.Type = Aspose.Slides.BackgroundType.OwnBackground;
-                clonedMaster.Background.FillFormat.FillType = Aspose.Slides.FillType.Gradient;
-                clonedMaster.Background.FillFormat.GradientFormat.TileFlip = Aspose.Slides.TileFlip.FlipBoth;
+                clonedMaster.Background.Type = BackgroundType.OwnBackground;
+                clonedMaster.Background.FillFormat.FillType = FillType.Gradient;
+                clonedMaster.Background.FillFormat.GradientFormat.TileFlip = TileFlip.FlipBoth;
 
                 // Save the presentation
-                pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                pres.Save(outputPath, SaveFormat.Pptx);
             }
             catch (Exception ex)
             {

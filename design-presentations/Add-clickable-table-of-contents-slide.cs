@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add clickable table of contents slide using C#
+//
+// Description:
+// Demonstrates how to create a Table of Contents slide at the beginning of a
+// presentation, automatically extract slide titles, and add internal
+// hyperlinks that navigate to each corresponding slide. The example uses
+// Aspose.Slides for .NET to load, modify, and save a PPTX file in a console
+// application.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Table of Contents, Clickable Links,
+// Presentation Automation, Slide Titles, .NET
+//
+// Use Cases:
+// - Generate a clickable TOC for existing PowerPoint decks.
+// - Build .NET utilities that enrich presentations with navigation.
+// - Automate preparation of slide decks for publishing or sharing.
+// - Integrate TOC creation into larger presentation processing pipelines.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

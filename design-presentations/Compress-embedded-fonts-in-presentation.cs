@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Compress embedded fonts in presentation using C#
+//
+// Description:
+// Demonstrates how to compress embedded fonts in a PowerPoint presentation
+// using Aspose.Slides for .NET. The example loads a PPTX file, applies the
+// low‑code compression API to reduce the size of embedded fonts, and saves the
+// result. It can be used as a standalone console utility for automating font
+// compression in PPTX workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Compress, Embedded Fonts, 
+// Presentation Processing, Office Automation, Low‑Code API
+//
+// Use Cases:
+// - Reduce file size of presentations by compressing embedded fonts.
+// - Integrate font compression into batch processing tools.
+// - Prepare PPTX files for distribution with smaller payloads.
+// - Automate PowerPoint optimization in CI/CD pipelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX to PDF/A embedding fonts using C#
+//
+// Description:
+// Demonstrates how to export a PPTX file to a PDF/A‑1b document with full
+// font embedding using C# and Aspose.Slides for .NET. The example loads a
+// presentation, configures PDF options for PDF/A compliance and full font
+// embedding, and saves the result as a PDF file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF/A, Export, Font Embedding,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Convert PowerPoint presentations to PDF/A for long‑term archiving.
+// - Ensure all fonts are embedded to guarantee visual fidelity across devices.
+// - Automate PDF/A generation in batch processing or CI pipelines.
+// - Integrate PDF/A export functionality into .NET applications.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -26,10 +46,10 @@ class Program
             // Configure PDF options for PDF/A compliance and full font embedding
             PdfOptions pdfOptions = new PdfOptions();
             pdfOptions.EmbedFullFonts = true;
-            pdfOptions.Compliance = Aspose.Slides.Export.PdfCompliance.PdfA1b;
+            pdfOptions.Compliance = PdfCompliance.PdfA1b;
 
             // Save the presentation as PDF/A
-            pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pdf, pdfOptions);
+            pres.Save(outputPath, SaveFormat.Pdf, pdfOptions);
 
             // Dispose the presentation
             pres.Dispose();

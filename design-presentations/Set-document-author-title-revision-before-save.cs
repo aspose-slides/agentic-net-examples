@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set document author title revision before save using C#
+//
+// Description:
+// Demonstrates how to set the document author, title, and revision number
+// before saving a PowerPoint presentation using C# and Aspose.Slides for .NET.
+// The example loads an existing PPTX file, updates its built‑in document
+// properties, and saves the modified file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Document Properties, Author,
+// Title, Revision, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting document metadata (author, title, revision) before saving.
+// - Build C# utilities for PowerPoint presentation metadata management.
+// - Integrate metadata updates into .NET applications handling PPTX files.
+// - Ensure consistent document properties across generated or modified presentations.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

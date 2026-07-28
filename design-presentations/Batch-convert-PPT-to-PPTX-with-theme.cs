@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Batch convert PPT to PPTX with theme using C#
+//
+// Description:
+// Demonstrates how to batch convert legacy PPT files to PPTX format while
+// applying an external theme (.thmx) using C# and Aspose.Slides for .NET.
+// The example processes all PPT files in a specified input directory,
+// applies the theme to each master slide, and saves the converted files
+// to an output directory.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PPT, Batch, Convert, Theme,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of legacy PPT presentations to modern PPTX with a
+//   consistent theme.
+// - Build command‑line tools for bulk PowerPoint presentation processing.
+// - Integrate theme application into .NET workflows for presentation
+//   preparation or publishing.
+// - Validate and transform PPT files before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

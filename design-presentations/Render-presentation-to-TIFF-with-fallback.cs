@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Render presentation to TIFF with fallback using C#
+//
+// Description:
+// Demonstrates how to render a PowerPoint presentation to a high‑resolution TIFF
+// image while applying font fallback rules using Aspose.Slides for .NET. The
+// example loads a PPTX file, configures fallback for missing Unicode ranges,
+// sets TIFF export options, and saves the result as a TIFF file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Render, Presentation, Tiff,
+// Fallback, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX presentations to high‑resolution TIFF images.
+// - Ensure proper rendering of characters when original fonts are unavailable.
+// - Build .NET tools for batch processing of PowerPoint files with font fallback.
+// - Validate presentation rendering workflows before deployment.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -31,9 +51,11 @@ namespace AsposeSlidesTiffFallback
                     presentation.FontsManager.FontFallBackRulesCollection = fallbackRules;
 
                     // Configure TIFF options for high‑resolution output
-                    TiffOptions tiffOptions = new TiffOptions();
-                    tiffOptions.DpiX = 300;
-                    tiffOptions.DpiY = 300;
+                    TiffOptions tiffOptions = new TiffOptions
+                    {
+                        DpiX = 300,
+                        DpiY = 300
+                    };
 
                     // Save the presentation as TIFF using the specified options
                     presentation.Save(outputPath, SaveFormat.Tiff, tiffOptions);

@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX slides as high resolution PNG using C#
+//
+// Description:
+// Demonstrates how to export each slide of a PPTX file to high‑resolution PNG
+// images using Aspose.Slides for .NET. The example loads a presentation,
+// renders every slide with a 3× scaling factor to increase image quality,
+// saves the PNG files to a specified folder, and optionally saves a copy of
+// the presentation. This pattern can be used to automate slide image extraction
+// or integrate high‑resolution export into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Export, High Resolution,
+// Slides, Image, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate export of PPTX slides as high‑resolution PNG images.
+// - Build C# utilities for PowerPoint slide image extraction.
+// - Generate visual assets for web, documentation, or e‑learning platforms.
+// - Integrate slide rendering into .NET workflows or services.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

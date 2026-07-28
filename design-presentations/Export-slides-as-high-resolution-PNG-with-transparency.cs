@@ -1,3 +1,28 @@
+// -----------------------------------------------------------------------------
+// Example: Export slides as high resolution PNG with transparency using C#
+//
+// Description:
+// Demonstrates how to export each slide of a PowerPoint presentation to a
+// high‑resolution PNG image with a transparent background using Aspose.Slides
+// for .NET. The sample loads a PPTX file, sets the slide background to
+// transparent, renders the slide at double size (2× scale) and saves the
+// resulting PNG files to an output folder. It also shows basic error handling
+// and how to keep the original presentation unchanged.
+//
+// Keywords:
+// C#, Aspose.Slides, PPTX, PNG, high resolution, transparency, slide export,
+// image rendering, .NET, PowerPoint automation
+//
+// Use Cases:
+// - Generate high‑resolution PNG assets from PowerPoint slides for web or
+//   documentation where transparency is required.
+// - Build automated tools that convert presentations to image formats in CI
+//   pipelines.
+// - Integrate slide‑to‑image conversion into .NET applications for reporting
+//   or preview features.
+// - Preserve original presentation while extracting visual content.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Replace default title font with custom using C#
+//
+// Description:
+// Demonstrates how to replace the default title font in a PowerPoint presentation
+// with a custom font using C# and Aspose.Slides for .NET. The example loads external
+// fonts from a specified folder, replaces the source font (e.g., Arial) with the
+// custom font throughout the presentation, saves the result, and clears the font
+// cache.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Replace, Default, Title, Font,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate replacement of the default title font with a custom font.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Map multiple original fonts to a single replacement using C#
+//
+// Description:
+// Demonstrates how to map several original fonts to one replacement font using
+// C# and Aspose.Slides for .NET. The example loads a PPTX file, creates font
+// substitution rules for each source font, applies them to the presentation,
+// and saves the result. This pattern helps automate font consistency across
+// PowerPoint files in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Multiple Original Fonts, Font
+// Replacement, Font Substitution, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Ensure consistent font usage by replacing multiple fonts with a single one.
+// - Build C# tools for batch processing of PowerPoint presentations.
+// - Integrate font substitution logic into .NET applications.
+// - Prepare presentations for environments with limited font availability.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

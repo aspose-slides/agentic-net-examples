@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX to XPS embedding all fonts using C#
+//
+// Description:
+// Demonstrates how to export a PPTX file to XPS while embedding all custom
+// fonts that are not already embedded, using Aspose.Slides for .NET. The
+// example loads a presentation, checks for fonts that are not embedded, adds
+// them with full character embedding, and saves the result as an XPS document.
+// This pattern can be used in console applications or automated workflows
+// that require font‑preserving XPS output.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, XPS, Aspose.Slides for .NET, Export, Embedding, Fonts,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Convert PowerPoint presentations to XPS with all fonts embedded for
+//   reliable rendering on any device.
+// - Build command‑line tools that prepare XPS files for printing or archiving.
+// - Integrate font‑preserving export functionality into .NET applications.
+// - Automate batch processing of PPTX files to XPS while ensuring font fidelity.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

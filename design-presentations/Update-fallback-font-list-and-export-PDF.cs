@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add fallback font rule and export PDF using Aspose.Slides for .NET
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, add a custom font fallback
+// rule for a specific Unicode range, and then export the modified presentation
+// to PDF using Aspose.Slides for .NET. The console application checks for the
+// input file, updates the FontsManager with a new IFontFallBackRule, and saves
+// the result as a PDF document.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, PDF, Font fallback, IFontFallBackRule,
+// FontsManager, Presentation processing, Office automation
+//
+// Use Cases:
+// - Programmatically add or modify font fallback rules in PPTX files.
+// - Convert PowerPoint presentations to PDF after adjusting font handling.
+// - Build .NET utilities for batch processing of presentations with custom fonts.
+// - Ensure correct font rendering in exported PDFs when original fonts are missing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Load presentation apply fallback stream SVG using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, configure a font fallback
+// rule, and stream a slide as SVG using Aspose.Slides for .NET. The example
+// shows how to apply a Unicode range fallback to a specific font, generate an
+// SVG representation of the first slide via a memory stream, and save the
+// modified presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SVG, Load, Presentation, Apply,
+// Fallback, FontFallBack, Stream, Slide, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate loading a presentation and applying font fallback rules.
+// - Generate SVG streams of slides for web or API delivery.
+// - Build .NET tools that modify and export PowerPoint content.
+// - Validate and transform PPTX files before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set PPTX theme major font using C#
+//
+// Description:
+// Demonstrates how to change the major font of a PowerPoint presentation's
+// theme to a specified font using Aspose.Slides for .NET. The example loads an
+// existing PPTX file, updates the Latin major font in the theme's font scheme,
+// and saves the result as a new PPTX file. This pattern can be used in console
+// applications or integrated into larger .NET solutions for automated
+// presentation styling.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Theme, Major Font, FontScheme,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Programmatically set or replace the major font in a PPTX theme.
+// - Build tools that enforce corporate branding fonts across presentations.
+// - Automate batch processing of PowerPoint files to apply a consistent font.
+// - Validate and modify presentation styles before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

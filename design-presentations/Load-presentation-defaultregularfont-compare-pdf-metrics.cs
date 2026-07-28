@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Load presentation with default regular font and compare PDF metrics using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation while specifying a default
+// regular font, save it as a PDF with the same font settings, iterate through
+// slides and shapes to extract text for metric comparison, and finally save the
+// (potentially modified) presentation. The example uses Aspose.Slides for .NET
+// and illustrates the required steps for handling font fallback and basic
+// text extraction when converting PPTX to PDF.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Load, Presentation,
+// DefaultRegularFont, Compare, Text Metrics, Font Fallback, Office Automation
+//
+// Use Cases:
+// - Ensure consistent font rendering when converting presentations to PDF.
+// - Extract and compare text metrics between original PPTX and generated PDF.
+// - Automate PPTX processing workflows that require font substitution.
+// - Build .NET tools for validating presentation content before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Load pptx presentation from disk and modify built‑in document properties using C#
+//
+// Description:
+// Demonstrates how to load a PPTX presentation from disk, modify its built‑in
+// document properties (Author, Title, Subject) using Aspose.Slides for .NET, and
+// save the updated file. The example includes file existence checking, error
+// handling, and proper resource disposal, suitable for console applications that
+// automate PowerPoint metadata processing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, DocumentProperties, Author,
+// Title, Subject, Presentation, Disk, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate updating metadata of existing PPTX files.
+// - Build C# tools for batch processing of PowerPoint document properties.
+// - Integrate presentation metadata management into .NET applications.
+// - Validate and standardize PPTX metadata before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

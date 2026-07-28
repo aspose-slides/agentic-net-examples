@@ -1,3 +1,29 @@
+// -----------------------------------------------------------------------------
+// Example: Load fonts from zip and set body using C#
+//
+// Description:
+// Demonstrates how to extract TrueType and OpenType font files from a zip
+// archive, load them into Aspose.Slides' font cache, create a new presentation,
+// add a rectangle shape with text, and apply the first loaded custom font to
+// the shape's body text. The example shows the required presentation‑processing
+// steps for PowerPoint files and produces the requested output in a standalone
+// console application. Developers can use this pattern to automate PPTX
+// workflows, validate results, or integrate presentation logic into .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, Fonts, Zip, Body,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate loading custom fonts from a zip archive and applying them to
+//   presentation text.
+// - Build C# tools for PowerPoint presentation processing that require
+//   embedded or external fonts.
+// - Generate or transform PPTX files in .NET applications with custom typography.
+// - Validate presentation workflows that depend on specific font resources.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.IO.Compression;

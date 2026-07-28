@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Analyze slide background colors and fonts using C#
+//
+// Description:
+// Demonstrates how to analyze each slide's background type and font
+// substitutions in a PowerPoint presentation using Aspose.Slides for .NET.
+// The example creates a manifest JSON file that lists the slide index,
+// background type, and any custom font substitutions detected. It also
+// saves a copy of the original presentation. This pattern can be used to
+// automate PPTX analysis, validate font usage, or integrate presentation
+// inspection into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Analyze, Slide, Background,
+// Fonts, Manifest, JSON, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Generate a manifest of slide background types and font substitutions.
+// - Validate that presentations use expected fonts before publishing.
+// - Build tools that audit or transform PowerPoint files in .NET.
+// - Automate extraction of slide metadata for reporting or compliance.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;
@@ -56,10 +78,12 @@ namespace AsposeSlidesManifest
                     fontList.Add(entry);
                 }
 
-                ManifestSlide manifestSlide = new ManifestSlide();
-                manifestSlide.SlideIndex = i + 1;
-                manifestSlide.BackgroundType = backgroundType;
-                manifestSlide.CustomFonts = fontList;
+                ManifestSlide manifestSlide = new ManifestSlide
+                {
+                    SlideIndex = i + 1,
+                    BackgroundType = backgroundType,
+                    CustomFonts = fontList
+                };
                 manifest.Add(manifestSlide);
             }
 

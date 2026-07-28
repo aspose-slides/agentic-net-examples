@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Apply global font replacement before rendering using C#
+//
+// Description:
+// Demonstrates how to replace a specific source font with a destination font
+// globally in a PowerPoint presentation using Aspose.Slides for .NET. The
+// example loads a PPTX file, applies the font replacement via the FontsManager,
+// and saves the updated presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Global Font Replacement, 
+// Presentation Processing, Font Substitution, Office Automation
+//
+// Use Cases:
+// - Replace an outdated or unavailable font across all slides before rendering.
+// - Prepare presentations for environments lacking certain fonts.
+// - Automate font standardization in batch processing of PPTX files.
+// - Ensure visual consistency when converting presentations to other formats.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

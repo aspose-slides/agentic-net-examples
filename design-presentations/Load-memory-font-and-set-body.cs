@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Load memory font and set body using C#
+//
+// Description:
+// Demonstrates how to load a custom TrueType font from a file into memory and
+// apply it to all text portions in a PowerPoint presentation using Aspose.Slides
+// for .NET. The example reads the font file, registers it with the FontsLoader,
+// iterates through each slide and shape, updates the Latin font of every text
+// portion, and saves the modified presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, Memory, Font, Body,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate loading a memory font and applying it to presentation text.
+// - Build C# tools for PowerPoint presentation processing that require custom fonts.
+// - Generate or transform PPTX files with specific typography in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Apply corporate theme and export to PDF/A using C#
+//
+// Description:
+// Demonstrates how to apply a corporate .thmx theme to each master slide of
+// PowerPoint presentations and export the result as PDF/A-1b files using
+// Aspose.Slides for .NET. The example processes all supported presentation
+// files in a given input folder, applies the external theme, and saves the
+// themed output as PDF/A in an output folder.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, PPT, ODP, Aspose.Slides for .NET, PDF/A, Corporate Theme,
+// Export, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Batch apply a corporate theme to multiple presentations.
+// - Generate PDF/A compliant documents for archiving or legal purposes.
+// - Automate PowerPoint to PDF/A conversion in .NET applications.
+// - Integrate theme application and PDF/A export into CI/CD pipelines.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

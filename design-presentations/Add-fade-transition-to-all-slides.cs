@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add fade transition to all slides using C#
+//
+// Description:
+// Demonstrates how to add a fade transition to every slide in a PowerPoint
+// presentation using C# and Aspose.Slides for .NET. The example loads an
+// existing PPTX file, applies a 1‑second fade transition to each slide, and
+// saves the result as a new PPTX file. This pattern can be used to automate
+// slide‑show enhancements in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Fade, Transition, Slides,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automatically add fade transitions to all slides in a presentation.
+// - Build .NET tools for enhancing PowerPoint slide shows.
+// - Integrate slide transition automation into document generation pipelines.
+// - Validate and preview presentation effects before distribution.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -40,7 +61,7 @@ class Program
         }
 
         // Save the modified presentation before exiting
-        pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+        pres.Save(outputPath, SaveFormat.Pptx);
         pres.Dispose();
     }
 }

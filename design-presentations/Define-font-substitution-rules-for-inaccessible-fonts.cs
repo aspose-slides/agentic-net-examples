@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Define font substitution rules for inaccessible fonts using C#
+//
+// Description:
+// Demonstrates how to define font substitution rules for inaccessible fonts 
+// using Aspose.Slides for .NET. The example loads a PPTX file, creates a rule 
+// that replaces a missing font with Arial when the source font is inaccessible, 
+// assigns the rule to the presentation's FontsManager, and saves the modified 
+// presentation. This pattern can be used to ensure proper font rendering in 
+// PowerPoint files when original fonts are unavailable.
+//
+// Keywords:
+// C#, Aspose.Slides, Font Substitution, Inaccessible Fonts, Presentation Processing, 
+// PPTX, .NET, FontsManager, FontData, FontSubstRule
+//
+// Use Cases:
+// - Automate definition of font substitution rules for inaccessible fonts.
+// - Build C# tools that ensure consistent font rendering in PowerPoint presentations.
+// - Integrate font fallback logic into .NET applications handling PPTX files.
+// - Prepare presentations for environments where certain fonts may be missing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

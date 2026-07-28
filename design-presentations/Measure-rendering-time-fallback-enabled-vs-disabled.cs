@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Measure rendering time fallback enabled vs disabled using C#
+//
+// Description:
+// Demonstrates how to measure the rendering time of a slide when font fallback
+// is disabled versus when it is enabled using C# and Aspose.Slides for .NET.
+// The example loads a PPTX file, renders the first slide to PNG twice—once
+// without any font fallback rules and once with a fallback rule applied—while
+// timing each operation. It outputs the elapsed times and saves the rendered
+// images and a copy of the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Measure, Rendering, Time,
+// Fallback, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Compare slide rendering performance with and without font fallback.
+// - Benchmark Aspose.Slides rendering under different font handling settings.
+// - Automate generation of slide images for reporting or preview purposes.
+// - Validate that fallback fonts do not adversely affect rendering speed.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Diagnostics;

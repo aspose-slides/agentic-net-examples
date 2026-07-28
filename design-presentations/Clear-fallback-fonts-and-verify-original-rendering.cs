@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Clear fallback fonts and verify original rendering using C#
+//
+// Description:
+// Demonstrates how to clear fallback font rules and verify the effect on font
+// substitutions using Aspose.Slides for .NET. The example loads a presentation
+// with a non‑existent default regular font, displays the current font
+// substitutions, clears all fallback font rules, displays the updated
+// substitutions, and saves the modified presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clear, Fallback, Fonts, Verify,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate clearing of fallback fonts and observe substitution changes.
+// - Build C# tools for PowerPoint presentation processing and validation.
+// - Generate or transform PPTX files while managing font fallback behavior.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

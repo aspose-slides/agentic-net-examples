@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Map hyperlink scheme color to teal using C#
+//
+// Description:
+// Demonstrates how to map the Hyperlink scheme color to a custom teal color in a
+// PowerPoint presentation using C# and Aspose.Slides for .NET. The example
+// creates a new presentation, modifies the master theme's color scheme to set
+// the Hyperlink and FollowedHyperlink colors, and saves the result as a PPTX file.
+// This pattern can be used to customize hyperlink colors in automated PPTX
+// generation or processing workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Hyperlink, Scheme, Color, Teal,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Customize hyperlink colors in generated presentations.
+// - Build C# tools for PowerPoint presentation processing with specific branding.
+// - Automate PPTX workflows that require consistent hyperlink styling.
+// - Integrate presentation color customization into .NET applications.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -25,7 +47,7 @@ class Program
                 colorScheme.FollowedHyperlink.Color = Color.FromArgb(0, 100, 100);
 
                 // Save the presentation before exiting
-                pres.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+                pres.Save("output.pptx", SaveFormat.Pptx);
             }
         }
         catch (FileNotFoundException ex)

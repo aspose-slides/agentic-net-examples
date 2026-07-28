@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Test wildcard font fallback rules using C#
+//
+// Description:
+// Demonstrates how to define wildcard font fallback rules for specific Unicode
+// ranges (e.g., Cyrillic and Emoji) using Aspose.Slides for .NET. The example
+// loads an existing PPTX file, applies the fallback rules, renders the first
+// slide to a PNG image, and saves the modified presentation. This pattern can
+// be used to ensure proper font substitution when a presentation contains
+// characters that are not available in the original fonts.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Font Fallback, Wildcard, Unicode,
+// Cyrillic, Emoji, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Test and verify wildcard font fallback rules in PowerPoint files.
+// - Generate slide images after applying custom font substitution.
+// - Automate presentation processing pipelines that require specific font handling.
+// - Validate that fallback fonts are correctly applied for unsupported characters.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

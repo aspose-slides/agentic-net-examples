@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add speaker notes from external data using C#
+//
+// Description:
+// Demonstrates how to read speaker notes from an external text file and add
+// them to each slide of a PowerPoint presentation using Aspose.Slides for .NET.
+// The example loads an existing PPTX, creates a notes slide for every slide,
+// assigns the corresponding line from the text file as the speaker note, and
+// saves the result as a new PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Speaker, Notes, External, Data,
+// Text File, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate the import of speaker notes from external sources.
+// - Build .NET tools that enrich existing presentations with notes.
+// - Generate or modify PPTX files programmatically in batch processes.
+// - Validate and preview presentation content before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -38,8 +58,8 @@ namespace AddSpeakerNotes
                 // Add speaker notes to each slide
                 for (int index = 0; index < slideCount; index++)
                 {
-                    Aspose.Slides.INotesSlideManager notesManager = presentation.Slides[index].NotesSlideManager;
-                    Aspose.Slides.INotesSlide notesSlide = notesManager.AddNotesSlide();
+                    INotesSlideManager notesManager = presentation.Slides[index].NotesSlideManager;
+                    INotesSlide notesSlide = notesManager.AddNotesSlide();
 
                     // Use the corresponding line from the notes file if available
                     string noteText = index < notesLines.Length ? notesLines[index] : string.Empty;
@@ -49,7 +69,7 @@ namespace AddSpeakerNotes
                 // Save the presentation and handle unsupported format exceptions
                 try
                 {
-                    presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    presentation.Save(outputPath, SaveFormat.Pptx);
                 }
                 catch (Aspose.Slides.PptxUnsupportedFormatException)
                 {

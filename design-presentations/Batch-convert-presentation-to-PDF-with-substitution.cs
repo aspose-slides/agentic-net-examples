@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Batch convert presentation to PDF with font substitution using C#
+//
+// Description:
+// Demonstrates how to batch convert PowerPoint presentations (PPT, PPTX, ODP, etc.) 
+// to PDF while applying font substitution using Aspose.Slides for .NET. The example 
+// loads external system fonts, sets a default regular font for missing fonts, and 
+// processes each supported presentation file in a given input directory, saving 
+// the resulting PDFs to an output subfolder.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, PPT, ODP, Aspose.Slides for .NET, PDF, Batch conversion, 
+// Font substitution, Presentation processing, Office automation
+//
+// Use Cases:
+// - Automate batch conversion of presentations to PDF with consistent font handling.
+// - Build command‑line tools for PowerPoint to PDF transformation in .NET.
+// - Ensure missing fonts are substituted to avoid rendering issues.
+// - Integrate presentation conversion into CI/CD pipelines or document workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

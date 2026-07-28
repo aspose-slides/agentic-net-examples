@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Remove hidden slides and save presentation using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, remove all slides that are
+// marked as hidden, and save the cleaned presentation using Aspose.Slides for .NET.
+// The example includes file existence checks, exception handling for unsupported
+// formats, and console output to confirm successful processing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove, Hidden, Slides, Save,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate the removal of hidden slides from PPTX files before publishing.
+// - Build .NET tools that clean up presentations by eliminating hidden content.
+// - Integrate slide-cleaning functionality into larger PowerPoint workflow
+//   automation solutions.
+// - Validate and preprocess presentations to ensure only visible slides are
+//   included in final deliverables.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Get effective rgb of schemecolor background1 using C#
+//
+// Description:
+// Demonstrates how to get the effective RGB value of SchemeColor.Background1 using
+// C# and Aspose.Slides for .NET. The example creates a presentation, applies a
+// SchemeColor background fill to a shape, retrieves the resolved RGB color, and
+// saves the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Effective, SchemeColor,
+// Background1, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate retrieval of effective RGB values for scheme colors.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

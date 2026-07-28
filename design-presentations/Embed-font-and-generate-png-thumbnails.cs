@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Embed fonts and generate PNG thumbnails using C#
+//
+// Description:
+// Demonstrates how to embed all fonts used in PowerPoint presentations and
+// generate PNG thumbnail images for each slide using Aspose.Slides for .NET.
+// The example processes all PPTX files in a specified input folder, saves
+// the font‑embedded presentations, and writes slide images to an output folder.
+// This pattern can be used to automate batch presentation preparation and
+// preview generation in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Embed Font, Generate Thumbnails,
+// Batch Processing, Presentation Automation, Slide Images
+//
+// Use Cases:
+// - Batch embed fonts into multiple PPTX files.
+// - Generate PNG preview images for each slide in a presentation.
+// - Build console tools for PowerPoint presentation processing.
+// - Prepare presentations for distribution where font embedding is required.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;

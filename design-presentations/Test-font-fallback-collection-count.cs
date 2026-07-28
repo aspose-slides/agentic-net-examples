@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Test font fallback collection count using C#
+//
+// Description:
+// Demonstrates how to create a presentation, add specific font fallback rules,
+// verify the collection count, and save the file using Aspose.Slides for .NET.
+// This standalone console example shows the essential steps for managing
+// font fallback collections in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Font, Fallback, Collection,
+// Presentation Processing, Office Automation, Testing
+//
+// Use Cases:
+// - Verify that font fallback rules are correctly added to a presentation.
+// - Build automated tests for font fallback configurations.
+// - Create utilities that manipulate font fallback settings in PPTX files.
+// - Ensure presentation compatibility across different language scripts.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
@@ -26,7 +45,7 @@ namespace Example
                 }
 
                 // Save the presentation before exiting
-                presentation.Save("FontFallbackTest.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+                presentation.Save("FontFallbackTest.pptx", SaveFormat.Pptx);
             }
         }
     }

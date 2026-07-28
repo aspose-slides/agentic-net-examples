@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Prioritize fallback order by script and export using C#
+//
+// Description:
+// Demonstrates how to define font fallback rules for specific Unicode ranges,
+// render the first slide to a PNG image, and save the updated presentation
+// using Aspose.Slides for .NET. The example shows how to prioritize fallback
+// fonts for Cyrillic, Greek, and Emoji characters, export a slide image, and
+// write the modified PPTX file.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Font fallback, Unicode ranges, Slide export,
+// Image rendering, Presentation processing, .NET automation
+//
+// Use Cases:
+// - Apply custom font fallback rules for multilingual presentations.
+// - Export slide thumbnails or images from a PPTX file.
+// - Automate PPTX modifications and re‑save with updated font settings.
+// - Integrate presentation processing into .NET applications.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides.Export;

@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Apply fade animation to shapes on a title slide using C#
+//
+// Description:
+// Demonstrates how to add shapes to the first slide (commonly a title slide)
+// and apply a fade animation sequence to them using Aspose.Slides for .NET.
+// The example handles both loading an existing PPTX file and creating a new
+// presentation when the input file is missing, then saves the result as a PPTX.
+// This pattern can be used to automate slide animation creation in .NET
+// console applications.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, Fade Animation, Timeline,
+// MainSequence, Shape, Title Slide, Presentation Automation
+//
+// Use Cases:
+// - Add fade-in effects to shapes on a title slide.
+// - Generate a new presentation with animated title elements.
+// - Enhance existing presentations by inserting animated graphics.
+// - Automate PPTX creation and animation for reporting or marketing tools.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

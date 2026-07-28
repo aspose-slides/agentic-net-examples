@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Remove fallback rule by font name using C#
+//
+// Description:
+// Demonstrates how to remove a specific font from fallback rules in a PowerPoint
+// presentation using C# and Aspose.Slides for .NET. The example loads a PPTX,
+// iterates through the font fallback rules, removes the specified font, and
+// deletes any empty rules, then saves the updated presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove, Fallback, Rule, Font, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Remove unwanted font fallback entries from existing presentations.
+// - Prepare presentations for environments where certain fonts are unavailable.
+// - Automate cleanup of font fallback configurations in batch processing.
+// - Integrate font management into .NET PowerPoint automation tools.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Verify removal of embedded font updates font table using C#
+//
+// Description:
+// Demonstrates how to embed a font in a presentation, remove the embedded
+// font, and verify that the font table is updated accordingly using
+// Aspose.Slides for .NET. The example loads a PPTX file, ensures a selected
+// font is embedded, removes it, checks the embedded fonts collection, and
+// saves the modified presentation.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, Embedded Font, Font Removal, Font Table,
+// PowerPoint, PPTX, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Validate that removing an embedded font updates the presentation's font table.
+// - Build automated tests or tools for font management in PowerPoint files.
+// - Integrate font embedding and removal logic into .NET applications.
+// - Ensure compliance of PPTX files with font licensing requirements.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Linq;
@@ -44,7 +65,7 @@ namespace FontRemovalTest
                     if (!wasAlreadyEmbedded)
                     {
                         // Embed the font
-                        presentation.FontsManager.AddEmbeddedFont(testFont, Aspose.Slides.Export.EmbedFontCharacters.All);
+                        presentation.FontsManager.AddEmbeddedFont(testFont, EmbedFontCharacters.All);
                     }
 
                     // Verify the font is now embedded

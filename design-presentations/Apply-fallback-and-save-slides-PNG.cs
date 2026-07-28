@@ -1,3 +1,21 @@
+// -----------------------------------------------------------------------------
+// Example: Export slides to PNG using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation and export each slide
+// as a PNG image using Aspose.Slides for .NET. The example includes basic
+// validation of the input file and error handling, and shows how to save the
+// (unchanged) presentation back to disk.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Export, Slides, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Convert PowerPoint slides to PNG images for web or documentation.
+// - Automate slide image generation in .NET applications.
+// - Integrate slide export functionality into custom tools.
+// - Validate slide rendering before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

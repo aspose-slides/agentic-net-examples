@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX to SVG with embedded fonts using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file, export each slide to an SVG file with
+// embedded fonts, and optionally save the presentation. The example uses
+// Aspose.Slides for .NET to handle PowerPoint processing and SVGOptions to
+// embed fonts directly into the SVG output, ensuring visual fidelity without
+// external font dependencies.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SVG, Export, Embedded Fonts,
+// Slide Export, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Convert PowerPoint slides to SVG with embedded fonts for web or print.
+// - Create automated tools that generate SVG assets from PPTX files.
+// - Ensure SVG outputs retain original typography without requiring external fonts.
+// - Integrate slide-to-SVG conversion into .NET applications or CI pipelines.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -16,10 +37,12 @@ class Program
 
         try
         {
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
-            Aspose.Slides.Export.SVGOptions svgOptions = new Aspose.Slides.Export.SVGOptions();
-            // Preserve theme colors and embed fonts
-            svgOptions.ExternalFontsHandling = Aspose.Slides.Export.SvgExternalFontsHandling.Embed;
+            Presentation presentation = new Presentation(inputPath);
+            SVGOptions svgOptions = new SVGOptions
+            {
+                // Preserve theme colors and embed fonts
+                ExternalFontsHandling = SvgExternalFontsHandling.Embed
+            };
 
             for (int i = 0; i < presentation.Slides.Count; i++)
             {
@@ -30,8 +53,8 @@ class Program
                 }
             }
 
-            // Save presentation before exit
-            presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            // Save presentation before exit (optional, retains original content)
+            presentation.Save("output.pptx", SaveFormat.Pptx);
             presentation.Dispose();
         }
         catch (NotSupportedException)

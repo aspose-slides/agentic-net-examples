@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Insert company logo into master slide and propagate using C#
+//
+// Description:
+// Demonstrates how to insert a company logo onto the master slide of a new
+// presentation so that it appears on all derived slides, using Aspose.Slides for
+// .NET. The example loads an image file, adds it to the presentation, places it
+// on the master slide, and saves the resulting PPTX file.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Insert Logo, Master Slide, Presentation
+// Automation, .NET
+//
+// Use Cases:
+// - Automate adding a company logo to every slide via the master slide.
+// - Build .NET tools for consistent branding across PowerPoint presentations.
+// - Generate or modify PPTX files programmatically with Aspose.Slides.
+// - Validate and test presentation workflows before distribution.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -28,7 +48,7 @@ class Program
         }
 
         // Create a new presentation
-        var pres = new Aspose.Slides.Presentation();
+        var pres = new Presentation();
 
         // Add image to presentation
         var imageBytes = File.ReadAllBytes(imagePath);
@@ -38,10 +58,10 @@ class Program
         var masterSlide = pres.Slides[0].LayoutSlide.MasterSlide;
 
         // Insert logo onto master slide (will appear on all derived slides)
-        masterSlide.Shapes.AddPictureFrame(Aspose.Slides.ShapeType.Rectangle, 10, 10, img.Width, img.Height, img);
+        masterSlide.Shapes.AddPictureFrame(ShapeType.Rectangle, 10, 10, img.Width, img.Height, img);
 
         // Save presentation
-        pres.Save(outputFile, Aspose.Slides.Export.SaveFormat.Pptx);
+        pres.Save(outputFile, SaveFormat.Pptx);
         pres.Dispose();
     }
 }

@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Replace default color scheme with corporate palette using C#
+//
+// Description:
+// Demonstrates how to replace the default color scheme of a PowerPoint presentation
+// with a corporate palette using C# and Aspose.Slides for .NET. The example loads an
+// existing PPTX file (if present) or creates a new presentation, applies a custom
+// set of corporate colors to the master theme's color scheme, and saves the result.
+// This pattern can be used in console applications, automation scripts, or
+// integrated into larger .NET solutions for presentation processing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Replace, Default, Color,
+// Scheme, Corporate Palette, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate the replacement of a presentation's default color scheme with a corporate palette.
+// - Build C# utilities for consistent branding across PowerPoint files.
+// - Generate or transform PPTX files programmatically in .NET applications.
+// - Validate and enforce corporate design standards before publishing presentations.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

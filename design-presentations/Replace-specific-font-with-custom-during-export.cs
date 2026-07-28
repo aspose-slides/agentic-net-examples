@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Replace specific font with custom during export using C#
+//
+// Description:
+// Demonstrates how to replace a specific font with a custom font during export 
+// using C# and Aspose.Slides for .NET. The example loads a PowerPoint file, 
+// substitutes all occurrences of the source font with the destination font, 
+// and saves the modified presentation. This pattern can be used to ensure 
+// consistent typography across exported presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Replace, Specific, Font, 
+// Custom, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate replacement of a specific font with a custom font during export.
+// - Build C# tools for PowerPoint presentation processing and font management.
+// - Generate or transform PPTX files in .NET applications with consistent fonts.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -21,17 +42,17 @@ class Program
         try
         {
             // Load the presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+            Presentation presentation = new Presentation(inputPath);
 
             // Define the source font to replace and the destination custom font
-            Aspose.Slides.IFontData sourceFont = new Aspose.Slides.FontData("Arial");
-            Aspose.Slides.IFontData destFont = new Aspose.Slides.FontData("Calibri");
+            IFontData sourceFont = new FontData("Arial");
+            IFontData destFont = new FontData("Calibri");
 
             // Replace all occurrences of the source font with the custom font
             presentation.FontsManager.ReplaceFont(sourceFont, destFont);
 
             // Save the modified presentation
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            presentation.Save(outputPath, SaveFormat.Pptx);
 
             // Clean up
             presentation.Dispose();
@@ -39,7 +60,6 @@ class Program
         catch (Exception ex)
         {
             // Handle unsupported format or other errors
-            // Format not supported
             Console.WriteLine("An error occurred: " + ex.Message);
         }
     }

@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Detect custom XML parts and list metadata using C#
+//
+// Description:
+// Demonstrates how to detect custom XML parts embedded in a PowerPoint presentation
+// and list their metadata and XML content using C# and Aspose.Slides for .NET.
+// The example loads a PPTX file, enumerates all custom XML parts, prints their
+// ItemId and XML string, and saves the presentation unchanged.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Detect, Custom XML Parts, List Metadata,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate detection of custom XML parts and extraction of their data.
+// - Build C# utilities for PowerPoint presentation analysis and validation.
+// - Integrate custom XML handling into .NET applications that process PPTX files.
+// - Verify and audit embedded XML content before publishing or further transformation.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

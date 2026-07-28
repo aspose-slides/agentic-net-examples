@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add hyperlink to shape and open website using C#
+//
+// Description:
+// Demonstrates how to add a hyperlink to a shape and open a website using C#
+// and Aspose.Slides for .NET. The example creates a presentation, inserts a
+// rectangle shape with text, assigns an external hyperlink to the shape, and
+// saves the presentation as a PPTX file. This pattern can be used to automate
+// PowerPoint workflows that require interactive elements.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Hyperlink, Shape, Open,
+// Website, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding hyperlinks to shapes that open external websites.
+// - Build C# tools for PowerPoint presentation processing with interactive
+//   elements.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
@@ -7,10 +29,11 @@ class Program
     static void Main()
     {
         // Create a new presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        Presentation presentation = new Presentation();
 
         // Add a rectangle shape to the first slide
-        Aspose.Slides.IAutoShape shape = (Aspose.Slides.IAutoShape)presentation.Slides[0].Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 100, 100, 200, 50);
+        IAutoShape shape = (IAutoShape)presentation.Slides[0].Shapes.AddAutoShape(
+            ShapeType.Rectangle, 100, 100, 200, 50);
 
         // Add text to the shape
         shape.AddTextFrame("Click here");
@@ -29,12 +52,11 @@ class Program
         // Save the presentation
         try
         {
-            presentation.Save("HyperlinkDemo.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            presentation.Save("HyperlinkDemo.pptx", SaveFormat.Pptx);
         }
         catch (Exception ex)
         {
             // Handle format not supported or other save errors
-            // Format not supported
             Console.WriteLine("Error saving presentation: " + ex.Message);
         }
 

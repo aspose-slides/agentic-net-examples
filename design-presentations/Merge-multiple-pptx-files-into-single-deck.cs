@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Merge multiple pptx files into single deck using C#
+//
+// Description:
+// Demonstrates how to merge multiple pptx files into a single deck using C# and 
+// Aspose.Slides for .NET. The example loads each source presentation, clones its 
+// slides into a destination presentation, and saves the combined result. It 
+// includes basic file existence checks and error handling for unsupported formats 
+// or loading issues.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Merge, Multiple, Pptx, Files, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate merging multiple pptx files into a single deck.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

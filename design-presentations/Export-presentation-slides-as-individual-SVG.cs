@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export presentation slides as individual SVG using C#
+//
+// Description:
+// Demonstrates how to export each slide of a PowerPoint presentation to a
+// separate SVG file using Aspose.Slides for .NET. The example loads a PPTX,
+// iterates through all slides, writes each slide as an SVG image to a target
+// directory, and optionally saves the original presentation.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, SVG, Export, Slides, Presentation,
+// Office Automation, .NET
+//
+// Use Cases:
+// - Convert PowerPoint slides to scalable vector graphics for web or print.
+// - Automate batch processing of presentations to SVG format.
+// - Integrate slide‑to‑SVG conversion into .NET tools or services.
+// - Prepare assets for responsive design or further graphic manipulation.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

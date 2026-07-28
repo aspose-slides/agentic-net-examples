@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Apply grayscale effect to picture shapes using C#
+//
+// Description:
+// Demonstrates how to apply a grayscale effect to picture shapes within a
+// PowerPoint presentation using C# and Aspose.Slides for .NET. The example
+// loads an existing PPTX file, iterates through its slides and picture frames,
+// adds a grayscale image transform, and saves the modified presentation.
+// This pattern can be used to automate PPTX workflows, validate visual
+// transformations, or integrate presentation processing into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, Grayscale, Effect,
+// Picture, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate applying a grayscale effect to picture shapes.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Prioritize font directories and verify selected font using C#
+//
+// Description:
+// Demonstrates how to load custom font folders with priority, configure
+// Aspose.Slides to use those folders, inspect the actual font selected for
+// each text portion, list any font substitutions that occurred, and save the
+// modified presentation. The example is a self‑contained console application
+// that shows the required steps for PowerPoint processing with Aspose.Slides for .NET.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Font directories, Font priority, 
+// Font verification, Font substitution, LoadOptions, FontsLoader
+//
+// Use Cases:
+// - Prioritize custom font folders when loading a presentation.
+// - Verify which font Aspose.Slides selects for specific text runs.
+// - Detect and log font substitutions performed during rendering.
+// - Automate PPTX processing and save results after font handling.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

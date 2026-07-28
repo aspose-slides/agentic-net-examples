@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add watermark to presentation and export PDF using C#
+//
+// Description:
+// Demonstrates how to add a text watermark to each slide of a PowerPoint
+// presentation and export the result as a PDF using Aspose.Slides for .NET.
+// The example processes all supported presentation files in a given input
+// directory, applies a centered "CONFIDENTIAL" watermark on the master slide,
+// and saves the output PDFs to a specified folder.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, PPT, ODP, Aspose.Slides for .NET, PDF, Watermark, Presentation,
+// Export, Automation, File I/O
+//
+// Use Cases:
+// - Batch add a confidential watermark to presentations before distribution.
+// - Convert watermarked PowerPoint files to PDF format in .NET applications.
+// - Automate preprocessing of slide decks for compliance or branding.
+// - Integrate slide watermarking and PDF conversion into CI/CD pipelines.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
