@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Embed all fonts and generate PDF using C#
+//
+// Description:
+// Demonstrates how to embed all fonts from a PowerPoint presentation and
+// generate a PDF using C# and Aspose.Slides for .NET. The example loads a PPTX
+// file, configures PDF export options to embed full fonts, and saves the result
+// as a PDF document. This pattern can be used in console applications or
+// automation scripts for presentation processing.
+//
+// Keywords:
+// C#, Aspose.Slides, PDF, Embed Fonts, PowerPoint, PPTX, Presentation Export,
+// .NET, Office Automation
+//
+// Use Cases:
+// - Convert PPTX files to PDF with all fonts embedded for reliable rendering.
+// - Build command‑line tools that ensure PDF output preserves original typography.
+// - Automate batch processing of presentations for publishing or archiving.
+// - Validate font embedding in generated PDFs before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
