@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Extract built in properties to JSON config using C#
+//
+// Description:
+// Demonstrates how to extract built‑in document properties from a PowerPoint
+// presentation and serialize them to a JSON configuration file using C# and
+// Aspose.Slides for .NET. The example loads a PPTX file, reads the built‑in
+// properties, writes them to a formatted JSON file, and saves the presentation
+// (required by the API) as a temporary file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Extract, Built‑in Properties,
+// JSON, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of PowerPoint built‑in properties to JSON for reporting.
+// - Build C# utilities that analyze or audit PPTX metadata.
+// - Integrate presentation metadata handling into .NET applications.
+// - Validate and log presentation properties before publishing or further processing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Text.Json;
