@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Extract audio from hyperlink and analyze its duration using C#
+//
+// Description:
+// Demonstrates how to locate a shape with a hyperlink that contains an embedded
+// audio (sound) object, extract the audio binary data, save it to a file, estimate
+// its playback duration, and compare the estimated duration with the slide's
+// transition duration. The example uses Aspose.Slides for .NET in a console
+// application to automate PowerPoint presentation processing.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, Hyperlink, Sound, Audio Extraction,
+// Duration Estimation, SlideShowTransition, Presentation Automation
+//
+// Use Cases:
+// - Extract embedded audio from a hyperlink in a PPTX file.
+// - Estimate audio length and validate against slide timing.
+// - Automate compliance checks for presentation audio and transitions.
+// - Build .NET tools for processing and validating PowerPoint content.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
