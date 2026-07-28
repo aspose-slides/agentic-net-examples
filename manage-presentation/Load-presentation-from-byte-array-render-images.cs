@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Load presentation from byte array and render slide images using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation from a byte array,
+// render each slide to a JPEG image, and save the presentation using
+// Aspose.Slides for .NET. The example simulates receiving presentation data
+// over a network stream, processes the slides, and outputs both image files
+// and a saved PPTX file in a standalone console application. Developers can
+// use this pattern to automate PPTX workflows, generate slide thumbnails,
+// or integrate presentation handling into .NET services.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, Presentation, Byte Array,
+// Slide Rendering, Image Export, Office Automation
+//
+// Use Cases:
+// - Load a presentation from a byte array received via network or API.
+// - Generate JPEG thumbnails for each slide in a presentation.
+// - Save processed presentations after manipulation.
+// - Build .NET tools for automated PowerPoint processing and image extraction.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
