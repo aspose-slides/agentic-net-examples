@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Compare default thumbnails to embedded font dimensions using C#
+//
+// Description:
+// Demonstrates how to generate slide thumbnails before and after embedding
+// fonts, compare their dimensions, and save the presentation with embedded
+// fonts using Aspose.Slides for .NET. The example shows the required
+// presentation‑processing steps for PowerPoint files and produces the
+// requested output in a standalone console application. Developers can use
+// this pattern to automate PPTX workflows, validate results, or integrate
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Compare, Default Thumbnails,
+// Embedded Fonts, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate comparison of default thumbnails to embedded font dimensions.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -25,74 +48,71 @@ namespace SlideThumbnailComparison
             try
             {
                 // Load presentation
-                Presentation pres = new Presentation(inputPath);
-
-                // Create rendering options with a default regular font
-                RenderingOptions renderOpts = new RenderingOptions();
-                renderOpts.DefaultRegularFont = "Arial";
-
-                // Generate thumbnail using default regular font
-                IImage regularImage = pres.Slides[0].GetImage(renderOpts, 1f, 1f);
-                regularImage.Save(outputRegularThumb, Aspose.Slides.ImageFormat.Jpeg);
-                regularImage.Dispose();
-
-                // Add embedded fonts (using provided rule pattern)
-                IFontData[] allFonts = pres.FontsManager.GetFonts();
-                IFontData[] embeddedFonts = pres.FontsManager.GetEmbeddedFonts();
-                foreach (IFontData font in allFonts)
+                using (Presentation pres = new Presentation(inputPath))
                 {
-                    bool isEmbedded = false;
-                    foreach (IFontData ef in embeddedFonts)
+                    // Create rendering options with a default regular font
+                    RenderingOptions renderOpts = new RenderingOptions
                     {
-                        if (ef.Equals(font))
+                        DefaultRegularFont = "Arial"
+                    };
+
+                    // Generate thumbnail using default regular font
+                    using (IImage regularImage = pres.Slides[0].GetImage(renderOpts, 1f, 1f))
+                    {
+                        regularImage.Save(outputRegularThumb, ImageFormat.Jpeg);
+                        int regularWidth = regularImage.Width;
+                        int regularHeight = regularImage.Height;
+
+                        // Add embedded fonts (using provided rule pattern)
+                        IFontData[] allFonts = pres.FontsManager.GetFonts();
+                        IFontData[] embeddedFonts = pres.FontsManager.GetEmbeddedFonts();
+                        foreach (IFontData font in allFonts)
                         {
-                            isEmbedded = true;
-                            break;
+                            bool isEmbedded = false;
+                            foreach (IFontData ef in embeddedFonts)
+                            {
+                                if (ef.Equals(font))
+                                {
+                                    isEmbedded = true;
+                                    break;
+                                }
+                            }
+                            if (!isEmbedded)
+                            {
+                                pres.FontsManager.AddEmbeddedFont(font, EmbedFontCharacters.All);
+                            }
+                        }
+
+                        // Save presentation after embedding fonts
+                        pres.Save(outputPresentation, SaveFormat.Pptx);
+
+                        // Generate thumbnail after embedding fonts
+                        using (IImage embeddedImage = pres.Slides[0].GetImage(renderOpts, 1f, 1f))
+                        {
+                            embeddedImage.Save(outputEmbeddedThumb, ImageFormat.Jpeg);
+                            int embeddedWidth = embeddedImage.Width;
+                            int embeddedHeight = embeddedImage.Height;
+
+                            Console.WriteLine("Regular thumbnail size: {0}x{1}", regularWidth, regularHeight);
+                            Console.WriteLine("Embedded thumbnail size: {0}x{1}", embeddedWidth, embeddedHeight);
+                            if (regularWidth == embeddedWidth && regularHeight == embeddedHeight)
+                            {
+                                Console.WriteLine("Thumbnail dimensions are identical.");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Thumbnail dimensions differ.");
+                            }
                         }
                     }
-                    if (!isEmbedded)
-                    {
-                        pres.FontsManager.AddEmbeddedFont(font, Aspose.Slides.Export.EmbedFontCharacters.All);
-                    }
                 }
-
-                // Save presentation after embedding fonts
-                pres.Save(outputPresentation, SaveFormat.Pptx);
-
-                // Generate thumbnail after embedding fonts
-                IImage embeddedImage = pres.Slides[0].GetImage(renderOpts, 1f, 1f);
-                embeddedImage.Save(outputEmbeddedThumb, Aspose.Slides.ImageFormat.Jpeg);
-                embeddedImage.Dispose();
-
-                // Compare dimensions (width and height)
-                // Note: IImage provides Width and Height properties
-                int regularWidth = regularImage.Width;
-                int regularHeight = regularImage.Height;
-                int embeddedWidth = embeddedImage.Width;
-                int embeddedHeight = embeddedImage.Height;
-
-                Console.WriteLine("Regular thumbnail size: {0}x{1}", regularWidth, regularHeight);
-                Console.WriteLine("Embedded thumbnail size: {0}x{1}", embeddedWidth, embeddedHeight);
-                if (regularWidth == embeddedWidth && regularHeight == embeddedHeight)
-                {
-                    Console.WriteLine("Thumbnail dimensions are identical.");
-                }
-                else
-                {
-                    Console.WriteLine("Thumbnail dimensions differ.");
-                }
-
-                // Dispose presentation
-                pres.Dispose();
             }
             catch (NotSupportedException)
             {
                 // Format not supported
-                // Comment: format not supported
             }
             catch (Exception ex)
             {
-                // Handle other exceptions (e.g., web service errors)
                 Console.WriteLine("An error occurred: " + ex.Message);
             }
         }
