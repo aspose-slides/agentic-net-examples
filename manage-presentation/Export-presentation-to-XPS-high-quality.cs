@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export presentation to XPS high quality using C#
+//
+// Description:
+// Demonstrates how to export a PowerPoint presentation to a high‑quality XPS
+// document using C# and Aspose.Slides for .NET. The example loads a PPTX file,
+// configures XPS export options to improve rendering of metafiles, and saves the
+// result as an XPS file. This pattern can be used in console applications or
+// automated workflows that require high‑fidelity XPS output.
+//
+// Keywords:
+// C#, Aspose.Slides, XPS, High Quality, Export, Presentation, PowerPoint, PPTX,
+// Office Automation, .NET
+//
+// Use Cases:
+// - Convert PPTX presentations to high‑quality XPS for printing or archiving.
+// - Build command‑line tools for batch conversion of PowerPoint files to XPS.
+// - Integrate XPS export into .NET applications that process presentation content.
+// - Ensure metafile graphics are rendered as PNG for better visual fidelity.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
