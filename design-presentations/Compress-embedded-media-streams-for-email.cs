@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Compress embedded media streams for email using C#
+//
+// Description:
+// Demonstrates how to compress images within a PowerPoint presentation to
+// reduce file size for email transmission using C# and Aspose.Slides for .NET.
+// The example loads a PPTX file, iterates through picture frames, applies
+// compression, and saves the optimized presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Compress, Images, Media, 
+// Presentation Processing, Email, Automation
+//
+// Use Cases:
+// - Reduce PowerPoint file size before emailing.
+// - Automate image compression in PPTX files.
+// - Integrate presentation size optimization into .NET applications.
+// - Prepare presentations for bandwidth‑limited environments.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
