@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Batch set creator property to company name using C#
+//
+// Description:
+// Demonstrates how to set the Creator (Author) document property to a specified
+// company name for multiple PowerPoint presentations using C# and Aspose.Slides
+// for .NET. The example processes all supported presentation files in a given
+// folder, updates the Author property, and saves the changes back to the files.
+// This pattern can be used to automate metadata updates across many PPTX, PPT,
+// and ODP files in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, PPT, ODP, Aspose.Slides for .NET, Creator, Author, Property,
+// Company Name, Batch Processing, Presentation Metadata, Office Automation
+//
+// Use Cases:
+// - Update the Creator property to a company name across a collection of presentations.
+// - Automate metadata standardization for corporate PowerPoint assets.
+// - Integrate presentation property updates into build or deployment pipelines.
+// - Ensure consistent author information before publishing or sharing files.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
