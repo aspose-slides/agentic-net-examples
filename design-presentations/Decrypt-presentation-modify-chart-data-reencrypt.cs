@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Decrypt presentation modify chart data reencrypt using C#
+//
+// Description:
+// Demonstrates how to open a password‑protected PowerPoint presentation, modify
+// chart data, and re‑encrypt the file with a new password using C# and
+// Aspose.Slides for .NET. The example loads the presentation, updates the first
+// series of the first chart, applies a new encryption password, and saves the
+// result as a new PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Decrypt, Encrypt, Presentation,
+// Modify, Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Decrypt a protected PPTX, edit its content, and protect it again.
+// - Automate chart data updates in secured presentations.
+// - Build .NET tools for secure PowerPoint workflow automation.
+// - Validate and transform encrypted PPTX files in enterprise environments.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides.Export;
