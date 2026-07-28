@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Replace picture fill backgrounds with solid color using C#
+//
+// Description:
+// Demonstrates how to replace picture fill backgrounds with a solid color using 
+// C# and Aspose.Slides for .NET. The example loads a PPTX file, iterates through 
+// each slide, checks for picture fill backgrounds, and replaces them with a 
+// LightGray solid fill. The modified presentation is then saved as a new file.
+// This pattern can be used to standardize slide backgrounds in automated 
+// PowerPoint processing workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Replace, Picture Fill, Solid Fill, 
+// Backgrounds, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of picture-filled slide backgrounds to solid colors.
+// - Ensure consistent background styling across presentations.
+// - Build C# tools for PowerPoint presentation cleanup or rebranding.
+// - Integrate background normalization into .NET applications handling PPTX files.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides.Export;
