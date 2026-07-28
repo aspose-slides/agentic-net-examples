@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Compare uncompressed and compressed embedded font sizes using C#
+//
+// Description:
+// Demonstrates how to embed fonts in a PowerPoint presentation either with all
+// characters (uncompressed) or only the characters actually used (compressed)
+// using Aspose.Slides for .NET, and then compares the resulting file sizes.
+// The example loads an existing PPTX, creates two versions with different
+// embedding strategies, saves them, and prints the size difference.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Font Embedding, Uncompressed,
+// Compressed, Embedded Fonts, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Evaluate the impact of font embedding strategies on PPTX file size.
+// - Automate creation of presentations with full or subset font embedding.
+// - Build tools that optimize PowerPoint files for distribution.
+// - Validate font embedding settings before publishing presentations.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
