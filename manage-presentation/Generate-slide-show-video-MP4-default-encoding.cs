@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Generate slide show video MP4 default encoding using C#
+//
+// Description:
+// Demonstrates how to generate a slide show video in MP4 format using the
+// default encoding settings with Aspose.Slides for .NET. The example loads a
+// PowerPoint presentation, converts it to an MP4 video, and saves the output
+// file. This pattern can be used to automate PPTX to video conversion in
+// .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Generate, Slide Show, Video,
+// MP4, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate generation of slide show videos in MP4 format.
+// - Build C# tools for converting PowerPoint presentations to video.
+// - Integrate slide show video creation into .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -26,25 +46,11 @@ namespace AsposeSlidesDemo
                 // Load the presentation
                 using (Presentation presentation = new Presentation(inputPath))
                 {
-                    // Attempt to obtain the MP4 SaveFormat value via reflection.
-                    // MP4 is not defined in the SaveFormat enum, so this will fail.
-                    Aspose.Slides.Export.SaveFormat mp4Format;
-                    try
-                    {
-                        mp4Format = (Aspose.Slides.Export.SaveFormat)Enum.Parse(typeof(Aspose.Slides.Export.SaveFormat), "Mp4");
-                    }
-                    catch (ArgumentException)
-                    {
-                        // MP4 format is not supported by the SaveFormat enumeration.
-                        Console.WriteLine("MP4 format is not supported by Aspose.Slides. Unable to generate slide show video in MP4.");
-                        return;
-                    }
-
                     // Save the presentation as a video (MP4) using default encoding settings.
-                    // This may throw NotSupportedException if the format is not supported at runtime.
+                    // Aspose.Slides supports MP4 via the SaveFormat.Mp4 enumeration value.
                     try
                     {
-                        presentation.Save(outputPath, mp4Format);
+                        presentation.Save(outputPath, SaveFormat.Mp4);
                         Console.WriteLine("Slide show video saved successfully to: " + outputPath);
                     }
                     catch (NotSupportedException)
