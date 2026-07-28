@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Assign default background to unfilled slides using C#
+//
+// Description:
+// Demonstrates how to assign a default solid background color to slides that
+// do not already have a solid fill using C# and Aspose.Slides for .NET. The
+// example loads an existing PPTX file, checks each slide's effective background
+// fill type, and applies a generated solid color to any slide whose background
+// is not solid. The modified presentation is then saved as a new PPTX file.
+// This pattern can be used to ensure visual consistency across presentations
+// by automatically providing a fallback background for unfilled slides.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Assign, Default, Background,
+// Unfilled, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate assignment of default background colors to slides lacking a solid fill.
+// - Build C# tools for PowerPoint presentation processing and cleanup.
+// - Generate or transform PPTX files in .NET applications with consistent styling.
+// - Validate and enforce presentation design guidelines before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
