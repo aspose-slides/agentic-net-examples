@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Load PPTX from bytes modify master background using C#
+//
+// Description:
+// Demonstrates how to load a PPTX from a byte array, modify the master slide
+// background color, and save the result using Aspose.Slides for .NET. The
+// example shows the required presentation‑processing steps for PowerPoint files
+// and produces the requested output in a standalone console application.
+// Developers can use this pattern to automate PPTX workflows, validate results,
+// or integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, Bytes, Modify, Master
+// Background, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate loading a PPTX from bytes and changing the master slide background.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Drawing;
