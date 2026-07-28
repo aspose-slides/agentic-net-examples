@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Log missing built in properties to diagnostic file using C#
+//
+// Description:
+// Demonstrates how to iterate over one or more PowerPoint presentations,
+// read their built‑in document properties using Aspose.Slides for .NET, and
+// write entries to a diagnostic text file for any properties that are empty
+// or missing. The example also shows how to create an unchanged copy of each
+// processed presentation. This pattern can be used in automated validation
+// or migration scenarios where presentation metadata must be verified.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Built‑in properties, Missing
+// properties, Diagnostic file, Presentation metadata, Automation
+//
+// Use Cases:
+// - Validate that required built‑in properties (Author, Title, etc.) are set
+//   before publishing or archiving presentations.
+// - Generate a report of missing metadata across a batch of PPTX files.
+// - Integrate property‑checking logic into CI pipelines or document‑management
+//   systems.
+// - Create unchanged copies of source presentations while performing analysis.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;
