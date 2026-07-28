@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Remove hyperlink from text runs by keyword using C#
+//
+// Description:
+// Demonstrates how to remove hyperlinks from text runs that contain a
+// specific keyword using C# and Aspose.Slides for .NET. The example loads a
+// PPTX presentation, scans all text portions for the given keyword, removes
+// any associated click or mouse‑over hyperlinks, and saves the result.
+// This pattern can be used to cleanse presentations of sensitive links.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove, Hyperlink, Text, Runs,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automatically strip hyperlinks from text containing confidential terms.
+// - Build .NET utilities for sanitizing PowerPoint files before distribution.
+// - Integrate hyperlink removal into larger presentation‑processing pipelines.
+// - Ensure compliance by removing links from specific content in PPTX files.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
