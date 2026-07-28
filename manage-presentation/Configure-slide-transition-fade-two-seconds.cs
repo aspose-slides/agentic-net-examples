@@ -1,3 +1,27 @@
+// -----------------------------------------------------------------------------
+// Example: Configure slide transition fade two seconds using C#
+//
+// Description:
+// Demonstrates how to configure a Fade slide transition with a duration of two
+// seconds for each slide in a PowerPoint presentation using Aspose.Slides for
+// .NET. The example creates a presentation, ensures a minimum number of slides,
+// applies the transition settings, and saves the result as a PPTX file. This
+// pattern can be used to automate slide transition configuration in .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Configure, Slide, Transition,
+// Fade, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate the configuration of a Fade transition lasting two seconds on all
+//   slides.
+// - Build C# tools for PowerPoint presentation processing that include custom
+//   slide transitions.
+// - Generate or modify PPTX files with specific transition effects in .NET
+//   applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
