@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Load PPTX presentation with encrypted comments using C#
+//
+// Description:
+// Demonstrates how to load a PPTX presentation that contains encrypted
+// comments using Aspose.Slides for .NET, iterate through the comment authors
+// and their comments, output the comment text to the console, and save a
+// decrypted copy of the presentation. The example is a self‑contained console
+// application suitable for automating comment extraction and PPTX decryption.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, Encrypted Comments,
+// Decrypt, Presentation, Comments, Office Automation
+//
+// Use Cases:
+// - Load a password‑protected PPTX file that has encrypted comments.
+// - Extract and display comment authors and texts from a secured presentation.
+// - Save a decrypted version of the presentation for further processing.
+// - Integrate comment handling into .NET tools for PowerPoint automation.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
