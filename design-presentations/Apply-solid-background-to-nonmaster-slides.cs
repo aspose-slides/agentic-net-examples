@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Apply solid background to nonmaster slides using C#
+//
+// Description:
+// Demonstrates how to apply a solid LightGray background to slides that inherit
+// their background from the master slide. The example iterates through all
+// slides in a newly created presentation, changes the background type to
+// OwnBackground where necessary, sets the fill type to solid, and assigns a
+// LightGray color using Aspose.Slides for .NET. The resulting presentation is
+// saved as OutputPresentation.pptx.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Apply Solid Background, Non-Master Slides,
+// Presentation Processing, Office Automation, Background Fill
+//
+// Use Cases:
+// - Automatically apply a uniform solid background to all non‑master slides.
+// - Prepare presentations with consistent slide backgrounds in batch processes.
+// - Integrate background styling into .NET applications that generate PPTX files.
+// - Ensure slides have explicit backgrounds before publishing or further editing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
