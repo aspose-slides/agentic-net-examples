@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Summarize PPTX slide comments with nlp using C#
+//
+// Description:
+// Demonstrates how to extract slide comments from a PPTX file, summarize them
+// using a placeholder NLP method, and store the summary in the presentation's
+// document properties. The example uses Aspose.Slides for .NET to load the
+// presentation, retrieve comments via text extraction and slide objects, and
+// save the updated file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, AI, Summarize, Slide Comments,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction and summarization of PPTX slide comments.
+// - Build C# tools that incorporate basic NLP summarization for presentations.
+// - Integrate comment analysis into .NET PowerPoint workflows.
+// - Store generated summaries within presentation metadata for later review.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
