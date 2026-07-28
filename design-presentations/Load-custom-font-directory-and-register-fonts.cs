@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Load custom font directory, register fonts, and apply fallback rules using C#
+//
+// Description:
+// Demonstrates how to load a custom font directory, register external fonts,
+// define font fallback rules, and apply them to a presentation using Aspose.Slides for .NET.
+// The example also renders the first slide to a PNG image and saves the modified
+// presentation. This pattern is useful for handling missing fonts and ensuring correct
+// text rendering in PowerPoint files.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, custom fonts, font fallback, FontsLoader, FontsManager, image export, presentation processing
+//
+// Use Cases:
+// - Load and register external fonts for presentations.
+// - Define and apply font fallback rules for specific Unicode ranges.
+// - Export slides as images after font handling.
+// - Save updated presentations with applied font settings.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
