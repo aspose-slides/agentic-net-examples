@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Apply custom icon to PPTX slide comments using C#
+//
+// Description:
+// Demonstrates how to add a comment with priority metadata to a PPTX slide,
+// determine its priority, and apply a custom colored icon shape near the comment
+// using Aspose.Slides for .NET. The example loads an existing presentation or
+// creates a new one, adds a modern comment, selects an icon color based on the
+// priority (High, Medium, Low), inserts a rectangle shape as the icon, and saves
+// the result. This pattern can be used to automate comment visualization in
+// PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, Custom, Icon, Pptx,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding visual priority indicators to PPTX slide comments.
+// - Build C# tools for PowerPoint presentation processing with custom icons.
+// - Generate or transform PPTX files in .NET applications with comment metadata.
+// - Validate and enhance presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Drawing;
