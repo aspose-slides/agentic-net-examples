@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Sync PPTX comment timestamps with server using C#
+//
+// Description:
+// Demonstrates how to retrieve the current UTC time from a public time API,
+// synchronize it with a comment timestamp, add a modern comment to a new
+// PowerPoint presentation, and save the file using Aspose.Slides for .NET.
+// The example shows HTTP request handling, fallback to local time, and basic
+// presentation manipulation in a console application.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Sync, Comment, Timestamps,
+// Presentation Processing, Office Automation, HttpClient, Server Time
+//
+// Use Cases:
+// - Automate synchronization of PPTX comment timestamps with a server clock.
+// - Build .NET tools that add time‑stamped comments to PowerPoint files.
+// - Integrate presentation comment handling into server‑based workflows.
+// - Validate and generate PPTX files with accurate comment metadata.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Net.Http;
