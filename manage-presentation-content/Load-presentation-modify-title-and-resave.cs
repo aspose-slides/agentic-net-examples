@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Load presentation modify title and resave using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation from a ZIP file, modify
+// its document title property, and resave it using Aspose.Slides for .NET with
+// Zip64 mode enabled. The example includes error handling for missing input
+// files and unsupported formats.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load Presentation, Modify Title,
+// Save Presentation, Zip64Mode, Document Properties, Office Automation
+//
+// Use Cases:
+// - Update the title metadata of existing PowerPoint files programmatically.
+// - Ensure large presentations are saved with Zip64 support.
+// - Build .NET utilities for batch processing of PPTX files.
+// - Integrate presentation metadata updates into automated workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
