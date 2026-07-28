@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Backup document properties to JSON using C#
+//
+// Description:
+// Demonstrates how to back up built‑in document properties of a PowerPoint
+// presentation to a JSON file using Aspose.Slides for .NET. The example loads
+// a PPTX file, extracts its properties into a POCO, serialises the data to JSON,
+// writes the backup file, clears the built‑in properties, and saves the
+// modified presentation. This pattern can be used for property versioning,
+// migration, or audit purposes in .NET applications.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Document Properties, JSON, Backup,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Create a backup of presentation metadata before making changes.
+// - Implement audit trails for PowerPoint document properties.
+// - Restore or migrate properties across presentations.
+// - Automate property management in batch processing tools.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Text.Json;
