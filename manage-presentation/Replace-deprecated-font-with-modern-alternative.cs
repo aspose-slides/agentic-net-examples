@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Replace deprecated font with modern alternative using C#
+//
+// Description:
+// Demonstrates how to replace a deprecated font with a modern alternative in a
+// PowerPoint presentation using C# and Aspose.Slides for .NET. The example
+// loads an existing PPTX file, substitutes the specified source font with a
+// destination font across the entire presentation, and saves the result.
+// This pattern can be used to modernize legacy presentations or enforce
+// corporate branding.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Replace Font, Deprecated Font,
+// Modern Font, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate the replacement of outdated fonts in bulk presentations.
+// - Ensure brand compliance by updating legacy slide decks.
+// - Integrate font migration into .NET based document processing pipelines.
+// - Prepare presentations for publishing with up‑to‑date typography.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
