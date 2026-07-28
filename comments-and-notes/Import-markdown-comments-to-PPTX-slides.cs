@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Import markdown comments to PPTX slides using C#
+//
+// Description:
+// Demonstrates how to read a markdown file containing comment entries and
+// import them as modern comments into a PowerPoint presentation using
+// Aspose.Slides for .NET. The example creates a new presentation, adds a
+// single slide, maps comment authors, and places each comment at a fixed
+// position on the first slide. The resulting PPTX file is saved to disk.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Import, Markdown, Comments, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Convert markdown comment lists into PowerPoint slide comments.
+// - Automate documentation or review workflows that involve PPTX files.
+// - Build tools that enrich presentations with author‑attributed notes.
+// - Integrate markdown‑based feedback into existing PowerPoint assets.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;
