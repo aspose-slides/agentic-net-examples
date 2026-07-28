@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set PPTX master slides gray background using C#
+//
+// Description:
+// Demonstrates how to set the background color of all master slides in PPTX
+// files to solid gray using C# and Aspose.Slides for .NET. The console
+// application processes every *.pptx file in a specified input folder,
+// updates each master slide, and saves the modified presentations into a
+// "Processed" subfolder while preserving the original file names.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Master Slides, Gray Background,
+// Presentation Processing, Batch Processing, Office Automation, Folder Scan
+//
+// Use Cases:
+// - Batch update master slide backgrounds to a corporate gray theme.
+// - Build automated tools for preparing presentations before distribution.
+// - Integrate background styling into .NET PowerPoint workflow pipelines.
+// - Validate and enforce visual consistency across multiple PPTX files.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Drawing;
