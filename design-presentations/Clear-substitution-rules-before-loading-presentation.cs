@@ -1,3 +1,21 @@
+// -----------------------------------------------------------------------------
+// Example: Clear substitution rules before loading presentation using C#
+//
+// Description:
+// Demonstrates how to clear all font substitution rules before loading a
+// PowerPoint presentation using Aspose.Slides for .NET. The example loads an
+// existing PPTX file, removes any custom font substitution rules, and saves
+// the presentation, ensuring that default font handling is used.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Font Substitution, Clear Rules, Presentation Processing
+//
+// Use Cases:
+// - Remove custom font substitution settings before processing a presentation.
+// - Ensure default font rendering when loading PPTX files.
+// - Prepare presentations for environments without specific font mappings.
+// - Automate PowerPoint file cleanup in .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
