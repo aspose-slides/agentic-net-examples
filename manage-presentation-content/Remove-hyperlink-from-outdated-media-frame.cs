@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Remove hyperlink from outdated media frame using C#
+//
+// Description:
+// Demonstrates how to remove hyperlinks from video, audio, and OLE object
+// frames in a PowerPoint presentation using Aspose.Slides for .NET. The
+// example loads a PPTX file, iterates through all slides and shapes, clears
+// click and mouse‑over hyperlinks from media frames, and saves the result.
+// This pattern helps automate cleanup of legacy presentations before
+// distribution.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove, Hyperlink, Media Frame,
+// Video, Audio, OLE, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Clean up old presentations by removing hyperlinks from embedded media.
+// - Build .NET tools that prepare PPTX files for publishing or archiving.
+// - Ensure compliance by stripping interactive links from media objects.
+// - Integrate hyperlink removal into automated PowerPoint workflow pipelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
