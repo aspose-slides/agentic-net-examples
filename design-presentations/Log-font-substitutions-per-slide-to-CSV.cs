@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Log font substitutions per slide to CSV using C#
+//
+// Description:
+// Demonstrates how to log font substitutions for each slide in a PowerPoint
+// presentation to a CSV file using C# and Aspose.Slides for .NET. The example
+// loads a PPTX file, enumerates font substitutions per slide, writes the
+// results to a CSV, and saves an unchanged copy of the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Font Substitutions, CSV, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Generate a CSV report of font substitutions per slide for auditing.
+// - Automate validation of font usage in PowerPoint files.
+// - Integrate font substitution logging into .NET PowerPoint processing tools.
+// - Ensure consistent typography across presentations before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
