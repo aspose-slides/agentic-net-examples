@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Load PPTX from URL extract comments notes using C#
+//
+// Description:
+// Demonstrates how to download a PPTX file from a URL, load it with Aspose.Slides,
+// and extract both slide comments and slide notes using C#. The example shows the
+// required presentation‑processing steps for PowerPoint files and produces the
+// requested output in a standalone console application. Developers can use this
+// pattern to automate PPTX workflows, validate results, or integrate presentation
+// logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, URL, Extract, Comments, Notes,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate loading a PPTX from a remote URL and extracting comments and notes.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation content before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Net.Http;
