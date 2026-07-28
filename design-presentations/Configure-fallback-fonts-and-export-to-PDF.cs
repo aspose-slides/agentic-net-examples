@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Configure fallback fonts and export to PDF using C#
+//
+// Description:
+// Demonstrates how to configure fallback fonts for loading a PowerPoint
+// presentation and for PDF export using Aspose.Slides for .NET. The example
+// loads a PPTX file, applies a default regular font as a fallback, and saves
+// the presentation as a PDF document. This pattern is useful for handling
+// missing fonts in source files and ensuring consistent rendering.
+//
+// Keywords:
+// C#, Aspose.Slides, PDF, Fallback Fonts, PowerPoint, PPTX, Export, Presentation
+// Processing, .NET
+//
+// Use Cases:
+// - Apply fallback fonts when loading presentations with missing fonts.
+// - Export PowerPoint files to PDF while preserving text layout.
+// - Build automation tools for batch conversion of PPTX to PDF.
+// - Ensure consistent font rendering across different environments.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -20,18 +41,18 @@ class Program
         try
         {
             // Configure load options with a fallback font
-            Aspose.Slides.LoadOptions loadOptions = new Aspose.Slides.LoadOptions();
+            LoadOptions loadOptions = new LoadOptions();
             loadOptions.DefaultRegularFont = "Arial";
 
             // Load the presentation using the configured load options
-            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath, loadOptions))
+            using (Presentation presentation = new Presentation(inputPath, loadOptions))
             {
                 // Configure PDF export options with the same fallback font
-                Aspose.Slides.Export.PdfOptions pdfOptions = new Aspose.Slides.Export.PdfOptions();
+                PdfOptions pdfOptions = new PdfOptions();
                 pdfOptions.DefaultRegularFont = "Arial";
 
                 // Save the presentation as PDF
-                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pdf, pdfOptions);
+                presentation.Save(outputPath, SaveFormat.Pdf, pdfOptions);
             }
         }
         catch (Exception ex)
