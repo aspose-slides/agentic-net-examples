@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Replace slide placeholders from CSV using C#
+//
+// Description:
+// Demonstrates how to replace slide placeholders in a PowerPoint presentation
+// using values read from a CSV file with C# and Aspose.Slides for .NET. The
+// example loads a PPTX, reads placeholder‑type/value pairs from a CSV, updates
+// matching placeholders on each slide, and saves the result as a new PPTX file.
+// This pattern can be used to automate PPTX content updates based on external
+// data sources.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, CSV, Aspose.Slides for .NET, Replace, Slide, Placeholders,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate replacement of slide placeholders using data from CSV files.
+// - Build .NET tools for batch updating PowerPoint presentations.
+// - Integrate CSV‑driven content into PPTX generation workflows.
+// - Validate and preview presentation changes before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;

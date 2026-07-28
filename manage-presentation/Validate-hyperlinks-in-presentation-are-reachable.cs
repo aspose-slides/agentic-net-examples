@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Validate hyperlinks in presentation are reachable using C#
+//
+// Description:
+// Demonstrates how to validate that all external hyperlinks in a PowerPoint
+// presentation are reachable using C# and Aspose.Slides for .NET. The example
+// loads a PPTX file, iterates through hyperlink click actions, checks each URL
+// with HttpClient, reports unreachable links, and saves the (unchanged) presentation.
+// This pattern can be used to automate hyperlink validation in PPTX workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Validate, Hyperlinks,
+// Presentation, Reachable, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate validation of external hyperlinks in PowerPoint presentations.
+// - Build C# tools for PowerPoint content quality assurance.
+// - Integrate hyperlink reachability checks into .NET applications.
+// - Ensure presentation links are functional before publishing or distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Net.Http;

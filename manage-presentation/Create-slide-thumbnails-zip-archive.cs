@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Create slide thumbnails zip archive using C#
+//
+// Description:
+// Demonstrates how to generate PNG thumbnails for each slide in a PowerPoint
+// presentation and package them into a ZIP archive using Aspose.Slides for .NET.
+// The example loads a PPTX file, creates 200x150 pixel thumbnails, stores each
+// thumbnail as a separate entry in a ZIP file, and optionally saves a copy of
+// the original presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Slide, Thumbnails, ZIP, Archive,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of slide thumbnail collections for web previews.
+// - Build .NET tools that bundle slide images into downloadable archives.
+// - Integrate slide thumbnail generation into CI pipelines or reporting systems.
+// - Validate and transform PPTX files while producing visual summaries.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.IO.Compression;

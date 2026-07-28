@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Extract images from PPTX and save to folder using C#
+//
+// Description:
+// Demonstrates how to extract all embedded images from a PPTX file and save
+// them as PNG files into a specified folder using C# and Aspose.Slides for .NET.
+// The example loads a presentation, iterates through its image collection,
+// writes each image to disk, and handles basic error conditions.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Extract Images, Save Images, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of images from PowerPoint presentations.
+// - Build tools that archive or analyze PPTX embedded media.
+// - Integrate image extraction into .NET workflows or services.
+// - Validate and preprocess presentation assets before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

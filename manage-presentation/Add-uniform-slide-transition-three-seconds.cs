@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add uniform slide transition three seconds using C#
+//
+// Description:
+// Demonstrates how to add a uniform Fade slide transition with a three‑second
+// duration to every slide in a PowerPoint presentation using C# and Aspose.Slides
+// for .NET. The example loads an existing PPTX file, applies the transition to
+// all slides, and saves the modified presentation. This pattern can be used to
+// automate slide‑show timing adjustments in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Uniform, Slide, Transition, Fade,
+// Three, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding a uniform Fade transition of three seconds to all slides.
+// - Build C# tools for PowerPoint presentation processing and timing control.
+// - Generate or modify PPTX files in .NET applications with consistent slide
+//   transitions.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

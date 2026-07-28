@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Add multi series chart with axis titles using C#
+//
+// Description:
+// Demonstrates how to create a clustered column chart with multiple series,
+// custom data points, and axis titles using C# and Aspose.Slides for .NET.
+// The example builds a new presentation, adds a chart, configures series,
+// categories, fills, and saves the file as a PPTX.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Multi-series Chart, Axis Titles,
+// Presentation Generation, Office Automation
+//
+// Use Cases:
+// - Generate PowerPoint slides with multi-series column charts.
+// - Automate addition of axis titles to charts in .NET applications.
+// - Build tools for reporting or data visualization in PPTX format.
+// - Validate chart creation workflows before deployment.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Drawing;

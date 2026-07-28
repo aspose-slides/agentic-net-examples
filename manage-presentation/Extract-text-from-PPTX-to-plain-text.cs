@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Extract text from PPTX to plain text using C#
+//
+// Description:
+// Demonstrates how to extract raw text, including slide shapes and notes,
+// from a PPTX file and save it as a plain text file using C# and 
+// Aspose.Slides for .NET. The example shows the required presentation-processing 
+// steps for PowerPoint files and produces the requested output in a standalone 
+// console application. Developers can use this pattern to automate PPTX text 
+// extraction, validate content, or integrate presentation logic into .NET 
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Extract, Text, Plain Text, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of slide and notes text from PPTX files.
+// - Build C# utilities for PowerPoint content analysis.
+// - Generate plain‑text reports from presentations in .NET applications.
+// - Validate presentation content before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Text;

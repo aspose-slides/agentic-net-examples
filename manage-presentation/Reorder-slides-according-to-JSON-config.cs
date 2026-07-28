@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Reorder slides according to JSON config using C#
+//
+// Description:
+// Demonstrates how to reorder slides in a PowerPoint presentation based on a
+// JSON configuration file using Aspose.Slides for .NET. The example loads a
+// PPTX file, reads an array of zero‑based slide indices from a JSON file, validates
+// the configuration, reorders the slides accordingly, and saves the result.
+// This pattern can be used to automate slide sequencing, integrate custom
+// ordering logic, or prepare presentations for publishing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Reorder, Slides, JSON, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Reorder slides automatically according to external JSON specifications.
+// - Build .NET tools that adjust slide sequences before distribution.
+// - Integrate custom slide ordering into larger PowerPoint automation workflows.
+// - Validate and transform PPTX files programmatically.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Text.Json;

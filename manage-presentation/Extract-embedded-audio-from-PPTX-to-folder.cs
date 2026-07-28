@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Extract embedded audio from PPTX to folder using C#
+//
+// Description:
+// Demonstrates how to extract embedded audio from a PPTX file to a folder using
+// C# and Aspose.Slides for .NET. The example loads a presentation, iterates
+// through its embedded audio objects, writes each audio stream to a separate
+// file, and saves the presentation. This pattern can be used to automate PPTX
+// workflows, validate results, or integrate audio extraction into .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Extract, Embedded, Audio, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of embedded audio from PPTX files.
+// - Build C# utilities for PowerPoint presentation processing.
+// - Integrate audio extraction into .NET applications.
+// - Validate presentation assets before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

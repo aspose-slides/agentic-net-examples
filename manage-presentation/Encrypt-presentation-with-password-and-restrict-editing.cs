@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Encrypt presentation with password and restrict editing using C#
+//
+// Description:
+// Demonstrates how to encrypt a PowerPoint presentation with an open password
+// and apply write protection using an edit password. The example uses
+// Aspose.Slides for .NET to create a new presentation, set protection, and
+// save the file as a PPTX. This pattern can be used to secure presentations
+// before distribution or storage.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Encrypt, Presentation,
+// Password, Restrict, WriteProtection, Presentation Protection, Office Automation
+//
+// Use Cases:
+// - Automate encryption of presentations with an open password.
+// - Apply write protection to prevent unauthorized editing.
+// - Build .NET tools for securing PowerPoint files.
+// - Integrate presentation protection into document management workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

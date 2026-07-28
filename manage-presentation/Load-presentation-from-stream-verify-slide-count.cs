@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Load presentation from stream verify slide count using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation from a file stream, 
+// verify the number of slides, and save the presentation using Aspose.Slides 
+// for .NET. The example includes error handling for missing files, unsupported 
+// formats, and I/O exceptions, and shows proper resource cleanup.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, Presentation, Stream, 
+// Verify, Slide Count, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Load a presentation from a stream and validate its slide count.
+// - Build .NET utilities that process PowerPoint files without loading them 
+//   entirely into memory.
+// - Automate validation of presentation content before further processing.
+// - Ensure proper resource management when handling file streams in 
+//   presentation workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

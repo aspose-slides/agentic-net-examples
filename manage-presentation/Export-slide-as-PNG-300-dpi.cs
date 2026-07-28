@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export slide as PNG 300 dpi using C#
+//
+// Description:
+// Demonstrates how to export the first slide of a PowerPoint presentation
+// as a PNG image with a resolution of 300 DPI using Aspose.Slides for .NET.
+// The example loads a PPTX file, calculates pixel dimensions based on the
+// slide size, renders the slide to an image, and saves it as a PNG file.
+// It also shows basic error handling for missing files and unsupported formats.
+//
+// Keywords:
+// C#, Aspose.Slides, PPTX, PNG, 300 DPI, slide export, PowerPoint, .NET,
+// Image rendering, Presentation processing
+//
+// Use Cases:
+// - Convert PowerPoint slides to high‑resolution PNG images for publishing.
+// - Automate batch export of slides at 300 DPI in C# tools.
+// - Integrate slide rendering into .NET applications or services.
+// - Validate slide appearance after programmatic modifications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Drawing;

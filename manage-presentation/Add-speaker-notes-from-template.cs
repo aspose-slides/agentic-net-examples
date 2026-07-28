@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add speaker notes from template using C#
+//
+// Description:
+// Demonstrates how to add speaker notes to each slide of a presentation 
+// using a plain‑text template file with Aspose.Slides for .NET. The example 
+// loads an existing PPTX, reads a line‑per‑slide notes file, creates a notes 
+// slide for every slide, assigns the corresponding text (or a default note) 
+// and saves the result as a new PPTX file. This pattern can be used to 
+// automate speaker‑notes generation in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Speaker, Notes, Template, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding speaker notes from a predefined template.
+// - Build C# utilities for PowerPoint presentation enrichment.
+// - Generate or modify PPTX files programmatically in .NET.
+// - Validate and preview speaker notes before publishing a presentation.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Insert a table with alternating cell background colors using C#
+//
+// Description:
+// Demonstrates how to create a new presentation, add a table with specified
+// column widths and row heights, apply alternating solid background colors to
+// each cell, and save the result as a PPTX file using Aspose.Slides for .NET.
+// The example is a self‑contained console application suitable for automating
+// PowerPoint generation tasks.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, Table, Cell Background Color,
+// Solid Fill, Presentation Generation, Office Automation
+//
+// Use Cases:
+// - Generate PowerPoint tables with custom cell coloring programmatically.
+// - Build .NET utilities for automated slide creation and styling.
+// - Integrate table formatting logic into larger presentation workflows.
+// - Produce styled PPTX files for reporting or documentation purposes.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

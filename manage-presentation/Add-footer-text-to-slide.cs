@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Apply layout to all slides using C#
+//
+// Description:
+// Demonstrates how to select or create a suitable layout slide (TitleAndObject,
+// Title, or Blank) and apply it to every slide in a presentation using
+// Aspose.Slides for .NET. The example loads an existing PPTX file, ensures the
+// desired layout exists in the master slide, updates each slide's LayoutSlide
+// property, and saves the modified presentation. This pattern can be used to
+// enforce consistent slide layouts programmatically.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Layout, Slide, Presentation,
+// Automation, Slide Master, Slide Layout
+//
+// Use Cases:
+// - Enforce a uniform layout across all slides in a presentation.
+// - Programmatically update slide layouts during batch processing.
+// - Prepare presentations for corporate branding by applying a standard layout.
+// - Integrate layout management into .NET applications that manipulate PPTX files.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Insert image onto slide fit placeholder using C#
+//
+// Description:
+// Demonstrates how to insert an image onto a slide and scale it to fit the
+// slide dimensions using Aspose.Slides for .NET. The example creates a new
+// presentation, loads an external image, adds it as a picture frame to the
+// first slide, calculates scaling factors based on the slide size, applies
+// relative scaling, and saves the result as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Insert Image, Slide Fit,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automatically add and fit images to slides in generated presentations.
+// - Build .NET utilities for preparing slide decks with full‑size graphics.
+// - Integrate image scaling logic into PowerPoint automation workflows.
+// - Validate that images correctly fill slide placeholders before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

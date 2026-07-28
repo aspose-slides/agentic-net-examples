@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export slide as PNG custom dpi using C#
+//
+// Description:
+// Demonstrates how to export each slide of a PowerPoint presentation as a PNG
+// image with a custom DPI setting using C# and Aspose.Slides for .NET. The
+// example loads a PPTX file, calculates a scaling factor based on the desired
+// DPI, renders each slide to a high‑resolution PNG, and saves the images to an
+// output folder. It also shows optional saving of the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Export, Slide, Custom DPI,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate high‑resolution PNG export of presentation slides.
+// - Build .NET tools for PowerPoint slide image generation.
+// - Integrate custom‑DPI image rendering into document workflows.
+// - Validate and transform PPTX content before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

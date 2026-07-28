@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Apply gradient fill to shape using C#
+//
+// Description:
+// Demonstrates how to apply a linear gradient fill to an ellipse shape in a
+// PowerPoint presentation using C# and Aspose.Slides for .NET. The example
+// creates a new presentation, adds an ellipse, sets a purple‑to‑red gradient,
+// and saves the result as a PPTX file. This pattern can be used to automate
+// gradient styling of shapes in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Gradient Fill, Shape, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate applying gradient fills to shapes in presentations.
+// - Build C# tools for generating or modifying PPTX files with styled graphics.
+// - Integrate gradient shape creation into .NET reporting or content pipelines.
+// - Validate gradient fill settings before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
