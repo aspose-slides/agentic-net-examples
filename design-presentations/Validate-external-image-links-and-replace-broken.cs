@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Validate external image links and replace broken images using C#
+//
+// Description:
+// Demonstrates how to iterate through a PowerPoint presentation, detect
+// picture shapes that reference external image URLs, verify the URLs by
+// attempting to download the images, and replace any broken or unreachable
+// links with a local placeholder image. The example uses Aspose.Slides for
+// .NET and HttpClient, and saves the resulting presentation as a new PPTX file.
+// This pattern can be used to ensure presentations contain only valid images
+// before distribution.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, external image links, HttpClient,
+// placeholder image, image validation, presentation processing, Office automation
+//
+// Use Cases:
+// - Validate and fix external image references in existing PPTX files.
+// - Automate replacement of broken images with a default placeholder.
+// - Build .NET tools for preparing presentations for publishing or sharing.
+// - Integrate image link validation into larger PowerPoint workflow pipelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Net.Http;
