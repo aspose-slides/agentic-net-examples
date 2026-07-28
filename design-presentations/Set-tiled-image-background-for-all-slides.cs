@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set tiled image background for all slides using C#
+//
+// Description:
+// Demonstrates how to set a tiled image as the background for all slides using
+// C# and Aspose.Slides for .NET. The example loads (or creates) a presentation,
+// adds a tile image to the presentation's image collection, applies a tiled
+// picture fill to each slide's background, and saves the result as a PPTX file.
+// This pattern can be used to automate PowerPoint background styling in .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Tiled, Image, Background,
+// Slides, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting a tiled image background for all slides.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files with custom tiled backgrounds in .NET.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
