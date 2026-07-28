@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Extract text from slides and save summary using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, extract raw text from each
+// slide using Aspose.Slides for .NET, and write a plain‑text summary file. The
+// example includes validation of the input file, handling of unsupported
+// formats, and a simple console‑based workflow suitable for automation or
+// integration into larger .NET applications.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, Text extraction, Slide summary,
+// Console application, Presentation processing, Office automation
+//
+// Use Cases:
+// - Automate extraction of slide text for indexing or search.
+// - Generate textual summaries of presentations for accessibility.
+// - Build command‑line tools that process PPTX files in batch.
+// - Validate and log presentation content before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Text;
