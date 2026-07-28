@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Create emoji fallback and export PNG using C#
+//
+// Description:
+// Demonstrates how to create a PowerPoint presentation containing an emoji,
+// apply a font fallback rule for emoji characters, export the first slide as a
+// PNG image, and save the updated presentation using Aspose.Slides for .NET.
+// The example also shows how to generate a source PPTX file on‑the‑fly if it
+// does not exist.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, PNG, Emoji, FontFallback, 
+// Presentation Export, Slide Image, Office Automation
+//
+// Use Cases:
+// - Generate a PPTX with emoji content when missing.
+// - Apply font fallback to ensure emoji rendering across platforms.
+// - Export slides containing emojis to PNG for preview or publishing.
+// - Automate PPTX processing and image extraction in .NET applications.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
