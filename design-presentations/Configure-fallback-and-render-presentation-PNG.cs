@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Configure fallback and render presentation PNG using C#
+//
+// Description:
+// Demonstrates how to configure font fallback rules and render the first slide
+// of a PowerPoint presentation to a PNG image using Aspose.Slides for .NET.
+// The example loads a PPTX file, sets up Unicode range based font fallback,
+// saves the rendered slide as PNG, and then saves the (potentially modified)
+// presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Configure, Fallback, FontFallback, Render, Presentation, ImageExport, Office Automation
+//
+// Use Cases:
+// - Apply custom font fallback for specific Unicode ranges in presentations.
+// - Generate PNG images from slides for thumbnails or previews.
+// - Automate PowerPoint processing workflows in .NET applications.
+// - Validate and transform PPTX files before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
