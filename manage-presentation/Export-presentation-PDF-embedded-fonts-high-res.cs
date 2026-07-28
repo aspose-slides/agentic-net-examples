@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Export presentation PDF embedded fonts high res using C#
+//
+// Description:
+// Demonstrates how to export a PowerPoint presentation to a PDF file with
+// embedded fonts and high‑resolution images using Aspose.Slides for .NET.
+// The example loads a PPTX file, configures PDF export options for full font
+// embedding and 300 dpi image resolution, and saves the result as a PDF.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Export, Presentation,
+// Embedded Fonts, High Resolution, SufficientResolution, Office Automation
+//
+// Use Cases:
+// - Convert PPTX files to PDF while preserving original fonts.
+// - Generate high‑quality PDF documents from presentations for printing.
+// - Automate batch conversion of presentations to PDF with custom export settings.
+// - Integrate PDF export functionality into .NET applications or services.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
