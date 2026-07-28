@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: List available font families after memory load using C#
+//
+// Description:
+// Demonstrates how to list available font families after loading a custom
+// font from memory using C# and Aspose.Slides for .NET. The example loads a
+// presentation with a memory‑based font source, enumerates the fonts available
+// to the presentation, and saves the document.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, List, Available, Font,
+// Families, Memory Font, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate listing of font families when custom fonts are supplied from memory.
+// - Build C# tools for PowerPoint presentation processing with in‑memory fonts.
+// - Validate font availability before rendering or converting presentations.
+// - Integrate custom font handling into .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
