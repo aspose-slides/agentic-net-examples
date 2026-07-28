@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX notes to handout view using C#
+//
+// Description:
+// Demonstrates how to export PPTX notes to a handout view PDF using C# and 
+// Aspose.Slides for .NET. The example loads a PowerPoint presentation, configures
+// the notes layout to appear at the bottom of each slide, and saves the result
+// as a PDF file. This pattern can be used to automate the creation of handout
+// PDFs that include speaker notes.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, PDF, Notes, Handout, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate export of PPTX notes to handout view PDFs.
+// - Build C# tools for PowerPoint presentation processing with notes.
+// - Generate handout PDFs that include slide notes in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
