@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Load hyperlink media BLOB on demand using C#
+//
+// Description:
+// Demonstrates how to load a large video file as a media BLOB on demand, embed
+// it into a slide, and associate an external hyperlink with a text shape using
+// Aspose.Slides for .NET. The example shows the required presentation‑processing
+// steps for PowerPoint files and produces a PPTX file in a standalone console
+// application. Developers can use this pattern to automate PPTX workflows,
+// embed large media efficiently, and add clickable hyperlinks.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, Hyperlink, Media, Blob,
+// Video, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Load large video media as a BLOB on demand to avoid loading entire file into memory.
+// - Embed video frames and external hyperlinks into PowerPoint presentations.
+// - Build C# tools for automated PPTX generation with media and links.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Net;
