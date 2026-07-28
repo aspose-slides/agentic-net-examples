@@ -1,3 +1,27 @@
+// -----------------------------------------------------------------------------
+// Example: Render presentation to PDF with fallback fonts using C#
+//
+// Description:
+// Demonstrates how to render a PowerPoint presentation (PPTX) to PDF while
+// applying fallback font rules using Aspose.Slides for .NET. The example loads
+// an input PPTX file, configures a fallback rule for a specific Unicode range
+// (e.g., emojis) to use the "Segoe UI Emoji" font, and saves the result as a PDF.
+// This pattern is useful for ensuring proper rendering of characters that may
+// be missing from the primary fonts in the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Render, Presentation,
+// Fallback, Fonts, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate rendering of presentations to PDF with fallback fonts.
+// - Build C# tools for PowerPoint presentation processing that require
+//   reliable character rendering.
+// - Generate or transform PPTX files in .NET applications while handling
+//   missing glyphs.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
