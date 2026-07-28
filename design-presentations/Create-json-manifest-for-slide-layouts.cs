@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Create json manifest for slide layouts using C#
+//
+// Description:
+// Demonstrates how to generate a JSON manifest describing each slide's layout
+// type and its shapes (including shape type and text content) from a PowerPoint
+// presentation using Aspose.Slides for .NET. The example loads a PPTX file,
+// extracts layout and shape information, outputs the manifest to the console,
+// and saves the presentation unchanged.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Json, Manifest, Slide, Layouts,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of JSON manifests for slide layout analysis.
+// - Build tools for PowerPoint presentation inspection in .NET.
+// - Integrate slide metadata extraction into CI pipelines or reporting systems.
+// - Validate slide structures before publishing or further processing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Collections.Generic;
