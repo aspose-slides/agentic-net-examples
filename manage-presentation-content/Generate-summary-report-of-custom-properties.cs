@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Generate summary report of custom properties using C#
+//
+// Description:
+// Demonstrates how to generate a summary report of custom properties using C#
+// and Aspose.Slides for .NET. The example loads a PPTX file, enumerates each
+// custom document property, outputs its name and data type to the console, and
+// saves the presentation. This pattern can be used to automate PPTX workflows,
+// validate custom metadata, or integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Generate, Summary, Report,
+// Custom, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate generation of a summary report of custom properties.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
