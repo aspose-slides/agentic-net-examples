@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Adjust master slide background transparency half using C#
+//
+// Description:
+// Demonstrates how to adjust the master slide background transparency to 50%
+// using C# and Aspose.Slides for .NET. The example loads an existing PPTX,
+// modifies the first master slide's background to a semi‑transparent solid fill,
+// and saves the result as a new PPTX file. This pattern can be used to
+// automate PowerPoint presentation processing, validate visual changes, or
+// integrate slide styling logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Adjust, Master Slide, Background,
+// Transparency, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting master slide background transparency to half opacity.
+// - Build C# utilities for PowerPoint presentation styling.
+// - Generate or transform PPTX files with custom master slide designs.
+// - Validate presentation appearance before distribution or publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
