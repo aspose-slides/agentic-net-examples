@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add hyperlink to audio streaming service using C#
+//
+// Description:
+// Demonstrates how to embed an audio file into a PowerPoint presentation and
+// attach a hyperlink that points to an external audio streaming service using
+// Aspose.Slides for .NET. The example creates a new presentation, adds an
+// embedded audio frame, configures a click‑action hyperlink, and saves the
+// resulting PPTX file. This pattern can be used to automate PPTX workflows that
+// require linking embedded media to online streaming resources.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Hyperlink, Audio, Streaming,
+// Service, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding hyperlinks to embedded audio that reference streaming services.
+// - Build C# tools for PowerPoint presentation processing with media integration.
+// - Generate or transform PPTX files that combine local audio assets with online links.
+// - Validate presentation workflows involving media playback before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
