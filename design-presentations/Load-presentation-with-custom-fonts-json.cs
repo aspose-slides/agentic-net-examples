@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Load presentation with custom fonts and output font list as JSON using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation with custom font folders
+// and in‑memory fonts using Aspose.Slides for .NET, retrieve the fonts used in
+// the presentation, serialize the font information to JSON, and save the
+// presentation. The example shows the required steps for handling custom fonts
+// and generating JSON output in a standalone console application. Developers can
+// use this pattern to automate PPTX workflows, validate font usage, or integrate
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, Presentation, Custom Fonts,
+// FontManager, JSON, Serialization, Office Automation
+//
+// Use Cases:
+// - Load a presentation with custom font folders and memory fonts.
+// - Export the list of fonts used in a presentation to JSON.
+// - Build C# tools for PowerPoint font management and processing.
+// - Validate and troubleshoot font dependencies in PPTX files.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Text.Json;
