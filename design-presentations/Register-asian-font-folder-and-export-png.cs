@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Register Asian font folder and export slides as PNG using C#
+//
+// Description:
+// Demonstrates how to register an external Asian fonts folder, load a PowerPoint
+// presentation, export each slide as a high‑resolution PNG image, and save the
+// presentation using Aspose.Slides for .NET. The example includes validation of
+// input files, creation of output directories, and cleanup of loaded fonts.
+// This pattern can be used in console applications to automate slide image
+// generation and ensure proper font rendering for Asian characters.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Register, Asian, Font,
+// Folder, Presentation Processing, Slide Export, Image Export, Office Automation
+//
+// Use Cases:
+// - Automate registration of Asian font folders for correct rendering.
+// - Generate PNG images from each slide of a PPTX file.
+// - Build .NET tools for batch processing of presentations.
+// - Validate and transform presentations before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
