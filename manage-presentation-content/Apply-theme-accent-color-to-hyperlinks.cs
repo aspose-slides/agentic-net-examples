@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Apply theme accent color to hyperlinks using C#
+//
+// Description:
+// Demonstrates how to apply the theme accent color to hyperlink objects in a
+// PowerPoint presentation using Aspose.Slides for .NET. The example loads an
+// existing PPTX file, updates hyperlink color sources on shapes and text
+// portions to follow the presentation's theme styles, and saves the result.
+// This pattern helps automate consistent hyperlink styling across slides.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, Theme, Accent, Color,
+// Hyperlink, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Ensure all hyperlinks in a presentation adopt the theme's accent color.
+// - Build tools that standardize hyperlink appearance in generated PPTX files.
+// - Update existing presentations to match a new corporate theme automatically.
+// - Validate hyperlink styling as part of a CI pipeline for presentation assets.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
