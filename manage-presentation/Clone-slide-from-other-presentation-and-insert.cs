@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Clone slide from other presentation and insert using C#
+//
+// Description:
+// Demonstrates how to clone a slide from a source presentation and insert it
+// into a destination presentation at a specified position using C# and
+// Aspose.Slides for .NET. The example loads two PPTX files, copies the first
+// slide from the source, inserts it into the destination, and saves the result.
+// This pattern can be used to automate slide reuse across presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone, Slide, Other,
+// Presentation, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate cloning of a slide from one PowerPoint file to another.
+// - Build C# tools for consolidating or reusing slides across presentations.
+// - Generate customized PPTX files by inserting external slides at runtime.
+// - Validate slide insertion workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
