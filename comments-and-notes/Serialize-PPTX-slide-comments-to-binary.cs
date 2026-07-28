@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Serialize PPTX slide comments to binary using C#
+//
+// Description:
+// Demonstrates how to create a PowerPoint presentation, add a slide comment,
+// serialize all slide comments to a binary file, deserialize them into a new
+// presentation, and save both presentations. The example uses Aspose.Slides for
+// .NET and shows the required steps for handling slide comments in binary form.
+//
+// Keywords:
+// C#, Aspose.Slides, PPTX, Serialize, Binary, Slide Comments, Presentation
+// Processing, Office Automation, .NET
+//
+// Use Cases:
+// - Export slide comments to a compact binary format for storage or transmission.
+// - Reconstruct presentations from serialized comment data.
+// - Build tools that need to backup or migrate PowerPoint comment information.
+// - Automate validation of comment data in PowerPoint workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Drawing;
@@ -9,8 +28,8 @@ class Program
     static void Main()
     {
         // Create a new presentation and add a comment
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
-        Aspose.Slides.ICommentAuthor author = presentation.CommentAuthors.AddAuthor("John Doe", "JD");
+        Presentation presentation = new Presentation();
+        ICommentAuthor author = presentation.CommentAuthors.AddAuthor("John Doe", "JD");
         author.Comments.AddComment("Sample comment", presentation.Slides[0], new PointF(0.5f, 0.5f), DateTime.Now);
 
         // Serialize comments to a binary file
@@ -19,11 +38,11 @@ class Program
         using (BinaryWriter writer = new BinaryWriter(fs))
         {
             writer.Write(presentation.Slides.Count);
-            foreach (Aspose.Slides.ISlide slide in presentation.Slides)
+            foreach (ISlide slide in presentation.Slides)
             {
-                Aspose.Slides.IComment[] comments = slide.GetSlideComments(null);
+                IComment[] comments = slide.GetSlideComments(null);
                 writer.Write(comments.Length);
-                foreach (Aspose.Slides.IComment cmt in comments)
+                foreach (IComment cmt in comments)
                 {
                     writer.Write(cmt.Author.Name);
                     writer.Write(cmt.Author.Initials);
@@ -36,7 +55,7 @@ class Program
         }
 
         // Deserialize comments into a new presentation
-        Aspose.Slides.Presentation newPresentation = new Aspose.Slides.Presentation();
+        Presentation newPresentation = new Presentation();
         using (FileStream fs = new FileStream(binaryPath, FileMode.Open, FileAccess.Read))
         using (BinaryReader reader = new BinaryReader(fs))
         {
@@ -48,7 +67,7 @@ class Program
 
             for (int i = 0; i < slideCount; i++)
             {
-                Aspose.Slides.ISlide slide = newPresentation.Slides[i];
+                ISlide slide = newPresentation.Slides[i];
                 int commentCount = reader.ReadInt32();
                 for (int j = 0; j < commentCount; j++)
                 {
@@ -59,7 +78,7 @@ class Program
                     float posX = reader.ReadSingle();
                     float posY = reader.ReadSingle();
 
-                    Aspose.Slides.ICommentAuthor desAuthor = newPresentation.CommentAuthors.AddAuthor(authorName, authorInitials);
+                    ICommentAuthor desAuthor = newPresentation.CommentAuthors.AddAuthor(authorName, authorInitials);
                     desAuthor.Comments.AddComment(text, slide, new PointF(posX, posY), new DateTime(ticks));
                 }
             }
@@ -68,7 +87,7 @@ class Program
         // Save presentations with format handling
         try
         {
-            presentation.Save("OriginalPresentation.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            presentation.Save("OriginalPresentation.pptx", SaveFormat.Pptx);
         }
         catch (Exception ex)
         {
@@ -78,7 +97,7 @@ class Program
 
         try
         {
-            newPresentation.Save("ReconstructedPresentation.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            newPresentation.Save("ReconstructedPresentation.pptx", SaveFormat.Pptx);
         }
         catch (Exception ex)
         {
