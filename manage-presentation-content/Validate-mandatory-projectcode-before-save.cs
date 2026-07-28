@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Validate mandatory projectcode before save using C#
+//
+// Description:
+// Demonstrates how to validate that a mandatory custom property "ProjectCode"
+// exists in a PowerPoint presentation before saving it using C# and 
+// Aspose.Slides for .NET. The example loads a PPTX file, checks the document
+// properties for the required custom property, and only saves the presentation
+// if the property is present. This pattern helps ensure required metadata is
+// present before publishing or further processing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Validate, Mandatory, 
+// ProjectCode, Before, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate validation of mandatory custom properties before saving.
+// - Build C# tools for PowerPoint presentation metadata enforcement.
+// - Prevent publishing of presentations missing required information.
+// - Integrate validation steps into .NET presentation workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
