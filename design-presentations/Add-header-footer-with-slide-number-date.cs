@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add header footer with slide number date using C#
+//
+// Description:
+// Demonstrates how to add a custom footer, date, and slide number to each slide
+// of a PowerPoint presentation using C# and Aspose.Slides for .NET. The example
+// loads an existing PPTX file, configures header/footer visibility and text,
+// and saves the updated presentation. This pattern can be used to automate
+// PPTX workflows, apply consistent branding, or prepare presentations for
+// distribution.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Header, Footer, Slide Number,
+// Date, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding custom footer, date, and slide numbers to presentations.
+// - Build C# tools for PowerPoint branding and metadata insertion.
+// - Generate or modify PPTX files in .NET applications.
+// - Validate and standardize presentation layouts before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
