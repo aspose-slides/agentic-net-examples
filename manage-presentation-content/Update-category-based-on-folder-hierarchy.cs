@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Update category based on folder hierarchy using C#
+//
+// Description:
+// Demonstrates how to update the Category document property of PowerPoint
+// presentations based on the immediate parent folder name using C# and
+// Aspose.Slides for .NET. The example processes all supported presentation files
+// in an input directory, preserves the original folder hierarchy in the output
+// directory, and saves the modified files as PPTX.
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Update, Category, Folder, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting the Category property according to folder organization.
+// - Build C# tools for bulk PowerPoint metadata management.
+// - Preserve folder structure while processing and exporting presentations.
+// - Validate and prepare PPTX files for publishing or integration workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
