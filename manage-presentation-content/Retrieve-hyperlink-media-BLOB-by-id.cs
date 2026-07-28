@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Extract embedded media (videos and audios) from a PowerPoint file using C#
+//
+// Description:
+// Demonstrates how to load a presentation with Aspose.Slides for .NET, iterate
+// through embedded video and audio objects, retrieve their binary streams (BLOBs),
+// and save them to disk. The example also shows how to access the static
+// Media hyperlink object. This pattern can be used in console applications to
+// automate media extraction from PPTX files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Extract, Media, Video, Audio,
+// Hyperlink, BLOB, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of embedded video and audio files from presentations.
+// - Build tools for analyzing or repurposing media assets in PPTX files.
+// - Integrate media extraction into .NET workflows or migration pipelines.
+// - Validate and archive presentation content before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
