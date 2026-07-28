@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Extract note urls to verification list using C#
+//
+// Description:
+// Demonstrates how to extract URLs from slide notes in a PowerPoint presentation
+// using Aspose.Slides for .NET. The example loads a PPTX file, scans each slide's
+// notes for HTTP/HTTPS links, collects them into a list, saves the (unchanged)
+// presentation, and prints the extracted URLs to the console. This pattern can be
+// used to automate verification of external references embedded in slide notes.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Extract, Note, URLs,
+// Verification, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of note URLs for verification lists.
+// - Build C# tools for PowerPoint presentation analysis.
+// - Generate reports of external references in slide notes.
+// - Validate presentation content before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Text.RegularExpressions;
