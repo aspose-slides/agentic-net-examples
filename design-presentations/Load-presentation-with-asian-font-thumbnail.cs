@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Load presentation with Asian font and generate thumbnail using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation while specifying a default
+// Asian font, create a full‑scale thumbnail of the first slide, and save both the
+// thumbnail image and the (potentially modified) presentation using Aspose.Slides
+// for .NET. The example is a self‑contained console application suitable for
+// automating PPTX processing tasks that involve Asian text rendering.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, LoadOptions, DefaultAsianFont,
+// Thumbnail, Image, Slide, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Load presentations containing Asian characters with a fallback font.
+// - Generate slide thumbnails for preview or indexing purposes.
+// - Save processed presentations after applying load options.
+// - Integrate thumbnail generation into .NET tools for PowerPoint automation.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -39,7 +60,7 @@ namespace AsposeSlidesExample
                     IImage thumbnail = slide.GetImage(1f, 1f);
 
                     // Save the thumbnail as a PNG file
-                    thumbnail.Save(thumbnailPath, Aspose.Slides.ImageFormat.Png);
+                    thumbnail.Save(thumbnailPath, ImageFormat.Png);
 
                     // Save the presentation (required before exiting)
                     presentation.Save(savedPresentationPath, SaveFormat.Pptx);
