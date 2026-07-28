@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set decorative flag on master background shapes using C#
+//
+// Description:
+// Demonstrates how to set the IsDecorative flag on all shapes within master
+// slides of a PowerPoint presentation using C# and Aspose.Slides for .NET.
+// The example loads a presentation, iterates through each master slide and its
+// shapes, marks them as decorative for accessibility, and saves the result.
+// This pattern can be used to automate accessibility enhancements in PPTX files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Decorative Flag, Master Slides,
+// Accessibility, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting decorative flags on master slide shapes for accessibility.
+// - Build tools that prepare PPTX files for compliance with accessibility standards.
+// - Integrate decorative flag handling into .NET applications that process presentations.
+// - Validate or modify master slide content programmatically before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
