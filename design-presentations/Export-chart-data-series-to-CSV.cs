@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Export chart data series to CSV using C#
+//
+// Description:
+// Demonstrates how to export each chart's data series to separate CSV files 
+// using C# and Aspose.Slides for .NET. The example loads a PowerPoint presentation,
+// iterates through all chart shapes, extracts the data points of each series, 
+// writes them to CSV files, and finally saves the (potentially modified) 
+// presentation. This pattern can be used to automate PPTX workflows, extract 
+// chart data for analysis, or integrate presentation processing into .NET 
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Chart, Data Series, CSV, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of chart series data to CSV for reporting or analytics.
+// - Build C# utilities that process PowerPoint files and export chart data.
+// - Integrate chart data extraction into larger .NET data pipelines.
+// - Validate and transform PPTX content before publishing or further processing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
