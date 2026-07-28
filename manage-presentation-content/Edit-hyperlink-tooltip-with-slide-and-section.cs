@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Edit hyperlink tooltip with slide and section using C#
+//
+// Description:
+// Demonstrates how to create a new presentation, add a slide and a section,
+// insert a rectangle shape with a hyperlink, and set a custom tooltip that
+// includes the slide number and the section name using Aspose.Slides for .NET.
+// The example runs as a standalone console application and saves the result
+// as a PPTX file.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, Hyperlink, Tooltip, Slide,
+// Section, IAutoShape, Presentation processing, Office automation
+//
+// Use Cases:
+// - Programmatically add sections and hyperlinks with dynamic tooltips.
+// - Build .NET utilities for PowerPoint content generation and editing.
+// - Automate PPTX creation with custom navigation cues.
+// - Validate and test hyperlink metadata in presentations.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
