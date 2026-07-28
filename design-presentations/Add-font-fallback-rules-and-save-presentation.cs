@@ -1,3 +1,27 @@
+// -----------------------------------------------------------------------------
+// Example: Add font fallback rules and save presentation using C#
+//
+// Description:
+// Demonstrates how to add font fallback rules for specific Unicode ranges 
+// (Cyrillic and Emoji) and save the resulting presentation using C# and 
+// Aspose.Slides for .NET. The example shows the required presentation-processing 
+// steps for PowerPoint files and produces the output in a standalone console 
+// application. Developers can use this pattern to automate PPTX workflows, 
+// validate results, or integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Font Fallback, Unicode Ranges, 
+// Presentation Saving, Office Automation
+//
+// Use Cases:
+// - Automate adding font fallback rules for specific Unicode blocks and save 
+//   presentations.
+// - Build C# tools for PowerPoint presentation processing with custom font 
+//   handling.
+// - Generate or transform PPTX files in .NET applications with fallback fonts.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
