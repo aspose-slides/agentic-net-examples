@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Confirm getsubstitution empty list with all fonts using C#
+//
+// Description:
+// Demonstrates how to confirm that GetSubstitutions returns an empty list when
+// all fonts used in a presentation are available. The example loads a PPTX file,
+// checks the font substitution collection, reports the result, and saves the
+// presentation using Aspose.Slides for .NET.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Confirm, GetSubstitutions, Empty,
+// List, Font Substitution, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Verify that no font substitutions are needed when all fonts are present.
+// - Automate validation of font availability in PowerPoint files.
+// - Integrate font substitution checks into .NET presentation workflows.
+// - Ensure consistent rendering of slides across environments.
+// -----------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
 using System.IO;
