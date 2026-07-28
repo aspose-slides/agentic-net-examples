@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX comments by date to csv using C#
+//
+// Description:
+// Demonstrates how to export PPTX comments filtered by a date range to a CSV
+// file using C# and Aspose.Slides for .NET. The example loads a PowerPoint
+// presentation, iterates through comment authors and their comments, selects
+// comments whose creation time falls within the specified start and end dates,
+// and writes the relevant details to a CSV file. The presentation is then
+// saved back to its original location as required by repository rules.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Pptx, Comments, Date,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate export of PPTX comments by date to CSV.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
