@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Load RTF notes into PPTX slides using C#
+//
+// Description:
+// Demonstrates how to read an RTF file containing slide notes and embed the
+// same notes into every slide of an existing PPTX presentation using
+// Aspose.Slides for .NET. The example loads a presentation, reads the RTF
+// content, creates a notes slide for each slide, assigns the RTF text to the
+// notes text frame, and saves the result as a new PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, RTF, Aspose.Slides for .NET, Load, Notes, Slides,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate the insertion of RTF‑based speaker notes into PowerPoint decks.
+// - Build .NET utilities that enrich existing presentations with standardized
+//   notes content.
+// - Convert external RTF note collections into PPTX notes for distribution.
+// - Validate and test notes‑embedding workflows before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
