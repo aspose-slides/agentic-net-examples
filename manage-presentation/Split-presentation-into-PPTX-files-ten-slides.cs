@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Split presentation into PPTX files ten slides using C#
+//
+// Description:
+// Demonstrates how to split a PowerPoint presentation into multiple PPTX files,
+// each containing up to ten slides, using Aspose.Slides for .NET. The example
+// loads an existing presentation, iterates through its slides in batches of ten,
+// clones them into new presentations, and saves each batch as a separate file.
+// This pattern can be used to automate large presentation handling, create
+// slide packs, or prepare content for distribution.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Split, Presentation, Ten Slides,
+// Batch Processing, Slide Cloning, Office Automation
+//
+// Use Cases:
+// - Divide a large presentation into smaller PPTX files with a maximum of ten slides each.
+// - Build C# utilities for batch processing and distribution of PowerPoint content.
+// - Integrate slide splitting functionality into .NET applications or CI pipelines.
+// - Prepare slide subsets for targeted audiences or modular publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
