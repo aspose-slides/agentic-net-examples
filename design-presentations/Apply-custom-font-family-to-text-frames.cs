@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Apply custom font family to text frames using C#
+//
+// Description:
+// Demonstrates how to apply a custom font family to all text portions within
+// text frames of a PowerPoint presentation using Aspose.Slides for .NET.
+// The example loads an existing PPTX, iterates through slides, shapes and
+// groups, updates the LatinFont of each portion, and saves the result.
+// This pattern can be used to enforce branding or replace missing fonts.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, custom font, font family, text frames,
+// presentation processing, Office automation
+//
+// Use Cases:
+// - Enforce corporate font across all text in a presentation.
+// - Replace missing or unsupported fonts in existing PPTX files.
+// - Build .NET tools that modify text styling in bulk.
+// - Prepare presentations for distribution where specific fonts are required.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
