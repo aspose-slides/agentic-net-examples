@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Remove hidden slides from presentation using C#
+//
+// Description:
+// Demonstrates how to remove hidden slides from a presentation using C# and 
+// Aspose.Slides for .NET. The example shows the required 
+// presentation-processing steps for PowerPoint files and produces the 
+// requested output in a standalone console application. Developers can use 
+// this pattern to automate PPTX workflows, validate results, or integrate 
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove, Hidden, Slides, 
+// Presentation, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate removal of hidden slides from a presentation.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;
