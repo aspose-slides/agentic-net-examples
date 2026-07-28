@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Remove embedded font and verify size decrease using C#
+//
+// Description:
+// Demonstrates how to remove an embedded font from a PowerPoint presentation
+// and verify that the file size decreases using Aspose.Slides for .NET. The
+// example loads a PPTX file, removes a specified embedded font, saves the
+// modified presentation, and compares the file sizes before and after the
+// operation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove Embedded Font, Verify Size
+// Decrease, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate removal of unnecessary embedded fonts to reduce PPTX size.
+// - Build C# utilities for PowerPoint file optimization.
+// - Validate that font removal impacts file size as expected.
+// - Integrate font management into .NET presentation workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
