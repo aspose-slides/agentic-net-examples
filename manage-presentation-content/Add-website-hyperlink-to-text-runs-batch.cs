@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add website hyperlink to text runs batch using C#
+//
+// Description:
+// Demonstrates how to add a website hyperlink to all text runs (portions) in a
+// presentation in batch using C# and Aspose.Slides for .NET. The example loads
+// an existing PPTX file, iterates through each slide, shape, paragraph, and
+// portion, assigns a hyperlink, tooltip, and font size, then saves the updated
+// presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Website, Hyperlink, Text Runs,
+// Batch Processing, Presentation Automation
+//
+// Use Cases:
+// - Add a uniform website hyperlink to every text portion in a PPTX.
+// - Automate hyperlink insertion across multiple slides and shapes.
+// - Build .NET tools for bulk presentation content updates.
+// - Prepare presentations for distribution with consistent link styling.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
