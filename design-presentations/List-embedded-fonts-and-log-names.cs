@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: List embedded fonts and log names using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, retrieve all embedded
+// fonts, log each font name to the console, and save the presentation using
+// Aspose.Slides for .NET. This example is a self‑contained console application
+// suitable for automating font validation or reporting in PPTX files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, List Embedded Fonts, Font Names,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Verify which fonts are embedded in a presentation.
+// - Generate reports of embedded font usage.
+// - Integrate font checks into CI/CD pipelines for PowerPoint assets.
+// - Build tools that process or transform PPTX files while preserving font data.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
