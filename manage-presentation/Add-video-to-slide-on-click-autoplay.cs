@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add video to slide on click autoplay using C#
+//
+// Description:
+// Demonstrates how to add a video to a slide that plays on click with autoplay
+// using C# and Aspose.Slides for .NET. The example creates a new presentation,
+// inserts a video frame, configures it to start playback on click, and saves the
+// result as a PPTX file. This pattern can be used to automate PowerPoint
+// workflows, embed media, or build presentation processing tools.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Video, Slide, Click, Autoplay,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding video to a slide with click-to-play behavior.
+// - Build C# utilities for embedding media in PowerPoint presentations.
+// - Generate or modify PPTX files programmatically in .NET applications.
+// - Validate media playback settings before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
