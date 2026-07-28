@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Reconstruct PPTX slide comments from JSON using C#
+//
+// Description:
+// Demonstrates how to read slide comments from a JSON file and reconstruct
+// them in a new PowerPoint presentation using Aspose.Slides for .NET. The
+// example creates authors, positions comments on the appropriate slides,
+// and restores parent‑child comment relationships.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Comments, JSON, Reconstruction,
+// Slide, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Generate a PowerPoint file with comments based on external JSON data.
+// - Restore comment hierarchy (replies) when migrating presentations.
+// - Automate comment insertion for reporting or documentation workflows.
+// - Integrate comment reconstruction into .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;
