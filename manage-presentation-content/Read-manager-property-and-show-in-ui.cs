@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Read manager property and show in UI using C#
+//
+// Description:
+// Demonstrates how to read the built‑in Manager document property from a PowerPoint
+// presentation, display it in a simple console UI, allow the user to modify the
+// value, and save the updated presentation using Aspose.Slides for .NET.
+// The example includes loading, property access, user interaction, and saving
+// steps suitable for standalone console applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Read, Manager, Property, UI, 
+// Presentation Processing, Document Properties, Console Interaction
+//
+// Use Cases:
+// - Retrieve and display the Manager property from a PPTX file.
+// - Provide a simple UI for editing document properties.
+// - Automate updating presentation metadata in .NET tools.
+// - Validate and persist changes to PowerPoint files programmatically.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;
