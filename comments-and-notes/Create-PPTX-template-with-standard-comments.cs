@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Create PPTX template with standard comments using C#
+//
+// Description:
+// Demonstrates how to create a PowerPoint presentation template that includes
+// standard modern comments using Aspose.Slides for .NET. The example creates a
+// new presentation, clones the first slide, adds a comment author, inserts
+// modern comments on each slide at a specified position, and saves the file as
+// a PPTX document. This pattern can be used to generate templates with
+// predefined comments for review or collaboration workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Modern Comments, Comment Author,
+// Presentation Template, Slide Cloning, Office Automation
+//
+// Use Cases:
+// - Generate PPTX templates pre-populated with standard comments for reviewers.
+// - Automate insertion of modern comments into presentations via .NET.
+// - Build tools that prepare PowerPoint files with author metadata and notes.
+// - Streamline collaborative presentation workflows in enterprise environments.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
