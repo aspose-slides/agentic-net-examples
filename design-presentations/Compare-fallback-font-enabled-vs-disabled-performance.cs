@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Measure rendering performance with and without font fallback using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, render the first slide
+// to PNG images, and compare the rendering time when font fallback is disabled
+// versus enabled. The example uses Aspose.Slides for .NET to configure
+// FontFallBackRules, capture rendering duration with Stopwatch, and save the
+// resulting images and a modified presentation. This pattern helps developers
+// benchmark font fallback impact on slide rendering performance.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, FontFallback, Rendering Performance,
+// Image Export, Stopwatch, Benchmark, .NET
+//
+// Use Cases:
+// - Benchmark slide rendering speed with font fallback disabled and enabled.
+// - Evaluate the performance impact of custom font fallback rules.
+// - Automate generation of slide images for reporting or preview purposes.
+// - Integrate rendering performance tests into CI pipelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.Diagnostics;
 using System.IO;
