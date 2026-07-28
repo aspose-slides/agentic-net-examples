@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Read PPTX title and print to console using C#
+//
+// Description:
+// Demonstrates how to load only document properties of a PPTX file, read the
+// Title property, and print it to the console using C# and Aspose.Slides for .NET.
+// The example also shows how to safely save the presentation without modifications.
+// This pattern is useful for extracting metadata from PowerPoint files in .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Read, Title, Print, Document Properties,
+// Presentation Metadata, Office Automation
+//
+// Use Cases:
+// - Extract and display the title metadata from PPTX files.
+// - Build tools that validate or catalog PowerPoint presentations based on properties.
+// - Automate metadata extraction in batch processing pipelines.
+// - Integrate presentation metadata handling into .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
