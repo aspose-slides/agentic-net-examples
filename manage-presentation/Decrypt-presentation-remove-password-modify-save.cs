@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Decrypt presentation remove password modify save using C#
+//
+// Description:
+// Demonstrates how to load a password‑protected PowerPoint file, remove its
+// encryption, modify its content by adding a blank slide, and save the
+// resulting presentation without a password using Aspose.Slides for .NET.
+// The example includes file existence checks, output directory handling, and
+// basic error handling in a console application.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Decrypt, Remove Password, Modify,
+// Save, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate decryption of password‑protected presentations.
+// - Add or edit slides in a presentation after removing encryption.
+// - Build tools that convert protected PPTX files to unprotected versions.
+// - Integrate presentation modification workflows into .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
