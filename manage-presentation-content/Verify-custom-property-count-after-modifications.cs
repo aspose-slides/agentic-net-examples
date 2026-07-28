@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Verify custom property count after modifications using C#
+//
+// Description:
+// Demonstrates how to verify the number of custom document properties after
+// adding them to a presentation using Aspose.Slides for .NET. The example
+// creates a new PPTX file, adds custom properties, checks the property count,
+// and saves the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Verify, Custom, Property,
+// Count, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate verification of custom property count after modifications.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
