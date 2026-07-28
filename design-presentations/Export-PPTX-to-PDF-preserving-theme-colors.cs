@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX to PDF preserving theme colors using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file and export it to PDF while preserving
+// the presentation's theme colors using Aspose.Slides for .NET. The example
+// configures PDF options to embed all fonts, which ensures that the visual
+// appearance of the original slides, including custom theme colors, is retained
+// in the generated PDF.
+//
+// Keywords:
+// C#, Aspose.Slides, PPTX, PDF, Export, Theme Colors, Presentation Processing,
+// Office Automation, Font Embedding
+//
+// Use Cases:
+// - Convert PowerPoint presentations to PDF without losing theme color fidelity.
+// - Build automated tools that generate PDF reports from PPTX files.
+// - Ensure consistent branding when exporting slides to PDF in .NET applications.
+// - Preserve embedded fonts and theme colors during batch conversion processes.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
