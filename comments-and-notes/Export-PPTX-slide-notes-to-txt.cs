@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX slide notes to txt using C#
+//
+// Description:
+// Demonstrates how to extract slide notes from PowerPoint presentations
+// (including PPT, PPTX, ODP, etc.) and save each slide's notes as a separate
+// text file using C# and Aspose.Slides for .NET. The example processes all
+// supported presentation files in a given directory, creates an output
+// folder, and writes notes to individual .txt files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Slide Notes, Text
+// Extraction, Batch Processing, Presentation Automation
+//
+// Use Cases:
+// - Batch export slide notes from multiple presentations to text files.
+// - Build tools for extracting documentation or speaker notes from PowerPoint.
+// - Automate content analysis or translation workflows for slide notes.
+// - Integrate slide notes extraction into .NET applications or CI pipelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
