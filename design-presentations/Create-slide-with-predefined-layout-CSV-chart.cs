@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Create slide with predefined layout CSV chart using C#
+//
+// Description:
+// Demonstrates how to create a slide with a predefined layout and populate a
+// chart from CSV data using C# and Aspose.Slides for .NET. The example reads
+// a CSV file, creates a blank‑layout slide, adds a clustered column chart,
+// fills it with series and categories from the CSV, and saves the result as a
+// PPTX file. This pattern can be used to automate chart generation in
+// presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Slide, Predefined Layout,
+// Chart, CSV, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Generate a chart from external CSV data within a PowerPoint slide.
+// - Automate creation of presentation slides with predefined layouts.
+// - Build .NET tools for data‑driven PowerPoint report generation.
+// - Validate and transform CSV data into visual charts in PPTX files.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
