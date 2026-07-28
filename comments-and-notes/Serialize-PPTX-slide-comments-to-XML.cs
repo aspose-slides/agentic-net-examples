@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Serialize PPTX slide comments to XML using C#
+//
+// Description:
+// Demonstrates how to serialize slide comments from a PPTX file into an
+// XML document using C# and Aspose.Slides for .NET. The example loads a
+// presentation, iterates through comment authors and their comments, writes
+// comment details to an XML file, and saves a copy of the original presentation.
+// This pattern can be used for reporting, auditing, or migrating comments.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Serialize, XML, Slide, Comments,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Export slide comments to XML for analysis or documentation.
+// - Create tools that audit or archive PowerPoint comment data.
+// - Integrate comment extraction into .NET applications or CI pipelines.
+// - Transform comment information for reporting or migration purposes.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Xml.Linq;
