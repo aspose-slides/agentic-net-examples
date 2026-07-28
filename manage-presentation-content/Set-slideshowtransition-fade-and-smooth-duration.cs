@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set slideshowtransition fade and smooth duration using C#
+//
+// Description:
+// Demonstrates how to set a slide's slideshow transition to Fade and configure
+// its smooth duration using C# and Aspose.Slides for .NET. The example creates
+// a new presentation (or loads an existing one), applies the transition settings
+// to the first slide, and saves the result as a PPTX file. This pattern can be
+// used to automate PowerPoint presentation workflows, customize slide transitions,
+// or integrate presentation processing into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SlideshowTransition, Fade,
+// Smooth, Duration, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting slide transition effects and durations.
+// - Build C# tools for customizing PowerPoint presentations.
+// - Generate or modify PPTX files with specific transition settings.
+// - Validate and test presentation workflows before deployment.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
