@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Reorder slides using external configuration using C#
+//
+// Description:
+// Demonstrates how to reorder slides in a PowerPoint presentation based on an
+// external configuration file using C# and Aspose.Slides for .NET. The example
+// reads a list of slide indices from a text file, applies the new ordering to
+// the presentation, and saves the result as a new PPTX file. This pattern can
+// be used to automate slide sequencing, integrate custom ordering logic, or
+// support dynamic presentation generation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Reorder, Slides, External,
+// Configuration, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate reordering of slides according to a user‑defined sequence.
+// - Build .NET tools that adjust PPTX slide order based on external data.
+// - Integrate slide sequencing into larger presentation workflow pipelines.
+// - Validate and transform presentations before distribution or publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;
@@ -37,8 +58,7 @@ namespace SlideReorderApp
                 List<int> newOrder = new List<int>();
                 foreach (string token in tokens)
                 {
-                    int index;
-                    if (int.TryParse(token, out index))
+                    if (int.TryParse(token, out int index))
                     {
                         newOrder.Add(index);
                     }
@@ -58,8 +78,8 @@ namespace SlideReorderApp
                         continue;
                     }
 
-                    ISlide slideToMove = slides[originalIndex];
-                    slides.Reorder(targetIndex, slideToMove);
+                    // Move the slide from originalIndex to targetIndex
+                    slides.Reorder(originalIndex, targetIndex);
                 }
 
                 // Save the modified presentation
@@ -69,7 +89,6 @@ namespace SlideReorderApp
             catch (Exception ex)
             {
                 // Handle unsupported format or other errors
-                // Format not supported
                 Console.WriteLine("An error occurred: " + ex.Message);
             }
         }
