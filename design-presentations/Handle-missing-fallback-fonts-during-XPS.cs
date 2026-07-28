@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Handle missing fallback fonts during XPS using C#
+//
+// Description:
+// Demonstrates how to define font fallback rules for specific Unicode ranges,
+// assign them to a presentation, and save the result as XPS using Aspose.Slides
+// for .NET. The example loads a PPTX file, creates a Cyrillic fallback rule, and
+// validates that fallback fonts are present before exporting.
+//
+// Keywords:
+// C#, Aspose.Slides, XPS, Font fallback, Unicode range, Cyrillic, Presentation
+// processing, PowerPoint, PPTX, Office automation
+//
+// Use Cases:
+// - Ensure correct rendering of characters that are not available in the primary
+//   font when converting PPTX to XPS.
+// - Automate font fallback configuration in batch conversion tools.
+// - Integrate fallback handling into .NET applications that generate or
+//   transform presentations.
+// - Validate presentation files before publishing to guarantee visual fidelity.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
