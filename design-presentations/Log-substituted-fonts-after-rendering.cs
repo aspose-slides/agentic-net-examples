@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Log substituted fonts after rendering using C#
+//
+// Description:
+// Demonstrates how to log substituted fonts after rendering a presentation using
+// C# and Aspose.Slides for .NET. The example loads a PPTX file, enumerates any
+// font substitutions performed by the FontsManager, outputs the original and
+// substituted font names to the console, and saves the presentation.
+// This pattern helps developers audit font substitution during automated
+// processing of PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Font Substitution, Logging,
+// Rendering, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Audit font substitutions after rendering a presentation.
+// - Build tools that validate font usage in PPTX files.
+// - Automate reporting of missing or substituted fonts in .NET applications.
+// - Ensure visual fidelity before publishing or converting presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
