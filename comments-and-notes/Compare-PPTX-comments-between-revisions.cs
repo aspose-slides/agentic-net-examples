@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Compare PPTX comments between revisions using C#
+//
+// Description:
+// Demonstrates how to compare comments in two PPTX revisions using C# and 
+// Aspose.Slides for .NET. The example loads two presentations, extracts all 
+// comments per slide and author, identifies comments unique to each revision, 
+// outputs them to the console, and saves the presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Compare, Comments, Revisions, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Detect differences in comments between two versions of a presentation.
+// - Automate review processes for PowerPoint files.
+// - Build tools that track comment changes across revisions.
+// - Integrate comment comparison into .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;

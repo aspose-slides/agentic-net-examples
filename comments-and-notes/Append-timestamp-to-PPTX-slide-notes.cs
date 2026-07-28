@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Append timestamp to PPTX slide notes using C#
+//
+// Description:
+// Demonstrates how to append a UTC timestamp to the notes of each slide in a
+// PPTX file using C# and Aspose.Slides for .NET. The example loads an existing
+// presentation, ensures each slide has a notes slide, retrieves any existing
+// notes text, appends a "Last edited" line with the current UTC timestamp, and
+// saves the modified presentation. This pattern can be used to automate
+// documentation, version tracking, or audit trails within PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Append, Timestamp, Slide Notes,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automatically add edit timestamps to slide notes for version control.
+// - Build .NET tools that enrich PowerPoint presentations with metadata.
+// - Generate audit trails for presentations in corporate environments.
+// - Integrate timestamping into PowerPoint workflow automation.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

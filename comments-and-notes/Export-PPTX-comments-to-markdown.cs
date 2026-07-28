@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX comments to markdown using C#
+//
+// Description:
+// Demonstrates how to extract comments from a PowerPoint (.pptx) file and
+// export them to a markdown file using Aspose.Slides for .NET. The example
+// loads a presentation, iterates through comment authors and their comments,
+// writes each comment as a blockquote in markdown, and optionally saves the
+// presentation back to the original file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Comments, Markdown,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of presentation comments for documentation.
+// - Build tools that convert PPTX comment threads to markdown format.
+// - Integrate comment export functionality into .NET applications.
+// - Validate or review comments in PowerPoint files programmatically.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

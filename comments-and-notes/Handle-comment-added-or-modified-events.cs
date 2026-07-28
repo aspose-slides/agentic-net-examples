@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Handle comment added or modified events using C#
+//
+// Description:
+// Demonstrates how to handle comment added and comment modified scenarios in a
+// PowerPoint presentation using Aspose.Slides for .NET. The example creates a
+// presentation, adds a comment author, inserts a comment, manually invokes
+// callbacks for added and modified events, and saves the file. This pattern can
+// be adapted to integrate real event handling in automation workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Handle, Comment, Added, Modified,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate detection and processing of comment additions or modifications.
+// - Build C# utilities for PowerPoint comment management.
+// - Integrate comment event handling into .NET presentation workflows.
+// - Validate and transform PPTX files with comment tracking.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX slide notes to RTF using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file with Aspose.Slides for .NET, iterate
+// through each slide, extract the slide notes text, wrap it in a simple RTF
+// structure, and write each notes page to a separate .rtf file. The example
+// also shows saving the presentation after processing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, RTF, Aspose.Slides for .NET, Export, Slide, Notes,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of slide notes from PowerPoint presentations to RTF.
+// - Build .NET utilities for converting presentation notes to editable RTF.
+// - Integrate slide‑notes export into larger document‑generation workflows.
+// - Validate and archive slide notes in a portable text format.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add standard disclaimer to PPTX slide comments using C#
+//
+// Description:
+// Demonstrates how to add a standard disclaimer comment to every slide in a
+// PPTX presentation using C# and Aspose.Slides for .NET. The example loads an
+// existing presentation, creates a comment author, inserts the disclaimer text
+// as a comment on each slide at a specified position, and saves the updated
+// file. This pattern can be used to automate the inclusion of legal or
+// confidentiality notices in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Disclaimer, Slide Comments,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automatically add confidentiality or legal disclaimer comments to all slides.
+// - Integrate disclaimer insertion into .NET PowerPoint processing pipelines.
+// - Ensure compliance by embedding standard notices in presentation files.
+// - Generate or modify PPTX files with consistent comment metadata.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add PPTX slide comment with metadata using C#
+//
+// Description:
+// Demonstrates how to add a modern comment with metadata (author, position,
+// and timestamp) to a specific slide in a PPTX file using C# and Aspose.Slides
+// for .NET. The example creates a presentation, ensures three slides exist,
+// adds a custom comment author, places a comment on the third slide, and
+// saves the result as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Modern Comment, Metadata,
+// Slide Comment, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding modern comments with metadata to PowerPoint slides.
+// - Build C# tools for annotating PPTX presentations.
+// - Generate or modify PPTX files with author and timestamp information.
+// - Validate comment handling in presentation workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Validate PPTX slide note length using C#
+//
+// Description:
+// Demonstrates how to validate PPTX slide note length using C# and 
+// Aspose.Slides for .NET. The example loads a presentation, checks each slide's
+// notes for a maximum character limit, aborts if any notes exceed the limit,
+// and saves the validated presentation. This pattern can be used to automate
+// PPTX workflows, enforce content guidelines, or integrate presentation validation
+// into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Validate, Slide, Note, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate validation of PPTX slide note length.
+// - Build C# tools for PowerPoint presentation processing with content checks.
+// - Enforce note length policies before publishing or integration.
+// - Integrate slide note validation into CI/CD pipelines for presentation assets.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

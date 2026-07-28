@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Schedule PPTX comments backup to cloud using C#
+//
+// Description:
+// Demonstrates how to schedule periodic backup of PowerPoint slide comments
+// and notes to a cloud storage location using C# and Aspose.Slides for .NET.
+// The example loads a PPTX file, extracts comments and notes from each slide,
+// writes them to a backup file (simulating cloud upload), and repeats the
+// operation at a configurable interval using a timer. The presentation is
+// saved before the application exits.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Schedule, Comments, Notes,
+// Backup, Cloud Storage, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate scheduled backup of PPTX comments and notes to cloud storage.
+// - Build C# utilities for PowerPoint presentation data extraction.
+// - Integrate comment and note archiving into .NET applications.
+// - Ensure data persistence for collaborative presentation workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Text;

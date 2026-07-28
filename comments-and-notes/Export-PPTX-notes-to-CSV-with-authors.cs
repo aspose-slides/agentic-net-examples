@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX notes to CSV with authors using C#
+//
+// Description:
+// Demonstrates how to export notes from a PPTX file to a CSV file, including
+// slide numbers, note text, and a placeholder for author identifiers using
+// Aspose.Slides for .NET. The example loads a presentation, iterates through
+// each slide's notes, writes the data to CSV, and saves an unchanged copy of
+// the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, CSV, Notes, Authors,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of slide notes to CSV for reporting or analysis.
+// - Build tools that need note text alongside slide identifiers.
+// - Integrate note export functionality into .NET applications.
+// - Prepare data for downstream processing where author information may be added.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;

@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Filter high priority PPTX slide comments report using C#
+//
+// Description:
+// Demonstrates how to filter high‑priority PPTX slide comments and generate a
+// console report using C# and Aspose.Slides for .NET. The example loads a
+// presentation, scans comment authors for comments containing a high‑priority
+// marker, outputs the matching comments, and saves the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Filter, High, Priority, Comments,
+// Report, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Generate a report of high‑priority comments in a PowerPoint file.
+// - Automate comment analysis for review or quality‑control processes.
+// - Build C# tools that process PPTX files and extract specific annotation data.
+// - Integrate comment filtering into .NET applications that manage presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

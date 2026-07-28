@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Apply conditional formatting to PPTX notes using C#
+//
+// Description:
+// Demonstrates how to apply conditional formatting to the notes of each slide
+// in a PPTX presentation using C# and Aspose.Slides for .NET. The example loads
+// an existing presentation, creates notes slides where missing, and changes the
+// text color of note portions based on specific keywords (TODO, NOTE, IMPORTANT).
+// The modified presentation is saved as a new PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, Conditional, Formatting,
+// Notes, Text, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conditional formatting of PPTX slide notes.
+// - Build C# utilities for processing and enhancing PowerPoint notes.
+// - Generate or transform PPTX files with highlighted note content in .NET.
+// - Validate and prepare presentation notes before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Drawing;

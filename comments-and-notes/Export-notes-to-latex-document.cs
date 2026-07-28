@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Export notes to LaTeX document using C#
+//
+// Description:
+// Demonstrates how to export slide notes from a PowerPoint presentation to a
+// LaTeX document using C# and Aspose.Slides for .NET. The example loads a PPTX
+// file, iterates through its sections and slides, extracts plain‑text notes,
+// and writes them into a properly formatted LaTeX file. It also shows basic
+// error handling and how to preserve presentation hierarchy in the output.
+// Developers can use this pattern to automate notes extraction, generate
+// documentation, or integrate PowerPoint processing into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Notes, LaTeX, Document,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate export of slide notes to a LaTeX document.
+// - Build C# utilities for extracting and formatting PowerPoint notes.
+// - Generate LaTeX‑based documentation or handouts from presentations.
+// - Validate and review presentation notes before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: List pptx slide comments and notes using C#
+//
+// Description:
+// Demonstrates how to enumerate slide comments and retrieve slide notes from a
+// PPTX file using Aspose.Slides for .NET. The example loads a presentation,
+// prints each comment with its author, slide number and timestamp, then prints
+// the notes text for every slide (or indicates when a slide has no notes). It
+// finally saves a copy of the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, List, Pptx, Slide, Comments,
+// Notes, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of slide comments and notes from PowerPoint files.
+// - Build C# utilities for reviewing or auditing presentation content.
+// - Integrate comment and note extraction into .NET applications or services.
+// - Generate reports or perform quality checks on PPTX assets before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

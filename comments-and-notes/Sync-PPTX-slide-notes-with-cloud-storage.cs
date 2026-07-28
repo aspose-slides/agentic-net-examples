@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Sync PPTX slide notes from JSON using C#
+//
+// Description:
+// Demonstrates how to read slide notes from a JSON file and apply them to a
+// PowerPoint presentation using C# and Aspose.Slides for .NET. The example
+// shows the required presentation-processing steps for PowerPoint files and
+// produces the updated presentation as a standalone console application.
+// Developers can use this pattern to automate note population, integrate
+// external note sources, or build .NET tools for PowerPoint presentation
+// processing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, JSON, Slide Notes, Presentation
+// Processing, Office Automation
+//
+// Use Cases:
+// - Populate PPTX slide notes from external JSON data.
+// - Automate note synchronization in .NET applications.
+// - Build tools that integrate dynamic notes into PowerPoint presentations.
+// - Prepare presentations with programmatically generated slide notes.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;

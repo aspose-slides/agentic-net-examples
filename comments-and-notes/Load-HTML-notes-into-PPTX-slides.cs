@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Load HTML notes into PPTX slides using C#
+//
+// Description:
+// Demonstrates how to read an HTML file containing note sections delimited by
+// <h1> tags, parse the headings and note bodies, and assign them to the notes
+// slides of an existing PPTX presentation using Aspose.Slides for .NET. The
+// example loads a source presentation, creates notes slides where necessary,
+// populates them with the extracted HTML content, and saves the updated
+// presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, HTML, Load, Html, Notes, Pptx,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate the import of HTML‑based speaker notes into PowerPoint files.
+// - Build .NET utilities that convert structured HTML notes to PPTX notes.
+// - Integrate note‑loading functionality into larger presentation‑processing
+//   pipelines.
+// - Validate and preview note content before publishing a presentation.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

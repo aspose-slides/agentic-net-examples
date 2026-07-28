@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Export comment threads to hierarchical JSON using C#
+//
+// Description:
+// Demonstrates how to extract comment threads from a PowerPoint presentation,
+// build a hierarchical structure reflecting parent‑reply relationships, and
+// serialize the result to formatted JSON using Aspose.Slides for .NET. The
+// example also saves a copy of the original presentation. This pattern can be
+// used to automate comment analysis, migration, or reporting in .NET
+// applications.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, Export, Comments, Threads,
+// Hierarchical JSON, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Export PowerPoint comment threads to a structured JSON file for analysis.
+// - Build tools that process or migrate presentation comments in .NET.
+// - Generate reports on comment activity across slides.
+// - Validate or audit presentation feedback before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
 using System.IO;

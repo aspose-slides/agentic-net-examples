@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Add regulatory compliance tag to PPTX comments using C#
+//
+// Description:
+// Demonstrates how to add a regulatory compliance tag to PPTX comments using C#
+// and Aspose.Slides for .NET. The example loads a presentation, iterates through
+// all comment authors and their comments, appends a compliance tag to each
+// comment text, and saves the updated presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Regulatory, Compliance, Comments,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automatically tag PowerPoint comments with regulatory compliance markers.
+// - Build C# utilities for annotating PPTX files in compliance workflows.
+// - Integrate comment tagging into document management or review systems.
+// - Ensure presentation comments meet audit and regulatory requirements.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

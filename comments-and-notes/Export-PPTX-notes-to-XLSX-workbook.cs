@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX notes to CSV file using C#
+//
+// Description:
+// Demonstrates how to extract slide notes from a PPTX presentation and
+// export them to a CSV file that can be opened in Microsoft Excel using
+// Aspose.Slides for .NET. The example iterates through each slide, retrieves
+// the associated notes text (if any), and writes each note as a separate
+// quoted entry in the CSV output. This pattern can be used to automate notes
+// extraction, generate reports, or integrate PowerPoint content into .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Notes, CSV, Excel,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of PPTX slide notes to CSV for reporting.
+// - Build C# utilities for PowerPoint presentation analysis.
+// - Convert presentation notes into a format consumable by Excel.
+// - Validate and process slide notes before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;

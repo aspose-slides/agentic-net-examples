@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Apply grayscale filter to PDF note images using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, configure PDF export
+// options to include slide notes, and (conceptually) apply a grayscale filter
+// to images embedded in the notes before saving the presentation as a PDF.
+// The example uses Aspose.Slides for .NET and can serve as a template for
+// automating note‑image processing during PPTX‑to‑PDF conversion.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Grayscale, Note Images, 
+// Export, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate applying a grayscale filter to note images when exporting PPTX to PDF.
+// - Build C# utilities for processing slide notes and images in presentations.
+// - Generate PDFs with notes that have consistent visual styling.
+// - Validate and transform presentation content before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

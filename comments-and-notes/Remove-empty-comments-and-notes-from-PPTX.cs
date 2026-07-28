@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Remove empty comments and notes from PPTX using C#
+//
+// Description:
+// Demonstrates how to remove empty comments and notes from a PPTX file using
+// C# and Aspose.Slides for .NET. The example loads a presentation, iterates
+// through each slide, deletes comments whose text is empty or whitespace, and
+// removes notes slides that contain no text. The cleaned presentation is then
+// saved as a new PPTX file. This pattern can be used to automate cleanup of
+// PowerPoint files before distribution or further processing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove, Empty, Comments, Notes,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate removal of empty comments and notes from PPTX files.
+// - Build C# utilities for PowerPoint presentation cleanup.
+// - Integrate presentation sanitization into .NET applications.
+// - Prepare PPTX files for publishing by ensuring they contain only meaningful content.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

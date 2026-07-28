@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Import SharePoint comments to PPTX slides using C#
+//
+// Description:
+// Demonstrates how to import comments stored in a SharePoint list into a
+// PowerPoint presentation. The example loads an existing PPTX file, creates
+// comment authors, attaches comments to slides whose title matches the SharePoint
+// entry, and saves the updated presentation. It uses Aspose.Slides for .NET
+// and can serve as a template for automating comment import workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Import, SharePoint, Comments,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate the import of SharePoint comments into PowerPoint slides.
+// - Build .NET tools for enriching presentations with external feedback.
+// - Integrate SharePoint comment data into PPTX files during CI/CD pipelines.
+// - Validate and preview comment placement before publishing presentations.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Collections.Generic;

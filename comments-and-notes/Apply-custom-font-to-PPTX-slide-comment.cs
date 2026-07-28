@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Apply custom font to PPTX slide comment using C#
+//
+// Description:
+// Demonstrates how to apply a custom font (bold, italic, size, and color) to a
+// slide comment in a PPTX file using C# and Aspose.Slides for .NET. The example
+// creates a presentation, adds a modern comment, modifies the comment's text
+// formatting, and saves the result. This pattern can be used to automate
+// comment styling in PowerPoint presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, Custom, Font, Comment,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate applying custom font styles to PPTX slide comments.
+// - Build C# tools for PowerPoint comment formatting.
+// - Generate or transform PPTX files with styled comments in .NET applications.
+// - Validate comment appearance before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.Drawing;
 using Aspose.Slides.Export;

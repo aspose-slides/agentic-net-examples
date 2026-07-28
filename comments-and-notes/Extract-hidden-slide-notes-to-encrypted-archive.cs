@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Extract hidden slide notes from hidden slides into an encrypted archive using C#
+//
+// Description:
+// Demonstrates how to extract notes from hidden slides in a PowerPoint presentation,
+// consolidate them into a single slide, encrypt the resulting presentation with a
+// password, and save it as an encrypted PPTX file using Aspose.Slides for .NET.
+// The example includes loading a source presentation, iterating hidden slides,
+// retrieving notes text, creating an archive presentation, adding a textbox with
+// the collected notes, applying password protection, and saving the output.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Extract, Hidden Slides, Slide Notes, 
+// Encryption, Password Protection, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of hidden slide notes for secure archival.
+// - Build C# utilities that protect confidential presentation content.
+// - Integrate encrypted note extraction into .NET PowerPoint workflows.
+// - Validate and safeguard presentation data before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Text;

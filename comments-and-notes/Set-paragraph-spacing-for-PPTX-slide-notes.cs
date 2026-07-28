@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set paragraph spacing for PPTX slide notes using C#
+//
+// Description:
+// Demonstrates how to set custom paragraph spacing (line spacing, space before,
+// and space after) for slide notes in a PPTX file using C# and Aspose.Slides for .NET.
+// The example loads an existing presentation, ensures each slide has a notes
+// slide, modifies the paragraph formatting of the notes text, and saves the
+// result as a new PPTX file. This pattern can be used to automate notes formatting
+// in PowerPoint presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Paragraph, Spacing, Notes, Slide, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate paragraph spacing adjustments for slide notes in PPTX files.
+// - Build .NET tools that standardize notes formatting across presentations.
+// - Generate or transform PPTX files with customized notes layout.
+// - Validate and enforce presentation style guidelines before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;

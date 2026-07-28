@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Export slide notes from a PPTX to a consolidated PDF using C#
+//
+// Description:
+// Demonstrates how to extract notes from each slide of a PPTX file, place
+// each note onto a separate slide in a new presentation, and then export the
+// resulting notes presentation to PDF using Aspose.Slides for .NET. The example
+// includes file existence checks, error handling, and shows how to work with
+// NotesSlideManager, INotesSlide, and IAutoShape objects in a console
+// application.
+//
+// Keywords:
+// C#, Aspose.Slides, PPTX, slide notes, PDF export, presentation processing,
+// PowerPoint automation, .NET, INotesSlide, IAutoShape
+//
+// Use Cases:
+// - Generate a PDF document containing all slide notes from a PowerPoint file.
+// - Create reporting or documentation from presentation notes.
+// - Automate extraction of presenter notes for review or publishing.
+// - Integrate notes extraction into larger .NET workflows or services.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

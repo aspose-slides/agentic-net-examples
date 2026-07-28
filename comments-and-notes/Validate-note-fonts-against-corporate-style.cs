@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Validate note fonts against corporate style using C#
+//
+// Description:
+// Demonstrates how to validate the fonts used in slide notes against a corporate
+// style (e.g., Arial) using Aspose.Slides for .NET. The example loads a PPTX,
+// checks each note portion for the required font, aborts the export if any
+// non‑conforming font is found, and saves the presentation when all notes
+// conform.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Validate, Note, Fonts, Corporate,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Ensure slide notes follow corporate typography guidelines.
+// - Automate validation of PowerPoint presentations before publishing.
+// - Integrate note‑font checks into CI/CD pipelines for documentation.
+// - Prevent non‑compliant fonts from reaching end users.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

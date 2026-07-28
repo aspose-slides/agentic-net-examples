@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Create PPTX notes layout with header and footer using C#
+//
+// Description:
+// Demonstrates how to load an existing PPTX file, configure header and footer
+// text on the master notes slide, propagate the header/footer settings to each
+// slide's notes page, and save the modified presentation. The example uses
+// Aspose.Slides for .NET and can serve as a template for automating notes
+// layout customization in PowerPoint files.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PPTX, PowerPoint, Notes Slide, Header Footer,
+// Presentation Automation, Office Automation
+//
+// Use Cases:
+// - Add custom header and footer text to notes pages of a PPTX.
+// - Automate notes layout customization across all slides.
+// - Build .NET tools for PowerPoint presentation processing and branding.
+// - Validate and transform PPTX files before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

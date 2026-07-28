@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX slide notes to markdown using C#
+//
+// Description:
+// Demonstrates how to extract slide notes from a PPTX file and export each
+// slide's notes as an individual markdown (.md) file using Aspose.Slides for .NET.
+// The example loads a presentation, iterates through its slides, converts the
+// notes text into a simple markdown bullet list, and writes the result to a
+// designated output folder.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Markdown, Slide Notes,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PowerPoint slide notes to markdown documentation.
+// - Build .NET tools for extracting and publishing presentation notes.
+// - Integrate slide‑notes extraction into CI/CD pipelines or content management systems.
+// - Validate and archive presentation metadata before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

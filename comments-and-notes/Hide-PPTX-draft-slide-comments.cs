@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Hide PPTX draft slide comments using C#
+//
+// Description:
+// Demonstrates how to hide comments on draft (hidden) slides in a PPTX file 
+// using C# and Aspose.Slides for .NET. The example loads a presentation, 
+// identifies hidden slides, disables comment visibility for those slides, 
+// and saves the updated presentation. This pattern can be used to automate 
+// comment management in PowerPoint workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Hide, Draft, Slide, Comments, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automatically hide comments on draft or hidden slides before publishing.
+// - Build tools that clean up presentation metadata in .NET applications.
+// - Integrate comment visibility control into PowerPoint processing pipelines.
+// - Ensure draft slides do not expose comments during review or distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

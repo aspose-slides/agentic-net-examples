@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Profile memory usage while loading PPTX presentation using C#
+//
+// Description:
+// Demonstrates how to profile memory usage when loading a PPTX file with
+// Aspose.Slides for .NET. The example measures the process private memory
+// before and after creating a Presentation object, optionally iterates over
+// comment authors to ensure comments are loaded, and saves the presentation.
+// This pattern helps developers assess memory impact of loading PowerPoint
+// files in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Memory Profiling, Presentation Loading, Comments, Office Automation
+//
+// Use Cases:
+// - Measure memory consumption of loading PPTX files in .NET.
+// - Validate memory usage for large presentations.
+// - Build tools that need to monitor resource usage during PowerPoint processing.
+// - Ensure comment data is loaded correctly when profiling.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Diagnostics;

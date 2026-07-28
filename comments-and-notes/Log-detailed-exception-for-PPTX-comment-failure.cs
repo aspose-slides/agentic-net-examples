@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Log detailed exception for PPTX comment failure using C#
+//
+// Description:
+// Demonstrates how to add a comment author and comment to a PPTX presentation,
+// iterate through slide comments, and log detailed exception information when
+// comment processing fails. The example uses Aspose.Slides for .NET and shows
+// saving the presentation and handling Aspose.Slides.PptxEditException.
+//
+// Keywords:
+// C#, Aspose.Slides, PPTX, Comment, Exception handling, PptxEditException,
+// Presentation processing, PowerPoint automation, .NET
+//
+// Use Cases:
+// - Capture and log detailed errors during PPTX comment processing.
+// - Build utilities that add and read comments in PowerPoint files.
+// - Ensure robust exception handling in presentation automation scripts.
+// - Save and dispose presentations after processing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

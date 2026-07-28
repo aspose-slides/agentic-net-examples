@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Retry load PPTX notes from corrupted file using C#
+//
+// Description:
+// Demonstrates how to implement a retry mechanism for loading a possibly
+// corrupted PPTX file using Aspose.Slides for .NET, extract slide notes, and
+// save the presentation. The example shows the required presentation-processing
+// steps for PowerPoint files and produces the requested output in a standalone
+// console application. Developers can use this pattern to automate PPTX workflows,
+// handle corrupted files, and integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Retry, Load, Corrupted File, Notes,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Implement retry logic when loading potentially corrupted PPTX files.
+// - Extract and display notes from each slide in a presentation.
+// - Build C# tools for PowerPoint presentation processing and recovery.
+// - Save processed presentations after handling errors.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

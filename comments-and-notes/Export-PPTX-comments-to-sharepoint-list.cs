@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX comments to SharePoint list using C#
+//
+// Description:
+// Demonstrates how to read comments from a PPTX file using Aspose.Slides for .NET,
+// iterate through comment authors and their comments, and map comment data to
+// SharePoint list columns. The example includes placeholder code where the
+// SharePoint integration would occur and saves the presentation after processing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Comments, SharePoint,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Extract PPTX comments for migration to SharePoint.
+// - Build C# utilities that synchronize presentation comments with SharePoint lists.
+// - Automate comment analysis or reporting from PowerPoint files.
+// - Integrate Aspose.Slides comment handling into .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

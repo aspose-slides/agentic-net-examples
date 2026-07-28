@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Render note previews to HTML snippets using C#
+//
+// Description:
+// Demonstrates how to extract slide notes from a PowerPoint presentation,
+// encode them as HTML, and write each note to a separate HTML snippet file
+// using Aspose.Slides for .NET. The example also saves a copy of the original
+// presentation to the output folder. This pattern can be used to automate
+// note‑to‑HTML conversion for documentation, web preview generation, or
+// integration with content management systems.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, HTML, Render, Note, Previews,
+// Html, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of slide notes to HTML snippets for web publishing.
+// - Build tools that extract and display PowerPoint notes in documentation.
+// - Integrate note extraction into .NET applications for reporting or analysis.
+// - Validate and process PPTX files before distribution or archival.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Net;

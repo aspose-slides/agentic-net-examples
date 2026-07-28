@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Hide PPTX confidential slide comments on export using C#
+//
+// Description:
+// Demonstrates how to hide confidential slide comments on export by removing
+// all comments from hidden slides in a PPTX file using Aspose.Slides for .NET.
+// The example loads a presentation, iterates through its slides, deletes
+// comments from any slide marked as hidden, and saves the result.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Hide, Confidential, Slide, Comments,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate removal of confidential comments from hidden slides before publishing.
+// - Build C# tools for sanitizing PowerPoint presentations.
+// - Generate or transform PPTX files while ensuring sensitive information is omitted.
+// - Validate presentation workflows to comply with confidentiality requirements.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Import PPTX slide comments from XML using C#
+//
+// Description:
+// Demonstrates how to import PPTX slide comments from an XML file using C#
+// and Aspose.Slides for .NET. The example creates a new presentation, parses
+// comment data from the XML, adds comments with proper authors and positions
+// to the appropriate slides, and saves the result as a PPTX file. This pattern
+// can be used to automate comment import workflows, integrate comment data
+// from external sources, or build tools for PowerPoint presentation processing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Import, XML, Slide, Comments,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate importing slide comments from XML into PowerPoint files.
+// - Build C# utilities for synchronizing external comment repositories with PPTX.
+// - Generate or enrich PPTX presentations with comment metadata in .NET applications.
+// - Validate and test comment import processes before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Drawing;

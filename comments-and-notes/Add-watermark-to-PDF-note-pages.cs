@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add watermark to PDF note pages using C#
+//
+// Description:
+// Demonstrates how to add a watermark image to the notes pages of a PowerPoint
+// presentation and export the result as a PDF using Aspose.Slides for .NET.
+// The example loads a PPTX file, ensures each slide has a notes slide, inserts
+// the watermark picture onto the notes slide, configures PDF export options to
+// include notes pages, and saves the output PDF.
+//
+// Keywords:
+// C#, Aspose.Slides, PDF, Watermark, Notes Pages, Presentation, PPTX, Export,
+// PowerPoint, Image, Automation
+//
+// Use Cases:
+// - Add a custom watermark to all notes pages before publishing a PDF.
+// - Automate generation of watermarked PDF handouts from PowerPoint decks.
+// - Integrate notes-page watermarking into .NET document processing pipelines.
+// - Ensure consistent branding on exported presentation notes.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

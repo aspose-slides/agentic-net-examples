@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Apply slide transition based on bullet points in notes using C#
+//
+// Description:
+// This example loads a PowerPoint presentation, checks each slide's notes
+// for the presence of bullet points, and applies a Fade transition with a
+// 3‑second automatic advance only when bullet points are found. It demonstrates
+// how to use Aspose.Slides for .NET to inspect notes, work with bullet
+// formatting, and programmatically set slide show transitions.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, NotesSlide, BulletPoints, SlideShowTransition, 
+// PresentationAutomation, OfficeAutomation
+//
+// Use Cases:
+// - Add slide transitions conditionally based on notes content.
+// - Validate and enforce presentation guidelines before publishing.
+// - Automate PowerPoint slide timing and transition settings.
+// - Build tools that process PPTX files and modify slide show behavior.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

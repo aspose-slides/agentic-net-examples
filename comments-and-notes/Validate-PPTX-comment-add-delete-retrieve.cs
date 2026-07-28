@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Validate PPTX comment add, retrieve, and delete using C#
+//
+// Description:
+// Demonstrates how to add a comment author, insert a comment, retrieve it for
+// verification, delete the comment, and verify its removal using Aspose.Slides
+// for .NET. The example creates a presentation, performs comment operations on
+// the first slide, and saves the presentation after each step. This pattern
+// helps developers automate PPTX comment validation workflows in .NET.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Comment Add, Comment Retrieve,
+// Comment Delete, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate testing of comment addition, retrieval, and deletion in PPTX files.
+// - Build C# utilities for managing comments in PowerPoint presentations.
+// - Validate presentation content before publishing or integration.
+// - Demonstrate Aspose.Slides comment API usage in console applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.Drawing;
 using Aspose.Slides;
@@ -43,7 +63,7 @@ namespace CommentTests
                 IComment addedComment = author.Comments.AddComment("This is a test comment", slide, position, DateTime.Now);
 
                 // Save after addition
-                presentation.Save("CommentAdded.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+                presentation.Save("CommentAdded.pptx", SaveFormat.Pptx);
 
                 // Retrieve comments from the slide
                 IComment[] comments = slide.GetSlideComments(null);
@@ -67,7 +87,7 @@ namespace CommentTests
                 }
 
                 // Save after deletion
-                presentation.Save("CommentDeleted.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+                presentation.Save("CommentDeleted.pptx", SaveFormat.Pptx);
             }
         }
     }

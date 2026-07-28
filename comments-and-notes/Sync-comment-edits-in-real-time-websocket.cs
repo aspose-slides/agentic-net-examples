@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Sync comment edits in real time websocket using C#
+//
+// Description:
+// Demonstrates how to edit an existing comment in a PowerPoint presentation
+// and broadcast the change to connected clients via a WebSocket using
+// Aspose.Slides for .NET. The example loads a PPTX file, modifies the first
+// comment it finds, sends the updated comment text over a WebSocket connection,
+// and saves the updated presentation. This pattern can be used to implement
+// real‑time collaborative comment editing in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Sync, Comment, Edits, Real-time,
+// WebSocket, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Synchronize comment edits across multiple clients in real time.
+// - Build C# tools for managing PowerPoint comments and notes.
+// - Integrate comment synchronization into collaborative web or desktop apps.
+// - Automate comment editing and broadcasting as part of PPTX workflow automation.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Net;

@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Filter notes by custom tag and report using C#
+//
+// Description:
+// Demonstrates how to filter slide notes containing a specific custom tag
+// (e.g., "[Compliance]") and generate a compliance report using Aspose.Slides for
+// .NET. The example loads a PPTX file, scans each slide's notes for the tag,
+// writes matching notes to a text report, and saves the (potentially unchanged)
+// presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Filter, Notes, Custom Tag, Report,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of tagged notes for compliance or review purposes.
+// - Build C# utilities that generate reports from PowerPoint presentations.
+// - Integrate note‑tag validation into .NET workflows before publishing.
+// - Create audit trails of presentation content based on custom annotations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

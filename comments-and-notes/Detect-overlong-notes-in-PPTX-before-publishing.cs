@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Detect overlong notes in PPTX before publishing using C#
+//
+// Description:
+// Demonstrates how to scan a PowerPoint presentation for notes slides that
+// contain more lines than a defined maximum, reporting any overlong notes.
+// The example loads a PPTX file with Aspose.Slides for .NET, checks each notes
+// slide, writes a warning to the console for slides that exceed the limit, and
+// saves the (unmodified) presentation. This pattern can be used to enforce
+// note length guidelines before publishing or distribution.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Notes, Overlong, Validation, Presentation Processing, .NET
+//
+// Use Cases:
+// - Validate that presenter notes do not exceed a line count limit before release.
+// - Integrate notes length checks into automated PowerPoint publishing pipelines.
+// - Build command‑line tools for PowerPoint quality assurance.
+// - Ensure compliance with corporate presentation standards.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Parallelize PPTX slide comment processing using C#
+//
+// Description:
+// Demonstrates how to parallelize PPTX slide comment processing using C# and 
+// Aspose.Slides for .NET. The example creates a presentation, adds comments to 
+// slides, and processes those comments concurrently, outputting each comment's 
+// details to the console. It then saves the presentation to a file.
+// 
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Parallelize, Slide, Comment, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate parallel processing of PPTX slide comments.
+// - Build C# tools for PowerPoint presentation analysis.
+// - Generate or transform PPTX files with concurrent comment handling.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Drawing;

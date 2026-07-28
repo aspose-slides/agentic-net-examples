@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Create pivot table of comment counts using C#
+//
+// Description:
+// Demonstrates how to extract comment counts per author and slide from a PowerPoint
+// presentation using Aspose.Slides for .NET, and export the data to a CSV file that
+// can be used as a source for a pivot table in Excel. The example loads a PPTX,
+// aggregates comments, writes a summary CSV, and saves the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Pivot, Table, Comment, Counts,
+// Presentation Processing, Office Automation, CSV Export
+//
+// Use Cases:
+// - Automate creation of comment count reports for PowerPoint presentations.
+// - Build C# tools that generate data for Excel pivot tables from PPTX comments.
+// - Integrate comment analysis into .NET applications handling PPTX files.
+// - Validate and audit comment usage before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;
