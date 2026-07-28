@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Update hyperlink URLs to HTTPS using C# and Aspose.Slides
+//
+// Description:
+// Demonstrates how to scan all slides, shapes, and text portions in a PowerPoint
+// presentation and replace any hyperlink that starts with "http://" with an
+// equivalent "https://" URL. The example loads a PPTX file, updates the links,
+// and saves the modified presentation using Aspose.Slides for .NET.
+// This pattern can be used to enforce secure links in PPTX files programmatically.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Hyperlink, HTTPS, URL conversion, Presentation automation, Office Open XML
+//
+// Use Cases:
+// - Convert insecure http hyperlinks to secure https in existing presentations.
+// - Enforce corporate security policies on PowerPoint files automatically.
+// - Build .NET utilities for bulk processing of PPTX documents.
+// - Integrate hyperlink validation and correction into document workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
