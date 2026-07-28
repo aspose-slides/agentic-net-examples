@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Log enumeration time for custom properties using C#
+//
+// Description:
+// Demonstrates how to measure and log the time required to enumerate custom
+// document properties in a PowerPoint presentation using Aspose.Slides for .NET.
+// The example loads a PPTX file, iterates through all custom properties while
+// timing the operation, outputs each property and the elapsed time, and then
+// saves the presentation.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Custom Properties, Document Properties,
+// Enumeration, Performance, Timing, Presentation Processing, .NET
+//
+// Use Cases:
+// - Benchmark performance of custom property enumeration in large presentations.
+// - Create diagnostic tools that report document property details and access time.
+// - Integrate property inspection into automated PowerPoint processing pipelines.
+// - Validate and log custom metadata before publishing or further transformation.
+// -----------------------------------------------------------------------------
 using System;
 using System.Diagnostics;
 using System.IO;

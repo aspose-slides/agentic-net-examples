@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Extract audio from hyperlink and save using C#
+//
+// Description:
+// Demonstrates how to extract audio from a hyperlink in a PowerPoint slide and
+// save it as an audio file using C# and Aspose.Slides for .NET. The example
+// loads a presentation, accesses the first shape's hyperlink, retrieves the
+// associated sound binary data, writes it to disk, and optionally saves the
+// presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Extract, Audio, Hyperlink, Save,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of audio linked to hyperlinks in PPTX files.
+// - Build tools for PowerPoint content analysis and media extraction.
+// - Integrate audio retrieval into .NET applications processing presentations.
+// - Validate and process presentation assets before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

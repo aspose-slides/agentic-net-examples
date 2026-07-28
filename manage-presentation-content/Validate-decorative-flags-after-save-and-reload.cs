@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Validate decorative flags after save and reload using C#
+//
+// Description:
+// Demonstrates how to set the ReadOnlyRecommended decorative flag on a
+// presentation, save the file, reload it, and verify that the flag persists
+// using Aspose.Slides for .NET. This example shows the required steps for
+// presentation processing and validation in a standalone console application.
+// Developers can use this pattern to automate PPTX workflows, validate results,
+// or integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Validate, Decorative, Flags,
+// After, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate validation of decorative flags after saving and reloading a PPTX.
+// - Build C# tools for PowerPoint presentation processing and integrity checks.
+// - Generate or transform PPTX files in .NET applications while preserving settings.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

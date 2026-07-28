@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Sync custom property values between PPTX presentations using C#
+//
+// Description:
+// Demonstrates how to read custom document properties from a source PPTX file
+// and copy them to a target PPTX file using Aspose.Slides for .NET. The example
+// loads presentation information, accesses document properties, synchronizes
+// all custom properties, and saves the updated target presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Sync, Custom, Property, Values,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Synchronize custom metadata between multiple PowerPoint presentations.
+// - Automate property propagation in batch processing of PPTX files.
+// - Ensure consistent custom properties across presentation assets.
+// - Integrate property sync into .NET based document management workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add interactive table of contents slide using C#
+//
+// Description:
+// Demonstrates how to add an interactive table of contents slide to a PowerPoint
+// presentation using C# and Aspose.Slides for .NET. The example creates a
+// presentation, adds a TOC slide with hyperlinks that navigate to section
+// slides, and saves the result as a PPTX file. This pattern can be used to
+// automate PPTX workflows, validate results, or integrate presentation logic
+// into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Interactive, Table, Contents,
+// Slide, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding an interactive table of contents slide.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

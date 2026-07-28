@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Convert date strings in custom properties using C#
+//
+// Description:
+// Demonstrates how to iterate through custom document properties of a PowerPoint
+// presentation, detect string values that represent dates, convert them to
+// DateTime objects, and save the updated presentation using Aspose.Slides for .NET.
+// This console application shows the required steps for loading, processing,
+// and saving PPTX files.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, custom properties, date conversion,
+// DocumentProperties, presentation processing, Office automation
+//
+// Use Cases:
+// - Convert string‑based date custom properties to proper DateTime types.
+// - Prepare presentations for downstream processing that expects date values.
+// - Automate validation and correction of metadata in PPTX files.
+// - Integrate custom property handling into .NET PowerPoint workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

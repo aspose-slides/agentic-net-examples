@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add macro enabled lastmodified update on save using C#
+//
+// Description:
+// Demonstrates how to create a macro‑enabled PowerPoint presentation, add a
+// simple VBA macro, save it as a .pptm file, and then update the
+// LastSavedTime document property using Aspose.Slides for .NET. The example
+// shows the required steps for presentation creation, macro insertion, and
+// property modification in a standalone console application.
+//
+// Keywords:
+// C#, PowerPoint, PPTM, Aspose.Slides for .NET, Macro, Enabled, LastSavedTime,
+// Update, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of macro‑enabled presentations with custom VBA code.
+// - Update document properties such as LastSavedTime after saving.
+// - Build .NET tools for PowerPoint presentation processing and versioning.
+// - Integrate macro handling and metadata updates into automated workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

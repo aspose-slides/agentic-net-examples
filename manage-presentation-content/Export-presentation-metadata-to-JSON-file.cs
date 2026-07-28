@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Export presentation metadata to JSON file using C#
+//
+// Description:
+// Demonstrates how to export presentation metadata to a JSON file using C# and 
+// Aspose.Slides for .NET. The example loads a PPTX file, extracts core document 
+// properties and slide information, serializes the data to JSON, writes it to 
+// disk, and saves a copy of the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Presentation, Metadata, 
+// Json, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate export of presentation metadata to a JSON file.
+// - Build C# tools for PowerPoint presentation analysis.
+// - Integrate metadata extraction into .NET applications.
+// - Validate presentation properties before publishing or further processing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Text.Json;

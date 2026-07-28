@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Edit hyperlink tooltip with updated text using C#
+//
+// Description:
+// Demonstrates how to edit the tooltip of an existing hyperlink in a PowerPoint
+// presentation using C# and Aspose.Slides for .NET. The example loads a PPTX
+// file, locates the first auto shape's first text portion, updates its
+// hyperlink tooltip, and saves the modified presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Edit, Hyperlink, Tooltip,
+// Updated, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate updating hyperlink tooltips in existing presentations.
+// - Build .NET utilities for refining PPTX content before distribution.
+// - Integrate tooltip modifications into larger PowerPoint processing pipelines.
+// - Ensure accessibility and clarity of hyperlink descriptions in slides.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

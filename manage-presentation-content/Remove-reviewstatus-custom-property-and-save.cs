@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Remove ReviewStatus custom property and save using C#
+//
+// Description:
+// Demonstrates how to remove the "ReviewStatus" custom document property from a
+// PowerPoint presentation and save the modified file using C# and Aspose.Slides
+// for .NET. The example loads an existing PPTX, manipulates its document
+// properties, and writes the result to a new file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove, ReviewStatus, Custom Property,
+// Document Properties, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate removal of a specific custom property from presentations.
+// - Build .NET tools for cleaning or updating PPTX metadata.
+// - Integrate property management into PowerPoint workflow automation.
+// - Ensure presentations meet compliance by stripping unwanted metadata.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

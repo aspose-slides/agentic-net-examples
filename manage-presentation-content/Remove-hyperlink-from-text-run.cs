@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Remove hyperlink from text run using C#
+//
+// Description:
+// Demonstrates how to remove a hyperlink from a specific text run (portion) 
+// within a text frame of an AutoShape using C# and Aspose.Slides for .NET. 
+// The example loads a PPTX file, accesses the first slide and shape, locates 
+// the second portion of the first paragraph, removes its click hyperlink, and 
+// saves the modified presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove, Hyperlink, Text Run, 
+// Portion, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate removal of hyperlinks from specific text runs in presentations.
+// - Build C# utilities for cleaning up PPTX files before distribution.
+// - Integrate hyperlink management into .NET applications handling PowerPoint.
+// - Validate and preprocess presentation content in automated workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides.Export;

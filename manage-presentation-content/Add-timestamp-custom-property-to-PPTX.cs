@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add timestamp custom property to PPTX using C#
+//
+// Description:
+// Demonstrates how to add a UTC timestamp custom property named "ExportedOn"
+// to an existing PPTX file using C# and Aspose.Slides for .NET. The example
+// loads a presentation, updates its document properties, and saves the
+// modified file. This pattern can be used to embed export timestamps or
+// other metadata into PowerPoint files programmatically.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Timestamp, Custom Property,
+// Document Properties, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate embedding export timestamps into PPTX files.
+// - Build .NET tools for managing PowerPoint metadata.
+// - Generate or transform PPTX files with custom properties in batch jobs.
+// - Validate and track presentation versions before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

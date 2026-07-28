@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Validate required custom properties before report using C#
+//
+// Description:
+// Demonstrates how to validate required custom properties in a PowerPoint
+// presentation before generating a report using C# and Aspose.Slides for .NET.
+// The example loads a PPTX file, checks for the presence of specific custom
+// document properties, and proceeds only if all required properties are found.
+// It then saves the presentation, illustrating a typical validation step in
+// automated PPTX workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Validate, Required, Custom,
+// Properties, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Ensure required custom properties exist before report generation.
+// - Automate validation of PowerPoint metadata in .NET applications.
+// - Integrate property checks into PPTX processing pipelines.
+// - Prevent publishing of presentations missing essential metadata.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

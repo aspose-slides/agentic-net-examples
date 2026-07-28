@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Validate decorative flags on all slides using C#
+//
+// Description:
+// Demonstrates how to iterate through all slides and shapes in a PowerPoint
+// presentation, check each shape's IsDecorative flag, report non‑decorative
+// shapes, and save the presentation using Aspose.Slides for .NET. This example
+// is a standalone console application suitable for automating validation of
+// decorative markings in PPTX files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Validate, Decorative, Flags,
+// Shape, Slide, IsDecorative, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate validation of decorative flags on shapes across all slides.
+// - Build C# tools for checking accessibility‑related properties in PowerPoint.
+// - Integrate shape property validation into .NET presentation workflows.
+// - Ensure presentations meet decorative‑shape requirements before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

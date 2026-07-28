@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Apply zoom 75 percent verify printing view using C#
+//
+// Description:
+// Demonstrates how to apply a 75 percent zoom for both slide and notes printing
+// view using C# and Aspose.Slides for .NET. The example shows the required
+// presentation-processing steps for PowerPoint files, verifies the applied
+// scaling, and saves the result in a standalone console application. Developers
+// can use this pattern to automate PPTX workflows, validate view settings, or
+// integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, Zoom, Percent, Verify,
+// Printing View, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate applying a 75% zoom for printing view in PowerPoint presentations.
+// - Build C# tools for PowerPoint presentation processing with specific view scaling.
+// - Generate or transform PPTX files while controlling slide and notes view scales.
+// - Validate presentation view settings before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides.Export;
 

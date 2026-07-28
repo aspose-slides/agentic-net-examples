@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Apply decorative flag to background shapes using C#
+//
+// Description:
+// Demonstrates how to apply a decorative flag to all shapes in a presentation
+// using C# and Aspose.Slides for .NET. The example loads an existing PPTX file,
+// marks each shape as decorative (non‑interactive visual element), and saves
+// the modified presentation. This pattern helps automate accessibility
+// improvements and visual consistency in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, Decorative, Flag,
+// Background Shapes, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting the decorative flag on shapes to improve accessibility.
+// - Build C# utilities for bulk updating PowerPoint presentations.
+// - Integrate shape property modifications into .NET applications.
+// - Validate and enforce presentation standards before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

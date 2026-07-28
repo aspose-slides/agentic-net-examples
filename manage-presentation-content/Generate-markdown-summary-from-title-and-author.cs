@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Generate markdown summary from title and author using C#
+//
+// Description:
+// Demonstrates how to extract the title and author from a PowerPoint presentation's
+// built‑in document properties and generate a markdown summary file using C# and
+// Aspose.Slides for .NET. The example loads a PPTX file, reads its metadata, creates
+// a simple markdown document, and writes it to disk. It also shows basic error
+// handling and optional saving of the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Generate, Markdown, Summary, Title,
+// Author, Document Properties, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of markdown documentation for PowerPoint presentations.
+// - Build tools that extract metadata from PPTX files for reporting.
+// - Integrate presentation metadata extraction into .NET applications.
+// - Validate and archive presentation information before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add hyperlink to image media using C#
+//
+// Description:
+// Demonstrates how to embed an external image into a presentation's media
+// collection, place it on a slide as a picture frame, and assign a click
+// hyperlink to the image using Aspose.Slides for .NET. The example creates a
+// new PPTX file, adds the image, sets a hyperlink with tooltip, and saves the
+// result.
+//
+// Keywords:
+// C#, Aspose.Slides, PPTX, Image, Hyperlink, Media, Presentation, Automation,
+// Office Automation, .NET
+//
+// Use Cases:
+// - Programmatically add images with clickable links to PowerPoint slides.
+// - Build tools that generate linked visual content in presentations.
+// - Automate creation of marketing or documentation decks with embedded URLs.
+// - Validate image hyperlink functionality in PPTX files.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

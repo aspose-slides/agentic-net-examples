@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set author property and save PPTX using C#
+//
+// Description:
+// Demonstrates how to set the Author document property of a PowerPoint presentation
+// and save the modified file using Aspose.Slides for .NET. The example loads an
+// existing PPTX, updates the author metadata, and writes the result to a new file.
+// This pattern can be used in console applications or automated workflows that
+// need to modify presentation metadata.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Author Property, Document Properties,
+// Save Presentation, Presentation Metadata, Office Automation
+//
+// Use Cases:
+// - Update author information in existing PPTX files.
+// - Automate metadata management for PowerPoint presentations.
+// - Integrate author property updates into .NET build or publishing pipelines.
+// - Prepare presentations with correct attribution before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

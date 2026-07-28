@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Get all document properties and values using C#
+//
+// Description:
+// Demonstrates how to retrieve all built‑in and custom document properties from a
+// PowerPoint presentation using Aspose.Slides for .NET. The example loads a PPTX
+// file, extracts each property name and its value via reflection, and prints the
+// results to the console. It also shows basic error handling for missing files
+// and unsupported formats.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Document Properties, Values,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of presentation metadata for reporting or indexing.
+// - Build tools that validate or audit PowerPoint files in .NET applications.
+// - Integrate property retrieval into larger PPTX processing workflows.
+// - Generate documentation or logs of presentation attributes before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
 using System.IO;

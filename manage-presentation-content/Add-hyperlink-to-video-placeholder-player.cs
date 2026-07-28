@@ -1,3 +1,27 @@
+// -----------------------------------------------------------------------------
+// Example: Add hyperlink to video placeholder player using C#
+//
+// Description:
+// Demonstrates how to add a video frame placeholder to a slide, configure its
+// playback settings, and attach an external hyperlink that launches a video
+// player when the placeholder is clicked. The example uses Aspose.Slides for
+// .NET to create a new presentation, embed a local MP4 video, set auto‑play
+// and loud volume, assign a click hyperlink, and save the result as a PPTX file.
+// This pattern helps developers automate PowerPoint content creation and
+// enrich presentations with interactive video links.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, VideoFrame, Hyperlink, External
+// URL, Placeholder, Presentation Automation, Office Automation
+//
+// Use Cases:
+// - Programmatically embed video placeholders with clickable links in PPTX files.
+// - Build .NET tools that generate interactive presentations with external video
+//   players.
+// - Automate the creation of slide decks that reference online video resources.
+// - Validate and test video hyperlink functionality in PowerPoint automation
+//   workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

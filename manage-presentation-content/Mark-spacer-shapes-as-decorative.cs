@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Mark spacer shapes as decorative using C#
+//
+// Description:
+// Demonstrates how to iterate through all shapes in a PowerPoint presentation,
+// identify shapes that contain no textual content (spacer shapes), and mark them
+// as decorative using Aspose.Slides for .NET. The example loads an input PPTX,
+// processes each slide, updates the IsDecorative property, and saves the result.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Mark, Spacer, Shapes, Decorative,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automatically flag non‑textual (spacer) shapes as decorative for accessibility.
+// - Prepare presentations for compliance with accessibility guidelines.
+// - Build .NET tools that preprocess PPTX files before publishing or distribution.
+// - Integrate shape‑decorative marking into larger PowerPoint automation workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

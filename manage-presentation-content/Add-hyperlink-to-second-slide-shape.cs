@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add hyperlink to second slide shape using C#
+//
+// Description:
+// Demonstrates how to add an external hyperlink to the first shape on the
+// second slide of a PowerPoint presentation using C# and Aspose.Slides for .NET.
+// The example loads an existing PPTX file, verifies the presence of a second
+// slide and at least one shape, applies the hyperlink while preserving the
+// shape's formatting, and saves the result as a new PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Hyperlink, Second Slide, Shape,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding external hyperlinks to shapes on a specific slide.
+// - Build C# utilities for PowerPoint presentation manipulation.
+// - Generate or modify PPTX files programmatically in .NET applications.
+// - Validate and test hyperlink integration before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

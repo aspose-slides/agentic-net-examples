@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Copy built in properties from source to target using C#
+//
+// Description:
+// Demonstrates how to copy built-in document properties from a source PowerPoint
+// presentation to a target presentation using Aspose.Slides for .NET. The
+// example loads the source file, optionally creates or loads the target file,
+// copies all writable built-in properties, and saves the result as a PPTX file.
+// This pattern can be used in console utilities or automated workflows that
+// need to synchronize presentation metadata.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Copy, Built-in, Document Properties,
+// Source Presentation, Target Presentation, Metadata Synchronization
+//
+// Use Cases:
+// - Synchronize metadata between PowerPoint files.
+// - Build command-line tools for bulk updating presentation properties.
+// - Integrate property copying into document management or migration pipelines.
+// - Ensure consistent author, title, and other metadata across PPTX assets.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -48,7 +69,7 @@ namespace CopyBuiltInProperties
                         IDocumentProperties sourceProps = sourcePresentation.DocumentProperties;
                         IDocumentProperties targetProps = targetPresentation.DocumentProperties;
 
-                        // Copy built‑in properties (only writable ones)
+                        // Copy built-in properties (only writable ones)
                         targetProps.Author = sourceProps.Author;
                         targetProps.Title = sourceProps.Title;
                         targetProps.Subject = sourceProps.Subject;

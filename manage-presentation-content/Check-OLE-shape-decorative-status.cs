@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Check OLE shape decorative status using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, iterate through its slides,
+// find OLE object frames, and read the IsDecorative property using Aspose.Slides for .NET.
+// The example prints the decorative status of each OLE shape and saves the
+// presentation unchanged. This pattern can be used to audit or modify OLE objects
+// in PPTX files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, OLE, Decorative, Status, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Audit OLE objects in presentations for decorative status.
+// - Build .NET tools that need to inspect or modify OLE shape properties.
+// - Automate validation of PowerPoint files before publishing.
+// - Integrate OLE shape analysis into larger presentation processing workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Read modification date and compare timestamp using C#
+//
+// Description:
+// Demonstrates how to read the modification date from a PowerPoint presentation's
+// document properties and compare it with the file system's last write timestamp
+// using Aspose.Slides for .NET. The example loads a PPTX file, retrieves the
+// LastSavedTime property, obtains the file's last write time in UTC, compares the
+// two values, and outputs the result. It also shows basic error handling for
+// unsupported formats and general exceptions.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Read, Modification, Date,
+// Compare, Timestamp, DocumentProperties, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Verify that a presentation's internal LastSavedTime matches the file system timestamp.
+// - Build validation tools for PowerPoint files in .NET applications.
+// - Automate consistency checks during document management workflows.
+// - Integrate presentation metadata verification into CI/CD pipelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

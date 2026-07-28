@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Check shape decorative property using C#
+//
+// Description:
+// Demonstrates how to check the decorative property of each shape in a PowerPoint
+// presentation using C# and Aspose.Slides for .NET. The example loads a PPTX file,
+// iterates through all slides and shapes, outputs whether each shape is marked as
+// decorative, and saves the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Check, Shape, Decorative, 
+// Property, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate verification of shape decorative settings in presentations.
+// - Build C# tools for PowerPoint accessibility compliance checks.
+// - Generate reports on shape properties for content auditing.
+// - Integrate shape property validation into .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

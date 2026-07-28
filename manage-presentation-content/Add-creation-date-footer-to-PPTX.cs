@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Add creation date footer to PPTX using C#
+//
+// Description:
+// Demonstrates how to add a creation date footer to a PPTX file using C# and
+// Aspose.Slides for .NET. The example loads an existing presentation, extracts
+// the document's creation date, applies it as footer text on each slide, and
+// saves the modified presentation. This pattern can be used to automate
+// PowerPoint workflows that require consistent metadata display.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Creation, Date, Footer, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding a creation date footer to PPTX files.
+// - Build C# tools for PowerPoint presentation metadata handling.
+// - Generate or transform PPTX files with consistent footers in .NET applications.
+// - Validate and enforce presentation metadata before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;

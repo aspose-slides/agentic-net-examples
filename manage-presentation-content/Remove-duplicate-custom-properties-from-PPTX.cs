@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Remove duplicate custom properties from PPTX using C#
+//
+// Description:
+// Demonstrates how to remove duplicate custom properties from PPTX files using
+// C# and Aspose.Slides for .NET. The example processes all presentations in a
+// specified directory, identifies custom property name/value pairs that have
+// already been encountered, and removes subsequent duplicates. The modified
+// presentations are saved back to their original locations. This pattern can be
+// used to clean up metadata across multiple PowerPoint files in automated
+// workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove, Duplicate, Custom,
+// Properties, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate removal of duplicate custom properties from a batch of PPTX files.
+// - Build C# tools for cleaning up PowerPoint presentation metadata.
+// - Integrate presentation metadata validation into .NET applications.
+// - Prepare PPTX files for publishing by ensuring unique custom properties.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;

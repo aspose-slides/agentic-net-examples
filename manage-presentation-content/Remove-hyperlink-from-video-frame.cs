@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Remove hyperlink from video frame using C#
+//
+// Description:
+// Demonstrates how to remove a hyperlink from a video frame in a PowerPoint
+// presentation using C# and Aspose.Slides for .NET. The example loads a PPTX
+// file, iterates through its slides to locate video frames, removes any
+// click‑action hyperlink, and saves the updated presentation.
+// This pattern can be used to automate PPTX processing, clean up unwanted
+// navigation links, or prepare presentations for distribution.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove, Hyperlink, Video,
+// Frame, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Remove unwanted hyperlinks from video frames before publishing.
+// - Build .NET tools that sanitize presentations for compliance.
+// - Automate batch processing of PPTX files to clean up navigation links.
+// - Integrate hyperlink removal into larger PowerPoint workflow pipelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

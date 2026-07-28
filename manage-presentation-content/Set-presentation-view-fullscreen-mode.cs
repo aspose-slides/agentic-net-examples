@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set presentation view fullscreen mode using C#
+//
+// Description:
+// Demonstrates how to configure a PowerPoint presentation to open in full‑screen
+// (kiosk) mode using Aspose.Slides for .NET. The example creates a new presentation,
+// sets the SlideShowSettings to BrowsedAtKiosk, and saves the file. This pattern
+// can be used to automate presentation view settings in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Presentation, SlideShowSettings,
+// Fullscreen, Kiosk, View Mode, Office Automation
+//
+// Use Cases:
+// - Create presentations that launch directly in full‑screen kiosk view.
+// - Build .NET tools that modify presentation display settings.
+// - Automate PPTX generation with predefined slide show behavior.
+// - Ensure consistent presentation experience across devices.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

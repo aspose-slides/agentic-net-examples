@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Read revision number and compare with VCS using C#
+//
+// Description:
+// Demonstrates how to read the built‑in revision number from a PowerPoint
+// presentation, retrieve an external revision number stored in a VCS file,
+// compare the two values, and report any mismatches. The example also shows
+// how to save the presentation after processing using Aspose.Slides for .NET.
+// This pattern can be used to integrate version‑control checks into automated
+// PowerPoint workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Revision Number, VCS,
+// Compare, Presentation Processing, Office Automation, Document Properties
+//
+// Use Cases:
+// - Verify that a presentation's internal revision matches the version‑control
+//   revision before publishing.
+// - Build command‑line tools that enforce revision consistency across files.
+// - Automate validation steps in CI/CD pipelines for PowerPoint assets.
+// - Generate reports on revision discrepancies for documentation teams.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

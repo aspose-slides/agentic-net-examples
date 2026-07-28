@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add custom ProjectId property and verify using C#
+//
+// Description:
+// Demonstrates how to add a custom ProjectId property to a PowerPoint presentation
+// and verify its existence using C# and Aspose.Slides for .NET. The example shows
+// the required presentation-processing steps for creating a presentation, adding
+// a custom integer property, checking its presence, retrieving its value, and
+// saving the file. This pattern can be used to automate PPTX workflows, validate
+// custom metadata, or integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Custom, ProjectId, Property, 
+// Verify, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding a custom ProjectId property and verify it.
+// - Build C# tools for PowerPoint presentation metadata management.
+// - Generate or transform PPTX files with custom properties in .NET applications.
+// - Validate presentation metadata before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

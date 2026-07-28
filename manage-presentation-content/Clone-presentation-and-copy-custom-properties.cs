@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Clone presentation and copy custom document properties using C#
+//
+// Description:
+// Demonstrates how to clone all slides from a source presentation and copy its
+// custom document properties to a new presentation using Aspose.Slides for .NET.
+// The example loads a PPTX file, creates a new presentation, clones slides,
+// transfers custom properties, and saves the result as a separate PPTX file.
+// This pattern can be used in console applications or integrated into larger
+// .NET solutions for PowerPoint automation.
+//
+// Keywords:
+// C#, .NET, PowerPoint, PPTX, Aspose.Slides, Clone Presentation, Copy Custom Properties,
+// DocumentProperties, Slide Cloning, Office Automation
+//
+// Use Cases:
+// - Automate cloning of a presentation while preserving custom metadata.
+// - Build utilities that migrate or duplicate PPTX files with their custom properties.
+// - Integrate slide cloning and property copying into document management workflows.
+// - Validate and test presentation transformations in automated pipelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

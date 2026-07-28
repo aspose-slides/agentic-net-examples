@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add hyperlink to audio start time using C#
+//
+// Description:
+// Demonstrates how to embed an audio file into a slide, set its playback start
+// time (trim from start), and add a hyperlink that points to an external audio
+// resource using Aspose.Slides for .NET. The example creates a new presentation,
+// adds an audio frame, configures its start time, assigns a click hyperlink, and
+// saves the result as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Hyperlink, Audio, Start Time,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate embedding audio with a specific start offset in PowerPoint slides.
+// - Add clickable hyperlinks to audio frames for external resources.
+// - Build .NET tools for presentation generation and manipulation.
+// - Validate audio playback settings programmatically before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
