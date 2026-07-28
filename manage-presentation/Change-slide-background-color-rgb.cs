@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Change slide background color rgb using C#
+//
+// Description:
+// Demonstrates how to change the background color of each slide to a custom
+// RGB value using C# and Aspose.Slides for .NET. The example loads an existing
+// PPTX file, applies a solid fill with the specified RGB components to every
+// slide's background, and saves the result as a new PPTX file. This pattern can
+// be used to automate presentation styling, enforce branding, or prepare
+// slide decks programmatically.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Change, Slide, Background, 
+// Color, RGB, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting a uniform slide background color across a presentation.
+// - Build C# tools for PowerPoint presentation styling and branding.
+// - Generate or transform PPTX files with custom background colors in .NET
+//   applications.
+// - Apply consistent visual themes to existing slide decks programmatically.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
