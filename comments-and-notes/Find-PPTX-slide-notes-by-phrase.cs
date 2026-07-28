@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Find PPTX slide notes by phrase using C#
+//
+// Description:
+// Demonstrates how to search slide notes in a PPTX file for a specific phrase
+// using Aspose.Slides for .NET. The example loads a presentation, iterates
+// through each slide's notes, collects indices of slides whose notes contain the
+// target phrase (case‑insensitive), outputs the matching slide indices, and saves
+// the presentation.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Slide Notes, Text Search, Presentation
+// Processing, Office Automation
+//
+// Use Cases:
+// - Locate slides that contain important annotations or reminders.
+// - Build automated validation tools for presentation content.
+// - Generate reports of slides with specific note keywords.
+// - Integrate note‑search functionality into .NET PowerPoint utilities.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;
