@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Set default language to french text frames using C#
+//
+// Description:
+// Demonstrates how to set the default language to French for text frames when
+// loading a presentation using Aspose.Slides for .NET. The example loads an
+// existing PPTX, applies the French language setting via LoadOptions, and
+// saves the modified presentation. This pattern can be used to automate
+// language localization in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Default Language, French,
+// Text Frames, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting default language to French for text frames in presentations.
+// - Build C# utilities for PowerPoint localization workflows.
+// - Generate or transform PPTX files with specific language settings in .NET
+//   applications.
+// - Validate language configuration before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
