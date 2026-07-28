@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Convert presentation to HTML with embedded SVG using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation to an HTML file with
+// embedded SVG graphics using C# and Aspose.Slides for .NET. The example loads
+// a PPTX file, configures HTML and SVG options to embed vector graphics, and
+// saves the result as a standalone HTML document. This pattern can be used to
+// automate PPTX to HTML conversion, integrate presentation processing into
+// .NET applications, or generate web‑ready versions of slides.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, HTML, SVG, Convert, Presentation,
+// Html, Embedded, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PowerPoint presentations to HTML with embedded SVG.
+// - Build .NET tools for web‑friendly rendering of slide decks.
+// - Integrate slide conversion into server‑side or desktop applications.
+// - Validate and preview presentation content before publishing online.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
