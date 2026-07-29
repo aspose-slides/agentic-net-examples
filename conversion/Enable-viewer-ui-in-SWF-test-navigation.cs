@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Enable viewer UI in SWF test navigation using C#
+//
+// Description:
+// Demonstrates how to enable viewer UI in SWF test navigation using C# and 
+// Aspose.Slides for .NET. The example shows the required 
+// presentation-processing steps for PowerPoint files and produces the 
+// requested output in a standalone console application. Developers can use 
+// this pattern to automate PPTX workflows, validate results, or integrate 
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Enable, Viewer, Test, 
+// Navigation, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate enable viewer UI in SWF test navigation.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files to SWF in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -28,13 +50,15 @@ namespace SwfExportExample
                 Presentation presentation = new Presentation(inputPath);
 
                 // Configure SWF options with viewer UI enabled
-                SwfOptions swfOptions = new SwfOptions();
-                swfOptions.ViewerIncluded = true;          // Include integrated viewer
-                swfOptions.ShowFullScreen = true;         // Show fullscreen button
-                swfOptions.ShowPageStepper = true;        // Show page stepper (navigation)
-                swfOptions.ShowSearch = true;             // Show search pane
-                swfOptions.ShowLeftPane = true;           // Show left navigation pane
-                swfOptions.ShowBottomPane = true;         // Show bottom pane
+                SwfOptions swfOptions = new SwfOptions
+                {
+                    ViewerIncluded = true,   // Include integrated viewer
+                    ShowFullScreen = true,   // Show fullscreen button
+                    ShowPageStepper = true,  // Show page stepper (navigation)
+                    ShowSearch = true,       // Show search pane
+                    ShowLeftPane = true,     // Show left navigation pane
+                    ShowBottomPane = true    // Show bottom pane
+                };
 
                 // Save the presentation as SWF
                 presentation.Save(outputPath, SaveFormat.Swf, swfOptions);
