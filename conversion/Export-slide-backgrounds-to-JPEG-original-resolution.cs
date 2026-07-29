@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Export slide backgrounds to JPEG original resolution using C#
+//
+// Description:
+// Demonstrates how to export each slide background as a JPEG image at the
+// original slide resolution using C# and Aspose.Slides for .NET. The example
+// loads a PPTX file, iterates through its slides, renders each slide to an
+// image with a scale factor of 1.0 to preserve the native size, saves the
+// images as JPEG files, and finally saves the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, JPEG, Export, Slide, 
+// Backgrounds, Jpeg, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of slide backgrounds as high‑resolution JPEGs.
+// - Build .NET utilities for PowerPoint content conversion.
+// - Integrate slide‑to‑image rendering into reporting or publishing pipelines.
+// - Preserve original slide dimensions when generating image assets.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
