@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Batch convert ppt to pdf progress bar using C#
+//
+// Description:
+// Demonstrates how to batch convert PowerPoint presentations (PPTX) to PDF
+// with a progress bar using C# and Aspose.Slides for .NET. The example loads
+// each presentation, configures PdfOptions with a custom IProgressCallback,
+// and saves the file while reporting conversion progress to the console.
+// This pattern can be used to automate large‑scale PPTX to PDF conversions
+// with real‑time feedback.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, PDF, Aspose.Slides for .NET, Batch conversion, Progress
+// bar, Presentation processing, Office automation
+//
+// Use Cases:
+// - Automate batch conversion of PPTX files to PDF with progress reporting.
+// - Build command‑line tools for PowerPoint to PDF transformation.
+// - Integrate conversion progress feedback into .NET applications.
+// - Validate and monitor large presentation conversion workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
