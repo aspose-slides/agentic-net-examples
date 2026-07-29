@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Apply grayscale to PPTX and export PDF using C#
+//
+// Description:
+// Demonstrates how to apply a grayscale effect to all picture frames in a PPTX
+// presentation and export the result as a PDF using C# and Aspose.Slides for .NET.
+// The example loads a presentation, iterates through slides and picture frames,
+// applies the grayscale transformation, and saves the modified presentation as PDF.
+// This pattern can be used to automate image processing in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Grayscale, Export, 
+// Presentation Processing, Office Automation, Image Transform
+//
+// Use Cases:
+// - Automate applying grayscale to images in PPTX files and generate PDFs.
+// - Build .NET tools for batch processing of PowerPoint presentations.
+// - Integrate image effect workflows into existing C# applications.
+// - Validate visual consistency of presentations before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
