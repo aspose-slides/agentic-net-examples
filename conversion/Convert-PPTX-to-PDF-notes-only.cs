@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Convert PPTX to PDF notes only using C#
+//
+// Description:
+// Demonstrates how to convert a PPTX presentation to a PDF containing only
+// the speaker notes using Aspose.Slides for .NET. The example loads a PPTX
+// file, configures the PDF options to layout notes at the bottom of each page,
+// and saves the result as a PDF. This pattern can be used in console
+// applications or automated workflows that need to extract notes from PowerPoint
+// files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Convert, Notes Only,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Extract speaker notes from PPTX files into PDF format.
+// - Automate generation of notes-only PDFs for review or distribution.
+// - Integrate notes extraction into .NET applications or CI pipelines.
+// - Validate and process PowerPoint presentations programmatically.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
