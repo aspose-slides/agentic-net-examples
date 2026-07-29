@@ -1,3 +1,29 @@
+// -----------------------------------------------------------------------------
+// Example: Create GIF from PPTX disposal none using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation (PPTX) to an animated
+// GIF with the disposal method set to None using C# and Aspose.Slides for .NET.
+// The example loads a PPTX file, configures GIF export options (frame size,
+// delay, transition FPS) and saves the result as a GIF. Although Aspose.Slides
+// does not expose a direct property for the disposal method, the code includes
+// a placeholder comment indicating where such a setting would be applied.
+// This pattern can be used in console applications to automate PPTX to GIF
+// conversions.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, GIF, Aspose.Slides for .NET, Disposal, None, 
+// Presentation Conversion, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX presentations to animated GIFs with custom
+//   disposal settings.
+// - Build C# utilities for batch processing of PowerPoint files into GIFs.
+// - Integrate PPTX-to-GIF conversion into .NET applications or CI pipelines.
+// - Prototype presentation export workflows before implementing full disposal
+//   control.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
