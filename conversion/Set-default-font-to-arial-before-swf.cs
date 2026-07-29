@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set default font to Arial before converting to SWF using C#
+//
+// Description:
+// Demonstrates how to set the default regular font to Arial before saving a
+// PowerPoint presentation as an SWF file using Aspose.Slides for .NET. The
+// example loads a PPTX file, configures SwfOptions with the desired font, and
+// saves the result as an SWF document. This pattern can be used in console
+// applications or automated workflows that require font consistency during
+// conversion.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Default Font, Arial, 
+// Presentation Conversion, Office Automation
+//
+// Use Cases:
+// - Ensure Arial is used as the fallback font when converting PPTX to SWF.
+// - Build command‑line tools for batch conversion of presentations to SWF.
+// - Integrate font‑consistent conversion into .NET services or applications.
+// - Automate validation of presentation rendering before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
