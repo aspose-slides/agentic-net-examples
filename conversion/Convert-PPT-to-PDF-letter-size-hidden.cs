@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Convert PPT to PDF (Letter size) including hidden slides using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation (PPTX) to a PDF file
+// with Letter page size (8.5 x 11 inches) while preserving hidden slides using
+// Aspose.Slides for .NET. The example loads a presentation, sets the slide
+// dimensions, configures PDF options to show hidden slides, and saves the result.
+// This pattern can be used in console applications or automated workflows.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, PDF, Letter size, Hidden slides, Convert,
+// Presentation processing, .NET
+//
+// Use Cases:
+// - Convert PPTX files to PDF with specific page dimensions.
+// - Include hidden slides in the generated PDF.
+// - Automate document conversion in batch processing or CI pipelines.
+// - Integrate PowerPoint to PDF conversion into .NET services or tools.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;
@@ -28,11 +48,11 @@ namespace SlideToPdf
                     presentation.SlideSize.SetSize(612f, 792f, Aspose.Slides.SlideSizeScaleType.EnsureFit);
 
                     // Configure PDF options to include hidden slides
-                    Aspose.Slides.Export.PdfOptions pdfOptions = new Aspose.Slides.Export.PdfOptions();
+                    PdfOptions pdfOptions = new PdfOptions();
                     pdfOptions.ShowHiddenSlides = true;
 
                     // Save the presentation as PDF
-                    presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pdf, pdfOptions);
+                    presentation.Save(outputPath, SaveFormat.Pdf, pdfOptions);
                 }
             }
             catch (NotSupportedException)
