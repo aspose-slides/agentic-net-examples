@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Batch convert PPT/PPTX/ODP to PDF with timestamp footer using C#
+//
+// Description:
+// Demonstrates how to batch convert PowerPoint presentations (PPT, PPTX, ODP)
+// to PDF files while adding a timestamp footer to each slide. The example uses
+// Aspose.Slides for .NET in a console application, handling directory checks,
+// file filtering, and error handling for unsupported formats.
+//
+// Keywords:
+// C#, PowerPoint, PPT, PPTX, ODP, PDF, Aspose.Slides for .NET, Batch conversion,
+// Timestamp footer, Presentation processing, Office automation
+//
+// Use Cases:
+// - Convert multiple PowerPoint presentations to PDF with a generation timestamp.
+// - Add consistent footer information to all slides during batch processing.
+// - Automate document archival or publishing workflows in .NET environments.
+// - Detect and report unsupported presentation formats while processing batches.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
