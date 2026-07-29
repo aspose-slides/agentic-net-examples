@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Batch export PPT to XPS chronologically using C#
+//
+// Description:
+// Demonstrates how to batch export PowerPoint files (PPT, PPTX) to XPS format
+// in chronological order based on file creation dates using Aspose.Slides for .NET.
+// The example scans an input folder, creates date‑based subfolders in the output
+// directory, and saves each presentation as an XPS file. It can be used as a
+// standalone console application for automated document conversion workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPT, PPTX, XPS, Aspose.Slides for .NET, Batch Export, 
+// Chronological, Presentation Conversion, Automation
+//
+// Use Cases:
+// - Convert large collections of PowerPoint presentations to XPS for archiving.
+// - Generate date‑organized XPS outputs for compliance or record‑keeping.
+// - Integrate PowerPoint to XPS conversion into .NET batch processing tools.
+// - Automate conversion pipelines that require chronological folder structures.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
