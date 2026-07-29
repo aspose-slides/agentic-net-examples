@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX to HTML with notes using C#
+//
+// Description:
+// Demonstrates how to export a PPTX file to a simple HTML document that
+// includes slide numbers and associated notes using C# and Aspose.Slides for .NET.
+// The example loads a presentation, extracts notes from each slide (creating
+// a notes slide if missing), builds an HTML string, writes it to a file, and
+// saves the original presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, HTML, Export, Notes, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate export of PPTX to HTML with slide notes.
+// - Build .NET tools for PowerPoint presentation processing.
+// - Generate HTML previews of presentations for web publishing.
+// - Validate and transform PPTX files in automated workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Text;
@@ -22,7 +42,7 @@ namespace HtmlFromPptx
             try
             {
                 // Load presentation
-                var presentation = new Aspose.Slides.Presentation(inputPath);
+                var presentation = new Presentation(inputPath);
 
                 // Build HTML content
                 var sb = new StringBuilder();
@@ -53,8 +73,8 @@ namespace HtmlFromPptx
                 var outputPath = Path.Combine(Environment.CurrentDirectory, "output.html");
                 File.WriteAllText(outputPath, sb.ToString());
 
-                // Save presentation before exit
-                presentation.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                // Save presentation before exit (optional, retains any changes)
+                presentation.Save(inputPath, SaveFormat.Pptx);
                 presentation.Dispose();
 
                 Console.WriteLine("HTML generated at " + outputPath);
@@ -62,7 +82,7 @@ namespace HtmlFromPptx
             catch (Exception ex)
             {
                 // Handle unsupported format or other errors
-                // format not supported
+                Console.WriteLine("An error occurred: " + ex.Message);
             }
         }
     }
