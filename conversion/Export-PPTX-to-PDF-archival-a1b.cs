@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX to PDF/A-1b archival a1b using C#
+//
+// Description:
+// Demonstrates how to convert a PPTX file to a PDF/A-1b compliant PDF using
+// Aspose.Slides for .NET. The example loads a presentation, embeds all used
+// fonts, configures PDF export options for full-font embedding and PDF/A-1b
+// compliance, and saves the result as a PDF file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF/A-1b, PDF, Export, Font
+// Embedding, Archival, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Generate PDF/A-1b archival copies of PowerPoint presentations.
+// - Ensure long-term preservation of slides with full font embedding.
+// - Automate PPTX-to-PDF/A conversion in .NET applications.
+// - Validate presentation files before distribution or archiving.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
