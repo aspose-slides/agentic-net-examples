@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Resize slide images to 1024x768 JPG using C#
+//
+// Description:
+// Demonstrates how to resize slide images to 1024x768 JPG using C# and 
+// Aspose.Slides for .NET. The example shows the required 
+// presentation-processing steps for PowerPoint files and produces the 
+// requested output in a standalone console application. Developers can use 
+// this pattern to automate PPTX workflows, validate results, or integrate 
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, JPG, Resize, Slide, Images, 
+// 1024X768, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate resize slide images to 1024x768 JPG.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -23,20 +45,20 @@ class Program
 
         try
         {
-            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
+            using (Presentation presentation = new Presentation(inputPath))
             {
-                foreach (Aspose.Slides.ISlide slide in presentation.Slides)
+                foreach (ISlide slide in presentation.Slides)
                 {
-                    using (Aspose.Slides.IImage image = slide.GetImage(new System.Drawing.Size(1024, 768)))
+                    using (IImage image = slide.GetImage(new System.Drawing.Size(1024, 768)))
                     {
                         string outputPath = Path.Combine(outputDir, $"Slide_{slide.SlideNumber}.jpg");
-                        image.Save(outputPath, Aspose.Slides.ImageFormat.Jpeg);
+                        image.Save(outputPath, ImageFormat.Jpeg);
                     }
                 }
 
                 // Save the presentation before exiting (even if unchanged)
                 string presOutput = Path.Combine(outputDir, "ModifiedPresentation.pptx");
-                presentation.Save(presOutput, Aspose.Slides.Export.SaveFormat.Pptx);
+                presentation.Save(presOutput, SaveFormat.Pptx);
             }
         }
         catch (NotSupportedException)
