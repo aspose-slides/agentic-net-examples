@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Batch convert PPTX to markdown with header using C#
+//
+// Description:
+// Demonstrates how to batch convert PPTX files to markdown with a YAML header
+// using C# and Aspose.Slides for .NET. The example processes all PPTX files in
+// an input folder, exports each slide to markdown with GitHub-flavored syntax,
+// and prepends a metadata header containing the source file name. It creates
+// an output folder for the generated markdown files. Developers can use this
+// pattern to automate PPTX-to-markdown workflows, integrate presentation
+// processing into .NET tools, or prepare documentation from PowerPoint assets.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Batch, Convert, Pptx, Markdown,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate batch conversion of PPTX presentations to markdown with source metadata.
+// - Build C# utilities for PowerPoint content extraction and documentation generation.
+// - Integrate PPTX processing into .NET applications or CI pipelines.
+// - Validate and transform presentation files before publishing or further analysis.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -41,12 +64,14 @@ namespace BatchConvertToMarkdown
                     using (Presentation presentation = new Presentation(pptxPath))
                     {
                         // Configure markdown export options
-                        MarkdownSaveOptions options = new MarkdownSaveOptions();
-                        options.ShowHiddenSlides = true;
-                        options.ShowSlideNumber = true;
-                        options.Flavor = Flavor.Github;
-                        options.ExportType = MarkdownExportType.Sequential;
-                        options.NewLineType = NewLineType.Unix;
+                        MarkdownSaveOptions options = new MarkdownSaveOptions
+                        {
+                            ShowHiddenSlides = true,
+                            ShowSlideNumber = true,
+                            Flavor = Flavor.Github,
+                            ExportType = MarkdownExportType.Sequential,
+                            NewLineType = NewLineType.Unix
+                        };
 
                         // Determine output markdown file path
                         string fileNameWithoutExt = Path.GetFileNameWithoutExtension(pptxPath);
