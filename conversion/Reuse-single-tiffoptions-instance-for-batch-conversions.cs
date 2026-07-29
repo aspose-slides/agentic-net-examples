@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Reuse single TiffOptions instance for batch conversions using C#
+//
+// Description:
+// Demonstrates how to reuse a single TiffOptions instance to convert multiple
+// PowerPoint presentations to TIFF images using Aspose.Slides for .NET. The
+// example creates an output folder, iterates over a list of PPTX files, loads
+// each presentation, and saves it as a TIFF file with the shared options.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Reuse, Single, TiffOptions,
+// Batch Conversion, TIFF, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate batch conversion of PPTX files to TIFF with consistent settings.
+// - Build .NET tools that process multiple presentations efficiently.
+// - Reduce memory overhead by reusing a single TiffOptions object.
+// - Integrate PowerPoint to image conversion into larger workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides.Export;
