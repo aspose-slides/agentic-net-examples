@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Convert presentation to markdown with SVG slides using C#
+//
+// Description:
+// Demonstrates how to convert each slide of a PowerPoint presentation to an
+// SVG image and generate a markdown file that references those images using
+// Aspose.Slides for .NET. The example creates an output folder for SVG files,
+// builds markdown headings for each slide, and saves the resulting markdown
+// document. This pattern can be used to automate PPTX to markdown conversion
+// workflows in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SVG, Convert, Presentation,
+// Markdown, Slides, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PowerPoint slides to markdown with embedded SVG images.
+// - Build C# tools for extracting visual content from PPTX files.
+// - Generate documentation or web content from presentations.
+// - Integrate slide-to-markdown conversion into CI/CD pipelines.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Text;
