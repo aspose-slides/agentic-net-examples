@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Convert selected slides of a PowerPoint presentation to PDF using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint file, select specific slide indices 
+// (1‑based), and save only those slides as a PDF document using Aspose.Slides 
+// for .NET. The example accepts an optional input file path via command‑line 
+// arguments, falls back to "input.pptx" when not provided, and writes the PDF 
+// with the same name but a .pdf extension. This pattern is useful for 
+// automating slide‑level export scenarios in console applications.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, PDF, Convert, Selected Slides, 
+// Presentation Export, Console Application, Office Automation
+//
+// Use Cases:
+// - Export only chosen slides from a PPTX to a PDF file.
+// - Build command‑line utilities for slide‑specific PDF generation.
+// - Integrate selective slide conversion into larger .NET workflows.
+// - Automate reporting or documentation tasks that require only part of a deck.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
