@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Load PPT and set JPEG quality for SWF conversion using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, configure JPEG quality
+// for the generated SWF output, and save the presentation as SWF files using
+// Aspose.Slides for .NET. The example illustrates the necessary steps to
+// process a PPTX file, adjust image compression settings, and produce SWF
+// files with different JPEG quality levels in a console application.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SWF, JPEG, JpegQuality, 
+// Presentation Conversion, Image Compression, Office Automation
+//
+// Use Cases:
+// - Convert PPTX to SWF with specific JPEG quality settings.
+// - Build C# utilities for PowerPoint to SWF conversion with image quality control.
+// - Automate batch processing of presentations with customized compression.
+// - Validate SWF output quality in .NET applications.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
