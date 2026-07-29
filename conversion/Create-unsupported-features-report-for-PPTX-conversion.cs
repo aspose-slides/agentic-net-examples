@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Create unsupported features report for PPTX conversion using C#
+//
+// Description:
+// Demonstrates how to generate a diagnostic report while converting a PPTX
+// presentation to FODP format using Aspose.Slides for .NET. The example loads
+// an input PPTX, saves an intermediate PPTX, converts it to FODP, and writes
+// a report that captures success, unsupported format warnings, or errors.
+// This pattern helps developers automate conversion workflows and capture
+// detailed diagnostics.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, FODP, Aspose.Slides for .NET, Unsupported, Features,
+// Report, Presentation Conversion, Office Automation
+//
+// Use Cases:
+// - Automate creation of a diagnostic report for PPTX to FODP conversion.
+// - Build C# tools that validate PowerPoint presentations before conversion.
+// - Generate conversion logs for troubleshooting unsupported features.
+// - Integrate presentation conversion and reporting into .NET applications.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Text;
@@ -39,23 +61,23 @@ class Program
             // Load the original presentation
             Presentation pres1 = new Presentation(inputPath);
             // Save as intermediate PPTX (fodp-format-convertion rule)
-            pres1.Save(intermediatePptx, Aspose.Slides.Export.SaveFormat.Pptx);
+            pres1.Save(intermediatePptx, SaveFormat.Pptx);
             pres1.Dispose();
 
             // Load the intermediate PPTX
             Presentation pres2 = new Presentation(intermediatePptx);
             // Save as final FODP (fodp-format-convertion rule)
-            pres2.Save(outputFodp, Aspose.Slides.Export.SaveFormat.Fodp);
+            pres2.Save(outputFodp, SaveFormat.Fodp);
             pres2.Dispose();
 
             reportBuilder.AppendLine("Conversion succeeded.");
         }
-        catch (Aspose.Slides.PptxUnsupportedFormatException ex)
+        catch (PptxUnsupportedFormatException ex)
         {
             // Handle unsupported PPTX format
             reportBuilder.AppendLine("Warning: PPTX format unsupported. " + ex.Message);
         }
-        catch (Aspose.Slides.PptUnsupportedFormatException ex)
+        catch (PptUnsupportedFormatException ex)
         {
             // Handle unsupported PPT format
             reportBuilder.AppendLine("Warning: PPT format unsupported. " + ex.Message);
