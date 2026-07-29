@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Convert PPT to DOCX preserve layouts using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation (PPTX) to a DOCX
+// document while preserving slide layouts using C# and Aspose.Slides for .NET.
+// The example loads a presentation, validates the input file, saves it in
+// DOCX format, and handles potential errors in a console application.
+// Developers can adapt this pattern to automate PPTX‑to‑DOCX conversions,
+// integrate presentation processing into .NET solutions, or validate
+// workflow outputs.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PPT, Convert, Docx, Preserve,
+// Layouts, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX files to DOCX while keeping original layouts.
+// - Build C# utilities for PowerPoint presentation transformation.
+// - Integrate DOCX export functionality into .NET applications.
+// - Validate and test presentation conversion pipelines before deployment.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides.Export;
@@ -6,7 +29,7 @@ class Program
 {
     static void Main()
     {
-        // Input PPT file path
+        // Input PPTX file path
         string inputPath = "input.pptx";
         // Desired output DOCX file path
         string outputPath = "output.docx";
@@ -20,30 +43,21 @@ class Program
 
         try
         {
-            // Load the presentation from the PPT file
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
-
-            try
+            // Load the presentation from the PPTX file
+            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
             {
-                // Attempt to save as DOCX using an unsupported format value
-                Aspose.Slides.Export.SaveFormat unsupportedFormat = (Aspose.Slides.Export.SaveFormat)999;
-                presentation.Save(outputPath, unsupportedFormat);
+                // Save the presentation as DOCX preserving layouts
+                presentation.Save(outputPath, SaveFormat.Docx);
+                Console.WriteLine($"Presentation successfully converted to DOCX: {outputPath}");
             }
-            catch (NotSupportedException)
-            {
-                // Format not supported
-                Console.WriteLine("DOCX format is not supported for saving presentations.");
-            }
-            catch (InvalidOperationException)
-            {
-                // Format not supported
-                Console.WriteLine("DOCX format is not supported for saving presentations.");
-            }
-            finally
-            {
-                // Ensure the presentation is saved (if any supported format was used) and disposed
-                presentation.Dispose();
-            }
+        }
+        catch (NotSupportedException)
+        {
+            Console.WriteLine("DOCX format is not supported for saving presentations.");
+        }
+        catch (InvalidOperationException)
+        {
+            Console.WriteLine("An error occurred while saving the presentation to DOCX.");
         }
         catch (Exception ex)
         {
