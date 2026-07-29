@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPT to PNG default resolution using C#
+//
+// Description:
+// Demonstrates how to export each slide of a PowerPoint presentation to PNG
+// images using the default resolution with Aspose.Slides for .NET. The example
+// loads a PPTX file, iterates through its slides, saves each slide as a PNG
+// file, and optionally saves the presentation back to its original location.
+// This pattern can be used to automate slide image extraction in .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Export, Default,
+// Resolution, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of slide images from PPTX files.
+// - Build C# tools for generating PNG assets from presentations.
+// - Integrate slide-to-image conversion into .NET workflows.
+// - Validate and process PowerPoint content before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
