@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set swfoptions compressed false for highres images using C#
+//
+// Description:
+// Demonstrates how to disable SWF compression to retain high‑resolution images 
+// when converting a PowerPoint presentation to SWF using Aspose.Slides for .NET. 
+// The example loads a PPTX file, configures SwfOptions.Compressed = false, and 
+// saves the result as a SWF file in a console application.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SWF, SwfOptions, Compressed, False, 
+// High‑Resolution Images, Presentation Conversion, Office Automation
+//
+// Use Cases:
+// - Convert PPTX to SWF without losing image quality.
+// - Build .NET utilities that require high‑resolution graphics in SWF output.
+// - Automate batch conversion of presentations while preserving image fidelity.
+// - Integrate SWF export into larger document processing pipelines.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
