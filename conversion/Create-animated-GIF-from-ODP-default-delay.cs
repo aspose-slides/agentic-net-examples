@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Create animated GIF from ODP default delay using C#
+//
+// Description:
+// Demonstrates how to load an OpenDocument Presentation (ODP) file and
+// export it as an animated GIF using the default frame delay and loop
+// settings with Aspose.Slides for .NET. The example includes basic file
+// existence checking and exception handling in a console application.
+// Developers can adapt this pattern to automate ODP to GIF conversions.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, ODP, GIF, Animated GIF, Default Delay, Presentation Conversion, Office Automation
+//
+// Use Cases:
+// - Convert ODP presentations to animated GIFs with default timing.
+// - Build command‑line tools for batch ODP to GIF conversion.
+// - Integrate ODP rendering into .NET applications.
+// - Validate ODP files before publishing as GIF animations.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
