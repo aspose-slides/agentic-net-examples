@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Batch convert PPTX to PDF keep filenames using C#
+//
+// Description:
+// Demonstrates how to batch convert PPTX files to PDF while preserving the
+// original filenames using C# and Aspose.Slides for .NET. The example scans a
+// specified input directory (or a default one), creates an output subfolder,
+// converts each PPTX presentation to PDF, and saves the PDFs with the same
+// base name as the source files. This pattern can be used for automating
+// presentation conversion workflows in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, PDF, Aspose.Slides for .NET, Batch conversion, Keep filenames,
+// Presentation processing, Office automation
+//
+// Use Cases:
+// - Automate batch conversion of PPTX presentations to PDF while retaining file names.
+// - Build command‑line tools for PowerPoint to PDF conversion in .NET.
+// - Integrate PPTX to PDF conversion into larger document processing pipelines.
+// - Validate and preprocess presentation files before distribution.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides.Export;
