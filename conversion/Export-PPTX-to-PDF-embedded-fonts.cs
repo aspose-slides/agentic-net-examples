@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX to PDF with embedded fonts using C#
+//
+// Description:
+// Demonstrates how to convert PPTX files to PDF with all fonts embedded 
+// using Aspose.Slides for .NET. The example processes a folder of PPTX files, 
+// ensures each used font is embedded, and saves the resulting PDFs alongside 
+// the source files. This pattern can be used for batch conversion, 
+// archiving presentations, or preparing documents for distribution where 
+// font fidelity is required.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Export, Embedded Fonts, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Batch convert PPTX presentations to PDF with embedded fonts.
+// - Ensure PDF outputs retain original typography across platforms.
+// - Integrate font‑embedding PDF export into .NET automation pipelines.
+// - Prepare presentation archives for distribution without font dependencies.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Linq;
