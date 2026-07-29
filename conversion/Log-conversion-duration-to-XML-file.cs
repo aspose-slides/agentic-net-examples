@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Log conversion duration to XML file using C#
+//
+// Description:
+// Demonstrates how to batch convert PowerPoint presentations to PPTX format,
+// measure each conversion's duration, and log the results to an XML file using
+// Aspose.Slides for .NET. The example processes all files in a specified input
+// directory, saves converted files to an output directory, and records success
+// or error information along with conversion time in a structured XML report.
+// This pattern can be used to monitor performance, audit batch operations, or
+// integrate conversion logging into automated workflows.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, batch conversion, conversion
+// duration, XML logging, presentation processing, automation, file I/O
+//
+// Use Cases:
+// - Automate batch conversion of presentations while tracking performance.
+// - Generate XML reports of conversion outcomes for auditing or monitoring.
+// - Integrate conversion timing into CI/CD pipelines or server-side services.
+// - Diagnose and handle unsupported formats or conversion errors.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Diagnostics;
