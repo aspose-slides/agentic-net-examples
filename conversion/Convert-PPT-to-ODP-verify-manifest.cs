@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Convert PPT to ODP verify manifest using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation (PPTX) to an
+// OpenDocument Presentation (ODP) file, extract the ODP manifest, and verify
+// that media assets such as images are included in the package using
+// Aspose.Slides for .NET. The example runs as a standalone console
+// application and can be used to automate conversion and validation workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, ODP, Aspose.Slides for .NET, Convert, Verify, Manifest,
+// Presentation Processing, Office Automation, ZipArchive, Media Assets
+//
+// Use Cases:
+// - Automate conversion of PPTX files to ODP format and validate the result.
+// - Extract and inspect the ODP manifest for compliance or debugging.
+// - Ensure that all media assets (e.g., images) are correctly packaged.
+// - Build .NET tools that process and verify PowerPoint presentations before
+//   publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.IO.Compression;
