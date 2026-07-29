@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Retry conversion five times on transient errors using C#
+//
+// Description:
+// Demonstrates how to retry conversion five times on transient I/O errors 
+// using C# and Aspose.Slides for .NET. The example loads a PowerPoint file, 
+// attempts to save it, and retries the operation up to five times when a 
+// transient IOException occurs. This pattern helps automate PPTX workflows 
+// that may encounter temporary file system or network issues.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Retry, Conversion, Five, Times, 
+// Transient Errors, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate retry conversion five times on transient I/O errors.
+// - Build C# tools for resilient PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications with error handling.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
