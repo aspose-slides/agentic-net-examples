@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Disable viewer UI in SWF embed HTML5 using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation to SWF with the
+// integrated viewer UI disabled and generate a simple HTML5 page that embeds
+// the resulting SWF file. The example uses Aspose.Slides for .NET to load a
+// PPTX file, configure SwfOptions to hide all viewer controls, save the SWF,
+// and write an HTML wrapper.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SWF, HTML5, Disable Viewer UI,
+// Presentation Conversion, Office Automation
+//
+// Use Cases:
+// - Convert PPTX presentations to SWF without any viewer controls.
+// - Create custom HTML5 pages that embed SWF files generated from PowerPoint.
+// - Automate presentation processing pipelines that require UI‑free SWF output.
+// - Integrate Aspose.Slides conversion into .NET applications or build tools.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
