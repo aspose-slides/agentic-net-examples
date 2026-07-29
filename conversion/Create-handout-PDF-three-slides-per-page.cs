@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Create handout PDF three slides per page using C#
+//
+// Description:
+// Demonstrates how to create a handout PDF with three slides per page using C#
+// and Aspose.Slides for .NET. The example loads a PPTX file, configures PDF
+// export options for a three‑slide handout layout, and saves the result as a PDF.
+// This pattern can be used to automate handout generation, integrate
+// presentation processing into .NET applications, or validate PPTX content.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Handout, Three Slides per Page,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Generate handout PDFs with three slides per page from PowerPoint files.
+// - Build C# utilities for batch conversion of presentations to handout PDFs.
+// - Integrate handout creation into document management or e‑learning platforms.
+// - Automate PDF handout production as part of a CI/CD pipeline.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
