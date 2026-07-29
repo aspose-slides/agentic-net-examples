@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX to HTML with semantic sections using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file with Aspose.Slides for .NET, export it to
+// HTML using SVG images for slides, and then post‑process the generated HTML to
+// replace the default <div class="slide"> containers with semantic <section>
+// elements. The example includes file existence checks and basic error handling
+// in a console application.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PPTX, PowerPoint, HTML export, SVG, Semantic sections,
+// Presentation conversion, Office automation, SlideImageFormat, HtmlOptions
+//
+// Use Cases:
+// - Convert PowerPoint presentations to HTML with high‑quality SVG slide images.
+// - Produce HTML output that follows semantic markup guidelines.
+// - Integrate PPTX‑to‑HTML conversion into .NET automation scripts or tools.
+// - Customize exported HTML structure for web publishing or further processing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
