@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Export first slide to SVG thumbnail using C#
+//
+// Description:
+// Demonstrates how to export the first slide of a PowerPoint presentation
+// to an SVG thumbnail using Aspose.Slides for .NET. The example loads a PPTX
+// file, writes the first slide as an SVG image, and saves the presentation
+// back to disk. This pattern can be used in console applications to automate
+// slide thumbnail generation or integrate SVG export into .NET workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SVG, Export, First Slide,
+// Thumbnail, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Generate SVG thumbnails for the first slide of presentations.
+// - Build C# tools for PowerPoint slide extraction and conversion.
+// - Automate batch processing of PPTX files to create preview images.
+// - Integrate slide export functionality into .NET applications.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
