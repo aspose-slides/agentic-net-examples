@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Batch export PPTX to PDF with titles using C#
+//
+// Description:
+// Demonstrates how to batch convert PPTX files to PDF while generating a
+// cover slide that lists each slide's title (or slide number if no title)
+// using Aspose.Slides for .NET. The program scans an input folder, creates a
+// combined presentation with a title slide, and saves the result as PDF in an
+// output folder.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Batch, Export, Titles,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of multiple PPTX files to PDF with a summary slide.
+// - Build .NET tools that add a title page to presentations before publishing.
+// - Generate PDF reports from PowerPoint decks with an overview of slide titles.
+// - Integrate slide‑title extraction into document workflows.
+//
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
