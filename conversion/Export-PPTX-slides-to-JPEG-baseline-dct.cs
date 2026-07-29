@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX slides to JPEG baseline dct using C#
+//
+// Description:
+// Demonstrates how to export each slide of a PPTX presentation to a JPEG
+// image using the baseline DCT encoder (default JPEG) with Aspose.Slides for
+// .NET. The example loads a presentation, iterates through its slides,
+// renders each slide to an image, and saves the images as JPEG files with a
+// specified quality level. It also shows basic error handling and ensures the
+// presentation lifecycle is respected.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, JPEG, Export, Slides, Jpeg,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX slides to JPEG baseline DCT images.
+// - Build .NET tools for batch exporting PowerPoint content to image files.
+// - Integrate slide-to-image conversion into larger document processing
+//   pipelines.
+// - Validate slide rendering and image quality before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
