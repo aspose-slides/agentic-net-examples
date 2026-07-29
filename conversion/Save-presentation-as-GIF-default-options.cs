@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Save presentation as GIF default options using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation to a GIF image using
+// default conversion options with Aspose.Slides for .NET. The example loads a
+// PPTX file, applies the built‑in GifOptions, and saves the result as a GIF file.
+// This pattern can be used in console applications, automation scripts, or
+// larger .NET solutions that need to transform presentations into GIF format.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Save, Presentation, GIF,
+// Default Options, Conversion, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX files to GIF images.
+// - Build C# utilities for PowerPoint presentation processing.
+// - Generate GIF previews of slides in .NET applications.
+// - Validate presentation conversion workflows before deployment.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
