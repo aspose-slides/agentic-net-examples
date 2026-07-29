@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Validate embedded comments in SWF output using C#
+//
+// Description:
+// Demonstrates how to export a PowerPoint presentation to SWF format with
+// embedded comments positioned on the right side using Aspose.Slides for .NET.
+// The example also includes a simple validation step to ensure the SWF file
+// is created successfully.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Export, Comments, Validation,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX files to SWF with comments included.
+// - Build C# utilities for PowerPoint presentation export and validation.
+// - Verify SWF output integrity before publishing or integration.
+// - Integrate comment-aware SWF generation into .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
