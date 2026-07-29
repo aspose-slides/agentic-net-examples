@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Disable XPS compression for debugging using C#
+//
+// Description:
+// Demonstrates how to attempt disabling XPS compression when saving a
+// presentation to XPS format using Aspose.Slides for .NET. The code loads a
+// PPTX file, creates XpsOptions, and saves the presentation as an XPS file.
+// Although the current API does not expose a compression toggle, the example
+// documents where such a setting would be applied and provides a template for
+// future versions or custom implementations.
+//
+// Keywords:
+// C#, Aspose.Slides, XPS, Disable Compression, Debugging, PowerPoint, PPTX,
+// Presentation Conversion, .NET
+//
+// Use Cases:
+// - Debug XPS output by generating an uncompressed file.
+// - Prepare a baseline for comparing compressed vs. uncompressed XPS.
+// - Integrate XPS conversion into automated .NET build or test pipelines.
+// - Serve as a reference for handling missing API features in Aspose.Slides.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
