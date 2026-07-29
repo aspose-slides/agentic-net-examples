@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Generate bw TIFF 1bpp CCITT4 compare fidelity using C#
+//
+// Description:
+// Demonstrates how to generate a black‑and‑white TIFF image with 1‑bpp pixel
+// format and CCITT4 compression from a PowerPoint presentation using
+// Aspose.Slides for .NET. The example also outlines where to add visual fidelity
+// comparison logic between the original slides and the generated TIFF.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Generate, TIFF, 1bpp, CCITT4,
+// Black‑and‑White, Image Conversion, Presentation Processing
+//
+// Use Cases:
+// - Automate creation of high‑compression black‑and‑white TIFF files from PPTX.
+// - Build tools for validating visual fidelity of converted slide images.
+// - Integrate slide‑to‑TIFF conversion into .NET applications or CI pipelines.
+// - Perform pixel‑wise comparison of original slides versus generated TIFFs.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
