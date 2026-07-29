@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Stream presentation to PDF memory stream using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation from a file into a memory
+// stream, convert it to PDF using Aspose.Slides for .NET, and write the resulting
+// PDF to another memory stream. The example also shows an optional step of
+// saving the PDF memory stream to a file. This pattern is useful for scenarios
+// where presentations need to be processed entirely in memory, such as web
+// services, cloud functions, or automated batch jobs.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, MemoryStream, Stream, 
+// Presentation Conversion, Office Automation
+//
+// Use Cases:
+// - Convert PPTX files to PDF without creating intermediate files on disk.
+// - Build .NET services that process presentations in-memory for performance
+//   or security reasons.
+// - Integrate PowerPoint to PDF conversion into automated workflows or APIs.
+// - Validate presentation conversion results before further processing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -42,7 +65,7 @@ class Program
         // Save the presentation as PDF into the output memory stream
         try
         {
-            presentation.Save(outputMemoryStream, Aspose.Slides.Export.SaveFormat.Pdf);
+            presentation.Save(outputMemoryStream, SaveFormat.Pdf);
         }
         catch (NotSupportedException)
         {
@@ -67,9 +90,10 @@ class Program
 
         // Example: write the PDF memory stream to a file (optional)
         outputMemoryStream.Position = 0;
-        FileStream pdfFileStream = new FileStream("output.pdf", FileMode.Create, FileAccess.Write);
-        outputMemoryStream.CopyTo(pdfFileStream);
-        pdfFileStream.Close();
+        using (FileStream pdfFileStream = new FileStream("output.pdf", FileMode.Create, FileAccess.Write))
+        {
+            outputMemoryStream.CopyTo(pdfFileStream);
+        }
         outputMemoryStream.Close();
     }
 }
