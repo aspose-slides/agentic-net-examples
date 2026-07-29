@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX slides to JPEG with exif using C#
+//
+// Description:
+// Demonstrates how to export each slide of a PPTX file to a JPEG image and
+// indicates where EXIF metadata (such as timestamp and source file name) can be
+// inserted. The example uses Aspose.Slides for .NET to load the presentation,
+// render slides to full‑scale images, save them as JPEG files, and finally saves
+// a copy of the original presentation. This pattern helps developers automate
+// slide‑to‑image conversion while preserving or adding metadata.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, JPEG, EXIF, Export, Slides, Image,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Convert PPTX slides to high‑resolution JPEG images.
+// - Add custom EXIF metadata to slide images for cataloging or archival.
+// - Build .NET utilities for batch processing of PowerPoint presentations.
+// - Integrate slide export functionality into larger document‑management systems.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
