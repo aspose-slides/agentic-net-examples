@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX slides to JPEG contrast enhanced using C#
+//
+// Description:
+// Demonstrates how to export PPTX slides to JPEG images with automatic
+// brightness and contrast enhancement applied to picture frames using
+// Aspose.Slides for .NET. The example loads a presentation, enhances each
+// picture frame on every slide, saves each slide as a JPEG file, and optionally
+// saves the modified presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, JPEG, Export, Contrast, 
+// Brightness, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate export of PPTX slides to JPEG with contrast enhancement.
+// - Build C# tools for PowerPoint image processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Apply visual enhancements to slide images before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
