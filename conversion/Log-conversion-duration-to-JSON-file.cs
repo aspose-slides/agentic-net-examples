@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Log conversion duration to JSON file using C#
+//
+// Description:
+// Demonstrates how to batch convert PowerPoint and OpenDocument presentations
+// (PPT, PPTX, ODP) to PDF using Aspose.Slides for .NET while measuring the
+// conversion time for each file and logging the results to a JSON file.
+// The example includes directory handling, format validation, error handling,
+// and JSON serialization of conversion durations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, ODP, PDF, Aspose.Slides for .NET, Conversion, Duration,
+// Json, File, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate batch conversion of presentations to PDF with performance logging.
+// - Build C# tools for PowerPoint and ODP processing in .NET applications.
+// - Generate conversion reports for monitoring and optimization.
+// - Validate and log presentation workflow timings before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Diagnostics;
