@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Batch summarize total size reduction using C#
+//
+// Description:
+// Demonstrates how to batch summarize total size reduction using C# and 
+// Aspose.Slides for .NET. The example processes a folder of PowerPoint files,
+// converts each presentation to PDF, and calculates the total size reduction
+// achieved by the conversion. It outputs a summary report with original size,
+// converted size, and reduction percentage.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, PDF, Aspose.Slides for .NET, Batch, Summarize, Total, Size, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate batch conversion of presentations to PDF and evaluate storage savings.
+// - Build C# tools for PowerPoint presentation processing and reporting.
+// - Generate or transform PPTX files in .NET applications while tracking size impact.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -58,7 +79,7 @@ namespace BatchConversion
                         string outputPath = Path.Combine(outputDirectory, outputFileName);
 
                         // Convert and save without additional options
-                        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pdf);
+                        presentation.Save(outputPath, SaveFormat.Pdf);
 
                         // Record converted size
                         FileInfo convertedInfo = new FileInfo(outputPath);
