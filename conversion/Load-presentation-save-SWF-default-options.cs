@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Load presentation save SWF default options using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation and save it as an SWF file
+// using the default SwfOptions with Aspose.Slides for .NET. The example includes
+// basic file existence checking, exception handling, and uses the minimal
+// configuration required to perform the conversion in a console application.
+// Developers can adapt this pattern for automated PPTX to SWF conversion tasks.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Load, Presentation, Save, 
+// Default Options, Conversion, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX files to SWF format with default settings.
+// - Build C# utilities for PowerPoint presentation processing and export.
+// - Integrate SWF generation into .NET applications for web or mobile viewers.
+// - Validate presentation conversion workflows before deployment.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides.Export;
