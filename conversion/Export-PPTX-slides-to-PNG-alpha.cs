@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX slides to PNG with alpha channel using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file, iterate through its slides, and export
+// each slide as a PNG image preserving the alpha channel using Aspose.Slides for .NET.
+// The example includes basic file existence checks and exception handling in a
+// console application.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Alpha channel, Export, Slides, Presentation processing
+//
+// Use Cases:
+// - Convert PowerPoint slides to PNG images with transparency.
+// - Automate batch export of slide images in .NET tools.
+// - Integrate slide-to-image conversion into reporting or publishing pipelines.
+// - Validate slide rendering with alpha channel support.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
