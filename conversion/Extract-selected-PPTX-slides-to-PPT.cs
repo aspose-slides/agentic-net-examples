@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Extract selected PPTX slides to PPTX using C#
+//
+// Description:
+// Demonstrates how to extract specific slides from a PPTX presentation and
+// save them as a new PPTX file using C# and Aspose.Slides for .NET. The example
+// loads an existing PPTX, selects slides by their 1‑based indices, and saves the
+// subset to a separate PPTX file. This pattern can be used to automate slide
+// extraction, create custom presentations, or preprocess content for further
+// processing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Extract, Selected Slides, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Extract specific slides from a large PPTX to create a focused presentation.
+// - Build tools that generate custom slide decks based on user selection.
+// - Automate content reuse across multiple PowerPoint files.
+// - Validate and preprocess presentations before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;
