@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Adjust JPEG quality based on slide resolution using C#
+//
+// Description:
+// Demonstrates how to adjust JPEG quality based on slide resolution when
+// converting a PowerPoint presentation to SWF using C# and Aspose.Slides for .NET.
+// The example shows the required presentation‑processing steps for PPTX files
+// and produces the output in a standalone console application. Developers can
+// use this pattern to automate PPTX‑to‑SWF workflows, control image quality,
+// or integrate presentation conversion logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, JPEG, Adjust, Jpeg, Quality,
+// Based, Presentation Processing, Office Automation, SWF, Conversion
+//
+// Use Cases:
+// - Automate JPEG quality adjustment based on slide resolution during SWF conversion.
+// - Build C# tools for PowerPoint to SWF conversion with quality control.
+// - Generate or transform PPTX files into SWF in .NET applications.
+// - Validate presentation conversion workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -57,7 +79,6 @@ namespace AdjustSwfJpegQuality
             catch (NotSupportedException)
             {
                 // Format not supported
-                // Comment: format not supported
                 Console.WriteLine("The specified format is not supported for conversion.");
             }
             catch (Exception ex)
