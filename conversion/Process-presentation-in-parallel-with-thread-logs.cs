@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Process multiple PowerPoint files in parallel and export slides to SVG with thread logs using C#
+//
+// Description:
+// Demonstrates how to load several PPTX files concurrently, export each slide to an SVG file, 
+// save a processed copy of the presentation, and write a per‑thread log file. The example uses 
+// Aspose.Slides for .NET and the Parallel.ForEach construct to achieve parallel processing in a 
+// console application. It shows typical steps such as file existence checks, slide iteration, 
+// SVG export, presentation saving, and thread‑specific logging.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, SVG export, Parallel processing, Thread logging, Batch conversion, Office automation
+//
+// Use Cases:
+// - Batch convert PPTX slides to SVG files in parallel to improve performance.
+// - Generate per‑thread logs for monitoring and debugging parallel presentation processing.
+// - Automate saving processed copies of presentations after applying transformations.
+// - Integrate high‑throughput PowerPoint workflows into .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Threading;
