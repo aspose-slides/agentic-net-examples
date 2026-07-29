@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Create GIF from PPT with looping using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation to an animated GIF
+// with looping enabled using C# and Aspose.Slides for .NET. The example shows
+// the required presentation-processing steps and produces a GIF file that
+// repeats the slide show. Developers can use this pattern to automate PPTX
+// to GIF conversion, integrate presentation logic into .NET applications, or
+// validate results.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, GIF, Loop, Aspose.Slides for .NET, Presentation Processing,
+// Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX files to looping animated GIFs.
+// - Build C# utilities for PowerPoint presentation processing.
+// - Generate GIF previews of slide decks in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
