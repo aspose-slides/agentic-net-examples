@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Create GIF from PPTX 128 colors using C#
+//
+// Description:
+// Demonstrates how to create an animated GIF from a PPTX file using
+// Aspose.Slides for .NET while targeting a 128‑color palette (the closest
+// achievable setting is the 8‑bit 256‑color GIF format). The example shows
+// loading a presentation, configuring GIF export options, and saving the
+// result as a GIF file in a console application. Developers can adapt this
+// pattern to automate PPTX‑to‑GIF conversions, integrate presentation
+// processing into .NET tools, or validate visual output.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, GIF, Aspose.Slides for .NET, Colors, Presentation Processing,
+// Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX slides to animated GIFs with limited color depth.
+// - Build C# utilities for PowerPoint presentation export.
+// - Generate GIF previews of presentations in .NET applications.
+// - Validate visual fidelity of PPTX content before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
