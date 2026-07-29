@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Compare JPG size before after comment rendering using C#
+//
+// Description:
+// Demonstrates how to compare JPG size before and after comment rendering using C#
+// and Aspose.Slides for .NET. The example loads a PPTX file, exports each slide
+// to JPEG images twice—once without rendering comments and once with comments
+// rendered—then calculates and displays the total file size difference. It also
+// saves a copy of the original presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, JPG, Compare, Size, Before, After,
+// Presentation Processing, Office Automation, Comments Rendering
+//
+// Use Cases:
+// - Automate comparison of JPEG image sizes before and after comment rendering.
+// - Build C# tools for PowerPoint slide image export with optional comment inclusion.
+// - Validate the impact of comment rendering on exported slide assets.
+// - Integrate slide export and size analysis into .NET applications.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
