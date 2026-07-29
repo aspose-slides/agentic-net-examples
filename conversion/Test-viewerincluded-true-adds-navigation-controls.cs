@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Test viewerincluded true adds navigation controls using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation to SWF format with
+// the ViewerIncluded option set to true, which embeds a viewer containing
+// navigation controls. The example uses Aspose.Slides for .NET to load an
+// input PPTX file, configure SwfOptions, and save the output SWF file.
+// This pattern can be used to generate self‑contained SWF presentations
+// with built‑in navigation for web viewing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, ViewerIncluded, Navigation Controls, Conversion
+//
+// Use Cases:
+// - Generate SWF files with embedded viewer for web distribution.
+// - Add navigation controls to converted presentations automatically.
+// - Automate batch conversion of PPTX to SWF with viewer support.
+// - Integrate presentation conversion into .NET applications.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
