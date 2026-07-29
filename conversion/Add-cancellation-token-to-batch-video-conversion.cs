@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Add cancellation token to batch video conversion using C#
+//
+// Description:
+// Demonstrates how to add a CancellationToken to a batch video conversion
+// process for PowerPoint presentations using Aspose.Slides for .NET. The
+// example iterates over presentation files in an input directory, converts each
+// to an MP4 video (if supported), saves a copy of the original presentation,
+// and respects a cancellation request (e.g., Ctrl+C) to stop processing.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, PPT, ODP, video conversion, MP4,
+// CancellationToken, batch processing, console application, Office automation
+//
+// Use Cases:
+// - Perform large‑scale PPT/PPTX/ODP to video conversions with graceful
+//   cancellation support.
+// - Build command‑line tools for automated presentation video generation.
+// - Integrate presentation‑to‑video conversion into CI/CD pipelines with
+//   interrupt handling.
+// - Provide fallback handling when the target video format is unavailable.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Threading;
