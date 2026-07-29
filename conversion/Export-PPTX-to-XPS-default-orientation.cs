@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX to XPS default orientation using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file and export it to XPS format using the
+// default orientation with Aspose.Slides for .NET. The example includes basic
+// file existence checks, exception handling, and proper resource disposal.
+// This pattern can be used to automate PPTX to XPS conversion in .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, XPS, Aspose.Slides for .NET, Export, Default, 
+// Orientation, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX presentations to XPS with default settings.
+// - Build command‑line tools for PowerPoint document transformation.
+// - Integrate PPTX to XPS export functionality into larger .NET workflows.
+// - Validate presentation rendering before distribution or printing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
