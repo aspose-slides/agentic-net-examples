@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX to SWF for legacy web using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation (PPTX) to SWF format 
+// using Aspose.Slides for .NET in a console application. The example loads a 
+// presentation, configures SWF export options (e.g., disables the integrated 
+// viewer), and saves the result as a SWF file suitable for legacy web 
+// scenarios.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Export, Legacy Web, 
+// Presentation Processing, Console Application
+//
+// Use Cases:
+// - Convert PPTX files to SWF for embedding in legacy web pages.
+// - Build automated tools that process PowerPoint presentations in .NET.
+// - Generate SWF output without the built‑in viewer for custom viewers.
+// - Integrate PowerPoint conversion into CI/CD pipelines or batch jobs.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
