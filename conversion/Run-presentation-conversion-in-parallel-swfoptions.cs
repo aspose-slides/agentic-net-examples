@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Run presentation conversion in parallel swfoptions using C#
+//
+// Description:
+// Demonstrates how to convert multiple PowerPoint presentations to SWF format
+// concurrently using Aspose.Slides for .NET. The example creates a separate
+// SwfOptions instance for each parallel task, configures compression and UI
+// settings, and saves the resulting SWF files to an output directory.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, SWF, Presentation conversion,
+// Parallel processing, SwfOptions, Office automation, .NET console application
+//
+// Use Cases:
+// - Batch convert a collection of PPTX files to SWF in a high‑performance scenario.
+// - Build .NET tools that process presentations concurrently.
+// - Apply custom SwfOptions per thread during conversion.
+// - Automate presentation workflow pipelines that require SWF output.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Threading.Tasks;
