@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Add retry policy to SWF conversion using C#
+//
+// Description:
+// Demonstrates how to add a retry policy when converting a PowerPoint presentation
+// to SWF format using Aspose.Slides for .NET. The example loads a PPTX file,
+// attempts the conversion up to three times handling transient I/O errors,
+// and reports success or failure.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Retry, Policy, Conversion,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Implement robust SWF conversion with automatic retries for I/O issues.
+// - Build .NET utilities that transform PPTX files to SWF for web publishing.
+// - Ensure reliable batch processing of presentations in automated workflows.
+// - Diagnose and handle unsupported formats during conversion.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
