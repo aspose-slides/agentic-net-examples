@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Batch convert PPT and PPTX to SWF with 80% JPEG quality including hidden slides using C#
+//
+// Description:
+// Demonstrates how to batch convert PPT and PPTX files to SWF format with JPEG
+// quality set to 80 and hidden slides included, using C# and Aspose.Slides for .NET.
+// The example processes all presentations in a specified directory (or the
+// current working directory) and saves the resulting SWF files alongside the
+// source files. Developers can use this pattern to automate PowerPoint to SWF
+// conversion workflows, handle hidden content, or integrate presentation
+// processing into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPT, PPTX, SWF, Aspose.Slides for .NET, Batch, Convert, 80Jpeg,
+// Hidden Slides, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate batch conversion of PPT/PPTX to SWF with specific JPEG quality.
+// - Include hidden slides during conversion for complete presentation output.
+// - Build C# utilities for PowerPoint presentation processing and publishing.
+// - Validate and transform presentation files in .NET environments.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
