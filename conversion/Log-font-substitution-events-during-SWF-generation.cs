@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Log font substitution events during SWF generation using C#
+//
+// Description:
+// Demonstrates how to log font substitution events while converting a PowerPoint
+// presentation (PPTX) to SWF format using Aspose.Slides for .NET. The example loads
+// a presentation, enumerates any font substitutions performed by the library,
+// outputs the substitution details to the console, and then saves the presentation
+// as an SWF file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Font Substitution, Events,
+// Conversion, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Track and log font substitutions that occur during PPTX to SWF conversion.
+// - Build .NET tools for automated PowerPoint conversion workflows.
+// - Validate font availability and substitution behavior before publishing.
+// - Integrate font substitution logging into larger presentation processing pipelines.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
