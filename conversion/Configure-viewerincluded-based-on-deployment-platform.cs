@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Configure viewer inclusion for SWF export based on deployment platform using C#
+//
+// Description:
+// Demonstrates how to set the ViewerIncluded property of SwfOptions depending on
+// the deployment platform (e.g., web or desktop) when converting a PowerPoint
+// presentation (PPTX) to SWF format with Aspose.Slides for .NET. The example loads
+// an input PPTX file, determines the platform from an environment variable, configures
+// the export options accordingly, and saves the result as a SWF file.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, SWF, ViewerIncluded, Export Options,
+// Deployment Platform, Environment Variable, Presentation Conversion
+//
+// Use Cases:
+// - Export PPTX to SWF with or without the integrated viewer based on target platform.
+// - Build automation scripts that adapt presentation export settings for web or desktop deployments.
+// - Integrate conditional presentation export logic into .NET applications.
+// - Validate and test platform‑specific export configurations.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
