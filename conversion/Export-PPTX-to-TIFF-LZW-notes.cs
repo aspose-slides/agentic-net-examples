@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX to TIFF LZW notes using C#
+//
+// Description:
+// Demonstrates how to export a PPTX file to a multi-page TIFF image with LZW
+// compression while including slide notes at the bottom of each page using
+// Aspose.Slides for .NET. The example loads a presentation, configures TIFF
+// export options, adds notes layouting, and saves the result as a TIFF file.
+// This pattern can be used in console applications or automated workflows.
+//
+// Keywords:
+// C#, Aspose.Slides, PPTX, TIFF, LZW compression, slide notes, export, .NET,
+// presentation processing, console app
+//
+// Use Cases:
+// - Convert PowerPoint presentations to high‑quality TIFF files with notes.
+// - Automate generation of printable or archival TIFF documents from PPTX.
+// - Integrate slide‑notes extraction into .NET tools or services.
+// - Create batch conversion utilities for PowerPoint to TIFF with LZW compression.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
