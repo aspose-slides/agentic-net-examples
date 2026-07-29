@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX to HTML with inline SVG using C#
+//
+// Description:
+// Demonstrates how to export a PPTX file to an HTML5 document with inline SVG
+// images using Aspose.Slides for .NET. The example loads a presentation,
+// configures HTML export options to embed each slide as an SVG, saves the
+// resulting HTML file, and optionally saves a copy of the original presentation.
+// This pattern can be used in console applications, automation scripts, or
+// integration scenarios where PPTX content needs to be displayed in web pages.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, HTML5, SVG, Export, Inline SVG,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Convert PowerPoint presentations to web-friendly HTML with scalable graphics.
+// - Build .NET tools that embed slide content directly into HTML pages.
+// - Automate batch conversion of PPTX files for publishing or documentation.
+// - Validate and preview PPTX content in browsers without external image files.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides.Export;
