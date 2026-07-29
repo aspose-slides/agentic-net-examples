@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Process presentations alphabetically and convert to SWF using C#
+//
+// Description:
+// Demonstrates how to enumerate PowerPoint files in a folder, sort them
+// alphabetically, and convert each presentation to SWF format using
+// Aspose.Slides for .NET. The example creates an input and output directory,
+// loads each supported presentation, and saves the result as a SWF file.
+// This pattern can be used to batch‑process PPT/PPTX files for web preview
+// or archival purposes in a standalone console application.
+//
+// Keywords:
+// C#, PowerPoint, PPT, PPTX, SWF, Aspose.Slides for .NET, Batch Conversion,
+// Alphabetical Sorting, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Batch convert a collection of PowerPoint files to SWF for web viewing.
+// - Automate alphabetical processing of presentations before conversion.
+// - Integrate PowerPoint to SWF conversion into .NET build or deployment pipelines.
+// - Validate and handle unsupported formats during bulk conversion.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -41,14 +63,14 @@ class Program
             try
             {
                 // Load the presentation
-                using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputFilePath))
+                using (Presentation presentation = new Presentation(inputFilePath))
                 {
                     // Prepare output file path with .swf extension
                     string fileNameWithoutExtension = Path.GetFileNameWithoutExtension(inputFilePath);
                     string outputFilePath = Path.Combine(outputDirectory, fileNameWithoutExtension + ".swf");
 
                     // Save the presentation as SWF
-                    presentation.Save(outputFilePath, Aspose.Slides.Export.SaveFormat.Swf);
+                    presentation.Save(outputFilePath, SaveFormat.Swf);
                 }
             }
             catch (NotSupportedException)
