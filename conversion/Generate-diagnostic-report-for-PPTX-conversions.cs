@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Generate diagnostic report for PPTX conversions using C#
+//
+// Description:
+// Demonstrates how to convert OpenDocument Presentation (FODP) files to PPTX
+// and back to FODP using Aspose.Slides for .NET while generating a diagnostic
+// report that includes file sizes and processing status. The example processes
+// multiple input files, handles missing files, and reports any errors or
+// unsupported formats.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, FODP, Aspose.Slides for .NET, Generate, Diagnostic, Report,
+// Presentation Conversion, Office Automation
+//
+// Use Cases:
+// - Automate generation of diagnostic reports for FODP ↔ PPTX conversion workflows.
+// - Build C# tools for validating presentation file size changes during conversion.
+// - Integrate conversion diagnostics into .NET applications handling OpenDocument presentations.
+// - Detect and log unsupported formats or processing errors in batch conversion scenarios.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;
