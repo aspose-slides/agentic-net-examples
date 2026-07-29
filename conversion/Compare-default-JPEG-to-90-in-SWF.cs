@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Compare default JPEG to 90 in SWF using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation to SWF format twice:
+// once using the default JPEG quality (95) and once with a manually set JPEG
+// quality of 90. The example shows the required presentation‑processing steps
+// for PowerPoint files and produces two SWF files that can be compared to
+// evaluate the impact of JPEG quality settings. This pattern can be used in
+// standalone console applications to automate PPTX to SWF conversion and
+// quality testing with Aspose.Slides for .NET.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, JPEG, Compare, Default, Jpeg,
+// SWF, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate comparison of default JPEG quality versus custom quality in SWF.
+// - Build C# tools for PowerPoint to SWF conversion with quality control.
+// - Generate SWF files from PPTX in .NET applications for web or e‑learning.
+// - Validate visual fidelity of presentations after JPEG compression.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
