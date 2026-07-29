@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Test show hidden slides default false using C#
+//
+// Description:
+// Demonstrates how to test that SwfOptions.ShowHiddenSlides defaults to false 
+// using C# and Aspose.Slides for .NET. The example creates a new presentation, 
+// verifies the default value, attempts to save the presentation as SWF, handles 
+// the case where the format is not supported, and cleans up any generated file.
+// This pattern can be used to validate conversion option defaults in 
+// Aspose.Slides.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Test, Show, Hidden, Slides, 
+// SwfOptions, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Verify default behavior of SwfOptions.ShowHiddenSlides.
+// - Build C# tests for presentation conversion settings.
+// - Ensure SWF conversion respects hidden slide settings.
+// - Automate validation of Aspose.Slides conversion options.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
