@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Create XAML with embedded fonts using C#
+//
+// Description:
+// Demonstrates how to embed all fonts used in a PowerPoint presentation
+// and export the presentation to XAML format with the fonts embedded.
+// The example loads a PPTX file, checks for missing embedded fonts, adds them,
+// and saves the result as a XAML file using Aspose.Slides for .NET.
+// This pattern can be used to ensure font fidelity when converting PPTX to XAML.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, XAML, Embedded Fonts,
+// Presentation Conversion, Font Embedding, Office Automation
+//
+// Use Cases:
+// - Convert PPTX presentations to XAML while preserving font appearance.
+// - Automate embedding of missing fonts before XAML export.
+// - Build .NET tools for presentation format conversion with font fidelity.
+// - Validate and process PowerPoint files in CI pipelines.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Linq;
@@ -12,6 +33,7 @@ namespace Example
         static void Main()
         {
             string inputPath = "input.pptx";
+            string outputPath = "output.xaml";
 
             // Verify that the input file exists
             if (!File.Exists(inputPath))
@@ -42,9 +64,11 @@ namespace Example
                     }
 
                     // Save the presentation as XAML with embedded fonts
-                    XamlOptions xamlOptions = new XamlOptions();
-                    xamlOptions.ExportHiddenSlides = true;
-                    presentation.Save(xamlOptions);
+                    XamlOptions xamlOptions = new XamlOptions
+                    {
+                        ExportHiddenSlides = true
+                    };
+                    presentation.Save(outputPath, SaveFormat.Xaml, xamlOptions);
                 }
             }
             catch (PptxUnsupportedFormatException)
