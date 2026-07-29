@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add retry logic to batch presentation conversion using C#
+//
+// Description:
+// Demonstrates how to add retry logic to batch conversion of PowerPoint
+// presentations using Aspose.Slides for .NET. The example loads each source
+// PPTX file, applies a simple operation (renaming the first slide), and saves
+// the result, retrying on transient I/O errors up to a configurable limit.
+// This pattern helps build robust automation for bulk presentation processing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Retry Logic, Batch Conversion,
+// Presentation Automation, Office Automation
+//
+// Use Cases:
+// - Automate reliable batch conversion of multiple PowerPoint files.
+// - Implement retry mechanisms for transient file system errors.
+// - Integrate presentation processing into .NET command‑line tools.
+// - Perform simple transformations (e.g., slide renaming) during conversion.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;
