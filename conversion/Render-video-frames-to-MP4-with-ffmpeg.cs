@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Render video frames to MP4 with ffmpeg using C#
+//
+// Description:
+// Demonstrates how to render each slide animation frame of a PowerPoint
+// presentation to PNG images and then encode them into an MP4 video using
+// ffmpeg. The example uses Aspose.Slides for .NET to generate frames from
+// presentation animations, saves them to a temporary folder, and invokes
+// ffmpeg to produce the final video file. It also includes cleanup of the
+// temporary images.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, video rendering, ffmpeg, MP4, frame
+// extraction, presentation automation, .NET
+//
+// Use Cases:
+// - Convert PowerPoint slide animations into a video file.
+// - Automate generation of video tutorials from presentations.
+// - Integrate slide-to-video conversion in .NET applications.
+// - Batch process multiple PPTX files into MP4 videos.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Diagnostics;
