@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Convert ppt to pdf a1b bytearray using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation (PPTX) to a PDF/A‑1b
+// compliant PDF using a byte array and Aspose.Slides for .NET. The example reads
+// the input file into memory, loads it via a MemoryStream, applies PDF/A‑1b
+// compliance settings, and saves the result as a PDF file. This pattern can be
+// used in console applications or services that need to process presentations
+// without relying on file‑system paths for the source document.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF/A-1b, PDF, Bytearray,
+// Presentation Processing, Office Automation, Convert
+//
+// Use Cases:
+// - Automate conversion of PPTX files to PDF/A‑1b compliant PDFs.
+// - Build .NET tools that process PowerPoint presentations from byte arrays.
+// - Integrate presentation conversion into server‑side or cloud services.
+// - Validate and archive presentations in a PDF/A‑1b format for long‑term storage.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
