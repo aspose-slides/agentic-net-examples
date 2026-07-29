@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Preserve PPTX password when saving converted using C#
+//
+// Description:
+// Demonstrates how to preserve PPTX password when saving converted using C# 
+// and Aspose.Slides for .NET. The example shows the required 
+// presentation-processing steps for PowerPoint files and produces the 
+// requested output in a standalone console application. Developers can use 
+// this pattern to automate PPTX workflows, validate results, or integrate 
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Preserve, Pptx, Password, When, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate preserve PPTX password when saving converted.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -42,7 +63,7 @@ namespace PreservePasswordExample
                     }
 
                     // Save the presentation in PPTX format, preserving the password
-                    presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    presentation.Save(outputPath, SaveFormat.Pptx);
                 }
 
                 Console.WriteLine($"Presentation saved successfully to '{outputPath}'.");
