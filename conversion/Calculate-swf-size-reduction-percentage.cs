@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Calculate SWF size reduction percentage using C#
+//
+// Description:
+// Demonstrates how to calculate the percentage reduction in SWF file size
+// when compression is enabled versus disabled using Aspose.Slides for .NET.
+// The example loads a PPTX presentation, saves it as SWF with and without
+// compression, compares the file sizes, and outputs the reduction percentage.
+// This pattern can be used in console applications to evaluate SWF compression
+// effectiveness.
+//
+// Keywords:
+// C#, Aspose.Slides, SWF, Compression, Size Reduction, Presentation Conversion,
+// PowerPoint, PPTX, Console Application, File Size Comparison
+//
+// Use Cases:
+// - Determine the benefit of SWF compression for a given presentation.
+// - Automate generation of size reports for SWF conversions.
+// - Integrate SWF size analysis into build or CI pipelines.
+// - Provide insights for optimizing presentation assets before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
