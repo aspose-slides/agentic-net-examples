@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Measure conversion time compressed vs uncompressed SWF using C#
+//
+// Description:
+// Demonstrates how to measure the conversion time of a PowerPoint presentation 
+// to SWF format with compression enabled and disabled using Aspose.Slides for .NET. 
+// The example loads a PPTX file, saves it as compressed and uncompressed SWF, 
+// and reports the elapsed time for each operation.
+//
+// Keywords:
+// C#, Aspose.Slides, SWF, Compression, Conversion Time, PowerPoint, PPTX, 
+// Performance Measurement, .NET
+//
+// Use Cases:
+// - Compare performance impact of SWF compression.
+// - Benchmark Aspose.Slides conversion speeds.
+// - Build tools to evaluate trade‑offs between file size and conversion time.
+// - Automate generation of SWF files with desired compression settings.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Diagnostics;
