@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Configure fade transition in video conversion using C#
+//
+// Description:
+// Demonstrates how to configure a fade transition when converting a PowerPoint
+// presentation to an animated GIF using C# and Aspose.Slides for .NET. The
+// example shows the required presentation‑processing steps, applies a fade
+// transition to the first slide, sets GIF export options, and saves the result
+// as an animated GIF. Developers can use this pattern to automate PPTX workflows,
+// validate results, or integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Configure, Fade, Transition,
+// GIF, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate configuring fade transition in GIF conversion.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate animated GIFs from PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Drawing;
