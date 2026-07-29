@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Test SWFoptions compressed reduces size using C#
+//
+// Description:
+// Demonstrates how to compare compressed and uncompressed SWF output sizes
+// when converting a PPTX presentation using Aspose.Slides for .NET. The example
+// loads a PPTX file, saves it twice (with default compression and with
+// compression disabled), and prints the resulting file sizes to verify that
+// compression reduces the SWF size.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Compression, SwfOptions,
+// File Size Comparison, Presentation Conversion, Office Automation
+//
+// Use Cases:
+// - Verify that SWF compression reduces output file size.
+// - Build utilities for PPTX to SWF conversion with configurable compression.
+// - Automate testing of Aspose.Slides compression settings.
+// - Integrate SWF generation into .NET applications with size optimization.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
