@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Generate XAML for slide transitions in a PowerPoint presentation using C#
+//
+// Description:
+// This example demonstrates how to load a PPTX file, assign different slide
+// transition effects to each slide, and export the presentation to XAML format
+// using Aspose.Slides for .NET. It includes basic error handling and ensures
+// proper disposal of resources. The generated XAML can be used for further
+// processing or integration in XAML‑based applications.
+//
+// Keywords:
+// C#, Aspose.Slides, PPTX, PowerPoint, XAML export, Slide transitions, 
+// Presentation automation, .NET console application
+//
+// Use Cases:
+// - Programmatically add or modify slide transitions before exporting to XAML.
+// - Create tooling that converts PowerPoint presentations to XAML for UI frameworks.
+// - Automate batch processing of PPTX files to generate XAML representations.
+// - Validate and test slide transition settings in a CI pipeline.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
