@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Load presentation from byte array to PDF using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation from a byte array and
+// convert it to PDF using C# and Aspose.Slides for .NET. The example reads a
+// PPTX file into memory, creates a Presentation object from the byte array,
+// and saves the result as a PDF file in a standalone console application.
+// This pattern can be used to automate PPTX processing, integrate presentation
+// conversion into services, or validate presentation content before publishing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Load, Presentation, Byte,
+// Array, Presentation Conversion, Office Automation
+//
+// Use Cases:
+// - Convert PowerPoint files to PDF when the source is available as a byte array.
+// - Build .NET tools that process presentations in memory without temporary files.
+// - Integrate PPTX to PDF conversion into web services or background jobs.
+// - Validate and transform presentation data programmatically before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;
