@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Log font substitution timestamps during conversion using C#
+//
+// Description:
+// Demonstrates how to log font substitution timestamps while converting a
+// PowerPoint presentation to PDF using Aspose.Slides for .NET. The example
+// loads a PPTX file, enumerates font substitution information provided by the
+// FontsManager, writes timestamped entries to the console, and then saves the
+// presentation as a PDF.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, PDF, Aspose.Slides for .NET, Font Substitution, Timestamps,
+// Conversion, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Track which fonts are substituted during PPTX to PDF conversion.
+// - Create audit logs for font usage in automated document pipelines.
+// - Build .NET tools that validate font availability before publishing.
+// - Diagnose rendering issues caused by missing fonts in presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
