@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Save PPT slides as JPEG 80percent quality using C#
+//
+// Description:
+// Demonstrates how to save PPT slides as JPEG 80percent quality using C# and 
+// Aspose.Slides for .NET. The example shows the required 
+// presentation-processing steps for PowerPoint files and produces the 
+// requested output in a standalone console application. Developers can use 
+// this pattern to automate PPTX workflows, validate results, or integrate 
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PPT, JPEG, Save, Slides, Jpeg, 
+// 80Percent, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate save PPT slides as JPEG 80percent quality.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
