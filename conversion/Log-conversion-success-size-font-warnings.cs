@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Log conversion success size font warnings using C#
+//
+// Description:
+// Demonstrates batch conversion of presentation files to PPTX format while
+// logging conversion success, output file size, and any font substitution
+// warnings using C# and Aspose.Slides for .NET. The example processes all files
+// in an input folder, saves converted files to an output folder, and writes a
+// detailed log for each operation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Conversion, Success, Size,
+// Font, Logging, Batch Conversion, Presentation Processing
+//
+// Use Cases:
+// - Automate batch conversion of presentations to PPTX with detailed logging.
+// - Track output file sizes for storage or compliance purposes.
+// - Detect and record font substitutions during conversion.
+// - Integrate presentation conversion into .NET automation pipelines.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -53,7 +74,7 @@ namespace BatchConversion
                         }
 
                         // Load presentation
-                        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputFile);
+                        Presentation presentation = new Presentation(inputFile);
 
                         // Determine output file path (convert to PPTX)
                         string outputFileName = Path.GetFileNameWithoutExtension(inputFile) + ".pptx";
