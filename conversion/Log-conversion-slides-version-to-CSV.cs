@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Log Aspose.Slides version and convert slide to PDF using C#
+//
+// Description:
+// Demonstrates how to log the Aspose.Slides library version to a CSV-formatted
+// log file and convert selected slides from a PowerPoint presentation to PDF
+// using Aspose.Slides for .NET. The example includes basic file existence
+// checks, version retrieval, logging, selective slide export, and saving a copy
+// of the original presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Conversion, Slides, Version,
+// Logging, CSV, PDF, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Record Aspose.Slides version information for audit or troubleshooting.
+// - Automate conversion of specific slides to PDF.
+// - Generate CSV-compatible logs for integration with reporting tools.
+// - Build .NET utilities for PowerPoint presentation workflow automation.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -19,16 +39,16 @@ class Program
                 return;
             }
 
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+            Presentation presentation = new Presentation(inputPath);
 
             string version = Aspose.Slides.BuildVersionInfo.AssemblyVersion;
-            string logEntry = DateTime.Now.ToString("s") + " - Aspose.Slides version: " + version;
+            string logEntry = DateTime.Now.ToString("s") + ",Aspose.Slides version," + version;
             File.AppendAllText(logPath, logEntry + Environment.NewLine);
 
             int[] slides = new int[] { 1 };
-            presentation.Save(outputPath, slides, Aspose.Slides.Export.SaveFormat.Pdf);
+            presentation.Save(outputPath, slides, SaveFormat.Pdf);
 
-            presentation.Save("saved.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            presentation.Save("saved.pptx", SaveFormat.Pptx);
             presentation.Dispose();
         }
         catch (NotSupportedException)
