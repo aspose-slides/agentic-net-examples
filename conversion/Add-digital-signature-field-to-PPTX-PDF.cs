@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add digital signature field to PPTX PDF using C#
+//
+// Description:
+// Demonstrates how to add a digital signature to a PowerPoint presentation
+// (PPTX) and then convert the signed presentation to PDF using Aspose.Slides for .NET.
+// The example loads an existing PPTX file, applies a digital signature from a
+// PFX certificate, saves the signed PPTX (optional), and finally exports the
+// signed content to a PDF document.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, PDF, Aspose.Slides for .NET, Digital Signature, 
+// Certificate, PFX, Presentation Conversion, Office Automation
+//
+// Use Cases:
+// - Add a digital signature to a PowerPoint presentation before distribution.
+// - Convert signed PowerPoint files to PDF for secure sharing.
+// - Automate signing and conversion workflows in .NET applications.
+// - Integrate digital signature processing into presentation management tools.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
