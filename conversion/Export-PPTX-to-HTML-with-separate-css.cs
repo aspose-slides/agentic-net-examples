@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX to HTML with separate css using C#
+//
+// Description:
+// Demonstrates how to export a PPTX file to an HTML document that references
+// an external CSS stylesheet using C# and Aspose.Slides for .NET. The example
+// loads a presentation, configures HTML export options to use a separate CSS
+// file, and saves the resulting HTML.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, HTML, Export, Separate CSS,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX presentations to HTML with external styling.
+// - Build .NET tools that generate web-friendly versions of PowerPoint files.
+// - Integrate presentation export functionality into larger applications.
+// - Separate content from style for easier web maintenance.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
