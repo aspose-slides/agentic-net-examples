@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Enable viewerincluded true show navigation arrows using C#
+//
+// Description:
+// Demonstrates how to enable the integrated viewer (ViewerIncluded = true) when
+// converting a presentation to SWF format using Aspose.Slides for .NET. The
+// example creates a simple presentation, clones a slide, configures SWF
+// export options to include the viewer with navigation arrows, and saves the
+// result as both SWF and PPTX files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, ViewerIncluded, Enable,
+// NavigationArrows, Presentation Conversion, Office Automation
+//
+// Use Cases:
+// - Generate SWF files with an embedded viewer that provides navigation arrows.
+// - Automate PowerPoint to SWF conversion while preserving slide navigation.
+// - Build .NET tools that require interactive SWF presentations.
+// - Validate SWF export settings in Aspose.Slides workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
