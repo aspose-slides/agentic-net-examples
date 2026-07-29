@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Convert source format to target format with DPI using C#
+//
+// Description:
+// Demonstrates how to convert a presentation from a specified source format
+// to a target format using Aspose.Slides for .NET, with optional DPI settings
+// when converting to TIFF. The example parses command‑line arguments for the
+// source format, target format, and DPI, loads the input file, performs the
+// conversion, and saves the result.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Convert, Source Format, Target
+// Format, DPI, TIFF, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of presentations between different file formats.
+// - Generate high‑resolution TIFF images from presentations by specifying DPI.
+// - Build command‑line tools for batch processing of PowerPoint files.
+// - Integrate format conversion into .NET applications or CI pipelines.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
