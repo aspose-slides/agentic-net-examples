@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Embed presentation metadata into DOCX using C#
+//
+// Description:
+// Demonstrates how to embed built‑in presentation metadata as custom properties
+// and save the PowerPoint file as a DOCX document using C# and Aspose.Slides for .NET.
+// The example loads a PPTX file, copies standard document properties to custom
+// properties, and writes the result to a DOCX file. This pattern can be used to
+// automate metadata handling and generate Word‑compatible representations of
+// presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Embed, Presentation, Metadata,
+// Docx, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate embedding presentation metadata into DOCX.
+// - Build C# tools for PowerPoint presentation processing and export.
+// - Generate Word documents from PPTX files with preserved metadata.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -11,7 +33,7 @@ namespace EmbedMetadata
         {
             // Input and output file paths
             string inputPath = "input.pptx";
-            string outputPath = "output.pptx"; // DOCX format is not supported by Aspose.Slides; using PPTX instead
+            string outputPath = "output.docx"; // Target DOCX format
 
             // Verify that the input file exists
             if (!File.Exists(inputPath))
@@ -21,7 +43,7 @@ namespace EmbedMetadata
             }
 
             // Load the presentation
-            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
+            using (Presentation presentation = new Presentation(inputPath))
             {
                 // Access built‑in document properties
                 IDocumentProperties properties = presentation.DocumentProperties;
@@ -38,23 +60,15 @@ namespace EmbedMetadata
                 properties.SetCustomPropertyValue("Manager", properties.Manager);
                 properties.SetCustomPropertyValue("PresentationFormat", properties.PresentationFormat);
 
-                // Attempt to save as DOCX (unsupported) – fallback to PPTX
+                // Save as DOCX
                 try
                 {
-                    // The following line would be the intended DOCX save if supported:
-                    // presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Docx);
-                    // Since DOCX is not a supported SaveFormat, we save as PPTX instead.
-                    presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
-                }
-                catch (Aspose.Slides.PptxUnsupportedFormatException ex)
-                {
-                    // Handle format not supported exception
-                    Console.WriteLine("The requested format is not supported: " + ex.Message);
+                    presentation.Save(outputPath, SaveFormat.Docx);
                 }
                 catch (Exception ex)
                 {
-                    // General exception handling for unexpected errors (e.g., file I/O, web services)
-                    Console.WriteLine("An error occurred: " + ex.Message);
+                    // Handle any errors that occur during saving
+                    Console.WriteLine("An error occurred while saving: " + ex.Message);
                 }
             }
 
