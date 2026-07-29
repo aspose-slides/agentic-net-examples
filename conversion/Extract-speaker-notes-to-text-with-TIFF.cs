@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Extract speaker notes to text with TIFF using C#
+//
+// Description:
+// Demonstrates how to extract speaker notes to text and generate TIFF images
+// for each slide using C# and Aspose.Slides for .NET. The example loads a PPTX
+// file, creates a TIFF image per slide, writes the speaker notes to text files,
+// and saves a copy of the processed presentation. This pattern can be used to
+// automate PowerPoint content extraction, create documentation assets, or
+// integrate slide processing into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Extract, Speaker, Notes, Text,
+// TIFF, Image, Conversion, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of speaker notes and slide images as TIFF files.
+// - Build C# tools for PowerPoint presentation processing and documentation.
+// - Generate visual and textual assets from PPTX files for reporting or archiving.
+// - Validate and transform presentation content before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -42,7 +64,7 @@ namespace ExtractNotesAndImages
                         using (IImage image = slide.GetImage())
                         {
                             string imagePath = Path.Combine(outputDir, $"Slide_{i + 1}.tiff");
-                            image.Save(imagePath, Aspose.Slides.ImageFormat.Tiff);
+                            image.Save(imagePath, ImageFormat.Tiff);
                         }
 
                         // Extract speaker notes text if available
@@ -63,7 +85,6 @@ namespace ExtractNotesAndImages
             catch (NotSupportedException)
             {
                 // Format not supported
-                // Comment: format not supported
                 Console.WriteLine("The presentation format is not supported for the requested operation.");
             }
             catch (Exception ex)
