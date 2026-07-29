@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Set slide size to 1024x768 before PDF using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, change its slide size to
+// 1024 × 768 points while preserving content layout, and then save the result as a
+// PDF file using Aspose.Slides for .NET. The example includes basic file‑existence
+// checks and exception handling suitable for a standalone console application.
+// Developers can adapt this pattern to automate slide‑size adjustments prior to
+// PDF conversion in their own workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Slide Size, 1024x768, 
+// Presentation Processing, Office Automation, SlideSize.SetSize, EnsureFit
+//
+// Use Cases:
+// - Ensure consistent slide dimensions before generating PDFs.
+// - Build command‑line tools for batch processing of PPTX files.
+// - Integrate slide‑size normalization into document conversion pipelines.
+// - Validate and adjust presentation layouts programmatically.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides.Export;
