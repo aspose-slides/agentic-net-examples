@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Create GIF from PPTX with 200 ms frame delay using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint PPTX file and export it as an animated
+// GIF with a 200 ms delay between frames using Aspose.Slides for .NET. The
+// example includes input validation, exception handling, and shows the required
+// export options configuration in a console application. Developers can adapt
+// this pattern to automate PPTX‑to‑GIF conversions, integrate presentation
+// processing into .NET tools, or validate visual output before publishing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, GIF, Aspose.Slides for .NET, 200ms, Delay, Presentation
+// Processing, Office Automation
+//
+// Use Cases:
+// - Convert PPTX presentations to animated GIFs with a fixed frame delay.
+// - Build C# utilities for batch processing of PowerPoint files.
+// - Integrate GIF export functionality into larger .NET applications.
+// - Test and verify slide animations programmatically.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
