@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Batch convert ppt to swf log sizes using C#
+//
+// Description:
+// Demonstrates how to batch convert PowerPoint presentations (PPT, PPTX) to
+// SWF format while logging the original and converted file sizes using C# and
+// Aspose.Slides for .NET. The example processes each file supplied via command‑line
+// arguments, saves the SWF output, and writes size information to the console.
+// This pattern can be used for automated conversion workflows and size analysis.
+//
+// Keywords:
+// C#, PowerPoint, PPT, PPTX, SWF, Aspose.Slides for .NET, Batch Conversion,
+// File Size Logging, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate batch conversion of PPT/PPTX files to SWF format.
+// - Generate size reports for original and converted presentations.
+// - Integrate PowerPoint to SWF conversion into .NET command‑line tools.
+// - Validate conversion results before publishing or further processing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
