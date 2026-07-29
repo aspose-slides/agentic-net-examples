@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Skip conversion if SWF already exists using C#
+//
+// Description:
+// Demonstrates how to skip conversion if an SWF file already exists using C# 
+// and Aspose.Slides for .NET. The example processes PowerPoint presentations 
+// from an input folder, converts them to SWF format only when the target SWF 
+// does not already exist, and saves the results to an output folder. This 
+// pattern is useful for batch conversion scenarios where re‑processing of 
+// unchanged files should be avoided.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Skip, Conversion, Already, 
+// Exists, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate batch conversion of PPTX files to SWF while avoiding duplicate work.
+// - Build C# utilities for PowerPoint presentation processing with conditional logic.
+// - Integrate conditional conversion steps into .NET applications or CI pipelines.
+// - Ensure efficient handling of large numbers of presentations by skipping existing outputs.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
