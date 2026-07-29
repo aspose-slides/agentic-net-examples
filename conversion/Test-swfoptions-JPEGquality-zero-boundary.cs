@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Test swfoptions JPEGquality zero boundary using C#
+//
+// Description:
+// Demonstrates how to configure Aspose.Slides Export.SwfOptions with a JPEG
+// quality value of zero, verify the setting, and save a presentation as SWF.
+// This example validates that the JpegQuality property accepts the lower
+// boundary value (0) without throwing an exception.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Test, SwfOptions, JpegQuality,
+// Zero Boundary, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Verify boundary handling of SwfOptions.JpegQuality in automated tests.
+// - Build C# utilities that generate SWF files with specific JPEG quality settings.
+// - Ensure compatibility of presentation conversion pipelines with low-quality JPEG output.
+// - Validate Aspose.Slides behavior before integrating into larger .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
