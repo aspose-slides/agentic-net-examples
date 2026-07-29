@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Batch convert PPTX to ODP verify themes using C#
+//
+// Description:
+// Demonstrates how to batch convert PPTX to ODP while preserving and verifying
+// master theme consistency using C# and Aspose.Slides for .NET. The example
+// processes all PPTX files in the current directory, saves them as ODP files,
+// and checks that the number of master slides remains unchanged after conversion.
+// This pattern can be used to automate presentation format migrations and
+// ensure visual fidelity in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, ODP, Aspose.Slides for .NET, Batch, Convert, Verify Themes,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate batch conversion of PPTX files to ODP format.
+// - Validate that master themes are retained after conversion.
+// - Build C# utilities for PowerPoint presentation migration.
+// - Integrate presentation format checks into .NET workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;
