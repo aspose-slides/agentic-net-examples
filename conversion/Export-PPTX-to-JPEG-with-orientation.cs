@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX to JPEG with orientation using C#
+//
+// Description:
+// Demonstrates how to export each slide of a PPTX presentation to JPEG
+// images using Aspose.Slides for .NET. The example loads a presentation,
+// iterates through its slides, renders each slide to a full‑scale image,
+// and saves the images as JPEG files. A placeholder is included for adding
+// an EXIF orientation tag if required.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, JPEG, Export, Orientation, 
+// Slide Export, Image Processing, Presentation Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX slides to JPEG images.
+// - Build C# utilities for PowerPoint slide extraction.
+// - Integrate slide‑to‑image conversion into .NET applications.
+// - Prepare images with correct orientation metadata for downstream use.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
