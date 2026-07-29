@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Convert ODP to SWF default settings using C#
+//
+// Description:
+// Demonstrates how to convert all ODP files in a specified directory to SWF
+// using the default conversion settings with Aspose.Slides for .NET. The
+// example loads each ODP presentation, saves it as SWF, and handles basic
+// error conditions. It can be used as a template for batch conversion of
+// OpenDocument presentations to Flash format in console applications.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, ODP, SWF, Convert, Default Settings, Batch
+// Conversion, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Batch convert ODP files to SWF with default options.
+// - Build command‑line tools for OpenDocument to Flash conversion.
+// - Integrate ODP to SWF conversion into .NET automation pipelines.
+// - Validate ODP presentations before publishing as SWF.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
