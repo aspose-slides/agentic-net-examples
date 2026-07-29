@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Apply 8bpp indexed to TIFF and compare size using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation to TIFF images using
+// Aspose.Slides for .NET with the default pixel format and with an 8bpp indexed
+// pixel format, then compares the resulting file sizes. The example shows the
+// required presentation‑processing steps, TIFF options configuration, and
+// basic size‑reduction calculation in a standalone console application.
+// Developers can use this pattern to automate PPTX to TIFF conversion and
+// evaluate compression benefits.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, TIFF, 8bpp indexed, ImagePixelFormat,
+// Presentation conversion, File size comparison, Office automation
+//
+// Use Cases:
+// - Convert PPTX files to TIFF with custom pixel formats.
+// - Measure storage savings when using 8bpp indexed TIFF.
+// - Build .NET tools for batch conversion and size analysis of presentations.
+// - Integrate TIFF conversion into document processing pipelines.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
