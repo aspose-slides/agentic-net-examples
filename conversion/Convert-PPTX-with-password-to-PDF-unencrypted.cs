@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Convert PPTX with password to PDF unencrypted using C#
+//
+// Description:
+// Demonstrates how to convert a password‑protected PPTX file to an unencrypted PDF
+// using Aspose.Slides for .NET. The example loads the presentation with the
+// supplied password and saves it as PDF without applying any password to the
+// output file. This pattern can be used in console utilities or automated
+// workflows that need to remove protection from PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Convert, Password, Unencrypted,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Remove password protection from PPTX files while converting to PDF.
+// - Build command‑line tools for batch conversion of secured presentations.
+// - Integrate PPTX de‑protection into .NET applications or CI pipelines.
+// - Generate PDF reports from protected PowerPoint decks.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -19,9 +40,9 @@ class Program
 
         try
         {
-            Aspose.Slides.LoadOptions loadOptions = new Aspose.Slides.LoadOptions();
+            LoadOptions loadOptions = new LoadOptions();
             loadOptions.Password = password;
-            var presentation = new Aspose.Slides.Presentation(inputPath, loadOptions);
+            var presentation = new Presentation(inputPath, loadOptions);
             presentation.Save(outputPath, SaveFormat.Pdf);
             presentation.Dispose();
         }
