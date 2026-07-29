@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Log conversion failures with exception messages using C#
+//
+// Description:
+// Demonstrates how to log conversion failures with exception messages while
+// converting a PowerPoint presentation to PDF using Aspose.Slides for .NET.
+// The example loads a PPTX file, attempts to save it as PDF, and writes any
+// errors (including unsupported format) to a log file. It can be used as a
+// template for robust PowerPoint processing in console applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, PDF, Aspose.Slides for .NET, Conversion, Failure Logging,
+// Exception Handling, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate logging of conversion errors for batch PPTX to PDF workflows.
+// - Build resilient .NET tools that handle unsupported formats gracefully.
+// - Integrate PowerPoint conversion with custom error reporting mechanisms.
+// - Validate and monitor presentation processing pipelines before deployment.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides.Export;
