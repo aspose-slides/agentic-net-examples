@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Save PPT to XPS with half-inch margin using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation (PPTX) to an XPS
+// document while applying a visual half‑inch margin by enabling a slide frame.
+// The example uses Aspose.Slides for .NET to load the presentation, configure
+// XpsOptions, and save the output file. It includes basic file existence checks
+// and exception handling suitable for console applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, XPS, Aspose.Slides for .NET, Save, Half-Inch, Margin,
+// Slide Frame, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Convert PPTX files to XPS with a visual margin for printing or preview.
+// - Build .NET utilities that automate PowerPoint to XPS transformations.
+// - Integrate slide‑frame based margin simulation into document workflows.
+// - Validate and troubleshoot XPS export settings in automated pipelines.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
