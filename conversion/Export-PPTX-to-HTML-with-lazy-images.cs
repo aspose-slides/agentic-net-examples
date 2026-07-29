@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX to HTML with lazy images using C#
+//
+// Description:
+// Demonstrates how to export a PPTX presentation to HTML5 with lazy-loaded
+// images using C# and Aspose.Slides for .NET. The example loads a PowerPoint
+// file, configures HTML5 export options to keep images external (enabling
+// lazy loading), and saves the result as an HTML file. This pattern can be
+// used in console applications to automate presentation conversion workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, HTML5, Export, Lazy Images,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX files to HTML5 with external image resources.
+// - Build .NET tools that generate web-friendly presentations with lazy loading.
+// - Integrate PowerPoint to web content pipelines in C# applications.
+// - Validate and test presentation export settings before deployment.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -21,14 +42,16 @@ class Program
         try
         {
             // Load the presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+            Presentation presentation = new Presentation(inputPath);
 
             // Configure HTML5 export options for lazy-loaded images
-            Aspose.Slides.Export.Html5Options htmlOptions = new Aspose.Slides.Export.Html5Options();
-            htmlOptions.EmbedImages = false; // Images will be external, allowing lazy loading
+            Html5Options htmlOptions = new Html5Options
+            {
+                EmbedImages = false // Images will be external, allowing lazy loading
+            };
 
             // Save the presentation as HTML5
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Html5, htmlOptions);
+            presentation.Save(outputPath, SaveFormat.Html5, htmlOptions);
 
             // Dispose the presentation before exiting
             presentation.Dispose();
