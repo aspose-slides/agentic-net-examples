@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add slide number to master export SVG using C#
+//
+// Description:
+// Demonstrates how to enable slide number placeholders on a master slide and
+// export each slide of a PowerPoint presentation to separate SVG files using
+// Aspose.Slides for .NET. The example also shows how to create a new presentation
+// when an input file is not found, and how to save the modified presentation.
+// This pattern can be used to automate slide numbering and SVG conversion in
+// .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SVG, Slide Number, Master Slide,
+// Export, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Add slide numbers to master slide before exporting slides as SVG.
+// - Build C# tools for batch conversion of PPTX slides to SVG format.
+// - Generate or transform PPTX files with slide numbering in .NET applications.
+// - Validate and automate presentation workflows prior to publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
