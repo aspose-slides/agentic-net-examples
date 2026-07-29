@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Batch process PPT to TIFF LZW 150DPI using C#
+//
+// Description:
+// Demonstrates how to batch process one or more PowerPoint files (PPT/PPTX) to
+// TIFF images using LZW compression at 150 DPI with Aspose.Slides for .NET.
+// The example accepts file paths as command‑line arguments, converts each
+// presentation, and saves the output TIFF alongside the source file.
+// This pattern can be used to automate high‑volume conversion tasks in .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPT, PPTX, TIFF, LZW, 150DPI, Aspose.Slides for .NET, Batch,
+// Process, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate batch conversion of PPT/PPTX files to compressed TIFF images.
+// - Build command‑line tools for PowerPoint presentation archiving.
+// - Integrate TIFF export with specific compression and resolution settings
+//   into .NET workflows.
+// - Validate and preprocess presentations before publishing or distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
