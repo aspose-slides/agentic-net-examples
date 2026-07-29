@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Upload PPTX to TIFF to cloud bucket using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint PPTX file to a multi‑page TIFF
+// image using Aspose.Slides for .NET and then upload the resulting TIFF to a
+// cloud storage bucket via HTTP POST. The example includes file existence
+// validation, error handling for conversion and upload, and can be used as a
+// template for automating presentation processing workflows in .NET.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, TIFF, Aspose.Slides for .NET, Upload, Cloud, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX presentations to TIFF for archival or preview.
+// - Upload converted TIFF files to cloud storage services programmatically.
+// - Build .NET tools that integrate presentation conversion with cloud APIs.
+// - Validate and monitor PowerPoint processing pipelines before deployment.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Net.Http;
