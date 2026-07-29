@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Validate animated GIF slide order by timestamps using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation to an animated GIF
+// and validate that the GIF frames preserve the original slide order by
+// examining frame timestamps. The example uses Aspose.Slides for .NET to
+// perform the conversion and System.Drawing to read GIF frame delays.
+// It outputs a GIF file, a copy of the original presentation, and prints
+// validation results to the console.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, GIF conversion, Animated GIF,
+// Slide order validation, Frame timestamps, Presentation processing, Office Automation
+//
+// Use Cases:
+// - Convert PPTX files to animated GIFs while retaining slide timing.
+// - Verify that GIF frames correspond to the original slide sequence.
+// - Build automated tools for presentation quality checks in .NET.
+// - Integrate GIF generation and validation into CI pipelines or reporting systems.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
