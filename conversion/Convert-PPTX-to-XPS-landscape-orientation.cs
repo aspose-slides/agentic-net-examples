@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Convert PPTX to XPS landscape orientation using C#
+//
+// Description:
+// Demonstrates how to convert a PPTX file to an XPS document with landscape
+// slide orientation using C# and Aspose.Slides for .NET. The example loads a
+// presentation, sets the slide size orientation to landscape, and saves the
+// result as an XPS file. It includes basic file existence checks and error
+// handling suitable for console applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, XPS, Aspose.Slides for .NET, Convert, Landscape, 
+// Orientation, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX presentations to XPS format with landscape layout.
+// - Build C# utilities for PowerPoint slide orientation adjustments.
+// - Integrate PPTX to XPS conversion into .NET workflows or services.
+// - Validate and process presentation files before distribution or printing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
