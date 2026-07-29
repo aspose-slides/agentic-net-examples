@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Convert PPT to PDF A4 size using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation (PPTX) to a PDF file
+// with A4 page dimensions using Aspose.Slides for .NET. The example loads a
+// presentation, sets the slide size to A4 paper with maximum scaling, and
+// saves the result as a PDF. This pattern can be used in console applications
+// to automate PPTX to PDF conversion with specific page sizing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, A4, Convert, Size,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX files to PDF with A4 page size.
+// - Build .NET tools for batch processing of PowerPoint presentations.
+// - Generate PDF reports from slides with standardized dimensions.
+// - Integrate slide-to-PDF conversion into larger document workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
