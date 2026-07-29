@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Convert PPTX to ODP retaining textboxes using C#
+//
+// Description:
+// Demonstrates how to convert a PPTX file to ODP format while ensuring that
+// all text boxes are retained. The example loads a presentation, accesses each
+// slide's text frames (which forces the text boxes to be included), and saves
+// the result as an ODP file using Aspose.Slides for .NET. This pattern can be
+// used in console applications to automate PowerPoint conversion workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, ODP, Aspose.Slides for .NET, Convert, Retaining, 
+// Textboxes, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX to ODP while preserving text boxes.
+// - Build C# utilities for PowerPoint presentation processing.
+// - Integrate PPTX to ODP conversion into .NET applications.
+// - Validate that text boxes survive format conversion before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides.Export;
