@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Test show hidden slides true no exception using C#
+//
+// Description:
+// Demonstrates how to test that setting ShowHiddenSlides to true when saving a
+// presentation to SWF does not throw an exception. The example creates a new
+// presentation, hides the first slide, configures SwfOptions to show hidden
+// slides, saves the file as SWF, and verifies successful execution.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Test, ShowHiddenSlides, Hidden Slides,
+// SWF, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Verify that hidden slides are included when ShowHiddenSlides is enabled.
+// - Ensure SWF export works without errors for presentations with hidden slides.
+// - Build automated tests for Aspose.Slides export options.
+// - Integrate hidden slide handling into .NET PowerPoint processing tools.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
