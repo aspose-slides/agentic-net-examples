@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Save PPTX as PNG lossless using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file and export each slide as a lossless PNG
+// image using Aspose.Slides for .NET. The example also shows the required
+// presentation lifecycle handling by saving the (unchanged) presentation back
+// to disk. This pattern can be used to automate slide‑to‑image conversion in
+// .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Save, Lossless, Slide Export,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX slides to high‑quality PNG images.
+// - Build C# utilities for extracting slide graphics for web or documentation.
+// - Generate image assets from presentations in .NET workflows.
+// - Validate slide rendering before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
