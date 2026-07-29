@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Create GIF from PPTX web optimized palette using C#
+//
+// Description:
+// Demonstrates how to convert a PPTX presentation to an animated GIF optimized
+// for web usage using Aspose.Slides for .NET. The example sets a custom frame
+// size, slide delay, and transition frame rate to produce a lightweight GIF
+// suitable for embedding in web pages. It includes basic error handling for
+// missing input files and unsupported formats.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, GIF, Aspose.Slides for .NET, Web Optimized, Palette,
+// Presentation Conversion, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX presentations to web‑friendly GIFs.
+// - Build .NET tools for generating animated previews of slides.
+// - Integrate PPTX‑to‑GIF conversion into web services or desktop utilities.
+// - Ensure consistent GIF output settings across multiple presentations.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Drawing;
