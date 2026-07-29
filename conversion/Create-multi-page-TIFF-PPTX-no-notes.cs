@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Create multi-page TIFF from PPTX without notes using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation (PPTX) to a multi‑page
+// TIFF image while excluding slide notes, using Aspose.Slides for .NET. The
+// example loads a PPTX file, configures TiffOptions with default settings,
+// and saves the result as a multi‑page TIFF file. This pattern can be used in
+// console applications or automated workflows that require image export of
+// presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, TIFF, Aspose.Slides for .NET, Multi‑page TIFF, No notes,
+// Presentation conversion, Office Automation
+//
+// Use Cases:
+// - Convert PPTX presentations to multi‑page TIFF images for archiving.
+// - Generate image versions of slides without including speaker notes.
+// - Build .NET tools for batch processing of PowerPoint files.
+// - Integrate PPTX‑to‑TIFF conversion into document management systems.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
