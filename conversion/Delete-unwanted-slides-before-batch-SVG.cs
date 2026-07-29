@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Delete unwanted slides before batch SVG export using C#
+//
+// Description:
+// Demonstrates how to delete specific slides from a PowerPoint presentation
+// and then export the remaining slides as individual SVG files using
+// Aspose.Slides for .NET. The example loads a PPTX file, removes slides by
+// index, saves the modified presentation, and creates SVG images for each
+// remaining slide in a designated folder. This pattern can be used in console
+// applications to automate slide cleanup and batch SVG conversion.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, Delete Slides, SVG Export,
+// Batch SVG, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Remove unwanted slides from a presentation before exporting.
+// - Generate SVG images for all remaining slides in a batch operation.
+// - Build command‑line tools for PPTX cleanup and conversion to SVG.
+// - Integrate slide manipulation and SVG export into .NET workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
