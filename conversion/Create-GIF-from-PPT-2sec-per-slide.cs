@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Create animated GIF preview from PPTX with 2‑second slide duration using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation (PPTX) and export it as an
+// animated GIF where each slide is displayed for 2 seconds. The example uses
+// Aspose.Slides for .NET in a simple console application, showing the required
+// steps to validate input, configure GIF export options, and save the result.
+// This pattern can be used to automate PPTX to GIF conversion, generate preview
+// animations, or integrate slide‑to‑GIF functionality into .NET solutions.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, GIF, Animated GIF, Slide Duration,
+// Presentation Conversion, Office Automation
+//
+// Use Cases:
+// - Generate an animated GIF preview of a PowerPoint presentation with a fixed
+//   slide display time.
+// - Automate batch conversion of PPTX files to GIF for quick sharing or review.
+// - Incorporate slide‑to‑GIF conversion into custom .NET tools or services.
+// - Validate presentation content by creating visual previews before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
