@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Convert presentation to markdown with TOC using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation into individual markdown
+// files for each slide and generate a Table of Contents markdown file that links
+// to those slide files. The example uses Aspose.Slides for .NET to load the PPTX,
+// export each slide as visual markdown, and create a TOC linking to the generated
+// files. This pattern can be used in console applications to automate PPTX
+// documentation workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Convert, Presentation, Markdown,
+// Table of Contents, Slide Export, Office Automation
+//
+// Use Cases:
+// - Automate conversion of presentations to markdown with a navigable TOC.
+// - Build tools that document slide content in markdown for version control.
+// - Integrate slide-to-markdown conversion into .NET CI/CD pipelines.
+// - Generate lightweight documentation from PowerPoint files.
+//
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
