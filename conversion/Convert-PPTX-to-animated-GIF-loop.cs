@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Convert PPTX to animated GIF loop using C#
+//
+// Description:
+// Demonstrates how to convert a PPTX presentation to an animated GIF loop using
+// C# and Aspose.Slides for .NET. The example loads a PowerPoint file, configures
+// GIF export options such as frame size, delay, and transition frame rate, and
+// saves the result as a looping animated GIF. This pattern can be used to
+// automate PPTX-to-GIF conversions, integrate presentation processing into
+// .NET applications, or generate GIF previews of slides.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, GIF, Animated, Loop, Aspose.Slides for .NET, Convert,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX files to looping animated GIFs.
+// - Build C# utilities for creating GIF previews of presentations.
+// - Integrate slide-to-GIF functionality into .NET applications.
+// - Validate and test PowerPoint content by generating visual GIF outputs.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
