@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Skip large files over 100MB before SWF conversion using C#
+//
+// Description:
+// Demonstrates how to iterate over presentation files supplied via command‑line
+// arguments, skip any file larger than 100 MB, and convert the remaining PPT/PPTX
+// files to SWF format using Aspose.Slides for .NET. The example shows file size
+// checking, path handling, and basic error handling in a console application.
+// Developers can adapt this pattern for batch processing or integration into
+// larger automation pipelines.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, SWF, conversion, batch processing, 
+// file size check, skip large files, console application
+//
+// Use Cases:
+// - Batch convert PowerPoint presentations to SWF while ignoring files >100 MB.
+// - Integrate size‑based filtering into automated document conversion workflows.
+// - Build command‑line tools for presentation processing in .NET environments.
+// - Prevent out‑of‑memory or performance issues caused by very large source files.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -40,9 +61,11 @@ namespace BatchSwfConverter
 
                     using (var presentation = new Presentation(inputPath))
                     {
-                        var swfOptions = new SwfOptions();
-                        // Example option: include viewer
-                        swfOptions.ViewerIncluded = true;
+                        var swfOptions = new SwfOptions
+                        {
+                            // Example option: include viewer
+                            ViewerIncluded = true
+                        };
 
                         presentation.Save(outputPath, SaveFormat.Swf, swfOptions);
                         Console.WriteLine($"Converted to SWF: {outputPath}");
