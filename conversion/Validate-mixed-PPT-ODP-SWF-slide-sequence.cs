@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Validate mixed PPT and ODP slide sequence during SWF conversion using C#
+//
+// Description:
+// Demonstrates how to load PPTX and ODP presentations, convert each to SWF, 
+// and verify that the original slide counts are preserved after conversion. 
+// The example uses Aspose.Slides for .NET in a console application and can be 
+// adapted to automate presentation validation or batch conversion workflows.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PPTX, ODP, SWF, slide count validation, conversion, 
+// presentation processing, Office automation
+//
+// Use Cases:
+// - Verify that slide ordering and count are maintained when converting PPTX/ODP to SWF.
+// - Build command‑line tools for batch conversion of presentations to SWF.
+// - Integrate slide‑sequence validation into CI pipelines for presentation assets.
+// - Generate SWF files for web preview while ensuring content integrity.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
