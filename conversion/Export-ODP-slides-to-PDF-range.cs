@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export ODP slides to PDF range using C#
+//
+// Description:
+// Demonstrates how to export a range of slides from an ODP presentation to a
+// PDF file using Aspose.Slides for .NET. The example loads an ODP file,
+// selects specific slide indices, and saves those slides as a PDF document.
+// This pattern can be used to automate slide extraction, create custom PDFs,
+// or integrate ODP processing into .NET applications.
+//
+// Keywords:
+// C#, ODP, PDF, Aspose.Slides for .NET, Export, Slides, Range, Presentation
+// Processing, Office Automation
+//
+// Use Cases:
+// - Automate export of selected ODP slides to PDF.
+// - Build C# utilities for ODP to PDF conversion with slide selection.
+// - Generate PDFs from specific slides in presentation workflows.
+// - Validate and test slide extraction before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
