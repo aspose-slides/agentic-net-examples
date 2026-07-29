@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add embedded viewer to SWF browser navigation using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation to an SWF file with
+// an integrated viewer UI (navigation panes, fullscreen button, etc.) using
+// Aspose.Slides for .NET. The example loads a PPTX file, configures viewer
+// options, saves the result as SWF, and outlines how to test navigation
+// functionality in browsers.
+//
+// Keywords:
+// C#, Aspose.Slides, SWF, Embedded Viewer, Browser Navigation, PowerPoint,
+// PPTX, Presentation Conversion, Office Automation
+//
+// Use Cases:
+// - Generate SWF files with built‑in navigation controls for web publishing.
+// - Automate PowerPoint to SWF conversion with viewer UI in .NET applications.
+// - Validate SWF navigation buttons across different browsers.
+// - Integrate presentation conversion into custom C# tools or services.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
