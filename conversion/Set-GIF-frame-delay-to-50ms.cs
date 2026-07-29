@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set GIF frame delay to 50ms using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation (PPTX) to an animated
+// GIF while setting each frame's delay to 50 milliseconds using Aspose.Slides
+// for .NET. The example loads a presentation, configures GIF export options,
+// and saves the result as a GIF file. This pattern can be used in console
+// applications or integrated into larger .NET solutions for automated
+// presentation processing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, GIF, Frame Delay, 50ms, Aspose.Slides for .NET, 
+// Presentation Conversion, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX files to GIF with a fixed 50 ms frame delay.
+// - Build C# utilities for batch processing of presentations into animated GIFs.
+// - Integrate GIF export with custom timing into .NET applications.
+// - Validate and preview presentation animations before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
