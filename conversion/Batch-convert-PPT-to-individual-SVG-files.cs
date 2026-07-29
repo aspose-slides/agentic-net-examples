@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Batch convert PPT to individual SVG files using C#
+//
+// Description:
+// Demonstrates how to batch convert PPT and PPTX files to individual SVG files 
+// using C# and Aspose.Slides for .NET. The example processes each presentation 
+// in a specified input directory, creates a dedicated output folder per file, 
+// and writes each slide as a separate SVG image. It also shows how to preserve 
+// the original presentation format after conversion.
+//
+// Keywords:
+// C#, PowerPoint, PPT, PPTX, SVG, Aspose.Slides for .NET, Batch conversion, 
+// Slide export, Presentation processing, Office automation
+//
+// Use Cases:
+// - Automate conversion of multiple PowerPoint files to per‑slide SVG images.
+// - Build command‑line tools for extracting slide graphics from presentations.
+// - Integrate slide‑to‑SVG conversion into .NET workflows or CI pipelines.
+// - Preserve original presentations while generating SVG assets for web or 
+//   documentation purposes.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
