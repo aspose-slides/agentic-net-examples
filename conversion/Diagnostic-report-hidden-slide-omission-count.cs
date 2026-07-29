@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Diagnostic report hidden slide omission count using C#
+//
+// Description:
+// Demonstrates how to generate a diagnostic report of hidden slide omission count
+// using C# and Aspose.Slides for .NET. The example loads a PPTX file, reads the
+// total slide count and hidden slide count (which are omitted when
+// ShowHiddenSlides is false), outputs the information to the console, and saves
+// the presentation. This pattern helps automate PPTX diagnostics and validation
+// in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Diagnostic, Report, Hidden,
+// Slide, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate diagnostic reporting of hidden slide omission counts.
+// - Build C# utilities for PowerPoint presentation analysis.
+// - Validate slide visibility settings before publishing.
+// - Integrate presentation diagnostics into larger .NET workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
