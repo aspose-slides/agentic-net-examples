@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Create animated GIF from PPTX 10fps using C#
+//
+// Description:
+// Demonstrates how to create an animated GIF from a PPTX file at 10 frames per
+// second using C# and Aspose.Slides for .NET. The example loads a PowerPoint
+// presentation, configures GIF export options with a custom frame rate, and
+// saves the result as an animated GIF. This pattern can be used to automate
+// PPTX-to-GIF conversions, integrate presentation processing into .NET
+// applications, or validate slide animations before publishing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Animated GIF, 10Fps,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of animated GIFs from PPTX files at a specific frame rate.
+// - Build C# tools for PowerPoint presentation conversion and processing.
+// - Generate GIF previews of slide decks for web or documentation purposes.
+// - Validate slide animation timing in .NET applications.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -21,14 +43,16 @@ class Program
         try
         {
             // Load the presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+            Presentation presentation = new Presentation(inputPath);
 
             // Set GIF export options with custom frame rate
-            Aspose.Slides.Export.GifOptions gifOptions = new Aspose.Slides.Export.GifOptions();
-            gifOptions.TransitionFps = 10;
+            GifOptions gifOptions = new GifOptions
+            {
+                TransitionFps = 10
+            };
 
             // Save as animated GIF
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Gif, gifOptions);
+            presentation.Save(outputPath, SaveFormat.Gif, gifOptions);
 
             // Dispose the presentation
             presentation.Dispose();
