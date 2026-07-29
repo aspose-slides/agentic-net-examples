@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Implement fallback font for default regular using C#
+//
+// Description:
+// Demonstrates how to set a fallback font for the default regular font when
+// loading a PowerPoint presentation using Aspose.Slides for .NET. The example
+// loads a PPTX file with a specified secondary font, optionally defines a
+// universal font fallback rule, and saves the modified presentation.
+// This pattern helps ensure text is rendered correctly when the original
+// regular font is missing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Implement, Fallback, Font,
+// Default, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Apply a fallback font for presentations lacking the original regular font.
+// - Build .NET tools that robustly handle missing fonts in PPTX files.
+// - Automate PPTX processing with reliable font substitution.
+// - Validate and transform presentations before distribution.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
