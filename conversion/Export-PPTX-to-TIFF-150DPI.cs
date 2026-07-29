@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX to TIFF 150DPI using C#
+//
+// Description:
+// Demonstrates how to export a PPTX file to a multi‑page TIFF image with a
+// resolution of 150 DPI using C# and Aspose.Slides for .NET. The example loads a
+// presentation, configures TIFF export options, and saves the result to disk.
+// This pattern can be used in console utilities or automated workflows that
+// require high‑resolution image output from PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, TIFF, 150DPI, Presentation
+// Processing, Office Automation
+//
+// Use Cases:
+// - Convert PowerPoint presentations to high‑resolution TIFF images.
+// - Build batch conversion tools for archival or printing purposes.
+// - Integrate PPTX‑to‑TIFF conversion into .NET applications or services.
+// - Validate presentation rendering at a specific DPI before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -21,15 +42,15 @@ class Program
         try
         {
             // Load the presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+            Presentation presentation = new Presentation(inputPath);
 
             // Configure TIFF options with custom DPI
-            Aspose.Slides.Export.TiffOptions options = new Aspose.Slides.Export.TiffOptions();
+            TiffOptions options = new TiffOptions();
             options.DpiX = 150;
             options.DpiY = 150;
 
             // Save the presentation as TIFF using the specified options
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Tiff, options);
+            presentation.Save(outputPath, SaveFormat.Tiff, options);
 
             // Ensure the presentation is saved before exiting
             presentation.Dispose();
