@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Convert PPT to PDF include hidden slides using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation (PPTX) to a PDF file
+// while including hidden slides using C# and Aspose.Slides for .NET. The example
+// loads a presentation, configures PDF export options to show hidden slides,
+// and saves the result as a PDF document. This pattern can be used in console
+// applications or integrated into larger .NET solutions for automated
+// presentation processing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, PDF, Aspose.Slides for .NET, Convert, Include, Hidden,
+// Slides, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX files to PDF while preserving hidden slides.
+// - Build C# utilities for PowerPoint presentation export and archiving.
+// - Integrate hidden-slide-aware PDF generation into .NET applications.
+// - Validate and preview presentation content before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
