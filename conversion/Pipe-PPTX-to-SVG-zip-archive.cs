@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Pipe PPTX to SVG zip archive using C#
+//
+// Description:
+// Demonstrates how to convert each slide of a PPTX file into an SVG image
+// and package the resulting SVG files into a ZIP archive using Aspose.Slides for .NET.
+// The example also shows how to save the original presentation with Zip64 mode
+// enabled. This console application processes one or more PPTX files supplied as
+// command‑line arguments and produces a corresponding .zip file containing the
+// slide SVGs.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SVG, Zip, Archive, Presentation
+// Processing, Office Automation, Slide Export
+//
+// Use Cases:
+// - Automate conversion of PPTX slides to SVG images bundled in a ZIP file.
+// - Build .NET tools for batch processing of PowerPoint presentations.
+// - Generate SVG assets for web or documentation from PowerPoint slides.
+// - Ensure large presentations are saved with Zip64 support.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.IO.Compression;
