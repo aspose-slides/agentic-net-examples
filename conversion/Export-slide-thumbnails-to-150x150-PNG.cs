@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Export slide thumbnails to 150x150 PNG using C#
+//
+// Description:
+// Demonstrates how to export each slide of a PowerPoint presentation as a
+// 150x150 PNG thumbnail using Aspose.Slides for .NET. The example loads a PPTX
+// file, iterates through its slides, creates a thumbnail image of the specified
+// size, and saves each thumbnail as a separate PNG file. It also includes basic
+// error handling for missing input files and unsupported formats.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Export, Slide, Thumbnails,
+// 150x150, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate generation of slide preview images for web galleries.
+// - Build tools that create low‑resolution thumbnails for quick browsing.
+// - Integrate slide thumbnail extraction into .NET applications.
+// - Validate presentation content by visual inspection of generated images.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Drawing;
