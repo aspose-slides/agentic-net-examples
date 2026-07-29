@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Monitor memory usage during SWF conversion using C#
+//
+// Description:
+// Demonstrates how to monitor memory usage while converting a PowerPoint
+// presentation to SWF format using Aspose.Slides for .NET. The example loads a
+// large PPTX file with memory‑optimizing load options, records process memory
+// before and after conversion, and configures SWF conversion settings such as
+// viewer inclusion and JPEG quality.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Memory Monitoring, 
+// Presentation Conversion, LoadOptions, BlobManagement, Office Automation
+//
+// Use Cases:
+// - Track memory consumption during large presentation conversions to SWF.
+// - Optimize memory usage when processing big PPTX files in .NET applications.
+// - Build console tools for automated PowerPoint to SWF conversion with
+//   resource monitoring.
+// - Validate conversion performance and resource impact before deployment.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Diagnostics;
