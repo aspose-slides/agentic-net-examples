@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Test JPG comments when export enabled using C#
+//
+// Description:
+// Demonstrates how to verify that JPG export includes slide comments when the
+// export‑comments flag is enabled using C# and Aspose.Slides for .NET. The example
+// loads a PPTX file, configures rendering options to print comments, exports the
+// first slide as a JPEG image, and checks that the output file is created.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, JPG, Test, Comments, Export,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Validate that JPG export respects the PrintComments rendering option.
+// - Automate testing of comment inclusion in image exports.
+// - Build .NET utilities for PowerPoint to image conversion with comments.
+// - Ensure presentation workflows produce expected visual output.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
