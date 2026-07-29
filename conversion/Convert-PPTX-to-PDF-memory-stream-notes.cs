@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Convert PPTX to PDF memory stream with notes using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file, convert it to a PDF document that
+// includes slide notes, and write the result from a memory stream to a file
+// using Aspose.Slides for .NET. The example shows configuring PDF options to
+// show hidden slides and place notes at the bottom of each page.
+// This pattern can be used in console applications or services that need to
+// process presentations without creating intermediate files on disk.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PPTX, PDF, MemoryStream, Slide Notes, Convert,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Convert PowerPoint presentations to PDF while preserving speaker notes.
+// - Generate PDF output in memory for further processing or transmission.
+// - Build automation tools that handle PPTX files without temporary files.
+// - Integrate presentation conversion into .NET backend services.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides.Export;
