@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Validate notes position bottomtruncated in TIFF using C#
+//
+// Description:
+// Demonstrates how to validate notes position bottomtruncated in TIFF using C# 
+// and Aspose.Slides for .NET. The example shows the required 
+// presentation-processing steps for PowerPoint files and produces the 
+// requested output in a standalone console application. Developers can use 
+// this pattern to automate PPTX workflows, validate results, or integrate 
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, TIFF, Aspose.Slides for .NET, Validate, Notes, Position, 
+// Bottomtruncated, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate validation of notes position bottomtruncated when converting to TIFF.
+// - Build C# tools for PowerPoint presentation processing and image export.
+// - Generate or transform PPTX files to TIFF with specific notes layout in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
