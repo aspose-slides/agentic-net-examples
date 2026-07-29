@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Flatten PPTX annotations to PDF using C#
+//
+// Description:
+// Demonstrates how to flatten annotations in a PPTX file and export it to PDF
+// using C# and Aspose.Slides for .NET. The example loads a PowerPoint presentation,
+// applies default PDF options that flatten annotations, and saves the result as a PDF.
+// This pattern can be used to automate PPTX annotation flattening, integrate
+// presentation processing into .NET applications, or prepare files for distribution.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Flatten, Annotations,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate flattening of PPTX annotations to PDF.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Prepare presentation files for publishing or archival with annotations flattened.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
