@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Convert PPTX to SWF using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation (PPTX) to SWF format
+// using Aspose.Slides for .NET. The example loads a presentation, configures
+// basic SWF options, and saves the output file. It includes basic error handling
+// and file existence checks, suitable for console applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Presentation Conversion,
+// Office Automation, Console Application
+//
+// Use Cases:
+// - Automate conversion of PPTX files to SWF for legacy viewers.
+// - Build C# utilities for batch processing of PowerPoint presentations.
+// - Integrate presentation conversion into .NET workflows.
+// - Validate and troubleshoot PowerPoint to SWF transformations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -28,7 +47,7 @@ namespace AsposeSlidesSwfExample
 
                 // Create SWF options and set desired properties
                 SwfOptions swfOptions = new SwfOptions();
-                // Example: disable viewer if not needed
+                // Example: include viewer if needed
                 swfOptions.ViewerIncluded = true;
 
                 // Save as SWF (Aspose.Slides does not expose FPS for SWF directly;
@@ -43,7 +62,6 @@ namespace AsposeSlidesSwfExample
             }
             catch (NotSupportedException)
             {
-                // Format not supported
                 // Format not supported
                 Console.WriteLine("The specified format is not supported for conversion.");
             }
