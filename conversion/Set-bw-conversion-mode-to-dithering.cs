@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Set bw conversion mode to dithering using C#
+//
+// Description:
+// Demonstrates how to configure black‑and‑white conversion mode to dithering
+// when exporting a PowerPoint presentation to a TIFF image using Aspose.Slides
+// for .NET. The example loads a PPTX file, sets TIFF export options with
+// CCITT4 compression and Dithering mode, and saves the result as a BW TIFF.
+// This pattern can be used in console applications or automated workflows
+// that require high‑quality monochrome image output.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, TIFF, Black‑and‑White, Dithering,
+// CCITT4, Presentation Export, Image Conversion, .NET
+//
+// Use Cases:
+// - Convert PPTX slides to monochrome TIFF images with dithering for printing.
+// - Automate generation of BW TIFF assets from presentations.
+// - Integrate Aspose.Slides export settings into .NET batch processing tools.
+// - Ensure consistent image quality when preparing slides for archival.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
