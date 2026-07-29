@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Save PPT as XPS a4 300DPI using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, set the slide size to
+// A4 with content scaling to ensure the slides fit, and save the presentation
+// as an XPS document using Aspose.Slides for .NET. The example includes basic
+// file existence checks and exception handling suitable for a standalone
+// console application.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, XPS, A4, 300DPI,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Convert PPTX files to XPS format with A4 page size for printing or archiving.
+// - Build C# utilities that automate PowerPoint to XPS transformations.
+// - Integrate XPS export functionality into .NET applications.
+// - Validate presentation conversion workflows before deployment.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
