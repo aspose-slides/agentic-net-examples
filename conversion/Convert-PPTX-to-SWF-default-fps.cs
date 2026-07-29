@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Convert PPTX to SWF default fps using C#
+//
+// Description:
+// Demonstrates how to convert a PPTX file to SWF using the default frame
+// rate with Aspose.Slides for .NET. The example loads a presentation,
+// applies default SWF export options, and saves the result as an SWF file.
+// This pattern can be used in console applications to automate PowerPoint
+// conversion tasks.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Convert, Default FPS,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX presentations to SWF with default frame rate.
+// - Integrate PowerPoint to SWF conversion into .NET tools or services.
+// - Generate SWF assets for web or e‑learning platforms from PPTX sources.
+// - Validate presentation rendering before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
