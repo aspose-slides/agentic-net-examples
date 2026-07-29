@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Convert presentation to HTML5 with lazy images using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation to an HTML5 file
+// with lazy-loaded images using Aspose.Slides for .NET. The example loads a
+// PPTX file, configures Html5Options to externalize images, and saves the
+// result along with a resources folder containing the image files.
+// This pattern can be used in console applications to automate PPTX to HTML5
+// conversion while keeping the output lightweight.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Convert, Presentation, Html5,
+// Lazy Images, External Resources, Office Automation
+//
+// Use Cases:
+// - Automate conversion of presentations to HTML5 with external image resources.
+// - Build tools that generate web‑ready slideshows from PPTX files.
+// - Integrate presentation conversion into .NET services or CI pipelines.
+// - Reduce HTML size by using lazy loading of images for faster page loads.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
