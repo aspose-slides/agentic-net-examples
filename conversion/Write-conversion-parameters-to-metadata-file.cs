@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Write conversion parameters to metadata file using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation to SWF using Aspose.Slides for .NET,
+// configure conversion options, and write those parameters to a separate metadata text file.
+// The example includes loading a PPTX, setting SWF options such as compression and viewer
+// inclusion, saving the SWF output, and persisting the chosen settings for later reference.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Write, Conversion, Parameters, 
+// Metadata, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX files to SWF with specific options.
+// - Record conversion settings in a metadata file for auditing or reproducibility.
+// - Build C# utilities for batch processing of presentations.
+// - Integrate conversion workflows into .NET applications with traceable parameters.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
