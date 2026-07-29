@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Create GIF from PPTX restore to background using C#
+//
+// Description:
+// Demonstrates how to create an animated GIF from a PPTX file while preserving
+// the slide background (restore-to-background) using C# and Aspose.Slides for .NET.
+// The example applies a simple fade transition to each slide, configures GIF
+// export options, and saves the result as an animated GIF. It also shows how to
+// optionally save the modified presentation back to PPTX format.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, GIF, Restore to Background, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of animated GIFs from PowerPoint presentations.
+// - Preserve slide backgrounds when converting PPTX to GIF.
+// - Build C# tools for PowerPoint presentation processing and export.
+// - Generate visual previews of presentations for web or documentation.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
