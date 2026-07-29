@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX to ODP preserving charts using C#
+//
+// Description:
+// Demonstrates how to export a PPTX file to ODP while preserving chart objects
+// using C# and Aspose.Slides for .NET. The example loads a PowerPoint presentation,
+// configures ODP save options to keep charts intact, and saves the result as an
+// OpenDocument Presentation file. This pattern can be used in console utilities,
+// automated workflows, or any .NET application that needs to retain chart fidelity
+// during format conversion.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, ODP, Aspose.Slides for .NET, Export, Preserve Charts, 
+// Presentation Conversion, Office Automation
+//
+// Use Cases:
+// - Convert PPTX to ODP without losing chart data.
+// - Build C# tools that maintain visual integrity of presentations during export.
+// - Integrate chart‑preserving conversion into .NET services or batch processes.
+// - Validate and automate presentation workflows that involve ODP output.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -24,15 +46,19 @@ namespace ExportPptxToOdp
             try
             {
                 // Load the presentation
-                Presentation presentation = new Presentation(inputPath);
+                using (Presentation presentation = new Presentation(inputPath))
+                {
+                    // Configure ODP save options to preserve charts
+                    OdpSaveOptions saveOptions = new OdpSaveOptions
+                    {
+                        PreserveCharts = true
+                    };
 
-                // Save as ODP format
-                presentation.Save(outputPath, SaveFormat.Odp);
+                    // Save as ODP format with the specified options
+                    presentation.Save(outputPath, saveOptions);
+                }
 
-                // Ensure presentation is saved before exit
-                presentation.Dispose();
-
-                Console.WriteLine("Presentation successfully exported to ODP.");
+                Console.WriteLine("Presentation successfully exported to ODP with charts preserved.");
             }
             catch (NotSupportedException)
             {
