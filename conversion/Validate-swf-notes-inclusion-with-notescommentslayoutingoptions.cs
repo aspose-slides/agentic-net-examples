@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Validate SWF notes inclusion with NotesCommentsLayoutingOptions using C#
+//
+// Description:
+// Demonstrates how to add notes to each slide of a PPTX presentation,
+// configure NotesCommentsLayoutingOptions to place notes at the bottom,
+// and save the presentation as an SWF file with notes included using 
+// Aspose.Slides for .NET. The example is a self‑contained console application 
+// that validates the notes inclusion during conversion.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, SWF, PPTX, Notes, NotesCommentsLayoutingOptions, 
+// Presentation conversion, Office automation
+//
+// Use Cases:
+// - Verify that notes are correctly embedded when converting PPTX to SWF.
+// - Build C# utilities for batch conversion of presentations with notes.
+// - Automate validation of notes layout options in PowerPoint workflows.
+// - Integrate notes‑aware SWF generation into .NET applications.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
