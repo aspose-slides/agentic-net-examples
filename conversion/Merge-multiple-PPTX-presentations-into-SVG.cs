@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Merge multiple PPTX presentations into SVG using C#
+//
+// Description:
+// Demonstrates how to merge multiple PPTX presentations into a single presentation
+// and then convert each slide of the merged presentation to SVG files using
+// Aspose.Slides for .NET. The example creates an output folder, combines the
+// source PPTX files, saves the combined PPTX, and generates individual SVG images
+// for each slide.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SVG, Merge, Multiple, Presentations,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate merging of several PPTX files and exporting the result as SVG.
+// - Build .NET tools for batch conversion of PowerPoint slides to scalable graphics.
+// - Integrate PPTX merging and SVG export into document processing pipelines.
+// - Validate and preview combined presentations before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -45,7 +66,7 @@ class Program
             }
 
             // Save the combined presentation
-            combinedPres.Save(combinedPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            combinedPres.Save(combinedPath, SaveFormat.Pptx);
         }
         catch (NotSupportedException)
         {
