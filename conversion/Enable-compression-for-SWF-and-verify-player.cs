@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Enable compression for SWF and verify player using C#
+//
+// Description:
+// Demonstrates how to enable compression when converting a PowerPoint
+// presentation to SWF format and how to verify the generated SWF file using
+// Aspose.Slides for .NET. The example loads a PPTX file, sets the
+// SwfOptions.Compressed property, saves the presentation as a compressed SWF,
+// and checks that the output file exists.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Compression, Aspose.Slides for .NET, Presentation
+// Conversion, Verify, Output Validation
+//
+// Use Cases:
+// - Convert PPTX presentations to compressed SWF for web delivery.
+// - Automate verification of SWF output in CI pipelines.
+// - Build .NET utilities that prepare presentations for Flash Player.
+// - Ensure SWF files are generated with compression to reduce size.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
