@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Log conversion results to CSV report using C#
+//
+// Description:
+// Demonstrates how to batch convert PowerPoint and other supported presentation
+// files to PDF and log the conversion results into a CSV report using C# and
+// Aspose.Slides for .NET. The example processes all supported files in a given
+// directory, creates PDFs, and records success or failure details.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, PDF, Aspose.Slides for .NET, CSV, Conversion Report,
+// Batch Conversion, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate batch conversion of presentations to PDF with result logging.
+// - Generate CSV reports for auditing conversion outcomes.
+// - Build .NET tools for PowerPoint file processing and validation.
+// - Integrate presentation conversion workflows into larger applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -64,7 +83,7 @@ namespace BatchConversion
                             string __outputPath__ = Path.Combine(__directory__ ?? "", __filenameWithoutExt__ + ".pdf");
 
                             // Save as PDF using convert-without-xps-options rule
-                            pres.Save(__outputPath__, Aspose.Slides.Export.SaveFormat.Pdf);
+                            pres.Save(__outputPath__, SaveFormat.Pdf);
 
                             // Log success
                             reportWriter.WriteLine($"{filePath},Success,Converted to PDF");
