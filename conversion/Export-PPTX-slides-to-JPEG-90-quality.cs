@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX slides to JPEG 90 quality using C#
+//
+// Description:
+// Demonstrates how to export each slide of a PPTX file to a JPEG image with
+// 90% quality using C# and Aspose.Slides for .NET. The example loads a
+// presentation, iterates through its slides, saves each slide as a JPEG file,
+// and finally saves the (unchanged) presentation. This pattern can be used to
+// automate slide‑to‑image conversion in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, JPEG, Export, Slides, Jpeg,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Convert PPTX slides to high‑quality JPEG images for web or documentation.
+// - Build C# utilities for batch processing of PowerPoint presentations.
+// - Integrate slide image extraction into .NET workflows.
+// - Validate slide rendering before publishing or further processing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
