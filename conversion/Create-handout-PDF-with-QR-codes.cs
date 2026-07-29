@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Create handout PDF with QR codes using C#
+//
+// Description:
+// Demonstrates how to generate a PDF handout (4 slides per horizontal page)
+// from a PowerPoint presentation while embedding a QR code on each slide that
+// links to an online version of the slide. The example uses Aspose.Slides for
+// .NET to load the PPTX, download QR code images from a public service, add
+// them to the slides, and save the result as a handout PDF.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Handout, QR codes,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of printable handouts with QR codes for each slide.
+// - Build .NET tools that enrich presentations with scan‑able links.
+// - Generate or transform PPTX files into PDF handouts in batch processes.
+// - Validate and preview presentation workflows before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Net;
