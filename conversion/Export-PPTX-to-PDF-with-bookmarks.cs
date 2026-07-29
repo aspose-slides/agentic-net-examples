@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX to PDF with bookmarks using C#
+//
+// Description:
+// Demonstrates how to export a PowerPoint PPTX file to a PDF document while
+// preserving slide titles as PDF bookmarks using Aspose.Slides for .NET. The
+// example loads a presentation, configures PDF export options, and saves the
+// result, handling missing input files and potential errors.
+//
+// Keywords:
+// C#, Aspose.Slides, PPTX, PDF, Export, Bookmarks, Presentation, PowerPoint,
+// Automation, .NET
+//
+// Use Cases:
+// - Convert PowerPoint presentations to PDF with navigable bookmarks.
+// - Integrate PPTX to PDF conversion into C# applications or services.
+// - Automate document generation workflows that require PDF bookmarks.
+// - Validate and process presentations before distribution.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
