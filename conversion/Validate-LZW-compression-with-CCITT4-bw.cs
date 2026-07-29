@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Validate LZW compression with CCITT4 bw using C#
+//
+// Description:
+// Demonstrates how to validate LZW compression with CCITT4 bw using C# and 
+// Aspose.Slides for .NET. The example converts a PPTX presentation to TIFF 
+// images using CCITT4 and LZW compression, then compares the resulting file 
+// sizes to show that BwConversionMode is ignored for LZW compression.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Validate, Compression, CCITT4, LZW, 
+// BlackWhiteConversionMode, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Verify that CCITT4 compression produces different file sizes compared to LZW.
+// - Ensure BwConversionMode is only applied to CCITT4 compression.
+// - Build C# tools for PowerPoint to TIFF conversion with specific compression settings.
+// - Automate validation of image compression in presentation workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides.Export;
