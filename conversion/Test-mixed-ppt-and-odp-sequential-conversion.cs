@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Test mixed ppt and odp sequential conversion using C#
+//
+// Description:
+// Demonstrates how to sequentially convert and merge a PowerPoint (PPT) file
+// and an OpenDocument Presentation (ODP) file into a single PPTX presentation
+// using Aspose.Slides for .NET. The example loads each source file, clones its
+// slides into a new presentation, and saves the combined result.
+//
+// Keywords:
+// C#, PowerPoint, PPT, ODP, PPTX, Aspose.Slides for .NET, Mixed Format Conversion,
+// Sequential Conversion, Presentation Merging, Office Automation
+//
+// Use Cases:
+// - Combine slides from different presentation formats into one PPTX.
+// - Automate batch processing of mixed-format presentations.
+// - Validate and transform PPT and ODP files in .NET applications.
+// - Build tools for presentation content consolidation.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
