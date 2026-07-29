@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Determine swfoptions compressed from disk space using C#
+//
+// Description:
+// Demonstrates how to determine whether to enable compression for SWF output
+// based on available disk space using C# and Aspose.Slides for .NET. The example
+// loads a PowerPoint presentation, checks free space on the target drive, sets
+// the SwfOptions.Compressed property accordingly, and saves the presentation as
+// an SWF file. This pattern helps developers create disk‑space‑aware conversion
+// utilities for PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Determine, SwfOptions, 
+// Compressed, Disk Space, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate SWF conversion with compression toggled based on free disk space.
+// - Build C# tools for PowerPoint presentation processing that adapt to storage constraints.
+// - Generate or transform PPTX files to SWF in .NET applications while managing resource usage.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
