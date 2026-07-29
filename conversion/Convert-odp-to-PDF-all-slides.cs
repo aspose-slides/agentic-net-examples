@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Convert ODP to PDF all slides using C#
+//
+// Description:
+// Demonstrates how to convert an ODP (OpenDocument Presentation) file to a
+// PDF document containing all slides using C# and Aspose.Slides for .NET.
+// The example loads an ODP presentation, saves it as PDF with default
+// settings, and includes basic error handling. This pattern can be used to
+// automate ODP to PDF conversions in .NET applications.
+//
+// Keywords:
+// C#, ODP, PDF, Aspose.Slides for .NET, Convert, Slides, Presentation Processing,
+// Office Automation, OpenDocument
+//
+// Use Cases:
+// - Automate conversion of ODP presentations to PDF.
+// - Build C# utilities for batch processing of OpenDocument slides.
+// - Integrate ODP to PDF conversion into .NET workflows.
+// - Validate ODP files before publishing or distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
