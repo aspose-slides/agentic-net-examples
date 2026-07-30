@@ -1,3 +1,27 @@
+// -----------------------------------------------------------------------------
+// Example: Export media assets to ZIP preserve hierarchy using C#
+//
+// Description:
+// Demonstrates how to export media assets from a PowerPoint presentation to a
+// ZIP archive while preserving the original folder hierarchy. The example
+// uses Aspose.Slides for .NET to load a PPTX file, saves it temporarily to
+// access its internal ZIP structure, extracts the 'ppt/media' folder contents,
+// and creates a new ZIP file containing those media assets with the same
+// directory layout. This console application can be integrated into automated
+// PPTX processing pipelines.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Media, Assets,
+// Preserve Hierarchy, ZIP, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of media assets from PPTX files while keeping folder
+//   structure intact.
+// - Build C# utilities for managing PowerPoint presentation resources.
+// - Integrate media export functionality into .NET applications or CI/CD
+//   workflows.
+// - Validate and archive presentation assets before publishing or distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.IO.Compression;
