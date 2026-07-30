@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Batch extract audio files to media library using C#
+//
+// Description:
+// Demonstrates how to batch extract embedded audio files from PowerPoint
+// presentations to a media library using C# and Aspose.Slides for .NET. The
+// example processes all presentation files in a specified input folder,
+// extracts each audio stream to separate files in an output folder, and
+// saves the original presentations back in PPTX format. This pattern can be
+// used to automate PPTX workflows, archive media assets, or integrate
+// presentation processing into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Batch, Extract, Audio, Files,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate batch extraction of audio files from multiple presentations.
+// - Build C# tools for PowerPoint media asset management.
+// - Generate or transform PPTX files in .NET applications while preserving media.
+// - Validate and archive presentation audio content before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
