@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Convert svg picture frames to EMF using C#
+//
+// Description:
+// Demonstrates how to locate SVG picture frames within a PowerPoint presentation,
+// convert each SVG image to Enhanced Metafile (EMF) format, and replace the original
+// picture frames with the newly created EMF images using Aspose.Slides for .NET.
+// The example processes a PPTX file, performs the conversion in-memory, and saves
+// the updated presentation. This pattern can be used to standardize image formats
+// for compatibility or further processing in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SVG, EMF, Convert, Picture, Frames,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of SVG picture frames to EMF for downstream rendering.
+// - Build C# utilities that normalize image formats within PowerPoint files.
+// - Integrate SVG-to-EMF conversion into larger .NET presentation workflows.
+// - Ensure compatibility of presentation assets with tools that require EMF.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
