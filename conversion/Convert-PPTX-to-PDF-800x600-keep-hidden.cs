@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Convert PPTX to PDF 800x600 keep hidden using C#
+//
+// Description:
+// Demonstrates how to convert a PPTX file to a PDF with a custom slide size of
+// 800x600 points while preserving hidden slides using C# and Aspose.Slides for
+// .NET. The example loads a presentation, adjusts the slide dimensions with
+// content scaling, configures PDF export options to include hidden slides, and
+// saves the result as a PDF file. This pattern can be used to automate
+// presentation conversion workflows in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Convert, 800x600, Keep Hidden Slides, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX files to PDF with specific slide dimensions.
+// - Include hidden slides in exported PDF documents.
+// - Build C# utilities for PowerPoint presentation processing and transformation.
+// - Validate and generate PDF outputs from PowerPoint sources in .NET environments.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;
@@ -25,11 +45,11 @@ namespace MyApp
                     presentation.SlideSize.SetSize(800f, 600f, Aspose.Slides.SlideSizeScaleType.EnsureFit);
 
                     // Configure PDF options to include hidden slides
-                    Aspose.Slides.Export.PdfOptions pdfOptions = new Aspose.Slides.Export.PdfOptions();
+                    PdfOptions pdfOptions = new PdfOptions();
                     pdfOptions.ShowHiddenSlides = true;
 
                     // Save as PDF
-                    presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pdf, pdfOptions);
+                    presentation.Save(outputPath, SaveFormat.Pdf, pdfOptions);
                 }
             }
             catch (NotSupportedException)

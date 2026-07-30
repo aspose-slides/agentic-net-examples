@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Convert PPTX to XPS preserving layout and fonts using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation (PPTX) to an XPS document
+// while preserving the original layout and embedded fonts. The example uses
+// Aspose.Slides for .NET to load the presentation, configure XpsOptions with
+// default settings that retain layout and fonts, and save the result as XPS.
+// This pattern can be used in console applications or automated workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, XPS, Aspose.Slides for .NET, Convert, Preserve, Layout,
+// Fonts, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX files to XPS with layout and font fidelity.
+// - Build .NET tools for high‑quality document archiving or printing.
+// - Integrate PowerPoint to XPS conversion into server‑side or desktop apps.
+// - Ensure visual consistency when distributing presentations in XPS format.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

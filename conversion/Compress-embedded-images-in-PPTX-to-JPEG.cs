@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Compress embedded images in PPTX to JPEG using C#
+//
+// Description:
+// Demonstrates how to compress embedded images in a PPTX file to JPEG format
+// using C# and Aspose.Slides for .NET. The example loads a presentation,
+// iterates through picture frames, compresses each image (removing cropped
+// areas) to a target resolution of 70 DPI, and saves the result as a new PPTX.
+// This pattern can be used to reduce file size and convert images to JPEG
+// within PowerPoint presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, JPEG, Compress, Embedded,
+// Images, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Reduce PPTX file size by compressing embedded images to JPEG.
+// - Automate image optimization in PowerPoint presentations.
+// - Integrate image compression into .NET applications handling PPTX files.
+// - Prepare presentations for web publishing or distribution with smaller size.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

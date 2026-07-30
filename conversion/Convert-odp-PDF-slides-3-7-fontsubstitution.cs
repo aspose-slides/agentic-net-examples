@@ -1,3 +1,21 @@
+// -----------------------------------------------------------------------------
+// Example: Convert ODP to PDF slides 3-7 with font substitution using C#
+//
+// Description:
+// Demonstrates how to convert an ODP presentation to a PDF document while
+// selecting slides 3 through 7 and applying font substitution using Aspose.Slides
+// for .NET. The example loads an ODP file, sets a default regular font for missing
+// fonts, defines the slide range, and saves the selected slides as a PDF.
+//
+// Keywords:
+// C#, ODP, PDF, Slides, Font substitution, Aspose.Slides for .NET, Presentation conversion, PowerPoint automation
+//
+// Use Cases:
+// - Convert specific slide ranges from ODP to PDF with fallback fonts.
+// - Automate batch processing of ODP files in .NET applications.
+// - Ensure consistent rendering when original fonts are unavailable.
+// - Integrate ODP to PDF conversion into document management workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -32,7 +50,7 @@ namespace ConvertOdpToPdf
                     int[] slideIndices = new int[] { 3, 4, 5, 6, 7 };
 
                     // Save selected slides as PDF
-                    presentation.Save(outputPath, slideIndices, Aspose.Slides.Export.SaveFormat.Pdf, pdfOptions);
+                    presentation.Save(outputPath, slideIndices, SaveFormat.Pdf, pdfOptions);
                 }
 
                 Console.WriteLine("Conversion completed successfully.");

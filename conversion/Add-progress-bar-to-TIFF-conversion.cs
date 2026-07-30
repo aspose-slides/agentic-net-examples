@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add progress bar to TIFF conversion using C#
+//
+// Description:
+// Demonstrates how to add a progress bar while converting a PowerPoint presentation
+// to a multi‑page TIFF image using C# and Aspose.Slides for .NET. The example loads a
+// PPTX file, configures TiffOptions with a custom IProgressCallback implementation,
+// and saves the presentation as a TIFF while reporting progress to the console.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, TIFF, Aspose.Slides for .NET, Progress Bar, Conversion,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Show conversion progress for large PPTX to TIFF transformations.
+// - Build console utilities that provide user feedback during file processing.
+// - Integrate progress reporting into .NET applications that handle slide exports.
+// - Automate batch conversion of presentations with real‑time status updates.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

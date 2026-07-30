@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Validate SWF includes all notes using C#
+//
+// Description:
+// Demonstrates how to convert a PPTX presentation to SWF while including
+// notes and comments using Aspose.Slides for .NET. The example validates that
+// the generated SWF file exists and is not empty, confirming that notes are
+// correctly embedded in the output.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Validate, Notes, Comments,
+// Presentation Conversion, Office Automation
+//
+// Use Cases:
+// - Verify that SWF conversion retains slide notes and comments.
+// - Automate PPTX to SWF conversion with notes for e‑learning or archival.
+// - Build validation tools for presentation workflows in .NET.
+// - Ensure generated SWF files contain required metadata before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

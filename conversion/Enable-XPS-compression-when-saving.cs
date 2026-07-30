@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Enable XPS compression when saving using C#
+//
+// Description:
+// Demonstrates how to enable XPS compression (or related options) when saving a
+// PowerPoint presentation to XPS format using Aspose.Slides for .NET. The code
+// loads a PPTX file, configures XpsOptions (e.g., SaveMetafilesAsPng) to affect
+// the output size, and saves the result as an XPS document. This pattern can be
+// used in console applications for automated presentation processing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, XPS, Aspose.Slides for .NET, Enable, Compression, SaveOptions, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Reduce XPS file size by enabling compression‑related options.
+// - Build C# utilities that convert PPTX to XPS with optimized output.
+// - Integrate XPS export functionality into .NET applications.
+// - Validate and automate PowerPoint to XPS conversion workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

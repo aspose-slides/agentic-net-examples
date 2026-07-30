@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Convert presentation to TIFF and MP4 subfolders using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation to a multi‑page TIFF
+// image and an MP4 video, storing each output type in its own subfolder. The
+// example uses Aspose.Slides for .NET to load the source file, create the
+// required output directories, and save the results in TIFF and MP4 formats.
+// It is implemented as a simple console application that receives the input
+// file path as a command‑line argument.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Convert, Presentation, TIFF, MP4,
+// Subfolders, Console Application, Automation
+//
+// Use Cases:
+// - Automate batch conversion of presentations to image and video assets.
+// - Generate separate TIFF and MP4 outputs for archival or publishing pipelines.
+// - Build command‑line tools for PowerPoint processing in .NET environments.
+// - Validate conversion workflows before integrating into larger systems.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

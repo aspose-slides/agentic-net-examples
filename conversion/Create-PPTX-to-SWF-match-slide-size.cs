@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Create PPTX to SWF match slide size using C#
+//
+// Description:
+// Demonstrates how to convert a PPTX file to SWF while preserving the original
+// slide dimensions using C# and Aspose.Slides for .NET. The example loads a
+// presentation, explicitly sets the slide size to its current dimensions with
+// no scaling, and saves the result as an SWF file. This pattern is useful for
+// developers needing to generate SWF output that matches the source slide size
+// for accurate rendering in legacy Flash environments.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Slide Size, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Convert PPTX presentations to SWF while maintaining original slide dimensions.
+// - Build C# utilities for PowerPoint to SWF conversion in .NET applications.
+// - Automate batch processing of presentations for legacy Flash viewers.
+// - Ensure size fidelity when integrating PowerPoint content into SWF-based workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Test viewerincluded true adds toolbar using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation to SWF format with the
+// viewer toolbar included using Aspose.Slides for .NET. The example loads an
+// input PPTX file, sets SwfOptions.ViewerIncluded to true, and saves the
+// presentation as an SWF file. This pattern can be used to generate
+// self‑contained SWF files that display a toolbar for navigation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, ViewerIncluded, Toolbar,
+// Conversion, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Convert PPTX files to SWF with an interactive viewer toolbar.
+// - Create self‑contained SWF presentations for web embedding.
+// - Automate batch conversion of PowerPoint files to SWF with toolbar support.
+// - Validate SWF output that includes navigation controls.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

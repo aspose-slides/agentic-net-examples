@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Validate SWF slide counts are complete using C#
+//
+// Description:
+// Demonstrates how to validate that all slides from a PowerPoint presentation
+// are successfully exported to a SWF file using Aspose.Slides for .NET. The
+// example loads a PPTX file, records the expected slide count, exports the
+// presentation to SWF, and returns a boolean indicating whether the export
+// completed without errors (as Aspose.Slides does not expose the SWF slide
+// count directly).
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Validate, Slide Count,
+// Export, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Verify that a PPTX can be fully converted to SWF without runtime errors.
+// - Integrate slide‑export validation into automated build or CI pipelines.
+// - Build .NET utilities that ensure presentation assets are ready for web
+//   publishing in SWF format.
+// - Detect unsupported or corrupted PowerPoint files before distribution.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

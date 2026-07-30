@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Handle unsupported video in PPTX to SWF using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint PPTX file to SWF while handling
+// unsupported video formats using Aspose.Slides for .NET. The example loads a
+// presentation, attempts conversion, and catches specific exceptions related
+// to unsupported video or format issues.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Unsupported Video, 
+// Conversion, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Convert PPTX presentations to SWF when videos may be unsupported.
+// - Build .NET utilities that gracefully handle video conversion errors.
+// - Automate batch processing of presentations with robust error handling.
+// - Integrate presentation conversion into larger .NET workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

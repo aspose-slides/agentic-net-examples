@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Compare SWF visual quality 80 vs 100 JPEG using C#
+//
+// Description:
+// Demonstrates how to generate two SWF files from a PowerPoint presentation
+// using different JPEG quality settings (80 and 100) with Aspose.Slides for .NET,
+// and compares their file sizes as an indicator of visual quality. The example
+// shows loading a PPTX, saving as SWF with specific JPEG quality, and reporting
+// the results in a console application.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SWF, JPEG, Quality, 80, 100,
+// Visual Quality Comparison, Presentation Conversion, Office Automation
+//
+// Use Cases:
+// - Evaluate impact of JPEG quality settings on SWF output size and visual fidelity.
+// - Automate generation of SWF files with different quality levels.
+// - Integrate quality comparison logic into .NET presentation processing tools.
+// - Validate conversion settings before publishing presentations.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

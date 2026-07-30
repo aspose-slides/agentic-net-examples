@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Load PPTX remove password save PPT using C#
+//
+// Description:
+// Demonstrates how to load a password‑protected PPTX file, remove its encryption 
+// and write protection, and save the resulting unprotected presentation as a PPT 
+// file using Aspose.Slides for .NET. The example includes file existence checks, 
+// output directory handling, and basic error handling suitable for a standalone 
+// console application.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, PPT, Aspose.Slides for .NET, Load, Remove Password, 
+// Encryption, Write Protection, Save, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate removal of password protection from PPTX files.
+// - Convert protected PPTX presentations to unprotected PPT format.
+// - Build .NET tools for batch processing of encrypted PowerPoint files.
+// - Integrate decryption and format conversion into larger Office automation workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

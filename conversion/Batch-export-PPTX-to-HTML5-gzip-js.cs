@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Batch export PPTX to HTML5 gzip js using C#
+//
+// Description:
+// Demonstrates how to batch export PPTX files to HTML5 format and compress the
+// generated JavaScript resources using GZIP. The example loads each presentation
+// from an input folder, saves it as HTML5 with embedded images, writes the
+// supporting files to an output folder, and then compresses all .js files to
+// .js.gz, optionally removing the original JavaScript files. This pattern can be
+// used to automate PowerPoint to web‑ready HTML5 conversions in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Batch, Export, Html5, Gzip, 
+// JavaScript, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate batch conversion of PPTX presentations to HTML5 for web publishing.
+// - Reduce JavaScript payload size by applying GZIP compression.
+// - Integrate PowerPoint conversion into CI/CD pipelines or server‑side services.
+// - Prepare offline‑compatible HTML5 presentations with compressed resources.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.IO.Compression;

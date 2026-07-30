@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add background music to MP4 video using C#
+//
+// Description:
+// Demonstrates how to render a PowerPoint presentation to image frames,
+// combine them into an MP4 video, and add background music using ffmpeg.
+// The example uses Aspose.Slides for .NET to generate animation frames and
+// shows how to invoke an external tool to produce the final video file.
+// This pattern can be used to automate video creation from PPTX files with
+// synchronized audio.
+//
+// Keywords:
+// C#, Aspose.Slides, PPTX, MP4, video generation, background music, ffmpeg,
+// presentation rendering, animation frames, .NET console application
+//
+// Use Cases:
+// - Convert PowerPoint slides with animations into a video with background audio.
+// - Build automated pipelines that generate marketing or training videos from PPTX.
+// - Integrate presentation-to-video conversion into .NET applications.
+// - Add custom audio tracks to slide‑show videos for e‑learning content.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Diagnostics;

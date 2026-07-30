@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Validate converted PPTX loads without errors using C#
+//
+// Description:
+// Demonstrates how to load a converted PPTX file using Aspose.Slides for .NET,
+// verify it opens without errors, and save it to confirm successful validation.
+// The example includes a file existence check, handling of unsupported format
+// exceptions, generic error handling, and proper disposal of the presentation
+// object.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Validate, Converted, Load, 
+// Presentation, Error Handling, Office Automation
+//
+// Use Cases:
+// - Validate that a converted PPTX file can be opened without errors.
+// - Build tools to verify PPTX conversion pipelines.
+// - Ensure PPTX files are compatible before further processing or publishing.
+// - Automate validation in CI/CD for presentation assets.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

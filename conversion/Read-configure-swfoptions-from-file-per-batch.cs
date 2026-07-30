@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Read and apply SWF conversion options from a configuration file per batch using C#
+//
+// Description:
+// Demonstrates how to read a configuration file containing SWF conversion options
+// and apply them to convert a PowerPoint presentation to SWF using Aspose.Slides for .NET.
+// The example shows the required presentation-processing steps for PowerPoint files
+// and produces the requested output in a standalone console application. Developers can
+// use this pattern to automate PPTX to SWF workflows, customize conversion settings,
+// or integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Read, Configure, SwfOptions,
+// File, Presentation Processing, Batch Conversion, Office Automation
+//
+// Use Cases:
+// - Batch convert PPTX files to SWF with custom conversion options.
+// - Automate PowerPoint to SWF conversion using external configuration files.
+// - Build C# tools for PowerPoint presentation processing and SWF output customization.
+// - Validate and fine‑tune SWF conversion settings before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Collections.Generic;
@@ -68,29 +90,25 @@ namespace SwfConversionUtility
                     // Apply optional settings from config
                     if (config.ContainsKey("Compressed"))
                     {
-                        bool compressed;
-                        if (bool.TryParse(config["Compressed"], out compressed))
+                        if (bool.TryParse(config["Compressed"], out bool compressed))
                             swfOptions.Compressed = compressed;
                     }
 
                     if (config.ContainsKey("ViewerIncluded"))
                     {
-                        bool viewerIncluded;
-                        if (bool.TryParse(config["ViewerIncluded"], out viewerIncluded))
+                        if (bool.TryParse(config["ViewerIncluded"], out bool viewerIncluded))
                             swfOptions.ViewerIncluded = viewerIncluded;
                     }
 
                     if (config.ContainsKey("ShowHiddenSlides"))
                     {
-                        bool showHidden;
-                        if (bool.TryParse(config["ShowHiddenSlides"], out showHidden))
+                        if (bool.TryParse(config["ShowHiddenSlides"], out bool showHidden))
                             swfOptions.ShowHiddenSlides = showHidden;
                     }
 
                     if (config.ContainsKey("JpegQuality"))
                     {
-                        int jpegQuality;
-                        if (int.TryParse(config["JpegQuality"], out jpegQuality))
+                        if (int.TryParse(config["JpegQuality"], out int jpegQuality))
                             swfOptions.JpegQuality = jpegQuality;
                     }
 

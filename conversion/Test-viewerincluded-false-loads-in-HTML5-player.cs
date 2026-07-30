@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Test viewerincluded false loads in HTML5 player using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation and save it as SWF
+// with the ViewerIncluded option set to false (and true for comparison) using
+// Aspose.Slides for .NET. This allows testing how the generated SWF behaves
+// when the integrated viewer is excluded, which is relevant for HTML5 player
+// scenarios.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Test, ViewerIncluded, False,
+// Loads, HTML5, SWF, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate testing of ViewerIncluded false behavior in HTML5 players.
+// - Generate SWF files with and without the integrated viewer for comparison.
+// - Integrate PowerPoint to SWF conversion into .NET automation pipelines.
+// - Validate presentation conversion settings before deployment.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

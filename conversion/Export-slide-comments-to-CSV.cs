@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Export slide comments to CSV using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation with Aspose.Slides for .NET,
+// extract all slide comments, and write them to a CSV file. The example also
+// saves a copy of the original presentation, showing a typical workflow for
+// comment extraction in a standalone console application.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, CSV, Export, Slide Comments, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Extract and archive slide comments from PPTX files.
+// - Build C# utilities for PowerPoint comment analysis.
+// - Integrate comment export into .NET automation pipelines.
+// - Validate and review presentation feedback before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Batch convert PPT to XPS preserving hierarchy using C#
+//
+// Description:
+// Demonstrates how to batch convert PowerPoint (.ppt and .pptx) files to XPS
+// format while preserving the original folder hierarchy. The example uses
+// Aspose.Slides for .NET to load each presentation, convert it to XPS, and
+// write the output to a corresponding directory structure under a specified
+// output root. It includes handling for missing directories, unsupported
+// formats, and general error conditions.
+//
+// Keywords:
+// C#, PowerPoint, PPT, PPTX, XPS, Aspose.Slides for .NET, Batch Conversion,
+// Preserve Hierarchy, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate bulk conversion of PPT/PPTX files to XPS for archiving or printing.
+// - Maintain source folder structure in the converted output.
+// - Integrate PowerPoint conversion into .NET backend services or tools.
+// - Process presentations from network shares with error handling.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;

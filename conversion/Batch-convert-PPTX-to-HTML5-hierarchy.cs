@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Batch convert PPTX to HTML5 hierarchy using C#
+//
+// Description:
+// Demonstrates how to batch convert PPTX files to an HTML5 hierarchy using C#
+// and Aspose.Slides for .NET. The example recursively scans an input folder for
+// PPTX files, preserves the original folder structure in the output location,
+// and saves each presentation as a standalone HTML5 file with its resources.
+// This pattern can be used to automate PPTX conversion workflows in .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Batch, Convert, HTML5, 
+// Presentation Processing, Office Automation, Folder Hierarchy
+//
+// Use Cases:
+// - Automate batch conversion of PPTX files to HTML5 while preserving directory structure.
+// - Build C# utilities for PowerPoint presentation processing and publishing.
+// - Integrate PPTX to HTML5 conversion into .NET services or CI pipelines.
+// - Validate and transform presentations before web deployment.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -64,9 +86,11 @@ class Program
                 // Load presentation and save as HTML5
                 using (Presentation pres = new Presentation(pptxPath))
                 {
-                    Html5Options options = new Html5Options();
-                    // Store external resources in the same directory as the HTML file
-                    options.OutputPath = targetDir;
+                    Html5Options options = new Html5Options
+                    {
+                        // Store external resources in the same directory as the HTML file
+                        OutputPath = targetDir
+                    };
                     pres.Save(outputPath, SaveFormat.Html5, options);
                 }
             }

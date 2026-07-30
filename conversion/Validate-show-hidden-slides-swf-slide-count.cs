@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Validate show hidden slides swf slide count using C#
+//
+// Description:
+// Demonstrates how to hide a slide, retrieve the hidden slide count, and
+// export a PowerPoint presentation to SWF while including hidden slides using
+// Aspose.Slides for .NET. The example also verifies that the total slide count
+// remains unchanged after export and saves the modified presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Validate, Show Hidden Slides,
+// Slide Count, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Validate that hidden slides are correctly counted and exported in SWF format.
+// - Build tools that need to include hidden slides during conversion.
+// - Ensure slide count integrity after processing presentations.
+// - Automate PowerPoint to SWF conversion with hidden slide handling.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Create PPT to SWF disable audio using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation (PPTX) to SWF format
+// while disabling all audio by muting audio frames using C# and Aspose.Slides
+// for .NET. The example loads a presentation, sets the volume of each audio
+// frame to zero, configures SWF export options, and saves the result as an
+// SWF file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Disable Audio, Presentation
+// Conversion, Office Automation
+//
+// Use Cases:
+// - Convert PPTX files to SWF without audio for web publishing.
+// - Build C# utilities that process presentations and remove sound.
+// - Automate batch conversion of presentations to lightweight SWF files.
+// - Integrate audio‑free presentation export into .NET applications.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

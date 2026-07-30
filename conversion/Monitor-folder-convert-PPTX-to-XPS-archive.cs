@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Monitor folder convert PPTX to XPS archive using C#
+//
+// Description:
+// Demonstrates how to monitor a network folder for new PPTX files, convert each
+// presentation to XPS format using Aspose.Slides for .NET, and move the original
+// PPTX file to an archive sub‑folder. The example includes file‑ready checking,
+// XPS conversion options, and basic error handling in a console application.
+// This pattern can be used to automate PowerPoint processing pipelines.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PPTX, XPS, FileSystemWatcher, Folder Monitoring,
+// Archive, Presentation Conversion, Office Automation, Network Share
+//
+// Use Cases:
+// - Automatically convert incoming PPTX presentations to XPS for printing or
+//   distribution.
+// - Archive original PowerPoint files after successful conversion.
+// - Build a lightweight service that watches a shared folder and processes
+//   presentations in real time.
+// - Integrate PowerPoint workflow automation into existing .NET infrastructure.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Threading;

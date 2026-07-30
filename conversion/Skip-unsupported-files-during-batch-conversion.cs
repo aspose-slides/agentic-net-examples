@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Skip unsupported files during batch conversion using C#
+//
+// Description:
+// Demonstrates how to iterate over a list of file paths, skip files that are
+// not supported for conversion (e.g., non‑PowerPoint formats), handle
+// unsupported PPTX/PPT formats gracefully, and convert supported presentations
+// (.pptx and .odp) to PDF using Aspose.Slides for .NET. The example is a
+// standalone console application suitable for automating batch conversion
+// workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, ODP, PDF, Aspose.Slides for .NET, Skip, Unsupported,
+// Files, Batch Conversion, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate batch conversion of PowerPoint and OpenDocument presentations to PDF.
+// - Skip unsupported file types and formats during large‑scale conversion jobs.
+// - Build command‑line tools for presentation processing in .NET applications.
+// - Ensure robust handling of format exceptions in automated workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

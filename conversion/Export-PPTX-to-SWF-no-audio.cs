@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX to SWF no audio using C#
+//
+// Description:
+// Demonstrates how to export a PPTX file to SWF format while removing all
+// audio content using C# and Aspose.Slides for .NET. The example loads a
+// presentation, hides any audio frames, configures SWF export options, and
+// saves the result as a SWF file. This pattern can be used in console
+// applications to automate PowerPoint conversion workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Export, Audio, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX presentations to SWF without audio.
+// - Create C# utilities for PowerPoint content sanitization before publishing.
+// - Integrate SWF export into .NET applications that require audio‑free output.
+// - Validate and preprocess presentations in batch processing pipelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

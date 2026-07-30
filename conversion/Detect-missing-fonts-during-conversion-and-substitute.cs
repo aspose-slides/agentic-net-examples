@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Detect missing fonts during conversion and substitute using C#
+//
+// Description:
+// Demonstrates how to detect missing fonts during conversion and substitute 
+// them using Aspose.Slides for .NET. The example loads a presentation, defines 
+// a substitution rule for an inaccessible source font, applies the rule via 
+// the FontsManager, and saves the updated presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Detect, Missing, Fonts, 
+// Substitution, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Detect missing fonts in a PowerPoint file and replace them automatically.
+// - Build .NET tools that ensure font consistency during PPTX conversion.
+// - Automate font substitution in batch processing of presentations.
+// - Prevent rendering issues caused by unavailable fonts in generated slides.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

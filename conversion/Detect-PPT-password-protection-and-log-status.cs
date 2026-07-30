@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Detect PPT password protection and log status using C#
+//
+// Description:
+// Demonstrates how to detect whether a PowerPoint presentation is password
+// protected and log the result using Aspose.Slides for .NET. The example also
+// creates an empty audit presentation and saves it to an output folder.
+// This pattern can be used to automate validation of PPTX files before
+// processing or publishing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PPT, Detect, Password,
+// Protection, Status, Presentation Processing, Office Automation, Audit
+//
+// Use Cases:
+// - Detect PPT password protection and log the status in a console tool.
+// - Integrate password validation into .NET PowerPoint processing pipelines.
+// - Generate audit output files for reporting or further analysis.
+// - Ensure presentations meet security requirements before transformation.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

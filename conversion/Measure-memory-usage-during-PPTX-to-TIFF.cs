@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Measure memory usage during PPTX to TIFF conversion using C#
+//
+// Description:
+// Demonstrates how to measure memory consumption while loading a large PPTX 
+// file and converting it to a high‑resolution TIFF image using Aspose.Slides 
+// for .NET. The console application reports memory usage before loading, after 
+// loading, and after the conversion, and shows how to configure load options 
+// to keep the source file locked for reduced memory footprint.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PPTX, TIFF, Memory measurement, Conversion, 
+// Presentation processing, High‑resolution export, Office automation
+//
+// Use Cases:
+// - Monitor memory usage when converting large PowerPoint presentations to TIFF.
+// - Build .NET utilities for batch conversion of PPTX files to high‑resolution images.
+// - Optimize resource consumption in server‑side presentation processing.
+// - Validate memory impact of different load options before deployment.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Diagnostics;

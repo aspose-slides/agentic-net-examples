@@ -1,3 +1,21 @@
+// -----------------------------------------------------------------------------
+// Example: Convert PPTX to PDF quick default using C#
+//
+// Description:
+// Demonstrates how to convert a PPTX file to PDF using the default settings
+// with Aspose.Slides for .NET. The example loads a presentation, saves it as
+// PDF, and handles basic error conditions in a console application.
+// Keywords:
+// C#, PowerPoint, PPTX, PDF, Aspose.Slides for .NET, Convert, Quick, Default,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX files to PDF with default options.
+// - Build command‑line tools for PowerPoint to PDF transformation.
+// - Integrate simple PDF export functionality into .NET applications.
+// - Validate PPTX files before distribution by generating PDFs.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -21,10 +39,10 @@ class Program
         try
         {
             // Load the presentation
-            Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
+            Presentation pres = new Presentation(inputPath);
 
             // Convert to PDF using default settings
-            pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pdf);
+            pres.Save(outputPath, SaveFormat.Pdf);
 
             // Release resources
             pres.Dispose();

@@ -1,6 +1,29 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX to HTML zip archive using C#
+//
+// Description:
+// Demonstrates how to export a PPTX presentation to an HTML file along with
+// its associated resources, and then package both the HTML file and the
+// resources folder into a ZIP archive using Aspose.Slides for .NET. The example
+// shows loading a presentation, configuring HTML export options (including
+// PNG slide images), saving the HTML output, locating the generated resources
+// folder, and creating a ZIP archive that preserves the folder structure.
+// This pattern can be used in console applications or automated workflows.
+//
+// Keywords:
+// C#, Aspose.Slides, PPTX, HTML export, ZIP archive, Presentation conversion,
+// PowerPoint, Slide images, Console application, .NET
+//
+// Use Cases:
+// - Convert PowerPoint presentations to web‑ready HTML with embedded assets.
+// - Package exported HTML and resources into a single distributable ZIP file.
+// - Automate batch conversion of PPTX files for web publishing or archiving.
+// - Integrate presentation export functionality into .NET tools or services.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.IO.Compression;
+using System.Drawing.Imaging;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 

@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Add text watermark to TIFF during conversion using C#
+//
+// Description:
+// Demonstrates how to add a text watermark to a PowerPoint presentation
+// and convert it to a TIFF image using Aspose.Slides for .NET. The example
+// creates a watermark shape on the master slide, configures TIFF export
+// options, and saves the result as a multi‑page TIFF file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Text Watermark, TIFF, Conversion,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Add a confidential or branding watermark to PPTX files before exporting to TIFF.
+// - Automate batch conversion of presentations to TIFF with watermarks.
+// - Integrate watermarking into .NET applications that generate or process slides.
+// - Validate presentation output in image format for publishing or archiving.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

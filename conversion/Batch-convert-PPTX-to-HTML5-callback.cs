@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Batch convert PPTX to HTML5 callback using C#
+//
+// Description:
+// Demonstrates how to batch convert PowerPoint presentations (PPTX and other
+// supported formats) to HTML5 using Aspose.Slides for .NET while receiving
+// progress updates through a custom IProgressCallback implementation.
+// The example processes all files in an input directory, saves the HTML5
+// output to a target directory, and optionally saves a copy of the original
+// presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Batch, Convert, HTML5, 
+// Presentation Processing, Office Automation, Progress Callback
+//
+// Use Cases:
+// - Automate batch conversion of PowerPoint files to HTML5 with progress reporting.
+// - Build command‑line tools for PowerPoint presentation processing in .NET.
+// - Integrate presentation conversion into CI pipelines or web services.
+// - Monitor conversion progress for large or numerous presentations.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export slide comments to SWF using C#
+//
+// Description:
+// Demonstrates how to export slide comments to a SWF file using C# and
+// Aspose.Slides for .NET. The example loads a PPTX presentation, configures
+// comment layout options, and saves the result as a SWF document containing
+// the comments positioned on the right side of each slide.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Slide, Comments, SWF,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate exporting slide comments to SWF for web preview.
+// - Build C# utilities for PowerPoint comment extraction and conversion.
+// - Integrate comment-aware SWF generation into .NET applications.
+// - Validate presentation comment layouts before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

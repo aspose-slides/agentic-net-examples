@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Batch convert ODP to PDF 1024x768 using C#
+//
+// Description:
+// Demonstrates how to batch convert all ODP files in a folder to PDF with a
+// slide size of 1024x768 using C# and Aspose.Slides for .NET. The program
+// loads each ODP presentation, sets the slide dimensions, and saves it as a
+// PDF file in an output folder. This pattern can be used to automate
+// presentation conversion workflows.
+//
+// Keywords:
+// C#, ODP, PDF, Aspose.Slides for .NET, Batch, Convert, 1024X768, Presentation
+// Processing, Office Automation
+//
+// Use Cases:
+// - Automate batch conversion of ODP presentations to PDF with specific
+//   dimensions.
+// - Build command‑line tools for PowerPoint/ODP processing in .NET.
+// - Integrate ODP to PDF conversion into larger document‑management systems.
+// - Validate and standardize slide sizes before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

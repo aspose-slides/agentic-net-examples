@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Calculate hidden slide omission count using C#
+//
+// Description:
+// Demonstrates how to calculate the number of hidden slides that would be omitted
+// when a presentation is saved with default settings using Aspose.Slides for .NET.
+// The example loads a PPTX file, retrieves the hidden slide count, outputs the
+// result, and saves a copy of the presentation. This pattern can be used to
+// automate slide visibility checks or to prepare presentations for publishing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Calculate, Hidden Slides, Omission,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Determine how many hidden slides will be omitted during export.
+// - Build tools that validate slide visibility before publishing.
+// - Automate PowerPoint processing workflows in .NET applications.
+// - Integrate hidden slide analysis into custom presentation pipelines.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

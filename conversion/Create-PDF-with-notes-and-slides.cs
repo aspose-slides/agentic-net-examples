@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Create PDF with notes and slides using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation to a PDF that includes
+// both the slide images and their associated speaker notes using Aspose.Slides for .NET.
+// The example loads a PPTX file, configures PDF export options to place notes at the
+// bottom of each slide, and saves the result as a PDF document.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Speaker Notes, Slides, 
+// Presentation Conversion, Office Automation
+//
+// Use Cases:
+// - Generate PDFs that combine slide visuals with speaker notes for distribution.
+// - Automate creation of handouts that include presentation content and annotations.
+// - Build .NET tools for converting PPTX files to PDF with custom layout options.
+// - Integrate PowerPoint to PDF conversion into larger document processing pipelines.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -34,7 +54,7 @@ namespace AsposeSlidesExample
                     };
 
                     // Save the presentation as PDF with the specified layout options
-                    presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pdf, pdfOptions);
+                    presentation.Save(outputPath, SaveFormat.Pdf, pdfOptions);
                 }
 
                 Console.WriteLine("PDF created successfully: " + outputPath);

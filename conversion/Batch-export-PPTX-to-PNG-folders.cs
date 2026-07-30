@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Batch export PPTX to PNG folders using C#
+//
+// Description:
+// Demonstrates how to batch export PPTX files to individual PNG images per slide,
+// organizing each presentation's output into its own folder. The example loads
+// each PPTX from an input directory, optionally saves a copy of the presentation,
+// and writes PNG files for every slide using Aspose.Slides for .NET. This pattern
+// can be used in console tools or automated workflows for PowerPoint image extraction.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Batch, Export, Folders, 
+// Presentation Processing, Office Automation, Slide Images
+//
+// Use Cases:
+// - Automate batch conversion of PPTX slides to PNG images.
+// - Generate image assets from presentations for web or documentation.
+// - Build C# utilities that process multiple PowerPoint files in a directory.
+// - Create per‑presentation output structures for downstream processing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -50,7 +70,7 @@ namespace BatchExportPptxToPng
                     // Load the presentation
                     using (Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(pptxPath))
                     {
-                        // Save the presentation before exiting (as required)
+                        // Save a copy of the presentation in the output folder
                         string savedPresentationPath = Path.Combine(presentationOutputDir, presentationTitle + ".pptx");
                         pres.Save(savedPresentationPath, Aspose.Slides.Export.SaveFormat.Pptx);
 

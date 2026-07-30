@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Render PPTX slides to PNG 300DPI transparent using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file, set each slide background to transparent,
+// render each slide to a PNG image at 300 DPI, and save a modified PPTX file using
+// Aspose.Slides for .NET. The example includes file existence checks, output
+// directory creation, and basic error handling suitable for console applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Render, Transparent Background,
+// 300DPI, Slide Export, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Convert PPTX slides to high‑resolution transparent PNG images.
+// - Automate slide rendering for web or print workflows.
+// - Prepare presentations with transparent backgrounds for further graphics work.
+// - Integrate PPTX to PNG conversion into .NET tools or services.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

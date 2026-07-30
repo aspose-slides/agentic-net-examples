@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Load swfoptions from json and apply using C#
+//
+// Description:
+// Demonstrates how to load SwfOptions from a JSON configuration file and
+// apply them to convert a PowerPoint presentation (PPTX) to SWF format using
+// Aspose.Slides for .NET. The example includes argument validation, JSON
+// deserialization, option mapping, and saving the output file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Load, SwfOptions, Json,
+// Convert, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate PPTX to SWF conversion with customizable options.
+// - Build command‑line utilities for batch processing of presentations.
+// - Integrate configurable SWF export into .NET applications.
+// - Validate and test presentation conversion workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Text.Json;

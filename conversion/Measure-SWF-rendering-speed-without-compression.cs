@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Measure SWF rendering speed without compression using C#
+//
+// Description:
+// Demonstrates how to measure SWF rendering speed without compression using C# 
+// and Aspose.Slides for .NET. The example loads a PPTX file, saves it as an 
+// uncompressed SWF, and generates animation frames at 30 FPS and 60 FPS to 
+// facilitate speed comparison. This pattern can be used to automate PPTX‑to‑SWF 
+// conversion, benchmark rendering performance, and extract animation frames for 
+// analysis in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Measure, Rendering, Speed, 
+// Without Compression, SWF, Animation Frames, FPS, Presentation Processing, 
+// Office Automation
+//
+// Use Cases:
+// - Automate measurement of SWF rendering speed without compression.
+// - Build C# tools for PPTX to SWF conversion and performance benchmarking.
+// - Generate animation frames at different frame rates for analysis.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

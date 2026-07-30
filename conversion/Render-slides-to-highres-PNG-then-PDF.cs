@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Render slides to high‑resolution PNG images and combine into PDF using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, export each slide as a
+// high‑resolution PNG image, then create a new presentation that inserts those
+// images onto separate slides and saves the result as a PDF file using
+// Aspose.Slides for .NET. The example includes file existence checks, directory
+// handling, and error handling for unsupported save formats.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, PNG, PDF, high‑resolution,
+// slide rendering, image export, presentation conversion, automation
+//
+// Use Cases:
+// - Convert PPTX slides to high‑resolution PNG images for publishing or review.
+// - Generate a PDF document from a presentation by embedding rendered slide images.
+// - Automate slide‑to‑image and image‑to‑PDF workflows in .NET applications.
+// - Validate and process PowerPoint files before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

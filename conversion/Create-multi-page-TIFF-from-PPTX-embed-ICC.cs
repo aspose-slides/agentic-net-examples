@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Create multi page TIFF from PPTX embed ICC using C#
+//
+// Description:
+// Demonstrates how to convert a PPTX presentation to a multi‑page TIFF image
+// while preserving color accuracy by embedding an ICC profile (if supported) using
+// Aspose.Slides for .NET. The example loads a presentation, configures TIFF
+// export options such as compression and DPI, and saves the result as a
+// multi‑page TIFF file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Multi, Page, Tiff, Pptx,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX files to multi‑page TIFF for archival or printing.
+// - Build C# utilities that handle color‑managed image export from presentations.
+// - Integrate PPTX to TIFF transformation into .NET applications or workflows.
+// - Validate and test presentation rendering with ICC profile support.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

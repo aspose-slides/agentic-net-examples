@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Validate no hidden thumbnails in SWF using C#
+//
+// Description:
+// Demonstrates how to hide a slide in a PowerPoint presentation and save the
+// file as SWF while ensuring hidden slide thumbnails are excluded. The example
+// uses Aspose.Slides for .NET to load a PPTX, optionally hide the first slide,
+// persist the changes to a new PPTX, configure SWF export options to omit
+// hidden slides, and generate the SWF output. This pattern can be used to
+// validate that hidden content does not appear in SWF thumbnails.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Validate, Hidden, Thumbnails,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Verify that hidden slides are not rendered as thumbnails in SWF output.
+// - Automate PowerPoint to SWF conversion while respecting slide visibility.
+// - Build validation tools for presentation workflows before publishing.
+// - Integrate slide visibility checks into .NET applications handling PPTX files.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

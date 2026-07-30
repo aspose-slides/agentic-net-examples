@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Convert PPTX selected slides to PDF a1b using C#
+//
+// Description:
+// Demonstrates how to convert specific slides (1, 4, and 9) from a PPTX file 
+// to a PDF/A‑1b compliant document using C# and Aspose.Slides for .NET. The 
+// example loads a presentation, configures PDF/A‑1b compliance, and saves the 
+// chosen slides as a PDF file in a standalone console application. This pattern 
+// can be used to automate slide selection, ensure PDF/A compliance, and 
+// integrate presentation conversion into .NET solutions.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, PDF/A‑1b, Convert, Pptx, 
+// Selected, Slides, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of selected PPTX slides to PDF/A‑1b.
+// - Build C# tools for selective slide export with compliance requirements.
+// - Generate PDF/A‑1b documents from PowerPoint presentations in .NET apps.
+// - Validate and process specific slides before publishing or archiving.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

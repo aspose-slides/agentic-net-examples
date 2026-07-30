@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Validate SWF output size without compression using C#
+//
+// Description:
+// Demonstrates how to validate SWF output size without compression using C# 
+// and Aspose.Slides for .NET. The example loads a PPTX file, saves it as SWF 
+// with default compression and with compression disabled, then compares the 
+// resulting file sizes. This pattern helps developers verify the impact of 
+// compression on SWF output size.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Validate, Output Size, 
+// Compression, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Verify SWF file size differences with and without compression.
+// - Automate validation of presentation conversion settings.
+// - Build tools for PowerPoint to SWF conversion testing.
+// - Ensure optimal file size for publishing or distribution.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides.Export;

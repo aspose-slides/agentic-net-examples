@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Validate accepted PPT PPTX ODP files using C#
+//
+// Description:
+// Demonstrates how to validate that an input file is a supported PowerPoint
+// format (PPT, PPTX, ODP) using Aspose.Slides for .NET, and then convert the
+// presentation to PPTX. The example shows how to obtain presentation info
+// without fully loading the file, perform format validation, and save the
+// result as a new PPTX file in a console application.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, PPT, ODP, Aspose.Slides for .NET, Validate, Convert,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Validate that a file is a supported PowerPoint format before processing.
+// - Convert PPT or ODP files to PPTX programmatically.
+// - Build .NET tools for batch conversion of presentations.
+// - Integrate format validation and conversion into automated workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -28,13 +48,13 @@ class Program
         try
         {
             // Get presentation info without loading the full presentation
-            Aspose.Slides.IPresentationInfo info = Aspose.Slides.PresentationFactory.Instance.GetPresentationInfo(inputPath);
-            Aspose.Slides.LoadFormat loadFormat = info.LoadFormat;
+            IPresentationInfo info = PresentationFactory.Instance.GetPresentationInfo(inputPath);
+            LoadFormat loadFormat = info.LoadFormat;
 
             // Validate supported formats: PPT, PPTX, ODP
-            bool supported = loadFormat == Aspose.Slides.LoadFormat.Ppt ||
-                             loadFormat == Aspose.Slides.LoadFormat.Pptx ||
-                             loadFormat == Aspose.Slides.LoadFormat.Odp;
+            bool supported = loadFormat == LoadFormat.Ppt ||
+                             loadFormat == LoadFormat.Pptx ||
+                             loadFormat == LoadFormat.Odp;
 
             if (!supported)
             {
@@ -44,7 +64,7 @@ class Program
             }
 
             // Load the presentation
-            using (Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath))
+            using (Presentation pres = new Presentation(inputPath))
             {
                 // Define output path (convert to PPTX as an example)
                 string outputPath = Path.Combine(
@@ -52,7 +72,7 @@ class Program
                     Path.GetFileNameWithoutExtension(inputPath) + "_converted.pptx");
 
                 // Save the presentation
-                pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                pres.Save(outputPath, SaveFormat.Pptx);
                 Console.WriteLine("Conversion completed: " + outputPath);
             }
         }

@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Batch export PPTX slides to PNG zip using C#
+//
+// Description:
+// Demonstrates how to batch export PPTX slides to PNG images packaged in a zip
+// archive using C# and Aspose.Slides for .NET. The example iterates through all
+// PPTX files in a specified input folder, converts each slide to a PNG image,
+// and stores the images in a single ZIP file. This pattern can be used to
+// automate slide extraction, create image archives for presentations, or
+// integrate slide processing into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Zip, Batch, Export, Slides,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate batch conversion of PPTX slides to PNG images.
+// - Package slide images into a ZIP archive for distribution or storage.
+// - Build .NET tools for PowerPoint slide extraction and archiving.
+// - Integrate slide-to-image conversion into larger document processing pipelines.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.IO.Compression;

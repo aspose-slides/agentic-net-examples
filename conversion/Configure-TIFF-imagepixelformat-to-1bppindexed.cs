@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Configure TIFF imagepixelformat to 1bppindexed using C#
+//
+// Description:
+// Demonstrates how to configure the TIFF ImagePixelFormat to 1bpp indexed
+// using C# and Aspose.Slides for .NET. The example loads a PowerPoint
+// presentation, sets the TIFF export options to use a 1‑bit per pixel indexed
+// format for minimal file size, and saves the result as a TIFF image.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Configure, TIFF,
+// ImagePixelFormat, 1BppIndexed, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX slides to compact 1bpp indexed TIFF images.
+// - Build C# utilities for PowerPoint presentation processing with custom
+//   image export settings.
+// - Generate low‑size TIFF files for archival or transmission purposes.
+// - Validate presentation workflows that require specific image pixel formats.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

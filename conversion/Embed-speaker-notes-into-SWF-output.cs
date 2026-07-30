@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Embed speaker notes into SWF output using C#
+//
+// Description:
+// Demonstrates how to embed speaker notes into SWF output using C# and 
+// Aspose.Slides for .NET. The example loads a PPTX file, adds speaker notes to 
+// the first slide, configures SWF export options to place notes at the bottom 
+// of each slide, and saves the presentation as an SWF file with embedded notes. 
+// It also saves a copy of the modified presentation as PPTX.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Embed, Speaker, Notes, 
+// Export, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate embedding speaker notes into SWF output for e‑learning platforms.
+// - Build C# utilities for converting PPTX to SWF with notes preservation.
+// - Integrate PowerPoint to SWF conversion into .NET applications.
+// - Validate and preview presentation content before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

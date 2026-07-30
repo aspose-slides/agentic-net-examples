@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Create PPTX to SWF embed font subset using C#
+//
+// Description:
+// Demonstrates how to convert a PPTX file to SWF while embedding only the
+// subset of fonts used in the presentation. The example loads a custom TrueType
+// font into the Aspose.Slides font cache, embeds the required characters for
+// each font, configures SWF options, and saves the result as an SWF file.
+// This pattern can be used in console applications to automate PPTX to SWF
+// conversion with font subsetting.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Font Embedding, Subset,
+// Presentation Conversion, Office Automation
+//
+// Use Cases:
+// - Convert PPTX presentations to SWF with embedded font subsets.
+// - Build C# tools that ensure correct font rendering in SWF output.
+// - Automate batch conversion of PowerPoint files while minimizing file size.
+// - Integrate font‑aware PPTX to SWF conversion into .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

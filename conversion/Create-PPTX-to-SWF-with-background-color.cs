@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Create PPTX to SWF with background color using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file, set a custom background color on the
+// first slide, and export the presentation to SWF format using Aspose.Slides for
+// .NET. The example includes viewer integration in the SWF output and shows
+// basic error handling for file existence and format support.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Background Color, 
+// Presentation Export, Office Automation, Slide Background, Corporate Branding
+//
+// Use Cases:
+// - Automate conversion of PPTX presentations to SWF with a specific slide background.
+// - Build .NET tools that apply corporate branding to PowerPoint slides before export.
+// - Generate SWF files for web viewers that require a consistent background color.
+// - Validate and process PowerPoint files in batch workflows prior to publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Drawing;

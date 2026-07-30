@@ -1,3 +1,21 @@
+// -----------------------------------------------------------------------------
+// Example: Set SWFoptions compressed based on size threshold using C#
+//
+// Description:
+// Demonstrates how to set the SwfOptions.Compressed property based on a
+// presentation file size threshold using C# and Aspose.Slides for .NET.
+// The example loads a PPTX file, checks its size, configures compression
+// accordingly, and saves the presentation as an SWF file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SwfOptions, Compression, Size Threshold, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conditional SWF compression when converting PPTX files.
+// - Build C# utilities for PowerPoint to SWF conversion with size‑based logic.
+// - Generate SWF output with appropriate compression for downstream consumption.
+// - Validate conversion settings in automated presentation workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

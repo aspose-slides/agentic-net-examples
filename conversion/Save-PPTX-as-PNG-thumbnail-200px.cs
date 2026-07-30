@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Save PPTX as PNG thumbnail 200px using C#
+//
+// Description:
+// Demonstrates how to generate 200 px PNG thumbnails for each slide of a PPTX 
+// file using C# and Aspose.Slides for .NET. The example loads a presentation, 
+// calculates a scaling factor to limit the longest side of each slide to 200 
+// pixels, creates thumbnail images for all slides, and saves them to a 
+// specified output folder. This pattern can be used in console utilities or 
+// automated workflows that require low‑resolution previews of PowerPoint 
+// presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Thumbnail, 200Px, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Generate 200 px PNG thumbnails for all slides in a PPTX.
+// - Build command‑line tools for previewing PowerPoint presentations.
+// - Integrate slide thumbnail creation into .NET applications or CI pipelines.
+// - Automate batch processing of PPTX files to produce lightweight image assets.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -45,13 +68,13 @@ namespace ThumbnailGenerator
                     using (IImage thumbnail = slide.GetImage(scale, scale))
                     {
                         string outputPng = Path.Combine(outputFolder, $"slide_{slideIndex}.png");
-                        thumbnail.Save(outputPng, Aspose.Slides.ImageFormat.Png);
+                        thumbnail.Save(outputPng, ImageFormat.Png);
                     }
                     slideIndex++;
                 }
 
-                // Save presentation before exit
-                pres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                // Save presentation before exit (optional)
+                pres.Save(inputPath, SaveFormat.Pptx);
                 pres.Dispose();
             }
             catch (NotSupportedException)

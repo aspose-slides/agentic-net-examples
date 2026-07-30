@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Configure swfoptions jpegquality from config threshold using C#
+//
+// Description:
+// Demonstrates how to configure SWF export options JPEG quality based on a
+// configurable threshold using C# and Aspose.Slides for .NET. The example
+// loads a PowerPoint presentation, applies the JPEG quality setting to the
+// SwfOptions, and saves the presentation as an SWF file. It also shows how
+// to accept command‑line arguments for input, output, and quality threshold.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Configure, SwfOptions,
+// JpegQuality, Config, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX files to SWF with custom JPEG quality.
+// - Build C# tools for PowerPoint presentation processing with configurable settings.
+// - Generate or transform presentations in .NET applications while controlling image quality.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

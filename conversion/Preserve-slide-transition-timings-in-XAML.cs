@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Preserve slide transition timings in XAML using C#
+//
+// Description:
+// Demonstrates how to preserve slide transition timings when exporting a
+// PowerPoint presentation to XAML using C# and Aspose.Slides for .NET. The
+// example sets transition types, click advance options, and timing values for
+// the first three slides, then saves the presentation as XAML (retaining the
+// timings) and as PPTX for verification.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, XAML, Aspose.Slides for .NET, Preserve, Slide, Transition,
+// Timings, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate preservation of slide transition timings in XAML exports.
+// - Build C# tools for PowerPoint presentation processing and conversion.
+// - Generate or transform PPTX files to XAML while keeping animation data.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -38,7 +59,7 @@ namespace PreserveSlideTransitionTimings
                 // Apply transition type, click advance and timing to the first slide (if it exists)
                 if (presentation.Slides.Count > 0)
                 {
-                    presentation.Slides[0].SlideShowTransition.Type = Aspose.Slides.SlideShow.TransitionType.Fade;
+                    presentation.Slides[0].SlideShowTransition.Type = TransitionType.Fade;
                     presentation.Slides[0].SlideShowTransition.AdvanceOnClick = true;
                     presentation.Slides[0].SlideShowTransition.AdvanceAfterTime = 3000; // 3 seconds
                 }
@@ -46,7 +67,7 @@ namespace PreserveSlideTransitionTimings
                 // Apply transition to the second slide (if it exists)
                 if (presentation.Slides.Count > 1)
                 {
-                    presentation.Slides[1].SlideShowTransition.Type = Aspose.Slides.SlideShow.TransitionType.Wipe;
+                    presentation.Slides[1].SlideShowTransition.Type = TransitionType.Wipe;
                     presentation.Slides[1].SlideShowTransition.AdvanceOnClick = true;
                     presentation.Slides[1].SlideShowTransition.AdvanceAfterTime = 5000; // 5 seconds
                 }
@@ -54,15 +75,18 @@ namespace PreserveSlideTransitionTimings
                 // Apply transition to the third slide (if it exists)
                 if (presentation.Slides.Count > 2)
                 {
-                    presentation.Slides[2].SlideShowTransition.Type = Aspose.Slides.SlideShow.TransitionType.Zoom;
+                    presentation.Slides[2].SlideShowTransition.Type = TransitionType.Zoom;
                     presentation.Slides[2].SlideShowTransition.AdvanceOnClick = true;
                     presentation.Slides[2].SlideShowTransition.AdvanceAfterTime = 7000; // 7 seconds
                 }
 
                 // Save the presentation as XAML preserving transition timings
-                XamlOptions xamlOptions = new XamlOptions();
-                xamlOptions.ExportHiddenSlides = true;
-                presentation.Save(xamlOptions);
+                XamlOptions xamlOptions = new XamlOptions
+                {
+                    ExportHiddenSlides = true
+                };
+                string xamlOutputPath = Path.Combine(outputDir, "output.xaml");
+                presentation.Save(xamlOutputPath, SaveFormat.Xaml, xamlOptions);
 
                 // Additionally save as PPTX to verify the changes
                 string pptxOutputPath = Path.Combine(outputDir, "output.pptx");

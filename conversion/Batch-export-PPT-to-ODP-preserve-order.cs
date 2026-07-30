@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Batch export PPT and PPTX to ODP preserving order using C#
+//
+// Description:
+// Demonstrates how to batch export PowerPoint presentations (PPT and PPTX) to
+// OpenDocument Presentation (ODP) format while preserving the order of files
+// during processing. The example uses Aspose.Slides for .NET to load each
+// presentation, convert it to ODP, and save it to a specified output folder.
+// It includes basic argument validation, folder handling, and error handling
+// suitable for console applications.
+//
+// Keywords:
+// C#, PowerPoint, PPT, PPTX, ODP, Aspose.Slides for .NET, Batch Export, Preserve Order,
+// Presentation Conversion, Console Application
+//
+// Use Cases:
+// - Automate conversion of multiple PPT/PPTX files to ODP in a defined sequence.
+// - Integrate PowerPoint to ODP conversion into .NET build or deployment pipelines.
+// - Create command‑line tools for bulk presentation format migration.
+// - Validate and process presentations before publishing to OpenDocument platforms.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -49,13 +71,13 @@ class Program
                 }
 
                 // Load the presentation
-                using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
+                using (Presentation presentation = new Presentation(inputPath))
                 {
                     string fileNameWithoutExt = Path.GetFileNameWithoutExtension(inputPath);
                     string outputPath = Path.Combine(outputFolder, fileNameWithoutExt + ".odp");
 
                     // Save the presentation as ODP
-                    presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Odp);
+                    presentation.Save(outputPath, SaveFormat.Odp);
                 }
 
                 Console.WriteLine("Converted: " + inputPath);

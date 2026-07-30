@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPT to multi page TIFF 600DPI using C#
+//
+// Description:
+// Demonstrates how to export a PowerPoint presentation (PPTX) to a multi‑page
+// TIFF image with a resolution of 600 DPI using C# and Aspose.Slides for .NET.
+// The example loads a presentation, configures high‑resolution TIFF options,
+// and saves the result as a multi‑page TIFF file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Multi‑page, TIFF, 600 DPI,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Convert presentations to high‑resolution multi‑page TIFF for printing.
+// - Automate batch conversion of PPTX files to TIFF in .NET applications.
+// - Integrate presentation export functionality into custom tools or services.
+// - Validate and test PPTX to TIFF conversion workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

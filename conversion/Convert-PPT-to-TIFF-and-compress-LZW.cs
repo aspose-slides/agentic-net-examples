@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Convert PPT to TIFF and compress LZW using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation (PPT/PPTX) to a TIFF
+// image using Aspose.Slides for .NET and then apply LZW compression via an
+// external command‑line tool. The example includes argument handling, file
+// validation, conversion settings, and process execution for the compression
+// step. This pattern can be used to automate presentation image generation and
+// post‑process compression in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, TIFF, LZW, Compression, 
+// Presentation Processing, Office Automation, Command Line Tool
+//
+// Use Cases:
+// - Convert PowerPoint slides to high‑quality TIFF images.
+// - Apply LZW compression to TIFF files using a third‑party utility.
+// - Build console utilities for batch processing of presentations.
+// - Integrate slide‑to‑image conversion and compression into .NET workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Diagnostics;

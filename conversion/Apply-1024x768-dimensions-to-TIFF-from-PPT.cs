@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Apply 1024x768 dimensions to TIFF from PPT using C#
+//
+// Description:
+// Demonstrates how to apply 1024x768 dimensions to a TIFF image generated from a
+// PowerPoint presentation using C# and Aspose.Slides for .NET. The example loads
+// a PPTX file, configures TIFF export options with a custom image size, and
+// saves the result as a TIFF file. This pattern can be used to automate image
+// generation with specific dimensions from presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, TIFF, ImageSize, 1024x768,
+// Presentation Conversion, Office Automation
+//
+// Use Cases:
+// - Convert PowerPoint slides to TIFF images with a fixed resolution.
+// - Generate high‑resolution slide thumbnails for documentation or web use.
+// - Integrate PPTX to TIFF conversion into .NET batch processing pipelines.
+// - Ensure consistent image dimensions across exported slide assets.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides.Export;

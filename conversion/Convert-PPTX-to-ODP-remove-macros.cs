@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Convert PPTX to ODP remove macros using C#
+//
+// Description:
+// Demonstrates how to convert a PPTX file to ODP format while removing any
+// embedded VBA macros using C# and Aspose.Slides for .NET. The example loads a
+// presentation with options to delete embedded binary objects, explicitly
+// clears VBA modules if present, and saves the result as an ODP file. This
+// pattern can be used in console applications to automate macro‑free conversion
+// workflows for PowerPoint presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, ODP, Aspose.Slides for .NET, Convert, Remove, Macros,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX files to ODP while stripping macros.
+// - Build C# utilities for secure PowerPoint presentation handling.
+// - Integrate macro‑removal steps into .NET document processing pipelines.
+// - Prepare presentations for environments that require macro‑free files.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides.Export;

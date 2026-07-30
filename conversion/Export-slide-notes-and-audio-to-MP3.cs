@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export slide notes and audio to MP3 using C#
+//
+// Description:
+// Demonstrates how to extract slide notes text and embedded audio from a
+// PowerPoint presentation and save them as MP3 files using Aspose.Slides for .NET.
+// The example loads a PPTX file, iterates through each slide, writes the notes
+// text to an MP3‑named file, extracts any embedded audio frames and saves them
+// as MP3 files, and finally saves the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Slide, Notes, Audio, MP3,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of slide notes and audio for transcription or archiving.
+// - Build .NET tools that convert presentation content to audio files.
+// - Integrate slide content export into larger document processing pipelines.
+// - Validate and preprocess PPTX files before publishing or distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

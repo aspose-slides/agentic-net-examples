@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Batch convert PPTX to MP4 extract audio using C#
+//
+// Description:
+// Demonstrates how to batch process PowerPoint presentations to extract
+// embedded audio tracks and attempts MP4 video conversion (which is not
+// supported by Aspose.Slides for .NET). The example shows folder handling,
+// presentation loading, audio extraction, and saving the original file.
+// Developers can adapt this pattern for automated PPTX workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, MP4, Audio Extraction, Aspose.Slides for .NET, Batch,
+// Convert, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate batch extraction of audio from PPTX files.
+// - Attempt video conversion of presentations where supported.
+// - Build .NET tools for PowerPoint presentation processing.
+// - Validate and preserve original presentations after processing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

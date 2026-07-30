@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Batch export PowerPoint presentations to PNG subfolders using C#
+//
+// Description:
+// Demonstrates how to iterate over PowerPoint files in a directory, load each
+// presentation with Aspose.Slides for .NET, and export every slide as a PNG
+// image into a dedicated subfolder named after the source file. The sample
+// supports PPT, PPTX, PPTM, and ODP formats, creates output folders as needed,
+// and includes basic error handling for unsupported formats and I/O issues.
+// This console application can serve as a template for automating slide‑image
+// generation or integrating presentation processing into .NET solutions.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPT, PPTX, PPTM, ODP, PNG, Slide Export,
+// Batch Processing, Subfolders, Presentation Conversion, Office Automation
+//
+// Use Cases:
+// - Convert a collection of presentations to PNG images for web publishing.
+// - Generate slide thumbnails or archives in automated build pipelines.
+// - Build command‑line tools that batch‑process PowerPoint files in .NET.
+// - Validate and transform presentation assets before distribution.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

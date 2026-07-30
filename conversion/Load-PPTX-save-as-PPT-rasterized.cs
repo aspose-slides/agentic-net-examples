@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Load PPTX and save as rasterized PPT using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file and save it as a legacy PPT file using
+// Aspose.Slides for .NET. The conversion rasterizes advanced effects that are
+// not supported in the older PPT format. This console application shows the
+// necessary steps for loading, converting, and handling errors.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, PPT, Aspose.Slides for .NET, conversion, rasterized,
+// presentation processing, file format conversion, console app
+//
+// Use Cases:
+// - Convert modern PPTX presentations to legacy PPT for compatibility.
+// - Automate batch conversion of PowerPoint files in .NET environments.
+// - Preserve visual fidelity by rasterizing unsupported features.
+// - Integrate PPTX to PPT conversion into custom tools or workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -26,7 +45,7 @@ namespace SlidesConversion
                 Presentation presentation = new Presentation(inputPath);
 
                 // Note: Advanced effects may be rasterized when saving to PPT format
-                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Ppt);
+                presentation.Save(outputPath, SaveFormat.Ppt);
                 Console.WriteLine("Presentation saved successfully to: " + outputPath);
             }
             catch (NotSupportedException)

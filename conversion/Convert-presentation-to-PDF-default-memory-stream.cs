@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Convert presentation to PDF default memory stream using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation to a PDF document
+// using a MemoryStream with default save options. The example loads a PPTX
+// file, saves it to a PDF format directly into a MemoryStream, and shows how
+// to reset the stream for further processing. This pattern is useful for
+// scenarios where the PDF output needs to be kept in memory rather than
+// written to disk.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PDF conversion, MemoryStream, PowerPoint, PPTX,
+// Presentation to PDF, In-memory processing, Office Automation
+//
+// Use Cases:
+// - Convert PPTX files to PDF without creating intermediate files.
+// - Process PDF data in-memory for web services or APIs.
+// - Integrate PDF conversion into .NET applications that require stream handling.
+// - Perform post-conversion operations such as uploading or further analysis.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

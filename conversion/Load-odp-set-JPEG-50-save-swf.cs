@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Load ODP, set JPEG quality to 50, and save as SWF using C#
+//
+// Description:
+// Demonstrates how to load an ODP presentation, configure JPEG quality to 50,
+// and save the presentation as an SWF file using Aspose.Slides for .NET. The
+// example includes file existence checking, exception handling, and proper
+// disposal of resources. This pattern can be used in console applications to
+// convert OpenDocument presentations to Flash format with specific image
+// compression settings.
+//
+// Keywords:
+// C#, Aspose.Slides, ODP, SWF, JPEG quality, Presentation conversion, PowerPoint,
+// OpenDocument, Image compression, SaveFormat.Swf
+//
+// Use Cases:
+// - Convert ODP files to SWF with controlled JPEG compression.
+// - Build automated tools for batch conversion of presentations.
+// - Integrate ODP to SWF conversion into .NET workflows.
+// - Adjust image quality during format conversion for size optimization.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

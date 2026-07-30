@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Split PPT into individual HTML files using C#
+//
+// Description:
+// Demonstrates how to split a PowerPoint presentation into individual HTML files
+// using C# and Aspose.Slides for .NET. The example loads a PPTX file, creates an
+// output directory, exports each slide as a separate HTML file, and finally
+// saves a copy of the original presentation. This pattern can be used to
+// automate PPTX workflows, validate results, or integrate presentation logic into
+// .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PPT, HTML, Split, Individual,
+// Html, Files, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate split PPT into individual HTML files.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

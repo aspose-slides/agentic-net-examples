@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Disable compression for SWF and verify size using C#
+//
+// Description:
+// Demonstrates how to disable compression when saving a presentation to SWF format
+// using Aspose.Slides for .NET, and then verifies that the uncompressed file is
+// at least 20 % larger than the compressed version. The example loads a PPTX file,
+// saves it twice (compressed and uncompressed), compares file sizes and outputs
+// the verification result.
+//
+// Keywords:
+// C#, Aspose.Slides, SWF, Compression, Disable Compression, File Size Verification,
+// PowerPoint, PPTX, Presentation Processing, .NET
+//
+// Use Cases:
+// - Generate SWF files with and without compression for testing or archival.
+// - Validate the effect of compression on SWF output size.
+// - Integrate SWF size checks into automated PowerPoint conversion pipelines.
+// - Build utilities that need to ensure uncompressed SWF meets size expectations.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

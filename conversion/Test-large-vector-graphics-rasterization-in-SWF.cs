@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Test large vector graphics rasterization in SWF using C#
+//
+// Description:
+// Demonstrates how to rasterize large vector graphics when converting a PowerPoint
+// presentation to SWF format using Aspose.Slides for .NET. The example loads a PPTX
+// file, applies default SWF options that rasterize vector shapes, and saves the
+// result as an SWF file. This pattern can be used to verify rasterization behavior
+// for complex graphics in automated tests or conversion tools.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Rasterization, Large Vector Graphics,
+// Presentation Conversion, Office Automation
+//
+// Use Cases:
+// - Test rasterization of large vector graphics during PPTX to SWF conversion.
+// - Build C# utilities for converting presentations to SWF with default rasterization.
+// - Validate visual fidelity of complex graphics in SWF output.
+// - Integrate SWF conversion into .NET automation pipelines.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

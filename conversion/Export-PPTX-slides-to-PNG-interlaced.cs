@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX slides to PNG interlaced using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file and export each slide as a PNG image
+// using Aspose.Slides for .NET. The example creates an output folder, iterates
+// through all slides, generates full‑scale PNG images and saves them. While
+// Aspose.Slides does not expose a direct interlaced PNG option, the saved PNG
+// files are compatible with standard interlacing when processed further.
+// This pattern can be used in console applications to automate slide image
+// extraction and integrate PowerPoint processing into .NET workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Export, Interlaced, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of PPTX slides as PNG images.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate image assets from presentations in .NET applications.
+// - Prepare slide images for web publishing where interlaced PNGs are required.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

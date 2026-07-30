@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Apply custom notes layout to SWF output using C#
+//
+// Description:
+// Demonstrates how to apply a custom notes layout when converting a PowerPoint
+// presentation to SWF using Aspose.Slides for .NET. The example loads a PPTX
+// file, configures the notes position for the generated SWF, and saves the
+// output. This pattern can be used to automate PPTX‑to‑SWF conversion with
+// specific notes formatting in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Apply, Custom, Notes, Layout,
+// Conversion, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX files to SWF with a custom notes layout.
+// - Build C# utilities for PowerPoint presentation processing and publishing.
+// - Generate SWF output with speaker annotations positioned at the bottom.
+// - Validate presentation conversion workflows before integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -21,16 +42,18 @@ class Program
         try
         {
             // Load presentation
-            using (Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath))
+            using (Presentation pres = new Presentation(inputPath))
             {
                 // Configure SWF options with custom notes layout
-                var swfOptions = new Aspose.Slides.Export.SwfOptions();
-                var notesOptions = new Aspose.Slides.Export.NotesCommentsLayoutingOptions();
-                notesOptions.NotesPosition = Aspose.Slides.Export.NotesPositions.BottomFull; // speaker annotations
+                var swfOptions = new SwfOptions();
+                var notesOptions = new NotesCommentsLayoutingOptions
+                {
+                    NotesPosition = NotesPositions.BottomFull // speaker annotations
+                };
                 swfOptions.SlidesLayoutOptions = notesOptions;
 
                 // Save as SWF
-                pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Swf, swfOptions);
+                pres.Save(outputPath, SaveFormat.Swf, swfOptions);
             }
         }
         catch (NotSupportedException)

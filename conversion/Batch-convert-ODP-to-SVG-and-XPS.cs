@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Batch convert ODP to SVG and XPS using C#
+//
+// Description:
+// Demonstrates how to batch convert ODP files to SVG images (one per slide) 
+// and a single XPS document using Aspose.Slides for .NET. The example shows 
+// how to load each ODP presentation, export slides as SVG files into a 
+// dedicated folder, and save the whole presentation as XPS. It can be run 
+// as a console application with file paths supplied via command‑line arguments.
+//
+// Keywords:
+// C#, ODP, SVG, XPS, Aspose.Slides for .NET, Batch conversion, Presentation 
+// processing, Office automation
+//
+// Use Cases:
+// - Automate batch conversion of multiple ODP presentations to SVG and XPS.
+// - Build command‑line tools for PowerPoint‑compatible format processing.
+// - Generate SVG assets for web or documentation from ODP slides.
+// - Produce XPS files for printing or archival from ODP sources.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

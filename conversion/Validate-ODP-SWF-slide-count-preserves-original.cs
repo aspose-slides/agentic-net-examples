@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Validate ODP SWF slide count preserves original using C#
+//
+// Description:
+// Demonstrates how to validate ODP SWF slide count preserves original using C# 
+// and Aspose.Slides for .NET. The example shows the required 
+// presentation-processing steps for ODP files and produces the 
+// requested output in a standalone console application. Developers can use 
+// this pattern to automate ODP workflows, validate results, or integrate 
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, ODP, SWF, Aspose.Slides for .NET, Validate, Slide, Count, 
+// Preserves, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate validate ODP SWF slide count preserves original.
+// - Build C# tools for ODP presentation processing.
+// - Generate or transform ODP files to SWF in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

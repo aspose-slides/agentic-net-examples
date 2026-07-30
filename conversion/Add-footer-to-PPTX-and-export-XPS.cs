@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add footer to PPTX and export XPS using C#
+//
+// Description:
+// Demonstrates how to add a footer to each slide of a PPTX file and then
+// export the modified presentation to XPS format using Aspose.Slides for .NET.
+// The example loads an existing PPTX, ensures the footer is visible, sets
+// custom footer text, and saves the result as an XPS document.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, XPS, Aspose.Slides for .NET, Footer, Export, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding a consistent footer to PowerPoint presentations.
+// - Convert PPTX files to XPS for printing or archival purposes.
+// - Build .NET utilities that modify and export slide decks.
+// - Validate footer presence before publishing presentations.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -18,11 +38,11 @@ class Program
 
         try
         {
-            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
+            using (Presentation presentation = new Presentation(inputPath))
             {
                 for (int i = 0; i < presentation.Slides.Count; i++)
                 {
-                    Aspose.Slides.IBaseSlideHeaderFooterManager headerFooter = presentation.Slides[i].HeaderFooterManager;
+                    IBaseSlideHeaderFooterManager headerFooter = presentation.Slides[i].HeaderFooterManager;
                     if (!headerFooter.IsFooterVisible)
                     {
                         headerFooter.SetFooterVisibility(true);
@@ -30,13 +50,13 @@ class Program
                     headerFooter.SetFooterText("My Footer");
                 }
 
-                Aspose.Slides.Export.XpsOptions options = new Aspose.Slides.Export.XpsOptions();
+                XpsOptions options = new XpsOptions();
                 // Customize XpsOptions if needed, e.g., options.DrawSlidesFrame = true;
 
-                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Xps, options);
+                presentation.Save(outputPath, SaveFormat.Xps, options);
             }
         }
-        catch (Aspose.Slides.PptxUnsupportedFormatException)
+        catch (PptxUnsupportedFormatException)
         {
             // Format not supported
             Console.WriteLine("The presentation format is not supported for XPS conversion.");

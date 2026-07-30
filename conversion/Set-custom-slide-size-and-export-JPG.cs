@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set custom slide size and export JPG using C#
+//
+// Description:
+// Demonstrates how to set a custom slide size and export each slide as a JPEG
+// image using C# and Aspose.Slides for .NET. The example loads an existing PPTX,
+// changes the slide dimensions, saves the modified presentation, and then
+// generates JPEG files for all slides in a specified output folder. This pattern
+// is useful for automating PowerPoint processing tasks such as resizing and
+// image extraction in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, JPEG, Custom Slide Size, Export,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate resizing of PowerPoint slides to custom dimensions.
+// - Generate JPEG images from each slide for web preview or documentation.
+// - Build C# utilities for batch processing of PPTX files.
+// - Integrate slide size adjustment and image export into larger .NET workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

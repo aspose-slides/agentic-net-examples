@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add percentage reporter to SWF conversion using C#
+//
+// Description:
+// Demonstrates how to add a percentage progress reporter to a SWF conversion 
+// using C# and Aspose.Slides for .NET. The example loads a PowerPoint presentation,
+// configures SWF conversion options with a custom progress callback, and saves 
+// the resulting SWF file while reporting conversion progress to the console.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Percentage, Reporter, 
+// Conversion, SWF, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate SWF conversion with real‑time progress feedback.
+// - Build C# tools for PowerPoint presentation processing that require status reporting.
+// - Generate or transform PPTX files to SWF in .NET applications.
+// - Monitor long‑running conversions to improve user experience.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Log exception during SWF conversion of PPT using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation to SWF format using
+// Aspose.Slides for .NET while capturing and logging any conversion exceptions
+// (such as corrupt file or unsupported format) to a log file. The example
+// runs as a console application, accepts an optional input file argument,
+// and writes conversion results or error details to the console and a log.
+//
+// Keywords:
+// C#, Aspose.Slides, SWF, PPT, PowerPoint, conversion, exception handling,
+// logging, presentation processing, Office automation
+//
+// Use Cases:
+// - Convert PPT files to SWF and record conversion failures.
+// - Build diagnostic tools for PowerPoint to SWF workflows.
+// - Automate batch conversion with error logging for corrupted or unsupported files.
+// - Integrate robust conversion logic into .NET applications.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

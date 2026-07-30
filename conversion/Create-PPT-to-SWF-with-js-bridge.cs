@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Create PPT to SWF with JavaScript bridge using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation (PPTX) to an SWF file
+// that includes the integrated viewer and preserves JavaScript hyperlinks for
+// a bridge, using Aspose.Slides for .NET. The console application accepts input
+// and output file paths as arguments and configures SWF options to enable
+// viewer, top/bottom panes, and JavaScript link handling.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, JavaScript bridge,
+// Presentation conversion, Office automation
+//
+// Use Cases:
+// - Convert PPTX files to SWF with an embedded viewer for web playback.
+// - Preserve JavaScript hyperlink calls to enable communication between the
+//   SWF viewer and a host web page.
+// - Automate batch conversion of presentations in .NET tools or CI pipelines.
+// - Validate SWF output before publishing or integrating into web applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

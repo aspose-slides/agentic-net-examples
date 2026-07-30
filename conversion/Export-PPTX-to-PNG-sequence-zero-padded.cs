@@ -1,3 +1,28 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX to PNG sequence zero padded using C#
+//
+// Description:
+// Demonstrates how to export each slide of a PPTX file to a PNG image sequence
+// with zero‑padded filenames using C# and Aspose.Slides for .NET. The example
+// loads a presentation, determines the required filename padding based on the
+// total slide count, saves each slide as a PNG file with names like
+// slide_001.png, slide_002.png, etc., and finally saves the original
+// presentation (no modifications are made). This pattern can be used in
+// console utilities or automated workflows that need consistent image naming.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Export, Sequence, Zero
+// Padding, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate export of PPTX slides to a zero‑padded PNG sequence.
+// - Build C# command‑line tools for PowerPoint slide image extraction.
+// - Integrate slide‑to‑image conversion into .NET applications with predictable
+//   file naming.
+// - Prepare slide assets for publishing, documentation, or further image
+//   processing pipelines.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

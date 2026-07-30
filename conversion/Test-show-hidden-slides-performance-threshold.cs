@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Test show hidden slides performance threshold using C#
+//
+// Description:
+// Demonstrates how to measure the impact on conversion time when exporting hidden
+// slides versus excluding them, using Aspose.Slides for .NET to convert a PPTX
+// to GIF and evaluate the result against a defined performance threshold.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Test, Show, Hidden, Slides,
+// Conversion, Performance, GIF, Export, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Benchmark hidden slide export performance.
+// - Automate testing of conversion time thresholds.
+// - Validate that enabling ExportHiddenSlides does not degrade performance beyond
+//   acceptable limits.
+// - Integrate performance checks into CI pipelines for PowerPoint processing tools.
+// - Generate GIFs from presentations with or without hidden slides.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Diagnostics;

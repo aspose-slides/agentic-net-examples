@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Test show hidden slides order in SWF using C#
+//
+// Description:
+// Demonstrates how to generate SWF files from a PowerPoint presentation
+// with and without hidden slides using Aspose.Slides for .NET. The example
+// loads a PPTX file, saves two SWF outputs (one excluding hidden slides and
+// one including them), and handles common errors such as missing input files
+// or unsupported formats.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Hidden Slides, 
+// Presentation Conversion, Office Automation
+//
+// Use Cases:
+// - Verify the effect of the ShowHiddenSlides option when converting PPTX to SWF.
+// - Create automated tools that produce SWF presentations with specific slide visibility.
+// - Test and validate presentation conversion workflows in .NET applications.
+// - Generate SWF assets for web publishing while controlling hidden slide inclusion.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

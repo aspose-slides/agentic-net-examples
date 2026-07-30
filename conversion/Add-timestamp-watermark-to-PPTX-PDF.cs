@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add timestamp watermark to PPTX PDF using C#
+//
+// Description:
+// Demonstrates how to add a timestamp watermark to each slide of a PPTX file
+// and then convert the presentation to PDF using Aspose.Slides for .NET. The
+// example loads a presentation, creates a semi‑transparent rectangle with the
+// current date‑time in the bottom‑right corner of every slide, saves an
+// intermediate PPTX (optional) and finally exports the result as a PDF file.
+// This pattern can be used to automate watermarking and conversion tasks in
+// .NET applications.
+//
+// Keywords:
+// C#, Aspose.Slides, PPTX, PDF, Timestamp, Watermark, Presentation Conversion,
+// PowerPoint Automation, .NET
+//
+// Use Cases:
+// - Add a timestamp watermark to PowerPoint slides before distribution.
+// - Convert watermarked PPTX files to PDF in batch processes.
+// - Integrate presentation watermarking into C# tools or services.
+// - Ensure document traceability with generation timestamps.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Drawing;

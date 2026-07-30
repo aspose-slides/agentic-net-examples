@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Remove notes from PPTX before XPS using C#
+//
+// Description:
+// Demonstrates how to remove all notes from a PPTX presentation and then
+// convert the cleaned presentation to XPS format using Aspose.Slides for .NET.
+// The example loads a PPTX file, deletes each slide's notes slide, and saves
+// the result as an XPS document. This pattern can be used in automation scripts
+// or applications that need to strip notes before publishing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, XPS, Aspose.Slides for .NET, Remove Notes, Convert, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Remove speaker notes from presentations before distribution.
+// - Convert PPTX files to XPS after cleaning up notes.
+// - Build .NET utilities for PowerPoint content sanitization.
+// - Integrate note removal and format conversion into larger workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

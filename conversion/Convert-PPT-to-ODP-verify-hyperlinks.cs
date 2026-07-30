@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Convert PPT to ODP verify hyperlinks using C#
+//
+// Description:
+// Demonstrates how to convert a PPTX presentation to ODP format while
+// verifying that hyperlink clicks are preserved using Aspose.Slides for .NET.
+// The example loads a PPTX file, counts hyperlinks, saves as ODP, reloads the
+// ODP file, recounts hyperlinks, and reports whether all hyperlinks survived
+// the conversion.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, ODP, Aspose.Slides for .NET, Hyperlinks, Conversion,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Convert PPTX files to ODP while ensuring hyperlink integrity.
+// - Automate validation of hyperlink preservation during format conversion.
+// - Build .NET tools for batch processing of presentations with hyperlink checks.
+// - Integrate presentation conversion and verification into CI pipelines.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -18,18 +39,18 @@ class Program
 
         try
         {
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+            Presentation presentation = new Presentation(inputPath);
             int hyperlinkCountBefore = 0;
-            foreach (Aspose.Slides.ISlide slide in presentation.Slides)
+            foreach (ISlide slide in presentation.Slides)
             {
-                foreach (Aspose.Slides.IShape shape in slide.Shapes)
+                foreach (IShape shape in slide.Shapes)
                 {
-                    Aspose.Slides.IAutoShape autoShape = shape as Aspose.Slides.IAutoShape;
+                    IAutoShape autoShape = shape as IAutoShape;
                     if (autoShape != null && autoShape.TextFrame != null)
                     {
-                        foreach (Aspose.Slides.IParagraph paragraph in autoShape.TextFrame.Paragraphs)
+                        foreach (IParagraph paragraph in autoShape.TextFrame.Paragraphs)
                         {
-                            foreach (Aspose.Slides.IPortion portion in paragraph.Portions)
+                            foreach (IPortion portion in paragraph.Portions)
                             {
                                 if (portion.PortionFormat.HyperlinkClick != null)
                                 {
@@ -41,20 +62,20 @@ class Program
                 }
             }
 
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Odp);
+            presentation.Save(outputPath, SaveFormat.Odp);
 
-            Aspose.Slides.Presentation odpPresentation = new Aspose.Slides.Presentation(outputPath);
+            Presentation odpPresentation = new Presentation(outputPath);
             int hyperlinkCountAfter = 0;
-            foreach (Aspose.Slides.ISlide slide in odpPresentation.Slides)
+            foreach (ISlide slide in odpPresentation.Slides)
             {
-                foreach (Aspose.Slides.IShape shape in slide.Shapes)
+                foreach (IShape shape in slide.Shapes)
                 {
-                    Aspose.Slides.IAutoShape autoShape = shape as Aspose.Slides.IAutoShape;
+                    IAutoShape autoShape = shape as IAutoShape;
                     if (autoShape != null && autoShape.TextFrame != null)
                     {
-                        foreach (Aspose.Slides.IParagraph paragraph in autoShape.TextFrame.Paragraphs)
+                        foreach (IParagraph paragraph in autoShape.TextFrame.Paragraphs)
                         {
-                            foreach (Aspose.Slides.IPortion portion in paragraph.Portions)
+                            foreach (IPortion portion in paragraph.Portions)
                             {
                                 if (portion.PortionFormat.HyperlinkClick != null)
                                 {

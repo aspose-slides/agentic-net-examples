@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Log SWF conversion start and end timestamps using C#
+//
+// Description:
+// Demonstrates how to log the start and end timestamps of converting PowerPoint
+// presentations to SWF format using C# and Aspose.Slides for .NET. The example
+// iterates over a list of PPTX files, performs the conversion, and writes the
+// timing information to the console. This pattern helps developers monitor
+// conversion performance and integrate logging into batch processing tools.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Conversion, Timestamps,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Log SWF conversion start and end timestamps for batch processing.
+// - Build C# utilities for PowerPoint to SWF conversion with performance tracking.
+// - Integrate conversion timing into automated workflows or CI pipelines.
+// - Diagnose and optimize presentation conversion performance.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides.Export;

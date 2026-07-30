@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Validate DOCX conversion embedded images resolution using C#
+//
+// Description:
+// Demonstrates how to capture and compare embedded image resolutions in a
+// PowerPoint presentation before and after a simulated DOCX conversion using
+// Aspose.Slides for .NET. Since Aspose.Slides does not support saving to DOCX,
+// the example saves the presentation as PPTX to simulate a conversion target
+// and verifies that image resolutions remain unchanged.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Validate, DOCX, Conversion,
+// Embedded, Image Resolution, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Verify that embedded images retain their original resolution when converting
+//   presentations to formats not directly supported by Aspose.Slides.
+// - Build validation tools for presentation workflows involving DOCX conversion
+//   simulations.
+// - Ensure image quality is preserved during automated PowerPoint processing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;

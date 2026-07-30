@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Validate swf slide count matches visible using C#
+//
+// Description:
+// Demonstrates how to convert a PPTX presentation to SWF while excluding hidden
+// slides, and then validates that the number of slides exported to the SWF file
+// matches the count of visible slides in the original presentation. The example
+// uses Aspose.Slides for .NET and can be run as a standalone console
+// application.
+//
+// Keywords:
+// C#, Aspose.Slides, SWF, PPTX, slide count, hidden slides, visible slides,
+// presentation conversion, Office automation
+//
+// Use Cases:
+// - Ensure that hidden slides are not included when converting PPTX to SWF.
+// - Automate validation of slide counts after format conversion.
+// - Build .NET tools for PowerPoint to SWF conversion with slide visibility
+//   checks.
+// - Integrate presentation validation into CI pipelines or publishing workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

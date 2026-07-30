@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Archive original presentations after swf conversion using C#
+//
+// Description:
+// Demonstrates how to archive the original PowerPoint presentation after converting
+// it to SWF format using Aspose.Slides for .NET. The example loads a PPTX file,
+// saves it as SWF, moves the original file to an archive folder, and handles
+// basic error scenarios in a console application.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Archive, Original, 
+// Presentations, Conversion, Automation, Office Automation
+//
+// Use Cases:
+// - Automate archiving of source presentations after SWF conversion.
+// - Build C# utilities for PowerPoint to SWF transformation workflows.
+// - Manage presentation assets by separating processed files from originals.
+// - Integrate presentation conversion and archiving into .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Create multi page tiff with pptx titles using C#
+//
+// Description:
+// Demonstrates how to convert a PPTX presentation into individual TIFF files
+// named after each slide's title (or slide number when a title is not found) and
+// additionally generate a single multi‑page TIFF that contains all slides.
+// The example uses Aspose.Slides for .NET and can be run as a standalone console
+// application. It shows how to load a presentation, iterate through slides,
+// extract a simple title, configure TIFF options, and save both single‑page and
+// multi‑page TIFF outputs.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Multi, Page, Tiff, Pptx,
+// Presentation Processing, Office Automation, Slide Titles, Image Export
+//
+// Use Cases:
+// - Automate conversion of PPTX slides to separate TIFF images with meaningful names.
+// - Generate a combined multi‑page TIFF for archival or printing purposes.
+// - Build C# utilities for PowerPoint presentation processing and image extraction.
+// - Validate and preview slide content by exporting to TIFF format.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

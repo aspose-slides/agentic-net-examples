@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Generate missing font report during SWF conversion using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, retrieve missing font
+// information via Aspose.Slides for .NET, output a report of font substitutions,
+// and then convert the presentation to SWF format. The example is a complete
+// console application that can be used to automate font validation before
+// SWF export.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, SWF, Font Substitution, Missing Font Report,
+// Presentation Conversion, Office Automation
+//
+// Use Cases:
+// - Identify missing fonts before converting PPTX to SWF.
+// - Generate a console report of font substitutions for quality checks.
+// - Integrate font validation into automated PowerPoint processing pipelines.
+// - Build .NET tools that convert presentations while ensuring font compatibility.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Collections.Generic;

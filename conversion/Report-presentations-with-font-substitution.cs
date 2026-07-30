@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Report presentations with font substitution using C#
+//
+// Description:
+// Demonstrates how to report presentations with font substitution using C# and 
+// Aspose.Slides for .NET. The example loads each presentation, enumerates any 
+// font substitutions applied by the FontsManager, outputs the mapping to the 
+// console, and saves the file unchanged. This pattern helps developers audit 
+// font usage and substitution in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Report, Presentations, Font, 
+// Substitution, FontsManager, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Identify and log font substitutions in existing PowerPoint presentations.
+// - Automate audit of font compatibility across multiple PPTX files.
+// - Integrate font substitution reporting into .NET tools or CI pipelines.
+// - Ensure presentation fidelity before publishing or conversion.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides.Export;

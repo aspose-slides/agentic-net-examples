@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Replace embedded fonts PPTX export PDF using C#
+//
+// Description:
+// Demonstrates how to replace embedded fonts in a PPTX file with a system
+// font and export the presentation to PDF using C# and Aspose.Slides for .NET.
+// The example loads a presentation, substitutes each embedded font with Arial,
+// and saves the result as a PDF document.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Replace, Embedded, Fonts,
+// Pptx, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate replacement of embedded fonts before PDF conversion.
+// - Build C# utilities for PowerPoint presentation processing.
+// - Generate PDF output from PPTX files with consistent font usage.
+// - Validate and standardize fonts in presentations prior to publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides.Export;

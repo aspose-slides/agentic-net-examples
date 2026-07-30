@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Convert PPTX to MP4 30fps 720p using C#
+//
+// Description:
+// Demonstrates how to generate 30 fps 720p PNG frames from a PPTX using
+// Aspose.Slides for .NET, which can then be combined into an MP4 video with an
+// external encoder. The example shows how to set slide size, create an
+// animations generator, capture each frame, and save the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Convert, 30fps, 720p, PNG frames,
+// Video encoding, Presentation Processing
+//
+// Use Cases:
+// - Generate high‑resolution PNG frames from PPTX for video creation.
+// - Automate PPTX to MP4 conversion workflow using external encoders.
+// - Build .NET tools for slide animation extraction.
+// - Validate slide size and animation rendering before video production.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Drawing;

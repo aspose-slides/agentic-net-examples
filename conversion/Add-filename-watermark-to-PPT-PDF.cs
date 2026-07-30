@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add filename watermark to PPT PDF using C#
+//
+// Description:
+// Demonstrates how to add a filename watermark to a PowerPoint presentation
+// and convert it to PDF using C# and Aspose.Slides for .NET. The example shows
+// how to load a PPTX file, insert a text watermark containing the source file
+// name onto the master slide so it appears on every slide, and then save the
+// result as a PDF document.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, PDF, Aspose.Slides for .NET, Filename, Watermark,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automatically add a filename watermark to PowerPoint files before PDF export.
+// - Build .NET tools for batch processing of presentations with branding.
+// - Integrate watermarking into document generation pipelines.
+// - Validate presentation conversion workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

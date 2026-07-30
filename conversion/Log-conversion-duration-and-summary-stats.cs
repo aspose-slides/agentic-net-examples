@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Log conversion duration and summary stats using C#
+//
+// Description:
+// Demonstrates how to log conversion duration and summary statistics for a batch
+// of presentations using C# and Aspose.Slides for .NET. The example processes
+// multiple input files, applies a simple slide transition change, saves the
+// converted files, and outputs per‑file conversion times along with total and
+// average processing metrics.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, ODP, batch conversion, duration,
+// performance logging, summary statistics, presentation processing, automation
+//
+// Use Cases:
+// - Perform batch conversion of various presentation formats to PPTX.
+// - Record conversion time for each file and overall batch performance.
+// - Apply uniform slide settings (e.g., transition duration) during conversion.
+// - Integrate conversion timing into monitoring or reporting tools.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Diagnostics;

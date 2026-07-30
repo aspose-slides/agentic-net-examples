@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Compare swf visual differences between jpeg qualities using C#
+//
+// Description:
+// Demonstrates how to compare SWF visual differences resulting from different
+// JPEG quality settings when converting a PowerPoint presentation to SWF using
+// Aspose.Slides for .NET. The example creates two SWF files—one with low JPEG
+// quality and one with high JPEG quality—then performs a byte‑wise comparison
+// to determine whether the output differs. This pattern can be used to
+// validate image quality impact on SWF conversion results.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, JPEG, SWF, Compare, Visual,
+// Differences, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Verify visual differences caused by JPEG quality settings in SWF output.
+// - Automate quality‑impact testing for PowerPoint to SWF conversions.
+// - Build C# utilities for presentation format validation.
+// - Integrate SWF quality checks into .NET CI pipelines.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

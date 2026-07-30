@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add analytics script to HTML5 presentation using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation to HTML5 using Aspose.Slides for .NET,
+// then embed a custom analytics JavaScript snippet into the generated HTML file. The example
+// includes loading the PPTX, configuring Html5Options, saving as HTML5, and inserting the script
+// before the closing </body> tag. This pattern can be used to automate PPTX to HTML5 conversion
+// with analytics integration.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, HTML5, Analytics, JavaScript, Script Injection,
+// Presentation Conversion, Office Automation
+//
+// Use Cases:
+// - Convert PPTX files to HTML5 presentations with embedded analytics.
+// - Add custom JavaScript tracking to generated HTML5 slides.
+// - Build .NET tools for automated presentation publishing workflows.
+// - Integrate analytics reporting into PowerPoint-to-HTML5 pipelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

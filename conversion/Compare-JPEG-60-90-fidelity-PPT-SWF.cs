@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Compare JPEG 60 90 fidelity PPT SWF using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation to SWF format with
+// different JPEG quality settings (60 and 90) using Aspose.Slides for .NET.
+// The example loads a PPTX file, saves two SWF files with specified JPEG
+// qualities, and can be used to compare visual fidelity between the outputs.
+// This pattern helps developers evaluate image compression impact in SWF
+// conversions.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, JPEG Quality, Image Compression,
+// Fidelity Comparison, Presentation Conversion, Office Automation
+//
+// Use Cases:
+// - Compare visual quality of SWF files generated with different JPEG settings.
+// - Assess impact of JPEG compression on PowerPoint to SWF conversion.
+// - Build tools for automated quality testing of presentation exports.
+// - Generate SWF files with specific image quality requirements.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

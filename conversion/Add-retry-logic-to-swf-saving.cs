@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add retry logic to SWF saving using C#
+//
+// Description:
+// Demonstrates how to add retry logic when saving a PowerPoint presentation
+// as SWF using Aspose.Slides for .NET. The example loads a PPTX file, attempts
+// to convert it to SWF, and retries on transient I/O errors up to a configurable
+// number of attempts. It includes handling for unsupported formats and other
+// unexpected exceptions, making it suitable for robust automation scenarios.
+//
+// Keywords:
+// C#, Aspose.Slides, SWF, PowerPoint, PPTX, retry logic, file I/O, exception handling,
+// presentation conversion, .NET
+//
+// Use Cases:
+// - Implement reliable batch conversion of PPTX files to SWF with retry on I/O failures.
+// - Build .NET utilities that need resilient saving of presentations.
+// - Automate PowerPoint to SWF transformation in CI/CD pipelines.
+// - Handle transient file access issues during presentation processing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Threading;

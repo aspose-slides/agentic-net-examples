@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Load PPTX set ViewerIncluded true and embed SWF using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file, enable the built‑in viewer by setting
+// ViewerIncluded to true, save the presentation as an SWF file, and generate a
+// simple HTML page that embeds the resulting SWF using Aspose.Slides for .NET.
+// The example includes basic error handling and file existence checks.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, Save, SWF, ViewerIncluded, 
+// Embed, HTML wrapper, Presentation conversion
+//
+// Use Cases:
+// - Convert PPTX presentations to SWF with an embedded viewer.
+// - Create HTML pages that display PowerPoint content as Flash.
+// - Automate batch conversion of presentations for legacy Flash‑based viewers.
+// - Integrate PPTX to SWF conversion into .NET applications or build pipelines.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

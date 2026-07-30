@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Disable navigation in SWF and verify player using C#
+//
+// Description:
+// Demonstrates how to disable navigation controls when converting a PowerPoint
+// presentation to SWF format and how to prompt verification of the generated
+// file with an SWF player. The example uses Aspose.Slides for .NET to load a
+// PPTX file, set SwfOptions.ViewerIncluded to false, and save the result as
+// an SWF file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Disable Navigation, Verify Player, Presentation Conversion
+//
+// Use Cases:
+// - Convert PPTX presentations to SWF without built‑in navigation UI.
+// - Automate generation of SWF files for environments that provide custom viewers.
+// - Validate that the produced SWF works with a specific SWF player.
+// - Integrate SWF conversion into .NET batch processing or CI pipelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

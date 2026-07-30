@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Convert PPT to ODP verify master layouts using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation (PPTX) to OpenDocument
+// Presentation (ODP) while verifying that master slides and their layout slides
+// are preserved. The example uses an intermediate PPTX file to ensure that the
+// conversion process retains master slide information, then saves the final
+// ODP output. It includes basic error handling and cleanup of temporary files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, ODP, Aspose.Slides for .NET, Convert, Verify, Master Slides,
+// Layout Slides, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX files to ODP format with master layout validation.
+// - Build C# utilities for PowerPoint presentation processing and format migration.
+// - Ensure presentation fidelity when integrating with OpenDocument workflows.
+// - Validate master slide integrity during batch conversion tasks.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;

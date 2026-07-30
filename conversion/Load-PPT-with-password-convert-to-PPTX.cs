@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Load PPT with password convert to PPTX using C#
+//
+// Description:
+// Demonstrates how to load a password‑protected PPT file and convert it to PPTX 
+// using C# and Aspose.Slides for .NET. The example shows loading options with a 
+// password, converting the presentation format, and saving the result to an 
+// output folder in a standalone console application. Developers can use this 
+// pattern to automate PPT conversion workflows, handle protected files, or 
+// integrate presentation processing into .NET solutions.
+//
+// Keywords:
+// C#, PowerPoint, PPT, PPTX, Aspose.Slides for .NET, Load, Password, Convert, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of password‑protected PPT files to PPTX.
+// - Build C# utilities for PowerPoint presentation handling.
+// - Integrate secure PPT processing into .NET applications.
+// - Validate and transform legacy PowerPoint presentations before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

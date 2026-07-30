@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Batch export PPT to PNG numbered using C#
+//
+// Description:
+// Demonstrates how to batch export PowerPoint presentations (PPT, PPTX, ODP, PPTM)
+// to numbered PNG images using C# and Aspose.Slides for .NET. The example iterates
+// through all supported presentation files in an input folder, converts each slide
+// to a PNG file prefixed with the slide number, and saves the images to an output
+// folder. This pattern can be used to automate slide extraction, create image
+// assets for web publishing, or integrate presentation processing into .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, PPT, ODP, PPTM, Aspose.Slides for .NET, PNG, Batch Export,
+// Numbered Slides, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate batch conversion of PowerPoint slides to numbered PNG images.
+// - Build C# utilities for extracting slide images from presentations.
+// - Generate image assets for documentation, e‑learning, or web content.
+// - Validate and preview presentation content programmatically before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -47,7 +70,7 @@ namespace BatchExport
                 try
                 {
                     // Load the presentation
-                    Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(filePath);
+                    Presentation pres = new Presentation(filePath);
 
                     // Prepare output file name format (slide number prefix)
                     string formatString = Path.Combine(outputDir, Path.GetFileNameWithoutExtension(filePath) + "_slide_{0}.png");
@@ -55,18 +78,18 @@ namespace BatchExport
                     // Export each slide to PNG (using provided rule structure)
                     for (int index = 0; index < pres.Slides.Count; index++)
                     {
-                        Aspose.Slides.ISlide slide = pres.Slides[index];
-                        using (Aspose.Slides.IImage image = slide.GetImage())
+                        ISlide slide = pres.Slides[index];
+                        using (IImage image = slide.GetImage())
                         {
                             string outputPath = string.Format(formatString, index + 1);
-                            image.Save(outputPath, Aspose.Slides.ImageFormat.Png);
+                            image.Save(outputPath, ImageFormat.Png);
                         }
                     }
 
                     // Save presentation before exit (no modifications made)
                     try
                     {
-                        pres.Save(filePath, Aspose.Slides.Export.SaveFormat.Pptx);
+                        pres.Save(filePath, SaveFormat.Pptx);
                     }
                     catch (NotSupportedException)
                     {

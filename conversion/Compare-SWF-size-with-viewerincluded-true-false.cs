@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Compare SWF size with viewerincluded true false using C#
+//
+// Description:
+// Demonstrates how to compare the file size of SWF outputs generated with
+// ViewerIncluded set to true and false using C# and Aspose.Slides for .NET.
+// The example loads a PPTX presentation, saves it twice as SWF (with and
+// without the embedded viewer), and prints the resulting file sizes.
+// This pattern helps developers automate size comparisons, validate output
+// differences, or integrate SWF generation into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Compare, Size, ViewerIncluded,
+// SWF, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate comparison of SWF file sizes with ViewerIncluded true/false.
+// - Build C# tools for PowerPoint presentation processing and SWF generation.
+// - Generate SWF files with or without the embedded viewer for distribution.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

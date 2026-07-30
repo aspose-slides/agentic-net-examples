@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Validate exported SVG contains vector paths using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, export the first slide
+// to SVG with text vectorized, and validate that the resulting SVG contains
+// vector <path> elements as well as text elements. The example uses Aspose.Slides
+// for .NET and can be used as a basis for automated SVG validation in .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SVG, Validate, Exported, Contains,
+// Vector, Presentation Processing, Office Automation, VectorizeText
+//
+// Use Cases:
+// - Automate validation of exported SVG files for required vector paths.
+// - Build .NET tools that process PowerPoint presentations and verify SVG output.
+// - Ensure text is correctly vectorized during SVG export.
+// - Integrate SVG validation into CI pipelines for presentation assets.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

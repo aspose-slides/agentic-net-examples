@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Generate SWF from PPTX with default font verification using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file, list any font substitutions performed
+// by Aspose.Slides, and save the presentation as an SWF file using default font
+// substitution settings. The example uses Aspose.Slides for .NET and can be
+// executed as a standalone console application. It is useful for developers
+// who need to verify font handling when converting PowerPoint presentations to
+// SWF format.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Font Substitution, Default Font,
+// Presentation Conversion, Office Automation
+//
+// Use Cases:
+// - Verify font substitution information before converting PPTX to SWF.
+// - Automate conversion of PowerPoint presentations to SWF with default fonts.
+// - Build .NET tools for presentation processing and validation.
+// - Ensure consistent font rendering in SWF output across different environments.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

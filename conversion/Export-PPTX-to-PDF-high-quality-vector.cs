@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX to PDF high quality vector using C#
+//
+// Description:
+// Demonstrates how to export a PPTX file to a high‑quality vector PDF using C#
+// and Aspose.Slides for .NET. The example loads a presentation, configures PDF
+// options to retain vector graphics and maximum image quality, and saves the
+// result as a PDF file. This pattern can be used in console utilities or
+// automated workflows that require precise PDF rendering of PowerPoint content.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Export, High, Quality,
+// Vector, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX to high‑quality vector PDF.
+// - Build .NET tools for preserving vector graphics when exporting presentations.
+// - Integrate PPTX to PDF conversion into server‑side or desktop applications.
+// - Ensure PDF output meets publishing standards for graphics fidelity.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

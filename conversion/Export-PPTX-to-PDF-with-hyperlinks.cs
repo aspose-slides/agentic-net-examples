@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX to PDF with hyperlinks using C#
+//
+// Description:
+// Demonstrates how to export a PPTX file to PDF while preserving hyperlinks
+// using C# and Aspose.Slides for .NET. The example loads a PowerPoint presentation,
+// saves it as a PDF (hyperlinks are retained by default), and handles common
+// errors such as missing input files or unsupported formats.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Export, Hyperlinks,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX presentations to PDF with active hyperlinks.
+// - Build .NET tools for batch processing of PowerPoint files.
+// - Integrate PDF export functionality into existing C# applications.
+// - Validate that hyperlinks remain functional after conversion.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;
@@ -35,7 +54,6 @@ namespace MyApp
             catch (NotSupportedException ex)
             {
                 // Format not supported
-                // format not supported
                 Console.WriteLine("The file format is not supported: " + ex.Message);
             }
             catch (Exception ex)

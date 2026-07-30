@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Catch SwfOptions InvalidOperationException during conversion using C#
+//
+// Description:
+// Demonstrates how to catch an InvalidOperationException thrown when
+// configuring unsupported SwfOptions during conversion of a PowerPoint
+// presentation to SWF using Aspose.Slides for .NET. The example loads a PPTX
+// file, attempts to save it as SWF with custom options, and handles specific
+// exceptions that may arise.
+//
+// Keywords:
+// C#, Aspose.Slides, SWF, InvalidOperationException, Presentation conversion,
+// PowerPoint, PPTX, Exception handling, Office Automation
+//
+// Use Cases:
+// - Detect and handle unsupported SWF conversion options.
+// - Build robust .NET tools for converting PPTX files to SWF.
+// - Implement detailed error handling for presentation processing workflows.
+// - Ensure graceful fallback when conversion features are not available.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

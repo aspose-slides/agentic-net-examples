@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Log SwfOptions InvalidOperationException on unsupported option using C#
+//
+// Description:
+// Demonstrates how to log an InvalidOperationException when setting an unsupported
+// SlidesLayoutOptions value in SwfOptions while converting a PPTX presentation to
+// SWF using Aspose.Slides for .NET. The example includes loading a presentation,
+// configuring SWF export options, handling the exception, and saving the output.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SwfOptions, InvalidOperationException,
+// Unsupported Option, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Detect and log unsupported SWF export options during conversion.
+// - Build C# utilities for PowerPoint to SWF conversion with robust error handling.
+// - Automate validation of presentation export settings in .NET applications.
+// - Ensure reliable workflow when integrating Aspose.Slides into larger systems.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

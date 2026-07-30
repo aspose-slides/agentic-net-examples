@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Load PPTX configure tiffoptions high DPI using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file and configure TiffOptions with high DPI
+// and custom image size using Aspose.Slides for .NET. The example shows the
+// required steps to convert a PowerPoint presentation to a high‑resolution TIFF
+// image in a standalone console application. Developers can use this pattern to
+// automate PPTX to TIFF conversion, adjust image quality, or integrate
+// presentation processing into .NET solutions.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, Convert, TIFF, TiffOptions,
+// High DPI, Image Size, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Convert PPTX presentations to high‑resolution TIFF images.
+// - Build C# tools for PowerPoint to TIFF conversion with custom DPI.
+// - Generate printable TIFF files from slides in .NET applications.
+// - Automate batch processing of presentations with specific image settings.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

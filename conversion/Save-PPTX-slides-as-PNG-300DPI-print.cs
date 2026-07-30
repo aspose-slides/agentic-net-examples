@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Save PPTX slides as PNG 300DPI print using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file, export each slide as a PNG image 
+// with approximately 300 DPI resolution, and optionally save a copy of the 
+// presentation using Aspose.Slides for .NET. The example includes argument 
+// handling, file validation, and basic error handling suitable for console 
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Save, Pptx, Slides, 
+// 300Dpi, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Convert PPTX slides to high‑resolution PNG images for printing or web use.
+// - Automate batch processing of presentations in .NET tools.
+// - Generate image assets from PowerPoint files for documentation or publishing.
+// - Validate and copy presentations as part of a workflow.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

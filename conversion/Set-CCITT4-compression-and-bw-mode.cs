@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Set CCITT4 compression and Dithering black‑white mode using C#
+//
+// Description:
+// Demonstrates how to configure CCITT4 compression and Dithering black‑white
+// conversion mode when exporting a PowerPoint presentation to a TIFF image
+// using Aspose.Slides for .NET. The example loads a PPTX file, applies the
+// specified TIFF options, and saves the result as a TIFF file. This pattern
+// can be used in console applications or automated workflows that require
+// high‑compression, black‑and‑white TIFF output.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, TIFF, CCITT4, Compression, Dithering,
+// BlackWhiteConversionMode, Presentation Export, .NET
+//
+// Use Cases:
+// - Generate compact black‑and‑white TIFF images from presentations.
+// - Automate batch conversion of PPTX files to CCITT4‑compressed TIFFs.
+// - Integrate high‑compression image export into document processing pipelines.
+// - Validate TIFF export settings in CI/CD pipelines.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -18,11 +40,11 @@ class Program
 
         try
         {
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
-            Aspose.Slides.Export.TiffOptions options = new Aspose.Slides.Export.TiffOptions();
-            options.CompressionType = Aspose.Slides.Export.TiffCompressionTypes.CCITT4;
-            options.BwConversionMode = Aspose.Slides.Export.BlackWhiteConversionMode.Dithering;
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Tiff, options);
+            Presentation presentation = new Presentation(inputPath);
+            TiffOptions options = new TiffOptions();
+            options.CompressionType = TiffCompressionTypes.CCITT4;
+            options.BwConversionMode = BlackWhiteConversionMode.Dithering;
+            presentation.Save(outputPath, SaveFormat.Tiff, options);
             presentation.Dispose();
         }
         catch (Exception ex)

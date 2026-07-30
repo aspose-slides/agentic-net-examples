@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Strip password from PPT and convert to PPTX using C#
+//
+// Description:
+// Demonstrates how to remove password protection from a PPT file and save it
+// as an unprotected PPTX using Aspose.Slides for .NET. The example loads a
+// password‑protected presentation, strips its encryption, and writes the
+// result to an output folder.
+//
+// Keywords:
+// C#, PowerPoint, PPT, PPTX, Aspose.Slides for .NET, Strip Password, Convert,
+// Presentation Encryption, Office Automation
+//
+// Use Cases:
+// - Remove password protection from legacy PPT files.
+// - Convert protected PPT presentations to PPTX for further editing.
+// - Automate batch processing of encrypted PowerPoint files.
+// - Integrate password‑removal into .NET document management workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

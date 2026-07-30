@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Merge multiple TIFF files into multi TIFF using C#
+//
+// Description:
+// Demonstrates how to merge multiple TIFF files into a single multi‑page TIFF
+// using C# and Aspose.Slides for .NET. The example creates a temporary
+// presentation, adds each TIFF image as a full‑size picture on separate slides,
+// and then saves the presentation as a multi‑page TIFF document. This pattern
+// can be used to automate image consolidation workflows, generate combined
+// TIFFs from PowerPoint assets, or integrate TIFF processing into .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Merge, Multiple, TIFF, Files,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate merging of multiple TIFF images into a single multi‑page TIFF.
+// - Build C# tools for PowerPoint presentation processing that output TIFFs.
+// - Generate combined TIFF documents from slide images in .NET applications.
+// - Validate and streamline image consolidation workflows before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -32,7 +55,7 @@ public class Program
             }
 
             // Create a new presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+            Presentation presentation = new Presentation();
 
             // Ensure there is at least one layout slide to use
             if (presentation.LayoutSlides.Count == 0)
@@ -46,10 +69,10 @@ public class Program
             foreach (string filePath in inputFiles)
             {
                 byte[] imageData = File.ReadAllBytes(filePath);
-                Aspose.Slides.IPPImage image = presentation.Images.AddImage(imageData);
-                Aspose.Slides.ISlide slide = presentation.Slides.AddEmptySlide(presentation.LayoutSlides[0]);
+                IPPImage image = presentation.Images.AddImage(imageData);
+                ISlide slide = presentation.Slides.AddEmptySlide(presentation.LayoutSlides[0]);
                 slide.Shapes.AddPictureFrame(
-                    Aspose.Slides.ShapeType.Rectangle,
+                    ShapeType.Rectangle,
                     0,
                     0,
                     presentation.SlideSize.Size.Width,
@@ -58,10 +81,10 @@ public class Program
             }
 
             // Prepare TIFF save options (default options are sufficient for multi‑page TIFF)
-            Aspose.Slides.Export.TiffOptions tiffOptions = new Aspose.Slides.Export.TiffOptions();
+            TiffOptions tiffOptions = new TiffOptions();
 
             // Save the presentation as a multi‑page TIFF document
-            presentation.Save(outputFile, Aspose.Slides.Export.SaveFormat.Tiff, tiffOptions);
+            presentation.Save(outputFile, SaveFormat.Tiff, tiffOptions);
             presentation.Dispose();
         }
         catch (NotSupportedException)

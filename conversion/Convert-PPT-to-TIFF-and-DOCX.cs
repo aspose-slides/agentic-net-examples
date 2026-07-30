@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Convert PPT to TIFF and DOCX using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation (PPT/PPTX) to a
+// multi-page TIFF image and to a DOCX document using Aspose.Slides for .NET.
+// The example loads a presentation, saves it as TIFF, then saves it as DOCX,
+// handling basic file‑existence checks and error reporting in a console
+// application. This pattern can be used to automate presentation conversion
+// workflows in .NET projects.
+//
+// Keywords:
+// C#, PowerPoint, PPT, PPTX, Aspose.Slides for .NET, TIFF, DOCX, Convert,
+// Presentation Processing, Office Automation, .NET Console
+//
+// Use Cases:
+// - Automate conversion of PPT/PPTX files to TIFF for image‑based distribution.
+// - Generate DOCX documents from PowerPoint presentations for text‑based review.
+// - Build C# utilities that process and transform PowerPoint files in batch.
+// - Validate presentation conversion steps before integrating into larger systems.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -24,28 +46,14 @@ namespace PresentationConverter
             try
             {
                 // Load the presentation once and reuse it
-                Presentation presentation = new Presentation(inputPath);
-
-                // Convert to TIFF
-                presentation.Save(outputTiff, SaveFormat.Tiff);
-
-                // Attempt to convert to DOCX (unsupported format)
-                try
+                using (Presentation presentation = new Presentation(inputPath))
                 {
-                    // Aspose.Slides does not support saving to DOCX; using an invalid enum value to trigger exception
-                    presentation.Save(outputDocx, (SaveFormat)9999);
-                }
-                catch (NotSupportedException)
-                {
-                    // Format not supported
-                }
-                catch (InvalidOperationException)
-                {
-                    // Format not supported
-                }
+                    // Convert to TIFF
+                    presentation.Save(outputTiff, SaveFormat.Tiff);
 
-                // Ensure the presentation is saved before exiting (already saved above)
-                presentation.Dispose();
+                    // Convert to DOCX
+                    presentation.Save(outputDocx, SaveFormat.Docx);
+                }
             }
             catch (Exception ex)
             {

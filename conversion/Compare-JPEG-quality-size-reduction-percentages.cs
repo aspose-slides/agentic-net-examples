@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Compare JPEG quality size reduction percentages using C#
+//
+// Description:
+// Demonstrates how to compare JPEG quality size reduction percentages by
+// converting a PowerPoint presentation to PDF with various JPEG quality
+// settings using Aspose.Slides for .NET. The example loads a PPTX file,
+// saves it as PDF multiple times with different JPEG quality levels, records
+// the resulting file sizes, and calculates the percentage reduction relative
+// to the highest quality output. This pattern helps developers assess the
+// impact of JPEG compression on PDF size when processing presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, PDF, Aspose.Slides for .NET, JPEG, Compare, Quality,
+// Size, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Evaluate how JPEG compression affects PDF file size for PowerPoint exports.
+// - Build tools to automate PDF generation with configurable image quality.
+// - Optimize presentation workflows by selecting appropriate JPEG quality.
+// - Validate size reduction trade‑offs before publishing or distribution.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

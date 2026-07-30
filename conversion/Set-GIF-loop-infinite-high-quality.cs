@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set GIF loop infinite high quality using C#
+//
+// Description:
+// Demonstrates how to attempt setting an infinite loop and high quality for a GIF
+// using C# and Aspose.Slides for .NET. The example loads a PPTX file, creates a
+// GifOptions instance, and saves the presentation as a GIF. It also documents the
+// current limitation that loop count and quality settings are not exposed in the
+// API, providing developers with guidance on what is currently supported.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, GIF, Loop, Infinite, High Quality,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Convert PPTX presentations to GIF format in .NET applications.
+// - Understand API limitations regarding GIF loop count and quality settings.
+// - Build C# tools for PowerPoint presentation processing and validation.
+// - Automate presentation workflows that involve GIF output.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

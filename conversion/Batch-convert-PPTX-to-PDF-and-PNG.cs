@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Batch convert PPTX to PDF and PNG using C#
+//
+// Description:
+// Demonstrates how to batch convert all PPTX files in a specified folder to
+// PDF documents and individual slide PNG images using C# and Aspose.Slides for
+// .NET. The example loads each presentation, saves a combined PDF, creates a
+// subfolder for the slide images, and exports each slide as a PNG file. This
+// pattern can be used to automate PowerPoint conversion workflows in .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, PNG, Batch, Convert,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of multiple PPTX files to PDF and per‑slide PNGs.
+// - Generate image previews of slides for web or mobile applications.
+// - Build command‑line tools for PowerPoint content preparation.
+// - Integrate presentation conversion into CI/CD pipelines or document
+//   management systems.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

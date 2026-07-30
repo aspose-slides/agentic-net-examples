@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Substitute missing fonts with Arial SVG using C#
+//
+// Description:
+// Demonstrates how to substitute missing fonts with Arial when converting
+// PowerPoint slides to SVG using Aspose.Slides for .NET. The example loads a
+// PPTX file, sets the default regular font to Arial for SVG export, converts
+// each slide to an SVG file, and optionally saves the presentation.
+// This pattern helps automate PPTX to SVG conversion while handling missing
+// fonts.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SVG, Substitute, Missing,
+// Fonts, Arial, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Convert PPTX slides to SVG with a fallback font for missing glyphs.
+// - Automate presentation conversion pipelines in .NET applications.
+// - Ensure consistent visual output when original fonts are unavailable.
+// - Integrate SVG export functionality into custom tools or services.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

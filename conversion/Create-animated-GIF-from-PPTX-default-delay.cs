@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Create animated GIF from PPTX default delay using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint PPTX file to an animated GIF using
+// the default frame delay and loop settings with Aspose.Slides for .NET. The
+// example loads a presentation, applies default GifOptions, and saves the
+// result as a GIF file. It includes basic error handling for missing input
+// files and other exceptions.
+//
+// Keywords:
+// C#, Aspose.Slides, PPTX, GIF, Animated GIF, Default Delay, Presentation
+// Conversion, .NET, Office Automation
+//
+// Use Cases:
+// - Generate animated GIFs from PowerPoint presentations with default timing.
+// - Automate batch conversion of PPTX files to GIF for web or documentation.
+// - Integrate simple PPTX-to-GIF conversion into .NET applications.
+// - Validate presentation assets before publishing.
+//
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;

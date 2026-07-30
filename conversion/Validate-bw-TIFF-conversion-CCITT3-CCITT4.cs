@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Validate bw TIFF conversion CCITT3 CCITT4 using C#
+//
+// Description:
+// Demonstrates how to validate black‑and‑white TIFF conversion using CCITT3
+// and CCITT4 compression with Aspose.Slides for .NET. The example loads a
+// PowerPoint presentation, configures TiffOptions for BW conversion, and
+// saves the result as a multi‑page TIFF file. This pattern can be used to
+// verify that BW conversion and compression settings produce the expected
+// output in automated workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Validate, TIFF, Conversion,
+// CCITT3, CCITT4, BlackWhiteConversion, Office Automation
+//
+// Use Cases:
+// - Automate validation of BW TIFF conversion with CCITT3/CCITT4 compression.
+// - Build C# utilities for PowerPoint to TIFF conversion testing.
+// - Integrate presentation processing checks into CI pipelines.
+// - Ensure correct image compression settings before publishing assets.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

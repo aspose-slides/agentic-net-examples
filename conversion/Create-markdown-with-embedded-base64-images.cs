@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Create markdown with embedded base64 images using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation to a markdown file
+// with images embedded as base64 data URIs using Aspose.Slides for .NET. The
+// example loads an existing PPTX, configures MarkdownSaveOptions to replace
+// image links with base64-encoded strings, saves the markdown output, and
+// optionally saves the presentation back to PPTX.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Markdown, Embedded Images,
+// Base64, Image Saving, Presentation Conversion, Office Automation
+//
+// Use Cases:
+// - Generate markdown documentation from PowerPoint slides with inline images.
+// - Create self‑contained markdown files for web publishing or documentation.
+// - Automate conversion of PPTX to markdown in CI/CD pipelines.
+// - Preserve visual content without external image files.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

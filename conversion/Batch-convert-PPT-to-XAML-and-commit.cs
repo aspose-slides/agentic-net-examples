@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Batch convert PPT to XAML and commit using C#
+//
+// Description:
+// Demonstrates how to batch convert PowerPoint presentations (PPT/PPTX) to
+// XAML files using Aspose.Slides for .NET and move the generated files into a
+// version‑controlled repository. The console application scans an input folder,
+// exports each presentation to XAML (including hidden slides), and copies the
+// results to an output folder, overwriting existing files.
+//
+// Keywords:
+// C#, PowerPoint, PPT, PPTX, XAML, Aspose.Slides for .NET, Batch conversion,
+// Commit, Presentation processing, Office automation
+//
+// Use Cases:
+// - Automate bulk conversion of PPT/PPTX files to XAML for UI or documentation.
+// - Integrate PowerPoint conversion into CI/CD pipelines with repository commit.
+// - Build tools that prepare presentation assets for WPF or other XAML‑based
+//   platforms.
+// - Validate and manage presentation conversions in .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

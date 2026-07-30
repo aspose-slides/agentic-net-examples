@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Convert PPT to markdown preserving titles using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation (PPTX) to a Markdown
+// document while preserving slide titles, slide numbers, and hidden slides using
+// Aspose.Slides for .NET. The example configures GitHub‑flavored Markdown,
+// sequential export, and Unix line endings in a standalone console application.
+// Developers can adapt this pattern to automate PPTX to Markdown workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Markdown, Convert, Preserve Titles,
+// Slide Numbers, Hidden Slides, GitHub Flavor, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX files to Markdown with titles and slide numbers.
+// - Build .NET tools for generating documentation from presentations.
+// - Integrate PowerPoint content into static site generators or wikis.
+// - Preserve hidden slides and ordering when exporting to Markdown.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -27,15 +48,17 @@ class Program
 
         try
         {
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
-            Aspose.Slides.Export.MarkdownSaveOptions mdOptions = new Aspose.Slides.Export.MarkdownSaveOptions();
-            mdOptions.ShowHiddenSlides = true;
-            mdOptions.ShowSlideNumber = true;
-            mdOptions.Flavor = Aspose.Slides.Export.Flavor.Github;
-            mdOptions.ExportType = Aspose.Slides.Export.MarkdownExportType.Sequential;
-            mdOptions.NewLineType = Aspose.Slides.Export.NewLineType.Unix;
+            Presentation presentation = new Presentation(inputPath);
+            MarkdownSaveOptions mdOptions = new MarkdownSaveOptions
+            {
+                ShowHiddenSlides = true,
+                ShowSlideNumber = true,
+                Flavor = Flavor.Github,
+                ExportType = MarkdownExportType.Sequential,
+                NewLineType = NewLineType.Unix
+            };
 
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Md, mdOptions);
+            presentation.Save(outputPath, SaveFormat.Md, mdOptions);
             presentation.Dispose();
         }
         catch (NotSupportedException)

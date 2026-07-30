@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX slides to JPEG 444 color using C#
+//
+// Description:
+// Demonstrates how to export each slide of a PPTX presentation to a JPEG
+// image using 4:4:4 color subsampling (maximum quality) with Aspose.Slides for .NET.
+// The example loads a presentation, iterates through its slides, renders each
+// slide to a full‑scale image, and saves the image as a high‑quality JPEG file.
+// It also shows basic file‑system checks and error handling in a console
+// application.
+//
+// Keywords:
+// C#, Aspose.Slides, PPTX, JPEG, 4:4:4 color, Export, Slides, Presentation, 
+// Image conversion, .NET console application
+//
+// Use Cases:
+// - Convert PowerPoint slides to high‑quality JPEG images for web or print.
+// - Automate batch export of presentations to image assets.
+// - Integrate slide‑to‑image conversion into .NET workflows or services.
+// - Validate slide rendering before publishing or further processing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

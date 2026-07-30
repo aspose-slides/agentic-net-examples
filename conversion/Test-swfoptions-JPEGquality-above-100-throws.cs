@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Test SwfOptions JPEGQuality above 100 throws using C#
+//
+// Description:
+// Demonstrates how setting SwfOptions.JpegQuality to a value greater than 100
+// triggers an ArgumentOutOfRangeException when saving a presentation as SWF
+// with Aspose.Slides for .NET. The example creates a minimal presentation,
+// configures invalid JPEG quality, attempts to save, and verifies that the
+// expected exception is thrown.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, SwfOptions, JpegQuality, ArgumentOutOfRangeException,
+// SWF, PowerPoint, Presentation conversion, Test, Validation
+//
+// Use Cases:
+// - Verify that invalid JPEG quality values are correctly rejected.
+// - Include exception‑handling tests in automated CI pipelines for presentation conversion.
+// - Demonstrate proper error handling when configuring SwfOptions.
+// - Provide a reference for developers implementing custom SWF export logic.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Convert multiple presentations to TIFF in parallel using C#
+//
+// Description:
+// Demonstrates how to load presentation files supplied via command‑line
+// arguments, convert each to a multi‑page TIFF concurrently using
+// Parallel.ForEach, and save the output using Aspose.Slides for .NET.
+// The example includes basic validation, error handling for missing files
+// and unsupported formats, and limits concurrency to the number of logical
+// processors.
+//
+// Keywords:
+// C#, Aspose.Slides, .NET, Parallel, Multi‑threading, TIFF conversion,
+// Presentation conversion, PowerPoint, PPTX, PPT, Command‑line, Batch processing
+//
+// Use Cases:
+// - Automate batch conversion of PowerPoint presentations to TIFF.
+// - Build command‑line tools for high‑throughput presentation processing.
+// - Integrate parallel TIFF conversion into CI/CD pipelines.
+// - Reduce conversion time for large collections of presentation files.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Threading.Tasks;

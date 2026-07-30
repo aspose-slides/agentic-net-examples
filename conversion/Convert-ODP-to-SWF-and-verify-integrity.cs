@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Convert ODP to SWF and verify integrity using C#
+//
+// Description:
+// Demonstrates how to convert an OpenDocument Presentation (ODP) file to
+// Shockwave Flash (SWF) format and verify the conversion result using
+// Aspose.Slides for .NET. The example loads the ODP file, saves it as SWF,
+// checks that the output file exists and has a non‑zero size, and reports
+// success or failure.
+//
+// Keywords:
+// C#, Aspose.Slides, ODP, SWF, Convert, Verify, Integrity, Presentation,
+// Office Automation, .NET
+//
+// Use Cases:
+// - Automate conversion of ODP presentations to SWF for web preview.
+// - Validate that the conversion produced a non‑empty SWF file.
+// - Integrate ODP‑to‑SWF conversion into .NET batch processing tools.
+// - Ensure file existence and size checks after conversion.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -19,7 +40,7 @@ class Program
         try
         {
             Presentation pres = new Presentation(inputPath);
-            pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Swf);
+            pres.Save(outputPath, SaveFormat.Swf);
             if (File.Exists(outputPath))
             {
                 FileInfo info = new FileInfo(outputPath);

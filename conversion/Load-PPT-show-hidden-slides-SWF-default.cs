@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Load PPT show hidden slides SWF default using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file, include hidden slides, and convert it
+// to SWF format using default compression with Aspose.Slides for .NET. The
+// example performs the necessary presentation-processing steps and outputs a
+// standalone console application. Developers can use this pattern to automate
+// PPTX to SWF conversion while preserving hidden slides.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Load, Show Hidden Slides,
+// Conversion, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX files to SWF while retaining hidden slides.
+// - Build C# tools for PowerPoint presentation processing and export.
+// - Generate SWF assets from presentations in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

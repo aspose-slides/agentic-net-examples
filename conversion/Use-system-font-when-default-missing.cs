@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Use system font when default missing using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation with a fallback system
+// font when the default regular font is missing, optionally add a Unicode
+// range font fallback rule, and save the modified presentation using
+// Aspose.Slides for .NET. This console application shows the required steps
+// for handling missing fonts during presentation processing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, System Font, Default Regular Font,
+// Font Fallback, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Ensure presentations render correctly when the original font is unavailable.
+// - Add custom font fallback rules for specific Unicode ranges.
+// - Automate PowerPoint file processing in .NET applications.
+// - Validate and transform PPTX files with font substitution logic.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides.Export;

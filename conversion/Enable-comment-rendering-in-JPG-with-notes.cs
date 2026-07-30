@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Enable comment rendering in JPG with notes using C#
+//
+// Description:
+// Demonstrates how to enable comment rendering in JPG with notes using C# and 
+// Aspose.Slides for .NET. The example loads a PPTX file, configures rendering 
+// options to include notes and comments, generates JPEG images for slides that 
+// contain comments, and saves the (potentially unchanged) presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, JPG, Enable, Comment, 
+// Rendering, Notes, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate enable comment rendering in JPG with notes.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate JPEG images of slides that contain comments, including notes.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

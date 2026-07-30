@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Load PPTX into presentation verify slide count using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file into an Aspose.Slides Presentation,
+// retrieve the total number of slides, output the count to the console, and
+// optionally save the presentation. The example includes basic file existence
+// checking and exception handling for unsupported formats and other errors.
+// This pattern can be used in console applications that need to validate or
+// process PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, Presentation, Slide Count,
+// Verify, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate loading a PPTX file and verifying its slide count.
+// - Build C# utilities for PowerPoint validation before publishing.
+// - Integrate slide‑count checks into larger .NET workflows.
+// - Save or transform presentations after performing validation steps.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

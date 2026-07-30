@@ -1,7 +1,31 @@
+// -----------------------------------------------------------------------------
+// Example: Convert PPTX to DOCX and extract text using C#
+//
+// Description:
+// Demonstrates how to convert a PPTX presentation to a DOCX document and
+// extract the textual content using C# and Aspose.Slides for .NET together with
+// Aspose.Words for .NET. The example loads a PowerPoint file, saves it as a
+// Word document, then reads the generated DOCX to retrieve all text. This
+// pattern can be used to automate PPTX‑to‑DOCX conversion workflows and to
+// programmatically analyze presentation content.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, DOCX, Aspose.Slides for .NET, Aspose.Words for .NET,
+// Convert, Extract Text, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX files to editable DOCX format.
+// - Build tools that extract and analyze text from PowerPoint presentations.
+// - Integrate presentation conversion into .NET applications or services.
+// - Validate and process presentation content before publishing or further
+//   transformation.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Export;
+using Aspose.Words;
 
 class Program
 {
@@ -20,19 +44,18 @@ class Program
         try
         {
             // Load the presentation
-            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
+            using (Presentation presentation = new Presentation(inputPath))
             {
-                // Aspose.Slides does not support direct DOCX export.
-                // Attempting to use SaveFormat.Docx would cause a compile-time error.
-                // The following line is intentionally omitted:
-                // presentation.Save(docxPath, Aspose.Slides.Export.SaveFormat.Docx);
-
-                // As a placeholder, save as PPTX (or any supported format) to demonstrate saving.
-                presentation.Save(docxPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                // Save the presentation as DOCX
+                presentation.Save(docxPath, SaveFormat.Docx);
             }
 
-            // Since a DOCX file was not created, text extraction from the Word document is not performed here.
-            // If DOCX support were available, you could use Aspose.Words to load the .docx file and extract its text.
+            // Load the generated DOCX and extract its text
+            Document wordDoc = new Document(docxPath);
+            string extractedText = wordDoc.GetText();
+
+            Console.WriteLine("Extracted text from DOCX:");
+            Console.WriteLine(extractedText);
         }
         catch (NotSupportedException)
         {

@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Validate SWF slide order from ODP using C#
+//
+// Description:
+// Demonstrates how to validate that the slide order is preserved when converting
+// an ODP presentation to SWF using Aspose.Slides for .NET. The example checks
+// that the input file exists, verifies it is an ODP format, converts it to SWF,
+// and compares the original slide count to ensure the conversion did not lose
+// or reorder slides. This pattern can be used in automated validation pipelines
+// for presentation conversions.
+//
+// Keywords:
+// C#, ODP, SWF, Aspose.Slides for .NET, Validate, Slide Order, Presentation Conversion, Office Automation
+//
+// Use Cases:
+// - Verify slide order preservation when converting ODP to SWF.
+// - Automate validation of presentation conversion workflows.
+// - Build .NET tools for batch processing and quality checking of ODP files.
+// - Ensure reliable output before publishing or integrating SWF presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

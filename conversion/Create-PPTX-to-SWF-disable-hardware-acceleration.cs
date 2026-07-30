@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Create PPTX to SWF disable hardware acceleration using C#
+//
+// Description:
+// Demonstrates how to convert a PPTX presentation to SWF format while disabling
+// hardware acceleration using Aspose.Slides for .NET. The sample loads an input
+// PPTX file, configures the SwfOptions to turn off hardware acceleration, and
+// saves the result as an SWF file. It includes basic error handling for missing
+// files and unsupported formats.
+//
+// Keywords:
+// C#, Aspose.Slides, PPTX, SWF, Disable Hardware Acceleration, Presentation Conversion,
+// PowerPoint, Export, .NET
+//
+// Use Cases:
+// - Convert PowerPoint presentations to SWF for web viewers without relying on
+//   hardware acceleration.
+// - Integrate PPTX to SWF conversion into automated .NET workflows.
+// - Prepare legacy Flash-compatible presentations while ensuring consistent rendering.
+// - Provide fallback formats for environments where hardware acceleration is unavailable.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

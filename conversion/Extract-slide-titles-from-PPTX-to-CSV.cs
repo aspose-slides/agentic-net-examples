@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Extract slide titles from PPTX to CSV using C#
+//
+// Description:
+// Demonstrates how to extract slide titles from a PowerPoint PPTX file and
+// write them to a CSV file using C# and Aspose.Slides for .NET. The example
+// loads a presentation, retrieves the raw text of each slide, treats the
+// first line as the slide title, and outputs an index‑title pair to a CSV.
+// This pattern can be used to automate slide‑title extraction, generate
+// documentation, or integrate PowerPoint data into other systems.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Extract, Slide, Titles, CSV,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of slide titles from PPTX files to CSV reports.
+// - Build C# utilities for PowerPoint content analysis.
+// - Integrate slide metadata into documentation or data pipelines.
+// - Validate presentation structures before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

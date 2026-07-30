@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Protect PDF with Secure123 password using C#
+//
+// Description:
+// Demonstrates how to protect a PDF with the Secure123 password using C# and 
+// Aspose.Slides for .NET. The example loads a PowerPoint presentation, applies 
+// PDF export options with password protection, and saves the result as a 
+// password‑protected PDF file. This pattern can be used to automate PPTX to PDF 
+// conversion with security in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Protect, Secure123, 
+// Password, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX to password‑protected PDF.
+// - Build C# tools for securing exported presentation PDFs.
+// - Integrate PDF protection into PowerPoint processing workflows.
+// - Ensure confidential presentation content is protected before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;

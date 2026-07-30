@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Set video FPS to 15 using C#
+//
+// Description:
+// Demonstrates how to embed a video that has been pre‑encoded to 15 FPS into a
+// PowerPoint presentation using Aspose.Slides for .NET. The example shows the
+// required steps to create a presentation, add a video frame, configure basic
+// playback settings, and save the PPTX file. Because Aspose.Slides does not
+// provide an API to modify video FPS, the source video must be re‑encoded to
+// the desired frame rate before embedding.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Video, Video FPS, Presentation Processing, 
+// Office Automation
+//
+// Use Cases:
+// - Embed a 15 FPS video into a PowerPoint slide programmatically.
+// - Build C# tools for PowerPoint presentation processing that require specific video frame rates.
+// - Generate or transform PPTX files in .NET applications with pre‑processed video assets.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

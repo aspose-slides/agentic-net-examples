@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Batch convert PPTX to JPG and SVG using C#
+//
+// Description:
+// Demonstrates how to batch convert all PPTX files in a specified folder to
+// individual slide images in JPEG and SVG formats using Aspose.Slides for .NET.
+// The console application accepts an optional input folder argument, creates
+// separate output subfolders for JPG and SVG files, and processes each slide
+// of each presentation. This pattern can be used to automate image extraction
+// from PowerPoint decks in .NET environments.
+//
+// Keywords:
+// C#, .NET, Console, PowerPoint, PPTX, Aspose.Slides, JPEG, JPG, SVG, Batch,
+// Image Export, Slide Rendering, File I/O, Presentation Processing
+//
+// Use Cases:
+// - Extract slide images from multiple PPTX files for web publishing or documentation.
+// - Generate SVG representations of slides for scalable graphics workflows.
+// - Build automated pipelines that convert PowerPoint content to image assets.
+// - Integrate slide-to-image conversion into CI/CD or reporting tools.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

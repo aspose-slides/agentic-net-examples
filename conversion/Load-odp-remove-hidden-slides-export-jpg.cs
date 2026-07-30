@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Load odp remove hidden slides export jpg using C#
+//
+// Description:
+// Demonstrates how to load an ODP presentation, remove hidden slides, and
+// export each remaining slide as a high‑resolution JPG image using C# and
+// Aspose.Slides for .NET. The example includes saving the modified presentation
+// without hidden slides and handling basic error scenarios.
+//
+// Keywords:
+// C#, ODP, Hidden Slides, Export JPG, Aspose.Slides for .NET, Presentation
+// Processing, Office Automation
+//
+// Use Cases:
+// - Automate removal of hidden slides from ODP files.
+// - Generate JPG images from each slide of a presentation.
+// - Build .NET tools for ODP to image conversion workflows.
+// - Validate and preprocess presentations before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

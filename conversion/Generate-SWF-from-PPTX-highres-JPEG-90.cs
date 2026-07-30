@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Generate SWF from PPTX highres JPEG 90 using C#
+//
+// Description:
+// Demonstrates how to generate a SWF file from a PPTX presentation with
+// high‑resolution JPEG quality set to 90 using C# and Aspose.Slides for .NET.
+// The example loads a PowerPoint file, configures SWF export options to use
+// JPEG quality 90, and saves the result as a SWF file. This pattern can be used
+// to automate PPTX to SWF conversions, integrate presentation processing into
+// .NET applications, or validate output quality before publishing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, JPEG, Generate, Highres,
+// Jpeg, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX files to SWF with high JPEG quality.
+// - Build C# utilities for PowerPoint presentation processing and export.
+// - Integrate SWF generation into .NET workflows or web services.
+// - Validate presentation rendering quality before distribution.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

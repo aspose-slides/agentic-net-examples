@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Convert ODP to TIFF 300 DPI using C#
+//
+// Description:
+// Demonstrates how to convert ODP files to TIFF images at 300 DPI using C# and
+// Aspose.Slides for .NET. The example processes all .odp files in a specified
+// folder (or the current directory) and saves each as a high‑quality TIFF file.
+// Developers can use this pattern to automate batch conversion of OpenDocument
+// presentations to raster images.
+//
+// Keywords:
+// C#, ODP, TIFF, 300DPI, Aspose.Slides for .NET, Conversion, Batch Processing,
+// Presentation Automation
+//
+// Use Cases:
+// - Batch convert ODP presentations to high‑resolution TIFF images.
+// - Integrate ODP to TIFF conversion into .NET command‑line tools.
+// - Prepare presentation assets for printing or archival.
+// - Automate image generation from OpenDocument slides in CI pipelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

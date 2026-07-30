@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Apply custom font substitution before conversion using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, define a custom font
+// substitution rule (e.g., replace Arial with Times New Roman) using the
+// FontsManager, and save the modified presentation. This standalone console
+// application shows the necessary Aspose.Slides for .NET steps to ensure
+// correct font rendering during conversion or further processing.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, Font Substitution, FontsManager,
+// FontData, FontSubstRule, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Ensure missing fonts are substituted before converting or rendering PPTX files.
+// - Automate font replacement in batch PowerPoint processing tools.
+// - Build .NET utilities that prepare presentations for publishing with consistent fonts.
+// - Integrate custom font handling into larger document workflow pipelines.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -31,7 +52,7 @@ class Program
                 presentation.FontsManager.FontSubstRuleList.Add(substitutionRule);
 
                 // Save the modified presentation
-                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                presentation.Save(outputPath, SaveFormat.Pptx);
             }
         }
         catch (NotSupportedException)

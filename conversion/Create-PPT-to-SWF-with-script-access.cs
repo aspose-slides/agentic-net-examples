@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Create PPT to SWF with script access using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation (PPTX) to an SWF file
+// while preserving JavaScript hyperlink functionality using Aspose.Slides for .NET.
+// The example loads a presentation, enables media controls, configures SWF options
+// to keep script links, and saves the result as an SWF file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Script Access, JavaScript Links,
+// Presentation Conversion, Office Automation
+//
+// Use Cases:
+// - Convert PPTX files to SWF format with active JavaScript hyperlinks.
+// - Build .NET utilities for PowerPoint to SWF conversion with script support.
+// - Automate batch processing of presentations for web publishing.
+// - Integrate SWF generation into existing C# applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

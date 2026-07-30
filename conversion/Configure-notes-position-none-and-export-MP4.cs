@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Configure notes position none and export MP4 using C#
+//
+// Description:
+// Demonstrates how to configure notes position to none and export a presentation
+// as an MP4 video using C# and Aspose.Slides for .NET. The example loads a PPTX
+// file, hides notes during video rendering, and saves the result as an MP4 file.
+// This pattern can be used to automate video generation from PowerPoint files
+// while controlling note visibility.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Configure, Notes, Position, None,
+// Export, MP4, Video, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate generation of MP4 videos from PowerPoint presentations with notes hidden.
+// - Build C# tools for PowerPoint to video conversion.
+// - Integrate presentation video export into .NET applications.
+// - Create video assets for e‑learning, marketing, or documentation workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -20,28 +41,16 @@ class Program
         try
         {
             // Load the presentation
-            Presentation presentation = new Presentation(inputPath);
+            using (Presentation presentation = new Presentation(inputPath))
+            {
+                // Configure notes to be hidden during video rendering
+                VideoOptions videoOptions = new VideoOptions();
+                videoOptions.NotesPosition = NotesPositions.None;
 
-            // Configure notes to be hidden during rendering
-            NotesCommentsLayoutingOptions notesOptions = new NotesCommentsLayoutingOptions();
-            notesOptions.NotesPosition = Aspose.Slides.Export.NotesPositions.None;
-
-            // NOTE: Aspose.Slides does not provide a built‑in MP4 export option in this version.
-            // Attempting to save as MP4 would raise a NotSupportedException.
-            // The following line is commented out to keep the code compilable.
-            // presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Mp4, notesOptions);
-
-            // Since MP4 export is not supported, inform the user.
-            Console.WriteLine("MP4 video export is not supported by the current Aspose.Slides library.");
-
-            // Save the presentation (e.g., as PDF) to demonstrate that the presentation can be saved.
-            string fallbackPath = Path.ChangeExtension(outputPath, ".pdf");
-            PdfOptions pdfOptions = new PdfOptions();
-            pdfOptions.SlidesLayoutOptions = notesOptions; // Hide notes in the PDF as well
-            presentation.Save(fallbackPath, Aspose.Slides.Export.SaveFormat.Pdf, pdfOptions);
-
-            // Dispose the presentation before exiting
-            presentation.Dispose();
+                // Export the presentation as MP4
+                presentation.Save(outputPath, SaveFormat.Mp4, videoOptions);
+                Console.WriteLine("Presentation exported successfully to MP4: " + outputPath);
+            }
         }
         catch (NotSupportedException)
         {

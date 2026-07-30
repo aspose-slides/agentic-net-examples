@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set JPEG quality based on slide resolution using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, evaluate each slide's
+// width, choose a JPEG compression quality based on that resolution, and
+// export the slides as JPEG images using Aspose.Slides for .NET. The example
+// also shows basic error handling and saving the original presentation.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, JPEG, Image Export, Slide Resolution,
+// Quality, Presentation Processing, .NET
+//
+// Use Cases:
+// - Export slides to JPEG with quality adjusted to slide size.
+// - Build automation tools that adapt image compression based on slide dimensions.
+// - Integrate conditional image export into .NET PowerPoint processing pipelines.
+// - Validate and preview slide images before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

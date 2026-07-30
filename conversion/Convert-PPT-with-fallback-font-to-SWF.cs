@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Convert PPT with fallback font to SWF using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, apply a fallback font
+// for missing glyphs, and convert the file to SWF format using Aspose.Slides for
+// .NET. The example includes basic validation of the input file and error
+// handling for unsupported formats.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, SWF, fallback font, presentation conversion,
+// file I/O, exception handling
+//
+// Use Cases:
+// - Convert existing PPTX presentations to SWF for web preview with a fallback font.
+// - Automate batch conversion of PowerPoint files in .NET applications.
+// - Ensure consistent rendering when original fonts are unavailable.
+// - Integrate presentation conversion into custom tooling or services.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -30,10 +49,10 @@ namespace ConvertPptToSwf
                     swfOptions.DefaultRegularFont = "Arial"; // Fallback font name
 
                     // Save the presentation as SWF using the correct SaveFormat enum
-                    presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Swf, swfOptions);
+                    presentation.Save(outputPath, SaveFormat.Swf, swfOptions);
 
                     // Save the presentation before exiting (as required by lifecycle rules)
-                    presentation.Save("saved.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+                    presentation.Save("saved.pptx", SaveFormat.Pptx);
                 }
             }
             catch (PptUnsupportedFormatException)

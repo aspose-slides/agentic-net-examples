@@ -1,3 +1,21 @@
+// -----------------------------------------------------------------------------
+// Example: Create conversion summary CSV file using C#
+//
+// Description:
+// Demonstrates how to convert PowerPoint presentations to PDF using Aspose.Slides for .NET
+// and generate a CSV summary containing the input file name, output PDF size, and conversion time.
+// The example processes multiple presentation files supplied as command‑line arguments
+// and writes the results to a standalone CSV file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, PDF, Aspose.Slides for .NET, Conversion, Summary, CSV, File I/O, Presentation Processing
+//
+// Use Cases:
+// - Automate batch conversion of PPTX files to PDF with performance metrics.
+// - Build C# utilities for PowerPoint presentation processing and reporting.
+// - Generate conversion logs for validation or auditing purposes.
+// - Integrate presentation conversion into .NET automation pipelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Diagnostics;

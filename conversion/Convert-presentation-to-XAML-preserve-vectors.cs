@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Convert presentation to XAML preserve vectors using C#
+//
+// Description:
+// Demonstrates how to convert a PowerPoint presentation to XAML while preserving
+// vector graphics using C# and Aspose.Slides for .NET. The example loads a PPTX
+// file, configures XAML export options to include hidden slides, and saves the
+// resulting XAML files to a specified output folder.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Convert, Presentation, XAML, 
+// Preserve Vectors, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of presentations to XAML with vector fidelity.
+// - Build C# utilities for PowerPoint content extraction and transformation.
+// - Integrate XAML export into .NET applications for further processing.
+// - Validate and preview presentation layouts in XAML format.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
