@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Set audio frame PlayLoopMode false for video using C#
+//
+// Description:
+// Demonstrates how to set the PlayLoopMode property of audio frames to false
+// on slides that contain video frames using C# and Aspose.Slides for .NET.
+// The example loads a presentation, checks each slide for video frames, and
+// disables looping for any audio frames found on those slides. The modified
+// presentation is then saved as a new PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Audio, Frame, PlayLoopMode, False, Video, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Disable audio looping on slides that contain video content.
+// - Build C# utilities for fine‑tuning media playback in PowerPoint files.
+// - Automate PPTX media settings in .NET applications.
+// - Ensure correct audio behavior before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
