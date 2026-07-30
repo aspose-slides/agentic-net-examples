@@ -1,5 +1,27 @@
+// -----------------------------------------------------------------------------
+// Example: Link picture frame to external image using C#
+//
+// Description:
+// Demonstrates how to create a picture frame in a PowerPoint presentation
+// that links to an external image file without embedding the image data.
+// The example uses Aspose.Slides for .NET to add a placeholder image to satisfy
+// the AddPictureFrame requirement, then sets the picture's link path to an
+// external image. The resulting PPTX contains a linked picture frame, which
+// references the external file at runtime.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Link, Picture Frame, External Image,
+// Presentation Processing, Office Automation, Linked Media
+//
+// Use Cases:
+// - Automate creation of presentations with linked images to reduce file size.
+// - Build .NET tools that reference external media for dynamic content updates.
+// - Generate PPTX files where images are managed separately from the presentation.
+// - Validate linked media workflows before publishing or distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
+using System.Drawing;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
@@ -36,7 +58,7 @@ namespace AsposeSlidesExample
             ISlide slide = presentation.Slides[0];
 
             // Load placeholder image into the presentation's image collection
-            IImage placeholderImage = Images.FromFile(placeholderImagePath);
+            Image placeholderImage = Image.FromFile(placeholderImagePath);
             IPPImage ppPlaceholderImage = presentation.Images.AddImage(placeholderImage);
 
             // Add a picture frame using the placeholder image
