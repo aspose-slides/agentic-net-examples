@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Detect duplicate media files and consolidate using C#
+//
+// Description:
+// Demonstrates how to detect duplicate video and audio media files across
+// multiple PowerPoint presentations and consolidate the unique media into a
+// single presentation using Aspose.Slides for .NET. The example reads a set of
+// input PPTX files, computes SHA‑256 hashes for each media item, stores only
+// distinct media in a new presentation, and saves the result.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Detect, Duplicate, Media, Video,
+// Audio, Consolidate, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate detection of duplicate video and audio files across presentations.
+// - Build tools to consolidate unique media into a single PPTX for reuse.
+// - Manage media assets in PowerPoint files programmatically.
+// - Validate and optimize presentation media before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;
