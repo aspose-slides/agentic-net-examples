@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Compress picture frame image without quality loss using C#
+//
+// Description:
+// Demonstrates how to compress picture frame images in a PowerPoint presentation
+// without quality loss using C# and Aspose.Slides for .NET. The example iterates
+// through all slides and picture frames, applying compression with cropped area
+// removal and a target resolution of 150 DPI. The processed presentation is saved
+// as a new PPTX file. This pattern can be used to optimize PPTX files for web
+// distribution while preserving visual fidelity.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Compress, Picture, Frame,
+// Image, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Reduce file size of PPTX presentations by compressing embedded images.
+// - Prepare PowerPoint files for web publishing with controlled DPI.
+// - Automate image optimization in batch processing of presentations.
+// - Integrate image compression into .NET applications handling PPTX files.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
