@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Apply vignette effect to picture frame using C#
+//
+// Description:
+// Demonstrates how to apply a vignette effect to a picture frame in a PowerPoint
+// presentation using C# and Aspose.Slides for .NET. The example loads an existing
+// presentation (or creates a new one), inserts an image as a picture frame, and
+// adds a radial gradient fill overlay to simulate a vignette. The resulting
+// presentation is saved as a new PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Vignette, Effect, Picture Frame,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding vignette effect to images in PowerPoint slides.
+// - Build .NET tools for enhancing slide visuals programmatically.
+// - Generate or transform PPTX files with custom visual effects.
+// - Validate presentation styling before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
