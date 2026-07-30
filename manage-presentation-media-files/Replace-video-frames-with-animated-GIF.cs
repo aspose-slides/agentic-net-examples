@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Replace video frames with animated GIF using C#
+//
+// Description:
+// Demonstrates how to replace video frames in a PowerPoint presentation with
+// an animated GIF using Aspose.Slides for .NET. The example loads an existing
+// PPTX file, substitutes each video frame's visual content with the specified
+// GIF, removes the embedded video reference, and saves the result as a new
+// PPTX file. This pattern can be used to automate media replacement tasks in
+// presentations.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, Replace video frames, Animated GIF,
+// Presentation media processing, Office automation
+//
+// Use Cases:
+// - Automate replacement of video frames with animated GIFs in bulk presentations.
+// - Create tools that standardize media assets across PowerPoint files.
+// - Integrate media transformation steps into .NET applications or CI pipelines.
+// - Prepare presentations for platforms that do not support embedded video.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
