@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Compress picture frame images using C#
+//
+// Description:
+// Demonstrates how to compress picture frame images in a PowerPoint presentation
+// using C# and Aspose.Slides for .NET. The example shows how to iterate through
+// slides and picture frames, apply maximum compression, and save the updated
+// presentation. Developers can use this pattern to automate PPTX workflows,
+// reduce file size, or integrate presentation processing into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Compress, Picture, Frame,
+// Images, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate compression of picture frame images in presentations.
+// - Build C# tools for PowerPoint presentation size optimization.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
