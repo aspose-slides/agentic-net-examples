@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Merge picture frames into composite image using C#
+//
+// Description:
+// Demonstrates how to merge two picture frames from a slide into a single
+// composite image using Aspose.Slides for .NET. The example loads a PPTX,
+// extracts the images from the first two picture frames, creates a side‑by‑side
+// bitmap, inserts the new composite picture frame back into the slide, and
+// saves the updated presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Merge, Picture Frames, Composite Image,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Combine multiple picture frames into one image for simplified layout.
+// - Automate creation of composite graphics in PowerPoint presentations.
+// - Build .NET tools that manipulate slide media content.
+// - Prepare presentations for publishing with merged visual elements.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
