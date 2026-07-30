@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Add proportional scaling to picture frame using C#
+//
+// Description:
+// Demonstrates how to add a picture frame to a slide and set its relative
+// scaling properties to maintain the original image proportions using
+// Aspose.Slides for .NET. The example creates a new presentation, loads an
+// image from the file system, inserts it as a picture frame, applies 100%
+// relative height and width scaling, and saves the result as a PPTX file.
+// This pattern can be used to ensure consistent image rendering across
+// different devices and slide dimensions.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, picture frame, proportional scaling,
+// RelativeScaleHeight, RelativeScaleWidth, image insertion, presentation
+// automation
+//
+// Use Cases:
+// - Insert images into slides while preserving their aspect ratio.
+// - Apply uniform scaling to picture frames for consistent display.
+// - Automate generation of PowerPoint files with correctly scaled graphics.
+// - Build .NET tools that process and export presentations with image handling.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
