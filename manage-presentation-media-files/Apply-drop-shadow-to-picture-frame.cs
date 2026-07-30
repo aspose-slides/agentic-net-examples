@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Apply drop shadow to picture frame using C#
+//
+// Description:
+// Demonstrates how to apply a drop shadow effect to a picture frame using C#
+// and Aspose.Slides for .NET. The example loads an external image, inserts it
+// into a new presentation as a picture frame, configures the outer shadow
+// properties, and saves the resulting PPTX file. This pattern can be used to
+// automate PowerPoint presentation enhancements, validate visual effects, or
+// integrate shadow styling into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, Drop, Shadow, Picture,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate applying a drop shadow to picture frames in presentations.
+// - Build C# tools for enhancing visual appearance of PowerPoint slides.
+// - Generate or transform PPTX files with custom styling in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
