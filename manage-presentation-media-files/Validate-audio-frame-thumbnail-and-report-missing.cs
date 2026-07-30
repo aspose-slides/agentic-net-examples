@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Validate audio frame thumbnail and report missing using C#
+//
+// Description:
+// Demonstrates how to validate audio frame thumbnails and report any missing 
+// thumbnails using C# and Aspose.Slides for .NET. The example loads a PPTX 
+// file, iterates through all slides and shapes, checks each audio frame for an 
+// assigned thumbnail image, reports slides with missing thumbnails, and saves 
+// the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Validate, Audio, Frame, 
+// Thumbnail, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate validation of audio frame thumbnails in PowerPoint presentations.
+// - Build C# tools for detecting missing media assets before publishing.
+// - Integrate presentation quality checks into .NET applications.
+// - Generate reports on media completeness in PPTX files.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
