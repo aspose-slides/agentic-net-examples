@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Clone slide with flash and preserve SWF using C#
+//
+// Description:
+// Demonstrates how to clone a slide that contains a Flash (SWF) object and
+// preserve the embedded SWF file while saving the presentation using
+// Aspose.Slides for .NET. The example loads an existing PPTX, clones the first
+// slide, and saves the result as a new PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone, Slide, Flash, SWF,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate cloning of slides that contain Flash objects while keeping the
+//   original SWF content intact.
+// - Build .NET utilities for managing PowerPoint media assets.
+// - Generate or modify PPTX files programmatically in enterprise workflows.
+// - Validate presentation transformations that involve embedded media.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
