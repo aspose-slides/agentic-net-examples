@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Insert SVG picture frame on slide two using C#
+//
+// Description:
+// Demonstrates how to insert an SVG picture frame onto the second slide of a
+// PowerPoint presentation using C# and Aspose.Slides for .NET. The example
+// creates a new presentation, ensures a second slide exists, reads an SVG file,
+// converts it to an Aspose.Slides image, adds it as a picture frame preserving
+// vector quality, and saves the result as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SVG, Insert, Picture, Frame,
+// Slide, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate insertion of SVG picture frames on specific slides.
+// - Build .NET tools for PowerPoint presentation processing involving vector graphics.
+// - Generate or transform PPTX files with embedded SVG content.
+// - Validate presentation workflows that require high‑quality scalable images.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
