@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Insert high resolution image and generate thumbnails using C#
+//
+// Description:
+// Demonstrates how to insert a high‑resolution image into a presentation slide
+// and generate lower‑resolution thumbnail images for each slide using C# and
+// Aspose.Slides for .NET. The example loads a template PPTX, adds the image as a
+// full‑slide picture, creates JPEG thumbnails, saves them to a folder, and
+// writes the updated presentation to a new file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Insert, High, Resolution, Image,
+// Thumbnails, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate insertion of high‑resolution images into PowerPoint presentations.
+// - Generate slide thumbnails for preview or indexing purposes.
+// - Build .NET tools for PPTX manipulation and media handling.
+// - Validate presentation content before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
