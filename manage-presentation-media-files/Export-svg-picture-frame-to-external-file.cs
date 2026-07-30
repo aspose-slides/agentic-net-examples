@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Export svg picture frame to external file using C#
+//
+// Description:
+// Demonstrates how to export an SVG picture frame from a PowerPoint slide to an
+// external SVG file using C# and Aspose.Slides for .NET. The example loads a
+// presentation, extracts the first shape (assumed to be an SVG picture frame),
+// writes it to a standalone SVG file preserving vector data, and optionally
+// saves the presentation back to PPTX format. This pattern is useful for
+// automating PPTX workflows, extracting vector graphics, or integrating
+// presentation processing into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SVG, Export, Picture, Frame,
+// External, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of SVG picture frames from PowerPoint presentations.
+// - Build C# tools for processing and converting slide graphics to SVG.
+// - Generate or transform PPTX files while preserving vector assets.
+// - Validate and test presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;
