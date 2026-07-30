@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Insert image as slide background with tint using C#
+//
+// Description:
+// Demonstrates how to set an image as the background of a slide and apply a
+// semi‑transparent color tint overlay using Aspose.Slides for .NET. The example
+// creates a new presentation, adds a background picture, overlays a 50%
+// transparent blue rectangle to achieve the tint effect, and saves the result.
+// This pattern can be used to programmatically style slides with tinted
+// backgrounds in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Insert, Image, Slide, 
+// Background, Tint, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding a tinted image background to PowerPoint slides.
+// - Build C# utilities for customizing slide appearance with color overlays.
+// - Generate or modify PPTX files with branded background styles in .NET.
+// - Validate visual presentation workflows before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Drawing;
