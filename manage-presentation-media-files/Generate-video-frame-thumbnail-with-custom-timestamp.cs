@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Generate video frame thumbnail with custom timestamp using C#
+//
+// Description:
+// Demonstrates how to generate thumbnails for video frames within a PowerPoint
+// presentation while applying a custom timestamp offset using Aspose.Slides for
+// .NET. The example loads a PPTX file, sets a start trim offset on each video
+// frame, creates a JPEG thumbnail of the slide containing the video, and saves
+// both the thumbnails and the modified presentation.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, VideoFrame, Thumbnail, Custom Timestamp,
+// TrimFromStart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Generate video frame thumbnails with a specific start time for documentation.
+// - Adjust video playback start positions programmatically in presentations.
+// - Automate extraction of slide images that contain video content.
+// - Build .NET tools for processing and modifying PowerPoint media assets.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
