@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add video frame third slide autoplay loop using C#
+//
+// Description:
+// Demonstrates how to add a video frame to the third slide of a presentation,
+// configure it for autoplay and loop playback, and save the result as a PPTX
+// file using Aspose.Slides for .NET. The example includes validation of the
+// source video file, ensures the presentation contains at least three slides,
+// and shows the necessary presentation‑processing steps in a standalone console
+// application.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Video, Frame, Third Slide, 
+// Autoplay, Loop, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding a video frame with autoplay and loop to the third slide.
+// - Build C# utilities for PowerPoint media handling and presentation automation.
+// - Generate or modify PPTX files programmatically in .NET applications.
+// - Validate media integration workflows before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
