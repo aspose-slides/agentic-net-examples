@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set audio frame start using C#
+//
+// Description:
+// Demonstrates how to set the start position (trim from start) of an audio
+// frame in a PowerPoint presentation using C# and Aspose.Slides for .NET.
+// The example loads a presentation, embeds an audio file, trims the first
+// two seconds, and saves the updated file. This pattern can be used to
+// control audio playback timing in automated PPTX processing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Audio, Frame, TrimFromStart, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Adjust audio playback start time in generated presentations.
+// - Build C# tools for precise media timing in PowerPoint files.
+// - Automate embedding and trimming of audio in PPTX documents.
+// - Validate audio synchronization before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;
