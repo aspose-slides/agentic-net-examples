@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add captions to video frames and export using C#
+//
+// Description:
+// Demonstrates how to read slide notes, add them as caption tracks to video
+// frames within each slide, and save the updated presentation using Aspose.Slides
+// for .NET. The example processes an input PPTX, extracts notes text per slide,
+// attaches the notes as UTF‑8 captions to any video frames found, and exports the
+// result as a new PPTX file.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, Video Frames, Captions, Notes,
+// Presentation Processing, Export, Office Automation
+//
+// Use Cases:
+// - Automatically embed slide notes as captions into video frames.
+// - Build .NET tools that enhance presentations with synchronized captions.
+// - Convert or enrich existing PPTX files with video metadata.
+// - Validate and automate PPTX workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Text;
