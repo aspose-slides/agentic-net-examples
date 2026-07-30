@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Summarize slide media objects and sizes using C#
+//
+// Description:
+// Demonstrates how to enumerate audio and video objects on each slide of a
+// PowerPoint presentation, collect their file sizes, and output the result as
+// a JSON report. The example also shows how to save the original presentation
+// after processing using Aspose.Slides for .NET. This pattern can be used to
+// audit media usage, enforce size limits, or generate documentation for PPTX
+// files in a standalone console application.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Summarize, Slide, Media,
+// Objects, Presentation Processing, JSON, Audio, Video, Automation
+//
+// Use Cases:
+// - Generate a media usage report for PowerPoint presentations.
+// - Validate that slide media does not exceed size constraints.
+// - Automate extraction of media metadata for content management systems.
+// - Integrate media auditing into .NET build or CI pipelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;
