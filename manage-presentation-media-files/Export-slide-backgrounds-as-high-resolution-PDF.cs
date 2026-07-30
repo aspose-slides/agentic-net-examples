@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Export slide backgrounds as high resolution PDF using C#
+//
+// Description:
+// Demonstrates how to export the backgrounds of all slides in a PowerPoint
+// presentation to a high‑resolution PDF file using C# and Aspose.Slides for .NET.
+// The example loads a PPTX file, configures PDF export options for 300 DPI
+// printing quality, and saves the result as a PDF document.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Export, Slide, Backgrounds,
+// High Resolution, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate the conversion of slide backgrounds to high‑resolution PDFs.
+// - Build .NET tools for extracting and preserving slide visual assets.
+// - Generate printable PDFs from presentations with optimal quality.
+// - Integrate slide background export into larger PowerPoint processing pipelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
