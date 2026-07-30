@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Detect excessive crop and reset picture frame using C#
+//
+// Description:
+// Demonstrates how to detect picture frames with cropping applied and
+// delete the cropped areas, effectively resetting the picture frame using
+// Aspose.Slides for .NET. The example loads a PPTX file, processes each slide,
+// removes cropping from picture frames, and saves the updated presentation.
+// This pattern can be used to clean up presentations before publishing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Detect, Excessive, Crop, Reset,
+// Picture Frame, Delete Cropped Areas, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Detect and remove excessive cropping from picture frames in PPTX files.
+// - Automate cleanup of presentations to ensure images are not unintentionally cropped.
+// - Build .NET tools for PowerPoint presentation processing and validation.
+// - Integrate picture frame normalization into document workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
