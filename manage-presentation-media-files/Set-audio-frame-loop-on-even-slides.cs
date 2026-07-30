@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set audio frame loop on even slides using C#
+//
+// Description:
+// Demonstrates how to embed an audio file into each slide of a presentation
+// and configure the audio frame to loop playback only on even-indexed slides
+// using Aspose.Slides for .NET. The example creates a new PPTX file, adds
+// audio frames, sets the PlayLoopMode property based on slide index, and saves
+// the result. This pattern can be used to automate audio playback settings in
+// PowerPoint presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Audio, Audio Frame, Loop, Even Slides,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting audio loop playback on specific slides.
+// - Build tools that embed and configure media in PPTX files.
+// - Generate presentations with customized audio behavior programmatically.
+// - Validate audio settings in PowerPoint automation workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
