@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Apply custom color overlay to picture frame using C#
+//
+// Description:
+// Demonstrates how to load an external image, insert it as a picture frame,
+// and apply a semi‑transparent solid color overlay using the FillFormat API of
+// Aspose.Slides for .NET. The example creates a new presentation, adds the
+// picture frame with the overlay, and saves the result as a PPTX file. This
+// pattern can be used to programmatically enhance images in PowerPoint slides.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, Picture Frame, Color Overlay,
+// FillFormat, SolidFillColor, Image Processing, Office Automation
+//
+// Use Cases:
+// - Add a semi‑transparent color overlay to images in PowerPoint slides.
+// - Automate visual styling of picture frames in presentation generation.
+// - Build .NET utilities that programmatically modify slide content.
+// - Prepare PPTX files with branded or highlighted image overlays.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
