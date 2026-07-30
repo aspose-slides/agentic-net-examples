@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Convert SVG graphic to shape objects using C#
+//
+// Description:
+// Demonstrates how to load an SVG file, convert its vector graphics into
+// individual shape objects by creating a group shape on a slide, and save the
+// result as a PPTX presentation using Aspose.Slides for .NET. The example
+// includes basic file existence checks and exception handling for unsupported
+// formats and I/O errors.
+//
+// Keywords:
+// C#, Aspose.Slides, SVG, Shape Objects, Convert, Presentation, PPTX, 
+// Office Automation, Vector Graphics
+//
+// Use Cases:
+// - Convert SVG graphics into editable PowerPoint shapes.
+// - Automate batch processing of SVG assets for presentations.
+// - Integrate SVG-to-PPTX conversion into .NET applications.
+// - Validate and transform vector graphics before publishing slides.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
