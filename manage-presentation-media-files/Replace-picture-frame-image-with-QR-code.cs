@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Replace picture frame image with QR code using C#
+//
+// Description:
+// Demonstrates how to locate the first picture frame on the first slide of a
+// PowerPoint presentation and replace its image with a QR code image using
+// Aspose.Slides for .NET. The example loads an existing PPTX, reads a QR code
+// PNG file, substitutes the picture frame's image, and saves the result as a
+// new PPTX file. This pattern can be used in console applications or services
+// that need to programmatically update presentation media.
+//
+// Keywords:
+// C#, .NET, PowerPoint, PPTX, Aspose.Slides, QR code, Image replacement, 
+// Picture frame, Presentation processing, Office automation
+//
+// Use Cases:
+// - Automatically replace placeholder images with generated QR codes.
+// - Build C# utilities for batch updating PPTX files.
+// - Integrate QR code insertion into reporting or marketing workflows.
+// - Validate and test presentation modifications before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
