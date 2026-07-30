@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Auto adjust picture frame width ratio using C#
+//
+// Description:
+// Demonstrates how to automatically adjust a picture frame's width ratio
+// based on the slide's aspect ratio using C# and Aspose.Slides for .NET.
+// The example creates a new presentation, inserts an image as a picture
+// frame, computes the slide aspect ratio, applies the ratio to the picture
+// frame's width scaling while preserving its height, locks the aspect ratio,
+// and saves the result as a PPTX file.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, picture frame, width ratio,
+// aspect ratio, slide size, image insertion, presentation automation
+//
+// Use Cases:
+// - Adjust picture frame dimensions dynamically according to slide size.
+// - Build .NET utilities that modify image scaling in PowerPoint files.
+// - Automate preparation of presentations with consistent visual layout.
+// - Validate and transform PPTX media assets programmatically.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
