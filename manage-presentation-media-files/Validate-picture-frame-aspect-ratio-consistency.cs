@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Validate picture frame AspectRatioLocked consistency using C#
+//
+// Description:
+// Demonstrates how to iterate through all slides and picture frames in a PPTX
+// file to verify that the ShapeLock.AspectRatioLocked property is consistent
+// across the entire presentation. The example loads a presentation, checks the
+// setting, reports the result, and saves the file using Aspose.Slides for .NET.
+// This pattern helps developers enforce uniform picture frame lock settings in
+// automated PowerPoint processing.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, PictureFrame, AspectRatioLocked, ShapeLock,
+// Presentation Validation, Office Automation
+//
+// Use Cases:
+// - Verify that all picture frames share the same AspectRatioLocked value.
+// - Build validation tools for PowerPoint presentations in .NET.
+// - Enforce consistent picture frame lock settings before publishing.
+// - Integrate picture frame consistency checks into automated PPTX workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
