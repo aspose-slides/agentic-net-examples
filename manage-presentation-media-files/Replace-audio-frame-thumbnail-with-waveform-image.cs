@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Replace audio frame thumbnail with waveform image using C#
+//
+// Description:
+// Demonstrates how to replace an audio frame's thumbnail with a custom waveform
+// image using C# and Aspose.Slides for .NET. The example loads a PPTX file,
+// reads a PNG waveform image, adds the image to the presentation's image
+// collection, iterates through all slides and shapes, replaces each audio
+// frame's thumbnail, and saves the modified presentation. This pattern can be
+// used to automate PPTX workflows, customize audio visuals, or integrate
+// presentation processing into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Replace, AudioFrame, Thumbnail,
+// Waveform Image, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate replacement of audio frame thumbnails with custom waveform images.
+// - Build C# utilities for PowerPoint presentation media customization.
+// - Generate or transform PPTX files with enhanced audio visual cues in .NET.
+// - Validate and test presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
