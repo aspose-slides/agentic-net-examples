@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add picture frame from embedded resource using C#
+//
+// Description:
+// Demonstrates how to add a picture frame to a slide using an image that is
+// embedded as a resource in the assembly. The example creates a new presentation,
+// retrieves the embedded PNG image, adds it to the presentation's image collection,
+// and inserts a picture frame that covers the entire slide. The resulting PPTX
+// file is saved to the current directory.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Embedded Resource, Image, Picture Frame,
+// Presentation Generation, .NET Automation
+//
+// Use Cases:
+// - Insert images packaged within an application into PowerPoint slides.
+// - Build .NET tools that generate presentations with embedded assets.
+// - Automate creation of slide decks without external image files.
+// - Ensure consistent branding by using embedded resources for graphics.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Reflection;
