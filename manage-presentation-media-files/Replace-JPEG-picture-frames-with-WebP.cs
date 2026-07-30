@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Replace JPEG picture frames with WebP using C#
+//
+// Description:
+// Demonstrates how to locate JPEG picture frames in a PowerPoint presentation
+// and replace them with a WebP image using Aspose.Slides for .NET. The example
+// loads an input PPTX, substitutes all JPEG images embedded in picture frames
+// with a provided WebP file, and saves the result as a new PPTX. This pattern
+// can be used to modernize image assets, reduce file size, or conform to
+// specific image format requirements in automated workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, JPEG, WebP, Replace, Picture, 
+// Frames, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of JPEG picture frames to WebP in bulk presentations.
+// - Build .NET tools for optimizing PowerPoint media assets.
+// - Integrate image format replacement into CI/CD pipelines for documentation.
+// - Validate and transform PPTX files before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
