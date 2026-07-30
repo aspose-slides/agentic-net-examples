@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Replace audio frame thumbnail with placeholder using C#
+//
+// Description:
+// Demonstrates how to replace audio frame thumbnails with a placeholder image
+// using C# and Aspose.Slides for .NET. The example loads a presentation,
+// adds a placeholder image to the presentation resources, iterates through
+// all slides, replaces each audio frame's thumbnail with the placeholder,
+// and saves the result as a new PPTX file. This pattern can be used to
+// automate thumbnail replacement in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Replace, Audio, Frame,
+// Thumbnail, Placeholder, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate replacement of audio frame thumbnails with a standard placeholder.
+// - Build C# utilities for PowerPoint presentation media management.
+// - Generate or modify PPTX files in .NET applications.
+// - Ensure consistent visual representation of audio frames before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
