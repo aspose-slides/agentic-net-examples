@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Detect broken media links and remove using C#
+//
+// Description:
+// Demonstrates how to detect broken video and audio media links in a PowerPoint
+// presentation and remove the corresponding shapes using C# and Aspose.Slides for
+// .NET. The example loads a PPTX file, checks each video and audio frame for an
+// embedded source or a valid external file, removes shapes with missing media,
+// and saves a cleaned presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Detect, Broken, Media, Links,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Clean up presentations by removing video/audio placeholders with missing files.
+// - Automate validation of media assets before publishing or distribution.
+// - Build .NET tools that ensure PPTX files contain only valid media references.
+// - Integrate media integrity checks into larger PowerPoint processing pipelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
