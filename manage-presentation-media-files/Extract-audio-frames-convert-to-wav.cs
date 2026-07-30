@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Extract audio frames convert to wav using C#
+//
+// Description:
+// Demonstrates how to extract embedded audio frames from a PowerPoint presentation
+// and convert them to WAV files using C# and Aspose.Slides for .NET. The example
+// loads a PPTX file, iterates through its slides and shapes, extracts audio data
+// from IAudioFrame objects, and writes the binary audio content to separate WAV
+// files in an output directory. This pattern can be used to automate media
+// extraction tasks in presentation processing workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Extract, Audio, Frames, Convert,
+// WAV, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of embedded audio from PowerPoint files.
+// - Build tools that convert presentation audio to standard WAV format.
+// - Integrate audio media handling into .NET applications that process PPTX.
+// - Validate and archive audio assets from presentations before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
