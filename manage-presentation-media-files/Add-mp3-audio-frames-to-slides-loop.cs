@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add audio frames to slides loop using C#
+//
+// Description:
+// Demonstrates how to add audio frames (e.g., MP3 or WAV) to multiple slides in a
+// loop using C# and Aspose.Slides for .NET. The example shows the required
+// presentation-processing steps for PowerPoint files and produces the
+// requested output in a standalone console application. Developers can use
+// this pattern to automate PPTX workflows, validate results, or integrate
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Audio, AudioFrame, Slides, Loop,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding audio frames to a series of slides.
+// - Build C# tools for PowerPoint presentation processing with embedded audio.
+// - Generate or transform PPTX files that include audio playback across slides.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
