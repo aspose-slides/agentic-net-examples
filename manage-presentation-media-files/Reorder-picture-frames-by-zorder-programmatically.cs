@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Reorder picture frames by zorder programmatically using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, collect all picture
+// frames on a slide, sort them by their Z‑order (back‑to‑front), and then
+// reorder the shapes collection accordingly using Aspose.Slides for .NET.
+// The modified presentation is saved as a new PPTX file. This pattern can be
+// used to control visual stacking of images in automated PPTX workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Reorder, Picture, Frames,
+// Zorder, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate reordering of picture frames by Z‑order in existing presentations.
+// - Build .NET tools that adjust visual layering of images for consistent output.
+// - Integrate picture‑frame ordering logic into larger PowerPoint processing pipelines.
+// - Validate and correct Z‑order issues before publishing or further manipulation.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;
