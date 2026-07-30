@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Replace audio clip with mp3 by index using C#
+//
+// Description:
+// Demonstrates how to replace an existing audio clip on a specific slide
+// with a new MP3 file by using its slide index. The example loads a PPTX,
+// locates the first audio frame on the given slide, adds the MP3 to the
+// presentation's audio collection, substitutes the embedded audio, and
+// saves the modified presentation. It uses Aspose.Slides for .NET and can
+// be run as a standalone console application.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Replace Audio, MP3, Slide Index,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate replacement of audio clips in PowerPoint presentations.
+// - Build command‑line tools for updating media assets in PPTX files.
+// - Integrate audio update functionality into .NET applications.
+// - Validate and test presentation media workflows before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
