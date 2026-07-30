@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Export slide PNG images while preserving embedded media using C#
+//
+// Description:
+// Demonstrates how to export each slide of a PowerPoint presentation as a high‑resolution PNG image
+// and then save the presentation to retain any embedded media using Aspose.Slides for .NET.
+// The example includes loading a PPTX file, creating an output folder, scaling the images,
+// exporting them, and finally saving the presentation unchanged to preserve embedded media.
+// This pattern can be used in console applications for automated slide image extraction
+// and media preservation tasks.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Export, Slide, Images, Preserve, Embedded Media,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of high‑resolution slide images while keeping embedded media intact.
+// - Build C# utilities for PowerPoint presentation processing and archival.
+// - Generate PNG assets from PPTX files for web or documentation purposes.
+// - Ensure embedded audio, video, or other media remain functional after processing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
