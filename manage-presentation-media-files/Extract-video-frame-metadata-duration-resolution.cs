@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Extract video frame metadata (duration, resolution) using C#
+//
+// Description:
+// Demonstrates how to iterate through video frames in a PowerPoint presentation
+// using Aspose.Slides for .NET and retrieve available metadata such as content
+// type. While Aspose.Slides does not directly expose duration and resolution,
+// the example shows where to integrate external media libraries to obtain those
+// properties. The code loads a PPTX, processes each video frame, outputs basic
+// metadata, and saves the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Extract, Video, Frame,
+// Metadata, Duration, Resolution, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Enumerate video frames in a presentation and collect metadata.
+// - Extend the example with external libraries to read video duration and resolution.
+// - Automate PPTX analysis for media compliance.
+// - Build tools that validate or transform presentations containing video content.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
