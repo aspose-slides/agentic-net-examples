@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set PNG thumbnail for audio frame using C#
+//
+// Description:
+// Demonstrates how to set a custom PNG thumbnail for an audio frame using C# 
+// and Aspose.Slides for .NET. The example creates a new presentation, adds an 
+// embedded audio frame, configures its playback settings, assigns a PNG image 
+// as the thumbnail, and saves the result as a PPTX file. This pattern can be 
+// used to automate PowerPoint media handling, customize audio presentation 
+// visuals, or integrate media processing into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Thumbnail, Audio, Frame, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting a PNG thumbnail for an audio frame in a presentation.
+// - Build C# tools for PowerPoint media management and customization.
+// - Generate or modify PPTX files with embedded audio and custom visuals.
+// - Validate and test presentation workflows involving audio assets.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
