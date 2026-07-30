@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add mp3 audio to slide three loop using C#
+//
+// Description:
+// Demonstrates how to add an MP3 audio file to the third slide of a PowerPoint
+// presentation and configure it to loop continuously using C# and Aspose.Slides
+// for .NET. The example creates a new presentation, ensures at least three slides
+// exist, adds a linked audio frame to the third slide, sets the loop mode, and
+// saves the result as a PPTX file. This pattern can be used to automate audio
+// insertion and playback settings in PPTX workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Audio, Slide, Three, Loop,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding MP3 audio to the third slide with looping playback.
+// - Build C# tools for PowerPoint presentation processing that include media.
+// - Generate or transform PPTX files with embedded audio in .NET applications.
+// - Validate presentation workflows involving audio before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
