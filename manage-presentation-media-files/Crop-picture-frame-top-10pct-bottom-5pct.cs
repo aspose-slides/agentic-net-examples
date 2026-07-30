@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Crop picture frame top 10pct bottom 5pct using C#
+//
+// Description:
+// Demonstrates how to crop a picture frame by removing 10% from the top and
+// 5% from the bottom using C# and Aspose.Slides for .NET. The example loads a
+// PPTX file, locates the first picture frame on the first slide, applies the
+// crop settings, and saves the modified presentation. This pattern can be used
+// to automate picture cropping in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Crop, Picture, Frame, 10Pct, 5Pct,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate cropping of picture frames in PPTX presentations.
+// - Build C# utilities for PowerPoint image manipulation.
+// - Integrate picture cropping into .NET document processing pipelines.
+// - Prepare presentations with consistent image margins before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
