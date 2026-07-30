@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Resize picture frame images to max 800px using C#
+//
+// Description:
+// Demonstrates how to resize picture frame images in a PowerPoint presentation
+// so that their width does not exceed 800 pixels. The example loads a PPTX file,
+// iterates through all slides and picture frames, scales down any image whose
+// width is larger than 800px while preserving the aspect ratio, and saves the
+// modified presentation. This pattern can be used to enforce size limits on
+// embedded images during automated PPTX processing with Aspose.Slides for .NET.
+// 
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Resize, Picture Frame, Images, 
+// Presentation Processing, Office Automation, Image Scaling
+//
+// Use Cases:
+// - Ensure embedded images in presentations meet size constraints for
+//   performance or layout consistency.
+// - Build automated tools that preprocess PPTX files before publishing.
+// - Integrate image‑size validation into CI pipelines for presentation assets.
+// - Create batch scripts that adjust image dimensions across multiple slides.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
