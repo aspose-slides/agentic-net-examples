@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add high resolution PNG picture frame thumbnail using C#
+//
+// Description:
+// Demonstrates how to add a high‑resolution PNG picture frame to a presentation
+// and downscale it to a thumbnail size using Aspose.Slides for .NET. The example
+// creates a new PPTX file, inserts a picture frame containing the PNG image,
+// applies relative scaling to produce a thumbnail, and saves the result.
+// This pattern can be used to automate thumbnail generation for high‑resolution
+// images within PowerPoint presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, High Resolution, Picture Frame,
+// Thumbnail, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of picture frame thumbnails from high‑resolution PNG images.
+// - Build C# tools for PowerPoint presentation processing that include image scaling.
+// - Generate or transform PPTX files with embedded thumbnails in .NET applications.
+// - Validate image handling workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
