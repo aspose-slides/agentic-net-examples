@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set TIFF background on slide five stretch using C#
+//
+// Description:
+// Demonstrates how to set a TIFF image as the background of the fifth slide
+// in a presentation, stretching the image to fill the slide. The example uses
+// Aspose.Slides for .NET to create a presentation, ensure at least five slides,
+// add the TIFF image as a picture fill, and save the result as a PPTX file.
+// This pattern can be used in console applications for automated PowerPoint
+// processing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, TIFF, Background, Slide, Five,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting a TIFF background on the fifth slide with stretch mode.
+// - Build C# tools for PowerPoint presentation processing and styling.
+// - Generate or transform PPTX files with custom slide backgrounds in .NET.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;
