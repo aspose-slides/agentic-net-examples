@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Split SVG image into shape objects using C#
+//
+// Description:
+// Demonstrates how to read an SVG file, insert it into a PowerPoint slide as a
+// picture frame, convert the SVG into a group of editable shape objects, and
+// save the result as a PPTX file using Aspose.Slides for .NET. The example
+// illustrates the required steps for handling SVG content, creating images,
+// manipulating shapes, and exporting presentations in a console application.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, SVG, Split SVG, Shape objects,
+// GroupShape, PictureFrame, Presentation processing, Office automation
+//
+// Use Cases:
+// - Convert SVG graphics into editable PowerPoint shapes for further editing.
+// - Automate creation of slides from SVG assets in .NET applications.
+// - Build tools that transform vector images into presentation-ready content.
+// - Integrate SVG-to-PPTX conversion into document generation workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
