@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Add tag to slide and save presentation using C#
+//
+// Description:
+// Demonstrates how to add a custom tag to a slide and save the presentation 
+// using C# and Aspose.Slides for .NET. The example loads an existing PPTX file, 
+// adds a tag to the first slide, and saves the modified presentation to an 
+// output folder.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Slide, Tag, CustomData, Save, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding custom metadata to slides.
+// - Build tools for PowerPoint presentation processing in .NET.
+// - Generate or modify PPTX files with custom tags.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
