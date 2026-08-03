@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Measure WriteAsMathMl execution time using C#
+//
+// Description:
+// Demonstrates how to measure the execution time of the WriteAsMathMl method 
+// for a MathParagraph using Aspose.Slides for .NET. The example creates a 
+// presentation, adds a simple mathematical equation, exports it to MathML 
+// in memory while timing the operation, and then saves the presentation. 
+// This pattern helps developers benchmark MathML export performance in 
+// PowerPoint automation scenarios.
+//
+// Keywords:
+// C#, Aspose.Slides, MathML, WriteAsMathMl, performance measurement, 
+// execution time, PowerPoint, PPTX, automation, presentation processing
+//
+// Use Cases:
+// - Benchmark MathML export speed for large or complex equations.
+// - Optimize PowerPoint automation workflows that involve MathML.
+// - Validate performance of Aspose.Slides Math APIs in .NET applications.
+// - Build tools that need to monitor or log MathML generation times.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Diagnostics;
