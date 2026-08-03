@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Capture MathML from a MathParagraph using MemoryStream as byte array in C#
+//
+// Description:
+// Demonstrates how to locate a MathParagraph in a PowerPoint presentation,
+// export its MathML representation to a MemoryStream, retrieve the data as a
+// byte array, and optionally save the MathML to a file. The example also
+// shows basic presentation loading, saving, and error handling using
+// Aspose.Slides for .NET.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, MathML, MemoryStream, Byte array,
+// MathParagraph, Presentation processing, Office automation
+//
+// Use Cases:
+// - Extract MathML from equations embedded in PPTX files.
+// - Build .NET tools that process or transform mathematical content.
+// - Validate or archive MathML representations of slide equations.
+// - Integrate MathML extraction into larger document processing pipelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Close filestream after WriteAsMathMl failure using C#
+//
+// Description:
+// Demonstrates how to safely close a FileStream after attempting to write MathML
+// using Aspose.Slides for .NET. The example creates a presentation, adds a
+// mathematical equation to a slide, writes the equation as MathML to a file with
+// proper resource cleanup, and saves the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, MathML, WriteAsMathMl, FileStream,
+// Close, Resource Cleanup, Math Equations, Presentation Processing
+//
+// Use Cases:
+// - Ensure FileStream is closed after WriteAsMathMl operation, even on failure.
+// - Automate creation of PowerPoint slides containing mathematical equations.
+// - Export mathematical content to MathML for interoperability.
+// - Build robust .NET tools for PowerPoint and MathML handling.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Clone presentation in memory for MathML export using C#
+//
+// Description:
+// Demonstrates how to clone a PowerPoint presentation in memory and export
+// any mathematical equations to MathML using Aspose.Slides for .NET. The
+// example loads an existing PPTX, creates a deep clone of its slides and
+// masters, saves the cloned presentation, and writes MathML for each math
+// paragraph found in the cloned slides to an output file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone, Presentation, Memory,
+// MathML, Math equations, Presentation processing, Office automation
+//
+// Use Cases:
+// - Clone a presentation while preserving slide masters for further processing.
+// - Export mathematical equations from PowerPoint slides to MathML.
+// - Build .NET tools that manipulate PPTX files and extract MathML content.
+// - Validate or transform presentations containing math equations before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;

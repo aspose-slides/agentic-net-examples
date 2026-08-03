@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Load PPTX presentation and extract math using C#
+//
+// Description:
+// Demonstrates how to load a PPTX presentation, iterate through its slides and
+// shapes, identify mathematical portions, convert the equations to LaTeX, and
+// output the results using Aspose.Slides for .NET. The example also saves the
+// (potentially unchanged) presentation, illustrating a complete workflow for
+// PowerPoint math extraction in a console application.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, Extract, Math, LaTeX,
+// Presentation, MathPortion, MathParagraph, Office Automation
+//
+// Use Cases:
+// - Automate extraction of mathematical equations from PPTX files.
+// - Build C# tools for processing PowerPoint presentations containing math.
+// - Convert PowerPoint math equations to LaTeX for documentation or publishing.
+// - Validate and transform PPTX content in .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Validate exported MathML against expected XML using C#
+//
+// Description:
+// Demonstrates how to create a PowerPoint presentation with a math shape,
+// export its MathML representation, and compare it against an expected MathML
+// XML string using Aspose.Slides for .NET. The example shows the required
+// presentation‑processing steps for PowerPoint files and produces the
+// requested output in a standalone console application. Developers can use
+// this pattern to automate PPTX workflows, validate equation export results,
+// or integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, MathML, Validation, Export,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Validate MathML output of equations in PPTX files.
+// - Automate testing of math rendering in PowerPoint presentations.
+// - Build C# utilities for verifying equation export consistency.
+// - Ensure exported MathML meets expected standards before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

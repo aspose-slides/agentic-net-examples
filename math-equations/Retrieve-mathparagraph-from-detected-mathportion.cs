@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Retrieve mathparagraph from detected mathportion using C#
+//
+// Description:
+// Demonstrates how to retrieve a MathParagraph from a detected MathPortion,
+// add a mathematical expression, convert it to LaTeX, and save the presentation
+// using Aspose.Slides for .NET. The example creates a new presentation, adds a
+// math shape, accesses its first MathPortion, manipulates the underlying
+// MathParagraph, and writes the resulting LaTeX string to the console.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Retrieve, MathParagraph,
+// Detected, MathPortion, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate retrieval and modification of MathParagraphs in PPTX files.
+// - Build C# tools for processing mathematical equations in PowerPoint.
+// - Generate LaTeX representations of slide equations.
+// - Validate and transform math content before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides.Export;
 

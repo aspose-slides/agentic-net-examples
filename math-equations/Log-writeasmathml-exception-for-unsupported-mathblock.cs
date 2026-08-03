@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Log writeasmathml exception for unsupported mathblock using C#
+//
+// Description:
+// Demonstrates how to catch and log exceptions that occur when exporting a
+// MathML representation of a math block that may not be supported by
+// Aspose.Slides for .NET. The example creates a simple equation, attempts to
+// write it as MathML, and logs any errors while still saving the presentation.
+// This pattern helps developers handle unsupported math content gracefully.
+//
+// Keywords:
+// C#, Aspose.Slides, MathML, WriteAsMathMl, Exception handling, Unsupported
+// math block, PowerPoint automation, PPTX, Presentation processing
+//
+// Use Cases:
+// - Detect and log MathML export failures for unsupported math equations.
+// - Build robust PowerPoint processing tools that continue operation after
+//   encountering unsupported math content.
+// - Automate creation and export of presentations with mathematical equations.
+// - Integrate MathML export with error handling into .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;

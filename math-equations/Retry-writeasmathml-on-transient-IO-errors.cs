@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Retry writeasmathml on transient IO errors using C#
+//
+// Description:
+// Demonstrates how to retry the WriteAsMathMl operation on transient I/O errors 
+// using C# and Aspose.Slides for .NET. The example creates a presentation, adds a 
+// math shape with a simple fraction, and writes the MathML representation of the 
+// equation to a file with retry logic. It also saves the presentation to PPTX. 
+// Developers can use this pattern to reliably export MathML from PowerPoint 
+// files in automated workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Retry, WriteAsMathMl, MathML, 
+// Transient, Errors, Presentation Processing, Office Automation, Math Equations
+//
+// Use Cases:
+// - Automate retry of WriteAsMathMl on transient I/O errors.
+// - Build C# tools for extracting MathML from PowerPoint presentations.
+// - Generate or transform PPTX files containing mathematical equations.
+// - Validate math shape handling and MathML export in .NET applications.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Threading;
