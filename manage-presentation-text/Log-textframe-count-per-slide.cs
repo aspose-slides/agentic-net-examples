@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Log textframe count per slide using C#
+//
+// Description:
+// Demonstrates how to count and log the number of text frames on each slide
+// of a PowerPoint presentation using Aspose.Slides for .NET. The example
+// loads an input PPTX file, iterates through its slides, writes the count of
+// text frames per slide to a text file, and saves the (unchanged) presentation
+// to an output file. This pattern can be used for diagnostics, validation, or
+// reporting in automated PPTX workflows.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, TextFrame, Slide, Count, Logging,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Generate reports of text frame usage per slide.
+// - Validate slide content before publishing.
+// - Automate diagnostics for PowerPoint presentations.
+// - Integrate slide analysis into .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
