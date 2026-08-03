@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Extract text from ODP and log duration using C#
+//
+// Description:
+// Demonstrates how to extract slide text from ODP files and log the processing
+// duration using C# and Aspose.Slides for .NET. The example iterates over ODP
+// files in an Input folder, measures extraction time, outputs each slide's text,
+// and saves the presentation back to ODP format.
+//
+// Keywords:
+// C#, ODP, Aspose.Slides for .NET, Extract Text, Duration Logging, Presentation
+// Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of text from ODP presentations.
+// - Measure performance of text extraction operations.
+// - Build tools for analyzing or indexing ODP slide content.
+// - Integrate ODP processing into .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Diagnostics;
@@ -29,21 +48,21 @@ class Program
                 Stopwatch stopwatch = new Stopwatch();
                 stopwatch.Start();
 
-                Aspose.Slides.IPresentationText presentationText = Aspose.Slides.PresentationFactory.Instance.GetPresentationText(filePath, Aspose.Slides.TextExtractionArrangingMode.Unarranged);
+                IPresentationText presentationText = PresentationFactory.Instance.GetPresentationText(filePath, TextExtractionArrangingMode.Unarranged);
 
                 stopwatch.Stop();
                 Console.WriteLine($"Processed {Path.GetFileName(filePath)} in {stopwatch.ElapsedMilliseconds} ms.");
 
                 for (int i = 0; i < presentationText.SlidesText.Length; i++)
                 {
-                    Aspose.Slides.ISlideText slideText = presentationText.SlidesText[i];
+                    ISlideText slideText = presentationText.SlidesText[i];
                     Console.WriteLine($"Slide {i + 1}: {slideText.Text}");
                 }
 
                 // Save presentation before exit as required
-                using (Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(filePath))
+                using (Presentation pres = new Presentation(filePath))
                 {
-                    pres.Save(filePath, Aspose.Slides.Export.SaveFormat.Odp);
+                    pres.Save(filePath, SaveFormat.Odp);
                 }
             }
             catch (Exception ex)
