@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Validate slide tags and throw exception using C#
+//
+// Description:
+// Demonstrates how to validate slide tags and throw an exception using C# and 
+// Aspose.Slides for .NET. The example loads a presentation, checks each slide 
+// for a required custom tag, throws an exception if the tag is missing, and 
+// saves the presentation. It also includes handling for unsupported file 
+// formats and general errors.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Validate, Slide, Tags, Throw, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate validation of slide tags and enforce required metadata.
+// - Build C# tools for PowerPoint presentation processing with error handling.
+// - Generate or transform PPTX files in .NET applications while ensuring tag compliance.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
