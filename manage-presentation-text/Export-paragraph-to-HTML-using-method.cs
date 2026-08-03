@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export paragraph to HTML using method using C#
+//
+// Description:
+// Demonstrates how to export paragraphs from a shape to HTML using the
+// ExportToHtml method in Aspose.Slides for .NET. The example loads a PPTX file,
+// locates the first AutoShape with a TextFrame, extracts all its paragraphs,
+// converts them to HTML, and writes the result to a file. It also saves the
+// presentation after processing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, HTML, Export, Paragraph, Method,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of slide text paragraphs to HTML.
+// - Build C# utilities for extracting and publishing slide content.
+// - Integrate paragraph-to-HTML transformation in .NET applications.
+// - Validate and preview presentation text in web-friendly format.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
