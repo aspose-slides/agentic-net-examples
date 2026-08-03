@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Extract cleaned presentation text from factory using C#
+//
+// Description:
+// Demonstrates how to extract cleaned presentation text from a PowerPoint file
+// using Aspose.Slides PresentationFactory with arranged text extraction mode,
+// remove empty or whitespace‑only lines, write the result to a text file, and
+// save a copy of the original presentation. This console application shows the
+// essential steps for processing PPTX files in .NET.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Extract, Cleaned, Presentation,
+// Text, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of cleaned presentation text from PPTX files.
+// - Build C# utilities for PowerPoint content analysis or migration.
+// - Generate plain‑text representations of slides for indexing or search.
+// - Validate and transform presentation content before further processing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Text;
