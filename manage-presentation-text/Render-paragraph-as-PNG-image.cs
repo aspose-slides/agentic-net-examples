@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Render paragraph as PNG image using C#
+//
+// Description:
+// Demonstrates how to extract the first paragraph from the first shape of a
+// PowerPoint slide and render it as a PNG image using System.Drawing. The
+// example loads a presentation with Aspose.Slides for .NET, retrieves the
+// paragraph text, draws it onto a bitmap, saves the bitmap as a PNG file, and
+// finally saves the presentation to satisfy the save‑before‑exit rule.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, PNG, Render, Paragraph, Image, System.Drawing,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Convert a specific paragraph from a PPTX slide into a PNG image.
+// - Create visual assets from slide text for documentation or web use.
+// - Automate extraction and rendering of slide content in .NET applications.
+// - Validate paragraph rendering before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Drawing;
