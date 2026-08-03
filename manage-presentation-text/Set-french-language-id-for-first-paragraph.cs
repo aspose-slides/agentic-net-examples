@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set french language id for first paragraph using C#
+//
+// Description:
+// Demonstrates how to set the French language identifier (fr-FR) for the first
+// paragraph of a text frame in a PowerPoint presentation using Aspose.Slides for
+// .NET. The example creates a new presentation, adds a rectangle shape with a
+// text frame, modifies the language ID of the first portion, and saves the file.
+// This pattern can be used to automate language settings in PPTX files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, French, Language, First,
+// Paragraph, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting French language ID for specific text portions.
+// - Build C# utilities for PowerPoint language localization.
+// - Generate or modify PPTX files with language metadata in .NET applications.
+// - Validate language settings before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
