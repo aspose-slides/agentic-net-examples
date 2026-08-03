@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add version tag to presentation batch using C#
+//
+// Description:
+// Demonstrates how to add a version tag to each presentation in a batch using
+// C# and Aspose.Slides for .NET. The example scans a directory for supported
+// PowerPoint files, inserts a rectangular shape with version text on the first
+// slide, and saves the files in their original format. This pattern can be used
+// to automate version labeling across multiple presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, PPT, ODP, Aspose.Slides for .NET, Version Tag, Batch
+// Processing, Presentation Automation, Office Automation
+//
+// Use Cases:
+// - Automatically add or update version information in a collection of
+//   presentations.
+// - Prepare slide decks for release with consistent version labeling.
+// - Integrate version tagging into CI/CD pipelines for documentation assets.
+// - Perform bulk modifications of PPT/PPTX/ODP files in .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
