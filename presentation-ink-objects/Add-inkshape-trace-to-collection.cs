@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add inkshape trace to collection using C#
+//
+// Description:
+// Demonstrates how to add an ink shape trace to a collection using C# and 
+// Aspose.Slides for .NET. The example shows the required 
+// presentation‑processing steps for PowerPoint files and produces the 
+// requested output in a standalone console application. Developers can use 
+// this pattern to automate PPTX workflows, validate results, or integrate 
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Ink shape, Trace, Collection, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding ink shape traces to a slide.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.Drawing;
 using System.IO;
@@ -27,36 +49,25 @@ class Program
                 // Get the first slide
                 ISlide slide = pres.Slides[0];
 
-                // Add a line shape to act as an ink placeholder (direct Ink addition is not supported)
-                IAutoShape lineShape = slide.Shapes.AddAutoShape(ShapeType.Line, 50f, 150f, 300f, 0f);
-                lineShape.LineFormat.SketchFormat.SketchType = LineSketchType.Scribble;
+                // Add an Ink shape to the slide
+                IInkShape inkShape = slide.Shapes.AddInkShape(50f, 150f, 300f, 200f);
 
-                // Attempt to cast the shape to Ink (will be null for a Line shape)
-                Ink inkShape = lineShape as Ink;
-                if (inkShape != null)
+                // Create points for a new trace
+                PointF[] newPoints = new PointF[]
                 {
-                    // Retrieve existing traces (read‑only)
-                    IInkTrace[] existingTraces = inkShape.Traces;
+                    new PointF(0f, 0f),
+                    new PointF(100f, 100f),
+                    new PointF(200f, 50f)
+                };
 
-                    // Create points for a new trace
-                    PointF[] newPoints = new PointF[]
-                    {
-                        new PointF(0f, 0f),
-                        new PointF(100f, 100f)
-                    };
+                // Create a brush for the trace (black color, 2 pt width)
+                IInkBrush brush = new InkBrush(Color.Black, 2f);
 
-                    // Create a new brush using an existing trace's brush (InkBrush has no public constructor)
-                    IInkBrush existingBrush = existingTraces.Length > 0 ? existingTraces[0].Brush : null;
-                    if (existingBrush != null)
-                    {
-                        // NOTE: The Ink API does not provide a method to add a new trace directly.
-                        // The Traces collection is read‑only, so adding a trace is not possible via public API.
-                        // This placeholder demonstrates how one would obtain the necessary objects if such a method existed.
-                        // Example (hypothetical):
-                        // InkTrace newTrace = new InkTrace(newPoints, existingBrush);
-                        // inkShape.AddTrace(newTrace);
-                    }
-                }
+                // Create a new ink trace using the points and brush
+                IInkTrace newTrace = new InkTrace(newPoints, brush);
+
+                // Add the trace to the Ink shape's trace collection
+                inkShape.Traces.Add(newTrace);
 
                 // Save the presentation
                 pres.Save(outputPath, SaveFormat.Pptx);
