@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Create circular ink trace with radius points using C#
+//
+// Description:
+// Demonstrates how to generate a set of points positioned on a circle's
+// circumference and prepare them for use with an InkTrace in Aspose.Slides for .NET.
+// The example creates a new presentation, adds a placeholder shape, computes
+// radius points, and saves the presentation as a PPTX file. Developers can
+// extend this pattern to embed actual ink strokes into PowerPoint slides.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, InkTrace, Circular, Radius Points,
+// Presentation Generation, Office Automation
+//
+// Use Cases:
+// - Generate circular ink trace data for PowerPoint slides.
+// - Build tools that programmatically create ink-based annotations.
+// - Automate creation of geometric patterns in presentations.
+// - Prototype InkTrace integration before adding real ink strokes.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;
