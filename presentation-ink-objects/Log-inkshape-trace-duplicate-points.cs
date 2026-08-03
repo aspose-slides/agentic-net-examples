@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Log inkshape trace duplicate points using C#
+//
+// Description:
+// Demonstrates how to detect and log duplicate points within ink shape traces
+// in a PowerPoint presentation using Aspose.Slides for .NET. The example loads
+// a PPTX file, iterates through all ink shapes, examines each trace for points
+// that appear more than once, and writes the duplicate point coordinates to the
+// console. The processed presentation is then saved.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Ink shape, Ink trace, Duplicate points, Presentation processing, Office automation
+//
+// Use Cases:
+// - Identify and report duplicate ink points in presentations.
+// - Build validation tools for ink annotations in PPTX files.
+// - Automate cleanup or analysis of ink data in .NET applications.
+// - Integrate ink trace diagnostics into larger PowerPoint workflow pipelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;
