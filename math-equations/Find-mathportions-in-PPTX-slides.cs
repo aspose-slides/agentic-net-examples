@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Find mathportions in PPTX slides using C#
+//
+// Description:
+// Demonstrates how to locate MathPortion objects within PPTX slides using
+// C# and Aspose.Slides for .NET. The example loads a presentation, scans each
+// slide and shape for text portions that represent mathematical equations, 
+// reports their locations, and saves the presentation.
+//
+// Keywords:
+// C#, Aspose.Slides, PPTX, MathPortion, Find, PowerPoint, Presentation Processing,
+// Office Automation, .NET
+//
+// Use Cases:
+// - Detect and list mathematical equations in PowerPoint files.
+// - Build tools that analyze or validate PPTX content for math expressions.
+// - Integrate math detection into automated PowerPoint workflows.
+// - Prepare presentations for further processing based on math content.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
