@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Import inkshape trace from JSON using C#
+//
+// Description:
+// Demonstrates how to import inkshape trace data from a JSON file using C#
+// and Aspose.Slides for .NET. The example reads a JSON array of point traces,
+// logs the points, and creates a placeholder line shape with a scribble sketch
+// to represent ink strokes in a new presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Import, Inkshape, Trace, JSON,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate importing inkshape trace data from JSON into PowerPoint.
+// - Build C# tools for processing ink annotations in presentations.
+// - Generate or modify PPTX files with custom ink-like shapes.
+// - Validate and visualize ink trace data before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;
