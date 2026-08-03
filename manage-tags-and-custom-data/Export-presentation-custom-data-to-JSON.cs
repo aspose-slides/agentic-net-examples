@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export presentation custom data to JSON using C#
+//
+// Description:
+// Demonstrates how to export all custom XML parts from a PowerPoint presentation
+// to a JSON file using C# and Aspose.Slides for .NET. The example loads a PPTX,
+// extracts each custom XML part's ID and XML content, serializes the collection
+// to formatted JSON, and writes it to disk. It also shows basic error handling
+// and re‑saving the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Presentation, Custom XML,
+// Data, JSON, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of custom XML data from PPTX files.
+// - Build tools that convert presentation metadata to JSON for downstream processing.
+// - Integrate custom data export into .NET applications or CI pipelines.
+// - Validate and audit custom data embedded in PowerPoint presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;
