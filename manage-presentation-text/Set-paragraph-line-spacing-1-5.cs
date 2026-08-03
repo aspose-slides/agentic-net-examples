@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set paragraph line spacing 1 5 using C#
+//
+// Description:
+// Demonstrates how to set paragraph line spacing to 1.5 lines (150%) using
+// C# and Aspose.Slides for .NET. The example loads a PPTX file, iterates over
+// all text-containing AutoShapes, updates each paragraph's line spacing, and
+// saves the modified presentation. This pattern can be used to automate
+// paragraph formatting in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Paragraph, Line Spacing, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Adjust line spacing of all paragraphs in a presentation to 1.5 lines.
+// - Build tools that enforce consistent paragraph formatting across slides.
+// - Process and transform PPTX files programmatically in .NET applications.
+// - Prepare presentations for publishing with standardized spacing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
