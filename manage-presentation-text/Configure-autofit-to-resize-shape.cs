@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Configure autofit to resize shape using C#
+//
+// Description:
+// Demonstrates how to configure the TextFrame autofit to resize a shape
+// automatically based on its text content using Aspose.Slides for .NET.
+// The example creates a presentation, adds a rectangle shape with a text
+// frame, sets the autofit type to Shape, modifies the text, and saves the
+// result as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Configure, Autofit, Resize, Shape, TextFrame, Presentation Processing
+//
+// Use Cases:
+// - Automatically adjust shape size to fit dynamic text.
+// - Build .NET utilities that modify PowerPoint layouts.
+// - Generate PPTX files with content‑driven shape dimensions.
+// - Validate autofit behavior in automated presentation workflows.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
