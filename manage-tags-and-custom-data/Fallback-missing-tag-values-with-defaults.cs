@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Fallback missing tag values with defaults using C#
+//
+// Description:
+// Demonstrates how to replace placeholder tags in a PowerPoint presentation
+// with custom tag values, falling back to predefined defaults when a tag is
+// missing. The example loads a PPTX file, reads its custom data tags, updates
+// text placeholders in AutoShapes, and saves the modified presentation using
+// Aspose.Slides for .NET.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Fallback, Missing, Tag, Default,
+// Custom Data, Tags, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate replacement of placeholder text with tag values while providing
+//   defaults for missing tags.
+// - Build C# tools for PowerPoint presentation processing that rely on custom
+//   data tags.
+// - Generate or transform PPTX files in .NET applications with robust fallback
+//   handling.
+// - Validate and prepare presentations before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;
