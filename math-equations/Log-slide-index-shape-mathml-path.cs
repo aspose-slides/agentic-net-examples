@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Export MathML from slide shapes and log slide/shape indices using C#
+//
+// Description:
+// Demonstrates how to iterate through a PowerPoint presentation, identify
+// shapes that contain MathPortion objects, export their MathParagraph content
+// to individual MathML files, and log the slide index, shape name, and output
+// file path. The example also shows how to save the (potentially modified)
+// presentation using Aspose.Slides for .NET in a console application.
+// Developers can adapt this pattern to extract mathematical equations from PPTX
+// files or to build automation tools for presentation processing.
+//
+// Keywords:
+// C#, Aspose.Slides, MathML, MathPortion, MathParagraph, PowerPoint, PPTX,
+// Slide index, Shape index, Presentation automation, Office automation
+//
+// Use Cases:
+// - Extract and export MathML from equations embedded in PowerPoint slides.
+// - Generate per‑shape MathML files for further processing or analysis.
+// - Log slide and shape information for auditing or debugging presentation content.
+// - Integrate MathML extraction into .NET applications or CI pipelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
