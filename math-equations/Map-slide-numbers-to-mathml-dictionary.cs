@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Map slide numbers to MathML dictionary using C#
+//
+// Description:
+// Demonstrates how to map slide numbers to a MathML dictionary using C# and
+// Aspose.Slides for .NET. The example loads a PPTX file, extracts MathML from
+// all mathematical portions on each slide, and returns a dictionary where the
+// key is the slide number (1‑based) and the value is the concatenated MathML
+// content for that slide. It prints the results to the console.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Slide, Numbers, MathML,
+// Dictionary, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of MathML from PowerPoint presentations.
+// - Build C# utilities for slide‑by‑slide mathematical content analysis.
+// - Integrate MathML extraction into .NET applications or services.
+// - Validate and transform mathematical equations in PPTX files before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
 using System.IO;
