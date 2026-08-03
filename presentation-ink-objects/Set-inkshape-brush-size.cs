@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set inkshape brush size using C#
+//
+// Description:
+// Demonstrates how to set the brush size of an Ink shape in a PowerPoint
+// presentation using Aspose.Slides for .NET. The example loads an existing PPTX,
+// accesses the first Ink shape, modifies its brush dimensions, and saves the
+// result. This pattern can be used to automate PPTX workflows, adjust ink
+// appearance, or integrate presentation processing into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Ink shape, Brush size, 
+// Presentation processing, Office automation
+//
+// Use Cases:
+// - Automate setting brush size for Ink shapes.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files with customized ink appearance.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
