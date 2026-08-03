@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Filter slides by multiple tags and export using C#
+//
+// Description:
+// Demonstrates how to filter slides in a PowerPoint presentation based on
+// multiple custom tags (Category, Status, Urgent) using Aspose.Slides for .NET,
+// export only the matching slides to a new PPTX file, and optionally save the
+// original presentation. The example shows loading a presentation, accessing
+// slide custom data, evaluating tag criteria, and saving a subset of slides.
+// This pattern can be used to automate tag‑driven slide selection and export
+// scenarios in .NET applications.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, Slide Tags, CustomData, TagCollection, Filter Slides, Export Slides, Presentation Processing
+//
+// Use Cases:
+// - Select and export slides that meet specific tag conditions.
+// - Build .NET utilities that process presentations based on metadata.
+// - Integrate tag‑based slide filtering into larger automation pipelines.
+// - Preserve the original presentation while generating a filtered copy.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;
