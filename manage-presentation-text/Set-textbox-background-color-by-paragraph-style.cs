@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set textbox background color by paragraph style using C#
+//
+// Description:
+// Demonstrates how to set a textbox's background color based on paragraph
+// style using C# and Aspose.Slides for .NET. The example loads an existing
+// presentation (or creates a new one), adds a rectangle shape with a text
+// frame, accesses the first paragraph, and applies a solid fill color to the
+// shape. The resulting presentation is saved as a PPTX file. This pattern can
+// be adapted to apply different colors depending on paragraph formatting.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Textbox, Background, Color,
+// Paragraph, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting textbox background colors based on paragraph styles.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Drawing;
