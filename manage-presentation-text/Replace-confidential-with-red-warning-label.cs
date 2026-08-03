@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Replace confidential with red warning label using C#
+//
+// Description:
+// Demonstrates how to replace the word "confidential" with a red warning label
+// using C# and Aspose.Slides for .NET. The example loads a PPTX file, searches
+// for the specified text, applies a red solid fill and larger font size, and
+// saves the modified presentation. This pattern can be used to automate
+// confidentiality warnings in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Replace Text, Confidential, Warning, Label, Red Fill, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automatically replace confidential markings with a visible red warning label.
+// - Build C# utilities for batch processing of PowerPoint presentations.
+// - Integrate text replacement and styling into .NET applications.
+// - Ensure compliance by highlighting sensitive content before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Drawing;
