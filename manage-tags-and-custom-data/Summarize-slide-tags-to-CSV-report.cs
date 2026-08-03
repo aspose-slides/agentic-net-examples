@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Summarize slide tags to CSV report using C#
+//
+// Description:
+// Demonstrates how to read custom tags from each slide of a PowerPoint
+// presentation and write them to a CSV file using C# and Aspose.Slides for .NET.
+// The example loads a PPTX file, extracts tag names and values, escapes commas,
+// and produces a simple report that can be used for further analysis or
+// integration.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Summarize, Slide, Tags, CSV,
+// Report, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Generate a CSV inventory of slide tags for documentation or auditing.
+// - Build C# utilities that extract metadata from PowerPoint files.
+// - Integrate slide‑tag extraction into automated .NET workflows.
+// - Validate or transform presentation data before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
