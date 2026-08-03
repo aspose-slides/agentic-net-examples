@@ -1,3 +1,21 @@
+// -----------------------------------------------------------------------------
+// Example: Load PPTX set Japanese language ID for title shape using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file, locate the centered title placeholder,
+// and set its LanguageId to Japanese (ja-JP) for all text portions using
+// Aspose.Slides for .NET. The example includes basic file existence checks,
+// error handling, and saves the modified presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, Japanese, LanguageId, TitleShape, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting Japanese language metadata on title shapes in PPTX files.
+// - Build C# utilities for localization of PowerPoint presentations.
+// - Integrate language ID adjustments into .NET presentation workflows.
+// - Validate and prepare PPTX files for Japanese audiences before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
