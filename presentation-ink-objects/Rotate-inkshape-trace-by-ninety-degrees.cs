@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Rotate inkshape trace by ninety degrees using C#
+//
+// Description:
+// Demonstrates how to rotate an InkShape's trace by ninety degrees clockwise 
+// using C# and Aspose.Slides for .NET. The example loads a PPTX file, accesses 
+// the first ink shape on the first slide, rotates each point in its ink traces, 
+// and saves the modified presentation. This pattern can be used to automate 
+// PowerPoint ink manipulation tasks in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Rotate, Inkshape, Trace, 
+// Ninety, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate rotation of inkshape traces by ninety degrees.
+// - Build C# tools for processing InkShape objects in PowerPoint files.
+// - Generate or transform PPTX files with custom ink modifications.
+// - Validate and test ink-related presentation workflows before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Drawing;
