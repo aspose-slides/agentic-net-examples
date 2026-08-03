@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Merge paragraphs across slides into single textbox using C#
+//
+// Description:
+// Demonstrates how to merge all paragraphs from every text box across all slides
+// into a single rectangle textbox on the first slide using C# and Aspose.Slides for .NET.
+// The example loads a presentation, extracts plain text from each paragraph, creates
+// a new paragraph in the target textbox, and saves the result as a new PPTX file.
+// This pattern can be used to consolidate slide content, generate summaries, or
+// prepare presentations for further processing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Merge, Paragraphs, Across, Slides,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Consolidate text from multiple slides into a single summary textbox.
+// - Build tools that extract and combine slide content for reporting.
+// - Automate preparation of presentation assets before publishing.
+// - Simplify content review by aggregating paragraphs into one location.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
