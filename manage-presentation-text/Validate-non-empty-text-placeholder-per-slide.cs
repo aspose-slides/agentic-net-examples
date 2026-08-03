@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Validate non empty text placeholder per slide using C#
+//
+// Description:
+// Demonstrates how to validate that each slide in a PowerPoint presentation
+// contains at least one non‑empty text placeholder using C# and Aspose.Slides
+// for .NET. The example also shows how to set custom prompt text for title and
+// subtitle placeholders on the first slide, then saves the modified file.
+// This pattern can be used to automate PPTX validation and processing tasks.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Validate, Empty, Text,
+// Placeholder, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate validation of non‑empty text placeholders per slide.
+// - Build C# tools for PowerPoint presentation processing and quality checks.
+// - Generate or transform PPTX files in .NET applications.
+// - Ensure presentation content meets publishing standards before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
