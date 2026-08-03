@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Extract text by language and save files using C#
+//
+// Description:
+// Demonstrates how to extract text portions grouped by language identifier from
+// a PowerPoint presentation and save each language's text into separate files.
+// The example also shows how to save a copy of the processed presentation.
+// It uses Aspose.Slides for .NET in a standalone console application.
+// Developers can adapt this pattern to automate PPTX text extraction, language‑
+// specific processing, or batch export scenarios.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Extract, Text, Language, Save,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Extract and export presentation text by language for localization.
+// - Build tools that generate language‑specific text files from PPTX.
+// - Automate saving modified presentations after processing.
+// - Integrate language‑aware text extraction into .NET workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
 using System.IO;
