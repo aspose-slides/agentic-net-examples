@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Apply fade out animation to final bullet using C#
+//
+// Description:
+// Demonstrates how to apply a fade-out animation effect to the final bullet
+// point on agenda slides using Aspose.Slides for .NET. The example loads a
+// presentation, identifies slides with a title containing "Agenda", finds the
+// last bullet shape, adds a fade-out effect to its final paragraph, and saves
+// the modified file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Fade Out, Animation, Final Bullet,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automatically add fade-out animation to the last bullet of agenda slides.
+// - Build C# utilities for PowerPoint presentation enhancement.
+// - Integrate animation logic into .NET applications that generate or modify PPTX files.
+// - Ensure consistent slide animations before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
