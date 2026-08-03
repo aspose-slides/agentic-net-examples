@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Reset inkshape clear all traces using C#
+//
+// Description:
+// Demonstrates how to remove all Ink shapes from a presentation, effectively
+// clearing all ink traces, using C# and Aspose.Slides for .NET. The example
+// loads a PPTX file, iterates through its slides, deletes every Ink shape, and
+// saves the result to a new file. This pattern can be used to reset ink
+// annotations in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Ink shape, Clear ink, Reset,
+// Presentation processing, Office automation
+//
+// Use Cases:
+// - Remove all ink annotations from a PowerPoint presentation.
+// - Prepare PPTX files for redistribution without ink traces.
+// - Automate cleanup of ink objects in batch processing pipelines.
+// - Integrate ink reset functionality into .NET applications handling PPTX files.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;
