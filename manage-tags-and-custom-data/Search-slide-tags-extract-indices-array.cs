@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Search slide tags extract indices array using C#
+//
+// Description:
+// Demonstrates how to search slide tags for a specific key/value pair and
+// extract the zero‑based slide indices into an array using C# and Aspose.Slides
+// for .NET. The example loads a presentation, iterates through its slides,
+// checks each slide's custom data tags, collects matching slide indices, and
+// outputs them. It also shows optional saving of the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Search, Slide, Tags, Extract,
+// Indices, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate searching of slide tags and extracting matching slide indices.
+// - Build C# utilities for PowerPoint presentation analysis.
+// - Integrate tag‑based slide selection into .NET applications.
+// - Validate or transform PPTX files based on custom tag data.
+// -----------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
 using System.IO;
