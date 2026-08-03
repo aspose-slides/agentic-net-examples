@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Export mathblock to mathml using memorystream using C#
+//
+// Description:
+// Demonstrates how to create a Math shape, add a MathBlock containing an equation,
+// export the MathParagraph to MathML using a MemoryStream, and save the presentation
+// using Aspose.Slides for .NET. The example shows the required presentation-processing
+// steps for PowerPoint files and produces the MathML output in a console application.
+// Developers can use this pattern to automate PPTX workflows, extract MathML, or
+// integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, MathBlock, MathML,
+// MemoryStream, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate export of MathBlock content to MathML using MemoryStream.
+// - Build C# tools for extracting mathematical equations from PowerPoint presentations.
+// - Generate or transform PPTX files with embedded equations in .NET applications.
+// - Validate and test presentation workflows involving MathML conversion.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
