@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Export MathParagraph or MathBlock via CLI arguments using C#
+//
+// Description:
+// This console application demonstrates how to create a PowerPoint presentation
+// with a mathematical shape, build a simple equation, and export the equation
+// either as LaTeX or as MathML based on a command‑line argument. It uses
+// Aspose.Slides for .NET to manipulate the presentation and to perform the
+// export operations.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, MathParagraph, MathBlock,
+// LaTeX, MathML, CLI, Export, Presentation Automation
+//
+// Use Cases:
+// - Generate a PPTX containing a math equation and export the equation in
+//   LaTeX or MathML format via command line.
+// - Build automated tools that process PowerPoint files and extract mathematical
+//   content for documentation or web publishing.
+// - Integrate math export functionality into .NET applications or CI pipelines.
+// - Validate and test math equation rendering and export in PowerPoint files.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
