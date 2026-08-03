@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Import inkshape trace from CSV using C#
+//
+// Description:
+// Demonstrates how to import inkshape trace data from a CSV file using C# 
+// and Aspose.Slides for .NET. The example reads color (RGB) and line width 
+// values from the CSV, applies them to an Inkshape placeholder (represented 
+// by a rectangle) on a slide, and saves the resulting presentation. This 
+// pattern can be used to automate PPTX workflows that require dynamic ink 
+// trace styling based on external data.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Import, Inkshape, Trace, CSV, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate import of inkshape trace styling from CSV.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
