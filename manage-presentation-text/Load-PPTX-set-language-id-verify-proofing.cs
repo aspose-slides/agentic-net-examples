@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Load PPTX set language id verify proofing using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file, set the language identifier for each
+// text portion, verify the language setting, and save the presentation using
+// C# and Aspose.Slides for .NET. The example iterates through all slides,
+// shapes, paragraphs, and portions, applying the language ID and outputting
+// verification information to the console.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, Language, Verify, Proofing,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate loading PPTX files and setting language identifiers for proofing.
+// - Build C# tools for PowerPoint text processing and language verification.
+// - Generate or modify PPTX presentations with specific language settings in .NET.
+// - Validate language configuration before publishing or further integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
