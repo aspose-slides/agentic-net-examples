@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Edit presentation placeholder text with textframe using C#
+//
+// Description:
+// Demonstrates how to edit placeholder text in a PowerPoint presentation by
+// accessing the TextFrame of placeholder shapes using Aspose.Slides for .NET.
+// The example loads an existing PPTX file, modifies the text of all placeholder
+// auto‑shapes on the first slide, and saves the result as a new PPTX file.
+// This pattern can be used to automate placeholder content updates in .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Edit, Presentation, Placeholder,
+// TextFrame, Text, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Programmatically update placeholder text in existing presentations.
+// - Build tools that customize slide templates before distribution.
+// - Integrate placeholder text replacement into automated PPTX workflows.
+// - Validate and modify slide content in .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
