@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Control slide transition effects runtime tag using C#
+//
+// Description:
+// Demonstrates how to control slide transition effects runtime tag using C# 
+// and Aspose.Slides for .NET. The example shows the required 
+// presentation-processing steps for PowerPoint files and produces the 
+// requested output in a standalone console application. Developers can use 
+// this pattern to automate PPTX workflows, validate results, or integrate 
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Control, Slide, Transition, 
+// Effects, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate control slide transition effects runtime tag.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
