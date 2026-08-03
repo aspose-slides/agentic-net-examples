@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Create animated title slide with appear effect using C#
+//
+// Description:
+// Demonstrates how to create an animated title slide with an appear effect
+// applied to each word using C# and Aspose.Slides for .NET. The example shows
+// the required presentation-processing steps for PowerPoint files and
+// produces the output as a standalone console application. Developers can use
+// this pattern to automate PPTX workflows, validate results, or integrate
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Animated, Title, Slide, Appear,
+// ByWord, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of animated title slides with per‑word appear effects.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
