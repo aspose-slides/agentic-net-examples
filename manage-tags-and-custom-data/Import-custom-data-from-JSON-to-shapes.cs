@@ -1,3 +1,27 @@
+// -----------------------------------------------------------------------------
+// Example: Import custom data from JSON to shapes using C#
+//
+// Description:
+// Demonstrates how to import custom data from JSON to shapes using C# and 
+// Aspose.Slides for .NET. The example reads a JSON configuration file, updates 
+// AutoShape text and optionally chart data labels based on the configuration, 
+// and saves the modified presentation. It shows the required presentation-
+// processing steps for PowerPoint files and produces the requested output in a 
+// standalone console application. Developers can use this pattern to automate 
+// PPTX workflows, validate results, or integrate presentation logic into .NET 
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Import, Custom, Data, Json, 
+// Presentation Processing, Office Automation, Shapes, AutoShape, Chart
+//
+// Use Cases:
+// - Automate import custom data from JSON to shapes.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// - Update shape text and chart labels based on external JSON data.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Text.Json;
