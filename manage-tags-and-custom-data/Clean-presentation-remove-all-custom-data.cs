@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Clean presentation remove all custom data using C#
+//
+// Description:
+// Demonstrates how to clean a PowerPoint presentation by removing all custom
+// XML parts and VBA macros using C# and Aspose.Slides for .NET. The example
+// shows the required steps to load a presentation, strip custom data, and
+// save the cleaned file in a standalone console application. Developers can
+// use this pattern to automate PPTX cleanup, prepare files for distribution,
+// or integrate presentation sanitization into .NET workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clean, Presentation, Remove,
+// Custom, Data, VBA, Tags, Office Automation
+//
+// Use Cases:
+// - Automate removal of custom XML parts and VBA macros from presentations.
+// - Build C# tools for sanitizing PowerPoint files before publishing.
+// - Integrate presentation cleanup into document processing pipelines.
+// - Ensure compliance by stripping embedded custom data from PPTX files.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
