@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Create inkshape with transparent brush using C#
+//
+// Description:
+// Demonstrates how to create a line shape that simulates an ink stroke with a
+// transparent brush using C# and Aspose.Slides for .NET. The example shows the
+// required presentation-processing steps for PowerPoint files, applying a
+// scribble sketch effect and setting the line color to transparent to mimic an
+// erasing effect. The resulting presentation is saved as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Inkshape, Transparent Brush,
+// Line Shape, Sketch Effect, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of ink-like shapes with transparent styling.
+// - Build C# tools for PowerPoint presentation processing that require
+//   simulated erasing effects.
+// - Generate or transform PPTX files in .NET applications with custom ink
+//   visuals.
+// - Validate presentation workflows involving transparent drawing elements.
+// -----------------------------------------------------------------------------
 using System;
 using System.Drawing;
 using Aspose.Slides.Ink;
