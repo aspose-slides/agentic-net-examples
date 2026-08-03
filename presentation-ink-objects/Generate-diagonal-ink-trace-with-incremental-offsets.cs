@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Generate diagonal ink trace with incremental offsets using C#
+//
+// Description:
+// Demonstrates how to generate a series of diagonal points with incremental 
+// offsets and how to prepare an Ink shape for such a trace using Aspose.Slides 
+// for .NET. The example loads or creates a presentation, configures a line 
+// shape to use a scribble sketch style, iterates to calculate diagonal points, 
+// and saves the resulting presentation. Developers can extend this pattern to 
+// create actual InkTrace objects for ink annotations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Generate, Diagonal, Ink, 
+// Trace, Incremental, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate generation of diagonal ink traces with incremental offsets.
+// - Build C# tools for PowerPoint presentation processing and ink annotation.
+// - Generate or transform PPTX files with custom ink shapes in .NET applications.
+// - Validate presentation workflows involving ink objects before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
