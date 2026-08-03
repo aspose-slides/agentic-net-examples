@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Select mathportions with variable using LINQ using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, select MathPortion
+// objects whose text contains a specific variable using LINQ, output their
+// LaTeX representation, and save the presentation using Aspose.Slides for .NET.
+// The example is a self‑contained console application suitable for automating
+// PPTX workflows that involve mathematical equations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Select, MathPortion, Variable,
+// LINQ, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of mathematical portions containing a given variable.
+// - Build C# tools for analyzing or transforming equations in PowerPoint files.
+// - Generate reports of LaTeX strings from PPTX presentations.
+// - Validate or modify presentations that include math equations before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Linq;
