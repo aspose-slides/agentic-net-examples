@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Replace placeholder text using regex using C#
+//
+// Description:
+// Demonstrates how to replace placeholder text using regex with Aspose.Slides for .NET.
+// The example loads a PPTX file, searches for placeholders like [PLACEHOLDER] in all
+// text frames (including master slides), replaces them with a specified value, and
+// saves the updated presentation. This pattern can be used to automate PPTX workflows,
+// validate results, or integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Replace, Placeholder, Text,
+// Regex, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate replace placeholder text using regex.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Text.RegularExpressions;
