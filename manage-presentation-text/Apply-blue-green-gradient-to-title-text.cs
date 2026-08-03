@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Apply blue green gradient to title text using C#
+//
+// Description:
+// Demonstrates how to apply a blue‑to‑green gradient fill to title text in a
+// PowerPoint presentation using C# and Aspose.Slides for .NET. The example
+// creates a new presentation, adds a title shape, applies a gradient fill to
+// each text portion, and saves the result as a PPTX file. Developers can use
+// this pattern to automate PPTX workflows, customize text styling, or integrate
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, Blue, Green, Gradient,
+// Text, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate applying a blue‑green gradient to title text in presentations.
+// - Build C# tools for PowerPoint text styling and processing.
+// - Generate or transform PPTX files with custom text effects in .NET apps.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
