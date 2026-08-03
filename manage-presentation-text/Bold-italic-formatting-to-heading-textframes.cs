@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Bold and italic formatting to all text frames using C#
+//
+// Description:
+// Demonstrates how to apply bold and italic formatting to every text portion
+// in a PowerPoint presentation using C# and Aspose.Slides for .NET. The
+// example loads a PPTX file, iterates through all text frames (including those
+// on master slides), sets the font style to bold and italic, and saves the
+// modified presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Bold, Italic, Text Formatting,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Apply consistent bold‑italic styling to all text in a presentation.
+// - Automate text style updates across slides and master layouts.
+// - Build .NET tools for bulk formatting of PPTX files.
+// - Prepare presentations for branding or visual guidelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;
