@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Map slide index to combined text using C#
+//
+// Description:
+// Demonstrates how to map each slide index to its combined text content,
+// including slide text, notes, and comments, using Aspose.Slides for .NET.
+// The example loads a PPTX file, extracts arranged text for every slide,
+// builds a dictionary of slide index to combined text, and prints the
+// results to the console.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Slide Index, Combined Text,
+// Text Extraction, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Retrieve and display combined slide text for analysis or reporting.
+// - Automate extraction of slide content, notes, and comments in .NET tools.
+// - Integrate slide text mapping into custom PowerPoint processing pipelines.
+// - Validate presentation content before publishing or further transformation.
+// -----------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
 using System.IO;
