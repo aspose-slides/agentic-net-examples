@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Skip hidden slides during PPTX export using C#
+//
+// Description:
+// Demonstrates how to skip hidden slides when exporting a presentation to PPTX
+// using C# and Aspose.Slides for .NET. The example loads a PPTX file, filters
+// out hidden slides, and saves only the visible slides to a new PPTX file.
+// This pattern can be used to automate PowerPoint workflows that require
+// excluding hidden content.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Skip, Hidden, Slides, Export,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Export only visible slides from a presentation.
+// - Build C# tools for PowerPoint slide management.
+// - Automate PPTX generation while omitting hidden slides.
+// - Integrate slide filtering into .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;
