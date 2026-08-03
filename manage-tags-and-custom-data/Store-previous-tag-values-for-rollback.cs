@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Store previous tag values for rollback using C#
+//
+// Description:
+// Demonstrates how to store the previous value of a custom data tag in a PowerPoint
+// presentation before updating it, enabling rollback capabilities. The example uses
+// Aspose.Slides for .NET to load a PPTX file, read a tag, archive its current value
+// in a hidden tag with a timestamp, update the tag with a new value, and save the
+// presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Custom Data, Tags, Store, Previous,
+// Values, Rollback, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Preserve historical tag values before modification for audit or rollback.
+// - Implement versioning of custom data within PowerPoint files.
+// - Build .NET tools that manage tag-based metadata in presentations.
+// - Automate safe updates of presentation custom data in CI/CD pipelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
