@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Decrypt custom data runtime display values console using C#
+//
+// Description:
+// Demonstrates how to open an encrypted PowerPoint presentation, display its
+// encryption status, optionally access custom data associated with the
+// presentation, and save a decrypted copy using Aspose.Slides for .NET. The
+// example is implemented as a standalone console application suitable for
+// automating decryption workflows and inspecting runtime custom data.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Decrypt, Custom Data, Runtime,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Decrypt encrypted PPTX files in batch processing.
+// - Inspect or extract custom data embedded in presentations at runtime.
+// - Build .NET tools for PowerPoint security management.
+// - Integrate presentation decryption into larger automation pipelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
