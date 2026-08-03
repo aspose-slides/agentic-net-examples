@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Scale inkshape uniformly keep brush size using C#
+//
+// Description:
+// Demonstrates how to uniformly scale an Ink shape in a PowerPoint presentation
+// while preserving the original brush size using Aspose.Slides for .NET. The
+// example loads a PPTX file, locates the first Ink shape on the first slide,
+// applies a scaling factor to its position and dimensions, and saves the
+// modified presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Ink shape, Scaling, Uniform,
+// Brush size, Presentation processing, Office automation
+//
+// Use Cases:
+// - Scale Ink shapes in existing presentations without altering stroke thickness.
+// - Automate batch processing of PPTX files to adjust Ink object dimensions.
+// - Integrate Ink shape manipulation into .NET applications for custom PPTX workflows.
+// - Preserve visual consistency of handwritten annotations while resizing slides.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
