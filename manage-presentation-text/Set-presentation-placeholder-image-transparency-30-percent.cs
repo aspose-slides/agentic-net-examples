@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Set presentation placeholder image transparency 30 percent using C#
+//
+// Description:
+// Demonstrates how to set a 30 percent transparency on placeholder picture
+// frames within a PowerPoint presentation using Aspose.Slides for .NET. The
+// example loads an existing PPTX file, iterates through all slides and shapes,
+// identifies placeholder picture frames, applies an AlphaModulateFixed effect
+// to achieve the desired transparency, and saves the modified presentation.
+// This pattern can be used in console applications or integrated into larger
+// .NET solutions for automated PPTX processing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Presentation, Placeholder,
+// Image, Transparency, AlphaModulateFixed, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting 30% transparency on placeholder images in PPTX files.
+// - Build C# utilities for batch processing of PowerPoint presentations.
+// - Integrate image transparency adjustments into .NET applications.
+// - Validate and transform presentation content before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
