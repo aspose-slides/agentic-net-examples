@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Prefix tag names with project id using C#
+//
+// Description:
+// Demonstrates how to prefix custom tag names with a project identifier using
+// C# and Aspose.Slides for .NET. The example loads a PowerPoint presentation,
+// iterates through its custom data tags, adds the specified project id as a
+// prefix to each tag name, and saves the updated presentation. This pattern
+// helps maintain consistent naming conventions across presentation assets.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Prefix, Tag Names, Project ID,
+// Custom Data, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Standardize custom tag names with a project-specific prefix.
+// - Automate tag management in PowerPoint files during CI/CD pipelines.
+// - Build .NET tools for bulk updating presentation metadata.
+// - Ensure tag naming consistency before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;
