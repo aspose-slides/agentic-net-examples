@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Copy inkshape trace to another preserve brush using C#
+//
+// Description:
+// Demonstrates how to copy inkshape trace brush settings from one presentation
+// to another while preserving the existing brush attributes using C# and
+// Aspose.Slides for .NET. The example loads a source and a target PPTX file,
+// copies the color and size of each matching ink trace brush, and saves the
+// modified target presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Copy, Inkshape, Trace, Preserve Brush,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate copying inkshape trace brush settings between presentations.
+// - Build C# tools for PowerPoint ink object manipulation.
+// - Generate or transform PPTX files while preserving ink styling.
+// - Validate and test presentation workflows involving ink shapes.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Drawing;
