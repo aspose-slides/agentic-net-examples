@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Insert subscript textbox on last slide using C#
+//
+// Description:
+// Demonstrates how to insert a subscript textbox on the last slide of a
+// presentation using C# and Aspose.Slides for .NET. The example creates a new
+// presentation, adds a rectangle shape containing a footnote with a normal
+// portion and a subscript portion, and saves the result as a PPTX file. This
+// pattern can be used to automate PowerPoint workflows, generate footnotes,
+// or apply subscript formatting programmatically.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Insert, Subscript, Textbox,
+// Last, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate insertion of subscript footnote textbox on the last slide.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files with subscript text in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Diagnostics;

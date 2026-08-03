@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Apply hanging indent to bullet list using C#
+//
+// Description:
+// Demonstrates how to create a rectangle shape, add a text frame with bullet
+// paragraphs, and apply a hanging indent by setting a negative paragraph
+// indent using Aspose.Slides for .NET. The example saves the result as a PPTX
+// file that can be opened in PowerPoint.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Hanging Indent, Bullet List, Text Frame,
+// Paragraph Formatting, Presentation Automation, Office Automation
+//
+// Use Cases:
+// - Programmatically apply hanging indent to bullet lists in presentations.
+// - Generate PowerPoint slides with custom formatted bullet points.
+// - Automate creation of PPTX files with specific text layout requirements.
+// - Integrate bullet list formatting into .NET applications.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

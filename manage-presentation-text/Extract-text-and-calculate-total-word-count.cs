@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Extract text and calculate total word count using C#
+//
+// Description:
+// Demonstrates how to extract raw text from a PowerPoint presentation and
+// calculate the total word count using Aspose.Slides for .NET. The example
+// loads a PPTX file, iterates through each slide's text, counts words, and
+// outputs the total count. It also shows how to save the presentation
+// unchanged, illustrating typical presentation-processing steps.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Extract Text, Word Count,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of text and word count statistics from PPTX files.
+// - Build C# utilities for analyzing presentation content.
+// - Integrate word count metrics into reporting or quality‑control pipelines.
+// - Validate presentation text before publishing or further processing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set custom font family for title textframes using C#
+//
+// Description:
+// Demonstrates how to set a custom font family for title textframes in a PowerPoint
+// presentation using Aspose.Slides for .NET. The example updates the master theme
+// font scheme and explicitly applies the font to each title placeholder shape,
+// then saves the modified presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Custom Font, Font Family, Title,
+// TextFrames, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting a custom font family for title textframes across slides.
+// - Build .NET tools for PowerPoint presentation styling.
+// - Generate or transform PPTX files with consistent title fonts.
+// - Validate and enforce branding guidelines in presentation workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides.Export;

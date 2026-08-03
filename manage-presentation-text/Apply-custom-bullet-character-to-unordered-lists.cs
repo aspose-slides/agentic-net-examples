@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Apply custom bullet character to unordered lists using C#
+//
+// Description:
+// Demonstrates how to replace the default bullet character of unordered (symbol)
+// lists with a custom character in a PowerPoint presentation using C# and
+// Aspose.Slides for .NET. The example loads an existing PPTX file, iterates
+// through all text paragraphs, updates bullet characters where the bullet type
+// is Symbol, and saves the modified presentation. This pattern can be used in
+// console utilities or integrated into larger .NET applications for automated
+// presentation styling.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Custom Bullet, Symbol Bullet,
+// Bullet Character, Presentation Automation, Office Automation
+//
+// Use Cases:
+// - Replace default bullet symbols with custom characters in bulk.
+// - Create C# tools for styling PowerPoint lists programmatically.
+// - Automate PPTX transformations as part of a CI/CD pipeline.
+// - Validate and enforce presentation design guidelines before distribution.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides.Export;

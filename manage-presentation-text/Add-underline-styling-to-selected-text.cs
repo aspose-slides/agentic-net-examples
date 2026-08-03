@@ -1,7 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Add underline styling to selected text using C#
+//
+// Description:
+// Demonstrates how to add underline styling to selected text using C# and 
+// Aspose.Slides for .NET. The example shows the required 
+// presentation-processing steps for PowerPoint files and produces the 
+// requested output in a standalone console application. Developers can use 
+// this pattern to automate PPTX workflows, validate results, or integrate 
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Underline, Styling, Selected, 
+// Text, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate add underline styling to selected text.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
-using System.Globalization;
-using System.Text;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
@@ -28,29 +47,19 @@ class Program
                     IAutoShape autoShape = shape as IAutoShape;
                     if (autoShape != null && autoShape.TextFrame != null)
                     {
-                        string originalText = autoShape.TextFrame.Text;
-                        if (!string.IsNullOrEmpty(originalText) && originalText == originalText.ToUpper())
+                        // Apply underline styling to all portions of text in the shape
+                        foreach (IParagraph paragraph in autoShape.TextFrame.Paragraphs)
                         {
-                            string[] words = originalText.Split(' ');
-                            StringBuilder sb = new StringBuilder();
-                            for (int i = 0; i < words.Length; i++)
+                            foreach (IPortion portion in paragraph.Portions)
                             {
-                                if (words[i].Length > 0)
-                                {
-                                    string lower = words[i].ToLower(CultureInfo.CurrentCulture);
-                                    string title = char.ToUpper(lower[0], CultureInfo.CurrentCulture) + lower.Substring(1);
-                                    sb.Append(title);
-                                }
-                                if (i < words.Length - 1)
-                                    sb.Append(' ');
+                                portion.PortionFormat.FontUnderline = TextUnderlineType.Single;
                             }
-                            autoShape.TextFrame.Text = sb.ToString();
                         }
                     }
                 }
             }
 
-            pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            pres.Save(outputPath, SaveFormat.Pptx);
             pres.Dispose();
         }
         catch (Exception ex)

@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Extract master slide text and compare layout using C#
+//
+// Description:
+// Demonstrates how to extract master slide text and compare it with layout text 
+// using C# and Aspose.Slides for .NET. The example loads a PPTX file, retrieves 
+// raw text for each slide, checks for inconsistencies between the master slide 
+// text and the layout text, and saves the presentation. This pattern helps 
+// automate validation of slide content and ensures consistency across master 
+// and layout definitions.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Extract, Master, Slide, Text, 
+// Layout, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of master slide text and compare it with layout text.
+// - Build C# tools for validating PowerPoint presentation consistency.
+// - Generate or transform PPTX files while ensuring master-layout alignment.
+// - Integrate presentation validation into .NET applications before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

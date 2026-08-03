@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Save presentation to memory stream with saveoptions using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file, modify it by adding a rectangle shape 
+// with text, and then save the presentation to a memory stream using 
+// Aspose.Slides Export.PptxOptions to preserve text formatting. The example 
+// also shows how to write the memory stream contents to an output file. This 
+// standalone console application illustrates the essential steps for 
+// presentation manipulation and memory‑based saving with Aspose.Slides for .NET.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PPTX, SaveFormat, PptxOptions, MemoryStream, 
+// Shape, Rectangle, TextFrame, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Modify a PowerPoint presentation programmatically and save it to memory.
+// - Preserve text formatting while saving using specific save options.
+// - Build .NET tools that process PPTX files without intermediate disk files.
+// - Automate generation or transformation of presentations in memory.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

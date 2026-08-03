@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Load presentation from memory and change text colors using C#
+//
+// Description:
+// Demonstrates how to create a presentation, save it to a memory stream,
+// load it back from memory, modify the text color, and save the result to a file
+// using Aspose.Slides for .NET. The example illustrates the required steps for
+// handling presentations in memory and applying text color changes.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, Presentation, Memory, 
+// Change, Text Color, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Load a PowerPoint presentation from a memory stream.
+// - Programmatically change text colors in slides.
+// - Save modified presentations to disk or other streams.
+// - Build .NET tools that process PPTX files without intermediate files.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

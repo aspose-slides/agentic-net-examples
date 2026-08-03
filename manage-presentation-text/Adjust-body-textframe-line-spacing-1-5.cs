@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Adjust body textframe line spacing 1 5 using C#
+//
+// Description:
+// Demonstrates how to set the line spacing of body text frames to 1.5 (150%)
+// in a PowerPoint presentation using Aspose.Slides for .NET. The example loads
+// an existing PPTX file, iterates through all non‑master text frames, updates
+// each paragraph's line spacing, and saves the modified presentation.
+// This pattern can be used to automate formatting tasks in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Adjust, Body, TextFrame, Line Spacing, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting body text line spacing to 1.5 in PPTX files.
+// - Build C# utilities for consistent PowerPoint formatting.
+// - Integrate line‑spacing adjustments into document generation workflows.
+// - Validate and enforce presentation style guidelines programmatically.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

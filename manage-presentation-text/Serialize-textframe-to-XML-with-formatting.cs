@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Serialize textframe to XML with formatting using C#
+//
+// Description:
+// Demonstrates how to extract all text frames (including those on master slides)
+// from a PowerPoint presentation, retrieve their effective formatting properties,
+// and serialize this information to an XML file using Aspose.Slides for .NET.
+// The example also saves the original presentation unchanged.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Serialize, Textframe, Formatting,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of text frame content and formatting for analysis.
+// - Build tools that generate XML reports of PowerPoint slide text properties.
+// - Integrate PowerPoint data extraction into .NET applications.
+// - Validate and audit presentation formatting before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Xml.Linq;

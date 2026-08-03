@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set language id and log paragraph changes using C#
+//
+// Description:
+// Demonstrates how to detect a simple language for each paragraph in a shape,
+// assign the corresponding LanguageId to every portion, and log the changes 
+// using Aspose.Slides for .NET. The example loads a PPTX file, processes the 
+// first AutoShape on the first slide, applies language identifiers based on a 
+// basic Cyrillic check, and saves the modified presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, LanguageId, Paragraph, Portion, 
+// Logging, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automatically assign language identifiers to text portions in a presentation.
+// - Log language assignment operations for auditing or debugging.
+// - Build .NET tools that preprocess PPTX files before publishing or translation.
+// - Integrate language detection logic into PowerPoint automation workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

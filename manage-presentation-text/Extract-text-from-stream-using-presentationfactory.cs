@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Extract text from stream using PresentationFactory using C#
+//
+// Description:
+// Demonstrates how to extract raw text from a PowerPoint presentation stream
+// using PresentationFactory with Aspose.Slides for .NET. The example reads a
+// PPTX file as a read‑only stream, extracts slide text, outputs it to the console,
+// and then reloads the presentation from the same stream to save it to a new file.
+// This pattern is useful for processing presentations without loading the entire
+// file into memory.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Extract Text, Stream, 
+// PresentationFactory, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of slide text from PowerPoint streams.
+// - Build .NET tools for analyzing or indexing PPTX content.
+// - Re‑save presentations after read‑only processing.
+// - Validate presentation files before further manipulation.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

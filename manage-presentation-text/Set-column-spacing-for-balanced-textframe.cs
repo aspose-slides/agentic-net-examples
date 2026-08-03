@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set column spacing for textframe using C#
+//
+// Description:
+// Demonstrates how to set the number of columns and column spacing for a text
+// frame in a PowerPoint slide using C# and Aspose.Slides for .NET. The example
+// creates a presentation, adds a rectangle shape with a text frame, configures
+// two columns with a custom spacing, inserts sample text, and saves the file.
+// This pattern can be used to automate column layout adjustments in PPTX
+// documents.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Column, Spacing, Textframe,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate column layout configuration for text frames in presentations.
+// - Build C# utilities for customizing PPTX content programmatically.
+// - Generate or modify PowerPoint files with specific column spacing.
+// - Validate and test column formatting before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

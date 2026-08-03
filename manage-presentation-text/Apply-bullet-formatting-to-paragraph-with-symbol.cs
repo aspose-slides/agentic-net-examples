@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Apply bullet formatting to paragraph with symbol using C#
+//
+// Description:
+// Demonstrates how to create a new presentation, add a rectangle auto shape,
+// insert a paragraph into its text frame, and apply a symbol bullet (solid
+// bullet character) to that paragraph using Aspose.Slides for .NET. The example
+// saves the resulting PPTX file, illustrating the steps required for bullet
+// formatting in PowerPoint automation.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Apply Bullet, Symbol Bullet, Paragraph,
+// Text Frame, Presentation Automation, Office Automation
+//
+// Use Cases:
+// - Automate adding symbol bullets to paragraphs in generated presentations.
+// - Build .NET tools that format text with custom bullet symbols.
+// - Generate or modify PPTX files programmatically with specific bullet styles.
+// - Validate bullet formatting in presentation workflows before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

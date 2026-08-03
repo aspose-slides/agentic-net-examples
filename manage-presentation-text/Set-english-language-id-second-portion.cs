@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set english language id second portion using C#
+//
+// Description:
+// Demonstrates how to set the language identifier of the second text portion
+// (English) in a PowerPoint slide using Aspose.Slides for .NET. The example
+// creates a presentation, adds a rectangle shape with two paragraphs, assigns
+// Spanish language to the first portion and English language to the second
+// portion, and saves the file. This pattern can be used to control language
+// settings for individual text portions in PPTX files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, English, Language, Second,
+// Portion, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Set English language identifier for a specific text portion.
+// - Build C# tools for fine‑grained language control in PowerPoint presentations.
+// - Generate or modify PPTX files with multilingual content in .NET applications.
+// - Validate language settings before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

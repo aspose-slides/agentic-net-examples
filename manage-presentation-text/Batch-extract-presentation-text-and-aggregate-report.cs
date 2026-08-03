@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Batch extract presentation text and aggregate report using C#
+//
+// Description:
+// Demonstrates how to batch extract text from multiple PowerPoint presentations
+// (PPTX and PPT) and aggregate the extracted content into a single report
+// presentation using Aspose.Slides for .NET. The example iterates over all
+// presentation files in the current directory, extracts slide text without
+// arranging, and compiles the results into a new PPTX file containing the
+// aggregated report.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, PPT, Aspose.Slides for .NET, Batch extraction, Text
+// extraction, Presentation aggregation, Report generation, Office automation
+//
+// Use Cases:
+// - Automate extraction of slide text from a collection of presentations.
+// - Generate a consolidated report presentation for review or documentation.
+// - Build tools for bulk processing of PowerPoint files in .NET applications.
+// - Validate and archive presentation content before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Text;

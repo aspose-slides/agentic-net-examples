@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Load presentation set chinese language id using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation and set the language ID
+// of all text portions to Chinese (zh-CN) using C# and Aspose.Slides for .NET.
+// The example iterates through slides, shapes, paragraphs, and portions,
+// updates the LanguageId property, verifies the change, and saves the
+// modified presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, Presentation, Chinese,
+// Language, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting Chinese language ID for text in PowerPoint files.
+// - Build C# tools for bulk language localization of PPTX content.
+// - Integrate language property updates into .NET presentation workflows.
+// - Validate language settings before publishing or further processing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

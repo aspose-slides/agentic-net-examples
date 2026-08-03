@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set default text direction left to right using C#
+//
+// Description:
+// Demonstrates how to set the default text direction to left‑to‑right in a new
+// presentation using C# and Aspose.Slides for .NET. The example creates a
+// presentation, configures the default text language (which influences text
+// direction), adds a slide with a rectangle containing left‑to‑right text, and
+// saves the result as a PPTX file. This pattern can be used to automate
+// presentation creation where text direction must be enforced.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Default Text Direction, Left to Right, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Ensure newly created presentations default to left‑to‑right text flow.
+// - Build C# utilities for generating PowerPoint files with specific text direction.
+// - Integrate text direction settings into automated PPTX generation pipelines.
+// - Validate and enforce text direction consistency across presentation assets.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

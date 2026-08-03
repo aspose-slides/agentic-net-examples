@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Extract text from presentation file and return JSON using C#
+//
+// Description:
+// Demonstrates how to extract slide text from a PowerPoint presentation file
+// and output it as JSON using C# and Aspose.Slides for .NET. The example shows
+// how to load a presentation, retrieve raw text for each slide, serialize the
+// data to a formatted JSON string, and optionally save the presentation.
+// This pattern can be used to automate PPTX text extraction, integrate with
+// APIs, or build reporting tools.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, PPT, Aspose.Slides for .NET, Extract Text, JSON, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Extract slide text from presentations for indexing or search.
+// - Convert PowerPoint content to JSON for web services or APIs.
+// - Build command‑line utilities that process PPTX files.
+// - Validate and audit presentation content programmatically.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;

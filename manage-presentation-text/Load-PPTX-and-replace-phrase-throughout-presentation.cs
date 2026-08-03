@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Load PPTX and replace phrase throughout presentation using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file, replace a specific phrase throughout
+// the presentation, and save the modified file using C# and Aspose.Slides for
+// .NET. The example includes file existence checking, exception handling for
+// unsupported formats, and uses the ReplaceText method with customizable search
+// options.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, Replace, Phrase,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate loading a PPTX and replacing a phrase across all slides.
+// - Build C# utilities for PowerPoint text manipulation.
+// - Integrate presentation text updates into .NET applications.
+// - Validate and preprocess PPTX files before distribution or further processing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

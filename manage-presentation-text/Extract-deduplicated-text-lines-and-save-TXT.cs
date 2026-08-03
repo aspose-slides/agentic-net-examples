@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Extract deduplicated text lines and save TXT using C#
+//
+// Description:
+// Demonstrates how to extract deduplicated text lines from a PowerPoint
+// presentation and save them to a TXT file using C# and Aspose.Slides for .NET.
+// The example loads a PPTX file, extracts raw slide text in unarranged mode,
+// removes duplicate lines, writes the unique lines to a text file, and saves
+// the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Extract, Deduplicated, Text,
+// Lines, TXT, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of unique text lines from PPTX files.
+// - Build C# utilities for PowerPoint content analysis.
+// - Generate plain‑text representations of presentations.
+// - Integrate text extraction into .NET automation workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;

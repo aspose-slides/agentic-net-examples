@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Handle unsupported file extensions during text extraction using C#
+//
+// Description:
+// Demonstrates how to extract raw text from a PowerPoint presentation while
+// handling unsupported file extensions using Aspose.Slides for .NET. The
+// example validates the input file, extracts slide text, and catches specific
+// exceptions for unsupported PPT and PPTX formats.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Handle, Unsupported, File,
+// Extensions, Text Extraction, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Safely extract text from PPT/PPTX files with validation of supported formats.
+// - Build .NET tools that need to process presentation content while handling
+//   format compatibility issues.
+// - Automate text extraction workflows for reporting or indexing PowerPoint files.
+// - Integrate robust presentation handling into larger .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Extract text from ZIP archive and summarize using C#
+//
+// Description:
+// Demonstrates how to extract text from PowerPoint presentations stored in a ZIP
+// archive and summarize statistics such as total presentations, slides, and
+// characters using C# and Aspose.Slides for .NET. The example shows the required
+// presentation-processing steps for PPTX, PPT, and ODP files and produces the
+// requested output in a standalone console application. Developers can use this
+// pattern to automate PPTX workflows, validate results, or integrate presentation
+// logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, PPT, ODP, Aspose.Slides for .NET, Extract, Text, Archive,
+// Summarize, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of text from presentations inside a ZIP archive and
+//   generate summary statistics.
+// - Build C# tools for PowerPoint, PPT, and ODP presentation processing.
+// - Generate or transform presentation files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.IO.Compression;

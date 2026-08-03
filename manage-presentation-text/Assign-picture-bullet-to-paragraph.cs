@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Assign picture bullet to paragraph using C#
+//
+// Description:
+// Demonstrates how to assign a picture bullet to a paragraph using C# and 
+// Aspose.Slides for .NET. The example loads or creates a presentation, adds a 
+// picture to the presentation's image collection, creates a text shape if needed, 
+// and sets the first paragraph's bullet type to a picture bullet using the 
+// specified image. The resulting presentation is saved as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Assign, Picture, Bullet, 
+// Paragraph, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate assigning picture bullets to paragraphs in PowerPoint slides.
+// - Build C# tools for PowerPoint presentation processing that require custom bullet styles.
+// - Generate or transform PPTX files with image-based bullets in .NET applications.
+// - Validate presentation workflows involving picture bullets before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

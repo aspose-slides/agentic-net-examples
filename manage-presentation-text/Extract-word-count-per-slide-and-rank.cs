@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Extract word count per slide and rank using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, extract the raw text
+// from each slide using Aspose.Slides for .NET, count the words per slide,
+// rank the slides by word count in descending order, output the ranking to
+// the console, and optionally save a copy of the presentation.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, Text extraction, Word count,
+// Slide ranking, Presentation processing, Console application
+//
+// Use Cases:
+// - Generate a word‑count report for each slide in a presentation.
+// - Rank slides by textual content volume for review or editing priorities.
+// - Integrate slide‑level text analytics into .NET automation tools.
+// - Save a processed copy of the original presentation after analysis.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;

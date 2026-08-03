@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set paragraph left indent to 20 points using C#
+//
+// Description:
+// Demonstrates how to create a new presentation, add a rectangle shape with a
+// text frame, and set the left indent of the first paragraph to 20 points
+// using Aspose.Slides for .NET. The example saves the resulting presentation
+// as a PPTX file. This pattern can be used to automate paragraph formatting
+// tasks in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Paragraph, Left Indent, Points,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting paragraph left indent to 20 points in presentations.
+// - Build C# utilities for PowerPoint text formatting.
+// - Generate or modify PPTX files programmatically in .NET applications.
+// - Validate paragraph formatting before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Apply 45 degree shadow to subtitle text using C#
+//
+// Description:
+// Demonstrates how to apply a 45‑degree outer shadow effect to the subtitle
+// placeholder text in a PowerPoint presentation using C# and Aspose.Slides for
+// .NET. The example loads an existing PPTX (or creates a new one), finds the
+// subtitle shape, configures the shadow properties, and saves the modified
+// presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, Degree, Shadow,
+// Subtitle, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate applying a 45‑degree shadow to subtitle text.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides.Export;

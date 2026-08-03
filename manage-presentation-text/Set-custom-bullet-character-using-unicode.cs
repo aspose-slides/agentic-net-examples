@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set custom bullet character using unicode using C#
+//
+// Description:
+// Demonstrates how to set a custom bullet character using Unicode in a text
+// paragraph with Aspose.Slides for .NET. The example creates or loads a PPTX
+// file, adds a rectangle shape with a text frame, configures the paragraph to
+// use a Symbol bullet type, assigns the Unicode bullet character (U+2022 •),
+// and saves the presentation. This pattern helps developers automate PPTX
+// workflows that require custom bullet styling.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Custom Bullet, Unicode Character,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting custom Unicode bullet characters in PowerPoint slides.
+// - Build .NET tools for presentation content styling and processing.
+// - Generate or modify PPTX files with specific bullet formatting.
+// - Validate bullet character rendering before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

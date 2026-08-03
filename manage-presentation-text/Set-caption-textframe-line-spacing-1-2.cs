@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set caption textframe line spacing 1.2 using C#
+//
+// Description:
+// Demonstrates how to set the line spacing multiplier to 1.2 for all caption
+// text frames in a PowerPoint presentation using C# and Aspose.Slides for .NET.
+// The example loads a presentation, retrieves every text frame (including those
+// on master slides), updates each paragraph's SpaceWithin property to achieve
+// the desired line spacing, and saves the modified file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Caption, TextFrame, Line Spacing,
+// 1.2 multiplier, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Adjust line spacing of captions across an entire presentation.
+// - Build C# utilities for consistent text formatting in PPTX files.
+// - Automate presentation styling tasks in .NET applications.
+// - Ensure uniform line spacing before publishing or further processing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

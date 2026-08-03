@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set paragraph alignment to justified using C#
+//
+// Description:
+// Demonstrates how to set each paragraph's alignment to justified (low) in a
+// PowerPoint presentation using Aspose.Slides for .NET. The example loads an
+// existing PPTX file, iterates through all text frames (including those on
+// master slides), applies the JustifyLow alignment, and saves the result as a
+// new PPTX file. This pattern can be used in console applications or
+// integrated into larger .NET solutions for automated presentation processing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Paragraph, Alignment,
+// JustifyLow, Justified, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting paragraph alignment to justified (low) across a presentation.
+// - Build C# utilities for bulk text formatting in PowerPoint files.
+// - Generate or transform PPTX files with consistent paragraph alignment.
+// - Validate and test presentation formatting before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

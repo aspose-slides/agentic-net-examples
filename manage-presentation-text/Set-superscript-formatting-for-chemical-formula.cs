@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Set superscript formatting for chemical formula using C#
+//
+// Description:
+// Demonstrates how to set superscript formatting for a chemical formula using C#
+// and Aspose.Slides for .NET. The example creates a new presentation, adds a
+// rectangle shape with a text frame, and formats the superscript portion of the
+// formula (e.g., the charge symbol) using the Escapement property. The resulting
+// PPTX file is saved and opened, illustrating a typical workflow for
+// presentation automation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Superscript, Formatting,
+// Chemical, Formula, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate superscript formatting for chemical formulas in PowerPoint slides.
+// - Build C# utilities for creating or editing PPTX files with specialized text
+//   styling.
+// - Integrate chemical notation handling into .NET presentation generation
+//   pipelines.
+// - Validate and preview formatted chemical content before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

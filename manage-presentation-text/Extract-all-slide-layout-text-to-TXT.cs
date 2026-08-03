@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Extract all slide layout text to TXT using C#
+//
+// Description:
+// Demonstrates how to extract the layout text from every slide in a PowerPoint
+// presentation and write it to a plain text (TXT) file using C# and Aspose.Slides
+// for .NET. The example loads a PPTX file, retrieves the layout text for each
+// slide via PresentationFactory, concatenates the results, and saves them to a
+// TXT file. It also shows how to save a copy of the original presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Extract, Slide, Layout, Text,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of slide layout text for documentation or analysis.
+// - Build C# utilities that process PowerPoint presentations and generate
+//   textual reports.
+// - Integrate slide layout text extraction into .NET applications or services.
+// - Validate or audit presentation content before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

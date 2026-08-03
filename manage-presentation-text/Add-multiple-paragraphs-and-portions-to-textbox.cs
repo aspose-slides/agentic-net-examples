@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add multiple paragraphs and portions to textbox using C#
+//
+// Description:
+// Demonstrates how to add multiple paragraphs and portions to a textbox shape,
+// assign text and distinct formatting to each portion, and save the result as a
+// PPTX file using Aspose.Slides for .NET. The example illustrates the required
+// presentation-processing steps for PowerPoint files in a standalone console
+// application. Developers can use this pattern to automate PPTX workflows,
+// validate results, or integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Multiple Paragraphs, Portions,
+// Textbox, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding multiple paragraphs and portions to a textbox.
+// - Build C# tools for detailed PowerPoint presentation processing.
+// - Generate or transform PPTX files with custom text formatting in .NET.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

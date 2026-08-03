@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Generate HTML report from slide comments using C#
+//
+// Description:
+// Demonstrates how to extract slide text, comments, and layout text from a
+// PowerPoint presentation and generate a standalone HTML report using
+// Aspose.Slides for .NET. The example also shows the recommended practice of
+// loading and re‑saving the presentation after processing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, HTML, Report, Slide, Comments,
+// Layout, Text Extraction, Office Automation
+//
+// Use Cases:
+// - Create an HTML documentation of slide contents and comments.
+// - Automate extraction of presentation text for review or publishing.
+// - Build C# utilities for PowerPoint content analysis.
+// - Integrate slide text reporting into .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Text;

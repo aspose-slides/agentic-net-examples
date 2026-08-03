@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set textbox columns with textframe using C#
+//
+// Description:
+// Demonstrates how to configure a textbox to display its content in multiple
+// columns by setting the TextFrame column count using Aspose.Slides for .NET.
+// The example creates a presentation, adds a rectangle shape with a text
+// frame, sets the column count to two, and saves the result as a PPTX file.
+// This pattern can be used to format text layout in PowerPoint slides
+// programmatically.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Textbox, Columns, Textframe,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Create PowerPoint slides with multi‑column text boxes.
+// - Automate layout adjustments for text frames in presentations.
+// - Build .NET tools that generate or modify PPTX files with columnar text.
+// - Ensure consistent text formatting across slides in batch processing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

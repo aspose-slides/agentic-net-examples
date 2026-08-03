@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Load presentation from memory stream modify placeholder using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation from a memory stream, 
+// locate placeholder shapes on the first slide, and update their text using 
+// Aspose.Slides for .NET. The example reads an existing PPTX file into a byte 
+// array, creates a MemoryStream, modifies placeholder text, and saves the 
+// updated presentation back to a file. This pattern is useful for in‑memory 
+// processing of presentations without direct file system manipulation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, Presentation, Memory, 
+// Stream, Placeholder, Text Modification, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate loading a presentation from a memory stream and updating placeholder text.
+// - Build C# tools that modify PPTX content in-memory for web services or APIs.
+// - Generate or transform PPTX files dynamically in .NET applications.
+// - Validate and test presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

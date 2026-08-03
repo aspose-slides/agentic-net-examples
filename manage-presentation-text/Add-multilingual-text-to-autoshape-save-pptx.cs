@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add multilingual text to autoshape save pptx using C#
+//
+// Description:
+// Demonstrates how to add multilingual text portions (English, French, Japanese)
+// to an AutoShape in a new presentation and save it as a PPTX file using
+// Aspose.Slides for .NET. The example creates a rectangle shape, inserts a
+// TextFrame, adds language‑specific portions, and writes the result to disk.
+// This pattern can be used to automate multilingual content creation in PowerPoint.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Multilingual, Text, AutoShape,
+// Save, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding multilingual text to shapes in PPTX files.
+// - Build .NET tools for generating localized PowerPoint presentations.
+// - Create or transform PPTX files with language‑specific formatting.
+// - Validate multilingual presentation workflows before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

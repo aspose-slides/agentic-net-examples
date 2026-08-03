@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Apply soft yellow glow to callout text using C#
+//
+// Description:
+// Demonstrates how to apply a soft yellow glow effect to the text of callout
+// shapes in a PowerPoint presentation using C# and Aspose.Slides for .NET.
+// The example loads an existing PPTX file, searches for AutoShape objects whose
+// alternative text contains the word "Callout", and adds a glow effect to the
+// first text portion of each matching shape. The modified presentation is then
+// saved as a new file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, Soft, Yellow, Glow,
+// Callout, Text Formatting, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate the addition of a soft yellow glow to callout text in presentations.
+// - Build C# utilities for enhancing visual emphasis in PowerPoint files.
+// - Generate or transform PPTX files with custom text effects in .NET applications.
+// - Validate and preview presentation styling before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Drawing;

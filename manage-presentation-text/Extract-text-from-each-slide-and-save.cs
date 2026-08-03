@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Extract text from each slide and save using C#
+//
+// Description:
+// Demonstrates how to extract raw text from each slide of a PPTX file using
+// Aspose.Slides for .NET in Unarranged mode, save each slide's content to a
+// separate UTF‑8 encoded text file, and re‑save the original presentation.
+// This pattern is useful for automating slide‑level text extraction and
+// simple presentation round‑tripping in .NET applications.
+//
+// Keywords:
+// C#, Aspose.Slides, PPTX, Extract Text, Slide, UTF-8, Presentation Processing,
+// Office Automation, Save Format
+//
+// Use Cases:
+// - Automate extraction of slide text for indexing or analysis.
+// - Generate per‑slide text files for downstream processing.
+// - Build .NET tools that need to read and rewrite PowerPoint presentations.
+// - Validate and transform PPTX content in batch workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Text;

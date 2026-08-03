@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export slide text to markdown files using C#
+//
+// Description:
+// Demonstrates how to extract text from each slide of a PowerPoint presentation
+// and write it to separate markdown (.md) files using Aspose.Slides for .NET.
+// The example identifies the slide title from a CenteredTitle placeholder, uses
+// it to create a safe file name, and writes all text boxes from the slide into
+// the markdown file. It also shows basic error handling and presentation saving.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Slide, Text, Markdown,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Convert PowerPoint slide content into markdown documentation.
+// - Automate extraction of slide notes or text for content analysis.
+// - Build tools that generate markdown files from presentations for static sites.
+// - Integrate slide-to-markdown conversion into .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Text;

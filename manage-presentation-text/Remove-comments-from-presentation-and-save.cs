@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Remove comments from presentation and save using C#
+//
+// Description:
+// Demonstrates how to remove all comment texts from a PowerPoint presentation
+// and save the cleaned file using Aspose.Slides for .NET. The example loads a
+// PPTX file, iterates through comment authors and their comments, clears the
+// comment text, and writes the result to a new file. This pattern can be used
+// to automate comment cleanup in presentation processing workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove Comments, Presentation,
+// Save, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Remove all comments from a PowerPoint file before publishing.
+// - Build tools that sanitize presentations by clearing comment content.
+// - Integrate comment cleanup into .NET applications handling PPTX files.
+// - Automate batch processing of presentations to ensure no residual comments.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

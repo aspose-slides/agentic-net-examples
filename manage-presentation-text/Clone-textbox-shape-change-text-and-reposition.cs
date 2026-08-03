@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Clone textbox shape change text and reposition using C#
+//
+// Description:
+// Demonstrates how to clone a textbox shape, modify its text, and reposition it
+// within a slide using C# and Aspose.Slides for .NET. The example loads an
+// existing presentation, locates the first textbox, creates a clone at new
+// coordinates, updates the cloned shape's text, and saves the result as a new
+// PPTX file. This pattern can be used to automate PowerPoint content updates
+// and layout adjustments.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone, Textbox, Shape, Change,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate cloning of textbox shapes with updated content.
+// - Build tools for repositioning and editing shapes in PowerPoint files.
+// - Generate or transform PPTX presentations programmatically in .NET.
+// - Validate and test presentation workflows before deployment.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

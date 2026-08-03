@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set german language id for all shapes using C#
+//
+// Description:
+// Demonstrates how to set the German language identifier (de-DE) for every text
+// portion within all shapes on the first slide of a PowerPoint presentation
+// using Aspose.Slides for .NET. The example loads an existing PPTX file,
+// updates language metadata for each text portion, and saves the modified
+// presentation as a new file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, German, Language ID, Shapes,
+// Text Formatting, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Ensure correct language metadata for spell checking and accessibility.
+// - Automate localization preparation for PowerPoint files.
+// - Build tools that standardize language settings across presentations.
+// - Integrate language ID updates into .NET-based document workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

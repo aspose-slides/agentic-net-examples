@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Import HTML into paragraph using AddFromHtml using C#
+//
+// Description:
+// Demonstrates how to import HTML content into a paragraph of a shape using
+// the AddFromHtml method in Aspose.Slides for .NET. The example creates a new
+// presentation, adds a rectangle shape, clears default paragraphs, imports
+// HTML into the shape's text frame, and saves the result as a PPTX file.
+// This pattern can be used to automate HTML-to-PowerPoint conversion in .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, HTML, Import, AddFromHtml, Paragraph, Shape, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Convert HTML snippets into PowerPoint slide content.
+// - Build .NET tools that embed formatted HTML into presentations.
+// - Automate generation of PPTX files from web content.
+// - Validate HTML rendering within PowerPoint slides.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

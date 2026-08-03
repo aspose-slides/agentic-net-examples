@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Extract hyperlinks from textbox using portion using C#
+//
+// Description:
+// Demonstrates how to extract hyperlink URLs from text portions within text boxes
+// in a PowerPoint presentation using Aspose.Slides for .NET. The example loads
+// a PPTX file, iterates through slides, text frames, paragraphs, and portions,
+// collects any hyperlink URLs, writes them to the console, and saves the
+// presentation.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, Hyperlink extraction, Textbox,
+// Portion, Presentation processing, Office automation
+//
+// Use Cases:
+// - Automate extraction of hyperlinks embedded in text portions of PPTX files.
+// - Build tools for validating or reporting hyperlink usage in presentations.
+// - Integrate hyperlink analysis into .NET applications that process PowerPoint.
+// - Generate reports or transform presentations based on extracted link data.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;

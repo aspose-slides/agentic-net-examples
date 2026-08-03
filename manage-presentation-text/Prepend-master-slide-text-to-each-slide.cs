@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Prepend master slide text to each slide using C#
+//
+// Description:
+// Demonstrates how to extract the master slide text from a PowerPoint file,
+// prepend it to the text of each individual slide, and write the combined
+// content to a plain‑text file. The example also saves an unchanged copy of the
+// original presentation. This pattern is useful for generating combined slide
+// transcripts or for preprocessing presentation content with Aspose.Slides for .NET.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Prepend, Master, Slide, Text,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Create a single transcript that includes master slide headings for every slide.
+// - Build .NET tools that combine master and slide text for documentation or analysis.
+// - Automate extraction and transformation of PPTX content in batch processes.
+// - Validate and archive presentation text before further processing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Text;
