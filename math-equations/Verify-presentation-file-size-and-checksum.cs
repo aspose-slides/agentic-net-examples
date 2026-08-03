@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Verify presentation file size and checksum using C#
+//
+// Description:
+// Demonstrates how to verify a PowerPoint presentation's file size and SHA‑256
+// checksum before and after loading and saving it with Aspose.Slides for .NET.
+// The example loads an existing PPTX, saves it to a new file, and compares the
+// original and exported file sizes and checksums, outputting the results to the
+// console. This pattern helps ensure that presentation processing does not
+// unintentionally alter file content.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Verify, Presentation, File Size,
+// Checksum, SHA256, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Validate that saving a presentation does not change its size or content.
+// - Build automated tests for PowerPoint file integrity after processing.
+// - Create tools that compare original and exported presentations for compliance.
+// - Ensure reliable PPTX workflows in .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Security.Cryptography;
