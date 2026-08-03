@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set custom numbered list style using C#
+//
+// Description:
+// Demonstrates how to set custom numbered list style using C# and 
+// Aspose.Slides for .NET. The example creates a presentation, adds a shape 
+// with a text frame, and applies different numbered bullet styles and start 
+// numbers to paragraphs. It then saves the presentation as a PPTX file. 
+// Developers can use this pattern to automate PPTX workflows, validate results, 
+// or integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Custom, Numbered, List, Style, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting custom numbered list styles.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;
