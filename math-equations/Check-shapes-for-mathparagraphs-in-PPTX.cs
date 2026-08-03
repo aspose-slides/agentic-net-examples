@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Check shapes for mathparagraphs in PPTX using C#
+//
+// Description:
+// Demonstrates how to iterate through slides and shapes in a PPTX file to
+// detect MathParagraphs within MathPortions using Aspose.Slides for .NET.
+// The example loads a presentation, examines each AutoShape's text for
+// mathematical content, outputs details about found MathParagraphs, and
+// saves the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Check, Shapes, MathParagraphs,
+// MathPortion, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Identify and report MathParagraphs embedded in slide shapes.
+// - Build validation tools for mathematical content in PowerPoint files.
+// - Automate extraction of math equation metadata from PPTX presentations.
+// - Integrate math detection into .NET applications that process slides.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
