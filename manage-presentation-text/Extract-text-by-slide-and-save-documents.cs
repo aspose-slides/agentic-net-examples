@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Extract slide text and create separate presentations using C#
+//
+// Description:
+// Demonstrates how to extract the textual content of each slide from an input
+// PowerPoint file and generate a new presentation for each slide that contains
+// the extracted text placed inside a rectangle shape. The example uses
+// Aspose.Slides for .NET and runs as a standalone console application.
+// This pattern helps automate slide‑by‑slide text extraction and document
+// generation tasks.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PPTX, PowerPoint, Extract Text, Slide, Generate
+// Presentation, Automation, Office Automation
+//
+// Use Cases:
+// - Extract text from each slide and save it as an individual PPTX file.
+// - Create summary or documentation presentations from existing slides.
+// - Build C# utilities for PowerPoint content analysis and transformation.
+// - Integrate slide text extraction into larger .NET workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
