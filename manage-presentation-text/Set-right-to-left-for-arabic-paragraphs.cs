@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set right to left for arabic paragraphs using C#
+//
+// Description:
+// Demonstrates how to set the RightToLeft paragraph format for Arabic text in
+// a PowerPoint presentation using Aspose.Slides for .NET. The example loads an
+// existing PPTX file, processes selected slides, updates each paragraph's
+// RightToLeft property, and saves the result as a new PPTX file. This pattern
+// can be used to automate RTL handling for Arabic content in presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, RightToLeft, Arabic, Paragraphs,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Apply right‑to‑left direction to Arabic paragraphs in existing presentations.
+// - Build .NET tools that prepare PPTX files for Arabic audiences.
+// - Integrate RTL text handling into automated PowerPoint workflows.
+// - Validate and transform slide content before publishing or distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
