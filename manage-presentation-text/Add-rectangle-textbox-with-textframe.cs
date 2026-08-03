@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add rectangle textbox with textframe using C#
+//
+// Description:
+// Demonstrates how to add a rectangle textbox with a text frame to a slide 
+// using C# and Aspose.Slides for .NET. The example creates a new presentation, 
+// inserts a rectangular AutoShape, adds a TextFrame, sets its text, and saves 
+// the result as a PPTX file. This pattern can be used to automate PowerPoint 
+// content creation, modify existing slides, or integrate presentation logic 
+// into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Rectangle, Textbox, Textframe, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate the addition of rectangle textboxes with custom text.
+// - Build C# tools for PowerPoint presentation generation or editing.
+// - Generate or transform PPTX files programmatically in .NET applications.
+// - Validate and test presentation workflows before deployment.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
