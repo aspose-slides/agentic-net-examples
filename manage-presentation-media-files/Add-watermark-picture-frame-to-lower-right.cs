@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add watermark picture frame to lower right using C#
+//
+// Description:
+// Demonstrates how to add a watermark picture frame to the lower right corner
+// of each slide in a PowerPoint presentation using C# and Aspose.Slides for .NET.
+// The example loads an input PPTX, inserts a PNG image as a picture frame on
+// every slide, and saves the result as a new PPTX file. This pattern can be used
+// to automate watermarking of presentations in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Watermark, Picture Frame, Lower Right,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automatically add a logo or watermark to the lower right of all slides.
+// - Build command‑line tools for batch processing of PowerPoint files.
+// - Integrate watermarking into document generation pipelines.
+// - Ensure branding consistency across presentation assets.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

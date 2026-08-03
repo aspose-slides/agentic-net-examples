@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Export image collection to folder sequentially using C#
+//
+// Description:
+// Demonstrates how to extract all images from a PowerPoint presentation and
+// save them sequentially to a specified folder using Aspose.Slides for .NET.
+// The example loads a PPTX file, iterates through its image collection, and
+// writes each image as a PNG file with a numeric suffix. This pattern is
+// useful for batch image extraction, content analysis, or migration of media
+// assets from presentations.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, Export Images, Image Collection,
+// Folder Export, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of embedded images from PPTX files.
+// - Build tools that archive or analyze presentation media assets.
+// - Integrate image export functionality into .NET applications.
+// - Prepare presentation resources for reuse in other media or web contexts.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

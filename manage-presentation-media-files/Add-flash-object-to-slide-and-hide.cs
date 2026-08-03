@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Add flash object to slide and hide using C#
+//
+// Description:
+// Demonstrates how to add a flash (SWF) object to a slide and hide it during
+// playback using C# and Aspose.Slides for .NET. The example creates a new
+// presentation, inserts the flash file as a video frame placeholder, sets the
+// HideAtShowing property, and saves the result as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Flash, SWF, Object, Slide, Hide,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate insertion of flash objects into PowerPoint slides and hide them.
+// - Build C# utilities for managing media objects in presentations.
+// - Generate or modify PPTX files with embedded flash content in .NET apps.
+// - Validate presentation media handling before deployment.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

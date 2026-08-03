@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Mute audio frame on confidential slides using C#
+//
+// Description:
+// Demonstrates how to add an audio file to a presentation, detect slides
+// whose title contains the word "Confidential", insert an audio frame on those
+// slides and set its volume to mute (0%). The example uses Aspose.Slides for
+// .NET to load, modify, and save a PPTX file in a console application.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Mute, Audio, Frame, Confidential,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automatically mute audio on slides marked as confidential.
+// - Build .NET tools that process PPTX files and adjust media settings.
+// - Integrate audio muting logic into presentation generation pipelines.
+// - Validate and enforce media policies before publishing PowerPoint decks.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

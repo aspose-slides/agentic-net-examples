@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Lock aspect ratio of picture frame using C#
+//
+// Description:
+// Demonstrates how to lock the aspect ratio of a picture frame using C# and
+// Aspose.Slides for .NET. The example loads an existing presentation, inserts
+// an image as a picture frame, locks its aspect ratio to prevent distortion
+// during resizing, and saves the modified presentation. This pattern can be
+// used to automate PPTX workflows, enforce visual consistency, or integrate
+// presentation processing into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Lock, Aspect, Ratio, Picture,
+// Frame, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate locking aspect ratio of picture frames in presentations.
+// - Build C# tools for consistent image handling in PowerPoint files.
+// - Generate or transform PPTX files while preserving image proportions.
+// - Validate presentation layouts before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set slide master background to tile using C#
+//
+// Description:
+// Demonstrates how to set the background of a slide master to a tiled picture
+// using C# and Aspose.Slides for .NET. The example creates a new presentation,
+// loads a pattern image, applies it as a tiled fill to the master slide's
+// background, and saves the result as a PPTX file. This pattern can be used to
+// automate background styling across all slides in a presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Slide Master, Background, Tile,
+// Picture Fill, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Apply a repeating pattern as the background for all slides via the master.
+// - Build C# utilities for consistent slide design in PowerPoint files.
+// - Generate or modify PPTX presentations programmatically in .NET.
+// - Ensure visual branding by applying tiled backgrounds automatically.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

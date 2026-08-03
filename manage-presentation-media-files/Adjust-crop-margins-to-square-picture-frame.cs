@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Adjust crop margins to square picture frame using C#
+//
+// Description:
+// Demonstrates how to adjust crop margins of a picture frame to obtain a square
+// view using C# and Aspose.Slides for .NET. The example loads a PPTX file,
+// identifies the first picture on the first slide, calculates the necessary
+// crop percentages, applies them, and saves the modified presentation.
+// This pattern helps automate image cropping within PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Adjust Crop, Square Picture Frame,
+// Image Cropping, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automatically crop pictures to a square aspect ratio in presentations.
+// - Build C# utilities for batch processing of PPTX files.
+// - Integrate image adjustment logic into .NET applications that handle slides.
+// - Ensure consistent visual layout of pictures before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

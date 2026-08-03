@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: List media files with slide numbers using C#
+//
+// Description:
+// Demonstrates how to enumerate embedded video and audio files in a PowerPoint
+// presentation using Aspose.Slides for .NET, display the slide numbers on which
+// each video appears, and output simple file names derived from the media
+// content types. The example also shows basic error handling and saves the
+// presentation unchanged.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, List, Media, Files, Slide, 
+// Presentation Processing, Office Automation, Video, Audio
+//
+// Use Cases:
+// - Automate extraction of media file information with slide references.
+// - Build C# utilities for PowerPoint presentation analysis and reporting.
+// - Integrate media‑tracking logic into .NET applications that process PPTX files.
+// - Validate embedded media usage before publishing or further transformation.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;

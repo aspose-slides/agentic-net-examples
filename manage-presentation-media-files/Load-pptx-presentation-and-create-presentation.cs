@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Load a PPTX presentation and save a copy using C#
+//
+// Description:
+// Demonstrates how to load an existing PPTX presentation, perform basic
+// validation, handle potential loading errors, and save the presentation
+// to a new file using Aspose.Slides for .NET. This example serves as a
+// foundation for automating PowerPoint file workflows, validating input
+// files, or integrating presentation handling into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, Save, Presentation, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate loading and saving of PPTX files.
+// - Validate PowerPoint files before further processing.
+// - Create copies or backups of presentations in .NET tools.
+// - Integrate basic presentation handling into larger applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

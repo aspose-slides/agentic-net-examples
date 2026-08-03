@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Link picture frame to cloud image url using C#
+//
+// Description:
+// Demonstrates how to download an image from a cloud URL and embed it into a
+// picture frame in a PowerPoint presentation using C# and Aspose.Slides for .NET.
+// The example shows the required presentation-processing steps for PowerPoint
+// files and produces the requested output in a standalone console application.
+// Developers can use this pattern to automate PPTX workflows, validate results,
+// or integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Link, Picture, Frame, Cloud,
+// Image, Download, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Embed external images from URLs into PPTX files.
+// - Automate adding cloud-hosted images to slides.
+// - Build C# tools for dynamic PowerPoint presentation generation.
+// - Validate image integration before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Net;

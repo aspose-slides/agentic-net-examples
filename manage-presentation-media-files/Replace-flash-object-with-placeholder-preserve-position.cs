@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Replace flash object with placeholder preserve position using C#
+//
+// Description:
+// Demonstrates how to replace Flash ActiveX objects in a PowerPoint presentation
+// with a picture placeholder while preserving the original object's position and size,
+// using Aspose.Slides for .NET. The example loads a presentation, scans each slide
+// for controls, substitutes each found Flash control with a rectangle picture frame
+// containing a specified placeholder image, and saves the result.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Replace Flash, ActiveX, Placeholder,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate replacement of Flash objects with static images for compatibility.
+// - Create .NET tools that preprocess presentations for platforms without Flash support.
+// - Generate or transform PPTX files while maintaining layout integrity.
+// - Validate and clean up legacy presentations before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

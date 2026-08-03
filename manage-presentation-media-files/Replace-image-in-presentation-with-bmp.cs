@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Replace first image in a PPTX with a BMP using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file, replace the first embedded image with a
+// BMP file, and save the updated presentation using Aspose.Slides for .NET.
+// The example includes validation of input files and handling of presentations
+// that contain no images.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Replace Image, BMP, Presentation
+// Processing, Office Automation
+//
+// Use Cases:
+// - Replace a specific image in existing presentations with a BMP asset.
+// - Automate batch image updates in PPTX files.
+// - Build .NET tools for PPTX image management.
+// - Validate image replacement workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -40,7 +59,7 @@ namespace ReplaceImageExample
                         existingImage.ReplaceImage(newImageData);
                     }
 
-                    pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    pres.Save(outputPath, SaveFormat.Pptx);
                 }
             }
             catch (Exception ex)

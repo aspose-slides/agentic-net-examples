@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Extract video streams from presentation using C#
+//
+// Description:
+// Demonstrates how to extract embedded video streams from a PowerPoint presentation
+// using C# and Aspose.Slides for .NET. The example loads a PPTX file, iterates
+// through its slides and shapes, extracts each video frame's binary data, and
+// writes the videos to an output directory with appropriate file extensions.
+// This pattern can be used to automate media extraction, validate content, or
+// integrate video handling into .NET applications.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, Extract, Video, Streams, Media,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of embedded videos from PowerPoint files.
+// - Build tools for analyzing or repurposing presentation media assets.
+// - Integrate video extraction into larger .NET workflows or services.
+// - Validate and audit presentation content before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

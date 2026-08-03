@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Batch replace picture frames using mapping dictionary using C#
+//
+// Description:
+// Demonstrates how to batch replace picture frames in a PowerPoint presentation 
+// using a mapping dictionary that associates image indices with new image files. 
+// The example loads a PPTX file, iterates over the specified mappings, validates 
+// each index and replacement image, substitutes the image data, and saves the 
+// updated presentation. This pattern can be used to automate image updates in 
+// existing slides.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Batch, Replace, Picture, 
+// Frames, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate batch replacement of picture frames based on image index mapping.
+// - Build tools for updating images in existing PPTX files programmatically.
+// - Integrate image replacement logic into .NET applications handling presentations.
+// - Validate and preprocess presentations before distribution or further processing.
+// -----------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
 using System.IO;

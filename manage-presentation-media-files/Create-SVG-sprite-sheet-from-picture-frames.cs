@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Create SVG sprite sheet from picture frames using C#
+//
+// Description:
+// Demonstrates how to extract SVG images embedded in picture frames of a PowerPoint
+// presentation and combine them into a single SVG sprite sheet using Aspose.Slides for .NET.
+// The example loads a PPTX file, iterates through its slides and picture frames,
+// collects SVG content, writes a sprite sheet, and saves the (unchanged) presentation.
+// This pattern can be used to automate SVG extraction and sprite generation from PPTX files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SVG, Sprite, Sheet, Picture, Frames,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Generate an SVG sprite sheet from SVG picture frames in a PPTX.
+// - Build C# utilities for extracting and reusing vector graphics from presentations.
+// - Automate batch processing of PowerPoint files to create web‑ready SVG assets.
+// - Validate and transform presentation media for integration into web applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Text;

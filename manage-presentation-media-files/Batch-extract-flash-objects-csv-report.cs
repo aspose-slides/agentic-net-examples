@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Batch extract flash objects CSV report using C#
+//
+// Description:
+// Demonstrates how to extract ActiveX flash objects from a PowerPoint presentation
+// and generate a CSV report using C# and Aspose.Slides for .NET. The example loads
+// a PPTX file, iterates through each slide's controls, identifies flash objects,
+// records their names and binary sizes, writes the data to a CSV file, and saves
+// the presentation unchanged. This pattern can be used to audit presentations,
+// generate asset inventories, or integrate flash object analysis into .NET tools.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Flash, ActiveX, CSV, Extraction,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate batch extraction of flash (ActiveX) objects and generate CSV reports.
+// - Build C# utilities for auditing PowerPoint presentations for embedded flash content.
+// - Integrate flash object analysis into .NET applications or CI pipelines.
+// - Validate and document presentation assets before publishing or migration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

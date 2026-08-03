@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Cache audio frame thumbnails in folder using C#
+//
+// Description:
+// Demonstrates how to extract audio frame thumbnails from a PowerPoint
+// presentation and cache them as PNG files in a specified folder using
+// Aspose.Slides for .NET. The example loads a presentation, iterates through
+// each slide and audio frame, generates thumbnail images, saves them to the
+// cache directory, and finally saves the (unchanged) presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Cache, Audio, Frame,
+// Thumbnails, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction and caching of audio frame thumbnails from PPTX files.
+// - Build C# utilities for PowerPoint media asset management.
+// - Generate visual previews of embedded audio for documentation or UI.
+// - Validate and process presentation media before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

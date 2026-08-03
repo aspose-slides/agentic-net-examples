@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Extract embedded Flash objects and archive them into a ZIP using C#
+//
+// Description:
+// Demonstrates how to locate ShockwaveFlash ActiveX controls in a PPTX file,
+// extract their binary SWF data, and package the extracted files into a ZIP
+// archive. The example also shows how to save the presentation using ZIP64
+// mode with Aspose.Slides for .NET. This pattern can be used to automate PPTX
+// workflows that involve handling legacy Flash content.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Extract, Flash, SWF, ZIP,
+// Archive, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of embedded Flash (SWF) objects from PowerPoint files.
+// - Create ZIP archives of extracted Flash assets for backup or analysis.
+// - Save large presentations with ZIP64 support to avoid size limitations.
+// - Integrate Flash extraction into .NET tools for presentation processing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.IO.Compression;

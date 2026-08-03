@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Merge pptx presentations with media deduplication using C#
+//
+// Description:
+// Demonstrates how to merge two PPTX presentations into a single file while
+// deduplicating embedded audio and video media using Aspose.Slides for .NET.
+// The example clones slides and masters, tracks media by SHA‑256 hash, and
+// saves the combined presentation as a new PPTX file.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PPTX, Merge, Media deduplication, Audio, Video,
+// Presentation processing, PowerPoint automation
+//
+// Use Cases:
+// - Combine multiple PowerPoint files into one while avoiding duplicate media.
+// - Build .NET tools that consolidate presentations with efficient media handling.
+// - Automate preparation of slide decks for distribution or publishing.
+// - Ensure minimal file size by reusing identical audio/video assets.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;

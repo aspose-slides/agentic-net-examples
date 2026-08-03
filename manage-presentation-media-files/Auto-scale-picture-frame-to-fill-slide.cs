@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Auto scale picture frame to fill slide using C#
+//
+// Description:
+// Demonstrates how to add a picture frame that automatically scales to fill the
+// entire slide while preserving the aspect ratio using Aspose.Slides for .NET.
+// The example creates a new presentation, loads an image from disk, inserts it
+// as a picture frame covering the slide dimensions, sets relative scaling, and
+// saves the result as a PPTX file.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Auto scale, Picture frame, Slide size,
+// Image handling, Presentation automation
+//
+// Use Cases:
+// - Automatically fit images to slide dimensions in generated presentations.
+// - Build .NET utilities for batch processing of PowerPoint files.
+// - Ensure consistent visual layout when inserting media into slides.
+// - Integrate image scaling logic into reporting or content generation tools.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Sync audio frame start to slide duration using C#
+//
+// Description:
+// Demonstrates how to embed an audio file into a slide, configure its playback
+// settings, and synchronize slide transition durations with the audio start
+// using Aspose.Slides for .NET. The example sets slide transition timing, fade
+// effects, and audio playback options to ensure the audio begins with the first
+// slide and continues across subsequent slides.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Sync, Audio, Frame, Start, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate embedding and syncing of narration audio with slide timings.
+// - Build C# tools for PowerPoint presentation processing that require precise
+//   audio‑slide coordination.
+// - Generate or transform PPTX files with consistent audio playback across
+//   slides in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

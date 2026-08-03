@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Insert flash object with click trigger using C#
+//
+// Description:
+// Demonstrates how to attempt inserting a Flash (SWF) file as a video frame 
+// with an OnClick playback trigger using Aspose.Slides for .NET. The example 
+// shows validation of the source file, handling of unsupported formats, and 
+// saving the resulting presentation. This pattern helps developers understand 
+// the limitations of embedding Flash content and how to implement click‑triggered 
+// media insertion in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Insert, Flash, SWF, Click Trigger, 
+// Video Frame, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Attempt to embed Flash media with click‑triggered playback in a PPTX.
+// - Detect and handle unsupported media formats during presentation generation.
+// - Automate creation of presentations that include media placeholders.
+// - Validate media insertion workflows before deployment.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

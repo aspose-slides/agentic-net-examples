@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set custom poster image for video frames using C#
+//
+// Description:
+// Shows how to load a video file and a separate poster image from disk, add the
+// video to a new presentation, create a video frame on the first slide, assign
+// the custom poster image to the video frame, and save the presentation as PPTX.
+// The example also includes basic file existence checks and error handling
+// for unsupported formats.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, Video, Poster Image, VideoFrame,
+// File I/O, Presentation Automation, Office Automation
+//
+// Use Cases:
+// - Add videos with custom thumbnail images to PowerPoint slides programmatically.
+// - Build .NET utilities that prepare presentations with specific media assets.
+// - Automate validation of video and poster resources before generating PPTX files.
+// - Integrate video handling into larger presentation processing workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;

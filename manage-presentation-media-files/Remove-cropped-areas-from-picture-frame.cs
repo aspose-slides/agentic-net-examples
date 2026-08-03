@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Remove cropped areas from picture frame using C#
+//
+// Description:
+// Demonstrates how to remove cropped areas from a picture frame using C# and 
+// Aspose.Slides for .NET. The example loads a PPTX file, accesses the first 
+// picture frame on the first slide, deletes any cropped areas of the picture, 
+// and saves the modified presentation. This pattern can be used to clean up 
+// presentations by removing unnecessary image cropping data.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove, Cropped, Areas, 
+// Picture, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate removal of cropped areas from picture frames in presentations.
+// - Build C# tools for PowerPoint presentation cleanup and optimization.
+// - Generate or transform PPTX files in .NET applications while ensuring 
+//   images are stored without cropping metadata.
+// - Validate and prepare presentations before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Extract audio frame data and save mp3 using C#
+//
+// Description:
+// Demonstrates how to iterate through slides, locate embedded audio frames,
+// extract their binary data and save each as an MP3 (or appropriate audio
+// format) file using Aspose.Slides for .NET. The example also shows optional
+// saving of the presentation after processing. This pattern can be used to
+// automate audio extraction from PowerPoint files in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Extract, Audio, Frame, Data,
+// Presentation Processing, Office Automation, MP3, BinaryData
+//
+// Use Cases:
+// - Automate extraction of embedded audio from PPTX presentations.
+// - Build tools that convert or archive audio assets from PowerPoint files.
+// - Integrate audio processing into .NET workflows that handle Office documents.
+// - Validate and inspect presentation media before publishing or further
+//   transformation.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

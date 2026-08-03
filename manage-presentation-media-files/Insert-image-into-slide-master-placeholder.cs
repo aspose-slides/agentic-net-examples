@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Insert image into slide master placeholder using C#
+//
+// Description:
+// Demonstrates how to insert an image into a slide master picture placeholder 
+// using C# and Aspose.Slides for .NET. The example loads a template presentation,
+// adds a picture placeholder to a blank layout on the master slide, assigns an 
+// external image to the placeholder, and saves the modified presentation. This 
+// pattern can be used to automate PowerPoint slide master modifications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Insert, Image, Slide, Master, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate insertion of images into slide master placeholders.
+// - Build tools for PowerPoint presentation templating in .NET.
+// - Generate or modify PPTX files programmatically.
+// - Prepare slide masters for consistent branding across presentations.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

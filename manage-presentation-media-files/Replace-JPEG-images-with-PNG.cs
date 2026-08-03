@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Replace JPEG images with PNG using C#
+//
+// Description:
+// Demonstrates how to replace JPEG images with PNG using C# and Aspose.Slides 
+// for .NET. The example loads a presentation, finds JPEG images, converts each 
+// to PNG in memory, replaces the image data, and saves the updated presentation. 
+// This pattern can be used in console applications or integrated into larger 
+// .NET solutions for automated PowerPoint media processing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, JPEG, Replace, Images, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of embedded JPEG images to PNG in PPTX files.
+// - Build tools that standardize image formats within presentations.
+// - Integrate image format conversion into .NET PowerPoint workflows.
+// - Ensure compliance with branding guidelines that require PNG assets.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

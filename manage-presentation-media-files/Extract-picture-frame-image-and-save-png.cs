@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Extract picture frame image and save PNG using C#
+//
+// Description:
+// Demonstrates how to extract images from picture frames within a PowerPoint
+// presentation and save them as PNG files using C# and Aspose.Slides for .NET.
+// The example loads a PPTX file, iterates through slides and shapes, identifies
+// picture frames, extracts the embedded image data, and writes each image to a
+// separate PNG file. It also shows how to save the (potentially unchanged)
+// presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Extract, Picture Frame,
+// Image, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of picture frame images from presentations.
+// - Build tools that convert embedded PPTX images to PNG format.
+// - Integrate image extraction into .NET applications for reporting or
+//   content analysis.
+// - Validate and process presentation media files before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -39,7 +61,7 @@ namespace Example
                                 IPPImage embeddedImage = pictureFrame.PictureFormat.Picture.Image;
                                 // Save the image as a lossless PNG
                                 string outputImagePath = $"slide_{slideIndex}_shape_{shapeIndex}.png";
-                                embeddedImage.Image.Save(outputImagePath, Aspose.Slides.ImageFormat.Png);
+                                embeddedImage.Save(outputImagePath, Aspose.Slides.Export.ImageFormat.Png);
                                 Console.WriteLine("Saved image: " + outputImagePath);
                             }
                         }

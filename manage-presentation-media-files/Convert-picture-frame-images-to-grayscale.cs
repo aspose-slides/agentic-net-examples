@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Convert picture frame images to grayscale using C#
+//
+// Description:
+// Demonstrates how to convert images within picture frames to grayscale using
+// C# and Aspose.Slides for .NET. The example loads a PPTX file, applies a
+// grayscale image transform to each picture frame, and saves the modified
+// presentation. This pattern can be used to automate image processing in
+// PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Convert, Picture Frame, Image,
+// Grayscale, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of picture frame images to grayscale in presentations.
+// - Build C# utilities for batch image processing within PPTX files.
+// - Integrate grayscale transformation into .NET PowerPoint workflows.
+// - Prepare presentations for printing or visual consistency.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

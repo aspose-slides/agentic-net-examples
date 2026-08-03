@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add audio frame with custom start offset using C#
+//
+// Description:
+// Demonstrates how to add an embedded audio frame with a custom start offset
+// to a PowerPoint slide using C# and Aspose.Slides for .NET. The example
+// creates a new presentation, embeds an MP3 file, sets a 2‑second trim from
+// the start, configures playback options, and saves the result as a PPTX file.
+// This pattern helps developers automate audio handling in PPTX files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Audio, Frame, Custom Start Offset,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate insertion of audio frames with precise start timing.
+// - Build .NET tools for managing media in PowerPoint presentations.
+// - Generate or modify PPTX files with embedded audio programmatically.
+// - Validate audio playback behavior before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

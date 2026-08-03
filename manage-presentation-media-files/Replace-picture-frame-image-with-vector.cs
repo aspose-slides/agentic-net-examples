@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Replace picture frame image with vector using C#
+//
+// Description:
+// Demonstrates how to replace a picture frame's raster image with an SVG vector
+// image in a PowerPoint presentation using Aspose.Slides for .NET. The example
+// loads an existing PPTX file, finds the first picture frame on the first slide,
+// substitutes its image with an SVG file while preserving the original size,
+// and saves the result as a new PPTX file.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, SVG, Vector Image, Picture Frame, Replace Image,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Convert raster images in slides to scalable vector graphics.
+// - Automate updating slide graphics with SVG assets.
+// - Build .NET tools for batch processing of PPTX files.
+// - Ensure high‑quality rendering of images at any resolution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

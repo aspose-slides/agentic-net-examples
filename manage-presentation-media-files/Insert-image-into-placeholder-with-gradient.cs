@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Insert image into placeholder with gradient using C#
+//
+// Description:
+// Demonstrates how to insert an image into a picture placeholder and apply a
+// gradient fill to the placeholder's background using Aspose.Slides for .NET.
+// The example creates a new presentation, adds a picture placeholder to a blank
+// layout slide, sets a gradient background, loads an external image, assigns it
+// to the placeholder, and saves the result as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Insert, Image, Placeholder,
+// Gradient, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate insertion of images into placeholders with custom gradient backgrounds.
+// - Build .NET tools for PowerPoint presentation creation and styling.
+// - Generate or transform PPTX files programmatically in C# applications.
+// - Validate presentation layouts and visual effects before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

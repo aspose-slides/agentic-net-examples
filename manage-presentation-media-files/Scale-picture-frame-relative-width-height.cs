@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Scale picture frame relative width height using C#
+//
+// Description:
+// Demonstrates how to scale a picture frame's width and height relatively using
+// C# and Aspose.Slides for .NET. The example loads an image, inserts it as a
+// picture frame into a new presentation, applies relative scaling factors,
+// and saves the resulting PPTX file. This pattern can be used to automate
+// PowerPoint image resizing tasks in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Scale, Picture Frame, Relative
+// Width, Relative Height, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Programmatically adjust picture dimensions proportionally.
+// - Build tools that resize images within slides based on scaling factors.
+// - Generate or modify PPTX files with custom image sizing in .NET.
+// - Validate image scaling behavior before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;

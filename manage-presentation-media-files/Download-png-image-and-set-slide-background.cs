@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Download png image and set slide background using C#
+//
+// Description:
+// Demonstrates how to download a PNG image from a remote URL, add it to a
+// presentation, set it as the background of the first slide, and save the
+// result as a PPTX file using Aspose.Slides for .NET. The example includes
+// error handling for network issues and ensures proper disposal of resources.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Download, Image, Slide,
+// Background, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate downloading a PNG image and applying it as a slide background.
+// - Build C# utilities for PowerPoint presentation manipulation.
+// - Generate or modify PPTX files programmatically in .NET applications.
+// - Validate presentation workflows involving external image resources.
+// -----------------------------------------------------------------------------
 using System;
 using System.Net;
 using Aspose.Slides;

@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Insert raster image and apply hue shift using C#
+//
+// Description:
+// Demonstrates how to insert a raster image into a slide and apply a hue‑shift
+// effect using Aspose.Slides for .NET. The example creates a new presentation,
+// adds a picture frame with the specified image, modifies its color using an
+// HSL transformation, and saves the result as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Insert, Raster Image, Hue Shift,
+// Image Transform, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate insertion of raster images with color adjustments into PowerPoint.
+// - Build .NET tools for applying visual effects to slide content.
+// - Generate or modify PPTX files programmatically with hue‑shift effects.
+// - Validate image processing workflows in presentation automation.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

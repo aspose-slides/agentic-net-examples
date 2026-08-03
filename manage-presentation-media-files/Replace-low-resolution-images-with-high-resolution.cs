@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Replace low resolution images with high resolution using C#
+//
+// Description:
+// Demonstrates how to replace low‑resolution images in a PowerPoint presentation
+// with higher‑resolution versions using C# and Aspose.Slides for .NET. The example
+// loads an existing PPTX file, scans each slide for picture frames, and substitutes
+// each picture with a high‑resolution image from a specified folder while preserving
+// the original position and size. The modified presentation is saved as a new PPTX.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Replace, Resolution, Images,
+// High, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate the upgrade of low‑resolution images in existing presentations.
+// - Build .NET tools that improve visual quality of PPTX files before distribution.
+// - Integrate image‑replacement logic into larger PowerPoint processing pipelines.
+// - Validate and enhance presentation assets in batch workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;

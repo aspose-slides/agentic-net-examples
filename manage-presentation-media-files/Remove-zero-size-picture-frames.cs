@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Remove zero size picture frames using C#
+//
+// Description:
+// Demonstrates how to remove picture frames that have zero width or height 
+// from a PowerPoint presentation using C# and Aspose.Slides for .NET. The 
+// example loads a PPTX file, scans each slide for picture frames, removes any 
+// with zero dimensions, and saves the cleaned presentation. This pattern can 
+// be used to clean up malformed presentations before further processing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove, Zero, Size, Picture, 
+// Frame, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Clean up presentations by removing invalid picture frames.
+// - Prepare PPTX files for publishing or conversion.
+// - Automate validation of slide content in .NET applications.
+// - Integrate presentation sanitization into CI pipelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

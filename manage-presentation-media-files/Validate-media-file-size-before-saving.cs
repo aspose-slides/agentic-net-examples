@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Validate media file size before saving using C#
+//
+// Description:
+// Demonstrates how to validate audio and video media file sizes before saving a
+// PowerPoint presentation using C# and Aspose.Slides for .NET. The example
+// loads a PPTX file, checks each embedded audio and video against a maximum
+// size limit, and saves the presentation only if all media files meet the
+// criteria.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Validate, Media, Audio, Video,
+// File, Size, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Ensure embedded media files do not exceed size constraints before publishing.
+// - Build automated validation tools for PowerPoint presentations in .NET.
+// - Prevent oversized media from causing performance or storage issues.
+// - Integrate media size checks into CI/CD pipelines for presentation assets.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Detect overlapping picture frames adjust zorder using C#
+//
+// Description:
+// Demonstrates how to detect overlapping picture frames and adjust their Z-order
+// using Aspose.Slides for .NET. The example loads a PPTX file, finds picture
+// frames that intersect, determines the larger picture as primary, and moves it
+// to the front of the slide's shape stack. The modified presentation is saved
+// as a new file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Detect Overlap, Picture Frames,
+// Z-Order, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Identify and resolve overlapping images in a PowerPoint slide.
+// - Automatically bring larger images to the front in generated presentations.
+// - Build tools that clean up slide layouts before publishing.
+// - Integrate overlap detection into .NET PowerPoint automation workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;

@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Report slide media type size and encoding using C#
+//
+// Description:
+// Demonstrates how to enumerate and report the size, type, and content encoding
+// of image, audio, and video media files embedded in a PowerPoint presentation
+// using C# and Aspose.Slides for .NET. The example loads an existing PPTX file,
+// iterates through its media collections, outputs details to the console, and
+// saves the presentation unchanged.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Report, Slide, Media, Type,
+// Size, Encoding, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of media metadata from PowerPoint files.
+// - Build C# utilities for validating embedded media in presentations.
+// - Integrate media reporting into .NET applications that process PPTX files.
+// - Ensure media compliance before publishing or further transformation.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -46,7 +67,7 @@ class Program
                 }
 
                 string outputPath = "output.pptx";
-                pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                pres.Save(outputPath, SaveFormat.Pptx);
             }
         }
         catch (Aspose.Slides.PptxUnsupportedFormatException)

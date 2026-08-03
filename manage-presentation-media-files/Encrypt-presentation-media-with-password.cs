@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Encrypt presentation with password using C#
+//
+// Description:
+// Demonstrates how to encrypt a PowerPoint presentation (including its media
+// files) with a password using Aspose.Slides for .NET. The example loads an
+// existing PPTX file, applies password protection, and saves the encrypted
+// file to an output folder. This pattern can be used in console applications
+// to secure PPTX content before distribution.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Encrypt, Password Protection, Media,
+// Presentation Security, .NET
+//
+// Use Cases:
+// - Secure PowerPoint presentations with a password before sharing.
+// - Build automation tools that protect PPTX files in batch processes.
+// - Integrate presentation encryption into .NET applications.
+// - Ensure media assets within a presentation are encrypted along with the file.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

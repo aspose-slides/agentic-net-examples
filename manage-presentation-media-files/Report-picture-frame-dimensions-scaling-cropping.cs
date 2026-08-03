@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Report picture frame dimensions scaling cropping using C#
+//
+// Description:
+// Demonstrates how to report picture frame dimensions, scaling, and cropping 
+// using C# and Aspose.Slides for .NET. The example loads a PPTX file, iterates 
+// through each slide and picture frame, outputs position, size, and relative 
+// scaling values to the console, and saves the presentation. Developers can 
+// use this pattern to automate PPTX workflows, validate picture frame 
+// properties, or integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Report, Picture, Frame, 
+// Dimensions, Scaling, Cropping, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate reporting of picture frame dimensions, scaling, and cropping.
+// - Build C# tools for PowerPoint presentation analysis and processing.
+// - Generate or transform PPTX files while extracting media metadata in .NET.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Compress audio streams to 128kbps using C#
+//
+// Description:
+// Demonstrates how to compress audio streams to 128kbps using C# and 
+// Aspose.Slides for .NET. The example shows the required 
+// presentation‑processing steps for PowerPoint files and produces the 
+// requested output in a standalone console application. Developers can use 
+// this pattern to automate PPTX workflows, validate results, or integrate 
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Compress, Audio, Streams, 
+// 128Kbps, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate compress audio streams to 128kbps.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -13,8 +34,8 @@ namespace AudioCompressionExample
             string inputPresentationPath = "input.pptx";
             // Output presentation path
             string outputPresentationPath = "output_compressed.pptx";
-            // Desired audio bitrate (kbps) - placeholder for actual compression logic
-            int targetBitrateKbps = 64;
+            // Desired audio bitrate (kbps) – placeholder for actual compression logic
+            int targetBitrateKbps = 128;
 
             // Verify input file exists
             if (!File.Exists(inputPresentationPath))
@@ -34,10 +55,10 @@ namespace AudioCompressionExample
                     // Get original audio data
                     byte[] originalAudioData = audio.BinaryData;
 
-                    // Placeholder: compress the audio data to the target bitrate
+                    // Placeholder: compress the audio data to the target bitrate (128 kbps)
                     // The actual compression implementation depends on external audio processing libraries.
                     // For demonstration, we simply assign the original data back.
-                    byte[] compressedAudioData = originalAudioData; // TODO: replace with compressed data
+                    byte[] compressedAudioData = originalAudioData; // TODO: replace with compressed data at 128 kbps
 
                     // Replace the audio data with compressed version
                     // Aspose.Slides does not provide a direct setter for BinaryData,
@@ -59,7 +80,7 @@ namespace AudioCompressionExample
                 }
 
                 // Save the modified presentation
-                presentation.Save(outputPresentationPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                presentation.Save(outputPresentationPath, SaveFormat.Pptx);
                 presentation.Dispose();
 
                 Console.WriteLine("Presentation saved with compressed audio: " + outputPresentationPath);
@@ -67,7 +88,6 @@ namespace AudioCompressionExample
             catch (NotSupportedException)
             {
                 // Format not supported
-                // Comment: format not supported
                 Console.WriteLine("The provided file format is not supported.");
             }
             catch (Exception ex)

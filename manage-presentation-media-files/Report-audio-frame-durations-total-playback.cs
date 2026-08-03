@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Report total estimated audio playback duration from audio frames using C#
+//
+// Description:
+// Demonstrates how to calculate an estimated total audio playback duration by
+// iterating through all slides and audio frames in a PowerPoint presentation,
+// summing fade‑in, fade‑out, trim‑from‑start and trim‑from‑end values. The example
+// uses Aspose.Slides for .NET in a console application, handling missing files
+// and unsupported formats, and saves the presentation after processing.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, AudioFrame, FadeInDuration,
+// FadeOutDuration, TrimFromStart, TrimFromEnd, Presentation Processing,
+// Audio Playback Estimation
+//
+// Use Cases:
+// - Generate a quick estimate of total audio playback time in a PPTX.
+// - Create automated validation tools for audio timing in presentations.
+// - Integrate audio duration reporting into .NET PowerPoint processing pipelines.
+// - Ensure audio assets meet duration requirements before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Insert audio frame stop on slide transition using C#
+//
+// Description:
+// Demonstrates how to insert an embedded audio frame into a slide that stops
+// playback when the slide transitions, using C# and Aspose.Slides for .NET.
+// The example creates a new presentation, adds an audio frame from a local
+// WAV file, configures it to not play across slides, and saves the result as a
+// PPTX file. This pattern can be used to automate PowerPoint media handling
+// in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Insert, Audio, Frame, Stop,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate insertion of audio frames that stop on slide transition.
+// - Build C# tools for managing media playback behavior in PowerPoint files.
+// - Generate or modify PPTX presentations with specific audio playback settings.
+// - Validate and test presentation media workflows before deployment.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -28,7 +50,7 @@ class Program
                     audioFrame.RewindAudio = true;
                 }
 
-                pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                pres.Save(outputPath, SaveFormat.Pptx);
             }
         }
         catch (Exception ex)

@@ -1,3 +1,21 @@
+// -----------------------------------------------------------------------------
+// Example: Load presentation and remove audio frames using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, iterate through its slides,
+// identify and remove all audio frame shapes, and save the resulting presentation
+// using Aspose.Slides for .NET. This console application shows the essential steps
+// for processing media objects within PPTX files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load Presentation, Remove Audio Frames, Media Processing, Slide Shapes
+//
+// Use Cases:
+// - Automate removal of embedded audio from presentations.
+// - Prepare PPTX files for distribution without audio content.
+// - Build .NET tools for cleaning up media elements in PowerPoint files.
+// - Integrate audio frame removal into larger presentation processing pipelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

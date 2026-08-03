@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Insert GIF image into slide once using C#
+//
+// Description:
+// Demonstrates how to download a GIF image from a URL, insert it into a slide,
+// and add a MediaPlay animation effect that plays the GIF once using Aspose.Slides
+// for .NET. The example covers presentation creation, image handling, shape
+// insertion, animation configuration, and saving the PPTX file.
+//
+// Keywords:
+// C#, Aspose.Slides, GIF, Image, Slide, MediaPlay, Animation, HttpClient, 
+// Presentation Processing, Office Automation, Download, URL
+//
+// Use Cases:
+// - Automate insertion of external GIF images into PowerPoint slides.
+// - Build .NET tools that download and embed media into presentations.
+// - Apply a one‑time play animation to GIFs in PPTX files.
+// - Generate or transform PPTX files with embedded animated content.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Net.Http;

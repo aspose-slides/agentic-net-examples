@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: List slides with locked picture frames using C#
+//
+// Description:
+// Demonstrates how to enumerate slides in a PowerPoint presentation and
+// identify those that contain picture frames with a locked aspect ratio using
+// Aspose.Slides for .NET. The example loads a PPTX file, checks each shape on
+// every slide, reports slides that meet the criteria, and saves the presentation.
+// This pattern can be used to automate validation or processing of PPTX files
+// where picture frame aspect ratios must be preserved.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, List Slides, Locked Aspect Ratio,
+// Picture Frame, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Detect slides containing picture frames with locked aspect ratios.
+// - Build validation tools for PowerPoint presentations in .NET.
+// - Automate reporting of specific shape properties across slides.
+// - Integrate aspect‑ratio checks into larger PPTX processing pipelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -46,10 +67,8 @@ namespace DetectLockedAspectRatio
                     foreach (Aspose.Slides.IShape shape in slide.Shapes)
                     {
                         // Check if the shape is a picture frame
-                        if (shape is Aspose.Slides.IPictureFrame)
+                        if (shape is Aspose.Slides.IPictureFrame pictureFrame)
                         {
-                            Aspose.Slides.IPictureFrame pictureFrame = (Aspose.Slides.IPictureFrame)shape;
-
                             // Check if the picture frame's aspect ratio is locked
                             if (pictureFrame.ShapeLock != null && pictureFrame.ShapeLock.AspectRatioLocked)
                             {

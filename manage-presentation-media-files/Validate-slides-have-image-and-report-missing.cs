@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Validate slides have image and report missing using C#
+//
+// Description:
+// Demonstrates how to validate each slide in a PowerPoint presentation
+// contains at least one picture (image) and reports slides that are missing
+// images. The example loads a PPTX file, checks every slide for picture frames,
+// writes missing‑slide information to the console, and saves the presentation.
+// This pattern can be used in .NET console tools for PowerPoint validation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Validate, Slides, Image, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate validation of slides to ensure they contain images.
+// - Build C# utilities for PowerPoint content quality checks.
+// - Integrate slide‑image verification into .NET applications.
+// - Generate reports of missing media before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

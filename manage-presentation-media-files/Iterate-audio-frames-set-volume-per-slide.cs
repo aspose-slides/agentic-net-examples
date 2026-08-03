@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Iterate audio frames set volume per slide using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, iterate through each slide
+// and its shapes, identify audio frames and set their volume based on the slide
+// index (e.g., increasing by 10 % per slide, capped at 100 %). The modified
+// presentation is then saved. This pattern shows the essential steps for
+// processing audio media in PPTX files with Aspose.Slides for .NET.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, audio frame, volume, presentation
+// processing, slide iteration, media manipulation
+//
+// Use Cases:
+// - Adjust audio volume programmatically across slides.
+// - Build automation tools that normalize or customize audio levels in PPTX.
+// - Integrate audio handling into .NET applications that generate or modify
+//   presentations.
+// - Validate and test audio settings before publishing a presentation.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

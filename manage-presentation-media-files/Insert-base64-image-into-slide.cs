@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Insert base64 image into slide using C#
+//
+// Description:
+// Demonstrates how to insert a Base64‑encoded PNG image into a slide using C# 
+// and Aspose.Slides for .NET. The example creates a new presentation, adds the 
+// image to the presentation's image collection, places it on the first slide 
+// as a picture frame, and saves the result as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Insert, Base64, Image, Slide, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate insertion of Base64‑encoded images into PowerPoint slides.
+// - Build .NET tools for dynamic PPTX generation or modification.
+// - Integrate image data received as Base64 strings into presentations.
+// - Validate and test presentation workflows that involve image handling.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

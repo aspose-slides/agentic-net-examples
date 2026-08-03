@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Set audio frame hideatshowing for confidential slides using C#
+//
+// Description:
+// Demonstrates how to set the HideAtShowing property of audio frames on slides
+// that contain the word "confidential" using C# and Aspose.Slides for .NET.
+// The example loads a presentation, scans each slide for confidential text,
+// hides any audio frames on those slides, and saves the result.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, AudioFrame, HideAtShowing, 
+// Confidential, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automatically hide audio frames on confidential slides before distribution.
+// - Build C# utilities for PowerPoint content sanitization.
+// - Integrate audio frame visibility control into .NET presentation workflows.
+// - Ensure compliance with content policies in generated PPTX files.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

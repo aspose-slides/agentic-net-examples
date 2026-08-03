@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add audio frame pause on shape click using C#
+//
+// Description:
+// Demonstrates how to add an embedded audio frame to a slide and configure a
+// shape click to pause the audio playback using Aspose.Slides for .NET. The
+// example creates a presentation, inserts an audio file, adds a rectangle
+// shape as a pause button, and sets an OnClick animation effect that stops the
+// previously playing sound.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Audio, Frame, Pause, Shape,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding pause functionality to audio in PowerPoint presentations.
+// - Build C# utilities for interactive media control in slides.
+// - Generate or modify PPTX files with audio playback controls.
+// - Validate audio interaction workflows before deployment.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Replace flash object binary with new SWF using C#
+//
+// Description:
+// Demonstrates how to replace the binary data of an embedded Flash (OleObjectFrame)
+// object in a PowerPoint presentation with a new SWF file using C# and Aspose.Slides
+// for .NET. The example loads an existing PPTX, locates the first Flash object on the
+// first slide, substitutes its embedded data with the contents of a new SWF file,
+// and saves the updated presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Replace, Flash, Object, Binary,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate replacement of Flash object binaries with updated SWF files.
+// - Build C# utilities for managing embedded media in PowerPoint presentations.
+// - Integrate Flash content updates into .NET-based document processing pipelines.
+// - Validate and transform PPTX files before distribution or further automation.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

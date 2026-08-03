@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add picture frame with rotation verify boundingbox using C#
+//
+// Description:
+// Demonstrates how to add a picture frame, apply a rotation, and verify the
+// resulting bounding box using C# and Aspose.Slides for .NET. The example
+// creates a new presentation, inserts an image as a picture frame, rotates it
+// by a custom angle, outputs the bounding box dimensions, and saves the file.
+// This pattern helps developers automate PowerPoint image handling and
+// validate geometric transformations in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Picture Frame, Rotation,
+// Bounding Box, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding picture frames with specific rotation angles.
+// - Build C# tools for verifying geometric properties of slide elements.
+// - Generate or transform PPTX files with image transformations in .NET.
+// - Validate presentation layouts before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -30,7 +52,7 @@ class Program
             ISlide slide = presentation.Slides[0];
 
             // Load image and add to presentation resources
-            IImage img = Images.FromFile(imagePath);
+            IImage img = Image.FromFile(imagePath);
             IPPImage imgx = presentation.Images.AddImage(img);
 
             // Add picture frame with the image

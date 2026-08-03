@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Merge pptx presentations with audio frames using C#
+//
+// Description:
+// Demonstrates how to merge two PPTX presentations that contain embedded audio
+// files and audio frames into a single presentation while preserving audio
+// objects and playback settings using Aspose.Slides for .NET. The example
+// creates a destination presentation, copies audio assets, clones slides, and
+// re‑links audio frames to the newly added audio objects.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Merge, Audio, AudioFrames, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Combine multiple PowerPoint files that include embedded audio into one file.
+// - Build automation tools that need to retain audio playback behavior across
+//   merged slides.
+// - Generate consolidated presentations for training, webinars, or e‑learning
+//   where audio cues must remain functional.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;

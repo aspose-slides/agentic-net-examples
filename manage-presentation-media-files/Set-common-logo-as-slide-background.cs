@@ -1,5 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Set common logo as slide background using C#
+//
+// Description:
+// Demonstrates how to set a common logo as the background image for every slide
+// in a PowerPoint presentation using C# and Aspose.Slides for .NET. The example
+// loads an existing presentation and a logo image, applies the logo as a
+// stretched background to each slide, and saves the result as a new PPTX file.
+// This pattern can be used to automate branding or watermarking of slides.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Common, Logo, Slide, 
+// Background, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting a common logo as slide background across a presentation.
+// - Build C# tools for PowerPoint branding and visual consistency.
+// - Generate or transform PPTX files with custom background images in .NET.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
+using System.Drawing;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
@@ -34,7 +55,7 @@ namespace SlideBackgroundUpdater
                 using (Presentation pres = new Presentation(inputPath))
                 {
                     // Load the logo image and add it to the presentation's image collection
-                    IImage logoImage = Images.FromFile(logoPath);
+                    Image logoImage = Image.FromFile(logoPath);
                     IPPImage logoIppImage = pres.Images.AddImage(logoImage);
 
                     // Apply the logo as background image to each slide

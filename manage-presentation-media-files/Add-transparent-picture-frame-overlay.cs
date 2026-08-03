@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add transparent picture frame overlay using C#
+//
+// Description:
+// Demonstrates how to add a transparent picture frame overlay to an existing
+// PowerPoint presentation using C# and Aspose.Slides for .NET. The example
+// loads a PPTX file, inserts a picture frame with a transparent background
+// on the first slide, and saves the modified presentation. This pattern can be
+// used to automate overlay insertion, create custom branding layers, or
+// enhance slides with non‑obstructive graphics.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Transparent, Picture, Frame,
+// Overlay, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding transparent picture frame overlays.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;

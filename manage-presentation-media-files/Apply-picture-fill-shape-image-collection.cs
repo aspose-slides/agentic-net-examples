@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Apply picture fill shape image collection using C#
+//
+// Description:
+// Demonstrates how to load an external image file, add it to a presentation's
+// image collection, and apply that image as a tiled picture fill to a rectangle
+// shape using Aspose.Slides for .NET. The example creates a new PPTX file,
+// configures picture fill properties such as tile mode, alignment, and flip,
+// and saves the result to the Data folder.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, Picture Fill, Shape,
+// Image Collection, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate applying picture fill to shapes from an image collection.
+// - Build C# utilities for customizing slide graphics programmatically.
+// - Generate or modify PPTX files with tiled image backgrounds in .NET apps.
+// - Validate picture fill settings before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;

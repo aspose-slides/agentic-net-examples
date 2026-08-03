@@ -1,3 +1,18 @@
+// -----------------------------------------------------------------------------
+// Example: Add jpeg image to first slide using C#
+//
+// Description:
+// Demonstrates how to add a JPEG image to the first slide of a new presentation using C# and Aspose.Slides for .NET. The example creates a presentation, loads a JPEG file from a data folder, inserts it as a picture frame on the first slide, and saves the result as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, JPEG, Jpeg, Image, First, Slide, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding a JPEG image to the first slide of a presentation.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files with embedded images in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

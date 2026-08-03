@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Apply inversion filter to title slide frame using C#
+//
+// Description:
+// Demonstrates how to apply an inversion (alpha inverse) filter to a picture
+// placed on the title slide of a PowerPoint presentation using C# and
+// Aspose.Slides for .NET. The example creates a new presentation, inserts an
+// image as a picture frame on the first slide, applies the inversion effect,
+// and saves the result as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, Inversion, Filter,
+// Title Slide, Picture Frame, Image Transform
+//
+// Use Cases:
+// - Automate applying an inversion filter to images on title slides.
+// - Build .NET tools for PowerPoint presentation processing.
+// - Generate or modify PPTX files with visual effects in C# applications.
+// - Validate presentation workflows involving image effects.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

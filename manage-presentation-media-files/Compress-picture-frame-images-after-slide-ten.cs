@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Compress picture frame images after slide ten using C#
+//
+// Description:
+// Demonstrates how to compress picture frame images on slides after the
+// tenth slide in a PowerPoint presentation using C# and Aspose.Slides for .NET.
+// The example loads a PPTX file, iterates through slides beyond slide ten,
+// compresses each picture frame by removing cropped areas and setting the
+// resolution to Dpi96, and saves the updated presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Compress, Picture Frame, Images,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Reduce file size of large presentations by compressing images after a
+//   specific slide.
+// - Automate image optimization in batch PowerPoint processing tools.
+// - Integrate picture compression into .NET applications that generate or
+//   modify PPTX files.
+// - Prepare presentations for distribution with optimized media assets.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

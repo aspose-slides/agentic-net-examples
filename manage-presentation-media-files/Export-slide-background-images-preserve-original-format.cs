@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export slide background images preserve original format using C#
+//
+// Description:
+// Demonstrates how to export slide background images while preserving their
+// original format using C# and Aspose.Slides for .NET. The example loads a
+// presentation, extracts picture backgrounds from each slide, determines the
+// original image format from the content type, and saves the images to disk
+// without conversion. It also saves a copy of the presentation after processing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Slide, Background,
+// Images, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of slide background images in their native format.
+// - Build C# utilities for PowerPoint presentation media management.
+// - Preserve original image quality when exporting slide assets.
+// - Integrate background image extraction into .NET applications or workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

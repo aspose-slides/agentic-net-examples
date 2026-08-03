@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Detect and log missing audio frame thumbnails using C#
+//
+// Description:
+// Demonstrates how to detect audio frames without thumbnail images in a
+// PowerPoint presentation using Aspose.Slides for .NET. The example iterates
+// through slides and shapes, identifies IAudioFrame objects, checks for the
+// presence of a thumbnail picture, and logs any missing thumbnails to the
+// console. The presentation is then saved unchanged.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Detect, Missing, Audio Frame,
+// Thumbnail, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Identify audio frames lacking visual thumbnails before publishing.
+// - Automate validation of presentation media assets.
+// - Integrate thumbnail checks into .NET PowerPoint processing pipelines.
+// - Generate reports on missing media metadata in PPTX files.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

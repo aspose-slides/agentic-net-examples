@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Update audio frame volume uniformly using C#
+//
+// Description:
+// Demonstrates how to set a uniform volume level for all audio frames in a
+// PowerPoint presentation using C# and Aspose.Slides for .NET. The example
+// loads a PPTX file, iterates through each slide and shape, updates the
+// VolumeValue property of any IAudioFrame found, and saves the modified
+// presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Audio Frame, Volume, Presentation
+// Processing, Office Automation
+//
+// Use Cases:
+// - Standardize audio playback volume across all slides.
+// - Create automated tools for adjusting audio settings in presentations.
+// - Prepare presentations for consistent audio experience before distribution.
+// - Integrate audio volume normalization into .NET based PPTX workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
