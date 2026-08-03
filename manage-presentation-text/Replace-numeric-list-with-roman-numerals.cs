@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Replace numeric list with roman numerals using C#
+//
+// Description:
+// Demonstrates how to scan all text shapes in a PowerPoint presentation,
+// detect numeric list prefixes (e.g., "1.", "2)", etc.), convert the numbers to
+// Roman numerals, and replace the original prefixes while preserving leading
+// whitespace. The example uses Aspose.Slides for .NET to load, modify, and save
+// PPTX files in a standalone console application. Developers can adapt this
+// pattern to automate list formatting, enforce style guidelines, or perform
+// custom text transformations in presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Replace, Numeric List, Roman Numerals,
+// Text Processing, Presentation Automation, Office Automation
+//
+// Use Cases:
+// - Convert numeric bullet lists to Roman numeral lists in existing presentations.
+// - Build .NET tools that enforce specific list styles across multiple PPTX files.
+// - Integrate custom text transformation logic into PowerPoint processing pipelines.
+// - Validate and standardize list formatting before publishing or sharing slides.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
