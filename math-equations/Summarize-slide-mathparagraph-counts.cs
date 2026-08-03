@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Summarize slide mathparagraph counts using C#
+//
+// Description:
+// Demonstrates how to count MathParagraph objects on each slide of a PowerPoint
+// presentation using C# and Aspose.Slides for .NET. The example loads a PPTX,
+// iterates through slides and shapes, identifies MathPortion elements, and
+// reports the number of MathParagraphs found per slide. It also saves the
+// presentation after processing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Summarize, Slide,
+// MathParagraph, Counts, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate the extraction of MathParagraph counts from presentations.
+// - Build C# tools for analyzing mathematical content in PPTX files.
+// - Integrate slide math analysis into .NET applications.
+// - Validate and report on presentation content before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
