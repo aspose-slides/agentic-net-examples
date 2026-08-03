@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Extract text to CSV by slide using C#
+//
+// Description:
+// Demonstrates how to extract all textual content from each slide of a PowerPoint
+// presentation and write it to a CSV file using C# and Aspose.Slides for .NET.
+// The example iterates through slides, shapes, and grouped shapes, handling
+// text extraction and proper CSV escaping. It can be used as a basis for
+// automating PPTX content analysis or reporting.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Extract, Text, Slide, CSV,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of slide text into CSV reports.
+// - Build C# utilities for PowerPoint content auditing.
+// - Generate data files for downstream analysis from PPTX presentations.
+// - Validate and document presentation content before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
