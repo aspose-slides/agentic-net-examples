@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Clean presentation charts remove custom data using C#
+//
+// Description:
+// Demonstrates how to clean a PowerPoint presentation by removing all custom
+// XML parts (custom data) using C# and Aspose.Slides for .NET. The example
+// loads a PPTX file, deletes any embedded custom XML data, and saves the
+// cleaned presentation. This pattern helps prepare presentations for
+// distribution or compliance by stripping proprietary or unwanted metadata.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clean, Presentation, Charts,
+// Remove, Custom Data, XML Parts, Office Automation
+//
+// Use Cases:
+// - Remove custom XML data from presentations before sharing.
+// - Clean up chart-related custom data to ensure privacy.
+// - Automate preparation of PPTX files for compliance or archiving.
+// - Integrate presentation sanitization into .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
