@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Extract bullet hierarchy from notes to JSON using C#
+//
+// Description:
+// Demonstrates how to extract bullet hierarchy from slide notes to JSON using
+// C# and Aspose.Slides for .NET. The example loads a presentation, reads the
+// notes text frames, captures each paragraph's text and bullet level, and
+// outputs the hierarchy as a JSON array. This pattern can be used to automate
+// PPTX workflows, validate note content, or integrate presentation data into
+// .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Extract, Bullet, Hierarchy,
+// Notes, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of bullet hierarchy from slide notes to JSON.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;
