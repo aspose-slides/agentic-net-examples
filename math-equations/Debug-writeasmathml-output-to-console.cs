@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Debug writeasmathml output to console using C#
+//
+// Description:
+// Demonstrates how to create a PowerPoint presentation, add a math shape with
+// phantom and normal MathML elements, output each MathML block to the console,
+// and save the presentation using Aspose.Slides for .NET. The example shows
+// the required presentation‑processing steps and how to debug MathML content
+// in a standalone console application.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Debug, WriteAsMathMl, MathML,
+// Console, Presentation Processing, Math Shape, Math Paragraph, Math Elements
+//
+// Use Cases:
+// - Debug MathML output generated from PowerPoint math shapes.
+// - Build C# tools for processing and validating mathematical content in PPTX files.
+// - Automate creation of presentations with custom math elements.
+// - Verify MathML serialization before integrating with other systems.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;
