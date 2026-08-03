@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export Ink shape trace data to CSV using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, locate the first Ink
+// shape, extract its ink traces (points), and write the trace data to a CSV
+// file. The example uses Aspose.Slides for .NET and can be run as a console
+// application to automate PPTX processing and data extraction.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, Ink shape, Ink trace, CSV export,
+// Presentation processing, Office automation
+//
+// Use Cases:
+// - Extract ink stroke data from PPTX files for analysis or reporting.
+// - Build utilities that convert Ink shape content to CSV for downstream
+//   processing.
+// - Automate validation of Ink objects in presentations.
+// - Integrate Ink trace extraction into .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Drawing;
