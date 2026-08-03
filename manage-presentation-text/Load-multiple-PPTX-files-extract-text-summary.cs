@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Load multiple PPTX files and extract text summary using C#
+//
+// Description:
+// Demonstrates how to load multiple PowerPoint presentation files (PPT, PPTX, ODP),
+// extract their raw text content, generate a consolidated text summary, and create
+// a new presentation containing that summary. The example uses Aspose.Slides for
+// .NET and shows file enumeration, text extraction with Unarranged mode, and
+// creation of a summary report in both a .txt file and a .pptx file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, PPT, ODP, Aspose.Slides for .NET, Load, Multiple, Files,
+// Text Summary, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of text from multiple PowerPoint presentations.
+// - Generate consolidated reports of presentation content.
+// - Create summary presentations for review or documentation purposes.
+// - Integrate PowerPoint text analysis into .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Text;
