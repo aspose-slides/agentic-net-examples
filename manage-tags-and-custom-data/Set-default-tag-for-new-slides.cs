@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set default tag for new slides using C#
+//
+// Description:
+// Demonstrates how to set a default tag for new slides by adding a custom
+// property to a presentation template and applying it to a newly created
+// presentation using Aspose.Slides for .NET. The example loads a template,
+// defines a custom property "DefaultTag", creates a new slide based on the
+// template layout, and saves the resulting presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Default Tag, Custom Property,
+// Presentation Template, Slide Creation, Office Automation
+//
+// Use Cases:
+// - Automate setting a default tag for newly added slides.
+// - Build tools that propagate custom metadata from templates to new presentations.
+// - Generate PPTX files with predefined tags for downstream processing.
+// - Ensure consistent slide metadata across multiple presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
