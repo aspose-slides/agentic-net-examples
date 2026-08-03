@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Clone inkshape modify brush color on slide using C#
+//
+// Description:
+// Demonstrates how to clone a slide containing an Ink shape, locate the
+// Ink shape on the cloned slide, and modify the brush color of its first trace
+// using Aspose.Slides for .NET. The example loads an existing PPTX file,
+// performs the cloning and color change, and saves the result as a new PPTX file.
+// This pattern can be used to automate PowerPoint slide duplication and
+// Ink shape styling in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone, Ink shape, Modify, Brush,
+// Color, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate cloning of slides that contain Ink shapes.
+// - Programmatically change Ink shape brush colors after duplication.
+// - Build C# tools for PowerPoint presentation processing and styling.
+// - Generate or transform PPTX files with customized Ink annotations.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
