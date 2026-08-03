@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Map database fields to presentation tags using C#
+//
+// Description:
+// Demonstrates how to map simulated database fields to custom data tags in a
+// PowerPoint presentation using Aspose.Slides for .NET. The example also shows
+// how to add a chart to the first slide and associate it with an external
+// workbook. It loads a template PPTX, updates its custom data, and saves the
+// result as a new file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Database fields, CustomData, Tags,
+// Presentation processing, Chart, External workbook, Office automation
+//
+// Use Cases:
+// - Automate mapping of database values to presentation custom data tags.
+// - Programmatically add charts and link them to external data sources.
+// - Build .NET tools for PowerPoint presentation manipulation and validation.
+// - Generate or transform PPTX files with custom metadata in automated workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
 using System.IO;
