@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Extract textboxes from slide three using C#
+//
+// Description:
+// Demonstrates how to extract all textboxes from the third slide of a PowerPoint
+// presentation using C# and Aspose.Slides for .NET. The example loads an input
+// PPTX file, checks for the presence of a third slide, retrieves every text
+// frame on that slide, outputs the contained text to the console, and finally
+// saves the (unchanged) presentation to an output file. This pattern can be
+// used to automate PPTX text extraction, validate slide content, or integrate
+// presentation processing into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Extract, Textboxes, Slide,
+// Three, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of textbox content from slide three.
+// - Build C# utilities for PowerPoint presentation analysis.
+// - Generate reports or perform validation on specific slides in PPTX files.
+// - Integrate slide text extraction into larger .NET workflows or services.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Util;
