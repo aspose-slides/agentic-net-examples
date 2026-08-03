@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Configure multilevel bullet hierarchy and indentation using C#
+//
+// Description:
+// Demonstrates how to configure a multilevel bullet hierarchy and indentation 
+// in a PowerPoint presentation using C# and Aspose.Slides for .NET. The example 
+// creates a new presentation, adds a rectangle shape with a text frame, sets 
+// up three bullet levels with custom indentation, and saves the result as a PPTX 
+// file. This pattern can be used to automate bullet formatting in .NET 
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Configure, Multilevel, Bullet, 
+// Hierarchy, Indentation, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate configuration of multilevel bullet hierarchy and indentation.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files with custom bullet structures in .NET 
+//   applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
