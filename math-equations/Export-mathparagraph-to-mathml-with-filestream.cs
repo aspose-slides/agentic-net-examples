@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Export MathParagraph to MathML using FileStream in C#
+//
+// Description:
+// Demonstrates how to create a simple mathematical equation, add it to a
+// presentation, and export the MathParagraph to a MathML file using a
+// FileStream with Aspose.Slides for .NET. The example also saves the
+// presentation as a PPTX file.
+//
+// Keywords:
+// C#, Aspose.Slides, MathParagraph, MathML, FileStream, Export, PowerPoint,
+// PPTX, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Export MathParagraph content to MathML for interoperability.
+// - Automate generation of MathML from PowerPoint presentations.
+// - Build .NET tools that process mathematical equations in slides.
+// - Save presentations after modifying mathematical shapes.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -32,9 +51,10 @@ namespace ExportMathParagraphToMathML
             );
 
             // Export the MathParagraph to MathML using a FileStream
-            FileStream stream = new FileStream(outFilePath, FileMode.Create);
-            mathParagraph.WriteAsMathMl(stream);
-            stream.Close();
+            using (FileStream stream = new FileStream(outFilePath, FileMode.Create))
+            {
+                mathParagraph.WriteAsMathMl(stream);
+            }
 
             // Save the presentation before exiting
             string presentationPath = "output.pptx";
