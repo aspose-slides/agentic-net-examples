@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Generate table of contents from slide titles using C#
+//
+// Description:
+// Demonstrates how to generate a table of contents slide by extracting
+// titles from existing slides using Aspose.Slides for .NET. The example
+// loads a presentation, collects CenteredTitle placeholder text, creates a
+// new slide, inserts a rectangle shape with the compiled TOC, and saves the
+// result. This pattern can be used to automate PPTX workflows, add navigation
+// aids, or prepare presentations programmatically.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PPTX, PowerPoint, Table of Contents, Slide Titles,
+// Presentation Processing, Automation, Office Automation
+//
+// Use Cases:
+// - Automatically create a TOC slide for existing presentations.
+// - Build .NET tools that analyze and augment PowerPoint files.
+// - Generate navigation aids for large slide decks.
+// - Validate and transform PPTX content in batch processes.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;
