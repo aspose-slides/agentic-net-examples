@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Get inkshape container width and height using C#
+//
+// Description:
+// Demonstrates how to retrieve the container width and height of an Ink
+// shape in a PowerPoint presentation using Aspose.Slides for .NET. The example
+// loads a PPTX file, locates the first Ink shape on the first slide, reads its
+// Width and Height properties, outputs the values, and saves the presentation.
+// This pattern can be used to inspect or validate Ink objects in automated
+// PPTX processing scenarios.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, Ink shape, Ink, Container width, Container height,
+// PowerPoint, PPTX, Presentation processing, Office automation
+//
+// Use Cases:
+// - Extract dimensions of Ink shapes for layout analysis.
+// - Build tools that validate Ink object sizing in presentations.
+// - Automate reporting of Ink shape metrics in batch PPTX processing.
+// - Integrate Ink shape dimension retrieval into .NET applications.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
