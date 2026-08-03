@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add fade in animation to paragraphs using C#
+//
+// Description:
+// Demonstrates how to add a fade‑in animation effect to each paragraph in
+// text‑containing shapes of the first slide using Aspose.Slides for .NET.
+// The example loads an existing PPTX, iterates through AutoShapes, applies a
+// Fade effect to every paragraph, and saves the animated presentation.
+// This pattern can be used to automate paragraph‑level animations in PowerPoint
+// files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Fade, Animation, Paragraphs,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Programmatically add fade‑in animation to paragraphs in a PPTX.
+// - Build .NET tools that enhance slide content with animation effects.
+// - Generate or modify presentations with automated text animations.
+// - Validate animation workflows before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;
