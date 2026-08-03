@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Distinguish shape from inkshape before brush using C#
+//
+// Description:
+// Demonstrates how to differentiate Ink shapes from regular shapes in a
+// PowerPoint presentation, read the brush information of Ink shapes, and
+// apply a solid fill to non‑Ink shapes using Aspose.Slides for .NET. The
+// example loads a PPTX file, processes each slide, and saves the modified
+// presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Ink shape, Brush, Distinguish,
+// Shape, Presentation processing, Office Automation
+//
+// Use Cases:
+// - Identify Ink shapes and inspect their brush properties before modification.
+// - Apply visual changes to regular shapes while preserving Ink shape data.
+// - Automate PPTX workflows that require separate handling of Ink and non‑Ink objects.
+// - Build .NET tools for presentation analysis and transformation.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
