@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Read and display Ink trace points using C#
+//
+// Description:
+// Demonstrates how to read Ink traces from a shape in a PowerPoint presentation
+// using Aspose.Slides for .NET, enumerate the sequential X and Y points of each
+// trace, and output them to the console. The example shows the required
+// presentation-processing steps for PowerPoint files and saves the presentation
+// unchanged.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Ink, InkTrace, Trace Points,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Extract and analyze Ink trace data from PPTX files.
+// - Build C# tools for inspecting Ink annotations in presentations.
+// - Automate validation of Ink content in PowerPoint slides.
+// - Integrate Ink trace processing into .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -38,12 +58,9 @@ namespace InkTraceExample
                     // Get all traces
                     IInkTrace[] traces = ink.Traces;
 
-                    // Populate each trace with sequential points (example: (0,0), (10,10), (20,20), ...)
+                    // Display each trace's points (example: (0,0), (10,10), (20,20), ...)
                     for (int t = 0; t < traces.Length; t++)
                     {
-                        // Since Points property is read‑only, we cannot modify existing points.
-                        // In a real scenario, you would create new InkTrace objects with desired points.
-                        // Here we just display existing points.
                         PointF[] points = traces[t].Points;
                         Console.WriteLine($"Trace {t} has {points.Length} points:");
                         for (int i = 0; i < points.Length; i++)

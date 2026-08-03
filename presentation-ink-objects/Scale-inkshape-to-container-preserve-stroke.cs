@@ -1,3 +1,18 @@
+// -----------------------------------------------------------------------------
+// Example: Scale inkshape to container preserve stroke using C#
+//
+// Description:
+// Demonstrates how to scale an Ink shape to fill its container (the slide) while preserving the original stroke appearance using C# and Aspose.Slides for .NET. The example loads a PPTX file, resizes the first Ink shape to match the slide dimensions, and saves the modified presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Ink shape, Scale, Preserve stroke, Presentation processing, Office automation
+//
+// Use Cases:
+// - Resize Ink shapes to fit slide dimensions without altering stroke style.
+// - Automate PowerPoint content adjustments in .NET applications.
+// - Build tools for batch processing of PPTX files containing Ink annotations.
+// - Ensure visual consistency of Ink strokes after scaling operations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

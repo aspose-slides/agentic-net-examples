@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Report inkshape dimensions, brush color, and points using C#
+//
+// Description:
+// Demonstrates how to enumerate Ink shapes in a PowerPoint presentation,
+// report each shape's position, size, associated ink traces, brush colors, and
+// point counts using Aspose.Slides for .NET. The example loads a PPTX file,
+// iterates through slides and shapes, outputs the collected information to the
+// console, and saves the presentation unchanged.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, Ink shape, Ink trace, Brush color, Points count,
+// PowerPoint, PPTX, Presentation processing, Office automation
+//
+// Use Cases:
+// - Extract detailed Ink shape metadata from PPTX files.
+// - Build diagnostic tools for Ink annotations in presentations.
+// - Automate validation of Ink objects before publishing.
+// - Integrate Ink shape analysis into .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Drawing;

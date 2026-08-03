@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Replace Ink shapes with a template shape on all slides using C#
+//
+// Description:
+// Demonstrates how to locate Ink shapes in a presentation and replace each
+// with a cloned Ink shape taken from a template presentation. The example
+// uses Aspose.Slides for .NET to load the source and template PPTX files,
+// iterate through all slides, remove existing Ink objects, and insert the
+// template Ink shape. The resulting presentation is saved as a new PPTX file.
+// This pattern can be used to standardize Ink annotations across a deck.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Ink shape, Template cloning, Slide
+// processing, Presentation automation, Office document manipulation
+//
+// Use Cases:
+// - Standardize Ink annotations by replacing them with a predefined template.
+// - Automate bulk modification of Ink objects across multiple slides.
+// - Build .NET utilities for PPTX content transformation.
+// - Integrate Ink shape replacement into larger presentation processing pipelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

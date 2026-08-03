@@ -1,3 +1,18 @@
+// -----------------------------------------------------------------------------
+// Example: Replace inkshape with new objects and save using C#
+//
+// Description:
+// Demonstrates how to replace Ink shapes with new rectangle placeholders and save the presentation using C# and Aspose.Slides for .NET. The example loads a PPTX file, iterates through slides and shapes, removes any Ink shape, inserts a rectangle of the same dimensions, and saves the modified file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Ink shape, Replace shape, Rectangle placeholder, Save, Presentation processing
+//
+// Use Cases:
+// - Automate replacement of Ink annotations with standard shapes in PPTX files.
+// - Build C# utilities for cleaning or standardizing PowerPoint content.
+// - Convert hand-drawn ink objects to editable shapes for further editing.
+// - Integrate Ink shape handling into .NET presentation workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Calculate total inkstroke length from trace using C#
+//
+// Description:
+// Demonstrates how to calculate the total length of ink strokes from ink
+// traces in a PowerPoint presentation using C# and Aspose.Slides for .NET.
+// The example loads a PPTX file, iterates through all ink shapes, sums the
+// distances between consecutive points in each trace, outputs the total
+// length, and saves the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Ink, Inkstroke, Length,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate calculation of total inkstroke length from ink traces.
+// - Build C# tools for analyzing handwritten annotations in PPTX files.
+// - Generate reports on ink usage within presentations.
+// - Validate ink content before publishing or further processing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;

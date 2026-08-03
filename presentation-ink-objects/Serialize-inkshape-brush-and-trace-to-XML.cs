@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Serialize inkshape brush and trace to XML using C#
+//
+// Description:
+// Demonstrates how to serialize Ink shape traces (and associated brush data) 
+// from a PowerPoint presentation to an XML file using Aspose.Slides for .NET. 
+// The example loads a PPTX file, extracts Ink shapes, writes their trace 
+// information to XML, and saves the (potentially unchanged) presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Serialize, Inkshape, Brush, 
+// Trace, XML, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Export Ink shape trace data to XML for analysis or interoperability.
+// - Build tools that process or archive Ink annotations in presentations.
+// - Integrate Ink shape serialization into .NET automation workflows.
+// - Preserve original presentation while extracting Ink metadata.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Xml;

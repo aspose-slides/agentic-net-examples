@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Append points to existing trace using C#
+//
+// Description:
+// Demonstrates how to append points to an existing ink trace in a PowerPoint
+// presentation using C# and Aspose.Slides for .NET. The example loads a PPTX
+// file, accesses the first Ink shape, retrieves its first trace, combines the
+// existing points with new points, and saves the modified presentation.
+// Note that the Points collection is read‑only, so the combined points are
+// prepared for recreating the trace if needed.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Ink, Trace, Append Points,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Extend ink strokes in existing presentations.
+// - Build tools that modify handwritten annotations programmatically.
+// - Automate preparation of PPTX files with updated ink data.
+// - Validate and test ink manipulation workflows in .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

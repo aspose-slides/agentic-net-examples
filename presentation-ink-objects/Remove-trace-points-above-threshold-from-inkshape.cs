@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Remove trace points above threshold from inkshape using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, locate an Ink shape,
+// iterate its ink traces, identify traces whose point count exceeds a specified
+// threshold, and (placeholder) remove or replace those traces. The example
+// uses Aspose.Slides for .NET and can be adapted to fully remove unwanted
+// ink data in PPTX files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Ink, InkTrace, Remove, Trace,
+// Points, Threshold, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Detect and clean up ink traces that are too dense or large in a presentation.
+// - Build C# tools for processing Ink objects in PowerPoint files.
+// - Automate removal or replacement of ink data before publishing.
+// - Validate and transform PPTX files containing handwritten annotations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

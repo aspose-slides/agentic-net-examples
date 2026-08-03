@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Deserialize inkshape trace from XML using C#
+//
+// Description:
+// Demonstrates how to deserialize ink shape trace data from an XML file,
+// create a new PowerPoint presentation, add a line shape using the deserialized
+// coordinates, and save the presentation using Aspose.Slides for .NET. The
+// example illustrates the required steps for handling ink data in XML and
+// integrating it into a PPTX file in a console application.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, XML deserialization, Ink shape, InkData,
+// Presentation processing, Office automation
+//
+// Use Cases:
+// - Convert custom ink trace XML data into PowerPoint presentations.
+// - Automate generation of slides from ink coordinate data.
+// - Build .NET tools that integrate ink information into PPTX files.
+// - Validate and test ink data handling before deployment.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Xml.Serialization;

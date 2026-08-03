@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Validate inkshape brush size minimum using C#
+//
+// Description:
+// Demonstrates how to validate and enforce a minimum brush size for Ink
+// shapes in a PowerPoint presentation using Aspose.Slides for .NET. The
+// example iterates through all slides, finds Ink shapes, checks the brush
+// size of the first trace, and attempts to set a new size while ensuring it
+// meets the minimum of 1 point. The presentation is then saved.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Validate, Inkshape, Brush,
+// Size, Minimum, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Ensure Ink shape brush sizes comply with corporate style guidelines.
+// - Automate validation of Ink objects before publishing presentations.
+// - Build .NET tools that enforce presentation standards for Ink strokes.
+// - Detect and correct invalid brush sizes in existing PPTX files.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Drawing;

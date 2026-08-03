@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Create ink shape with scribble effect and set line color using C#
+//
+// Description:
+// Demonstrates how to add a line shape that mimics an ink trace, apply a
+// scribble sketch effect, set its line color, and save the presentation as a
+// PPTX file using Aspose.Slides for .NET. The example illustrates the essential
+// steps for creating ink‑style objects in a PowerPoint slide within a console
+// application.
+//
+// Keywords:
+// C#, Aspose.Slides, Ink shape, Scribble effect, Line color, PPTX, Presentation
+// automation, Office automation
+//
+// Use Cases:
+// - Generate ink‑like annotations or sketches programmatically.
+// - Build tools that add custom ink shapes to PowerPoint slides.
+// - Automate creation of presentations with stylized line drawings.
+// - Validate ink shape rendering before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Drawing;
