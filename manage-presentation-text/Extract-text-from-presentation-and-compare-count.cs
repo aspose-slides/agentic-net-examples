@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Extract text from presentation and compare count using C#
+//
+// Description:
+// Demonstrates how to extract raw text from each slide of a PowerPoint presentation,
+// compare the number of extracted slide texts with the slide count reported in the
+// document properties, and save the presentation. The example uses Aspose.Slides for
+// .NET and shows typical steps for loading a PPTX, extracting text, handling errors,
+// and saving the file in a console application.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Extract Text, Slide Count, Presentation
+// Processing, Office Automation
+//
+// Use Cases:
+// - Verify that the number of slides with extracted text matches the expected slide count.
+// - Automate validation of presentation content in .NET tools.
+// - Build utilities for extracting and analyzing slide text.
+// - Ensure consistency of slide metadata before publishing or further processing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
