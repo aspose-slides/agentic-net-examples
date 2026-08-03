@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Skip mathblock on writeasmathml notsupportedexception using C#
+//
+// Description:
+// Demonstrates how to iterate through MathBlocks in a MathShape, attempt to
+// export each block to MathML, and gracefully skip those that throw a
+// NotSupportedException. The example creates a presentation, adds a math
+// shape with sample equations, processes the blocks, and saves the final
+// presentation using Aspose.Slides for .NET.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Skip, MathBlock, WriteAsMathMl, 
+// NotSupportedException, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate handling of MathML export where some MathBlocks are not supported.
+// - Build C# utilities for processing mathematical content in PowerPoint files.
+// - Generate or transform PPTX files while safely ignoring unsupported MathML blocks.
+// - Validate and log presentation workflows involving math equations before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;
