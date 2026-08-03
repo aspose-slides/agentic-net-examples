@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Create inkshape with theme brush color using C#
+//
+// Description:
+// Demonstrates how to create an ink-like shape with a theme brush color using C#
+// and Aspose.Slides for .NET. The example loads or creates a presentation,
+// adds a line shape that mimics an ink stroke, applies a scribble sketch effect,
+// and sets the line color based on a specified theme accent. The resulting
+// presentation is saved as a PPTX file. This pattern can be used to automate
+// PPTX workflows, validate results, or integrate presentation logic into .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Inkshape, Theme Accent, Brush,
+// Color, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of ink-like shapes with theme accent colors.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
