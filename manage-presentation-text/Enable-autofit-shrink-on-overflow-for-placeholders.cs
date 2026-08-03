@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Enable autofit shrink on overflow for placeholders using C#
+//
+// Description:
+// Demonstrates how to enable the autofit shrink‑on‑overflow behavior for
+// placeholder AutoShapes that contain a TextFrame using Aspose.Slides for .NET.
+// The program loads a PPTX file, iterates through all slides and shapes, sets
+// the TextFrameFormat.AutofitType to Normal for applicable placeholders, and
+// saves the updated presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Enable, Autofit, Shrink, Overflow,
+// Placeholder, TextFrame, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate enabling autofit shrink on overflow for placeholder text in PPTX files.
+// - Build .NET tools that adjust text fitting behavior in existing presentations.
+// - Prepare presentations for consistent text layout before distribution.
+// - Integrate placeholder text formatting into larger PowerPoint automation workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
