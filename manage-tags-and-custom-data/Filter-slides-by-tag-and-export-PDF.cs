@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Filter slides by tag and export PDF using C#
+//
+// Description:
+// Demonstrates loading a PowerPoint presentation and exporting it to PDF using
+// Aspose.Slides for .NET. The example also explains that direct filtering of
+// slides by custom tags is not currently supported by the API, so the entire
+// presentation is saved.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Export, Presentation Processing,
+// Office Automation, Slide Tags
+//
+// Use Cases:
+// - Convert PowerPoint presentations to PDF in .NET applications.
+// - Understand limitations of tag-based slide filtering with Aspose.Slides.
+// - Automate PDF generation from PPTX files.
+// - Integrate presentation export functionality into custom tools.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
