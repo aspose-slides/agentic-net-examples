@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Copy custom data to target presentation using C#
+//
+// Description:
+// Demonstrates how to copy custom data from a source presentation to a target
+// presentation using C# and Aspose.Slides for .NET. The example loads two PPTX
+// files, transfers all custom data entries while preserving their data types,
+// and saves the modified target presentation. This pattern can be used to
+// automate PowerPoint workflows that require custom metadata propagation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Copy, Custom Data, Target
+// Presentation, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate copying of custom data between PowerPoint files.
+// - Build C# tools for managing presentation metadata.
+// - Integrate custom data handling into .NET PowerPoint automation pipelines.
+// - Validate and synchronize custom data across multiple PPTX assets.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -30,24 +51,28 @@ namespace AsposeSlidesExample
             try
             {
                 // Load source and target presentations
-                using (var sourcePres = new Aspose.Slides.Presentation(sourcePath))
-                using (var targetPres = new Aspose.Slides.Presentation(targetPath))
+                using (var sourcePres = new Presentation(sourcePath))
+                using (var targetPres = new Presentation(targetPath))
                 {
                     // Access custom data collections
                     var sourceCustomData = sourcePres.CustomData;
                     var targetCustomData = targetPres.CustomData;
 
-                    // TODO: Iterate over sourceCustomData entries and copy them to targetCustomData
-                    // Preserve data types while copying. Implementation depends on ICustomData API.
+                    // Copy each custom data entry from source to target
+                    foreach (var entry in sourceCustomData)
+                    {
+                        // Preserve the original data type by assigning the value directly
+                        targetCustomData[entry.Name] = entry.Value;
+                    }
 
                     // Save the modified target presentation
-                    targetPres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    targetPres.Save(outputPath, SaveFormat.Pptx);
+                    Console.WriteLine($"Custom data copied successfully. Output saved to: {outputPath}");
                 }
             }
-            catch (Aspose.Slides.PptxEditException)
+            catch (PptxEditException)
             {
                 // Format not supported
-                // Comment: format not supported
                 Console.WriteLine("The presentation format is not supported.");
             }
             catch (Exception ex)

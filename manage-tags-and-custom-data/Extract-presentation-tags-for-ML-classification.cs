@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Extract presentation tags for ML classification using C#
+//
+// Description:
+// Demonstrates how to extract custom tag metadata from a PowerPoint presentation
+// using Aspose.Slides for .NET. The example loads a PPTX file, reads all tags
+// stored in the presentation's custom data, and prepares the tag names and
+// values for downstream machine‑learning classification. The presentation is
+// then saved unchanged. This pattern can be used to build automated pipelines
+// that feed presentation metadata into ML models.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Extract, Presentation, Tags,
+// Classification, Machine Learning, Custom Data, Office Automation
+//
+// Use Cases:
+// - Automate extraction of presentation tags for ML classification.
+// - Build C# tools that preprocess PowerPoint metadata for AI models.
+// - Integrate tag extraction into .NET applications handling PPTX files.
+// - Validate and log custom data before further processing or publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

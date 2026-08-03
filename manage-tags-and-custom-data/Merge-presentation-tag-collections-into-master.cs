@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Merge presentation tag collections into master using C#
+//
+// Description:
+// Demonstrates how to merge custom tag collections from multiple PowerPoint
+// presentations into a single master presentation using Aspose.Slides for .NET.
+// The example loads each source file, extracts its tags, consolidates unique
+// tags, and saves a new presentation containing the merged tag set.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Merge, Presentation, Tags,
+// CustomData, TagCollection, Master, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate merging of presentation tags into a master file.
+// - Build C# utilities for PowerPoint metadata management.
+// - Generate or transform PPTX files with consolidated custom data.
+// - Validate and synchronize tag information across multiple presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;

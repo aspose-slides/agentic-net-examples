@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add timestamp tag to slide on save using C#
+//
+// Description:
+// Demonstrates how to add a timestamp textbox to each slide of a PowerPoint
+// presentation before saving it using C# and Aspose.Slides for .NET. The example
+// shows how to load an existing presentation (or create a new one), iterate
+// through all slides, insert a shape containing the current date and time, and
+// then save the modified presentation. This pattern can be used to automate
+// PPTX workflows, embed metadata, or track changes in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Timestamp, Slide, Save,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding a timestamp tag to each slide on save.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

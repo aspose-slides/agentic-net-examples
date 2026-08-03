@@ -1,8 +1,30 @@
+// -----------------------------------------------------------------------------
+// Example: Summarize tag usage per slide to XLSX using C#
+//
+// Description:
+// Demonstrates how to enumerate tags on each slide of a PowerPoint presentation
+// and write the per‑slide tag count to an Excel workbook (XLSX) using Aspose.Slides
+// for .NET together with Aspose.Cells. The example loads a PPTX file, extracts the
+// tag collection from every slide, and creates a simple spreadsheet that can be
+// further processed or reported.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Aspose.Cells, Summarize, Tag Usage,
+// Slide, XLSX, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Generate reports of custom tag usage across presentation slides.
+// - Integrate PowerPoint metadata extraction into .NET data‑analysis pipelines.
+// - Automate creation of Excel summaries for presentation audits or migrations.
+// - Provide developers with a reusable pattern for combining Aspose.Slides and
+//   Aspose.Cells in console utilities.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Collections.Generic;
 using Aspose.Slides;
-using Aspose.Slides.Export;
+using Aspose.Cells;
 
 namespace TagSummaryApp
 {
@@ -13,9 +35,9 @@ namespace TagSummaryApp
             // Define paths
             string dataDir = "Data";
             string presentationPath = Path.Combine(dataDir, "input.pptx");
-            string outputCsvPath = Path.Combine(dataDir, "TagSummary.csv");
+            string outputXlsxPath = Path.Combine(dataDir, "TagSummary.xlsx");
 
-            // Check if the presentation file exists
+            // Verify the presentation file exists
             if (!File.Exists(presentationPath))
             {
                 Console.WriteLine("Presentation file not found: " + presentationPath);
@@ -25,40 +47,37 @@ namespace TagSummaryApp
             // Load the presentation
             using (Presentation presentation = new Presentation(presentationPath))
             {
-                // Prepare CSV lines
-                List<string> csvLines = new List<string>();
-                csvLines.Add("SlideNumber,TagCount");
+                // Prepare data for Excel: first row contains headers
+                List<object[]> rows = new List<object[]>();
+                rows.Add(new object[] { "SlideNumber", "TagCount" });
 
-                // Iterate through slides
+                // Iterate through slides and count tags
                 for (int i = 0; i < presentation.Slides.Count; i++)
                 {
-                    // Slide index is zero‑based; add 1 for human‑readable numbering
-                    int slideNumber = i + 1;
+                    int slideNumber = i + 1; // Human‑readable slide number
+                    int tagCount = presentation.Slides[i].Tags.Count; // Actual tag count
 
-                    // TagCollection is not directly available on ISlide (ISlide.Tags does not exist)
-                    // Therefore, we assume zero tags per slide in this example
-                    int tagCount = 0;
-
-                    csvLines.Add(slideNumber.ToString() + "," + tagCount.ToString());
+                    rows.Add(new object[] { slideNumber, tagCount });
                 }
 
-                // Write the CSV file
-                File.WriteAllLines(outputCsvPath, csvLines);
-                Console.WriteLine("Tag usage summary written to: " + outputCsvPath);
-            }
+                // Create an Excel workbook using Aspose.Cells
+                Workbook workbook = new Workbook();
+                Worksheet sheet = workbook.Worksheets[0];
+                sheet.Name = "Tag Summary";
 
-            // Attempt to export as Excel workbook (XLSX) – not supported by Aspose.Slides
-            try
-            {
-                // The SaveFormat enum does not contain Xlsx; this will throw NotSupportedException
-                // Uncomment the line below if a future version adds XLSX support
-                // presentation.Save(outputCsvPath, SaveFormat.Xlsx);
-                throw new NotSupportedException("XLSX export is not supported by Aspose.Slides.");
-            }
-            catch (NotSupportedException ex)
-            {
-                // Format not supported – handled gracefully
-                Console.WriteLine("Export to Excel format not supported: " + ex.Message);
+                // Populate the worksheet with the collected data
+                for (int rowIndex = 0; rowIndex < rows.Count; rowIndex++)
+                {
+                    object[] row = rows[rowIndex];
+                    for (int colIndex = 0; colIndex < row.Length; colIndex++)
+                    {
+                        sheet.Cells[rowIndex, colIndex].PutValue(row[colIndex]);
+                    }
+                }
+
+                // Save the workbook as XLSX
+                workbook.Save(outputXlsxPath, SaveFormat.Xlsx);
+                Console.WriteLine("Tag usage summary written to: " + outputXlsxPath);
             }
         }
     }

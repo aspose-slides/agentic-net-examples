@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Listen for tag addition and removal runtime using C#
+//
+// Description:
+// Demonstrates how to listen for tag addition and removal at runtime using C# 
+// and Aspose.Slides for .NET. The example creates or loads a presentation, 
+// subscribes to custom tag change events, adds and removes tags while invoking 
+// the corresponding event handlers, and saves the modified presentation. 
+// This pattern can be used to monitor and react to custom data changes in PPTX 
+// files during processing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Tag, CustomData, Event, 
+// Runtime, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate monitoring of tag addition and removal during presentation processing.
+// - Build C# tools that react to custom data changes in PowerPoint files.
+// - Integrate tag event handling into .NET applications for dynamic PPTX workflows.
+// - Validate and log custom data modifications before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

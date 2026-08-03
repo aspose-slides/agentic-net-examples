@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Resolve tag collisions when merging presentations using C#
+//
+// Description:
+// Demonstrates how to merge multiple PowerPoint presentations while preserving
+// and consolidating custom data tags, resolving any tag name collisions by
+// renaming duplicate tags. The example uses Aspose.Slides for .NET to clone
+// slides, copy master slides, and combine tag collections into a single output
+// presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Resolve, Tag Collisions, Merge,
+// Presentation Merging, Custom Data, Tags, Automation
+//
+// Use Cases:
+// - Combine several PPTX files into one while keeping custom metadata.
+// - Ensure unique tag names when merging presentations that share tag keys.
+// - Build .NET tools for batch processing of PowerPoint files with custom data.
+// - Automate preparation of presentation packages for distribution or archiving.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

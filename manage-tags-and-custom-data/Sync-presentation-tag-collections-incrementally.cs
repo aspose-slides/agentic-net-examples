@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Sync presentation tag collections incrementally using C#
+//
+// Description:
+// Demonstrates how to synchronize custom tag collections between two PowerPoint
+// presentations incrementally using C# and Aspose.Slides for .NET. The example
+// loads a local and a cloud version of a PPTX file, merges tag values from the
+// cloud into the local presentation, optionally removes tags that no longer
+// exist in the cloud, and saves the resulting presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Sync, Presentation, Tags,
+// CustomData, Incrementally, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate incremental synchronization of custom tags between presentation
+//   versions.
+// - Build C# utilities for managing presentation metadata.
+// - Integrate tag synchronization into .NET PowerPoint workflows.
+// - Ensure consistent custom data across distributed PPTX files.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

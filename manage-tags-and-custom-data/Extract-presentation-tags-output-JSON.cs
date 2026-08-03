@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Extract presentation tags output JSON using C#
+//
+// Description:
+// Demonstrates how to extract custom data tags from a PowerPoint presentation
+// and output them as JSON using Aspose.Slides for .NET. The example loads a
+// PPTX file, reads all tags stored in the presentation's CustomData, serializes
+// them to a JSON string, prints the result, and saves the presentation.
+// This pattern can be used to automate tag extraction, validation, or
+// integration of PowerPoint metadata in .NET applications.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, CustomData, Tags, JSON, Extraction,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of presentation custom tags to JSON.
+// - Build tools for PowerPoint metadata analysis in .NET.
+// - Integrate tag data into downstream systems or reporting pipelines.
+// - Validate and audit presentation custom data before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;

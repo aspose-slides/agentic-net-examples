@@ -1,3 +1,21 @@
+// -----------------------------------------------------------------------------
+// Example: Create tag relationship diagram and export SVG using C#
+//
+// Description:
+// Demonstrates how to create a tag relationship diagram within a PowerPoint
+// presentation and export the diagram slide as an SVG file using Aspose.Slides
+// for .NET. The example also saves the modified presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SVG, Tag Diagram, Relationship,
+// Export, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of tag relationship diagrams and export them to SVG.
+// - Build C# utilities for PowerPoint presentation manipulation.
+// - Generate or transform PPTX files with custom diagram content.
+// - Validate and preview presentation workflows before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

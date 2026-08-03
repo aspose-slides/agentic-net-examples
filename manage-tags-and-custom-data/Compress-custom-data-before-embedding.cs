@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Compress custom data before embedding using C#
+//
+// Description:
+// Demonstrates how to compress a custom data payload using GZip before embedding
+// it into a PowerPoint presentation with Aspose.Slides for .NET. The example
+// loads an existing PPTX file, prepares a UTF‑8 text payload, compresses it,
+// and outlines where the compressed data should be added to the presentation's
+// custom data collection. Finally, it saves the modified presentation.
+// This pattern helps developers automate PPTX workflows that require
+// embedding compressed custom data.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Compress, Custom, Data, Embedding,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate compression of custom data before embedding into PPTX files.
+// - Build C# tools for PowerPoint presentation processing with embedded resources.
+// - Generate or transform PPTX files in .NET applications while reducing payload size.
+// - Validate presentation workflows that involve custom data integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Text;

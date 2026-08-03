@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Update custom data on shape and save using C#
+//
+// Description:
+// Demonstrates how to update custom data on a shape within a PowerPoint
+// presentation and save the modified file using Aspose.Slides for .NET. The
+// example loads an existing PPTX, accesses the first slide and shape, modifies
+// or adds a custom tag, and writes the result to a new file. This pattern can be
+// used for automating PPTX workflows, managing metadata, or integrating
+// presentation processing into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Update, Custom, Data, Shape,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate updating custom data tags on shapes in PowerPoint files.
+// - Build C# tools for PowerPoint presentation metadata management.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate and test presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

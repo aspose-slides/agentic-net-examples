@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Hide slides without tag during slideshow using C#
+//
+// Description:
+// Demonstrates how to hide slides that do not contain a specific custom tag 
+// during a slideshow using C# and Aspose.Slides for .NET. The example loads a 
+// PPTX file, checks each slide for the presence of a required tag in its 
+// custom data collection, hides slides lacking the tag, and saves the result. 
+// This pattern can be used to automate presentation filtering, prepare 
+// slide decks for targeted audiences, or integrate tag‑based slide control 
+// into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Hide, Slides, Tag, Custom Data, 
+// Slideshow, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate hiding of slides that do not carry a specific custom tag.
+// - Build C# tools for PowerPoint presentation processing based on metadata.
+// - Generate or transform PPTX files in .NET applications with tag‑driven logic.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -31,9 +54,9 @@ class Program
                 {
                     ISlide slide = presentation.Slides[i];
 
-                    // Hide the slide if its Name does not contain the required tag
-                    // (Tags property does not exist; using Name as a placeholder for tag data)
-                    if (slide.Name == null || !slide.Name.Contains(requiredTag))
+                    // Hide the slide if it does not contain the required custom tag
+                    // (Tags is a collection of key/value pairs attached to the slide)
+                    if (!slide.Tags.ContainsKey(requiredTag))
                     {
                         slide.Hidden = true;
                     }
@@ -46,7 +69,6 @@ class Program
         catch (Exception ex)
         {
             // Handle errors such as unsupported file format
-            // Format not supported.
             Console.WriteLine("Error: " + ex.Message);
         }
     }

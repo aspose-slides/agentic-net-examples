@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Generate hierarchical tag structure for slides using C#
+//
+// Description:
+// Demonstrates how to assign and retrieve hierarchical custom tags (Section
+// and Order) for slides in a PowerPoint presentation using Aspose.Slides for
+// .NET. The example creates a presentation (or loads an existing one), ensures
+// a minimum number of slides, adds custom tag data to each slide, prints the
+// hierarchy to the console, and saves the result as a new PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, CustomData, Tags, Hierarchical,
+// Slide Metadata, Presentation Automation, Office Automation
+//
+// Use Cases:
+// - Automate adding hierarchical metadata to PowerPoint slides.
+// - Build C# utilities for managing slide tags and custom data.
+// - Generate or modify PPTX files with structured tag information.
+// - Validate and inspect slide hierarchy in .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

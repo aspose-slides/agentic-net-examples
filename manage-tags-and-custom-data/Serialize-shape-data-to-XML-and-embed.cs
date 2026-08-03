@@ -1,7 +1,28 @@
+// -----------------------------------------------------------------------------
+// Example: Serialize shape data to XML and embed using C#
+//
+// Description:
+// Demonstrates how to serialize shape metadata (name and alternative text) to
+// XML and embed it into a PowerPoint presentation using Aspose.Slides for .NET.
+// The example loads an existing PPTX, extracts shape information from all slides,
+// creates an XML document with the collected data, embeds the XML as a custom
+// property (as a fallback for custom XML parts), and saves the modified file.
+// This pattern can be used to automate PPTX workflows, validate results, or
+// integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Serialize, Shape, XML, Custom Data,
+// Embed, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate serialization of shape metadata to XML and embed it in presentations.
+// - Build C# tools for PowerPoint presentation processing that require custom data.
+// - Generate or transform PPTX files with embedded shape information in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Xml;
-using System.Xml.Serialization;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 

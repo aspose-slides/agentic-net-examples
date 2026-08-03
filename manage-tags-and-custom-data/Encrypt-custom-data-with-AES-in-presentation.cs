@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Encrypt custom data with AES in presentation using C#
+//
+// Description:
+// Demonstrates how to encrypt custom data with AES in a PowerPoint presentation 
+// using C# and Aspose.Slides for .NET. The example encrypts a plain text string,
+// embeds the Base64‑encoded encrypted data into a textbox, then applies password 
+// protection to the presentation file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, AES, Encryption, Custom Data, 
+// Presentation, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Encrypt custom data with AES and embed it in a PowerPoint slide.
+// - Generate password‑protected PPTX files programmatically.
+// - Build C# tools for secure PowerPoint content creation and distribution.
+// - Automate PPTX workflows that require data confidentiality.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Security.Cryptography;
@@ -40,13 +60,13 @@ class Program
         string encryptedBase64 = Convert.ToBase64String(combined);
 
         // Create presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        Presentation presentation = new Presentation();
 
         // Add a slide
-        Aspose.Slides.ISlide slide = presentation.Slides[0];
+        ISlide slide = presentation.Slides[0];
 
         // Add a textbox with encrypted data
-        Aspose.Slides.IAutoShape shape = slide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 50, 50, 400, 100);
+        IAutoShape shape = slide.Shapes.AddAutoShape(ShapeType.Rectangle, 50, 50, 400, 100);
         shape.TextFrame.Text = encryptedBase64;
 
         // Encrypt presentation
@@ -55,7 +75,7 @@ class Program
 
         // Save presentation
         string outputPath = Path.Combine(Directory.GetCurrentDirectory(), "EncryptedPresentation.pptx");
-        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+        presentation.Save(outputPath, SaveFormat.Pptx);
         presentation.Dispose();
     }
 }

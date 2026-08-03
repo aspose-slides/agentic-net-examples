@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Lazy load custom data for presentation using C#
+//
+// Description:
+// Demonstrates how to lazily load a PowerPoint presentation while removing
+// embedded binary objects, access presentation- and slide-level custom data
+// tags only when needed, and save the modified file. The example uses
+// Aspose.Slides for .NET to illustrate efficient handling of custom data in
+// PPTX files within a console application.
+//
+// Keywords:
+// C#, Aspose.Slides, PPTX, PowerPoint, Lazy Loading, Custom Data, Tags, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Load large PPTX files without loading embedded binary objects.
+// - Retrieve and process custom data tags on presentations and slides on demand.
+// - Build .NET tools that manipulate PowerPoint custom data efficiently.
+// - Automate validation or transformation of PPTX files while minimizing memory usage.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
