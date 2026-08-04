@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Apply custom date format to category axis using C#
+//
+// Description:
+// Demonstrates how to set a category axis to date type and apply a custom
+// date format (dd-MMM-yyyy) to an Area chart in a PowerPoint presentation using
+// Aspose.Slides for .NET. The example creates a new presentation, adds an Area
+// chart with date categories, configures the axis formatting, and saves the
+// result as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, Custom, Date, Format,
+// Category Axis, Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate applying custom date formats to chart category axes.
+// - Build C# tools for PowerPoint chart manipulation and formatting.
+// - Generate or transform PPTX files with date-based axes in .NET applications.
+// - Validate chart axis formatting before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
