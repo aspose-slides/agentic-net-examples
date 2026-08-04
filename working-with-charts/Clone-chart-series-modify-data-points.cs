@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Clone chart series modify data points using C#
+//
+// Description:
+// Demonstrates how to create a clustered column chart, clear its default
+// series and categories, add custom categories, add an original series with
+// data points, clone the series by adding a second series with modified data
+// points, and save the presentation using Aspose.Slides for .NET. This example
+// can be used as a template for automating chart manipulation in PowerPoint
+// files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone, Chart, Series, Modify,
+// Data Points, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate cloning and modifying chart series in PowerPoint presentations.
+// - Build .NET tools for chart data manipulation and visualization.
+// - Generate or transform PPTX files with custom chart data.
+// - Validate chart-related workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
