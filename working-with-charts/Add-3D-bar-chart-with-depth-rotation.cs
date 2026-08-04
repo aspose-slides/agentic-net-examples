@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add 3D bar chart with depth rotation using C#
+//
+// Description:
+// Demonstrates how to create a PowerPoint presentation, add a 3D stacked column
+// chart (used as a 3D bar chart), configure its 3D rotation, depth and height
+// percentages, set a chart title, and save the file using Aspose.Slides for .NET.
+// The example shows the essential steps for generating a 3D bar chart with
+// custom rotation in a standalone console application.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, 3D chart, Bar chart, StackedColumn3D,
+// Rotation3D, DepthPercents, HeightPercents, ChartTitle, Presentation automation
+//
+// Use Cases:
+// - Generate 3D bar charts with custom rotation for reports or dashboards.
+// - Automate creation of PowerPoint slides containing 3D visualizations.
+// - Integrate chart generation into .NET applications or CI pipelines.
+// - Produce PPTX files with specific 3D chart styling for presentations.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;
