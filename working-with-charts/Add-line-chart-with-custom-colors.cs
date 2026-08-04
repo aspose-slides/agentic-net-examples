@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add line chart with custom colors using C#
+//
+// Description:
+// Demonstrates how to create a line chart with two series, each having custom
+// colors and marker styles, using Aspose.Slides for .NET. The example shows
+// how to clear default data, add categories and series, populate data points,
+// apply solid fill colors, configure markers, and save the presentation as a
+// PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Line Chart, Custom Colors,
+// Series Formatting, Marker Style, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Generate line charts with custom series colors programmatically.
+// - Build .NET tools for automated PowerPoint chart creation.
+// - Customize chart appearance for reports or dashboards.
+// - Integrate chart generation into larger presentation workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Drawing;
@@ -9,46 +30,60 @@ class Program
     {
         // Create a new presentation
         Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+
         // Get the first slide
         Aspose.Slides.ISlide slide = presentation.Slides[0];
+
         // Add a line chart
         Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(Aspose.Slides.Charts.ChartType.Line, 50f, 50f, 500f, 400f);
+
         // Clear default series and categories
         chart.ChartData.Series.Clear();
         chart.ChartData.Categories.Clear();
+
         // Get chart data workbook
         Aspose.Slides.Charts.IChartDataWorkbook workbook = chart.ChartData.ChartDataWorkbook;
         int defaultWorksheetIndex = 0;
+
         // Add categories
         chart.ChartData.Categories.Add(workbook.GetCell(defaultWorksheetIndex, 1, 0, "Category 1"));
         chart.ChartData.Categories.Add(workbook.GetCell(defaultWorksheetIndex, 2, 0, "Category 2"));
         chart.ChartData.Categories.Add(workbook.GetCell(defaultWorksheetIndex, 3, 0, "Category 3"));
+
         // Add first series
         chart.ChartData.Series.Add(workbook.GetCell(defaultWorksheetIndex, 0, 1, "Series 1"), chart.Type);
         Aspose.Slides.Charts.IChartSeries series1 = chart.ChartData.Series[0];
+
         // Populate data points for first series
         series1.DataPoints.AddDataPointForLineSeries(workbook.GetCell(defaultWorksheetIndex, 1, 1, 10));
         series1.DataPoints.AddDataPointForLineSeries(workbook.GetCell(defaultWorksheetIndex, 2, 1, 20));
         series1.DataPoints.AddDataPointForLineSeries(workbook.GetCell(defaultWorksheetIndex, 3, 1, 30));
+
         // Set custom color for first series
         series1.Format.Fill.FillType = Aspose.Slides.FillType.Solid;
         series1.Format.Fill.SolidFillColor.Color = Color.Red;
+
         // Set marker style for first series
         series1.Marker.Size = 10;
         series1.Marker.Symbol = Aspose.Slides.Charts.MarkerStyleType.Circle;
+
         // Add second series
         chart.ChartData.Series.Add(workbook.GetCell(defaultWorksheetIndex, 0, 2, "Series 2"), chart.Type);
         Aspose.Slides.Charts.IChartSeries series2 = chart.ChartData.Series[1];
+
         // Populate data points for second series
         series2.DataPoints.AddDataPointForLineSeries(workbook.GetCell(defaultWorksheetIndex, 1, 2, 15));
         series2.DataPoints.AddDataPointForLineSeries(workbook.GetCell(defaultWorksheetIndex, 2, 2, 25));
         series2.DataPoints.AddDataPointForLineSeries(workbook.GetCell(defaultWorksheetIndex, 3, 2, 35));
+
         // Set custom color for second series
         series2.Format.Fill.FillType = Aspose.Slides.FillType.Solid;
         series2.Format.Fill.SolidFillColor.Color = Color.Blue;
+
         // Set marker style for second series
         series2.Marker.Size = 12;
         series2.Marker.Symbol = Aspose.Slides.Charts.MarkerStyleType.Square;
+
         // Save the presentation
         string outputPath = "CustomLineChart.pptx";
         try
