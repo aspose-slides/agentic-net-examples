@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Update workbook data before chart animations using C#
+//
+// Description:
+// Demonstrates how to load an external Excel workbook, update its data, and
+// associate it with a chart in a PowerPoint presentation before applying
+// animation effects using Aspose.Slides for .NET. The example creates a pie
+// chart, sets workbook data, calculates formulas, and adds fade and appear
+// animations for each chart element.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Update, Workbook, Data, Chart,
+// Animations, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate updating workbook data linked to charts before animation playback.
+// - Build C# tools for PowerPoint presentation processing with chart data.
+// - Generate or transform PPTX files with animated charts in .NET applications.
+// - Validate chart data and animation sequences before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
