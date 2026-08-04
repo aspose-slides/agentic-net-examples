@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Change marker style while preserving error bars using C#
+//
+// Description:
+// Demonstrates how to change the marker style of a chart series while preserving
+// any existing error bars using C# and Aspose.Slides for .NET. The example
+// creates or loads a presentation, adds a clustered column chart if needed,
+// modifies the first series marker to a circular style with a specific size,
+// and saves the result. This pattern can be used to automate chart styling
+// tasks in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Change, Marker, Style, While,
+// Presentation Processing, Office Automation, Error Bars
+//
+// Use Cases:
+// - Automate changing marker styles while keeping error bars intact.
+// - Build C# tools for PowerPoint chart customization.
+// - Generate or transform PPTX files with specific chart aesthetics.
+// - Validate and process presentation workflows before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
