@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Move chart legend to top left using C#
+//
+// Description:
+// Demonstrates how to move a chart legend to the top‑left corner of a chart
+// using C# and Aspose.Slides for .NET. The example creates a new presentation,
+// adds a clustered column chart, positions the legend with custom coordinates,
+// and saves the result as a PPTX file. This pattern can be used to automate
+// legend placement in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Move, Chart, Legend, Top Left,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Programmatically reposition chart legends to the top left.
+// - Build .NET tools that modify chart layouts in PPTX files.
+// - Generate presentations with custom legend placement.
+// - Validate and test chart formatting before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
@@ -7,14 +28,14 @@ class Program
     static void Main()
     {
         // Create a new presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        Presentation presentation = new Presentation();
 
         // Access the first slide
-        Aspose.Slides.ISlide slide = presentation.Slides[0];
+        ISlide slide = presentation.Slides[0];
 
         // Add a clustered column chart to the slide
-        Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(
-            Aspose.Slides.Charts.ChartType.ClusteredColumn,
+        IChart chart = slide.Shapes.AddChart(
+            ChartType.ClusteredColumn,
             50f,   // X position
             50f,   // Y position
             500f,  // Width
@@ -26,12 +47,12 @@ class Program
         chart.Legend.Y = 0f;                     // Y as fraction of chart height
         chart.Legend.Width = 0.2f;               // Width as fraction of chart width
         chart.Legend.Height = 0.2f;              // Height as fraction of chart height
-        chart.Legend.Position = Aspose.Slides.Charts.LegendPositionType.Top; // Optional enum position
+        chart.Legend.Position = LegendPositionType.Top; // Optional enum position
 
         // Save the presentation
         try
         {
-            presentation.Save("LegendTopLeft.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            presentation.Save("LegendTopLeft.pptx", SaveFormat.Pptx);
         }
         catch (Exception ex)
         {
