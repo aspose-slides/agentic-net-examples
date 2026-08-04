@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set error bar fill to series color using C#
+//
+// Description:
+// Demonstrates how to set the fill color of error bars to match the series line
+// color in a clustered column chart using C# and Aspose.Slides for .NET. The
+// example creates a presentation, adds a chart with two series, configures line
+// colors, enables Y error bars, and applies the series line color to the error
+// bar fill. The resulting presentation is saved as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Error Bars, Fill Color, Series
+// Color, Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting error bar fill colors to match series colors in charts.
+// - Build C# tools for PowerPoint chart customization and processing.
+// - Generate or modify PPTX files with specific chart styling in .NET applications.
+// - Validate chart appearance programmatically before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Drawing;
