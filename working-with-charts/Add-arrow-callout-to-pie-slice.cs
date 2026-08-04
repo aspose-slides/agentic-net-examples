@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add arrow callout to pie slice using C#
+//
+// Description:
+// Demonstrates how to add a data label callout (arrow) to a pie chart slice 
+// using C# and Aspose.Slides for .NET. The example creates a presentation, 
+// inserts a pie chart, configures series data, explodes a slice, and enables 
+// callout labels for the slice. This pattern can be used to automate PPTX 
+// workflows, customize chart annotations, or integrate presentation logic into 
+// .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Pie Chart, Callout, Data Labels, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding callout arrows to pie chart slices.
+// - Build C# tools for PowerPoint chart customization.
+// - Generate or transform PPTX files with annotated charts in .NET applications.
+// - Validate chart presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
