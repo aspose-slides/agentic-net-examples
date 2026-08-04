@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Load PPTX slide and access chart using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file, retrieve a specific slide, and access
+// a chart object on that slide using C# and Aspose.Slides for .NET. The example
+// shows the essential steps for loading a presentation, locating a chart,
+// reading its data range, and saving the modified presentation. This pattern
+// helps developers automate PowerPoint chart processing, validate chart data,
+// or integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, Slide, Chart, Access, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate loading a PPTX slide and accessing its chart.
+// - Build C# tools for PowerPoint chart analysis and manipulation.
+// - Generate or transform PPTX files with chart data in .NET applications.
+// - Validate chart contents before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
