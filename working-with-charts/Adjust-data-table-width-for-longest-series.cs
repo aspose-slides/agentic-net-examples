@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Adjust data table width for longest series using C#
+//
+// Description:
+// Demonstrates how to adjust the width of the first column in a data table
+// based on the longest series name using C# and Aspose.Slides for .NET. The
+// example creates a presentation, adds a table with sample series names,
+// calculates the maximum text length, updates the column width accordingly,
+// and saves the result as a PPTX file. This pattern can be used to automate
+// table layout adjustments in PowerPoint presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Adjust, Data, Table, Width,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate column width adjustment for tables containing series names.
+// - Build C# utilities for PowerPoint presentation formatting.
+// - Generate or modify PPTX files with dynamic table layouts in .NET apps.
+// - Validate and fine‑tune presentation content before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
@@ -49,7 +70,7 @@ namespace TableColumnWidthAdjustment
                 // Save the presentation
                 try
                 {
-                    pres.Save("AdjustedTable.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+                    pres.Save("AdjustedTable.pptx", SaveFormat.Pptx);
                 }
                 catch (NotSupportedException)
                 {
