@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Dispose presentation isequence resources memory using C#
+//
+// Description:
+// Demonstrates how to safely dispose Aspose.Slides Presentation objects while
+// working with the slide animation ISequence (MainSequence). The example
+// creates or loads a PPTX file, adds a simple fade animation to a shape, saves
+// the result, and relies on using blocks to release unmanaged resources.
+// This pattern is useful for managing memory when processing presentations
+// that contain animation sequences.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Dispose, Presentation, ISequence,
+// Animation, Resources, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Ensure proper disposal of Presentation objects that contain animation sequences.
+// - Build C# utilities that add or modify slide animations in PPTX files.
+// - Automate PPTX creation or modification while preventing memory leaks.
+// - Validate and test animation workflows in .NET applications.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
