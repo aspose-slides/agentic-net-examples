@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set error bar line style to dashdot using C#
+//
+// Description:
+// Demonstrates how to set the Y error bar line style to DashDot for a line
+// chart using C# and Aspose.Slides for .NET. The example creates a presentation,
+// adds a line chart with sample data, enables Y‑direction error bars, applies a
+// DashDot line style, and saves the result as a PPTX file. This pattern can be
+// used to customize error bar appearance in automated PowerPoint workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Line Chart, Error Bars,
+// Line Style, DashDot, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting error bar line style to DashDot in PowerPoint charts.
+// - Build C# utilities for customizing chart appearance in presentations.
+// - Generate or modify PPTX files with specific error bar styling in .NET apps.
+// - Validate chart formatting before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;
