@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Load CSV data into sunburst chart series using C#
+//
+// Description:
+// Demonstrates how to read a CSV file containing category names and size
+// values, and populate a Sunburst chart series in a PowerPoint presentation
+// using Aspose.Slides for .NET. The example creates a new presentation, adds a
+// Sunburst chart, maps CSV rows to chart categories and data points, and saves
+// the result as a PPTX file. This pattern can be used to automate chart data
+// loading, generate dynamic presentations, or validate chart content.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, CSV, Load, Data, Sunburst, Chart,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate loading CSV data into Sunburst chart series.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files with chart data in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
