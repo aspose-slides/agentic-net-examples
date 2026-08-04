@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Insert bubble chart with size data using C#
+//
+// Description:
+// Demonstrates how to insert a bubble chart with size data into a PowerPoint
+// presentation using C# and Aspose.Slides for .NET. The example creates a new
+// presentation, adds a bubble chart, configures bubble size representation,
+// populates categories and series with X, Y, and size values, enables bubble
+// size labels, and saves the result as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Insert, Bubble Chart, Size Data,
+// Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate insertion of bubble charts with custom size data.
+// - Build .NET tools for generating or modifying PPTX files.
+// - Create data‑driven presentations with bubble visualizations.
+// - Validate chart data and formatting in automated workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
