@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add skip custom lines when plotarea null using C#
+//
+// Description:
+// Demonstrates how to add custom error bar values to a bubble chart only when
+// the chart's PlotArea is present, using C# and Aspose.Slides for .NET. The
+// example creates a presentation, inserts a bubble chart, configures custom
+// error bars for each data point, and conditionally skips this step if the
+// PlotArea is null. The resulting presentation is saved as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Bubble Chart, Custom Error Bars,
+// PlotArea, Conditional Logic, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Add custom error bar values to charts while safely handling missing PlotArea.
+// - Build C# utilities for advanced chart customization in PowerPoint files.
+// - Automate generation of presentations with conditional chart features.
+// - Validate and transform chart data programmatically before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;
