@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add exact value labels to bubble chart using C#
+//
+// Description:
+// Demonstrates how to create a bubble chart, populate it with data points, and
+// enable data labels to show the exact values for each bubble using C# and
+// Aspose.Slides for .NET. The example includes the necessary presentation‑processing
+// steps for PowerPoint files and produces the output in a standalone console
+// application. Developers can use this pattern to automate PPTX workflows,
+// generate charts programmatically, or integrate presentation logic into .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Bubble Chart, Data Labels,
+// Exact Values, Chart Automation, Office Automation
+//
+// Use Cases:
+// - Automate creation of bubble charts with value labels in PowerPoint.
+// - Build C# tools for generating and customizing chart data in presentations.
+// - Generate visual reports that include bubble charts with precise data labels.
+// - Validate and test chart data within PPTX files before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;
@@ -16,8 +38,8 @@ namespace AddBubbleChartDataLabels
                 ISlide slide = pres.Slides[0];
 
                 // Add a bubble chart to the slide
-                Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(
-                    Aspose.Slides.Charts.ChartType.Bubble, 0, 0, 500, 400);
+                IChart chart = slide.Shapes.AddChart(
+                    ChartType.Bubble, 0, 0, 500, 400);
 
                 // Get the chart data workbook
                 IChartDataWorkbook workbook = chart.ChartData.ChartDataWorkbook;
@@ -55,7 +77,7 @@ namespace AddBubbleChartDataLabels
                 series.Labels.DefaultDataLabelFormat.ShowValue = true;
 
                 // Save the presentation
-                pres.Save("BubbleChartWithLabels.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+                pres.Save("BubbleChartWithLabels.pptx", SaveFormat.Pptx);
             }
         }
     }
