@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Set error bars both directions for scatter using C#
+//
+// Description:
+// Demonstrates how to set error bars in both positive and negative directions for
+// the X and Y axes of a scatter chart with smooth lines using Aspose.Slides for .NET.
+// The example creates a new presentation, adds a scatter chart, configures the
+// error bar formats, and saves the result as a PPTX file. This pattern can be
+// used to automate PowerPoint chart customizations in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Scatter Chart, Error Bars, Both Directions, Chart Customization, Presentation Processing
+//
+// Use Cases:
+// - Automate setting error bars both directions for scatter charts.
+// - Build C# tools for PowerPoint chart manipulation.
+// - Generate or modify PPTX files with customized chart error bars.
+// - Validate chart configurations before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;
