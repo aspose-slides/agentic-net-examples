@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Export presentation to PNG with tables and errorbars using C#
+//
+// Description:
+// Demonstrates how to export each slide of a PowerPoint presentation to PNG
+// images while preserving tables and error bars. The example loads an existing
+// PPTX file, iterates through its slides, saves each slide as a PNG file, and
+// finally saves the presentation back to disk. This pattern can be used in
+// console applications to automate PPTX processing, verify visual elements,
+// or generate image assets from presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Export, Presentation,
+// Tables, Errorbars, Charts, Image Conversion, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PPTX slides to PNG for documentation or web use.
+// - Validate that tables and error bars render correctly after processing.
+// - Build .NET tools that generate image assets from PowerPoint files.
+// - Integrate slide‑to‑image conversion into larger presentation workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
