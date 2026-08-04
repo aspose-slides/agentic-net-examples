@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add timestamp to PPTX digital signature for audit using C#
+//
+// Description:
+// Demonstrates how to add a trusted timestamp to a digital signature in a
+// PowerPoint presentation using C# and Aspose.Slides for .NET. The example
+// retrieves the current UTC time from an external time service, creates a
+// presentation, applies a digital signature with a timestamp comment, and
+// saves the signed PPTX file. This pattern can be used to embed audit‑ready
+// timestamps in presentation files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Digital Signature, Timestamp,
+// Audit, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding trusted timestamps to PPTX digital signatures for audit.
+// - Build C# tools for PowerPoint presentation signing and verification.
+// - Integrate timestamped digital signatures into .NET document workflows.
+// - Ensure presentation integrity and traceability before distribution.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Net.Http;
