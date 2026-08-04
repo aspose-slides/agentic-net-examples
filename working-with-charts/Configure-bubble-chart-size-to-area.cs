@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Configure bubble chart size to area using C#
+//
+// Description:
+// Demonstrates how to configure a bubble chart's size representation to Area 
+// using C# and Aspose.Slides for .NET. The example creates a new presentation, 
+// adds a bubble chart, sets the BubbleSizeRepresentation to Area for accurate 
+// proportional scaling, and saves the file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Configure, Bubble Chart, Size, 
+// Area Representation, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting bubble chart size representation to Area.
+// - Build C# tools for PowerPoint chart customization.
+// - Generate or modify PPTX files with correctly scaled bubble charts.
+// - Validate chart rendering before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;
