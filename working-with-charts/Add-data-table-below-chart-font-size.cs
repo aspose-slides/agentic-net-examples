@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add data table below chart with custom font sizes using C#
+//
+// Description:
+// Demonstrates how to add a data table below a chart and customize the font
+// sizes of both the chart text and the data table using Aspose.Slides for .NET.
+// The example creates a presentation, inserts a clustered column chart, sets
+// the chart's overall font size, enables the data table, adjusts its font size,
+// and saves the result as a PPTX file. This pattern can be used to automate
+// PowerPoint chart formatting tasks in .NET applications.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Chart, Data Table, Font Size, Presentation
+// Processing, Office Automation
+//
+// Use Cases:
+// - Add a data table below a chart with specific font styling.
+// - Build tools to standardize chart appearance in PowerPoint files.
+// - Generate or modify PPTX presentations programmatically in .NET.
+// - Ensure consistent typography for charts and their data tables.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;
