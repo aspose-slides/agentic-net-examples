@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Compare pdf chart images before after trendlines using C#
+//
+// Description:
+// Demonstrates how to generate PDF images of a chart before and after adding
+// a linear trendline using C# and Aspose.Slides for .NET. The example creates a
+// clustered column chart, saves the presentation as PDF, adds a trendline to
+// the first series, saves a second PDF, and then performs a byte‑wise comparison
+// of the two PDF files. This pattern can be used to validate visual changes in
+// chart rendering or to automate regression testing of presentation content.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Compare, Chart, Trendline,
+// Images, Before, After, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate comparison of PDF chart images before and after applying trendlines.
+// - Build C# tools for PowerPoint presentation processing and visual regression testing.
+// - Generate or transform PPTX files and export them to PDF in .NET applications.
+// - Validate chart rendering changes in automated CI pipelines.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
