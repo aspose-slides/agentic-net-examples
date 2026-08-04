@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add secondary axis to column chart synchronize using C#
+//
+// Description:
+// Demonstrates how to add a secondary vertical axis to a clustered column chart
+// and synchronize its scale with the primary vertical axis using C# and
+// Aspose.Slides for .NET. The example creates a new presentation, builds chart
+// data, configures the secondary axis, and saves the result as a PPTX file.
+// Developers can use this pattern to automate chart creation and axis
+// synchronization in PowerPoint presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Secondary Axis, Column Chart,
+// Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding a secondary axis to column charts and synchronizing scales.
+// - Build C# tools for PowerPoint chart manipulation and presentation processing.
+// - Generate or transform PPTX files with synchronized chart axes in .NET applications.
+// - Validate chart configurations before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
@@ -60,7 +81,7 @@ class Program
             }
 
             // Save the presentation
-            pres.Save("AddSecondaryAxis.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            pres.Save("AddSecondaryAxis.pptx", SaveFormat.Pptx);
         }
     }
 }
