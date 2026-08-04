@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set error bar line width 2 points using C#
+//
+// Description:
+// Demonstrates how to set the line width of Y‑direction error bars to 2 points
+// in a clustered column chart using Aspose.Slides for .NET. The example loads
+// an existing presentation if available, otherwise creates a new one, adds a
+// chart, modifies the error bar formatting, and saves the result as a PPTX file.
+// This pattern can be used to automate PowerPoint chart styling in .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Error Bars, Line Width, Points,
+// Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting error bar line width to 2 points in presentations.
+// - Build C# utilities for PowerPoint chart formatting.
+// - Generate or modify PPTX files with specific chart error bar styles.
+// - Validate chart appearance programmatically before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
