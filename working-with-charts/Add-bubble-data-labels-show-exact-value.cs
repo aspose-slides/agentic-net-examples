@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add bubble data labels show exact value using C#
+//
+// Description:
+// Demonstrates how to add bubble data labels that display both the data value 
+// and bubble size using C# and Aspose.Slides for .NET. The example creates a 
+// presentation, inserts a bubble chart, populates it with data points, enables 
+// value and bubble size labels, and saves the result as a PPTX file. This 
+// pattern can be used to automate PowerPoint chart labeling tasks.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Bubble Chart, Data Labels, 
+// Show Value, Show Bubble Size, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding bubble chart data labels that show exact values and sizes.
+// - Build C# utilities for PowerPoint chart customization.
+// - Generate or modify PPTX files with detailed bubble chart annotations.
+// - Validate chart labeling in presentation workflows before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
