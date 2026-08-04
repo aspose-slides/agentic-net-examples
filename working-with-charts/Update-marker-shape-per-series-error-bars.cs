@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Update marker shape per series error bars using C#
+//
+// Description:
+// Demonstrates how to update the marker shape for each series in a chart's
+// error bars using C# and Aspose.Slides for .NET. The example loads an existing
+// presentation (or creates a new one), iterates through all charts, assigns a
+// distinct marker style to each series, and saves the modified presentation.
+// This pattern can be used to customize chart appearance programmatically.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Update, Marker, Shape, Series,
+// Error Bars, Chart Customization, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting unique marker shapes for series error bars in charts.
+// - Build tools that modify chart visual styles in PowerPoint files.
+// - Generate or transform PPTX presentations with customized chart markers.
+// - Validate and standardize chart formatting before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
