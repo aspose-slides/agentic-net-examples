@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Apply custom marker shape to scatter series using C#
+//
+// Description:
+// Demonstrates how to apply custom marker shapes to scatter series in a PowerPoint
+// presentation using C# and Aspose.Slides for .NET. The example creates a new
+// presentation, adds a scatter chart with smooth lines, populates two series with
+// data points, and sets custom marker symbols and sizes for the series and
+// individual data points. The resulting presentation is saved as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, Custom, Marker, Shape,
+// Scatter, Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate applying custom marker shapes to scatter series in PPTX files.
+// - Build C# utilities for PowerPoint chart customization.
+// - Generate or modify PPTX presentations with tailored chart markers.
+// - Validate chart appearance before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;
