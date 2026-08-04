@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Configure second plot options pie of pie using C#
+//
+// Description:
+// Demonstrates how to configure the second plot options of a Pie of Pie chart
+// using C# and Aspose.Slides for .NET. The example sets a custom split type,
+// defines a split position, and adjusts the size of the secondary pie. It
+// includes the necessary presentation-processing steps for PowerPoint files
+// and produces the output in a standalone console application. Developers can
+// use this pattern to automate PPTX workflows, validate results, or integrate
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Configure, Second, Plot, Options,
+// PieOfPie, CustomSplit, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate configuration of second plot options for Pie of Pie charts.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files with custom chart settings in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;
