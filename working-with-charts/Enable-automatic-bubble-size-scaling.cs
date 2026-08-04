@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Enable automatic bubble size scaling using C#
+//
+// Description:
+// Demonstrates how to enable automatic bubble size scaling for a bubble chart
+// using Aspose.Slides for .NET. The example creates a new presentation, adds a
+// bubble chart, sets the BubbleSizeScale property to increase bubble sizes
+// proportionally, and saves the result as a PPTX file. This pattern can be used
+// to programmatically control bubble size scaling in PowerPoint charts.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Bubble Chart, Automatic Scaling,
+// BubbleSizeScale, ChartData, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Apply custom bubble size scaling to charts in automated PPTX generation.
+// - Build .NET tools that modify chart appearance for reporting or analytics.
+// - Integrate bubble chart scaling into presentation workflows.
+// - Ensure consistent visual scaling across multiple presentations.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;
