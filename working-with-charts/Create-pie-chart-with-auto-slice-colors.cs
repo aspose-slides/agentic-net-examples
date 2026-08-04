@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Create pie chart with auto slice colors using C#
+//
+// Description:
+// Demonstrates how to create a pie chart with automatically varied slice colors using C# and 
+// Aspose.Slides for .NET. The example builds a presentation, adds a pie chart, configures
+// categories and a data series, enables color variation for slices, and saves the result.
+// This pattern helps developers automate PowerPoint chart creation with custom styling.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Pie Chart, Auto Slice Colors, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of pie charts with varied slice colors.
+// - Build C# utilities for PowerPoint presentation generation.
+// - Generate or modify PPTX files programmatically in .NET applications.
+// - Validate chart rendering and styling before deployment.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
