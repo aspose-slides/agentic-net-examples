@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Export chart as high resolution PDF using C#
+//
+// Description:
+// Demonstrates how to export a chart as a high‑resolution PDF using C# and 
+// Aspose.Slides for .NET. The example creates a new presentation, adds a 
+// clustered column chart, sets the vertical axis display unit to millions, 
+// configures PDF export options for 300 DPI resolution, and saves the result 
+// as a PDF file. This pattern can be used to automate PPTX workflows, 
+// validate chart rendering, or integrate presentation processing into .NET 
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Export, Chart, High, 
+// Resolution, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate export of charts to high‑resolution PDF files.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files with chart content in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
