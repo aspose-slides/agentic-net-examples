@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Convert signed PPTX to PNG images using C#
+//
+// Description:
+// Demonstrates how to load a digitally signed PowerPoint presentation (PPTX)
+// and export each slide as a PNG image using Aspose.Slides for .NET. The
+// example validates the input file, iterates through all slides, generates
+// PNG files named "slide_#.png", and saves the original presentation to
+// preserve any signatures before the application exits.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Convert, Signed, Images,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of signed PPTX files to individual slide images.
+// - Build .NET utilities for secure presentation handling and image extraction.
+// - Integrate slide‑to‑image conversion into document management workflows.
+// - Verify visual output of signed presentations before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
