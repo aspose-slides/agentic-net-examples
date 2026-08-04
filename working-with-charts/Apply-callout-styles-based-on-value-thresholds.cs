@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Apply callout styles based on value thresholds using C#
+//
+// Description:
+// Demonstrates how to apply callout styles based on value thresholds using C# 
+// and Aspose.Slides for .NET. The example shows the required 
+// presentation-processing steps for PowerPoint files and produces the 
+// requested output in a standalone console application. Developers can use 
+// this pattern to automate PPTX workflows, validate results, or integrate 
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, Callout, Styles, Value, 
+// Thresholds, Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate applying callout styles based on value thresholds in chart data.
+// - Build C# tools for PowerPoint chart processing and visual enhancement.
+// - Generate or transform PPTX files with customized data label callouts.
+// - Validate chart presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.Drawing;
 using Aspose.Slides;
