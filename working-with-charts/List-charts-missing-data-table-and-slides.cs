@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: List charts missing data table and slides using C#
+//
+// Description:
+// Demonstrates how to enumerate slides in a PowerPoint presentation and list
+// charts that do not have an associated data table using Aspose.Slides for .NET.
+// The example loads a PPTX file, checks each chart on every slide, writes the
+// slide numbers of charts without data tables to the console, and saves the
+// presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, List, Charts, Missing, Data,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Identify charts lacking data tables in existing presentations.
+// - Automate validation of chart completeness before publishing.
+// - Build tools that report or fix missing chart data tables in bulk.
+// - Integrate chart analysis into .NET PowerPoint processing pipelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
