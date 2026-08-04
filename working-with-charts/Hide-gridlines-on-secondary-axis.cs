@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Hide gridlines on secondary axis using C#
+//
+// Description:
+// Demonstrates how to hide major and minor gridlines on the secondary vertical
+// axis of a chart using C# and Aspose.Slides for .NET. The example creates a
+// presentation, adds a clustered column chart, plots the first series on the
+// secondary axis, disables gridlines, and saves the result as a PPTX file.
+// This pattern can be used to automate PowerPoint chart formatting tasks.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Hide, Gridlines, Secondary,
+// Axis, Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate hiding gridlines on secondary axes in PowerPoint charts.
+// - Build C# utilities for chart formatting in presentations.
+// - Generate or modify PPTX files with customized axis settings.
+// - Validate chart appearance before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
