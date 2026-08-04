@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: List chart titles and plot area sizes using C#
+//
+// Description:
+// Demonstrates how to enumerate charts in a PowerPoint presentation, retrieve
+// each chart's title (if present) and the actual plot area dimensions using
+// Aspose.Slides for .NET. The example loads a PPTX file, processes all slides,
+// outputs the information to the console, and saves the presentation unchanged.
+// This pattern can be used to audit or report chart metadata in automated
+// workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, List, Chart, Titles, Plot,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Generate reports of chart titles and plot area sizes across a presentation.
+// - Validate chart layout information in automated quality checks.
+// - Build tools that extract chart metadata for further processing or migration.
+// - Integrate chart inspection into .NET applications handling PPTX files.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
