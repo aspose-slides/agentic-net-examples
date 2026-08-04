@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Create isequence with ten second duration using C#
+//
+// Description:
+// Demonstrates how to create an animation sequence with a total duration of ten
+// seconds for a chart on the first slide using C# and Aspose.Slides for .NET.
+// The example loads an existing presentation, adds a base fade effect to the
+// chart, then adds appear effects for each series, spacing them evenly over a
+// ten‑second interval. The modified presentation is saved as a new PPTX file.
+// This pattern can be used to automate timed chart animations in PowerPoint.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, ISequence, Chart, Animation,
+// Duration, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of chart animation sequences with a fixed total duration.
+// - Build C# tools for timed PowerPoint chart presentations.
+// - Generate or modify PPTX files with custom animation timing in .NET applications.
+// - Validate and preview chart animations before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
