@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set scatter chart axis titles and fonts using C#
+//
+// Description:
+// Demonstrates how to add a scatter chart with markers to a PowerPoint slide
+// and set custom titles and font styles for both horizontal and vertical axes
+// using Aspose.Slides for .NET. The example creates a new presentation, configures
+// the chart axis titles, saves the file, and disposes resources.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Scatter, Chart, Axis, Titles, Fonts,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting scatter chart axis titles and font styling in PPTX files.
+// - Build .NET tools for customizing chart appearance in presentations.
+// - Generate or modify PowerPoint presentations with specific chart formatting.
+// - Validate chart axis configurations before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;
