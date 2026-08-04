@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Export chart as high resolution PNG using C#
+//
+// Description:
+// Demonstrates how to export the first chart from a PowerPoint presentation
+// as a high‑resolution PNG image using C# and Aspose.Slides for .NET. The example
+// loads a PPTX file, locates the first chart on the first slide, renders it at
+// 2× scale to increase resolution, saves the image, and then saves the
+// presentation. This pattern can be used to automate chart extraction and
+// high‑quality image generation in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Export, Chart, High
+// Resolution, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of charts as high‑resolution PNG images.
+// - Build C# tools for PowerPoint presentation processing and reporting.
+// - Generate or transform PPTX files in .NET applications while preserving
+//   chart quality.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
