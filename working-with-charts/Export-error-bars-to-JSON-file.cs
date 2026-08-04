@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Export error bars to JSON file using C#
+//
+// Description:
+// Demonstrates how to extract error bar settings from charts in a PowerPoint
+// presentation and export them to a JSON file using Aspose.Slides for .NET.
+// The example loads a PPTX, iterates through all chart shapes, collects error
+// bar properties for each series, serializes the data to JSON, and saves both
+// the JSON file and a copy of the presentation.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Charts, Error Bars, JSON Export, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Retrieve chart error bar configurations for analysis or reporting.
+// - Automate documentation of presentation chart settings.
+// - Integrate chart metadata extraction into .NET applications.
+// - Validate or compare error bar parameters across multiple presentations.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Collections.Generic;
