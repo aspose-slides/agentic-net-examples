@@ -1,5 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Render chart to SVG and inspect trendline using C#
+//
+// Description:
+// Demonstrates how to create a clustered column chart, add various trendlines,
+// save the presentation, export the first slide to SVG, and inspect the SVG
+// content for trendline elements using Aspose.Slides for .NET. The example
+// provides a complete console application workflow for chart rendering and
+// SVG analysis.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SVG, Render, Chart, Trendline,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Generate a PPTX with chart trendlines.
+// - Export a slide containing a chart to SVG format.
+// - Programmatically verify that trendline elements are present in the SVG.
+// - Automate PowerPoint chart processing and SVG validation in .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
+using System.Drawing;
 using Aspose.Slides;
 using Aspose.Slides.Charts;
 using Aspose.Slides.Export;
