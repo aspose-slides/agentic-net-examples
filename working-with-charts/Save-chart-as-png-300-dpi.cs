@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Save chart as PNG 300 DPI using C#
+//
+// Description:
+// Demonstrates how to save a chart from a PowerPoint presentation as a PNG
+// image with an approximate 300 dpi resolution using Aspose.Slides for .NET.
+// The example creates a presentation, adds a clustered column chart, extracts
+// the chart image, and saves it as a PNG file. It also saves the presentation
+// itself. This pattern can be used to automate chart image extraction and
+// conversion in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Save, Chart, Image Export,
+// 300 DPI, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Export charts from PPTX files as high‑resolution PNG images.
+// - Build tools that generate image assets from PowerPoint presentations.
+// - Integrate chart image extraction into .NET workflows or reporting systems.
+// - Validate and automate presentation content processing before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
