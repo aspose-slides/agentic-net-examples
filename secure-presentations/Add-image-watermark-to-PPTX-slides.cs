@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add image watermark to PPTX slides using C#
+//
+// Description:
+// Demonstrates how to add an image watermark that covers each slide in a PPTX
+// file using C# and Aspose.Slides for .NET. The example loads a presentation,
+// inserts the watermark image as a picture frame on every slide, applies a
+// 30 % opacity effect, and saves the result as a new PPTX file. This pattern can
+// be used to automate watermarking of PowerPoint presentations in .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Image, Watermark, Slides,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automatically apply image watermarks to all slides in a presentation.
+// - Build .NET tools for protecting or branding PowerPoint files.
+// - Integrate watermarking into document generation pipelines.
+// - Validate and preview presentation output before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
