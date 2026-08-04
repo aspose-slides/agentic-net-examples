@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Configure fixed constant error bars series using C#
+//
+// Description:
+// Demonstrates how to configure fixed constant error bars for a chart series 
+// using C# and Aspose.Slides for .NET. The example creates a new presentation, 
+// adds a clustered column chart, sets a fixed error bar value for the Y‑axis 
+// series, and saves the result as a PPTX file. This pattern can be used to 
+// automate chart error‑bar configuration in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Configure, Fixed, Constant, 
+// Error, Bars, Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate the configuration of fixed constant error bars in chart series.
+// - Build C# utilities for PowerPoint chart manipulation.
+// - Generate or modify PPTX files with custom error‑bar settings in .NET 
+//   applications.
+// - Validate chart configurations before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
