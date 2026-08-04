@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Configure hardware token signature provider for PPTX using C#
+//
+// Description:
+// Demonstrates how to configure a hardware token digital signature provider 
+// for a PPTX file using C# and Aspose.Slides for .NET. The example loads an 
+// existing presentation, retrieves a certificate from a hardware token via the 
+// Windows certificate store, applies a digital signature, and saves the signed 
+// presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Hardware Token, Digital Signature, 
+// Certificate Store, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate signing PPTX files with a hardware token certificate.
+// - Build C# utilities for secure PowerPoint document handling.
+// - Integrate digital signing into .NET applications that process presentations.
+// - Ensure authenticity and integrity of PPTX files before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Security.Cryptography.X509Certificates;
