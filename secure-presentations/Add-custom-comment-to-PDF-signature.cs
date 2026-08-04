@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add custom comment to digital signature using C#
+//
+// Description:
+// Demonstrates how to add a custom comment to a digital signature in a PowerPoint
+// presentation using C# and Aspose.Slides for .NET. The example creates a new
+// presentation, applies a digital signature from a PFX certificate, sets a
+// custom comment describing the signing purpose, and saves the signed PPTX file.
+// This pattern can be used to automate signing workflows, embed metadata, or
+// integrate presentation signing into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Digital Signature, Custom Comment,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Add custom comments to digital signatures in PowerPoint files.
+// - Automate signing of presentations with embedded metadata.
+// - Build C# tools for secure presentation handling.
+// - Integrate digital signing into .NET-based document workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
