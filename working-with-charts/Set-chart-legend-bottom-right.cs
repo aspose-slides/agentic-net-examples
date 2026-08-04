@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set chart legend bottom right using C#
+//
+// Description:
+// Demonstrates how to position a chart legend at the bottom‑right corner of a
+// chart using Aspose.Slides for .NET. The example creates a presentation, adds a
+// clustered column chart, sets the legend location using relative coordinates,
+// and saves the result as a PPTX file. This pattern can be used to automate
+// legend placement in PowerPoint charts.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Legend, Bottom Right,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Programmatically position chart legends at the bottom‑right.
+// - Build .NET tools for customizing PowerPoint chart layouts.
+// - Generate or modify PPTX files with specific legend positioning.
+// - Validate chart appearance in automated presentation workflows.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
