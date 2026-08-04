@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Export chart data series to XML using C#
+//
+// Description:
+// Demonstrates how to export chart data series from the first chart on the
+// first slide of a PowerPoint presentation to an XML file using C# and
+// Aspose.Slides for .NET. The example loads a PPTX file, extracts chart series
+// names and data point values, writes them to a structured XML document, and
+// saves the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Chart, Data Series, XML,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of chart data for reporting or analysis.
+// - Build tools that convert PowerPoint chart data to XML for downstream
+//   processing.
+// - Integrate chart data export into .NET applications handling PPTX files.
+// - Validate and document chart contents before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Xml;
