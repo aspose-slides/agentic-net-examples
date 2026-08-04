@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set error bar type to percentage using C#
+//
+// Description:
+// Demonstrates how to set the Y-direction error bar type to percentage for a
+// line chart using C# and Aspose.Slides for .NET. The example creates a new
+// presentation, adds a line chart, configures error bars with a 5% value,
+// and saves the result as a PPTX file. This pattern helps automate chart
+// formatting tasks in PowerPoint presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Error Bar, Percentage, Chart,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting error bar type to percentage in charts.
+// - Build C# utilities for PowerPoint chart customization.
+// - Generate or modify PPTX files with specific error bar configurations.
+// - Validate chart error bar settings before publishing presentations.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;
