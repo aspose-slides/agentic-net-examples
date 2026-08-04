@@ -1,3 +1,27 @@
+// -----------------------------------------------------------------------------
+// Example: Replace all charts with treemap using C#
+//
+// Description:
+// Demonstrates how to replace every chart in a PowerPoint presentation with a
+// treemap chart using C# and Aspose.Slides for .NET. The example loads an
+// existing PPTX (or creates a new one if the source is missing), iterates over
+// all slides and shapes, replaces each chart while preserving its position and
+// size, populates the treemap with sample hierarchical data, and saves the
+// modified presentation. This pattern can be used to automate PPTX workflows,
+// transform chart types, or integrate presentation processing into .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Replace, Charts, Treemap,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate replacement of all charts with treemap visualizations.
+// - Build C# tools for PowerPoint presentation transformation.
+// - Generate or modify PPTX files programmatically in .NET applications.
+// - Validate and standardize chart types before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -19,7 +43,7 @@ namespace ReplaceChartsWithTreemap
                 // Create a new empty presentation if source does not exist
                 using (Presentation emptyPres = new Presentation())
                 {
-                    emptyPres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    emptyPres.Save(outputPath, SaveFormat.Pptx);
                 }
                 return;
             }
@@ -91,7 +115,7 @@ namespace ReplaceChartsWithTreemap
                     }
 
                     // Save the modified presentation
-                    pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    pres.Save(outputPath, SaveFormat.Pptx);
                 }
             }
             catch (Exception)
