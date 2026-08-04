@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Change PPTX opening password without modifying slides using C#
+//
+// Description:
+// Demonstrates how to change the opening password of a PPTX file without
+// modifying its slides using C# and Aspose.Slides for .NET. The example loads a
+// password‑protected presentation, applies a new password, and saves the file
+// while preserving all slide content.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Change, Opening, Password,
+// Presentation Protection, LoadOptions, Encryption
+//
+// Use Cases:
+// - Update the opening password of existing PowerPoint files programmatically.
+// - Automate password rotation for secured presentations.
+// - Integrate password management into .NET document processing pipelines.
+// - Ensure PPTX files remain unchanged except for protection settings.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
