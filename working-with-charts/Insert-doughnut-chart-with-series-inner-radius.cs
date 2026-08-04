@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Insert doughnut chart with series inner radius using C#
+//
+// Description:
+// Demonstrates how to insert a doughnut chart and set its inner radius (doughnut
+// hole size) using C# and Aspose.Slides for .NET. The example creates a new
+// presentation, adds a doughnut chart with two series, defines categories and
+// data points, configures the doughnut hole size, and saves the result as a PPTX
+// file. This pattern can be used to automate chart creation with custom inner
+// radius settings in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Insert, Doughnut, Chart,
+// Series, Inner Radius, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate insertion of doughnut charts with a specific inner radius.
+// - Build C# tools for PowerPoint presentation processing that require custom
+//   chart styling.
+// - Generate or transform PPTX files with doughnut charts in .NET applications.
+// - Validate chart appearance and layout before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
