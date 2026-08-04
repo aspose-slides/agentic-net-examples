@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set bubble chart minimum size five points using C#
+//
+// Description:
+// Demonstrates how to set bubble chart minimum size five points using C# and 
+// Aspose.Slides for .NET. The example shows the required 
+// presentation-processing steps for PowerPoint files and produces the 
+// requested output in a standalone console application. Developers can use 
+// this pattern to automate PPTX workflows, validate results, or integrate 
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Bubble, Chart, Minimum, Size, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate set bubble chart minimum size five points.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
