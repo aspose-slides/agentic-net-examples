@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add currency symbol to data labels using C#
+//
+// Description:
+// Demonstrates how to add a currency symbol to data labels in a pie chart using
+// C# and Aspose.Slides for .NET. The example creates a presentation, inserts a
+// pie chart, configures data label formatting, applies a custom number format
+// that includes a dollar sign, and saves the result as a PPTX file. This pattern
+// can be used to automate chart formatting tasks in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Currency Symbol, Data Labels,
+// Charts, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding currency symbols to chart data labels.
+// - Build C# utilities for PowerPoint chart customization.
+// - Generate or modify PPTX files with formatted charts in .NET applications.
+// - Validate chart label formatting before publishing presentations.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;
