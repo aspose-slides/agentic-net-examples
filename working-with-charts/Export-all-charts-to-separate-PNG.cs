@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export all charts to separate PNG using C#
+//
+// Description:
+// Demonstrates how to export each chart from a PowerPoint presentation to an
+// individual PNG file using C# and Aspose.Slides for .NET. The example loads a
+// presentation, iterates through its slides and shapes, identifies chart
+// objects, saves each chart as a separate PNG image, and finally saves the
+// (unchanged) presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Export, Charts, Separate,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate export of all charts to separate PNG files.
+// - Build C# utilities for PowerPoint chart extraction.
+// - Integrate chart export functionality into .NET applications.
+// - Validate and process PPTX files before publishing or further automation.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
