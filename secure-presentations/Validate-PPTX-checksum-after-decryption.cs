@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Validate PPTX checksum after decryption using C#
+//
+// Description:
+// Demonstrates how to validate the MD5 checksum of a password‑protected PPTX
+// file after decryption using Aspose.Slides for .NET. The example opens a
+// protected presentation, saves a decrypted copy, computes its checksum and
+// compares it with an expected value. This pattern can be used to verify that
+// decryption succeeded and the file integrity is intact.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Validate, Checksum, Decryption,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Verify integrity of decrypted PowerPoint files.
+// - Automate validation of PPTX checksum after password removal.
+// - Build .NET tools for secure presentation handling.
+// - Ensure correct password and file integrity before further processing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Security.Cryptography;
