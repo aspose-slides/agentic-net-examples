@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Check data table visibility on chart using C#
+//
+// Description:
+// Demonstrates how to determine whether a chart's data table is visible in a
+// PowerPoint presentation using Aspose.Slides for .NET. The example loads a
+// PPTX file, accesses the first chart on the first slide, checks the
+// HasDataTable property, outputs the result, and saves the presentation.
+// This pattern can be used to automate validation of chart data tables in
+// PPTX files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Data Table, Visibility,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Verify chart data table visibility before publishing a presentation.
+// - Build tools that audit or modify chart settings in PPTX files.
+// - Integrate chart validation into .NET automation workflows.
+// - Ensure consistency of chart data tables across multiple presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;
