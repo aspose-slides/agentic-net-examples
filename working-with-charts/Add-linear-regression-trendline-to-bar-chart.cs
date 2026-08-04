@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Add linear regression trendline to bar chart using C#
+//
+// Description:
+// Demonstrates how to add a linear regression trendline to a clustered column
+// (bar) chart using C# and Aspose.Slides for .NET. The example creates a new
+// presentation, inserts a bar chart, adds a linear trendline to the first
+// series, customizes its appearance, and saves the result as a PPTX file.
+// Developers can use this pattern to automate PPTX workflows, validate results,
+// or integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Linear Regression, Trendline,
+// Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding linear regression trendlines to bar charts in presentations.
+// - Build C# tools for PowerPoint presentation processing and analysis.
+// - Generate or transform PPTX files with customized chart elements in .NET
+//   applications.
+// - Validate chart rendering and trendline calculations before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.Drawing;
 using Aspose.Slides;
