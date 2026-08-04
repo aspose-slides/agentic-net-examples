@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Enable percentage data labels on chart using C#
+//
+// Description:
+// Demonstrates how to enable percentage data labels (and optionally values) on a
+// stacked column chart using C# and Aspose.Slides for .NET. The example creates a
+// new presentation, adds a stacked column chart, configures the first series to
+// show percentage and value data labels, and saves the result as a PPTX file.
+// This pattern can be used to automate chart labeling in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Stacked Column, Percentage,
+// Data Labels, ShowValue, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate enabling percentage data labels on charts in PPTX files.
+// - Build C# utilities for customizing chart appearance in presentations.
+// - Generate or modify PowerPoint reports with detailed chart labeling.
+// - Validate chart data representation before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
