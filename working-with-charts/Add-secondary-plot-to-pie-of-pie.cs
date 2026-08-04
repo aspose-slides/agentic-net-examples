@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add secondary plot to pie of pie using C#
+//
+// Description:
+// Demonstrates how to add a secondary plot to a Pie of Pie chart using C# and 
+// Aspose.Slides for .NET. The example creates a new presentation, inserts a 
+// Pie of Pie chart, configures the secondary pie size and split criteria, and 
+// saves the result as a PPTX file. This pattern can be used to automate chart 
+// customization in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Pie of Pie, Secondary Plot, 
+// Chart Customization, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding secondary plot to Pie of Pie charts.
+// - Build C# tools for customizing chart appearance in PowerPoint.
+// - Generate or modify PPTX files with advanced chart configurations.
+// - Validate chart settings before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
