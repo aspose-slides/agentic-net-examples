@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set chart legend top right using C#
+//
+// Description:
+// Demonstrates how to set the legend of a chart to the top‑right position in a
+// PowerPoint presentation using C# and Aspose.Slides for .NET. The example
+// creates a new presentation, adds a clustered column chart, enables the
+// legend, moves it to the top‑right corner, and saves the file as a PPTX.
+// This pattern can be used to automate chart formatting in PPTX files.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Chart, Legend, TopRight, Presentation
+// Automation, Office Automation
+//
+// Use Cases:
+// - Programmatically position chart legends in generated presentations.
+// - Build .NET tools that customize chart appearance in PPTX files.
+// - Automate report generation with specific chart layout requirements.
+// - Validate chart formatting before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
