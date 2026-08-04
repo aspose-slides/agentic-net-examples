@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set legend overlay false for plot area using C#
+//
+// Description:
+// Demonstrates how to set the legend overlay property to false for a chart's
+// plot area using C# and Aspose.Slides for .NET. The example creates a new
+// presentation, adds a clustered column chart, ensures a legend is present,
+// disables legend overlay, optionally positions the legend, and saves the
+// presentation as a PPTX file. This pattern can be used to control legend
+// placement in automated PowerPoint generation scenarios.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Legend, Overlay, False,
+// Plot Area, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Disable legend overlay for charts in generated presentations.
+// - Build C# utilities for precise chart formatting in PowerPoint files.
+// - Automate PPTX creation with custom legend positioning.
+// - Validate chart layout before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
