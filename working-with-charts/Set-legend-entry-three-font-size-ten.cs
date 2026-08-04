@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Set legend entry three font size ten using C#
+//
+// Description:
+// Demonstrates how to set the font size of the third legend entry to ten points
+// using C# and Aspose.Slides for .NET. The example creates a presentation,
+// adds a clustered column chart, accesses the legend entry at index two, and
+// modifies its text format. The presentation is then saved as a PPTX file.
+// This pattern can be used to automate chart legend formatting in PowerPoint
+// files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Legend, Entry, Font Size,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting specific legend entry font sizes in charts.
+// - Build C# tools for customizing PowerPoint chart legends.
+// - Generate or modify PPTX files with precise formatting requirements.
+// - Validate chart appearance programmatically before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
