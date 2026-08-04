@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Save modified presentation with bubble chart as PPTX using C#
+//
+// Description:
+// Demonstrates how to load an existing PPTX, add a bubble chart with sample
+// data, configure X and Y error bars, and save the modified presentation as
+// PPTX using Aspose.Slides for .NET. The example includes error handling for
+// missing input files and unsupported formats, and shows how to manipulate
+// chart data and formatting programmatically.
+//
+// Keywords:
+// C#, Aspose.Slides, PPTX, Bubble Chart, Error Bars, Chart Data, Presentation
+// Processing, Office Automation, PowerPoint, Save Modified Presentation
+//
+// Use Cases:
+// - Add or modify charts in existing PowerPoint files.
+// - Configure error bars for bubble charts programmatically.
+// - Automate saving of updated presentations in PPTX format.
+// - Integrate chart manipulation into .NET applications.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
