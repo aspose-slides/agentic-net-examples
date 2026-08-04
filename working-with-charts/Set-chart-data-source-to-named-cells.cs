@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Set chart data source to named cells using C#
+//
+// Description:
+// Demonstrates how to set a chart's data source to a named range in an external
+// Excel workbook using Aspose.Slides for .NET. The example creates a new
+// presentation, adds a pie chart, links it to an external workbook, specifies
+// the named range, and saves the resulting PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Data, Source, Named Range,
+// External Workbook, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate linking chart data to named cells in an external Excel file.
+// - Build C# tools for PowerPoint chart data binding.
+// - Generate presentations that reference external data sources.
+// - Validate chart data integration before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
