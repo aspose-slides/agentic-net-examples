@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add secondary plot to bar of pie chart with threshold using C#
+//
+// Description:
+// Demonstrates how to add a secondary plot (split) to a Bar of Pie chart using
+// Aspose.Slides for .NET. The example creates a new presentation, inserts a
+// Bar of Pie chart, defines categories and a data series, configures the
+// secondary pie plot with a split threshold, and saves the result as a PPTX
+// file. This pattern can be used to automate chart creation and customization
+// in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Bar of Pie, Secondary Plot,
+// Threshold, Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of Bar of Pie charts with secondary plot thresholds.
+// - Build C# tools for advanced chart customization in PowerPoint.
+// - Generate or modify PPTX files programmatically in .NET applications.
+// - Validate chart configurations before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
