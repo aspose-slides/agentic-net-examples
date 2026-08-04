@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Set bubble chart size range using C#
+//
+// Description:
+// Demonstrates how to set the bubble size scaling factor for a bubble chart 
+// using Aspose.Slides for .NET. The example creates a new presentation, adds a 
+// bubble chart, populates it with X, Y, and size values, and adjusts the visual 
+// size range of the bubbles by setting the BubbleSizeScale property.
+//
+// Keywords:
+// C#, Aspose.Slides, Bubble Chart, BubbleSizeScale, Chart Size Range, PPTX, 
+// Presentation Automation, .NET
+//
+// Use Cases:
+// - Adjust visual bubble size range in generated PowerPoint charts.
+// - Automate creation of bubble charts with custom scaling in .NET apps.
+// - Generate PPTX reports that require specific bubble size representation.
+// - Integrate bubble chart scaling into presentation processing pipelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
