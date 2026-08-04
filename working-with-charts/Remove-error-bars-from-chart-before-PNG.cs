@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Remove error bars from chart before PNG using C#
+//
+// Description:
+// Demonstrates how to remove error bars from all chart series in a PowerPoint
+// presentation before exporting a slide to PNG using C# and Aspose.Slides for .NET.
+// The example loads a PPTX file, hides X and Y error bars for each series in
+// every chart, saves the modified presentation, and renders the first slide as
+// a PNG image.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Remove, Error Bars, Chart,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Remove error bars from charts in existing presentations prior to image export.
+// - Automate preparation of PPTX files for publishing or sharing as PNGs.
+// - Integrate chart cleanup steps into .NET applications that generate or modify slides.
+// - Ensure visual consistency of exported slide images by eliminating unwanted error bars.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
