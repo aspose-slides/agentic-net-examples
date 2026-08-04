@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Load presentation async add chart animations using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation asynchronously, add a
+// chart to the first slide, generate slide animations (including the chart),
+// and save the result using Aspose.Slides for .NET. The example illustrates
+// non‑blocking presentation loading and animation generation suitable for
+// console or UI applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, Presentation, Async,
+// Chart, Animations, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Load large presentations without freezing the UI.
+// - Programmatically add charts and generate animations.
+// - Automate PPTX modification and animation creation in .NET tools.
+// - Validate and preview presentation workflows before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Threading.Tasks;
@@ -40,13 +61,13 @@ class Program
         }
 
         // Add a sample chart to the first slide
-        Aspose.Slides.Charts.IChart chart = presentation.Slides[0].Shapes.AddChart(
-            Aspose.Slides.Charts.ChartType.ClusteredColumn,
+        IChart chart = presentation.Slides[0].Shapes.AddChart(
+            ChartType.ClusteredColumn,
             50f, 50f, 400f, 300f);
 
         // Generate animations for all slides (including the newly added chart)
-        using (Aspose.Slides.Export.PresentationAnimationsGenerator animationsGenerator =
-            new Aspose.Slides.Export.PresentationAnimationsGenerator(presentation.SlideSize.Size.ToSize()))
+        using (PresentationAnimationsGenerator animationsGenerator =
+            new PresentationAnimationsGenerator(presentation.SlideSize.Size.ToSize()))
         {
             // Run the animation generation; this call is quick and does not block UI
             animationsGenerator.Run(presentation.Slides);
