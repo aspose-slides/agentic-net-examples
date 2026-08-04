@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Add secondary axis to column chart series using C#
+//
+// Description:
+// Demonstrates how to create a clustered column chart, add primary and secondary
+// series, map the secondary series to a secondary axis, and save the presentation
+// using Aspose.Slides for .NET. This example shows the required steps for
+// PowerPoint chart manipulation in a console application.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Secondary Axis, Column Chart, Chart Series,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Add a secondary axis to a column chart series programmatically.
+// - Build .NET tools for PowerPoint chart customization.
+// - Generate or modify PPTX files with multiple axes.
+// - Automate chart data handling in presentation workflows.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
