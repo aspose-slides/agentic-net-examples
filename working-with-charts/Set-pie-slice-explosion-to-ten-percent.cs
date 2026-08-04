@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set pie slice explosion to ten percent using C#
+//
+// Description:
+// Demonstrates how to set the explosion of a pie chart slice to ten percent
+// using C# and Aspose.Slides for .NET. The example creates a new presentation,
+// adds a pie chart, configures the first slice's explosion, and saves the file.
+// This pattern can be used to automate chart formatting in PowerPoint files.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Pie Chart, Slice Explosion, 10 Percent,
+// Presentation Automation, .NET
+//
+// Use Cases:
+// - Programmatically set pie slice explosion for chart styling.
+// - Build .NET tools that modify chart appearance in PPTX files.
+// - Automate generation of presentations with customized chart visuals.
+// - Integrate chart formatting into larger PowerPoint processing workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
