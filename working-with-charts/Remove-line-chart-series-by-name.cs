@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Remove line chart series by name using C#
+//
+// Description:
+// Demonstrates how to remove a specific line chart series identified by its name
+// from a PowerPoint presentation using C# and Aspose.Slides for .NET. The example
+// loads a PPTX file, locates the first chart on the first slide, searches for a
+// series with a given name, removes it if present, and saves the updated file.
+// This pattern can be used to automate chart data cleanup or dynamic presentation
+// modifications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove, Line, Chart, Series, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate removal of unwanted line chart series by name.
+// - Build C# utilities for PowerPoint chart manipulation.
+// - Update or clean up PPTX files in .NET applications.
+// - Integrate chart series management into presentation workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
