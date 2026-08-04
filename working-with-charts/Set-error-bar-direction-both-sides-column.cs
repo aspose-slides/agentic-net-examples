@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Set error bar direction both sides column using C#
+//
+// Description:
+// Demonstrates how to set error bar direction to both positive and negative
+// sides for a clustered column chart using C# and Aspose.Slides for .NET.
+// The example creates a new presentation, adds a column chart, populates it
+// with categories, a series, and data points, configures error bars to show
+// both directions, and saves the result as a PPTX file. Developers can use
+// this pattern to automate PowerPoint chart error‑bar configuration in .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Error Bar, Both Sides, Column
+// Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting error bar direction to both sides for column charts.
+// - Build C# tools for PowerPoint chart customization and processing.
+// - Generate or transform PPTX files with specific chart error‑bar settings.
+// - Validate presentation workflows involving chart error bars before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;
@@ -9,17 +32,17 @@ class Program
     {
         try
         {
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
-            Aspose.Slides.ISlide slide = presentation.Slides[0];
+            Presentation presentation = new Presentation();
+            ISlide slide = presentation.Slides[0];
 
             // Add a clustered column chart
-            Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(Aspose.Slides.Charts.ChartType.ClusteredColumn, 50, 50, 500, 400);
+            IChart chart = slide.Shapes.AddChart(ChartType.ClusteredColumn, 50, 50, 500, 400);
 
             // Clear default series and categories
             chart.ChartData.Series.Clear();
             chart.ChartData.Categories.Clear();
 
-            Aspose.Slides.Charts.IChartDataWorkbook workbook = chart.ChartData.ChartDataWorkbook;
+            IChartDataWorkbook workbook = chart.ChartData.ChartDataWorkbook;
 
             // Add categories
             chart.ChartData.Categories.Add(workbook.GetCell(0, 0, 0, "Category 1"));
@@ -28,7 +51,7 @@ class Program
 
             // Add a series
             chart.ChartData.Series.Add(workbook.GetCell(0, 1, 0, "Series 1"), chart.Type);
-            Aspose.Slides.Charts.IChartSeries series = chart.ChartData.Series[0];
+            IChartSeries series = chart.ChartData.Series[0];
 
             // Add data points
             series.DataPoints.AddDataPointForBarSeries(workbook.GetCell(0, 1, 1, 10));
@@ -36,11 +59,11 @@ class Program
             series.DataPoints.AddDataPointForBarSeries(workbook.GetCell(0, 1, 3, 15));
 
             // Set error bars to show both positive and negative directions
-            series.ErrorBarsYFormat.Type = Aspose.Slides.Charts.ErrorBarType.Both;
+            series.ErrorBarsYFormat.Type = ErrorBarType.Both;
             series.ErrorBarsYFormat.IsVisible = true;
 
             // Save the presentation
-            presentation.Save("ColumnChartWithErrorBars.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            presentation.Save("ColumnChartWithErrorBars.pptx", SaveFormat.Pptx);
         }
         catch (System.IO.FileNotFoundException ex)
         {
