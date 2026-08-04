@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set layout target type to outside using C#
+//
+// Description:
+// Demonstrates how to set layout target type to outside using C# and 
+// Aspose.Slides for .NET. The example shows the required 
+// presentation-processing steps for PowerPoint files and produces the 
+// requested output in a standalone console application. Developers can use 
+// this pattern to automate PPTX workflows, validate results, or integrate 
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Layout, Target, Type, Outside, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate set layout target type to outside.
+// - Build C# tools for chart layout processing.
+// - Generate or transform PPTX files with specific chart layouts in .NET applications.
+// - Validate chart layout workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
