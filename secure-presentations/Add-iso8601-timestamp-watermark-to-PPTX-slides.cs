@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add iso8601 timestamp watermark to PPTX slides using C#
+//
+// Description:
+// Demonstrates how to add an ISO 8601 timestamp watermark to all slides of a
+// PowerPoint presentation using C# and Aspose.Slides for .NET. The example
+// creates a new presentation, inserts a full‑slide rectangle shape on the
+// master slide, writes the current UTC timestamp in ISO 8601 format, makes the
+// shape transparent, and saves the result as a PPTX file. This pattern can be
+// used to automate watermarking of presentations in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, ISO 8601, Timestamp, Watermark,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automatically add an ISO 8601 timestamp watermark to generated PPTX files.
+// - Build .NET tools for securing or tracking PowerPoint presentations.
+// - Integrate timestamp watermarking into CI/CD pipelines for document
+//   generation.
+// - Ensure presentation provenance by embedding creation time in each slide.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
