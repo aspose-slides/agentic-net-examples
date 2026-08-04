@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set error bar cap style flat using C#
+//
+// Description:
+// Demonstrates how to set the error bar cap style to flat (no end cap) for a
+// chart series using C# and Aspose.Slides for .NET. The example loads or creates
+// a presentation, ensures a chart exists, configures Y‑direction error bars with
+// a flat cap style, and saves the result. This pattern can be used to automate
+// PowerPoint chart formatting tasks in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Error Bars, Cap Style,
+// Flat, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting flat cap style on chart error bars.
+// - Build C# tools for PowerPoint chart customization.
+// - Generate or modify PPTX files with specific chart error bar settings.
+// - Validate chart formatting workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides.Export;
@@ -51,7 +72,7 @@ class Program
         Aspose.Slides.Charts.IErrorBarsFormat errorBars = series.ErrorBarsYFormat;
         errorBars.IsVisible = true;
         // Set flat cap style (no end cap drawn)
-        errorBars.HasEndCap = true;
+        errorBars.HasEndCap = false;
         // Use Fixed value type to avoid runtime exception and set a value
         errorBars.ValueType = Aspose.Slides.Charts.ErrorBarValueType.Fixed;
         errorBars.Value = 10f;
