@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add line chart custom colors and markers using C#
+//
+// Description:
+// Demonstrates how to create a line chart with markers, apply custom colors
+// to each series, and set marker styles using C# and Aspose.Slides for .NET.
+// The example builds a presentation, adds a line chart with two series and
+// three categories, customizes series fill colors and marker symbols, and
+// saves the result as a PPTX file. This pattern can be used to automate PPTX
+// chart creation and styling in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Line, Chart, Custom, Colors,
+// Markers, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of line charts with custom series colors and marker styles.
+// - Build C# tools for PowerPoint presentation generation and styling.
+// - Generate or transform PPTX files with customized chart visuals in .NET.
+// - Validate chart appearance programmatically before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
