@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Add data point callout showlabelasdatacallout using C#
+//
+// Description:
+// Demonstrates how to add a data point callout by enabling ShowLabelAsDataCallout
+// for a chart series using C# and Aspose.Slides for .NET. The example creates a
+// clustered column chart, activates data callouts for the series, customizes the
+// first data point's callout appearance, and saves the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Data Point, Callout,
+// ShowLabelAsDataCallout, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding data point callouts with ShowLabelAsDataCallout.
+// - Build C# utilities for PowerPoint chart customization.
+// - Generate or modify PPTX files with customized chart callouts in .NET.
+// - Validate chart presentation workflows before deployment.
+// -----------------------------------------------------------------------------
 using System;
 using System.Drawing;
 using Aspose.Slides;
