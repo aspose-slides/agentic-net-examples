@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Set pie chart slice explosion ten percent using C#
+//
+// Description:
+// Demonstrates how to set pie chart slice explosion to ten percent using C# and 
+// Aspose.Slides for .NET. The example shows the required 
+// presentation-processing steps for PowerPoint files and produces the 
+// requested output in a standalone console application. Developers can use 
+// this pattern to automate PPTX workflows, validate results, or integrate 
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Pie Chart, Slice, Explosion, 
+// Percent, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting pie chart slice explosion to ten percent.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;
@@ -8,14 +30,14 @@ class Program
     static void Main()
     {
         // Create a new presentation
-        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation();
+        Presentation pres = new Presentation();
 
         // Get the first slide
-        Aspose.Slides.ISlide slide = pres.Slides[0];
+        ISlide slide = pres.Slides[0];
 
         // Add a pie chart to the slide
-        Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(
-            Aspose.Slides.Charts.ChartType.Pie,
+        IChart chart = slide.Shapes.AddChart(
+            ChartType.Pie,
             50,   // X position
             50,   // Y position
             400,  // Width
@@ -28,6 +50,6 @@ class Program
         chart.ChartData.Series[0].DataPoints[1].Explosion = 10;
 
         // Save the presentation
-        pres.Save("PieChartExplosion.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+        pres.Save("PieChartExplosion.pptx", SaveFormat.Pptx);
     }
 }
