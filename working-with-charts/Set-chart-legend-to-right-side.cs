@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Set chart legend to right side using C#
+//
+// Description:
+// Demonstrates how to set a chart's legend to the right side using C# and 
+// Aspose.Slides for .NET. The example creates a presentation, adds a clustered 
+// column chart, ensures the legend is visible, positions it on the right, and 
+// saves the result as a PPTX file. This pattern can be used to automate PPTX 
+// workflows, validate results, or integrate presentation logic into .NET 
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Legend, Right Side, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting chart legend to the right side.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides.Charts;
 using Aspose.Slides.Export;
