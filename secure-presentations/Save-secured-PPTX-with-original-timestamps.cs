@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Save secured PPTX with original timestamps using C#
+//
+// Description:
+// Demonstrates how to save a secured PPTX file while preserving the original
+// file timestamps using C# and Aspose.Slides for .NET. The example loads a
+// password‑protected presentation, saves a copy, and then copies the creation
+// and last‑write timestamps from the source file to the destination file.
+// This pattern can be used for PowerPoint file automation where metadata
+// integrity is required.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Save, Secured, Original Timestamps,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate copying secured PPTX files while retaining original timestamps.
+// - Build C# utilities for PowerPoint presentation handling with metadata preservation.
+// - Generate or transform secured PPTX files in .NET applications without altering file dates.
+// - Validate and maintain presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
