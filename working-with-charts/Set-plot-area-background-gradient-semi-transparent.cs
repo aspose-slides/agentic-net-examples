@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set plot area background gradient semi transparent using C#
+//
+// Description:
+// Demonstrates how to set a semi‑transparent gradient fill for the plot area of a
+// clustered bar chart using C# and Aspose.Slides for .NET. The example creates a
+// new presentation, adds a chart, configures a linear gradient with two
+// semi‑transparent color stops, and saves the result as a PPTX file. This pattern
+// can be used to customize chart appearance programmatically in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Plot Area, Background,
+// Gradient, Semi‑Transparent, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Apply semi‑transparent gradient backgrounds to chart plot areas.
+// - Build C# utilities for customizing chart aesthetics in PowerPoint presentations.
+// - Generate or modify PPTX files with advanced chart styling in .NET applications.
+// - Automate visual consistency checks for chart designs before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.Drawing;
 using Aspose.Slides;
