@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add data table to clustered column chart using C#
+//
+// Description:
+// Demonstrates how to add a data table beneath a clustered column (bar) chart
+// using C# and Aspose.Slides for .NET. The example creates a new presentation,
+// inserts a chart, populates categories and a series, enables the data table,
+// and saves the result as a PPTX file. This pattern can be used to automate
+// chart enhancements in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Data Table, Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding data tables to bar/column charts.
+// - Build .NET tools for enhancing PowerPoint presentations.
+// - Generate or modify PPTX files with chart data tables.
+// - Validate chart rendering in automated workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;
