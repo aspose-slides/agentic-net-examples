@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add series animation afterprevious to isequence using C#
+//
+// Description:
+// Demonstrates how to add a series animation with an AfterPrevious trigger to a chart
+// within the main sequence (ISequence) of a slide using Aspose.Slides for .NET.
+// The example loads an existing presentation (or creates a new one if not found),
+// adds a fade effect and a series-by-series appear animation to the chart, and
+// saves the result as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Animation, Series, AfterPrevious, ISequence, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding series-by-series animations to charts in PowerPoint presentations.
+// - Build C# tools for enhancing slide animations programmatically.
+// - Generate or modify PPTX files with custom animation sequences in .NET applications.
+// - Validate and preview animation workflows before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
