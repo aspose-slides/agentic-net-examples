@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Generate PNG thumbnail for each chart using C#
+//
+// Description:
+// Demonstrates how to generate PNG thumbnails for every chart in a PowerPoint
+// presentation using C# and Aspose.Slides for .NET. The example loads an
+// existing presentation (if available) or creates a new one with a sample chart,
+// optionally adjusts chart layout, extracts each chart as an image, and saves
+// the thumbnails as PNG files. It also saves the (potentially modified) presentation.
+// This pattern helps automate PPTX chart processing, thumbnail generation, and
+// presentation validation in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Generate, Thumbnail, Each,
+// Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate generation of PNG thumbnails for all charts in a presentation.
+// - Build C# tools for extracting and processing chart images from PPTX files.
+// - Integrate chart thumbnail creation into .NET workflows or reporting systems.
+// - Validate and preview chart visuals before publishing or further transformation.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
