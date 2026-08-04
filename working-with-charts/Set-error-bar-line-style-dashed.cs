@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set error bar line style dashed using C#
+//
+// Description:
+// Demonstrates how to set error bar line style dashed using C# and 
+// Aspose.Slides for .NET. The example shows the required 
+// presentation-processing steps for PowerPoint files and produces the 
+// requested output in a standalone console application. Developers can use 
+// this pattern to automate PPTX workflows, validate results, or integrate 
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Error Bar, Line Style, Dashed, 
+// Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting error bar line style to dashed.
+// - Build C# tools for PowerPoint chart customization.
+// - Generate or transform PPTX files with specific chart error bar styles in .NET applications.
+// - Validate chart formatting workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
