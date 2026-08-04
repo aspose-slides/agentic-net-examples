@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add 3D bubble chart to new slide using C#
+//
+// Description:
+// Demonstrates how to add a 3‑D bubble chart to a new slide in an existing
+// presentation using C# and Aspose.Slides for .NET. The example loads an input
+// PPTX file, inserts an empty slide, creates a bubble chart with 3‑D bubbles,
+// configures bubble size representation and scaling, and saves the result.
+// This pattern can be used to automate chart creation and manipulation in
+// PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, 3D Bubble Chart, Chart, Slide,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Add a 3‑D bubble chart to a presentation programmatically.
+// - Build C# utilities for generating or enhancing PPTX charts.
+// - Automate chart styling, such as bubble size representation and scaling.
+// - Validate and test PowerPoint chart features in .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
