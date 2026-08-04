@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add error bars to scatter charts and export PNGs using C#
+//
+// Description:
+// Demonstrates how to add custom error bars to scatter charts within a PowerPoint
+// presentation using Aspose.Slides for .NET, then export each slide as a PNG image.
+// The example processes all PPTX files in a specified input folder, modifies the
+// charts, saves the updated presentation, and generates PNG files for each slide.
+// This pattern can be used for batch automation of chart enhancements and image
+// extraction from presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Error Bars, Scatter Chart,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding custom error bars to scatter charts in multiple presentations.
+// - Batch convert PPTX slides to PNG images after chart modifications.
+// - Build .NET tools for PowerPoint chart enhancement and image export.
+// - Validate and preview presentation changes in automated workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -35,42 +57,42 @@ namespace BatchProcessErrorBars
                 try
                 {
                     // Load the presentation
-                    Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(pptxPath);
+                    Presentation pres = new Presentation(pptxPath);
 
                     // Iterate through all slides
                     for (int slideIndex = 0; slideIndex < pres.Slides.Count; slideIndex++)
                     {
-                        Aspose.Slides.ISlide slide = pres.Slides[slideIndex];
+                        ISlide slide = pres.Slides[slideIndex];
 
                         // Iterate through all shapes on the slide
                         for (int shapeIndex = 0; shapeIndex < slide.Shapes.Count; shapeIndex++)
                         {
-                            Aspose.Slides.IShape shape = slide.Shapes[shapeIndex];
-                            Aspose.Slides.Charts.IChart chart = shape as Aspose.Slides.Charts.IChart;
+                            IShape shape = slide.Shapes[shapeIndex];
+                            IChart chart = shape as IChart;
 
                             // Process only scatter charts
-                            if (chart != null && Aspose.Slides.Charts.ChartTypeCharacterizer.IsChartTypeScatter(chart.Type))
+                            if (chart != null && ChartTypeCharacterizer.IsChartTypeScatter(chart.Type))
                             {
                                 // Add custom error bars to each series in the chart
                                 for (int seriesIndex = 0; seriesIndex < chart.ChartData.Series.Count; seriesIndex++)
                                 {
-                                    Aspose.Slides.Charts.IChartSeries series = chart.ChartData.Series[seriesIndex];
-                                    Aspose.Slides.Charts.IErrorBarsFormat errBarX = series.ErrorBarsXFormat;
-                                    Aspose.Slides.Charts.IErrorBarsFormat errBarY = series.ErrorBarsYFormat;
+                                    IChartSeries series = chart.ChartData.Series[seriesIndex];
+                                    IErrorBarsFormat errBarX = series.ErrorBarsXFormat;
+                                    IErrorBarsFormat errBarY = series.ErrorBarsYFormat;
 
                                     // Make error bars visible and set them to custom type
                                     errBarX.IsVisible = true;
                                     errBarY.IsVisible = true;
-                                    errBarX.ValueType = Aspose.Slides.Charts.ErrorBarValueType.Custom;
-                                    errBarY.ValueType = Aspose.Slides.Charts.ErrorBarValueType.Custom;
+                                    errBarX.ValueType = ErrorBarValueType.Custom;
+                                    errBarY.ValueType = ErrorBarValueType.Custom;
 
                                     // Configure data source type for custom error values
-                                    Aspose.Slides.Charts.IChartDataPointCollection points = series.DataPoints;
-                                    Aspose.Slides.Charts.IDataSourceTypeForErrorBarsCustomValues ds = points.DataSourceTypeForErrorBarsCustomValues;
-                                    ds.DataSourceTypeForXMinusValues = Aspose.Slides.Charts.DataSourceType.DoubleLiterals;
-                                    ds.DataSourceTypeForXPlusValues = Aspose.Slides.Charts.DataSourceType.DoubleLiterals;
-                                    ds.DataSourceTypeForYMinusValues = Aspose.Slides.Charts.DataSourceType.DoubleLiterals;
-                                    ds.DataSourceTypeForYPlusValues = Aspose.Slides.Charts.DataSourceType.DoubleLiterals;
+                                    IChartDataPointCollection points = series.DataPoints;
+                                    IDataSourceTypeForErrorBarsCustomValues ds = points.DataSourceTypeForErrorBarsCustomValues;
+                                    ds.DataSourceTypeForXMinusValues = DataSourceType.DoubleLiterals;
+                                    ds.DataSourceTypeForXPlusValues = DataSourceType.DoubleLiterals;
+                                    ds.DataSourceTypeForYMinusValues = DataSourceType.DoubleLiterals;
+                                    ds.DataSourceTypeForYPlusValues = DataSourceType.DoubleLiterals;
 
                                     // Assign custom error values for each data point
                                     for (int pointIndex = 0; pointIndex < points.Count; pointIndex++)
@@ -88,29 +110,28 @@ namespace BatchProcessErrorBars
                     // Save the modified presentation (required before exit)
                     string fileNameWithoutExt = Path.GetFileNameWithoutExtension(pptxPath);
                     string presOutputPath = Path.Combine(outputDir, fileNameWithoutExt + "_modified.pptx");
-                    pres.Save(presOutputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    pres.Save(presOutputPath, SaveFormat.Pptx);
 
                     // Export each slide as a PNG image
                     for (int slideIndex = 0; slideIndex < pres.Slides.Count; slideIndex++)
                     {
-                        Aspose.Slides.ISlide slide = pres.Slides[slideIndex];
-                        Aspose.Slides.IImage slideImage = slide.GetImage();
+                        ISlide slide = pres.Slides[slideIndex];
+                        IImage slideImage = slide.GetImage();
                         string pngPath = Path.Combine(outputDir, fileNameWithoutExt + "_slide" + slideIndex + ".png");
-                        slideImage.Save(pngPath, Aspose.Slides.ImageFormat.Png);
+                        slideImage.Save(pngPath, ImageFormat.Png);
                     }
 
                     // Dispose the presentation
                     pres.Dispose();
                 }
-                catch (System.IO.DirectoryNotFoundException dirEx)
+                catch (DirectoryNotFoundException dirEx)
                 {
                     // Handle missing directory errors
                     Console.WriteLine("Directory not found: " + dirEx.Message);
                 }
-                catch (Aspose.Slides.PptxUnsupportedFormatException)
+                catch (PptxUnsupportedFormatException)
                 {
                     // Format not supported
-                    // format not supported
                 }
                 catch (Exception ex)
                 {
