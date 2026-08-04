@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add lighting and shadow to a 3‑D bubble chart using C#
+//
+// Description:
+// Demonstrates how to create a 3‑D bubble chart, configure custom lighting,
+// and apply an outer shadow effect using Aspose.Slides for .NET. The example
+// shows the necessary steps to build a presentation, add a bubble chart,
+// adjust bubble size representation, set camera and light rig, and save the
+// result as a PPTX file in a console application.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, 3D bubble chart, Lighting,
+// Shadow, Chart formatting, Presentation automation
+//
+// Use Cases:
+// - Generate PowerPoint presentations with 3‑D bubble charts.
+// - Apply custom lighting and shadow effects to charts programmatically.
+// - Automate chart styling in .NET applications.
+// - Create reusable code for presentation processing and visual enhancements.
+// -----------------------------------------------------------------------------
 using System;
 using System.Drawing;
 using Aspose.Slides;
