@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Load JSON data into sunburst chart using C#
+//
+// Description:
+// Demonstrates how to read hierarchical JSON data, map it to Aspose.Slides 
+// chart categories, and generate a Sunburst chart in a PowerPoint presentation 
+// using Aspose.Slides for .NET. The example covers JSON deserialization, 
+// building grouped categories, adding data points, and saving the PPTX file 
+// as a standalone console application. Developers can adapt this pattern to 
+// automate chart creation from structured data sources.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, Json, Data, Sunburst, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of Sunburst charts from JSON hierarchical data.
+// - Build .NET tools for PowerPoint presentation generation and data visualization.
+// - Integrate JSON-driven charting into reporting or analytics pipelines.
+// - Validate and preview presentation content programmatically before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;
