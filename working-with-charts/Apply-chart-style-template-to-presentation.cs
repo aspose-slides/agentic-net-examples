@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Apply chart style template to presentation using C#
+//
+// Description:
+// Demonstrates how to apply a predefined chart style template to every chart
+// in a PowerPoint presentation using C# and Aspose.Slides for .NET. The example
+// loads an existing PPTX file, iterates through all slides and shapes, identifies
+// chart objects, sets their Style property to a specific template, and saves the
+// modified presentation. This pattern can be used to enforce consistent chart
+// appearance across presentations in automated workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, Chart, Style, Template,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate applying a uniform chart style to existing presentations.
+// - Build C# utilities for batch processing of PPTX files to ensure visual consistency.
+// - Integrate chart styling into .NET applications that generate or modify PowerPoint content.
+// - Validate and standardize chart appearances before publishing or distribution.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -22,29 +44,29 @@ class Program
         try
         {
             // Load the presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+            Presentation presentation = new Presentation(inputPath);
 
             // Iterate through all slides
             for (int slideIndex = 0; slideIndex < presentation.Slides.Count; slideIndex++)
             {
-                Aspose.Slides.ISlide slide = presentation.Slides[slideIndex];
+                ISlide slide = presentation.Slides[slideIndex];
 
                 // Iterate through all shapes on the slide
                 for (int shapeIndex = 0; shapeIndex < slide.Shapes.Count; shapeIndex++)
                 {
-                    Aspose.Slides.IShape shape = slide.Shapes[shapeIndex];
-                    Aspose.Slides.Charts.IChart chart = shape as Aspose.Slides.Charts.IChart;
+                    IShape shape = slide.Shapes[shapeIndex];
+                    IChart chart = shape as IChart;
 
                     if (chart != null)
                     {
                         // Apply a predefined chart style template for consistency
-                        chart.Style = Aspose.Slides.Charts.StyleType.Style1;
+                        chart.Style = StyleType.Style1;
                     }
                 }
             }
 
             // Save the modified presentation
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            presentation.Save(outputPath, SaveFormat.Pptx);
         }
         catch (NotSupportedException)
         {
