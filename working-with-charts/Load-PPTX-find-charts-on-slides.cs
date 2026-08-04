@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Load PPTX find charts on slides using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file, iterate through its slides and shapes,
+// and identify chart objects using Aspose.Slides for .NET. The example prints
+// details of each found chart and saves the presentation unchanged.
+// This pattern helps developers automate chart detection in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, Find, Charts, Slides,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Detect and list charts in existing PowerPoint presentations.
+// - Build tools that need to process or validate chart presence.
+// - Integrate chart discovery into .NET automation workflows.
+// - Prepare presentations for further chart manipulation or reporting.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;
