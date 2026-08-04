@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Insert radar chart with polygon fill opacity using C#
+//
+// Description:
+// Demonstrates how to insert a radar chart with a semi‑transparent polygon (plot area) fill using C# 
+// and Aspose.Slides for .NET. The example creates a new presentation, adds a radar chart,
+// populates it with series and categories, applies a 50% opacity fill to the chart's plot area,
+// and saves the result as a PPTX file. This pattern can be used to automate PowerPoint
+// chart creation and styling in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Insert, Radar, Chart, Polygon, Fill, Opacity, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate insertion of radar charts with custom semi‑transparent plot area fills.
+// - Build C# utilities for PowerPoint presentation generation and styling.
+// - Generate or transform PPTX files with specific chart visual requirements in .NET.
+// - Validate and preview chart appearance programmatically before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
