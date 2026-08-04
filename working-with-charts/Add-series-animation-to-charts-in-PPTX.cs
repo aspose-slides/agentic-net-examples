@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add series animation to charts in PPTX using C#
+//
+// Description:
+// Demonstrates how to add a series animation to each chart series in a PPTX
+// presentation using C# and Aspose.Slides for .NET. The example loads one or
+// more presentations, iterates through all slides and chart shapes, applies an
+// "Appear" animation effect to each series, and saves the modified file with a
+// new name.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Series Animation, Charts,
+// Animation, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding series‑by‑series animation to charts in existing PPTX files.
+// - Build .NET tools for enhancing PowerPoint presentations with custom animations.
+// - Generate or transform PPTX files programmatically with animated chart series.
+// - Validate and preview presentation workflows before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;
