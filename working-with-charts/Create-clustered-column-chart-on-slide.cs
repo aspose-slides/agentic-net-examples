@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Create clustered column chart on slide using C#
+//
+// Description:
+// Demonstrates how to create a clustered column chart on a slide, define
+// categories and series, populate data points, and save the presentation as a
+// PPTX file using Aspose.Slides for .NET. The example is a self‑contained console
+// application that can be used as a template for automating chart creation in
+// PowerPoint files.
+//
+// Keywords:
+// C#, Aspose.Slides, .NET, PowerPoint, PPTX, Clustered Column Chart, Chart,
+// Presentation Automation, Office Automation
+//
+// Use Cases:
+// - Programmatically add clustered column charts to PowerPoint slides.
+// - Build .NET utilities for generating or updating PPTX reports with chart data.
+// - Automate presentation creation workflows that require custom chart data.
+// - Integrate chart generation into larger C# applications or services.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
