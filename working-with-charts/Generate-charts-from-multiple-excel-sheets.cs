@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Generate charts from multiple Excel sheets using C#
+//
+// Description:
+// Demonstrates how to import charts from each worksheet of an Excel workbook
+// into a PowerPoint presentation using Aspose.Slides for .NET. The example
+// iterates through all worksheets, extracts each chart, adds a new slide per
+// chart, and saves the resulting presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Generate, Charts, Multiple,
+// Excel, Workbook, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of PowerPoint decks from Excel chart data.
+// - Build C# utilities that convert Excel worksheets into slide decks.
+// - Integrate chart extraction into .NET reporting pipelines.
+// - Validate and preview Excel chart content in presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
 using System.IO;
