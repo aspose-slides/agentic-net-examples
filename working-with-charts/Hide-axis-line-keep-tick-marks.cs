@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Hide axis line keep tick marks using C#
+//
+// Description:
+// Demonstrates how to hide axis lines while keeping tick marks visible using
+// C# and Aspose.Slides for .NET. The example creates a presentation, adds a
+// clustered column chart, hides both horizontal and vertical axis lines without
+// removing the tick marks, and saves the result as a PPTX file. This pattern
+// helps automate PowerPoint chart formatting tasks in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Hide, Axis, Line, Keep, Tick Marks,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate hiding axis lines while preserving tick marks in charts.
+// - Build C# utilities for PowerPoint presentation processing.
+// - Generate or transform PPTX files with customized chart appearance.
+// - Validate chart formatting workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
