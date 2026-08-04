@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Create PNG thumbnail of a chart after layout adjustments using C#
+//
+// Description:
+// Demonstrates how to add a chart to a PowerPoint slide, validate its layout,
+// generate a PNG thumbnail of the chart, and save the presentation using
+// Aspose.Slides for .NET. The example is a self‑contained console application
+// that can be used to automate chart thumbnail creation and presentation
+// processing workflows.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, Chart, PNG, Thumbnail, Layout,
+// Validation, Presentation Automation, Office Automation
+//
+// Use Cases:
+// - Generate PNG thumbnails of charts after layout validation.
+// - Automate PowerPoint chart processing in C# applications.
+// - Build tools that create visual previews of slides or charts.
+// - Integrate chart thumbnail generation into reporting or publishing pipelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
