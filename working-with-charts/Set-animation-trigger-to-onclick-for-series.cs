@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set animation trigger to onclick for series using C#
+//
+// Description:
+// Demonstrates how to set an OnClick animation trigger for each series in a
+// chart using C# and Aspose.Slides for .NET. The example creates a presentation,
+// adds a clustered column chart, applies a fade effect to the whole chart, and
+// then animates each series individually with an appear effect triggered on
+// click. This pattern can be used to automate PPTX workflows involving chart
+// animations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Animation, Trigger, OnClick, Series, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting OnClick animation triggers for chart series.
+// - Build C# tools for PowerPoint chart animation processing.
+// - Generate or modify PPTX files with custom chart animations in .NET applications.
+// - Validate presentation animation workflows before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Animation;
