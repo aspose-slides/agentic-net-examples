@@ -1,3 +1,27 @@
+// -----------------------------------------------------------------------------
+// Example: Add two second pause to category animation using C#
+//
+// Description:
+// Demonstrates how to add a two‑second pause between category animation elements 
+// of a chart using C# and Aspose.Slides for .NET. The example loads a PPTX file, 
+// accesses the first chart on the first slide, applies an initial fade effect, 
+// then animates each series element within each category with a 2‑second delay 
+// after each effect. The modified presentation is saved as a new PPTX file. 
+// Developers can use this pattern to automate chart animation timing, validate 
+// presentation behavior, or integrate advanced animation control into .NET 
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Second, Pause, Category, 
+// Animation, Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding a two‑second pause to category animations in chart slides.
+// - Build C# tools for fine‑grained PowerPoint animation control.
+// - Generate or transform PPTX files with custom animation sequences in .NET.
+// - Validate and test presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
