@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Export selected chart to high‑resolution PNG using C#
+//
+// Description:
+// Demonstrates how to locate the first chart on the first slide of a PowerPoint
+// presentation and export it as a high‑resolution PNG image using Aspose.Slides for
+// .NET. The example also saves the (potentially unchanged) presentation to a new
+// file. This pattern is useful for automating chart extraction, creating image
+// assets from PPTX files, or integrating PowerPoint chart processing into .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Export, Selected, Chart,
+// High‑resolution, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of a specific chart as a high‑resolution PNG.
+// - Build C# utilities for PowerPoint chart image generation.
+// - Integrate chart export functionality into .NET services or desktop tools.
+// - Validate and process PPTX files before publishing or further transformation.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -22,11 +44,11 @@ class Program
         try
         {
             // Load the presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+            Presentation presentation = new Presentation(inputPath);
 
             // Find the first chart on the first slide
             Aspose.Slides.Charts.IChart chart = null;
-            foreach (Aspose.Slides.IShape shape in presentation.Slides[0].Shapes)
+            foreach (IShape shape in presentation.Slides[0].Shapes)
             {
                 chart = shape as Aspose.Slides.Charts.IChart;
                 if (chart != null)
@@ -42,13 +64,13 @@ class Program
             else
             {
                 // Export the chart as a high‑resolution PNG image
-                Aspose.Slides.IImage chartImage = chart.GetImage();
-                chartImage.Save(chartImagePath, Aspose.Slides.ImageFormat.Png);
+                IImage chartImage = chart.GetImage();
+                chartImage.Save(chartImagePath, ImageFormat.Png);
                 chartImage.Dispose();
             }
 
             // Save the (potentially modified) presentation before exiting
-            presentation.Save(outputPresentationPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            presentation.Save(outputPresentationPath, SaveFormat.Pptx);
             presentation.Dispose();
         }
         catch (NotSupportedException)
