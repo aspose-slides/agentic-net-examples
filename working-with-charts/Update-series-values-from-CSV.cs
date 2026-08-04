@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Update series values from CSV using C#
+//
+// Description:
+// Demonstrates how to read data from a CSV file and use it to populate a
+// pie chart series in a PowerPoint presentation with Aspose.Slides for .NET.
+// The example creates a new presentation, adds a pie chart, clears default
+// data, fills categories and data points from the CSV, and saves the result.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, CSV, Pie Chart, Series, Values,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Generate pie charts from external CSV data.
+// - Automate PowerPoint report creation with dynamic data.
+// - Build .NET tools for chart data updates in PPTX files.
+// - Integrate CSV-driven chart generation into business workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;
