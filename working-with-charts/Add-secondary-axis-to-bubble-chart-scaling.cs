@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Add secondary axis to bubble chart scaling using C#
+//
+// Description:
+// Demonstrates how to add a secondary vertical axis to a bubble chart and
+// adjust the bubble size scaling for the secondary series using C# and
+// Aspose.Slides for .NET. The example creates a presentation, inserts a bubble
+// chart, populates primary and secondary series, configures the secondary axis
+// visibility, sets a custom bubble size scale, and saves the result as a PPTX
+// file. This pattern can be used to automate chart customizations in PowerPoint
+// files.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Bubble Chart, Secondary Axis, Bubble Size
+// Scale, Chart Series, Presentation Automation, Office Automation
+//
+// Use Cases:
+// - Add a secondary axis to bubble charts for comparative data visualization.
+// - Customize bubble size scaling for secondary data series.
+// - Generate or modify PPTX files programmatically in .NET applications.
+// - Integrate chart axis manipulation into reporting or analytics tools.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides.Export;
