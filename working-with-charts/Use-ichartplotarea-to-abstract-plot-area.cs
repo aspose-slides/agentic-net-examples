@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Use IChartPlotArea to abstract plot area using C#
+//
+// Description:
+// Demonstrates how to use IChartPlotArea to adjust the layout of a chart's
+// plot area, set fractional positioning, size, and layout target, as well as
+// enable rounded corners and customize line formatting in a PowerPoint
+// presentation using Aspose.Slides for .NET. The example creates a clustered
+// column chart, modifies its plot area, and saves the result as a PPTX file.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, IChartPlotArea, ChartPlotArea, Layout,
+// RoundedCorners, LineFormat, FillType, ChartAutomation
+//
+// Use Cases:
+// - Programmatically adjust chart plot area dimensions and position.
+// - Apply rounded corners and line styles to charts.
+// - Automate PowerPoint chart customization in .NET applications.
+// - Generate presentations with customized chart layouts.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
