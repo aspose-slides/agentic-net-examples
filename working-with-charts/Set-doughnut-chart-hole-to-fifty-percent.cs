@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set doughnut chart hole to fifty percent using C#
+//
+// Description:
+// Demonstrates how to create a doughnut chart in a PowerPoint presentation
+// and set its hole size to fifty percent using Aspose.Slides for .NET. The
+// example creates a new presentation, adds a doughnut chart, configures the
+// doughnut hole size, and saves the file as a PPTX. This pattern can be used
+// to automate chart formatting tasks in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Doughnut Chart, Chart Hole,
+// Fifty Percent, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting doughnut chart hole size to fifty percent in PPTX files.
+// - Build C# utilities for PowerPoint chart customization.
+// - Generate or modify presentations with specific chart aesthetics.
+// - Validate chart configurations programmatically before distribution.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
