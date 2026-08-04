@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Load PPTX presentation from stream for security using C#
+//
+// Description:
+// Demonstrates how to load a PPTX presentation from a file stream, inspect
+// its security settings (write protection and open password), optionally
+// remove write protection, and save the modified presentation using Aspose.Slides
+// for .NET. This pattern helps ensure secure handling of PowerPoint files in
+// .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, Stream, Presentation,
+// Security, Write Protection, Password Protection, Office Automation
+//
+// Use Cases:
+// - Load PPTX presentations securely from streams.
+// - Detect and validate write protection and open passwords.
+// - Remove write protection programmatically.
+// - Automate secure PPTX processing in .NET tools.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
