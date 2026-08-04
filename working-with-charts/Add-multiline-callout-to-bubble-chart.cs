@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add multiline callout to bubble chart using C#
+//
+// Description:
+// Demonstrates how to create a bubble chart, add data points, enable data
+// label callouts, and set a multiline callout text for a bubble using
+// Aspose.Slides for .NET. The example shows the required presentation-processing
+// steps for PowerPoint files and saves the result as a PPTX file in a console
+// application. Developers can use this pattern to automate chart annotation,
+// generate presentations with custom callouts, or integrate chart logic into
+// .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Bubble Chart, Multiline Callout,
+// Data Labels, Chart Automation, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Add multiline callouts to specific bubbles in a chart.
+// - Build C# tools for annotating charts in PowerPoint presentations.
+// - Generate or modify PPTX files with custom chart data and labels.
+// - Automate presentation workflows that require detailed bubble annotations.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
