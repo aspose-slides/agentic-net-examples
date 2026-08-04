@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Rotate axis title by angle using C#
+//
+// Description:
+// Demonstrates how to rotate the vertical and horizontal axis titles of a chart
+// by specific angles using C# and Aspose.Slides for .NET. The example creates a
+// new presentation, adds a clustered column chart, enables axis titles, sets
+// rotation angles, and saves the result as a PPTX file. This pattern can be used
+// to customize chart appearance programmatically.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Rotate, Axis, Title, Angle, Chart,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Programmatically rotate chart axis titles for better layout.
+// - Build C# tools that customize chart formatting in PowerPoint files.
+// - Generate or modify PPTX presentations with specific axis title orientations.
+// - Automate presentation styling tasks before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;
