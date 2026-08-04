@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Load pptx byte array modify plot area using C#
+//
+// Description:
+// Demonstrates how to load a PPTX presentation from a byte array, locate the
+// first chart on the first slide, modify its plot area dimensions, and save
+// the updated presentation using Aspose.Slides for .NET. The example includes
+// command‑line handling for input file paths and writes the result to a file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, Byte Array, Chart,
+// Plot Area, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Load a PPTX file into memory as a byte array for processing.
+// - Adjust chart plot area positioning and size programmatically.
+// - Automate PPTX modifications in .NET console applications.
+// - Validate and transform presentations before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
