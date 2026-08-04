@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Clone chart with animation to another slide using C#
+//
+// Description:
+// Demonstrates how to clone a chart together with its animation sequence from
+// one slide to another slide in a PowerPoint presentation using C# and
+// Aspose.Slides for .NET. The example loads an existing PPTX, clones the first
+// slide (which contains the chart and its animations), optionally reorders the
+// cloned slide, and saves the result as a new PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone, Chart, Animation,
+// Slide, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate cloning of charts with animations to new slides.
+// - Build C# utilities for PowerPoint presentation manipulation.
+// - Generate or modify PPTX files programmatically in .NET applications.
+// - Validate and test presentation workflows involving animated charts.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
