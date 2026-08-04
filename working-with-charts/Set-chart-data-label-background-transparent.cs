@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set chart data label background transparent using C#
+//
+// Description:
+// Demonstrates how to set the background of chart data labels to transparent
+// using C# and Aspose.Slides for .NET. The example creates a presentation,
+// adds a clustered column chart, enables data labels for the first series,
+// and configures the data label fill to NoFill. The resulting PPTX file shows
+// data labels without any background fill.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Data Labels, Background,
+// Transparent, NoFill, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting chart data label backgrounds to transparent.
+// - Build C# tools for PowerPoint chart customization.
+// - Generate or modify PPTX files with customized chart label appearance.
+// - Validate chart formatting in automated presentation workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
