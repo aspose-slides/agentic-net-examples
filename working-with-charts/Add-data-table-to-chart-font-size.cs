@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add data table to chart font size using C#
+//
+// Description:
+// Demonstrates how to enable a data table for a chart and set its font size
+// using C# and Aspose.Slides for .NET. The example creates a presentation,
+// adds a clustered column chart, shows the data table, customizes the table
+// font height for readability, and saves the result as a PPTX file.
+// This pattern can be used to automate chart formatting in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Data Table, Font Size,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding a data table to a chart and adjusting its font size.
+// - Build C# utilities for PowerPoint chart styling.
+// - Generate or modify PPTX files with customized chart data tables.
+// - Validate chart appearance in automated presentation workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
@@ -9,14 +30,14 @@ class Program
         try
         {
             // Create a new presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+            Presentation presentation = new Presentation();
 
             // Access the first slide
-            Aspose.Slides.ISlide slide = presentation.Slides[0];
+            ISlide slide = presentation.Slides[0];
 
             // Add a clustered column chart to the slide
-            Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(
-                Aspose.Slides.Charts.ChartType.ClusteredColumn,
+            Charts.IChart chart = slide.Shapes.AddChart(
+                Charts.ChartType.ClusteredColumn,
                 50f, 50f, 500f, 400f);
 
             // Enable the data table for the chart
@@ -26,7 +47,7 @@ class Program
             chart.ChartDataTable.TextFormat.PortionFormat.FontHeight = 14f;
 
             // Save the presentation
-            presentation.Save("ChartWithDataTable.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            presentation.Save("ChartWithDataTable.pptx", SaveFormat.Pptx);
 
             // Dispose the presentation object
             presentation.Dispose();
