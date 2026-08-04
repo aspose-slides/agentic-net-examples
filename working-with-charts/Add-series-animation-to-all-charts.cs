@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add series animation to all charts in PPTX files using C#
+//
+// Description:
+// Demonstrates how to iterate through all PPTX files in a specified folder,
+// locate every chart on each slide, and add a series‑by‑series fade animation
+// to each chart using Aspose.Slides for .NET. The modified presentations are
+// saved with an “_animated” suffix. This example is useful for batch processing
+// of PowerPoint files to enhance chart visualizations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Charts, Series Animation, 
+// Batch Processing, Presentation Automation, Office Automation, Timeline, 
+// Effects
+//
+// Use Cases:
+// - Automatically add series animation to charts across multiple presentations.
+// - Build command‑line tools for bulk PowerPoint enhancement.
+// - Integrate chart animation steps into .NET based document workflows.
+// - Prepare presentations with consistent animation effects before distribution.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -29,16 +51,16 @@ namespace AddSeriesAnimation
                 try
                 {
                     // Load the presentation
-                    using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(filePath))
+                    using (Presentation presentation = new Presentation(filePath))
                     {
                         // Iterate through all slides
-                        foreach (Aspose.Slides.ISlide slide in presentation.Slides)
+                        foreach (ISlide slide in presentation.Slides)
                         {
                             // Iterate through all shapes on the slide
-                            foreach (Aspose.Slides.IShape shape in slide.Shapes)
+                            foreach (IShape shape in slide.Shapes)
                             {
                                 // Check if the shape is a chart
-                                Aspose.Slides.Charts.IChart chart = shape as Aspose.Slides.Charts.IChart;
+                                IChart chart = shape as IChart;
                                 if (chart != null)
                                 {
                                     // Add animation for each series in the chart
@@ -47,11 +69,11 @@ namespace AddSeriesAnimation
                                     {
                                         slide.Timeline.MainSequence.AddEffect(
                                             chart,
-                                            Aspose.Slides.Animation.EffectChartMajorGroupingType.BySeries,
+                                            EffectChartMajorGroupingType.BySeries,
                                             i,
-                                            Aspose.Slides.Animation.EffectType.Fade,
-                                            Aspose.Slides.Animation.EffectSubtype.None,
-                                            Aspose.Slides.Animation.EffectTriggerType.AfterPrevious);
+                                            EffectType.Fade,
+                                            EffectSubtype.None,
+                                            EffectTriggerType.AfterPrevious);
                                     }
                                 }
                             }
@@ -61,10 +83,10 @@ namespace AddSeriesAnimation
                         string outputPath = Path.Combine(
                             inputFolder,
                             Path.GetFileNameWithoutExtension(filePath) + "_animated.pptx");
-                        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                        presentation.Save(outputPath, SaveFormat.Pptx);
                     }
                 }
-                catch (Aspose.Slides.PptxUnsupportedFormatException)
+                catch (PptxUnsupportedFormatException)
                 {
                     // Format not supported
                     Console.WriteLine("Unsupported format: " + filePath);
