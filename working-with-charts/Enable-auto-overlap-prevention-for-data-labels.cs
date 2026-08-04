@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Enable auto overlap prevention for data labels using C#
+//
+// Description:
+// Demonstrates how to enable (or prepare for) auto overlap prevention for data
+// labels in a chart using C# and Aspose.Slides for .NET. The example creates a
+// new presentation, adds a clustered column chart, ensures a series and
+// categories exist, enables value labels, and shows where the overlap
+// prevention setting would be applied. The presentation is saved as a PPTX file.
+// This pattern can be used to automate chart label handling in PowerPoint
+// files within .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Data Labels, Auto,
+// Overlap Prevention, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate enabling auto overlap prevention for chart data labels.
+// - Build C# utilities for processing PowerPoint charts and labels.
+// - Generate or modify PPTX files with charts in .NET applications.
+// - Validate and adjust chart label layout before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
