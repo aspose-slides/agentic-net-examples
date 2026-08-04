@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Create ISequence animation object for chart using C#
+//
+// Description:
+// Demonstrates how to create an ISequence animation object for a chart using C#
+// and Aspose.Slides for .NET. The example shows how to add a chart to a slide,
+// obtain the slide's main animation sequence, and apply fade and appear effects
+// to the chart and its series. This pattern can be used to automate PPTX
+// animation workflows in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, ISequence, Animation, Chart,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of ISequence animation objects for charts.
+// - Build C# tools for adding animations to PowerPoint presentations.
+// - Generate or modify PPTX files with animated charts in .NET applications.
+// - Validate animation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Animation;
