@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add slide transition after chart animation using C#
+//
+// Description:
+// Demonstrates how to add a slide transition that occurs after a chart animation
+// using C# and Aspose.Slides for .NET. The example creates a presentation, adds a
+// clustered column chart, applies a fade effect and a series-by-series appear
+// animation to the chart, and then configures a slide transition that triggers
+// immediately after the chart animation completes. This pattern can be used to
+// automate PowerPoint workflows that require coordinated animations and transitions.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Slide, Transition, After, 
+// Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding slide transitions that follow chart animations.
+// - Build C# tools for advanced PowerPoint presentation sequencing.
+// - Generate or transform PPTX files with coordinated animation and transition logic.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
