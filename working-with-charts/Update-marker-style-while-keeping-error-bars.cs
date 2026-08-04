@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Update marker style while keeping error bars in a bubble chart using C#
+//
+// Description:
+// Demonstrates how to create a bubble chart with X and Y error bars, modify the
+// marker style of the series while preserving the error bars, and save the
+// presentation using Aspose.Slides for .NET. The example is a self‑contained
+// console application that can be used to automate PPTX chart manipulation.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, Bubble Chart, Error Bars, Marker
+// Style, Chart Automation, Office Automation
+//
+// Use Cases:
+// - Programmatically add bubble charts with error bars to presentations.
+// - Change marker appearance without losing existing error bar settings.
+// - Build .NET utilities for PowerPoint chart customization.
+// - Validate and transform PPTX files in automated workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
