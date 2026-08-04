@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export all charts to zip PNG using C#
+//
+// Description:
+// Demonstrates how to export all charts from a PowerPoint presentation into a
+// ZIP archive containing PNG images using C# and Aspose.Slides for .NET.
+// The example loads a presentation, iterates through its slides and chart
+// shapes, renders each chart as a PNG image, and adds the images to a ZIP file.
+// It also saves the presentation after processing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Export, Charts, ZIP,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate exporting all charts from a presentation to a ZIP of PNG files.
+// - Build C# utilities for PowerPoint chart extraction and archiving.
+// - Integrate chart image generation into .NET applications.
+// - Validate and process presentation content before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.IO.Compression;
