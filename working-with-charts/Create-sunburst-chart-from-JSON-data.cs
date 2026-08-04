@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Create sunburst chart from JSON data using C#
+//
+// Description:
+// Demonstrates how to read hierarchical JSON data, map it to a sunburst
+// chart, and save the result as a PowerPoint presentation using Aspose.Slides
+// for .NET. The example shows JSON deserialization, recursive category and
+// data point creation, and chart configuration in a console application.
+// Developers can adapt this pattern to generate sunburst visualizations from
+// dynamic data sources.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Sunburst, Chart, JSON, Data
+// Hierarchy, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of sunburst charts from hierarchical JSON files.
+// - Build .NET tools for visualizing structured data in PowerPoint.
+// - Integrate chart generation into reporting or analytics pipelines.
+// - Validate and preview presentation content programmatically.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Text.Json;
