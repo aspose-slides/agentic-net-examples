@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Log animation steps to console for debugging using C#
+//
+// Description:
+// Demonstrates how to log animation generation steps to the console for debugging
+// using C# and Aspose.Slides for .NET. The example loads a PowerPoint file,
+// creates an animation generator, subscribes to animation and frame events,
+// logs each new animation's total duration and each generated frame index,
+// optionally saves frames as images, and finally saves the processed presentation.
+// This pattern helps developers automate PPTX workflows, validate animation
+// sequences, and integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Animation, Steps, Console, 
+// Debugging, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate logging of animation steps to console for debugging.
+// - Build C# tools for PowerPoint presentation processing and animation analysis.
+// - Generate or transform PPTX files in .NET applications while monitoring animation flow.
+// - Validate presentation animation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
