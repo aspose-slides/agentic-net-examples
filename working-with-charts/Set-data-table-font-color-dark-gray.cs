@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set data table font color dark gray using C#
+//
+// Description:
+// Demonstrates how to set the font color of a data table to dark gray in a
+// PowerPoint presentation using C# and Aspose.Slides for .NET. The example
+// loads an existing PPTX file, accesses the first table on the first slide,
+// applies a dark gray solid fill to the table's text, and saves the modified
+// presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Data Table, Font Color, Dark Gray,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting data table font color to dark gray.
+// - Build C# utilities for PowerPoint presentation styling.
+// - Generate or modify PPTX files in .NET applications.
+// - Validate presentation formatting before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
