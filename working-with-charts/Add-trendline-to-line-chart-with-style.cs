@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add trendline to clustered column chart with style using C#
+//
+// Description:
+// Demonstrates how to add a linear trendline with custom styling to a clustered
+// column chart using C# and Aspose.Slides for .NET. The example creates a new
+// presentation, inserts a column chart, adds a trendline to the first series,
+// customizes its appearance, and saves the presentation as a PPTX file.
+// This pattern can be used to automate chart enhancements in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Trendline, Column Chart, Style,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding styled trendlines to column charts in presentations.
+// - Build C# tools for enhancing PowerPoint chart visualizations.
+// - Generate or modify PPTX files with custom chart elements in .NET applications.
+// - Validate chart processing workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides.Export;
 
