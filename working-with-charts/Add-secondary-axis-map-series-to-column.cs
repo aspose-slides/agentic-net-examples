@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add secondary axis map series to column using C#
+//
+// Description:
+// Demonstrates how to create a clustered column chart, add a primary series,
+// and map a secondary series to the secondary axis using Aspose.Slides for .NET.
+// The example illustrates the required steps to manipulate chart data, configure
+// axis mapping, and save the resulting presentation as a PPTX file in a console
+// application. Developers can use this pattern to automate chart creation and
+// customize axis assignments in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Secondary Axis, Map Series,
+// Column Chart, Chart Data, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding a secondary axis series to a column chart.
+// - Build C# tools for advanced chart manipulation in PowerPoint presentations.
+// - Generate or transform PPTX files with custom chart configurations in .NET.
+// - Validate chart workflows and axis settings before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
