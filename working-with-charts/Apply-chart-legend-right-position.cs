@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Apply chart legend right position using C#
+//
+// Description:
+// Demonstrates how to apply a chart legend right position using C# and 
+// Aspose.Slides for .NET. The example creates a new presentation, adds a 
+// clustered column chart, sets the legend position to the right side, and 
+// saves the result as a PPTX file. This pattern can be used to automate PPTX 
+// workflows, validate chart formatting, or integrate presentation logic into 
+// .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, Chart, Legend, Right, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate applying chart legend right position.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;
