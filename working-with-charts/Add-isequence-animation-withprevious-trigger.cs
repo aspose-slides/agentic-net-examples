@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add isequence animation withprevious trigger using C#
+//
+// Description:
+// Demonstrates how to add an ISequence animation with a WithPrevious trigger
+// to a chart using C# and Aspose.Slides for .NET. The example creates a new
+// presentation, inserts a clustered column chart, applies a category‑by‑category
+// animation effect, and saves the result as a PPTX file. This pattern can be
+// used to automate PowerPoint chart animations, validate presentation
+// workflows, or integrate chart animation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Isequence, Animation,
+// Withprevious, Trigger, Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding ISequence animation with a WithPrevious trigger to charts.
+// - Build C# tools for PowerPoint chart animation processing.
+// - Generate or transform PPTX files with animated charts in .NET applications.
+// - Validate chart animation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
