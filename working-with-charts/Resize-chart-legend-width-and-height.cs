@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Resize chart legend width and height using C#
+//
+// Description:
+// Demonstrates how to resize a chart legend's width and height using C# and 
+// Aspose.Slides for .NET. The example creates a presentation, adds a clustered 
+// column chart, adjusts the legend dimensions as fractions of the chart size, 
+// and saves the result as a PPTX file. This pattern can be used to automate 
+// PowerPoint chart formatting tasks.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Resize, Chart, Legend, Width, Height, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Programmatically adjust chart legend dimensions in generated presentations.
+// - Build .NET tools for customizing PowerPoint chart appearance.
+// - Automate PPTX creation with specific legend sizing requirements.
+// - Validate and test chart formatting before deployment.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;
