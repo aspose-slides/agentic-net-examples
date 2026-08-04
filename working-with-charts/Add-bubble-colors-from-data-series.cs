@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add bubble colors from data series using C#
+//
+// Description:
+// Demonstrates how to create a bubble chart, configure bubble size representation,
+// scaling, enable varied colors, assign individual colors to each bubble, and
+// save the presentation using Aspose.Slides for .NET. The example provides a
+// complete console application that can be used as a reference for automating
+// PowerPoint bubble chart creation and customization.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, Bubble Chart, Bubble Colors,
+// Data Series, Chart Customization, Presentation Automation, Office Automation
+//
+// Use Cases:
+// - Generate bubble charts with custom colors for each data point.
+// - Automate PowerPoint chart creation and styling in .NET applications.
+// - Build tools that programmatically customize chart appearance.
+// - Validate and test chart-related presentation workflows.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;
