@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Insert ellipse with custom fill to pptx using C#
+//
+// Description:
+// Demonstrates how to insert an ellipse shape with a custom solid fill color
+// and a solid outline into a PowerPoint presentation using C# and Aspose.Slides
+// for .NET. The example creates a new presentation, adds an ellipse with a
+// chocolate fill and black border, and saves the result as a PPTX file.
+// This pattern can be used to automate shape creation and styling in PPTX files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Insert, Ellipse, Custom Fill,
+// Solid Fill, Shape Styling, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate insertion of ellipses with custom fill and outline into PPTX files.
+// - Build .NET tools for generating styled shapes in PowerPoint presentations.
+// - Create templates or batch-process slides with specific shape formatting.
+// - Validate shape rendering and styling in automated PPTX workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
