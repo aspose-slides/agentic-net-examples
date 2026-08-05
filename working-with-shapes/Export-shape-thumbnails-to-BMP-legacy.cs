@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Export shape thumbnails to BMP legacy using C#
+//
+// Description:
+// Demonstrates how to export a shape thumbnail to a BMP file using C# and 
+// Aspose.Slides for .NET. The example creates a presentation, adds a rectangle 
+// shape, generates a thumbnail image of the shape, and saves it in BMP legacy 
+// format. It also saves the presentation as PPTX. This pattern can be used for 
+// automating shape thumbnail extraction in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Shape, Thumbnail, 
+// BMP, Legacy, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of shape thumbnails to BMP legacy format.
+// - Build C# utilities for PowerPoint shape image generation.
+// - Integrate shape thumbnail creation into .NET workflows.
+// - Validate and preview shapes before publishing presentations.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
