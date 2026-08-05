@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Replace rectangle fills with solid blue using C#
+//
+// Description:
+// Demonstrates how to replace the fill color of rectangle AutoShape objects
+// with a solid blue color using C# and Aspose.Slides for .NET. The example
+// loads an existing PPTX file, iterates through all slides and shapes, updates
+// each rectangle's FillFormat to a solid blue fill, and saves the modified
+// presentation. This pattern can be used to automate color adjustments in
+// PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Replace, Rectangle, Fill, Solid,
+// Blue, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate changing rectangle fills to a specific color in bulk.
+// - Build C# utilities for PowerPoint presentation styling.
+// - Integrate color transformation steps into .NET workflows.
+// - Ensure visual consistency across generated PPTX files.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -38,7 +59,7 @@ namespace ReplaceRectangleFills
 
                             // Process only AutoShape objects (they have ShapeType property)
                             IAutoShape autoShape = shape as IAutoShape;
-                            if (autoShape != null && autoShape.ShapeType == ShapeType.Rectangle)
+                            if (autoShape != != null && autoShape.ShapeType == ShapeType.Rectangle)
                             {
                                 // Set fill to solid blue
                                 autoShape.FillFormat.FillType = FillType.Solid;
