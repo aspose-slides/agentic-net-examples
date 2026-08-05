@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Group auto shapes set alttext lock using C#
+//
+// Description:
+// Demonstrates how to create a group shape containing auto shapes, assign
+// alternative text to the group, and lock various editing aspects of the group
+// using Aspose.Slides for .NET. The example creates a presentation, adds a
+// group with three rectangles, sets alt text, applies lock settings, and saves
+// the file as a PPTX.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Group Shape, Auto Shape, 
+// Alternative Text, AltText Lock, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting alternative text and lock properties for grouped shapes.
+// - Build C# utilities for securing PowerPoint content against editing.
+// - Generate or modify PPTX files with locked group shapes in .NET applications.
+// - Ensure presentation integrity before distribution or publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
