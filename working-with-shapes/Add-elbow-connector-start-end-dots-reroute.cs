@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add elbow connector start end dots reroute using C#
+//
+// Description:
+// Demonstrates how to add an elbow (bent) connector between an ellipse and a
+// rectangle, set connection sites (dots), reroute the connector to the shortest
+// path, and save the result using Aspose.Slides for .NET. The example shows the
+// required presentation-processing steps for PowerPoint files and produces the
+// requested output in a standalone console application. Developers can use this
+// pattern to automate PPTX workflows, validate results, or integrate presentation
+// logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Elbow Connector, BentConnector,
+// Connection Sites, Reroute, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding elbow connectors with start/end connection sites.
+// - Build C# tools for PowerPoint shape linking and routing.
+// - Generate or transform PPTX files with custom connectors in .NET applications.
+// - Validate connector routing before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
