@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Apply soft edge six point radius chart shapes third slide using C#
+//
+// Description:
+// Demonstrates how to apply a six‑point soft‑edge effect to all chart shapes on
+// the third slide of a PowerPoint presentation using Aspose.Slides for .NET.
+// The example loads an existing presentation or creates a new one with three
+// slides, adds a sample chart if needed, applies the effect, and saves the
+// result. This pattern can be used to automate PPTX workflows that require
+// visual styling of chart objects.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Soft Edge, Chart, Third Slide,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate applying a six‑point soft edge to chart shapes on the third slide.
+// - Build C# utilities for PowerPoint presentation styling.
+// - Generate or transform PPTX files with specific visual effects in .NET.
+// - Validate presentation appearance before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
