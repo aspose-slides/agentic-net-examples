@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add curved connector 3pt line thickness using C#
+//
+// Description:
+// Demonstrates how to add a curved connector with a 3‑point line thickness
+// using C# and Aspose.Slides for .NET. The example creates a new presentation,
+// adds an ellipse and a rectangle, connects them with a curved connector,
+// sets the connector line width to three points, and saves the result as a
+// PPTX file. This pattern can be used to automate PowerPoint shape linking and
+// styling tasks.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Curved, Connector, Line,
+// Thickness, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding curved connectors with specific line thickness.
+// - Build C# utilities for PowerPoint shape manipulation.
+// - Generate or modify PPTX files programmatically in .NET applications.
+// - Validate connector styling in presentation workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
