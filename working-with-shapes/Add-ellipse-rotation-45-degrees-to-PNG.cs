@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add ellipse rotation 45 degrees to PNG using C#
+//
+// Description:
+// Demonstrates how to add an ellipse shape rotated by 45 degrees to a slide,
+// export that slide as a PNG image, and save the presentation as a PPTX file
+// using Aspose.Slides for .NET. The example shows the required presentation-
+// processing steps for PowerPoint files and produces the requested output in a
+// standalone console application. Developers can use this pattern to automate
+// PPTX workflows, validate results, or integrate presentation logic into .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Ellipse, Rotation,
+// Degrees, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding an ellipse with a 45-degree rotation and exporting to PNG.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
