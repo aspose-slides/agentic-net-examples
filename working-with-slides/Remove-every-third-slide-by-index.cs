@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Remove every third slide by index using C#
+//
+// Description:
+// Demonstrates how to remove every third slide from a PowerPoint presentation
+// by its zero‑based index using C# and Aspose.Slides for .NET. The example loads
+// an input PPTX file, iterates through the slides, removes slides whose
+// 1‑based position is a multiple of three, and saves the result to a new file.
+// This pattern can be used to automate slide cleanup or custom presentation
+// transformations in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove, Every, Third, Slide, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate removal of every third slide in bulk presentations.
+// - Build C# utilities for PowerPoint slide management.
+// - Pre‑process PPTX files before publishing or further editing.
+// - Integrate slide filtering logic into larger .NET workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
