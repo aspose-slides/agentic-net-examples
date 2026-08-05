@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add rounded rectangle to slide three with solid fill using C#
+//
+// Description:
+// Demonstrates how to add a rounded rectangle shape to the third slide of a
+// presentation and apply a solid light‑blue fill using Aspose.Slides for .NET.
+// The example creates a new presentation (or uses an empty one), ensures at
+// least three slides exist, inserts the shape on slide index 2, sets the
+// corner radius, and saves the result as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Rounded Rectangle, Slide 3,
+// Solid Fill, Presentation Automation, Office Automation
+//
+// Use Cases:
+// - Programmatically add rounded rectangle shapes to a specific slide.
+// - Apply solid color fills to shapes in generated presentations.
+// - Build .NET utilities that modify or enrich PPTX files.
+// - Automate slide layout adjustments for reporting or templating.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

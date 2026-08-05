@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Rotate triangle 45deg clockwise verify bbox using C#
+//
+// Description:
+// Demonstrates how to create a PowerPoint presentation, add a triangle shape,
+// rotate it 45 degrees clockwise, and retrieve the updated bounding box
+// coordinates using Aspose.Slides for .NET. The example runs as a standalone
+// console application and saves the resulting presentation to a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Rotate, Triangle, 45Deg,
+// Clockwise, Bounding Box, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate rotation of geometric shapes and verify layout changes.
+// - Build C# utilities for PowerPoint shape manipulation and validation.
+// - Generate or modify PPTX files programmatically in .NET applications.
+// - Validate shape transformations before publishing or further processing.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

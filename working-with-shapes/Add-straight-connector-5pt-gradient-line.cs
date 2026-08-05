@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add straight connector 5pt gradient line using C#
+//
+// Description:
+// Demonstrates how to add a straight connector with a 5‑point gradient line using
+// C# and Aspose.Slides for .NET. The example creates a new presentation, adds a
+// straight line connector, sets its line width to 5 pt, applies a linear gradient
+// fill from blue to red, and saves the result as a PPTX file. This pattern can be
+// used to automate drawing connectors with styled lines in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Straight Connector, Gradient Line,
+// Line Width, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Programmatically add straight connectors with custom gradient styling.
+// - Build .NET tools that generate or modify PPTX diagrams and flowcharts.
+// - Automate visual enhancements for presentations, such as colored connectors.
+// - Validate and test presentation rendering before deployment.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Drawing;

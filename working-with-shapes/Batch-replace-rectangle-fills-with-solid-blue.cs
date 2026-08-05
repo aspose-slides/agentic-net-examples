@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Batch replace rectangle fills with solid blue using C#
+//
+// Description:
+// Shows how to load a PPTX file, iterate through all slides and shapes, 
+// identify rectangle auto shapes, and replace their fill with a solid blue 
+// color using Aspose.Slides for .NET. The example includes basic error handling 
+// for missing files and unsupported formats, and saves the modified presentation.
+//
+// Keywords:
+// C#, .NET, Aspose.Slides, PowerPoint, PPTX, rectangle, fill, solid blue, batch processing, automation
+//
+// Use Cases:
+// - Convert all rectangle shapes in a presentation to a uniform solid blue fill.
+// - Create automated tools for bulk styling of PowerPoint files.
+// - Integrate shape fill updates into CI pipelines or document generation workflows.
+// - Ensure visual consistency across multiple presentations programmatically.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

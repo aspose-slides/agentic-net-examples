@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add line shape begin none end diamond using C#
+//
+// Description:
+// Demonstrates how to add a line shape with a 'none' begin arrowhead and a
+// 'diamond' end arrowhead using C# and Aspose.Slides for .NET. The example
+// creates a new presentation, inserts a line shape onto the first slide,
+// configures its arrowhead styles, and saves the result as a PPTX file.
+// This pattern can be used to automate PowerPoint presentation creation and
+// manipulation in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Line, Shape, Begin, None,
+// End, Diamond, Arrowhead, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding line shapes with custom arrowheads.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files with specific shape styling in .NET.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

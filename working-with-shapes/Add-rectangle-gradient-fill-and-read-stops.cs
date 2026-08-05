@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add rectangle gradient fill and read stops using C#
+//
+// Description:
+// Demonstrates how to add a rectangle shape with a linear gradient fill and
+// read the effective gradient fill data, including angle and gradient stops,
+// using Aspose.Slides for .NET. The example creates a presentation, saves it,
+// and outputs gradient details to the console.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Rectangle, Gradient Fill, 
+// Gradient Stops, Effective Fill Data, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding gradient-filled rectangles to PowerPoint slides.
+// - Retrieve and inspect gradient fill properties programmatically.
+// - Build .NET tools for PPTX generation and validation.
+// - Integrate gradient fill handling into presentation workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

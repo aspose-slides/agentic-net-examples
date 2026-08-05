@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add ellipse radial gradient to each slide using C#
+//
+// Description:
+// Demonstrates how to add an ellipse with a radial gradient fill to every slide
+// in a PowerPoint presentation using C# and Aspose.Slides for .NET. The example
+// creates a new presentation, iterates through all slides, adds a full‑size
+// ellipse shape, configures a radial gradient from purple at the center to red
+// at the edges, and saves the result as a PPTX file. This pattern can be used
+// to automate visual enhancements across slides in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Ellipse, Radial, Gradient,
+// Each Slide, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding ellipse radial gradients to each slide in a PPTX.
+// - Build C# tools for bulk visual styling of PowerPoint presentations.
+// - Generate or transform PPTX files with custom gradient shapes in .NET.
+// - Validate and preview presentation aesthetics before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Add ellipse rot30deg shadow to SVG using C#
+//
+// Description:
+// Demonstrates how to add an ellipse rotated by 30 degrees with an outer
+// shadow effect to a slide and export the slide as SVG using C# and
+// Aspose.Slides for .NET. The example creates a new presentation, adds the
+// shape, applies rotation and shadow, saves the presentation, and writes the
+// slide to an SVG file in a standalone console application. Developers can
+// use this pattern to automate PPTX workflows, validate results, or integrate
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SVG, Ellipse, Rot30Deg, Shadow,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding an ellipse with 30° rotation and shadow to a slide.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files and export slides as SVG in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

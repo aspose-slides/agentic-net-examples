@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add curved connector reroute and move shapes using C#
+//
+// Description:
+// Demonstrates how to add a bent (curved) connector between two shapes, 
+// reroute it to obtain the shortest path, move a shape to change the connector 
+// routing, and reroute again using Aspose.Slides for .NET. The example creates 
+// a new presentation, adds an ellipse and a rectangle, connects them, and 
+// saves the result as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Bent Connector, Curved Connector, 
+// Reroute, Move Shapes, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding and rerouting curved connectors between shapes.
+// - Build tools that adjust shape positions and update connector paths.
+// - Generate or modify PPTX files programmatically in .NET applications.
+// - Validate connector routing logic in presentation workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

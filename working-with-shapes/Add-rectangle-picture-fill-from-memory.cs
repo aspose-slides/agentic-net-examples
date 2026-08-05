@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add rectangle picture fill from memory using C#
+//
+// Description:
+// Demonstrates how to load an image from a file into memory, add it to a
+// presentation, and apply it as a tiled picture fill to a rectangle shape using
+// Aspose.Slides for .NET. The example creates a PPTX file with a rectangle whose
+// fill is configured with various picture fill options such as tile mode,
+// alignment, and flip settings.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Rectangle, Picture Fill, MemoryStream,
+// Image Processing, Presentation Automation
+//
+// Use Cases:
+// - Apply custom picture fills to shapes from in‑memory images.
+// - Generate PowerPoint slides programmatically with image‑based styling.
+// - Automate creation of presentations where images are sourced from streams.
+// - Demonstrate picture fill properties like tiling, alignment, and flipping.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides.Export;
@@ -32,7 +53,8 @@ class Program
 
                 Aspose.Slides.ISlide slide = pres.Slides[0];
 
-                Aspose.Slides.IAutoShape shape = slide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 50f, 50f, 400f, 300f);
+                Aspose.Slides.IAutoShape shape = slide.Shapes.AddAutoShape(
+                    Aspose.Slides.ShapeType.Rectangle, 50f, 50f, 400f, 300f);
 
                 shape.FillFormat.FillType = Aspose.Slides.FillType.Picture;
                 Aspose.Slides.IPictureFillFormat picFill = shape.FillFormat.PictureFillFormat;

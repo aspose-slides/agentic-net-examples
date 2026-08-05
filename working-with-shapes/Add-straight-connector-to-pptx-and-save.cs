@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add bent connector to pptx and save using C#
+//
+// Description:
+// Demonstrates how to add a bent connector between two shapes in a PPTX file
+// and save the result using C# and Aspose.Slides for .NET. The example shows
+// the required presentation-processing steps for PowerPoint files and
+// produces the requested output in a standalone console application. Developers
+// can use this pattern to automate PPTX workflows, validate results, or
+// integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Bent Connector, Connector, 
+// Pptx, Save, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding a bent connector to pptx and save.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -40,7 +62,7 @@ class Program
                     rectangle = shapes[1] as IAutoShape;
                 }
 
-                // Add a straight connector (using BentConnector2 as the connector type)
+                // Add a bent connector
                 IConnector connector = shapes.AddConnector(ShapeType.BentConnector2, 0, 0, 10, 10);
                 connector.StartShapeConnectedTo = ellipse;
                 connector.EndShapeConnectedTo = rectangle;

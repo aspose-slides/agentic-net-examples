@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Add rounded rectangle picture fill external using C#
+//
+// Description:
+// Demonstrates how to add a rounded rectangle shape with an external picture
+// fill using C# and Aspose.Slides for .NET. The example loads an external JPEG
+// image, creates a presentation, adds a rectangle shape, applies the picture
+// as a fill, and saves the result as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Rounded Rectangle, Picture Fill,
+// External Image, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding rounded rectangle shapes with external picture fills.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files with custom image fills in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

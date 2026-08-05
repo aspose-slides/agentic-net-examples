@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Validate bounds thumbnail contains all shape animations using C#
+//
+// Description:
+// Demonstrates how to generate a thumbnail for a shape using the Appearance
+// bounds, which includes all shape animations, with Aspose.Slides for .NET.
+// The example creates a presentation, adds a rectangle shape, applies an
+// animation, extracts the thumbnail image, and saves both the image and the
+// presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Validate, Bounds, Thumbnail,
+// Contains, Shape Animations, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Verify that shape thumbnails capture animation bounds.
+// - Build tools that need accurate visual representations of animated shapes.
+// - Automate generation of shape previews for PowerPoint files.
+// - Ensure thumbnails include all animated content before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

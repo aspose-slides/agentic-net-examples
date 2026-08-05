@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Reset shape formatting before visual effects using C#
+//
+// Description:
+// Demonstrates how to reset all shape formatting on a slide before applying
+// visual effects using Aspose.Slides for .NET. The example loads a PPTX file,
+// resets formatting of shapes on the first slide, applies an outer shadow
+// effect to the first shape, and saves the result. This pattern helps
+// developers ensure consistent formatting when programmatically adding
+// effects to PowerPoint presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Reset, Shape, Formatting,
+// Visual Effects, Outer Shadow, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Reset shape formatting before applying visual effects in automated PPTX workflows.
+// - Add or modify visual effects such as shadows to shapes after clearing prior formatting.
+// - Build .NET tools for consistent presentation styling and effect application.
+// - Validate and transform PowerPoint files programmatically before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides.Export;

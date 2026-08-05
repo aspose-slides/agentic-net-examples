@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Calculate average connector angle and log using C#
+//
+// Description:
+// Demonstrates how to calculate the average angle of connector shapes on the
+// first slide of a PowerPoint presentation and log the result using C# and
+// Aspose.Slides for .NET. The example loads an existing PPTX file, iterates
+// through shapes to identify connectors, computes each connector's direction
+// angle, determines the average, outputs it to the console, and saves the
+// presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Calculate, Average, Connector,
+// Angle, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate calculation of average connector angles in presentations.
+// - Build C# utilities for analyzing slide geometry.
+// - Generate reports or logs for PowerPoint content validation.
+// - Integrate connector angle analysis into .NET automation workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

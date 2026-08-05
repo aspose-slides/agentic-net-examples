@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set rectangle dash solid then dashdot verify using C#
+//
+// Description:
+// Demonstrates how to set a rectangle's line dash style to Solid, add a click‑triggered
+// animation, then change the dash style to DashDot using C# and Aspose.Slides for .NET.
+// The example creates a presentation, modifies shape formatting, and saves the file.
+// Developers can use this pattern to automate PPTX workflows, validate shape
+// formatting changes, or integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Rectangle, Dash, Solid, DashDot,
+// Animation, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting rectangle dash style to Solid then DashDot and verify.
+// - Build C# tools for PowerPoint shape formatting and animation handling.
+// - Generate or transform PPTX files with specific line styles in .NET applications.
+// - Validate shape formatting changes before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

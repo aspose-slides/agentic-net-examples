@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Add ellipse circle pattern fill to jpeg using C#
+//
+// Description:
+// Demonstrates how to add an ellipse shape with a small circles pattern fill
+// to a PowerPoint slide and export the slide as a JPEG image using C# and 
+// Aspose.Slides for .NET. The example shows the required presentation-processing 
+// steps for creating a shape, applying a pattern fill, saving the presentation, 
+// and rendering the slide to a JPEG file in a standalone console application. 
+// Developers can use this pattern to automate PPTX workflows, validate results, 
+// or integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, JPEG, Ellipse, Circle, Pattern, 
+// Fill, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding ellipse circle pattern fill to slides and exporting to JPEG.
+// - Build C# tools for PowerPoint presentation processing with custom shape styling.
+// - Generate or transform PPTX files and render them as images in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

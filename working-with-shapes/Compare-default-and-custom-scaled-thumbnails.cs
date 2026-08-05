@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Compare default and custom scaled thumbnails using C#
+//
+// Description:
+// Demonstrates how to generate a default thumbnail and a custom‑scaled thumbnail
+// from a PowerPoint slide using Aspose.Slides for .NET. The example loads a
+// presentation, extracts the first slide, creates a default thumbnail (the
+// library's built‑in scaling), then creates a thumbnail with user‑defined
+// dimensions, and saves both images to disk. It also saves the original
+// presentation unchanged.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Thumbnail, Default scaling,
+// Custom scaling, Image generation, Presentation processing
+//
+// Use Cases:
+// - Generate quick previews of slides with default scaling.
+// - Produce high‑resolution thumbnails with custom dimensions.
+// - Compare visual differences between default and custom thumbnail sizes.
+// - Integrate thumbnail generation into automated PPTX workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

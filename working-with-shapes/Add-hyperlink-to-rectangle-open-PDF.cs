@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add hyperlink to rectangle open PDF using C#
+//
+// Description:
+// Demonstrates how to add a hyperlink to a rectangle shape that opens a local
+// PDF file using C# and Aspose.Slides for .NET. The example creates a new
+// presentation, inserts a rectangle on the first slide, assigns a hyperlink
+// pointing to the specified PDF, and saves the result as a PPTX file. This
+// pattern can be used to automate PowerPoint workflows that require linking
+// to external documents.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Hyperlink, Rectangle,
+// Open, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding hyperlinks to shapes that open PDF files.
+// - Build C# tools for PowerPoint presentation processing with external links.
+// - Generate or transform PPTX files that reference local documents.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

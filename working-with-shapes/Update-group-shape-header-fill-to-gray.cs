@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Update group shape header fill to gray using C#
+//
+// Description:
+// Demonstrates how to locate a group shape whose AlternativeText contains
+// "Header" in a PowerPoint presentation and change its fill to solid gray
+// using Aspose.Slides for .NET. The example loads an existing PPTX file,
+// processes each slide and shape, updates the fill, and saves the result.
+// This pattern can be used to programmatically modify grouped shape
+// formatting in presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Update, Group Shape, Header,
+// Fill Color, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automatically apply a gray fill to header group shapes across slides.
+// - Build .NET utilities for batch updating presentation styling.
+// - Integrate shape formatting changes into CI pipelines for slide decks.
+// - Ensure consistent visual appearance of grouped header elements.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

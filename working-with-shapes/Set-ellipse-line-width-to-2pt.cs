@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set ellipse line width to 2pt using C#
+//
+// Description:
+// Demonstrates how to set the line width of ellipse shapes to 2 points using
+// C# and Aspose.Slides for .NET. The example loads an existing PPTX file,
+// iterates through all slides and shapes, updates the line width of each
+// ellipse, and saves the modified presentation. This pattern can be used to
+// automate PowerPoint shape formatting tasks in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Ellipse, Line, Width,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting ellipse line width to 2pt across a presentation.
+// - Build C# tools for bulk shape formatting in PowerPoint files.
+// - Generate or transform PPTX files with specific shape styling in .NET.
+// - Validate and enforce presentation design standards before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -22,17 +43,17 @@ namespace SetEllipseLineWidth
             try
             {
                 // Load the presentation
-                using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
+                using (Presentation presentation = new Presentation(inputPath))
                 {
                     // Iterate over all slides
-                    foreach (Aspose.Slides.ISlide slide in presentation.Slides)
+                    foreach (ISlide slide in presentation.Slides)
                     {
                         // Iterate over all shapes on the slide
-                        foreach (Aspose.Slides.IShape shape in slide.Shapes)
+                        foreach (IShape shape in slide.Shapes)
                         {
                             // Cast to IAutoShape to access ShapeType
-                            Aspose.Slides.IAutoShape autoShape = shape as Aspose.Slides.IAutoShape;
-                            if (autoShape != null && autoShape.ShapeType == Aspose.Slides.ShapeType.Ellipse)
+                            IAutoShape autoShape = shape as IAutoShape;
+                            if (autoShape != null && autoShape.ShapeType == ShapeType.Ellipse)
                             {
                                 // Ensure the shape has a line format and set its width to 2 points
                                 if (autoShape.LineFormat != null)
@@ -44,7 +65,7 @@ namespace SetEllipseLineWidth
                     }
 
                     // Save the modified presentation
-                    presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    presentation.Save(outputPath, SaveFormat.Pptx);
                 }
             }
             catch (NotSupportedException ex)

@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Load pptx replace placeholder image and thumbnail using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file, replace a placeholder shape with a new
+// image, generate a thumbnail of the inserted shape, and save the presentation
+// with an updated thumbnail using Aspose.Slides for .NET. The example shows the
+// required steps for presentation processing and image handling in a console
+// application.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, Replace, Placeholder,
+// Image, Thumbnail, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate replacement of placeholder images in existing PPTX files.
+// - Generate shape thumbnails for documentation or preview purposes.
+// - Build .NET tools that modify and refresh PowerPoint presentations.
+// - Validate and process PPTX workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -43,22 +63,23 @@ namespace AsposeSlidesExample
                 slide.Shapes.Remove(placeholderShape);
 
                 // Add the new image to the presentation's image collection
-                FileStream imageStream = new FileStream(imagePath, FileMode.Open, FileAccess.Read);
-                IPPImage ppImage = presentation.Images.AddImage(imageStream, LoadingStreamBehavior.KeepLocked);
-                imageStream.Dispose();
+                using (FileStream imageStream = new FileStream(imagePath, FileMode.Open, FileAccess.Read))
+                {
+                    IPPImage ppImage = presentation.Images.AddImage(imageStream, LoadingStreamBehavior.KeepLocked);
 
-                // Add a picture frame using the dimensions of the removed placeholder
-                IPictureFrame pictureFrame = slide.Shapes.AddPictureFrame(
-                    ShapeType.Rectangle,
-                    placeholderShape.X,
-                    placeholderShape.Y,
-                    placeholderShape.Width,
-                    placeholderShape.Height,
-                    ppImage);
+                    // Add a picture frame using the dimensions of the removed placeholder
+                    IPictureFrame pictureFrame = slide.Shapes.AddPictureFrame(
+                        ShapeType.Rectangle,
+                        placeholderShape.X,
+                        placeholderShape.Y,
+                        placeholderShape.Width,
+                        placeholderShape.Height,
+                        ppImage);
 
-                // Generate a thumbnail of the newly added shape
-                IImage shapeThumbnail = pictureFrame.GetImage(ShapeThumbnailBounds.Shape, 1f, 1f);
-                shapeThumbnail.Save(thumbnailPath, ImageFormat.Png);
+                    // Generate a thumbnail of the newly added shape
+                    IImage shapeThumbnail = pictureFrame.GetImage(ShapeThumbnailBounds.Shape, 1f, 1f);
+                    shapeThumbnail.Save(thumbnailPath, ImageFormat.Png);
+                }
 
                 // Save the presentation and refresh its thumbnail
                 presentation.Save(outputPath, SaveFormat.Pptx, new PptxOptions

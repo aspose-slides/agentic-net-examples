@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Duplicate group shape move and save pptx using C#
+//
+// Description:
+// Demonstrates how to duplicate a group shape on the first slide, reposition
+// the cloned shape, and save the modified presentation using Aspose.Slides for
+// .NET. The example includes loading a PPTX file, cloning a group shape, adjusting
+// its X and Y coordinates, and saving the result as a new PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Duplicate, Group, Shape, Move,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate duplication and repositioning of group shapes in PowerPoint files.
+// - Build .NET tools for editing and saving PPTX presentations.
+// - Generate modified presentations programmatically.
+// - Validate shape manipulation workflows before deployment.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Read shadow blur radius modify and reapply using C#
+//
+// Description:
+// Demonstrates how to read the blur radius of an outer shadow effect on a shape,
+// modify the radius, and reapply the updated effect using Aspose.Slides for .NET.
+// The example loads a PPTX file, accesses the first shape on the first slide,
+// enables the outer shadow effect if necessary, adjusts the blur radius, and
+// saves the modified presentation. This pattern can be used to automate
+// shadow styling adjustments in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Read, Shadow, Blur, Radius,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate reading and adjusting shadow blur radius in presentations.
+// - Build C# tools for PowerPoint visual effect customization.
+// - Generate or transform PPTX files with updated shadow properties.
+// - Validate and fine‑tune presentation aesthetics before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -24,22 +46,22 @@ namespace ShadowEffectDemo
             try
             {
                 // Load presentation
-                Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
+                Presentation pres = new Presentation(inputPath);
 
                 // Get the first slide
-                Aspose.Slides.ISlide slide = pres.Slides[0];
+                ISlide slide = pres.Slides[0];
 
                 // Get the first shape (assumed to be an AutoShape)
-                Aspose.Slides.IAutoShape shape = (Aspose.Slides.IAutoShape)slide.Shapes[0];
+                IAutoShape shape = (IAutoShape)slide.Shapes[0];
 
                 // Access the effect format of the shape
-                Aspose.Slides.IEffectFormat effectFormat = shape.EffectFormat;
+                IEffectFormat effectFormat = shape.EffectFormat;
 
                 // Ensure outer shadow effect is enabled
                 effectFormat.EnableOuterShadowEffect();
 
                 // Get the outer shadow effect
-                Aspose.Slides.Effects.IOuterShadow outerShadow = effectFormat.OuterShadowEffect;
+                IOuterShadow outerShadow = effectFormat.OuterShadowEffect;
 
                 // Read current blur radius
                 double currentBlur = outerShadow.BlurRadius;
@@ -48,7 +70,7 @@ namespace ShadowEffectDemo
                 outerShadow.BlurRadius = currentBlur + 5.0;
 
                 // Save the updated presentation
-                pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                pres.Save(outputPath, SaveFormat.Pptx);
 
                 // Clean up
                 pres.Dispose();

@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add rounded rectangle increase corner radius using C#
+//
+// Description:
+// Demonstrates how to add a rectangle shape and increase its corner radius
+// using Aspose.Slides for .NET. The example creates a presentation, adds a
+// rectangle shape, checks for a CornerSize adjustment, increments the radius
+// by 5 points, and saves the file. This pattern can be used to modify rounded
+// corners of shapes programmatically.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Rounded Rectangle, Corner Radius,
+// Shape Adjustments, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Increase corner radius of existing rectangle or rounded rectangle shapes.
+// - Automate shape styling in PowerPoint presentations.
+// - Build .NET tools for adjusting visual properties of PPTX files.
+// - Validate shape adjustments before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

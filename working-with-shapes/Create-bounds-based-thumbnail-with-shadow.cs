@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Create bounds based thumbnail with shadow using C#
+//
+// Description:
+// Demonstrates how to create a bounds‑based thumbnail of a shape that includes
+// its outer shadow effect using C# and Aspose.Slides for .NET. The example
+// creates a presentation, adds a rectangle shape, applies an outer shadow,
+// extracts a thumbnail image using the Appearance bounds, and saves the
+// presentation. This pattern can be used to generate shape previews with
+// visual effects in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Bounds, Thumbnail, Shadow,
+// Shape Image, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Generate thumbnails of shapes that preserve visual effects such as shadows.
+// - Build tools that need preview images of PowerPoint elements.
+// - Automate creation of presentation assets with consistent styling.
+// - Validate shape rendering before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

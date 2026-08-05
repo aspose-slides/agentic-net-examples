@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add line shape 4pt bold using C#
+//
+// Description:
+// Demonstrates how to add a 4‑point bold line shape to a slide using C# and
+// Aspose.Slides for .NET. The example creates a new presentation, inserts a line
+// shape, sets its line width to 4 points and applies a thick‑thin style to make
+// it appear bold, then saves the result as a PPTX file. This pattern can be used
+// for automating line‑drawing tasks in PowerPoint files.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, line shape, 4pt, bold, line width,
+// line style, presentation automation, .NET
+//
+// Use Cases:
+// - Programmatically add bold lines to slides.
+// - Build utilities that generate or modify PPTX files with specific line
+//   formatting.
+// - Integrate line‑drawing logic into larger .NET applications.
+// - Validate line‑style settings in automated PowerPoint workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

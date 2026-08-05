@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Log thumbnail generation start and end using C#
+//
+// Description:
+// Demonstrates how to generate JPEG thumbnails for each slide in a PowerPoint
+// presentation while logging the processing time for each slide and the total
+// operation using C# and Aspose.Slides for .NET. The example loads a PPTX file,
+// creates scaled images of slides, saves them, and records timing information
+// to the console.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Thumbnail, Generation, Start, End, Logging, Slide Processing, Presentation Automation
+//
+// Use Cases:
+// - Measure and log performance of slide thumbnail generation.
+// - Automate creation of slide preview images in .NET applications.
+// - Integrate timing diagnostics into PowerPoint processing workflows.
+// - Validate and benchmark presentation processing before deployment.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Diagnostics;

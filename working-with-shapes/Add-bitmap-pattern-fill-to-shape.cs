@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add bitmap pattern fill to shape using C#
+//
+// Description:
+// Demonstrates how to apply a bitmap pattern fill to an AutoShape in a PowerPoint
+// presentation using Aspose.Slides for .NET. The example loads a PNG image,
+// sets it as a tiled picture fill with specific alignment and flip options,
+// and saves the resulting presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Bitmap, Pattern Fill, Shape,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding bitmap pattern fills to shapes in PPTX files.
+// - Build .NET tools for customizing slide graphics.
+// - Generate presentations with tiled image backgrounds.
+// - Validate fill settings before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

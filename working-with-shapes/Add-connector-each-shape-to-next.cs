@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add connector each shape to next using C#
+//
+// Description:
+// Demonstrates how to add a connector between each consecutive shape in a
+// presentation using C# and Aspose.Slides for .NET. The example creates a new
+// presentation, adds sample rectangle shapes, connects each shape to the next
+// with bent connectors, and saves the result as a PPTX file. This pattern can be
+// used to automate diagram creation or enhance slide layouts programmatically.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Connector, Shape, Sequential,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automatically link shapes in a flowchart or diagram.
+// - Build C# utilities for generating connected shape layouts.
+// - Integrate shape-connection logic into .NET PowerPoint automation tools.
+// - Prepare PPTX files with predefined connectors for reporting or presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

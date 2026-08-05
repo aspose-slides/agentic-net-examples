@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add rectangle picture fill with SVG using C#
+//
+// Description:
+// Demonstrates how to add a rectangle shape and apply a picture fill using an
+// SVG image with C# and Aspose.Slides for .NET. The example creates a new
+// presentation, loads an SVG file, adds it as an image to the presentation,
+// and sets the rectangle's fill to that SVG picture, then saves the PPTX.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SVG, Rectangle, Picture Fill,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding rectangle picture fill with SVG.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files with SVG graphics in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

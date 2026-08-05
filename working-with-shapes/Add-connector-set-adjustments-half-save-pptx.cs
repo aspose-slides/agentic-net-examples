@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Add connector set adjustments (half) and save PPTX using C#
+//
+// Description:
+// Demonstrates how to add a bent connector shape, unlock its adjustment handles,
+// set its adjustment values to half (0.5) and save the presentation as PPTX using
+// Aspose.Slides for .NET. The example illustrates the required steps for
+// manipulating connector adjustments and persisting the result in a console
+// application.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, Connector, BentConnector, Adjustments, Half, Save
+//
+// Use Cases:
+// - Programmatically add connectors with specific adjustment values.
+// - Create or modify PPTX files with customized connector geometry.
+// - Automate presentation generation or transformation in .NET applications.
+// - Validate connector adjustments before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Add group shape rectangle ellipse shadow 5pt using C#
+//
+// Description:
+// Demonstrates how to add a group shape containing a rectangle and an ellipse,
+// apply an outer shadow effect with a 5‑point offset, and save the result as a
+// PPTX file using Aspose.Slides for .NET. The example shows the required
+// presentation‑processing steps for PowerPoint files and produces the
+// requested output in a standalone console application. Developers can use
+// this pattern to automate PPTX workflows, validate results, or integrate
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Group, Shape, Rectangle,
+// Ellipse, Shadow, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding a grouped rectangle and ellipse with a 5‑point outer shadow.
+// - Build C# tools for PowerPoint presentation processing that involve grouped shapes.
+// - Generate or transform PPTX files with custom shape effects in .NET applications.
+// - Validate presentation workflows that require grouped shapes and shadow styling.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides.Export;

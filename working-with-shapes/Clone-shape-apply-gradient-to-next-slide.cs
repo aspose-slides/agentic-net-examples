@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Clone shape apply gradient to next slide using C#
+//
+// Description:
+// Demonstrates how to clone a shape from the first slide, add it to a newly
+// created blank slide, and apply a linear gradient fill to the cloned shape
+// using Aspose.Slides for .NET. The example loads an existing PPTX file,
+// performs the shape cloning and formatting, and saves the result as a new
+// PPTX file in a standalone console application. Developers can use this
+// pattern to automate PPTX workflows, validate results, or integrate
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone Shape, Gradient Fill,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate cloning a shape and applying a gradient fill on a subsequent slide.
+// - Build C# utilities for PowerPoint presentation manipulation.
+// - Generate or transform PPTX files programmatically in .NET applications.
+// - Validate presentation transformations before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

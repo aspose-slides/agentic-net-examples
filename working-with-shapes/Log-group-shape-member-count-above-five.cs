@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Log group shape member count above five using C#
+//
+// Description:
+// Demonstrates how to iterate through slides and group shapes in a PowerPoint
+// presentation, count the members of each group shape, and log those groups
+// that contain more than five shapes. The example uses Aspose.Slides for .NET
+// to load, analyze, and save a presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, GroupShape, Shape Count, 
+// Presentation Analysis, Automation, Office Automation
+//
+// Use Cases:
+// - Identify complex group shapes with many members for optimization.
+// - Generate logs for presentation quality checks.
+// - Build tools that validate or refactor PowerPoint content programmatically.
+// - Automate reporting of group shape statistics in .NET applications.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

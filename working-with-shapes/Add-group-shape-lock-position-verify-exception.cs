@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add group shape lock position verify exception using C#
+//
+// Description:
+// Demonstrates how to add a group shape, lock its position, attempt to move it,
+// and verify that an exception is thrown using C# and Aspose.Slides for .NET.
+// The example shows the required presentation-processing steps for PowerPoint
+// files and produces the requested output in a standalone console application.
+// Developers can use this pattern to automate PPTX workflows, validate results,
+// or integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Group, Shape, Lock, Position,
+// Exception, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding a group shape with a locked position and verify exception handling.
+// - Build C# tools for PowerPoint presentation processing that enforce shape constraints.
+// - Generate or transform PPTX files in .NET applications while respecting shape locks.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Handle missing shape ID thumbnail error using C#
+//
+// Description:
+// Demonstrates how to generate a thumbnail for a specific shape in a PowerPoint
+// presentation using Aspose.Slides for .NET and how to handle the case where the
+// requested shape ID does not exist. The example loads a PPTX file, searches for
+// a shape by its OfficeInteropShapeId, creates a PNG thumbnail if found, and
+// saves both the modified presentation and the thumbnail image.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Handle, Missing, Shape,
+// Thumbnail, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate generation of shape thumbnails while safely handling missing IDs.
+// - Build C# utilities for PowerPoint presentation analysis and image extraction.
+// - Integrate shape thumbnail creation into .NET applications with error handling.
+// - Validate shape existence before processing in automated PPTX workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

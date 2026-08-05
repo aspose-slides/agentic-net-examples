@@ -1,3 +1,28 @@
+// -----------------------------------------------------------------------------
+// Example: Add group shape ellipse rectangle set angle using C#
+//
+// Description:
+// Demonstrates how to create a group shape containing multiple rectangles and an
+// ellipse, set the group's frame, apply a rotation angle, and save the result as
+// a PPTX file using Aspose.Slides for .NET. The example illustrates the required
+// presentation-processing steps for PowerPoint files and produces the requested
+// output in a standalone console application. Developers can use this pattern to
+// automate PPTX workflows, validate results, or integrate presentation logic into
+// .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Group Shape, Ellipse, Rectangle,
+// Rotation, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of grouped shapes with specific geometry and rotation.
+// - Build C# tools for PowerPoint presentation processing involving grouped
+//   shapes.
+// - Generate or transform PPTX files with custom shape arrangements in .NET
+//   applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides.Export;

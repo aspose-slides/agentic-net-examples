@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add group shape mixed types with alttext using C#
+//
+// Description:
+// Demonstrates how to add a group shape containing mixed shape types (rectangle,
+// ellipse, triangle, line) and assign alternative text to the group using C# and
+// Aspose.Slides for .NET. The example creates a new presentation, adds the group
+// shape to the first slide, populates it with various shapes, sets the group's
+// AlternativeText property, and saves the file as a PPTX.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Group, Shape, Mixed, Types,
+// Alternative Text, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding grouped shapes with mixed types and alt text.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files with grouped content in .NET applications.
+// - Ensure accessibility by providing alternative text for grouped shapes.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

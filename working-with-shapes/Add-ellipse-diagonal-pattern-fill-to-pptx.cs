@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add ellipse diagonal pattern fill to pptx using C#
+//
+// Description:
+// Demonstrates how to add an ellipse shape with a diagonal pattern fill to a
+// PPTX file using C# and Aspose.Slides for .NET. The example creates a new
+// presentation, inserts an ellipse, applies a downward diagonal pattern fill,
+// and saves the result. This can be used in console applications for
+// automating PowerPoint presentation processing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Ellipse, Diagonal, Pattern,
+// Fill, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding ellipse diagonal pattern fill to PPTX files.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files with patterned shapes in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Drawing;

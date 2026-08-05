@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Replace ellipse fills with red to PPTX using C#
+//
+// Description:
+// Demonstrates how to replace the fill color of all ellipse shapes with red
+// in a PowerPoint presentation using C# and Aspose.Slides for .NET. The
+// example loads an existing PPTX file, iterates through its slides and shapes,
+// modifies ellipse fills, and saves the result as a new PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Replace, Ellipse, Fill, Red,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate changing ellipse fill colors to red in PPTX files.
+// - Build C# utilities for batch processing of PowerPoint presentations.
+// - Integrate shape formatting logic into .NET applications.
+// - Prepare presentations with consistent styling before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Drawing;

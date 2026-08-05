@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Load pptx bytearray extract shape thumbnail using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file into a byte array, create a presentation
+// from the byte array, extract a thumbnail image of the first shape on the first
+// slide, and save both the thumbnail and the presentation using Aspose.Slides for .NET.
+// The example includes file existence checks and basic exception handling.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, Bytearray, Extract, Thumbnail,
+// Shape, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate loading PPTX files from byte arrays and extracting shape thumbnails.
+// - Build C# utilities for PowerPoint shape image extraction.
+// - Integrate slide and shape processing into .NET applications.
+// - Validate and preview shape visuals before publishing or further processing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

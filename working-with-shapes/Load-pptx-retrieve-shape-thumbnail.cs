@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Load pptx retrieve shape thumbnail using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file, locate a shape by its OfficeInteropShapeId,
+// generate a thumbnail image of that shape, and save the image as PNG using
+// Aspose.Slides for .NET. The example also saves the (unchanged) presentation
+// to a new PPTX file. This pattern can be used in console applications to
+// automate PowerPoint shape processing and thumbnail generation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, Retrieve, Shape, Thumbnail,
+// Image, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate loading PPTX and retrieving shape thumbnails.
+// - Build C# utilities for extracting shape images from presentations.
+// - Generate visual previews of specific shapes in PowerPoint files.
+// - Validate shape existence and extract graphics for documentation or reporting.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

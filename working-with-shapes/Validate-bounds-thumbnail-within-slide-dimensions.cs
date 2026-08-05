@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Validate bounds thumbnail within slide dimensions using C#
+//
+// Description:
+// Demonstrates how to generate thumbnails for each shape using bounds‑based
+// rendering and verify that the resulting thumbnail dimensions do not exceed
+// the slide size. The example loads a PPTX file, iterates through slides and
+// shapes, creates a thumbnail for each shape, checks its width and height
+// against the presentation slide dimensions, reports any violations, and
+// saves the presentation.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, Shape Thumbnail, Bounds Rendering,
+// Validate Thumbnail Size, Slide Dimensions, Presentation Automation
+//
+// Use Cases:
+// - Ensure shape thumbnails fit within slide boundaries in automated workflows.
+// - Build validation tools for PowerPoint content before publishing.
+// - Integrate thumbnail size checks into .NET applications that process PPTX files.
+// - Detect oversized shape renderings during batch processing of presentations.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

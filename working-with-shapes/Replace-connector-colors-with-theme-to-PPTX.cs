@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Replace connector colors with theme to PPTX using C#
+//
+// Description:
+// Demonstrates how to replace connector line colors with the first accent color
+// from the master theme in a PPTX file using C# and Aspose.Slides for .NET.
+// The example loads a presentation, updates all connector shapes to use a solid
+// fill with the theme accent color, and saves the modified presentation.
+// This pattern can be used to automate theme‑based styling of connectors in
+// PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Replace, Connector, Colors,
+// Theme, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate replacement of connector colors with a theme accent in PPTX files.
+// - Build C# tools for PowerPoint presentation styling and processing.
+// - Generate or transform PPTX files with consistent theme colors in .NET applications.
+// - Validate and enforce presentation design guidelines before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

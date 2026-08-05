@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Create thumbnail from presentation shape index using C#
+//
+// Description:
+// Demonstrates how to create a thumbnail image of a specific shape identified
+// by its index within the first slide of a PowerPoint presentation using
+// Aspose.Slides for .NET. The example loads a presentation, validates the
+// shape index, extracts the shape as an image, saves it as PNG, and saves a
+// copy of the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Thumbnail, Shape, Index,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of thumbnails for specific shapes in PPTX files.
+// - Build C# utilities for PowerPoint shape extraction and image generation.
+// - Integrate shape thumbnail generation into .NET applications.
+// - Validate and preview shape content before publishing or further processing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

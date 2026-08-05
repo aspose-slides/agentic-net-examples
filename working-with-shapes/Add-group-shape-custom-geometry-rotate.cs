@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add group shape custom geometry rotate using C#
+//
+// Description:
+// Demonstrates how to add a group shape, insert a custom geometry shape inside
+// the group, define a triangle geometry, rotate the shape, and save the
+// presentation using Aspose.Slides for .NET. The example shows the required
+// presentation-processing steps for PowerPoint files and produces the
+// requested output in a standalone console application. Developers can use
+// this pattern to automate PPTX workflows, validate results, or integrate
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Group, Shape, Custom Geometry,
+// Rotation, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding group shapes with custom geometry and rotation.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files with custom shaped content in .NET.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;

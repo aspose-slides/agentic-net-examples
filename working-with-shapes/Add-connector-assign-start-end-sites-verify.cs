@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Add connector assign start end sites verify using C#
+//
+// Description:
+// Demonstrates how to add a bent connector between an ellipse and a rectangle,
+// assign custom start and end connection sites, reroute the connector to the
+// shortest path, and save the presentation using C# and Aspose.Slides for .NET.
+// The example shows the required presentation-processing steps for PowerPoint
+// files and produces the requested output in a standalone console application.
+// Developers can use this pattern to automate PPTX workflows, validate results,
+// or integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Connector, Assign, Start,
+// Sites, End, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding a connector and assigning start/end connection sites.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate connector routing and alignment before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides.Export;
 

@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Measure thumbnail performance for shapes with and without effects using C#
+//
+// Description:
+// Demonstrates how to measure the performance of generating shape thumbnails 
+// from a PowerPoint presentation using Aspose.Slides for .NET. The example 
+// creates thumbnails for each shape twice – once using the shape bounds 
+// (without visual effects) and once using the appearance bounds (including 
+// effects) – and reports the elapsed time for each approach. This pattern helps 
+// developers benchmark thumbnail generation and decide which method best fits 
+// their performance requirements.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Measure, Thumbnail, 
+// Performance, Shapes, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Benchmark shape thumbnail generation with and without visual effects.
+// - Optimize PowerPoint automation tools that need fast thumbnail previews.
+// - Compare rendering performance for different thumbnail bounds.
+// - Integrate performance measurements into .NET presentation processing pipelines.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Diagnostics;

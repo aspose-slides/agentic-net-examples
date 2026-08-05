@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Retrieve line gradient fill and log stops using C#
+//
+// Description:
+// Demonstrates how to retrieve a line's gradient fill and log its gradient stops 
+// using C# and Aspose.Slides for .NET. The example creates a presentation, adds a 
+// line shape with a linear gradient, extracts the effective line fill data, and 
+// writes the gradient stop positions and colors to the console. It also saves the 
+// presentation to a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Retrieve, Line, Gradient, Fill, 
+// Gradient Stops, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate retrieval of line gradient fill information.
+// - Build C# utilities for inspecting PowerPoint shape formatting.
+// - Generate or modify PPTX files with gradient line styles.
+// - Validate gradient fill settings in presentation workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

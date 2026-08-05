@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Batch apply uniform glow to shapes using C#
+//
+// Description:
+// Demonstrates how to batch apply a uniform glow effect to all shapes across
+// multiple PowerPoint presentations using C# and Aspose.Slides for .NET.
+// The example loads each presentation, iterates through its slides and shapes,
+// enables the glow effect with a consistent radius, and saves the modified
+// file with a new name. This pattern helps automate PPTX workflows, validate
+// visual consistency, or integrate presentation processing into .NET apps.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Batch, Apply, Uniform, Glow,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate batch application of uniform glow to shapes in multiple presentations.
+// - Build C# tools for PowerPoint presentation processing and visual styling.
+// - Generate or transform PPTX files with consistent visual effects in .NET.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

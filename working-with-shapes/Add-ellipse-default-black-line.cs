@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Add ellipse default black line using C#
+//
+// Description:
+// Demonstrates how to add a default black line to ellipse shapes that have no
+// line defined in a PowerPoint presentation using C# and Aspose.Slides for .NET.
+// The example loads an existing presentation (or creates a new one), iterates
+// through all slides and shapes, identifies ellipses with a line width of zero,
+// and assigns a 1‑point solid black line. The modified presentation is then saved.
+// This pattern can be used to ensure visual consistency of ellipse shapes in
+// PPTX files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Ellipse, Default, Black, Line,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Ensure all ellipse shapes have a visible black outline.
+// - Automate correction of missing line formatting in PPTX files.
+// - Build C# tools for PowerPoint presentation processing and validation.
+// - Integrate shape formatting logic into .NET applications handling PPTX content.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Drawing;

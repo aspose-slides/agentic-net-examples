@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add bent connector between first two shapes on each slide using C#
+//
+// Description:
+// Demonstrates how to add a bent connector between the first two shapes on
+// every slide of a PowerPoint presentation using Aspose.Slides for .NET.
+// The example loads an existing PPTX, iterates through slides, creates a
+// connector, links it to the first two shapes, reroutes it for the shortest
+// path, and saves the modified presentation. This pattern can be used in
+// console applications or integrated into larger .NET solutions for
+// automated slide manipulation.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, connector, bent connector,
+// slide processing, shape linking, office automation
+//
+// Use Cases:
+// - Automatically connect the first two shapes on each slide.
+// - Build tools that modify PPTX files programmatically.
+// - Generate or update presentations with dynamic connectors.
+// - Validate and enhance slide layouts before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

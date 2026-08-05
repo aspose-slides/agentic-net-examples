@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export shape fill and line to JSON using C#
+//
+// Description:
+// Demonstrates how to export shape fill and line properties of each shape in a
+// PowerPoint presentation to a JSON file using C# and Aspose.Slides for .NET.
+// The example loads a PPTX, iterates through slides and shapes, captures fill
+// type, line fill type, and line width, writes the data to JSON, and saves the
+// presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Shape, Fill, Line,
+// JSON, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of shape fill and line information to JSON.
+// - Build .NET tools for analyzing or reporting on PPTX shape properties.
+// - Integrate shape property data into downstream processing pipelines.
+// - Validate presentation content before publishing or further manipulation.
+// -----------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
 using System.IO;

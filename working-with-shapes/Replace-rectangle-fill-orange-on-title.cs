@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Replace rectangle fill orange on title using C#
+//
+// Description:
+// Demonstrates how to replace the fill color of rectangle AutoShapes on the
+// title slide with orange using C# and Aspose.Slides for .NET. The example
+// loads a presentation, iterates over shapes on the first slide, changes the
+// fill of rectangle shapes to solid orange while preserving borders, and
+// saves the result. This pattern can be used to automate PPTX color adjustments
+// in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Replace, Rectangle, Fill,
+// Orange, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate changing rectangle fill colors on title slides.
+// - Build C# tools for PowerPoint presentation styling.
+// - Generate or transform PPTX files in .NET applications.
+// - Apply consistent branding colors across presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

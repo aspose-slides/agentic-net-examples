@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Set rectangle picture fill uniform verify using C#
+//
+// Description:
+// Demonstrates how to set a rectangle shape's picture fill to uniform (stretch) 
+// mode using C# and Aspose.Slides for .NET, and verifies that the fill mode is 
+// correctly applied. The example creates a new presentation, adds a rectangle 
+// filled with an image, checks the fill mode, and saves the result as a PPTX file.
+// This pattern helps developers automate PowerPoint image fill settings and 
+// validate presentation content in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Rectangle, Picture, Fill, 
+// Uniform, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting rectangle picture fill to uniform scaling.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files with specific image fill requirements.
+// - Validate picture fill configurations before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Update ellipse dash by fill color PPTX using C#
+//
+// Description:
+// Demonstrates how to locate ellipse shapes with a specific solid fill color
+// in a PowerPoint presentation and change their line dash style to Dash using
+// Aspose.Slides for .NET. The example loads a PPTX file, processes each slide,
+// updates matching ellipses, and saves the result.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Update, Ellipse, Dash, Fill Color,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate modification of ellipse line styles based on fill color.
+// - Build tools for batch updating PPTX presentations.
+// - Integrate shape property changes into .NET applications.
+// - Validate and enforce visual standards in PowerPoint files.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
