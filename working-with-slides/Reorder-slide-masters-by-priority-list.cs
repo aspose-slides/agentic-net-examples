@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Reorder slide masters by priority list using C#
+//
+// Description:
+// Demonstrates how to reorder slide masters by a predefined priority list using
+// C# and Aspose.Slides for .NET. The example loads a source presentation,
+// clones the master slides into a new presentation following the specified
+// order, copies all slides, and saves the result. This pattern helps automate
+// PowerPoint master‑slide management in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Reorder, Slide Masters, Priority,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Reorder slide masters in a presentation according to business rules.
+// - Build tools that standardize master slide ordering across multiple PPTX files.
+// - Generate or transform PPTX files while preserving a specific master hierarchy.
+// - Validate and enforce presentation templates before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
