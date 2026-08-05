@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Cache thumbnail in memory to avoid redundancy using C#
+//
+// Description:
+// Demonstrates how to cache shape thumbnails in memory to avoid redundant
+// generation when processing a PowerPoint presentation with Aspose.Slides for .NET.
+// The example loads a PPTX file, generates thumbnails for each shape on the first
+// slide, stores them in a dictionary, saves the thumbnails as PNG files, and
+// saves the presentation without refreshing its thumbnail using the cached images.
+// This pattern helps improve performance in automation scenarios that require
+// repeated access to shape images.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Cache, Thumbnail, Memory, Avoid,
+// Presentation Processing, Office Automation, Shape, Image, PNG
+//
+// Use Cases:
+// - Reduce processing time by caching shape thumbnails during batch operations.
+// - Build .NET tools that generate or manipulate shape images from PPTX files.
+// - Automate thumbnail extraction and reuse in presentation workflows.
+// - Optimize memory and CPU usage when handling large presentations.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Collections.Generic;
