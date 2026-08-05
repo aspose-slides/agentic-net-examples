@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Rename VBA module and update references using C#
+//
+// Description:
+// Demonstrates how to rename a VBA module within a PowerPoint presentation
+// and update all internal references to the old module name using C# and
+// Aspose.Slides for .NET. The example loads a PPTX file, checks for a VBA
+// project, performs the rename operation, and saves the modified presentation.
+// This pattern can be used to automate VBA module management in PPTX files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, VBA, Module Rename, Update References,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate renaming of VBA modules and updating of internal references.
+// - Build C# utilities for managing VBA code in PowerPoint presentations.
+// - Integrate VBA module manipulation into .NET applications.
+// - Validate and transform PPTX files containing VBA projects.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
