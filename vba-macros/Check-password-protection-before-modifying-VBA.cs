@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Check password protection before modifying VBA using C#
+//
+// Description:
+// Demonstrates how to check whether a VBA project embedded in a PPTM file is
+// password protected before attempting to read or modify its macros using
+// Aspose.Slides for .NET. The example loads a presentation, inspects the VBA
+// project protection flag, reports the status, and saves the file.
+// This pattern helps developers safely automate VBA handling in PowerPoint
+// automation scenarios.
+//
+// Keywords:
+// C#, PowerPoint, PPTM, Aspose.Slides for .NET, VBA, Password, Protection, Check,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Verify VBA password protection before editing macros in a PPTM file.
+// - Build .NET tools that process PowerPoint presentations with embedded VBA.
+// - Prevent runtime errors when accessing protected VBA projects.
+// - Automate safe transformation or analysis of macro-enabled presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
