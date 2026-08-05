@@ -1,3 +1,27 @@
+// -----------------------------------------------------------------------------
+// Example: Add elbow connector start third site lock using C#
+//
+// Description:
+// Demonstrates how to add an elbow (bent) connector to a presentation, connect its
+// start to an ellipse shape using the third connection site, lock the connector
+// position, and save the result using Aspose.Slides for .NET. The example shows the
+// required presentation-processing steps for PowerPoint files and produces the
+// requested output in a standalone console application. Developers can use this
+// pattern to automate PPTX workflows, validate results, or integrate presentation
+// logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Elbow Connector, BentConnector2,
+// Start Shape Connection Site, Third Site, Connector Lock, Presentation Processing,
+// Office Automation
+//
+// Use Cases:
+// - Automate adding an elbow connector with a specific start connection site.
+// - Build C# tools for PowerPoint presentation processing and shape linking.
+// - Generate or transform PPTX files with locked connectors in .NET applications.
+// - Validate connector routing and locking before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
