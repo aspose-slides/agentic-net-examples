@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Validate section preservation when saving PPT using C#
+//
+// Description:
+// Demonstrates how to validate that slide sections are preserved when a PPTX
+// presentation is saved as PPT using Aspose.Slides for .NET. The example loads
+// a PPTX file, records its section names, saves the presentation in PPT format,
+// reloads the saved file, and compares the sections to ensure they match.
+// This pattern can be used to verify conversion fidelity in automated workflows.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, PPT, Section preservation, Presentation conversion, SaveFormat.Ppt, Office automation
+//
+// Use Cases:
+// - Verify that slide sections survive conversion from PPTX to PPT.
+// - Automate testing of presentation format compatibility.
+// - Build utilities that process and validate PowerPoint files in .NET.
+// - Ensure section integrity before publishing or further processing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Collections.Generic;
