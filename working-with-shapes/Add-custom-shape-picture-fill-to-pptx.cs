@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Add custom shape picture fill to pptx using C#
+//
+// Description:
+// Demonstrates how to create a custom geometry shape (a triangle) and apply
+// a picture fill to it in a PPTX file using C# and Aspose.Slides for .NET.
+// The example covers loading an image, defining custom shape geometry,
+// setting picture fill properties, and saving the presentation as a
+// standalone console application. Developers can use this pattern to
+// automate PowerPoint shape styling, generate custom graphics, or integrate
+// presentation processing into .NET solutions.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Custom Shape, Picture Fill,
+// Geometry, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding custom-shaped picture fills to PowerPoint presentations.
+// - Build C# utilities for advanced shape styling in PPTX files.
+// - Generate or transform PPTX files with custom graphics in .NET applications.
+// - Validate and test presentation workflows involving custom geometry and fills.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
