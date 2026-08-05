@@ -1,3 +1,29 @@
+// -----------------------------------------------------------------------------
+// Example: Add group shape three ellipses shades lock using C#
+//
+// Description:
+// Demonstrates how to create a group shape containing three ellipses with
+// solid fill colors (red, green, blue) and lock their position, size, and
+// selection using C# and Aspose.Slides for .NET. The example shows the required
+// presentation‑processing steps for PowerPoint files and produces the
+// requested output in a standalone console application. Developers can use
+// this pattern to automate PPTX workflows, enforce shape locking, or integrate
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Group, Shape, Ellipse, Fill,
+// Lock, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of grouped ellipses with locked properties.
+// - Build C# tools for PowerPoint presentation processing that require shape
+//   protection.
+// - Generate or transform PPTX files with predefined locked graphics in .NET
+//   applications.
+// - Validate presentation workflows involving grouped shapes before publishing
+//   or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
