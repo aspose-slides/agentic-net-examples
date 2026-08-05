@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Scale shape thumbnail 1 5x save png using C#
+//
+// Description:
+// Demonstrates how to generate a 1.5x scaled thumbnail of a shape and save it as a PNG file using C# and 
+// Aspose.Slides for .NET. The example creates a presentation, adds a rectangle shape, extracts its thumbnail 
+// with a scaling factor of 1.5, and writes the image to disk. It also saves the presentation file.
+// Developers can use this pattern to create high‑resolution shape previews, automate thumbnail generation, 
+// or integrate shape imaging into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Scale, Shape, Thumbnail, 
+// Save, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Generate scaled shape thumbnails for documentation or UI previews.
+// - Build C# tools that extract and resize shape images from PowerPoint files.
+// - Automate PNG export of specific shapes with custom scaling.
+// - Validate shape rendering and scaling in .NET applications.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
