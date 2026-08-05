@@ -1,3 +1,21 @@
+// -----------------------------------------------------------------------------
+// Example: Add external type library references to VBA using C#
+//
+// Description:
+// Demonstrates how to add external type library references (Excel and Word) to a
+// VBA project embedded in a PowerPoint presentation using C# and Aspose.Slides for .NET.
+// The example creates a new presentation, inserts a VBA module with sample code,
+// adds OLE type library references, and saves the file as PPTX.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, VBA, Type Library, References, Excel, Word, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Embed VBA macros with external Excel/Word references into PowerPoint files.
+// - Automate creation of VBA-enabled presentations from .NET applications.
+// - Generate PPTX files that require interaction with other Office applications.
+// - Validate VBA project configuration before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;
