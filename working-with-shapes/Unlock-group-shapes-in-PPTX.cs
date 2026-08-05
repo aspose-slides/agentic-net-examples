@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Unlock group shapes in PPTX using C#
+//
+// Description:
+// Demonstrates how to unlock editing restrictions on group shapes in a PPTX
+// file using Aspose.Slides for .NET. The example loads a presentation,
+// iterates through all slides and shapes, clears lock properties on each
+// group shape, and saves the modified file. This pattern can be used to
+// prepare presentations for further editing or automated processing.
+//
+// Keywords:
+// C#, Aspose.Slides, PPTX, Unlock, Group Shape, Shape Lock, Presentation,
+// PowerPoint Automation, .NET
+//
+// Use Cases:
+// - Remove editing locks from group shapes before editing or re‑using them.
+// - Prepare PPTX files for batch processing where locked shapes cause issues.
+// - Integrate shape unlocking into custom PowerPoint manipulation tools.
+// - Ensure group shapes are editable in downstream applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
