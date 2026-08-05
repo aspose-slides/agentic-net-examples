@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Log VBA reference type library guids using C#
+//
+// Description:
+// Demonstrates how to enumerate VBA references in a PowerPoint macro-enabled
+// presentation and log the type library GUIDs (LibID) using C# and Aspose.Slides
+// for .NET. The example loads a .pptm file, accesses its VBA project, iterates
+// through the references, and prints each reference name and LibID (or notes
+// non‑OLE references). It also saves the presentation unchanged.
+//
+// Keywords:
+// C#, PowerPoint, PPTM, Aspose.Slides for .NET, VBA, Reference, Type Library,
+// Guids, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Extract and log VBA reference type library GUIDs from macro‑enabled PPTX/PPTM files.
+// - Build diagnostic tools for PowerPoint VBA projects.
+// - Verify VBA dependencies before deployment or migration.
+// - Automate presentation analysis in .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
