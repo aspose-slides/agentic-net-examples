@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Clone slide to other presentation and remove using C#
+//
+// Description:
+// Demonstrates how to clone a slide (including its master) from a source 
+// presentation to a new presentation and then remove the original slide from 
+// the source using Aspose.Slides for .NET. The example shows the required 
+// presentation-processing steps for PowerPoint files and produces the 
+// requested output in a standalone console application. Developers can use 
+// this pattern to automate PPTX workflows, validate results, or integrate 
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone, Slide, Other, 
+// Presentation, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate cloning a slide to another presentation and removing it from the source.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
