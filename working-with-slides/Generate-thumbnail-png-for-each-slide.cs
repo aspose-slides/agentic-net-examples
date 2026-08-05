@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Generate thumbnail png for each slide using C#
+//
+// Description:
+// Demonstrates how to generate thumbnail PNG images for each slide in a PowerPoint
+// presentation using Aspose.Slides for .NET. The example loads a PPTX file,
+// creates PNG thumbnails of a specified size for each slide, saves them to a
+// designated directory, and optionally saves the presentation after processing.
+// Developers can use this pattern to automate PPTX workflows, extract visual
+// previews, or integrate slide thumbnail generation into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Generate, Thumbnail, Each,
+// Slide, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate generation of PNG thumbnails for each slide in a presentation.
+// - Build C# tools for PowerPoint presentation preview extraction.
+// - Integrate slide thumbnail creation into .NET applications or CI pipelines.
+// - Validate and visualize presentation content before publishing or further processing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Drawing;
