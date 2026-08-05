@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Wrap getthumbnail calls in try catch using C#
+//
+// Description:
+// Demonstrates how to wrap shape thumbnail generation calls in a try-catch
+// block using C# and Aspose.Slides for .NET. The example creates a presentation,
+// adds a rectangle shape, attempts to retrieve its thumbnail image, and handles
+// any exceptions that may occur during the GetImage operation. The resulting
+// thumbnail is saved as a PNG file and the presentation is saved as PPTX.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Wrap, GetImage, Thumbnail, 
+// Try-Catch, Exception Handling, Shape Processing, Office Automation
+//
+// Use Cases:
+// - Safely generate shape thumbnails in automated PowerPoint workflows.
+// - Implement robust error handling for unsupported shape types.
+// - Build .NET tools that process and export slide content as images.
+// - Integrate thumbnail generation into larger presentation processing pipelines.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
@@ -11,20 +32,20 @@ class Program
         string outputPng = "shape.png";
 
         // Create a new presentation
-        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation();
-        Aspose.Slides.ISlide slide = pres.Slides[0];
+        Presentation pres = new Presentation();
+        ISlide slide = pres.Slides[0];
 
         // Add a rectangle shape
-        Aspose.Slides.IAutoShape shape = slide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 50, 50, 300, 150);
-        shape.FillFormat.FillType = Aspose.Slides.FillType.NoFill;
-        shape.LineFormat.SketchFormat.SketchType = Aspose.Slides.LineSketchType.Scribble;
+        IAutoShape shape = slide.Shapes.AddAutoShape(ShapeType.Rectangle, 50, 50, 300, 150);
+        shape.FillFormat.FillType = FillType.NoFill;
+        shape.LineFormat.SketchFormat.SketchType = LineSketchType.Scribble;
 
         // Generate thumbnail for the shape with error handling
-        Aspose.Slides.IImage shapeImage = null;
+        IImage shapeImage = null;
         try
         {
-            shapeImage = shape.GetImage(Aspose.Slides.ShapeThumbnailBounds.Shape, 1f, 1f);
-            shapeImage.Save(outputPng, Aspose.Slides.ImageFormat.Png);
+            shapeImage = shape.GetImage(ShapeThumbnailBounds.Shape, 1f, 1f);
+            shapeImage.Save(outputPng, ImageFormat.Png);
         }
         catch (Exception ex)
         {
@@ -33,6 +54,6 @@ class Program
         }
 
         // Save the presentation
-        pres.Save(outputPptx, Aspose.Slides.Export.SaveFormat.Pptx);
+        pres.Save(outputPptx, SaveFormat.Pptx);
     }
 }
