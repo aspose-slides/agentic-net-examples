@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Get effective line color after custom scheme using C#
+//
+// Description:
+// Demonstrates how to get the effective line color of a shape after applying a
+// custom color scheme to the presentation using Aspose.Slides for .NET. The
+// example loads a PPTX file, modifies the master theme line style, retrieves the
+// effective line formatting of the first shape, outputs the resulting color, and
+// saves the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Effective Line Color, Custom Scheme,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Retrieve effective line color after a custom theme is applied.
+// - Build C# utilities for analyzing shape formatting in PowerPoint files.
+// - Automate validation of line colors in presentation workflows.
+// - Integrate line‑format extraction into .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
