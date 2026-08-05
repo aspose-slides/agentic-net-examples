@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Insert clone after tagged slide and update notes using C#
+//
+// Description:
+// Demonstrates how to locate a slide by a custom tag, clone that slide,
+// insert the clone immediately after the original, add a notes slide to the
+// cloned slide, set custom notes text, and save the presentation using
+// Aspose.Slides for .NET. The example is a self‑contained console application
+// suitable for automating PPTX workflows.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, InsertClone, CustomData, Tags, NotesSlide, Presentation Automation
+//
+// Use Cases:
+// - Clone a slide identified by a custom tag and modify its notes.
+// - Build .NET utilities for PowerPoint slide duplication and annotation.
+// - Automate presentation preparation tasks that require tagged slide handling.
+// - Integrate slide cloning and notes updating into larger document processing pipelines.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
