@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Log thumbnail generation details with timestamp using C#
+//
+// Description:
+// Demonstrates how to generate a thumbnail image for a shape in a PowerPoint
+// presentation and log the operation details, including the shape identifier
+// and a timestamp, using Aspose.Slides for .NET. The example creates a simple
+// presentation, adds a rectangle shape, extracts its thumbnail, saves the image,
+// logs the generation event, and finally saves the presentation.
+//
+// Keywords:
+// C#, Aspose.Slides, Shape, Thumbnail, Timestamp, Logging, PowerPoint, PPTX,
+// Image Generation, Presentation Automation
+//
+// Use Cases:
+// - Automate creation of shape thumbnails with audit logging.
+// - Build utilities that track presentation modifications over time.
+// - Integrate shape image extraction into .NET applications with detailed logs.
+// - Validate and document presentation processing steps in CI pipelines.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
