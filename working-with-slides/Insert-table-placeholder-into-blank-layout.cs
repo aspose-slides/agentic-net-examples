@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Insert table placeholder into blank layout using C#
+//
+// Description:
+// Demonstrates how to insert a table placeholder into a blank layout slide using
+// C# and Aspose.Slides for .NET. The example creates a new presentation, obtains
+// the blank layout, adds a table placeholder with defined position and size, and
+// saves the result as a PPTX file. This pattern can be used to automate PPTX
+// workflows, validate results, or integrate presentation logic into .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Insert, Table, Placeholder,
+// Blank, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate insertion of a table placeholder into a blank layout.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

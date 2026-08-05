@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Rename section to results and update list using C#
+//
+// Description:
+// Demonstrates how to rename the third section of a PowerPoint presentation
+// to "Results" and then output the names of all sections using C# and 
+// Aspose.Slides for .NET. The example creates a sample presentation if none
+// exists, performs the rename, lists section names to the console, and saves
+// the modified file. This pattern can be used to automate section management
+// in PPTX files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Rename Section, Results, 
+// Section List, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Rename a specific section in a presentation to a desired name.
+// - Retrieve and display all section names after modifications.
+// - Build C# utilities for managing PPTX sections programmatically.
+// - Integrate section renaming into larger PowerPoint automation workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

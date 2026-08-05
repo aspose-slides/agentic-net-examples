@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Clone multiple slides and compress presentation using C#
+//
+// Description:
+// Demonstrates how to clone all slides from a source PowerPoint file into a new
+// presentation and then compress the resulting PPTX file into a ZIP archive using
+// Aspose.Slides for .NET. The example includes file existence checks, proper
+// disposal of presentation objects, and basic error handling for both cloning
+// and compression steps.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone Slides, Multiple Slides,
+// Compress Presentation, ZIP Archive, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate cloning of all slides from one presentation to another.
+// - Create backup ZIP archives of generated PPTX files.
+// - Build .NET tools for batch processing and distribution of PowerPoint content.
+// - Integrate slide cloning and compression into larger document workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.IO.Compression;
@@ -23,17 +44,17 @@ namespace SlideBatchClone
             }
 
             // Initialize presentations
-            Aspose.Slides.Presentation srcPres = null;
-            Aspose.Slides.Presentation destPres = null;
+            Presentation srcPres = null;
+            Presentation destPres = null;
 
             try
             {
-                srcPres = new Aspose.Slides.Presentation(sourcePath);
-                destPres = new Aspose.Slides.Presentation();
+                srcPres = new Presentation(sourcePath);
+                destPres = new Presentation();
 
                 // Clone each slide from source to destination
-                Aspose.Slides.ISlideCollection srcSlides = srcPres.Slides;
-                Aspose.Slides.ISlideCollection destSlides = destPres.Slides;
+                ISlideCollection srcSlides = srcPres.Slides;
+                ISlideCollection destSlides = destPres.Slides;
 
                 for (int i = 0; i < srcSlides.Count; i++)
                 {
@@ -41,7 +62,7 @@ namespace SlideBatchClone
                 }
 
                 // Save the destination presentation
-                destPres.Save(destinationPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                destPres.Save(destinationPath, SaveFormat.Pptx);
             }
             catch (NotSupportedException)
             {
@@ -51,8 +72,8 @@ namespace SlideBatchClone
             finally
             {
                 // Dispose presentations
-                if (srcPres != null) srcPres.Dispose();
-                if (destPres != null) destPres.Dispose();
+                srcPres?.Dispose();
+                destPres?.Dispose();
             }
 
             // Compress the resulting PPTX file
@@ -67,11 +88,9 @@ namespace SlideBatchClone
                     }
 
                     using (FileStream zipToOpen = new FileStream(zipPath, FileMode.Create))
+                    using (ZipArchive archive = new ZipArchive(zipToOpen, ZipArchiveMode.Create))
                     {
-                        using (ZipArchive archive = new ZipArchive(zipToOpen, ZipArchiveMode.Create))
-                        {
-                            archive.CreateEntryFromFile(destinationPath, Path.GetFileName(destinationPath));
-                        }
+                        archive.CreateEntryFromFile(destinationPath, Path.GetFileName(destinationPath));
                     }
 
                     Console.WriteLine("Presentation compressed to: " + zipPath);

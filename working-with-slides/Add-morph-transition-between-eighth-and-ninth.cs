@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add morph transition between eighth and ninth using C#
+//
+// Description:
+// Demonstrates how to add a Morph transition between the eighth and ninth slides
+// in a PowerPoint presentation using C# and Aspose.Slides for .NET. The example
+// creates a new presentation, clones slides to ensure nine slides exist, applies
+// a Morph transition with a custom MorphType, and saves the result as a PPTX file.
+// This pattern can be used to automate slide transitions in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Morph, Transition, Slide, 
+// Eighth, Ninth, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding a Morph transition between specific slides.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or modify PPTX files with custom transitions in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

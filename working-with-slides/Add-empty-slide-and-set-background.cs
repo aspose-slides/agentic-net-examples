@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add empty slide and set background using C#
+//
+// Description:
+// Demonstrates how to add an empty slide to a presentation and set its
+// background to an image using C# and Aspose.Slides for .NET. The example
+// creates a new presentation, inserts a blank slide, adds a background image
+// from a file, applies it to the slide, and saves the result as a PPTX file.
+// This pattern can be used for automating slide creation and background styling.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Empty Slide, Background Image,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Programmatically add slides with custom image backgrounds.
+// - Build .NET tools for generating PowerPoint presentations.
+// - Apply consistent branding or templates to slides.
+// - Automate creation of slide decks with predefined backgrounds.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

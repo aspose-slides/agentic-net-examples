@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Set footer on layout hide children using C#
+//
+// Description:
+// Demonstrates how to set the footer visibility on a layout slide and then hide
+// the footer on its child slides using C# and Aspose.Slides for .NET. The example
+// loads an existing presentation, modifies the footer settings on a layout and
+// its dependent slides, and saves the result as a new PPTX file. This pattern
+// can be used to control footer visibility across slide hierarchies in PowerPoint
+// automation scenarios.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Footer, Layout, Hide, Children,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting footer visibility on a layout while hiding it on child slides.
+// - Build C# tools for PowerPoint presentation processing that manage header/footer settings.
+// - Generate or transform PPTX files with customized footer behavior in .NET applications.
+// - Validate presentation workflows involving layout inheritance before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -42,7 +64,7 @@ class Program
                 }
 
                 // Save the modified presentation
-                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                presentation.Save(outputPath, SaveFormat.Pptx);
             }
         }
         catch (Exception ex)

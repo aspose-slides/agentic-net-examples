@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Compare two presentations and report differences using C#
+//
+// Description:
+// Demonstrates how to compare two PowerPoint presentations slide by slide,
+// report slides that differ, detect mismatched slide counts, and save a copy of
+// the first presentation using Aspose.Slides for .NET. The example shows the
+// required presentation‑processing steps for PPTX files and produces console
+// output that can be used in automation or validation scenarios.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Compare, Presentations, Report,
+// Differences, Slide Comparison, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate comparison of two presentations and identify differing slides.
+// - Build C# tools for PowerPoint slide validation and quality checks.
+// - Generate reports on presentation changes in .NET applications.
+// - Ensure consistency between versioned PPTX files before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

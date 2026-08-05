@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Apply wipe and color fade transition using C#
+//
+// Description:
+// Demonstrates how to apply a wipe slide transition and configure the optional
+// black transition using C# and Aspose.Slides for .NET. The example creates a
+// new presentation, adds a blank slide, sets the transition type to Wipe, and
+// disables the "from black" effect. It then saves the presentation as a PPTX
+// file. This pattern can be used to automate slide transition settings in
+// PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, Wipe, Color Fade, 
+// Optional Black Transition, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate applying wipe transitions to slides.
+// - Configure optional black transition settings programmatically.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or modify PPTX files with specific slide transition effects.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -23,7 +44,6 @@ namespace SlideTransitionExample
                 // Apply Wipe transition
                 pres.Slides[0].SlideShowTransition.Type = Aspose.Slides.SlideShow.TransitionType.Wipe;
 
-                // Set transition direction (using optional black transition as an example)
                 // Note: Aspose.Slides does not provide a direct API for color fade; this is a placeholder.
                 // If a color fade were supported, it would be set here.
 

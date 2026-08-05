@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Get slide by ID and replace placeholders using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, retrieve a slide by its
+// unique identifier, replace text placeholders within shapes on that slide using
+// values from a dictionary, and save the modified presentation. The example
+// uses Aspose.Slides for .NET and can serve as a template for automating PPTX
+// content updates.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Slide ID, Placeholder Replacement,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Update specific slides in a presentation based on slide ID.
+// - Replace dynamic text placeholders (e.g., {{Name}}, {{Date}}) with runtime data.
+// - Automate generation of personalized PowerPoint files in .NET applications.
+// - Validate and transform PPTX content before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;

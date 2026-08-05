@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Set all slides background to light gray using C#
+//
+// Description:
+// Demonstrates how to set all slides background to light gray using C# and 
+// Aspose.Slides for .NET. The example processes an existing PPTX file if it 
+// exists, applying a solid light‑gray background to every slide. If the input 
+// file is missing, it creates a new presentation with a single slide and sets 
+// its background to light gray. The modified or newly created presentation is 
+// then saved as a PPTX file. This pattern can be used to automate background 
+// styling in PowerPoint files within .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Slides, Background, Light, 
+// Gray, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting all slides background to light gray.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

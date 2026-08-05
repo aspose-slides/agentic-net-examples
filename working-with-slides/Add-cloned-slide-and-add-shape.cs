@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add cloned slide and add shape using C#
+//
+// Description:
+// Demonstrates how to clone an existing slide, append it to a presentation,
+// and add a rectangle shape to the cloned slide using C# and Aspose.Slides for .NET.
+// The example loads a PPTX file, performs the modifications, and saves the result.
+// This pattern helps automate slide duplication and shape insertion in PowerPoint
+// files within .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone Slide, Add Shape, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Duplicate a slide and enrich it with additional visual elements.
+// - Build tools that programmatically modify presentations by cloning slides.
+// - Generate or transform PPTX files with custom shapes in .NET.
+// - Validate and test slide cloning workflows before deployment.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

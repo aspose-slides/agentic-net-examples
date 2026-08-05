@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Export slide master collection to JSON schema using C#
+//
+// Description:
+// Demonstrates how to export a slide master collection to a JSON schema using
+// C# and Aspose.Slides for .NET. The example loads a PowerPoint presentation,
+// extracts master slide information (including layout details and placeholder
+// counts), serializes the data to a formatted JSON file, and saves a copy of the
+// original presentation. This pattern can be used to automate PPTX workflows,
+// validate slide master structures, or integrate presentation metadata handling
+// into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Slide, Master,
+// Collection, JSON, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate export of slide master collection to JSON for documentation or analysis.
+// - Build C# tools that process PowerPoint presentation metadata.
+// - Generate or transform PPTX files while preserving original content.
+// - Validate slide master configurations before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Collections.Generic;

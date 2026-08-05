@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Apply fade and zoom transition to slide using C#
+//
+// Description:
+// Demonstrates how to apply a fade transition to the first slide and a zoom
+// frame linking to a second slide using C# and Aspose.Slides for .NET. The
+// example creates a new presentation, adds a target slide, inserts a zoom
+// frame on the first slide, sets the zoom transition duration, applies a fade
+// transition to the first slide, and saves the result as a PPTX file. This
+// pattern can be used to automate slide transition effects in PowerPoint
+// presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Fade Transition, Zoom Frame,
+// Slide Transition, Presentation Automation, Office Automation
+//
+// Use Cases:
+// - Automate adding fade and zoom transitions to PowerPoint slides.
+// - Build C# tools for enhancing slide navigation and visual effects.
+// - Generate or modify PPTX files with custom transition settings in .NET
+//   applications.
+// - Validate presentation transition workflows before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;

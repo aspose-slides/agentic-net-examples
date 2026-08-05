@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Get slide by ID and set tags using C#
+//
+// Description:
+// Demonstrates how to retrieve a slide by its persistent ID and assign custom
+// tags to it using Aspose.Slides for .NET. The example loads a PPTX file,
+// accesses the first slide via its ID, updates the slide's custom data tags,
+// and saves the modified presentation. This pattern is useful for automating
+// slide metadata management in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Slide, Tags, CustomData,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Retrieve a specific slide using its persistent ID.
+// - Add or modify custom tags on a slide for metadata tracking.
+// - Automate PPTX metadata updates in batch processing tools.
+// - Integrate slide tag management into .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

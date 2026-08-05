@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Enable ScaleObjectsFit fit resize after slide size using C#
+//
+// Description:
+// Demonstrates how to change a presentation's slide size while automatically
+// scaling existing objects to fit the new dimensions using the EnsureFit
+// ScaleObjectsFit option in Aspose.Slides for .NET. The sample loads a PPTX,
+// applies a new slide size, saves the result, and includes basic error handling.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Enable, ScaleObjectsFit, Resize,
+// SlideSize, EnsureFit, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Adjust slide dimensions of existing presentations while preserving layout.
+// - Build tools that need to re‑size slides and automatically scale content.
+// - Automate batch processing of PPTX files to a uniform slide size.
+// - Validate that scaling behaves as expected before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Insert image into picture placeholder from path using C#
+//
+// Description:
+// Demonstrates how to insert an image from a file path into a picture placeholder
+// in a PowerPoint presentation using C# and Aspose.Slides for .NET. The example
+// creates a new presentation, adds a picture placeholder to a blank layout slide,
+// loads an external image, and places it into the placeholder on the first slide.
+// It then saves the presentation as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Insert Image, Picture Placeholder,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate inserting images into picture placeholders from file paths.
+// - Build C# tools for PowerPoint presentation generation and editing.
+// - Generate or transform PPTX files programmatically in .NET applications.
+// - Validate presentation workflows involving image placement before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

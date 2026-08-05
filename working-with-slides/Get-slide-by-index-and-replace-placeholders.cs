@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Get slide by index and replace placeholders using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, access a slide by its
+// zero‑based index, iterate through its shapes, replace any placeholder text
+// with a custom string, and save the modified presentation. The example uses
+// Aspose.Slides for .NET in a simple console application and shows the essential
+// steps for slide‑level processing and placeholder manipulation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Slide Index, Placeholder, Text Replacement, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate retrieval of a specific slide and update its placeholder content.
+// - Build C# utilities for batch processing of PPTX files to replace template text.
+// - Integrate slide‑level editing into .NET applications that generate or modify presentations.
+// - Validate and test placeholder replacement logic before publishing presentations.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -37,16 +57,16 @@ namespace AsposeSlidesExample
                     }
 
                     // Access the slide by index
-                    Aspose.Slides.ISlide slide = presentation.Slides[slideIndex];
+                    ISlide slide = presentation.Slides[slideIndex];
 
                     // Iterate through all shapes on the slide
-                    foreach (Aspose.Slides.IShape shape in slide.Shapes)
+                    foreach (IShape shape in slide.Shapes)
                     {
-                        // Check if the shape has a placeholder
-                        if (shape.Placeholder != null && shape is Aspose.Slides.IAutoShape)
+                        // Check if the shape has a placeholder and is an AutoShape
+                        if (shape.Placeholder != null && shape is IAutoShape)
                         {
                             // Replace placeholder text with actual content
-                            Aspose.Slides.IAutoShape autoShape = (Aspose.Slides.IAutoShape)shape;
+                            IAutoShape autoShape = (IAutoShape)shape;
                             autoShape.TextFrame.Text = "Replaced Content";
                         }
                     }
@@ -55,12 +75,12 @@ namespace AsposeSlidesExample
                     presentation.Save(outputPath, SaveFormat.Pptx);
                 }
             }
-            catch (Aspose.Slides.PptxUnsupportedFormatException ex)
+            catch (PptxUnsupportedFormatException ex)
             {
                 // Handle unsupported PPTX format
                 Console.WriteLine($"Unsupported PPTX format: {ex.Message}");
             }
-            catch (Aspose.Slides.PptUnsupportedFormatException ex)
+            catch (PptUnsupportedFormatException ex)
             {
                 // Handle unsupported PPT format
                 Console.WriteLine($"Unsupported PPT format: {ex.Message}");

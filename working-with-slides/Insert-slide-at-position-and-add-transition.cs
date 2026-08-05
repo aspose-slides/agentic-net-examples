@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Insert slide at position and add transition using C#
+//
+// Description:
+// Demonstrates how to insert a slide at a specific position and add a
+// transition effect using C# and Aspose.Slides for .NET. The example shows the
+// required presentation-processing steps for PowerPoint files and produces the
+// requested output in a standalone console application. Developers can use this
+// pattern to automate PPTX workflows, validate results, or integrate presentation
+// logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Insert, Slide, Position,
+// Transition, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate insertion of a slide at a specific index with a custom transition.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

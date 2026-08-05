@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Validate slide masters have layout before save using C#
+//
+// Description:
+// Demonstrates how to validate that each master slide contains at least one
+// layout slide before saving a presentation using C# and Aspose.Slides for .NET.
+// The example loads a PPTX file, checks each master for layout slides, adds a
+// default title layout when missing, and then saves the updated presentation.
+// This pattern helps ensure PPTX files meet required structure before further
+// processing or distribution.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Validate, Slide, Masters, Layout,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate validation of slide master layouts before saving presentations.
+// - Build C# utilities for PowerPoint file integrity checks.
+// - Ensure PPTX files contain required layout slides for downstream tools.
+// - Integrate slide‑master validation into .NET applications handling Office files.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -29,7 +51,7 @@ class Program
                     {
                         Console.WriteLine("Master slide '{0}' has no layout slides.", master.Name);
                         // Add a default layout slide to satisfy the validation
-                        master.LayoutSlides.Add(SlideLayoutType.Title, "Default Title");
+                        master.LayoutSlides.Add(SlideLayoutType.Title);
                     }
                 }
 

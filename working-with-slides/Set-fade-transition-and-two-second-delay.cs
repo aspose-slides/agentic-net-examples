@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Set fade transition and two second delay using C#
+//
+// Description:
+// Demonstrates how to apply a Fade slide transition with a two‑second automatic
+// advance delay to every slide in a PowerPoint presentation using Aspose.Slides
+// for .NET. The example loads an existing PPTX file, updates the transition
+// settings, and saves the result as a new PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Fade, Transition, Two Second Delay,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate applying Fade transitions with a fixed delay to all slides.
+// - Build .NET tools for batch processing of PowerPoint presentations.
+// - Generate or modify PPTX files programmatically.
+// - Validate slide transition settings before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

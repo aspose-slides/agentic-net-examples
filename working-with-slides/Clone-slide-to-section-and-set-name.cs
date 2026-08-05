@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Clone slide to section and set name using C#
+//
+// Description:
+// Demonstrates how to clone a slide into a new section and set the section's
+// name using C# and Aspose.Slides for .NET. The example creates a presentation,
+// adds a shape, defines an original section, creates an empty section, clones
+// the first slide into that section, renames the section, and saves the file.
+// This pattern can be used to programmatically reorganize slides within
+// PowerPoint presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone, Slide, Section, Name,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate moving or copying slides into specific sections.
+// - Build tools that reorganize PPTX content for review or publishing.
+// - Generate presentations with dynamically created sections.
+// - Validate slide organization workflows in .NET applications.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

@@ -1,3 +1,21 @@
+// -----------------------------------------------------------------------------
+// Example: Apply random transition to each slide using C#
+//
+// Description:
+// Demonstrates how to create a presentation, add slides, and assign a random
+// slide transition to each slide while ensuring that consecutive slides do not
+// share the same transition type. The example uses Aspose.Slides for .NET to
+// build a PPTX file in a console application.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Random Transition, SlideShow, Presentation Processing, .NET
+//
+// Use Cases:
+// - Generate a PPTX with varied slide transitions for presentations.
+// - Automate slide transition assignment in bulk PowerPoint files.
+// - Build .NET tools that customize slide show behavior programmatically.
+// - Ensure visual variety by avoiding repeated transition types.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

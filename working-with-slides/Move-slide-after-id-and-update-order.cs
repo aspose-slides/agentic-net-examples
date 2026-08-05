@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Move slide after id and update order using C#
+//
+// Description:
+// Demonstrates how to move a slide after a specified slide ID and update the
+// slide order in a PowerPoint presentation using Aspose.Slides for .NET. The
+// example loads an existing PPTX file, relocates a slide based on its unique
+// identifier, and saves the modified presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Move Slide, Slide ID, Reorder,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Reorder slides programmatically by slide ID.
+// - Build .NET utilities for PowerPoint slide management.
+// - Automate slide rearrangement in batch processing scenarios.
+// - Validate and adjust presentation structure before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

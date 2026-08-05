@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Clone layout slide to different master using C#
+//
+// Description:
+// Demonstrates how to clone a layout slide from a source presentation into a
+// destination presentation while also cloning its master slide using
+// Aspose.Slides for .NET. The example loads a source PPTX, copies the first
+// slide's layout and associated master to a new presentation, and saves the
+// result. This pattern is useful for reusing slide designs across separate
+// presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone, Layout Slide, Master Slide,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Reuse a slide layout and its master in another presentation.
+// - Build tools that consolidate slides from multiple sources while preserving design.
+// - Automate PPTX transformations that require master slide duplication.
+// - Validate and test slide cloning workflows in .NET applications.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

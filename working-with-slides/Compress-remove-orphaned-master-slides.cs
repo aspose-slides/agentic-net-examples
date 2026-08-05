@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Compress remove orphaned master slides using C#
+//
+// Description:
+// Demonstrates how to compress and remove orphaned master and layout slides
+// from a PowerPoint presentation using C# and Aspose.Slides for .NET. The
+// example loads a source PPTX, clones a slide with its master into a new
+// presentation, then invokes the Compress utility to eliminate unused master
+// and layout slides before saving the result.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Compress, Remove, Orphaned,
+// Master Slides, Layout Slides, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Reduce file size by eliminating unused master and layout slides.
+// - Prepare clean presentations for distribution or archiving.
+// - Automate PPTX cleanup in batch processing pipelines.
+// - Integrate presentation optimization into .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

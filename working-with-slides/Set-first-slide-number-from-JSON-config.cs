@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Set first slide number from JSON config using C#
+//
+// Description:
+// Demonstrates how to set the first slide number of a PowerPoint presentation
+// based on a value read from a JSON configuration file using C# and Aspose.Slides
+// for .NET. The example creates a new presentation, applies the slide number,
+// and saves the result as a PPTX file in a standalone console application.
+// Developers can adapt this pattern to automate PPTX workflows, validate
+// configuration-driven settings, or integrate presentation logic into .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, First Slide Number, JSON,
+// Configuration, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting the first slide number from external JSON configuration.
+// - Build C# utilities for PowerPoint presentation customization.
+// - Generate or modify PPTX files programmatically in .NET applications.
+// - Validate presentation settings before publishing or further processing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Text.Json;

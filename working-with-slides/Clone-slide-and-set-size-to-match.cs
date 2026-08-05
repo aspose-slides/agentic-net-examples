@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Clone slide and set size to match using C#
+//
+// Description:
+// Demonstrates how to clone the first slide from a source presentation into a
+// destination template presentation and adjust the destination slide size to
+// match the source presentation dimensions using Aspose.Slides for .NET.
+// The example includes file existence checks, presentation loading, slide
+// cloning, size synchronization, and saving the resulting PPTX file.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Clone Slide, Slide Size, Match Size,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Copy a specific slide from one PPTX into another while preserving layout.
+// - Ensure the target presentation adopts the same slide dimensions as the source.
+// - Automate PPTX merging and size normalization in .NET applications.
+// - Prepare presentations for consistent rendering across different devices.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

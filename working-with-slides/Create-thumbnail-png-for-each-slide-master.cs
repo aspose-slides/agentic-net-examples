@@ -1,5 +1,29 @@
+// -----------------------------------------------------------------------------
+// Example: Create thumbnail png for each slide master using C#
+//
+// Description:
+// Demonstrates how to create a PNG thumbnail for each slide master in a PowerPoint
+// presentation using C# and Aspose.Slides for .NET. The example loads a PPTX file,
+// iterates through all master slides, generates a thumbnail image for each master,
+// and saves the images to a specified output folder. This pattern can be used to
+// automate PPTX workflows, validate presentation designs, or integrate slide‑master
+// processing into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Thumbnail, Slide Master,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of PNG thumbnails for each slide master.
+// - Build C# tools for PowerPoint presentation analysis and documentation.
+// - Generate visual previews of master slide designs in .NET applications.
+// - Validate and compare master slide layouts before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
+using System.Drawing;
+using System.Drawing.Imaging;
 using Aspose.Slides;
 using Aspose.Slides.Export;
 
@@ -30,27 +54,22 @@ namespace SlideMasterThumbnailGenerator
             try
             {
                 // Load presentation
-                Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
-
-                // Iterate through each master slide
-                for (int index = 0; index < pres.Masters.Count; index++)
+                using (Presentation pres = new Presentation(inputPath))
                 {
-                    Aspose.Slides.IMasterSlide master = pres.Masters[index];
+                    // Iterate through each master slide
+                    for (int index = 0; index < pres.Masters.Count; index++)
+                    {
+                        IMasterSlide master = pres.Masters[index];
 
-                    // NOTE: MasterSlide does not provide a GetImage method.
-                    // Therefore, generating a thumbnail directly from a master slide is not supported.
-                    // If needed, consider creating a temporary slide based on the master layout and capture its image.
-
-                    // Placeholder for potential future implementation:
-                    // string outputPath = Path.Combine(outputFolder, $"Master_{index}.png");
-                    // using (Aspose.Slides.IImage image = master.GetImage())
-                    // {
-                    //     image.Save(outputPath, Aspose.Slides.ImageFormat.Png);
-                    // }
+                        // Generate thumbnail for the master slide (scale 1.0 = original size)
+                        using (Image thumbnail = master.GetThumbnail(1.0f, 1.0f))
+                        {
+                            string outputPath = Path.Combine(outputFolder, $"Master_{index}.png");
+                            thumbnail.Save(outputPath, ImageFormat.Png);
+                            Console.WriteLine($"Saved thumbnail for master {index} to {outputPath}");
+                        }
+                    }
                 }
-
-                // Save the presentation (no changes made)
-                pres.Save(inputPath, SaveFormat.Pptx);
             }
             catch (NotSupportedException)
             {

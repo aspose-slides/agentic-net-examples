@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add png to first master and save using C#
+//
+// Description:
+// Demonstrates how to add a PNG image to the first master slide of a new
+// presentation and save the result as a PPTX file using C# and Aspose.Slides
+// for .NET. The example creates a presentation, inserts the image into the
+// master slide's shape collection covering the entire slide area, and writes
+// the output file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Master Slide, Add Image,
+// Save Presentation, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding a background PNG to the first master slide of presentations.
+// - Build .NET tools for PowerPoint master slide customization.
+// - Generate or modify PPTX files programmatically in C# applications.
+// - Prepare presentation templates with predefined images before content creation.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -18,18 +39,18 @@ class Program
 
         try
         {
-            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation())
+            using (Presentation presentation = new Presentation())
             {
                 // Add the PNG image to the presentation's image collection
                 byte[] imageData = File.ReadAllBytes(inputImagePath);
-                Aspose.Slides.IPPImage image = presentation.Images.AddImage(imageData);
+                IPPImage image = presentation.Images.AddImage(imageData);
 
                 // Get the first master slide
-                Aspose.Slides.IMasterSlide masterSlide = presentation.Masters[0];
+                IMasterSlide masterSlide = presentation.Masters[0];
 
                 // Add the image as a picture frame covering the entire master slide
                 masterSlide.Shapes.AddPictureFrame(
-                    Aspose.Slides.ShapeType.Rectangle,
+                    ShapeType.Rectangle,
                     0,
                     0,
                     presentation.SlideSize.Size.Width,
@@ -37,7 +58,7 @@ class Program
                     image);
 
                 // Save the presentation
-                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                presentation.Save(outputPath, SaveFormat.Pptx);
             }
         }
         catch (NotSupportedException)

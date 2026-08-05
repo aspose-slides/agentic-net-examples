@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Render notes at bottom of slide image using C#
+//
+// Description:
+// Demonstrates how to render notes at the bottom of a slide image using C# and
+// Aspose.Slides for .NET. The example loads a PPTX file, configures the notes
+// layout to appear at the bottom (truncated if necessary), renders the first
+// slide together with its notes to a PNG image, and saves both the image and
+// the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Render, Notes, Bottom, Slide,
+// Image, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate rendering of slide images with notes positioned at the bottom.
+// - Build C# utilities for PowerPoint presentation processing and image export.
+// - Generate visual assets that include slide content and speaker notes.
+// - Validate presentation layouts before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Apply custom transition with sound effect using C#
+//
+// Description:
+// Demonstrates how to apply a custom slide transition with an embedded sound
+// effect using C# and Aspose.Slides for .NET. The example loads an existing
+// presentation, adds a WAV audio file to the presentation's audio collection,
+// assigns the audio to a fade transition on the first slide, and saves the
+// result.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, Custom, Transition,
+// Sound, Audio, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding custom transitions with sound to PowerPoint slides.
+// - Build C# utilities for enhancing presentations with audio effects.
+// - Generate or modify PPTX files programmatically in .NET applications.
+// - Validate and preview slide transitions before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

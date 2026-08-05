@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Validate slide dimensions against template using C#
+//
+// Description:
+// Demonstrates how to validate slide dimensions against a template using C# and 
+// Aspose.Slides for .NET. The example shows the required 
+// presentation-processing steps for PowerPoint files and produces the 
+// requested output in a standalone console application. Developers can use 
+// this pattern to automate PPTX workflows, validate results, or integrate 
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Validate, Slide, Dimensions, 
+// Template, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate validation of slide dimensions against a predefined template.
+// - Build C# tools for PowerPoint presentation processing and quality checks.
+// - Generate or transform PPTX files in .NET applications while ensuring size compliance.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Drawing;

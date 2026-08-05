@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Clone second master and verify integrity using C#
+//
+// Description:
+// Demonstrates how to clone the second master slide from a source PowerPoint
+// presentation and verify its integrity by comparing the cloned master with the
+// original using Aspose.Slides for .NET. The example loads a PPTX file, checks
+// for the presence of at least two master slides, clones the second master into
+// a new presentation, validates the clone, and saves the result.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone, Second Master, Verify,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate cloning of a specific master slide for reuse in other presentations.
+// - Build validation tools to ensure master slide integrity after cloning.
+// - Generate or transform PPTX files programmatically in .NET applications.
+// - Verify presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -54,7 +74,6 @@ namespace CloneMasterExample
             }
             catch (NotSupportedException)
             {
-                // Format not supported
                 // Format not supported.
             }
             catch (Exception ex)

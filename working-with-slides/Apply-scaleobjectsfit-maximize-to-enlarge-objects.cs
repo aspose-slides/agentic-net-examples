@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Apply scaleobjectsfit maximize to enlarge objects using C#
+//
+// Description:
+// Demonstrates how to increase a presentation's slide size and apply the
+// ScaleObjectsFit.Maximize option to enlarge all objects so they fill the new
+// slide dimensions using Aspose.Slides for .NET. The example loads an existing
+// PPTX file, adjusts the slide size, and saves the result.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, ScaleObjectsFit, Maximize,
+// Enlarge, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automatically enlarge slide content when changing slide dimensions.
+// - Build C# utilities for scaling objects in PowerPoint presentations.
+// - Integrate slide size adjustments into .NET automation workflows.
+// - Validate visual layout after resizing slides in batch processing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -24,10 +44,10 @@ class Program
             using (Presentation presentation = new Presentation(inputPath))
             {
                 // Increase slide size and maximize objects to fill the new size
-                presentation.SlideSize.SetSize(Aspose.Slides.SlideSizeType.A4Paper, Aspose.Slides.SlideSizeScaleType.Maximize);
+                presentation.SlideSize.SetSize(SlideSizeType.A4Paper, SlideSizeScaleType.Maximize);
 
                 // Save the modified presentation
-                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                presentation.Save(outputPath, SaveFormat.Pptx);
             }
         }
         catch (NotSupportedException)

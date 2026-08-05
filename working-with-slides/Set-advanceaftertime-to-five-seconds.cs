@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set advanceaftertime to five seconds for slides in a section using C#
+//
+// Description:
+// Demonstrates how to set the SlideShowTransition.AdvanceAfterTime property
+// to five seconds (5000 milliseconds) for all slides within a specific section
+// of a PowerPoint presentation using Aspose.Slides for .NET. The example loads
+// an existing PPTX file, validates the target section, applies the timing to
+// each slide, and saves the modified presentation.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, AdvanceAfterTime, SlideShowTransition,
+// Section, Five Seconds, Presentation Automation, .NET
+//
+// Use Cases:
+// - Apply a uniform automatic slide advance time to a section of a presentation.
+// - Prepare timed slide decks for kiosks, webinars, or self‑running presentations.
+// - Automate PowerPoint slide timing adjustments in batch processing tools.
+// - Integrate slide timing configuration into .NET applications that generate or modify PPTX files.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

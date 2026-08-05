@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Convert all slides to JPEG 85 quality using C#
+//
+// Description:
+// Demonstrates how to convert every slide in a PowerPoint presentation to a JPEG
+// image with 85% quality using C# and Aspose.Slides for .NET. The example loads a
+// PPTX file, iterates through all slides, renders each slide as a full‑scale image,
+// and saves the images as JPEG files with the specified quality setting. It also
+// ensures the input file exists and the output directory is created if needed.
+// This pattern can be used to automate slide‑to‑image conversion workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, JPEG, Convert, Slides, Jpeg,
+// Quality, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of all slides in a presentation to JPEG images at 85% quality.
+// - Build C# utilities for batch processing of PowerPoint files.
+// - Generate image assets from slides for web publishing or documentation.
+// - Integrate slide rendering into .NET applications with quality control.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

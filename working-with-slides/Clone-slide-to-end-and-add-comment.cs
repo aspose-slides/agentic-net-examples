@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Clone slide to end and add comment using C#
+//
+// Description:
+// Demonstrates how to clone the first slide to the end of a presentation and
+// add a comment to the cloned slide using C# and Aspose.Slides for .NET. The
+// example loads an existing PPTX file, performs the slide cloning and comment
+// insertion, and saves the result as a new PPTX file. This pattern can be used
+// to automate slide duplication and annotation tasks in PowerPoint workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone Slide, Add Comment,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate cloning of a slide and attaching comments programmatically.
+// - Build C# utilities for annotating PowerPoint presentations.
+// - Generate or modify PPTX files in .NET applications.
+// - Validate presentation content before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

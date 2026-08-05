@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set slide master background gradient using C#
+//
+// Description:
+// Demonstrates how to set a gradient background on a slide master using C#
+// and Aspose.Slides for .NET. The example loads an existing presentation,
+// modifies the first master slide's background to a two‑color gradient, and
+// saves the result as a new PPTX file. This pattern can be used to automate
+// PowerPoint styling tasks, create consistent branding across slides, or
+// integrate presentation processing into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Slide Master, Background, Gradient,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting a gradient background on slide masters.
+// - Build C# tools for consistent slide master styling in PowerPoint files.
+// - Generate or transform PPTX presentations with custom master designs.
+// - Validate and apply branding guidelines programmatically.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Drawing;

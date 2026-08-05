@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Delete orphaned layouts after slide removal using C#
+//
+// Description:
+// Demonstrates how to delete orphaned layout slides after removing a slide 
+// from a presentation using C# and Aspose.Slides for .NET. The example loads a 
+// PPTX file, removes the first slide, cleans up any layout slides that are no 
+// longer referenced, and saves the result. This pattern helps automate PPTX 
+// workflows, ensure presentation integrity, and integrate layout management 
+// into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Delete, Orphaned, Layouts, 
+// After, Slide Removal, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate removal of unused layout slides after slide deletion.
+// - Build C# tools for PowerPoint presentation cleanup.
+// - Generate or transform PPTX files while maintaining layout consistency.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
