@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add text placeholder to each layout slide using C#
+//
+// Description:
+// Demonstrates how to add a text placeholder to every layout slide within a
+// master slide using Aspose.Slides for .NET. The example creates a new
+// presentation, iterates over the layout slides of the first master, adds a
+// text placeholder with default text, and saves the result as a PPTX file.
+// This pattern can be used to programmatically enrich slide layouts with
+// placeholders for later content insertion.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Text Placeholder, Layout Slide,
+// Master Slide, Presentation Automation, Office Automation
+//
+// Use Cases:
+// - Automatically add text placeholders to all layout slides in a template.
+// - Prepare slide masters for dynamic content generation in .NET applications.
+// - Enhance existing presentations with editable text areas across layouts.
+// - Streamline PPTX preprocessing before distribution or further editing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides.Export;
