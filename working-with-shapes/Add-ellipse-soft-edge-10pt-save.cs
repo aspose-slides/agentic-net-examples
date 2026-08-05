@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Add ellipse soft edge 10pt save using C#
+//
+// Description:
+// Demonstrates how to add an ellipse shape with a 10‑point soft edge effect
+// and save the presentation using C# and Aspose.Slides for .NET. The example
+// shows the required steps to create a new PPTX file, insert an ellipse,
+// apply a soft‑edge visual effect, and persist the result to disk in a
+// standalone console application. Developers can use this pattern to automate
+// PowerPoint shape styling, generate presentations programmatically, or
+// integrate visual enhancements into .NET workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Ellipse, Soft Edge, 10Pt,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding an ellipse with a 10‑point soft edge to a presentation.
+// - Build C# tools for PowerPoint shape creation and styling.
+// - Generate or transform PPTX files with visual effects in .NET applications.
+// - Validate presentation rendering before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -16,14 +39,14 @@ class Program
         string outputPath = Path.Combine(outputDir, "SoftEdgeEllipse.pptx");
 
         // Create a new presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        Presentation presentation = new Presentation();
 
         // Get the first slide
-        Aspose.Slides.ISlide slide = presentation.Slides[0];
+        ISlide slide = presentation.Slides[0];
 
         // Add an ellipse shape
-        Aspose.Slides.IAutoShape ellipse = slide.Shapes.AddAutoShape(
-            Aspose.Slides.ShapeType.Ellipse,
+        IAutoShape ellipse = slide.Shapes.AddAutoShape(
+            ShapeType.Ellipse,
             100,   // X position
             100,   // Y position
             300,   // Width
@@ -37,7 +60,7 @@ class Program
         // Save the presentation
         try
         {
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            presentation.Save(outputPath, SaveFormat.Pptx);
         }
         catch (Exception)
         {
