@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Generate thumbnails for all shapes in a directory using C#
+//
+// Description:
+// Demonstrates how to iterate through all PowerPoint presentations in a
+// specified input directory, extract each shape from every slide, generate a
+// PNG thumbnail for each shape, and save the thumbnails to an output directory
+// using Aspose.Slides for .NET. The example includes basic validation of input
+// and output paths, format filtering, and error handling.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, PPT, ODP, Shape thumbnails, Directory
+// processing, Image generation, Automation, .NET console application
+//
+// Use Cases:
+// - Batch generate image previews of individual shapes for documentation or
+//   review purposes.
+// - Create a repository of shape assets extracted from existing presentations.
+// - Integrate shape thumbnail generation into CI pipelines or content management
+//   systems.
+// - Automate visual validation of slide content across multiple files.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -37,7 +59,6 @@ namespace ThumbnailExtractor
                     if (fileExtension != ".pptx" && fileExtension != ".ppt" && fileExtension != ".odp")
                     {
                         // Format not supported – skip this file
-                        // Unsupported format comment
                         continue;
                     }
 
