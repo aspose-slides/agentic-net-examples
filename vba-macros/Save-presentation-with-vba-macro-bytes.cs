@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Save presentation with VBA macro bytes using C#
+//
+// Description:
+// Demonstrates how to create a new PowerPoint presentation, attach an empty
+// (or custom) VBA project, and save it as a macro‑enabled PPTM file using
+// Aspose.Slides for .NET. The example shows the required steps for handling
+// VBA macro bytes and producing a PPTM output in a console application.
+// Developers can adapt this pattern to embed actual macro code, automate PPTX
+// workflows, or integrate presentation processing into .NET solutions.
+//
+// Keywords:
+// C#, PowerPoint, PPTM, Aspose.Slides for .NET, VBA, Macro, Macro Bytes,
+// Presentation Saving, Office Automation
+//
+// Use Cases:
+// - Generate macro‑enabled presentations programmatically.
+// - Embed or replace VBA macro bytes in PowerPoint files.
+// - Build .NET tools for automated PowerPoint creation with macros.
+// - Validate VBA project handling before deployment.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

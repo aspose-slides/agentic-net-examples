@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Remove external references from VBA project using C#
+//
+// Description:
+// Demonstrates how to remove all external references from a VBA project in a
+// PowerPoint presentation using C# and Aspose.Slides for .NET. The example
+// loads an existing PPTX file, replaces its VBA project with an empty one,
+// and saves the result, effectively clearing any external library references.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove, External, References, VBA,
+// Project, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Clean VBA projects by removing external library references.
+// - Prepare presentations for distribution without dependency issues.
+// - Automate VBA reference management in batch processing pipelines.
+// - Integrate VBA cleanup into .NET PowerPoint manipulation tools.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

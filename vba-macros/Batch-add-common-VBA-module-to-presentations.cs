@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Batch add common VBA module to presentations using C#
+//
+// Description:
+// Demonstrates how to batch add a common VBA module to multiple PowerPoint
+// presentations using C# and Aspose.Slides for .NET. The example iterates over
+// files in a specified folder, ensures a VBA project exists, adds (or retrieves)
+// a module named "CommonModule" containing a simple macro, and saves the
+// presentations back to their original format.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, PPT, PPTM, ODP, Aspose.Slides for .NET, VBA, Macro,
+// Batch processing, Presentation automation, Office Automation
+//
+// Use Cases:
+// - Inject a shared VBA macro into many presentations automatically.
+// - Automate macro addition for corporate PowerPoint templates.
+// - Build .NET tools that embed VBA code into PPTX/PPT/PPTM/ODP files.
+// - Prepare presentations with common functionality before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

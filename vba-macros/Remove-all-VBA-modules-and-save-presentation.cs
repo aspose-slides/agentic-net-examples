@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Remove all VBA modules and save presentation using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, remove all VBA modules
+// from its VBA project (if present), and save the resulting macro‑free file
+// using Aspose.Slides for .NET. The example includes file existence checks,
+// exception handling, and uses the SaveFormat.Pptx output format.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, VBA, Remove Modules, Save,
+// Presentation, Macro Removal, Office Automation
+//
+// Use Cases:
+// - Strip VBA macros from existing PPTX files to create macro‑free versions.
+// - Prepare presentations for environments that disallow macros.
+// - Integrate VBA removal into automated .NET PowerPoint processing pipelines.
+// - Validate and clean up presentation files before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

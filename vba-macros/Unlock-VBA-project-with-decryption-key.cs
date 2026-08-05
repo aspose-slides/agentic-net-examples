@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Unlock VBA project with decryption key using C#
+//
+// Description:
+// Demonstrates how to unlock a password‑protected VBA project in a PPTM file
+// using a decryption key (password) with Aspose.Slides for .NET. The example
+// loads the presentation, checks the VBA protection status, and saves a new
+// file without the VBA password applied.
+//
+// Keywords:
+// C#, PowerPoint, PPTM, Aspose.Slides for .NET, Unlock, VBA, Decryption, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate removal of VBA password protection from PPTM files.
+// - Build C# utilities for PowerPoint macro handling.
+// - Integrate VBA project unlocking into .NET presentation workflows.
+// - Validate and preprocess PPTM files before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

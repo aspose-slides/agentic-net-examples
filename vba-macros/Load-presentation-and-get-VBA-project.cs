@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Load a PPTM presentation and retrieve its VBA project using C#
+//
+// Description:
+// Demonstrates how to load a macro-enabled PowerPoint presentation (PPTM),
+// access the embedded VBA project, check for password protection, and
+// optionally output the project name. The example also shows how to save the
+// presentation in PPTX format after processing. This pattern helps developers
+// automate VBA inspection and conversion tasks with Aspose.Slides for .NET.
+//
+// Keywords:
+// C#, PowerPoint, PPTM, PPTX, Aspose.Slides for .NET, VBA, VbaProject, 
+// Password Protection, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Load a PPTM file and inspect its VBA project.
+// - Detect if a VBA project is password protected.
+// - Convert macro-enabled presentations to standard PPTX after analysis.
+// - Integrate VBA project handling into .NET automation tools.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

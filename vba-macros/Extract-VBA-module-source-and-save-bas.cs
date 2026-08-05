@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Extract VBA module source and save bas using C#
+//
+// Description:
+// Demonstrates how to extract the source code of a specific VBA module from a
+// PowerPoint presentation and save it as a .bas file using Aspose.Slides for .NET.
+// The example loads a PPTX file, checks for a VBA project, locates the requested
+// module, writes its source to the output directory, and optionally saves a copy
+// of the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, VBA, Extract, Module, Source, Save, .bas, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of VBA module source code from PPTX files.
+// - Build tools that archive or analyze VBA macros in presentations.
+// - Integrate VBA handling into .NET applications for compliance or migration.
+// - Generate .bas files for further editing or version control.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Implement slide interface in VBA class using C#
+//
+// Description:
+// Demonstrates how to create a new PowerPoint presentation or load an existing
+// one, modify the background color of the first slide, and save the result using
+// Aspose.Slides for .NET. The example shows basic presentation‑processing steps
+// such as checking for file existence, accessing slides, setting background
+// properties, and handling exceptions. This pattern can be used to automate
+// slide background customization in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Slide, Background, Presentation,
+// Automation, File I/O, Exception Handling
+//
+// Use Cases:
+// - Create a default presentation with a predefined slide background.
+// - Modify the background color of the first slide in an existing PPTX file.
+// - Automate PowerPoint slide styling in batch processing scripts.
+// - Integrate simple presentation manipulation into larger .NET solutions.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

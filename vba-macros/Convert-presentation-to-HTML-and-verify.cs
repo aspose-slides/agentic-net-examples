@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Convert presentation to HTML and verify using C#
+//
+// Description:
+// Demonstrates how to load a PPTM file, remove embedded binary objects (including
+// VBA macros), verify that no VBA code remains, and convert the presentation to
+// HTML using Aspose.Slides for .NET. The example is a self‑contained console
+// application suitable for automating PowerPoint processing workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTM, Aspose.Slides for .NET, HTML, Convert, Presentation,
+// VBA, Remove VBA, Verify, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Remove VBA macros from PPTM files before publishing.
+// - Convert PowerPoint presentations to HTML for web display.
+// - Validate that presentations are free of embedded code.
+// - Build .NET tools for automated PowerPoint content transformation.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

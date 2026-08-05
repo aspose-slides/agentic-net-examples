@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add VBA modules to a PowerPoint presentation using C#
+//
+// Description:
+// Demonstrates how to create a new presentation, initialize a VBA project,
+// add multiple VBA modules with source code, include required VBA references,
+// and save the presentation using Aspose.Slides for .NET. This example
+// provides a straightforward pattern for automating VBA macro insertion into
+// PPTX files in a console application.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, VBA, Module, References, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Programmatically embed VBA macros into PowerPoint files.
+// - Build C# tools for adding custom functions and procedures to presentations.
+// - Generate or modify PPTX files with VBA support in .NET applications.
+// - Prepare presentations with predefined automation scripts before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

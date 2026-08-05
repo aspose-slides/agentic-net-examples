@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export VBA modules to JSON documentation using C#
+//
+// Description:
+// Demonstrates how to extract VBA macro modules from a PowerPoint presentation
+// and export them as a JSON document using C# and Aspose.Slides for .NET. The
+// example loads a PPTX file, reads each VBA module's name and source code, and
+// serializes the collection to a formatted JSON file. This pattern can be used
+// to document, analyze, or migrate VBA macros embedded in presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, VBA, Macro, Export, JSON,
+// Documentation, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Generate JSON documentation of VBA macros for review or auditing.
+// - Build tools that extract and analyze VBA code from PowerPoint files.
+// - Integrate VBA extraction into .NET applications or CI pipelines.
+// - Facilitate migration of VBA macros to other platforms or languages.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;

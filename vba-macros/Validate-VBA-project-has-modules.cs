@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Validate VBA project has modules using C#
+//
+// Description:
+// Demonstrates how to validate that a PowerPoint presentation's VBA project
+// contains at least one module using C# and Aspose.Slides for .NET. The example
+// loads a PPTM file, checks the VBA project for modules, optionally adds a new
+// empty module, and saves the presentation. This pattern can be used to
+// automate VBA validation and manipulation in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTM, Aspose.Slides for .NET, VBA, Validate, Modules, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Verify VBA projects contain modules before processing.
+// - Add or modify VBA modules programmatically.
+// - Build .NET tools for PowerPoint VBA automation.
+// - Ensure presentation integrity in CI pipelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

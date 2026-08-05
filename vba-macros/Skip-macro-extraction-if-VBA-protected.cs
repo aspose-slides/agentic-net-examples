@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Skip macro extraction if VBA protected using C#
+//
+// Description:
+// Demonstrates how to skip macro extraction when a PowerPoint presentation's
+// VBA project is password protected. The example uses Aspose.Slides for .NET
+// to open a PPTM file, checks the VBA project protection status, and conditionally
+// proceeds with macro extraction logic. It also shows how to save the presentation
+// after processing.
+//
+// Keywords:
+// C#, PowerPoint, PPTM, VBA protection, macro extraction, Aspose.Slides for .NET,
+// presentation processing, file I/O, error handling
+//
+// Use Cases:
+// - Automate the detection of password‑protected VBA projects in PPTM files.
+// - Build tools that conditionally extract macros only when allowed.
+// - Integrate VBA protection checks into PowerPoint workflow automation.
+// - Safely process and convert presentations while respecting security settings.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Clone VBA project and attach to presentation using C#
+//
+// Description:
+// Demonstrates how to clone a VBA project from a source PowerPoint file and
+// attach it to another presentation using C# and Aspose.Slides for .NET.
+// The example loads two presentations, extracts the VBA project from the
+// source, creates a new VBA project from its binary representation, and
+// assigns it to the destination presentation before saving the result.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, VBA, Clone, Attach, 
+// Presentation, Office Automation
+//
+// Use Cases:
+// - Automate cloning of VBA macros between PowerPoint files.
+// - Build .NET tools for PowerPoint presentation processing with VBA support.
+// - Generate or transform PPTX files while preserving or reusing VBA code.
+// - Validate and test VBA macro integration in automated workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

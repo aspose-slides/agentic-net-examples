@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Copy VBA module and rename using C#
+//
+// Description:
+// Demonstrates how to copy an existing VBA module within a PowerPoint presentation,
+// rename it, and save the modified file using Aspose.Slides for .NET. The example
+// loads a PPTX file, checks for VBA modules, duplicates the first module with a
+// new name, copies its source code, and writes the result to a new file.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, VBA, PowerPoint, PPTX, Copy Module, Rename Module,
+// Presentation Automation, Office Automation
+//
+// Use Cases:
+// - Duplicate and rename VBA modules in existing presentations.
+// - Automate VBA code migration between PowerPoint files.
+// - Build tools that modify or extend VBA macros programmatically.
+// - Validate and test VBA module handling in .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

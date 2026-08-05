@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Insert timestamp slide into presentations using C#
+//
+// Description:
+// Demonstrates how to embed a VBA macro that inserts a timestamp slide into
+// PowerPoint presentations using C# and Aspose.Slides for .NET. The example
+// creates a VBA project, adds a module with the macro, sets required references,
+// and saves the modified presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Insert, Timestamp, Slide, VBA,
+// Macro, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate embedding a timestamp VBA macro into existing presentations.
+// - Build C# tools for PowerPoint presentation processing with VBA support.
+// - Generate or transform PPTX files that include a timestamp slide macro.
+// - Validate VBA macro insertion before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;
