@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Replace rectangle picture fill with new image using C#
+//
+// Description:
+// Demonstrates how to replace a rectangle shape's picture fill with a new image
+// using C# and Aspose.Slides for .NET. The example creates a presentation,
+// adds a rectangle filled with an initial picture, then swaps the picture
+// without altering the shape's dimensions, and finally saves the result.
+// This pattern can be used to automate PPTX workflows, validate results, or
+// integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Replace, Rectangle, Picture,
+// Fill, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate replacement of rectangle picture fill with a new image.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
