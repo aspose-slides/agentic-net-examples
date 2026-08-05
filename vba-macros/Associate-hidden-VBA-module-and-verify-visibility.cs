@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Associate hidden VBA module and verify visibility using C#
+//
+// Description:
+// Demonstrates how to create a macro-enabled presentation, add an empty VBA
+// module, set its source code, add standard VBA references, save the file as
+// PPTM, and verify the VBA project's password‑protected flag using Aspose.Slides
+// for .NET. The example is a self‑contained console application suitable for
+// automating PowerPoint macro handling.
+//
+// Keywords:
+// C#, Aspose.Slides, VBA, Macro-enabled PPTM, Hidden VBA module, Presentation
+// processing, Office automation, Password protection
+//
+// Use Cases:
+// - Programmatically add VBA modules to PPTM files.
+// - Generate presentations with embedded macros.
+// - Check VBA project visibility or password protection status.
+// - Integrate VBA handling into .NET PowerPoint automation workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
