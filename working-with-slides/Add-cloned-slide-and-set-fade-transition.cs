@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add cloned slide and set fade transition using C#
+//
+// Description:
+// Demonstrates how to add a cloned slide to a presentation and set a fade
+// transition on the cloned slide using C# and Aspose.Slides for .NET. The
+// example loads an existing PPTX file, clones the first slide, applies a fade
+// transition, and saves the result as a new PPTX file. This pattern can be used
+// to automate slide duplication and transition configuration in PowerPoint
+// files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone Slide, Fade Transition,
+// SlideShowTransition, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate cloning of slides and applying fade transitions.
+// - Build C# utilities for PowerPoint slide manipulation.
+// - Generate or modify PPTX files programmatically in .NET applications.
+// - Validate and test presentation workflows before deployment.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -26,11 +48,11 @@ class Program
             ISlide clonedSlide = pres.Slides.AddClone(sourceSlide);
 
             // Change the transition effect of the cloned slide to Fade
-            clonedSlide.SlideShowTransition.Type = Aspose.Slides.SlideShow.TransitionType.Fade;
+            clonedSlide.SlideShowTransition.Type = SlideShow.TransitionType.Fade;
             clonedSlide.SlideShowTransition.AdvanceOnClick = true;
 
             // Save the modified presentation
-            pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            pres.Save(outputPath, SaveFormat.Pptx);
         }
         catch (Exception ex)
         {
