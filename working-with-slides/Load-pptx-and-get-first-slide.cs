@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Load pptx and get first slide using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file, access its first slide, apply a simple
+// transition, and save the modified presentation using C# and Aspose.Slides for
+// .NET. The example shows the essential steps for loading, processing, and
+// persisting PowerPoint files in a standalone console application. Developers
+// can use this pattern to automate PPTX workflows, add slide effects, or integrate
+// presentation logic into .NET solutions.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, First Slide, Transition,
+// Save, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Load a PPTX file and retrieve the first slide for further processing.
+// - Apply slide transitions programmatically.
+// - Build C# tools for PowerPoint presentation automation.
+// - Generate or modify PPTX files in .NET applications.
+// - Validate and test presentation workflows before deployment.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
