@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add secondary plot pie of pie radius using C#
+//
+// Description:
+// Demonstrates how to create a Pie of Pie chart with a customized secondary
+// plot (inner pie) radius using C# and Aspose.Slides for .NET. The example
+// shows the required steps to build a presentation, add a Pie of Pie chart,
+// configure its data, adjust the secondary plot size and split criteria, and
+// save the result as a PPTX file. This pattern can be used to automate chart
+// creation and styling in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Pie of Pie, Secondary Plot,
+// Radius, Chart Customization, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Generate Pie of Pie charts with a custom secondary plot radius.
+// - Build C# tools for automated PowerPoint chart creation and styling.
+// - Integrate advanced chart configurations into .NET applications.
+// - Produce or modify PPTX files with specific chart visualizations.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

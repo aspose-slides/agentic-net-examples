@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add linear trendline to first series using C#
+//
+// Description:
+// Demonstrates how to add a linear trendline to the first data series of a
+// clustered column chart using C# and Aspose.Slides for .NET. The example
+// creates a new presentation, inserts a chart, adds a linear trendline to the
+// first series, and saves the presentation as a PPTX file. This pattern can be
+// used to automate chart enhancements in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Linear Trendline, First Series,
+// Chart Automation, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding a linear trendline to the first series of a chart.
+// - Build C# utilities for enhancing PowerPoint charts.
+// - Generate or modify PPTX files with trendlines in .NET applications.
+// - Validate chart data visualizations before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;

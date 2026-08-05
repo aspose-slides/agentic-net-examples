@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set chart background gradient to match theme using C#
+//
+// Description:
+// Demonstrates how to set a chart's background fill to a gradient that uses
+// the presentation's theme accent colors, using C# and Aspose.Slides for .NET.
+// The example creates a new presentation, adds a clustered column chart, configures
+// a linear gradient background based on the master theme, and saves the file.
+// This pattern helps automate PPTX chart styling to maintain visual consistency.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Background, Gradient, Theme,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Apply theme‑consistent gradient backgrounds to charts programmatically.
+// - Build .NET tools that enforce corporate branding in PowerPoint files.
+// - Generate or modify PPTX presentations with styled charts in automated workflows.
+// - Validate chart appearance before publishing or integrating into larger solutions.
+// -----------------------------------------------------------------------------
 using System;
 using System.Drawing;
 using Aspose.Slides;

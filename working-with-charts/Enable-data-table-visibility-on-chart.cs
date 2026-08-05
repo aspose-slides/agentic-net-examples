@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Enable data table visibility on chart using C#
+//
+// Description:
+// Demonstrates how to enable the data table visibility for a chart in a
+// PowerPoint presentation using C# and Aspose.Slides for .NET. The example
+// creates a new presentation, adds a clustered column chart, turns on the
+// data table, and saves the file as a PPTX. This pattern can be used to
+// automate chart enhancements in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Enable, Data Table, Visibility,
+// Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate enabling data table visibility on charts in PPTX files.
+// - Build C# utilities for enhancing PowerPoint presentations.
+// - Generate or modify chart data tables programmatically.
+// - Validate chart formatting before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -11,14 +32,14 @@ class Program
         try
         {
             // Create a new presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+            Presentation presentation = new Presentation();
 
             // Access the first slide
-            Aspose.Slides.ISlide slide = presentation.Slides[0];
+            ISlide slide = presentation.Slides[0];
 
             // Add a clustered column chart with sample data
-            Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(
-                Aspose.Slides.Charts.ChartType.ClusteredColumn,
+            IChart chart = slide.Shapes.AddChart(
+                ChartType.ClusteredColumn,
                 0f, 0f, 500f, 400f);
 
             // Enable the data table for the chart
@@ -28,7 +49,7 @@ class Program
             string outputPath = "ChartWithDataTable.pptx";
 
             // Save the presentation
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            presentation.Save(outputPath, SaveFormat.Pptx);
         }
         catch (NotSupportedException)
         {

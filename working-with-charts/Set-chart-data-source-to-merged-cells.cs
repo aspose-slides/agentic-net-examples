@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set chart data source to merged cells using C#
+//
+// Description:
+// Demonstrates how to create a PowerPoint presentation, add a clustered column
+// chart, link it to an external Excel workbook, and set the chart data range
+// that includes merged cells. The example shows the required steps for
+// presentation processing with Aspose.Slides for .NET and produces a PPTX file
+// with the chart bound to merged cells.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Excel, Data Source,
+// Merged Cells, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate linking chart data to merged cells in an external Excel file.
+// - Build .NET tools that generate or modify PPTX files with external data.
+// - Validate chart data bindings before publishing presentations.
+// - Integrate Excel‑driven chart creation into server‑side or desktop apps.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

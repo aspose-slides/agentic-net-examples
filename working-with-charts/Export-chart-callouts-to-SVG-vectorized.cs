@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export chart callouts to SVG vectorized using C#
+//
+// Description:
+// Demonstrates how to add a pie chart with data label callouts to a PowerPoint
+// slide and export the chart as a vectorized SVG file using Aspose.Slides for .NET.
+// The example loads an existing presentation, inserts a chart, enables callout
+// labels, writes the chart to SVG with text vectorization, and saves the updated
+// presentation.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, SVG, Vectorized, Chart, Callouts, Export,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Generate SVG representations of PowerPoint charts with callout labels.
+// - Automate conversion of chart visuals to scalable vector graphics.
+// - Integrate chart export functionality into .NET applications.
+// - Validate and process PPTX files programmatically.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

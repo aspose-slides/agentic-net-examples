@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set axis labels custom number format thousand separators using C#
+//
+// Description:
+// Demonstrates how to set axis labels custom number format thousand separators 
+// using C# and Aspose.Slides for .NET. The example creates a presentation, adds a 
+// clustered column chart, configures both vertical and horizontal axes to use a 
+// thousand‑separator numeric format, and saves the result as a PPTX file. This 
+// pattern can be used to automate PowerPoint chart formatting in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Axis, Labels, Custom, Number, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting axis labels custom number format thousand separators.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
@@ -10,14 +31,14 @@ class Program
         try
         {
             // Create a new presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+            Presentation presentation = new Presentation();
 
             // Get the first slide
-            Aspose.Slides.ISlide slide = presentation.Slides[0];
+            ISlide slide = presentation.Slides[0];
 
             // Add a clustered column chart
-            Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(
-                Aspose.Slides.Charts.ChartType.ClusteredColumn, 50, 50, 500, 400);
+            IChart chart = slide.Shapes.AddChart(
+                ChartType.ClusteredColumn, 50, 50, 500, 400);
 
             // Configure axis labels to use thousand separator format
             chart.Axes.VerticalAxis.NumberFormat = "#,##0";
@@ -25,7 +46,7 @@ class Program
 
             // Save the presentation
             string outputPath = "ChartAxisNumberFormat.pptx";
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            presentation.Save(outputPath, SaveFormat.Pptx);
 
             // Clean up
             presentation.Dispose();

@@ -1,3 +1,28 @@
+// -----------------------------------------------------------------------------
+// Example: Add exploded slices to pie chart using C#
+//
+// Description:
+// Demonstrates how to add exploded slices to a pie chart based on a value
+// threshold using C# and Aspose.Slides for .NET. The example creates a new
+// presentation, inserts a pie chart, populates it with data, and explodes
+// slices whose values exceed the specified threshold. This pattern shows the
+// required presentation‑processing steps for PowerPoint files and produces
+// the requested output in a standalone console application. Developers can
+// use this example to automate PPTX workflows, validate results, or integrate
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Pie Chart, Exploded Slices,
+// Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding exploded slices to pie charts in presentations.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files with customized chart visuals in .NET
+//   applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

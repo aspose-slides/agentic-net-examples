@@ -1,8 +1,28 @@
+// -----------------------------------------------------------------------------
+// Example: Apply fade-in animation to a chart using C#
+//
+// Description:
+// Demonstrates how to create a PowerPoint presentation, add a clustered column
+// chart, and apply a fade‑in animation effect to the chart using Aspose.Slides for
+// .NET. The example shows the necessary steps to build a standalone console
+// application that generates a PPTX file with animated chart content.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, Chart, Fade‑In, Animation, 
+// EffectChartMajorGroupingType, EffectType, EffectTriggerType, Presentation 
+// Automation, Office Automation
+//
+// Use Cases:
+// - Programmatically add charts with entrance animations to PowerPoint slides.
+// - Create automated reporting tools that generate animated PPTX files.
+// - Build C# utilities for presentation preparation and visual enhancement.
+// - Validate animation settings in generated presentations before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
 using Aspose.Slides.Charts;
-using Aspose.Slides.Animation;
+using AspNet.Slides.Animation;
 using Aspose.Slides.Export;
 
 namespace ApplyFadeInAnimationToChart

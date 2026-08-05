@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add data point callout with label using C#
+//
+// Description:
+// Demonstrates how to add a data point callout label to a pie chart using
+// C# and Aspose.Slides for .NET. The example creates a presentation, inserts a
+// pie chart, enables value display and configures the data labels to be shown
+// as callouts, and saves the result as a PPTX file. This pattern can be used to
+// automate chart annotation tasks in PowerPoint files.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Pie Chart, Data Labels, Callout, 
+// Presentation Automation, Office Automation
+//
+// Use Cases:
+// - Add callout labels to chart data points programmatically.
+// - Generate PowerPoint reports with annotated charts.
+// - Integrate chart labeling into .NET applications.
+// - Automate presentation creation workflows involving charts.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides.Export;
 

@@ -1,3 +1,27 @@
+// -----------------------------------------------------------------------------
+// Example: Ensure error bars render correctly in highresolution PNG using C#
+//
+// Description:
+// Demonstrates how to create a PowerPoint presentation with a bubble chart
+// that includes X and Y error bars, save the presentation, and export each
+// slide to a high‑resolution PNG image using Aspose.Slides for .NET. The example
+// shows the required steps to configure error bars, adjust line width, and
+// increase image scaling for higher resolution output in a standalone console
+// application. Developers can use this pattern to automate PPTX workflows,
+// validate chart rendering, or integrate presentation processing into .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Ensure, Error, Bars, Render,
+// Presentation Processing, Office Automation, Bubble Chart, High Resolution
+//
+// Use Cases:
+// - Automate creation of charts with error bars and verify high‑resolution PNG export.
+// - Build C# tools for PowerPoint presentation generation and processing.
+// - Generate or transform PPTX files with custom chart formatting in .NET applications.
+// - Validate visual fidelity of error bars before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;

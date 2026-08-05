@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Check chart has trendline using C#
+//
+// Description:
+// Demonstrates how to check whether a chart in a PowerPoint presentation
+// contains any trendlines using Aspose.Slides for .NET. The example loads a
+// PPTX file, inspects the first chart on the first slide, reports the presence
+// of trendlines, and saves the presentation. This pattern can be used to
+// automate validation of chart data visualizations in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Check, Chart, Trendline,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate verification that charts include trendlines.
+// - Build C# tools for PowerPoint presentation analysis.
+// - Integrate chart validation into .NET workflows.
+// - Ensure presentation quality before publishing or further processing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

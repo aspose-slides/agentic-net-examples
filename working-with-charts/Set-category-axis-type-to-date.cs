@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Set category axis type to date using C#
+//
+// Description:
+// Demonstrates how to set the category axis type to Date for a chart using
+// C# and Aspose.Slides for .NET. The example creates a new presentation,
+// adds an Area chart, populates it with date-based categories and a line
+// series, configures the horizontal axis to use a date axis with a custom
+// number format, and saves the result as a PPTX file. This pattern can be
+// used to automate PowerPoint chart creation with date axes in .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Category Axis, Date,
+// Axis Type, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting a chart's category axis to Date.
+// - Build .NET tools that generate charts with time‑based data.
+// - Create or modify PPTX files programmatically with date axes.
+// - Validate chart configurations before publishing presentations.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

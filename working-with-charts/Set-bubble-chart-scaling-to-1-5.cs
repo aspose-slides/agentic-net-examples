@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set bubble chart scaling to 1.5 using C#
+//
+// Description:
+// Demonstrates how to set bubble chart scaling to 1.5 (150%) using C# and 
+// Aspose.Slides for .NET. The example creates a presentation, adds a bubble 
+// chart, configures the bubble size scaling factor, populates data points, 
+// and saves the file. This pattern can be used to automate PPTX workflows, 
+// validate chart settings, or integrate presentation logic into .NET 
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Bubble Chart, Scaling, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting bubble chart scaling to 1.5.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files with customized chart scaling.
+// - Validate chart configurations before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

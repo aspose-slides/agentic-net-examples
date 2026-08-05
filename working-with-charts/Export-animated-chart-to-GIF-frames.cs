@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Export animated chart to GIF frames using C#
+//
+// Description:
+// Demonstrates how to export an animated chart from a PowerPoint presentation
+// to a GIF animation using C# and Aspose.Slides for .NET. The example loads a
+// PPTX file, adds fade and appear effects to the chart series and data points,
+// configures GIF export options, and saves the result as an animated GIF file.
+// Developers can use this pattern to automate chart animation extraction,
+// generate GIFs for web use, or integrate presentation processing into .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Animated, Chart,
+// GIF, Frames, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate export of animated chart to GIF frames.
+// - Build C# tools for PowerPoint chart animation extraction.
+// - Generate GIF animations from PPTX charts for web or documentation.
+// - Validate and preview chart animations in .NET applications.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

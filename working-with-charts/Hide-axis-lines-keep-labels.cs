@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Hide axis lines keep labels using C#
+//
+// Description:
+// Demonstrates how to hide axis lines while keeping axis labels visible using C# and Aspose.Slides 
+// for .NET. The example creates a new presentation, adds a clustered column chart, removes the
+// horizontal and vertical axis lines without affecting the labels, and saves the result.
+// This pattern can be used to customize chart appearance in automated PPTX workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Hide, Axis, Lines, Keep, Labels, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate hiding chart axis lines while preserving labels.
+// - Build C# tools for customizing chart appearance in PowerPoint files.
+// - Generate or transform PPTX files with specific chart styling in .NET applications.
+// - Validate presentation visual consistency before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;

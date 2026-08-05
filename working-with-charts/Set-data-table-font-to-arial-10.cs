@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set chart data table font to Arial 10 using C#
+//
+// Description:
+// Demonstrates how to set the font of a chart's data table to Arial 10 points
+// using C# and Aspose.Slides for .NET. The example creates a presentation,
+// adds a clustered column chart, enables its data table, configures the font
+// family and size, and saves the result as a PPTX file. This pattern can be
+// used to automate PowerPoint chart formatting tasks in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Data Table, Font, Arial,
+// Font Height, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting chart data table font to Arial 10.
+// - Build C# tools for PowerPoint chart formatting.
+// - Generate or modify PPTX files with specific chart styles in .NET.
+// - Ensure consistent chart appearance across presentations.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;

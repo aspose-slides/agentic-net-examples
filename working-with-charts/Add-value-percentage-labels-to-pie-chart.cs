@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add value percentage labels to pie chart using C#
+//
+// Description:
+// Demonstrates how to add both value and percentage data labels to a pie chart 
+// using C# and Aspose.Slides for .NET. The example creates a new presentation, 
+// inserts a pie chart, populates it with categories and data points, configures 
+// the series to display value and percentage on each slice, and saves the 
+// result as a PPTX file. This pattern can be used to automate chart labeling 
+// tasks in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Value, Percentage, Labels, 
+// Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding value and percentage labels to pie charts.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files with customized chart data labels.
+// - Validate chart presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;

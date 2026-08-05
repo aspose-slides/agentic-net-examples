@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Export presentation to PDF with tables and errorbars using C#
+//
+// Description:
+// Demonstrates how to create a bubble chart with X and Y error bars and export
+// the presentation to PDF while preserving OLE data such as tables using
+// Aspose.Slides for .NET. The example shows the required steps for chart creation,
+// error bar configuration, and PDF export with OLE inclusion in a standalone
+// console application. Developers can use this pattern to automate PPTX workflows,
+// generate PDF reports, or integrate presentation processing into .NET apps.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Export, Presentation,
+// Charts, Bubble Chart, Error Bars, OLE Data, Tables, Office Automation
+//
+// Use Cases:
+// - Automate export of presentations containing charts and tables to PDF.
+// - Build C# tools for generating PDF reports from PowerPoint files.
+// - Preserve OLE objects (e.g., tables) when converting PPTX to PDF.
+// - Integrate chart creation with error bars into .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;

@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Apply predefined labels to 3d bubble chart using C#
+//
+// Description:
+// Demonstrates how to create a 3‑D bubble chart, add series and data points,
+// and apply predefined data label formats (show bubble size and value) to the
+// series using Aspose.Slides for .NET. The example saves the presentation as
+// a PPTX file. This pattern can be used to automate chart labeling in PowerPoint.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, 3D Bubble Chart, Data Labels,
+// Predefined Labels, Chart Automation, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate applying predefined data labels to 3‑D bubble charts.
+// - Build C# utilities for PowerPoint chart creation and formatting.
+// - Generate or modify PPTX files with customized chart labels in .NET.
+// - Validate chart label settings before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides.Charts;
 using Aspose.Slides.Export;

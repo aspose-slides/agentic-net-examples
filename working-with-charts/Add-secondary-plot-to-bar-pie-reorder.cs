@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add secondary plot to Bar of Pie chart and reorder series using C#
+//
+// Description:
+// Demonstrates how to create a Bar of Pie chart, configure its secondary plot
+// (size, split type and split position) and change the order of data series
+// using Aspose.Slides for .NET. The example builds a presentation, adds the
+// chart, applies secondary plot settings, reorders the first two series, and
+// saves the result as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Bar of Pie, Secondary Plot,
+// Series Order, Chart Manipulation, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding a secondary plot to a Bar of Pie chart.
+// - Adjust Bar of Pie chart split parameters programmatically.
+// - Reorder chart series to control visual layout.
+// - Build .NET tools for PowerPoint chart customization and automation.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

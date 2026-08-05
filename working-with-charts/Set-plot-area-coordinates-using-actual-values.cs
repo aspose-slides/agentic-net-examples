@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Set plot area coordinates using actual values using C#
+//
+// Description:
+// Demonstrates how to retrieve the actual plot area dimensions of a chart
+// and set the plot area position using those values with Aspose.Slides for .NET.
+// The example creates or loads a presentation, adds a clustered column chart,
+// obtains the actual X, Y, width, and height of the plot area, and assigns the
+// X and Y coordinates back to the plot area. The resulting presentation is saved
+// as a PPTX file.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Chart, PlotArea, ActualX, ActualY, 
+// Presentation Automation, .NET
+//
+// Use Cases:
+// - Programmatically adjust chart plot area positioning based on actual layout.
+// - Build .NET utilities for PowerPoint chart manipulation.
+// - Automate PPTX generation or modification with precise chart layout control.
+// - Validate and fine‑tune chart appearance in automated workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

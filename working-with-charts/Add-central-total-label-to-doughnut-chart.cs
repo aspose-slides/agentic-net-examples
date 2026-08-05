@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add central total label to doughnut chart using C#
+//
+// Description:
+// Demonstrates how to add a central total label to a doughnut chart using C#
+// and Aspose.Slides for .NET. The example creates a new presentation, inserts a
+// doughnut chart, populates it with data, calculates the total of the series,
+// and displays the total in the chart’s central area via the chart title.
+// This pattern can be used to automate PPTX workflows, validate results, or
+// integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Central, Total, Label,
+// Doughnut, Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding a central total label to a doughnut chart.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

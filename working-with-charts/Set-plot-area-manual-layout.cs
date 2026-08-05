@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Set plot area manual layout using C#
+//
+// Description:
+// Demonstrates how to set the plot area manual layout for a chart using C# and
+// Aspose.Slides for .NET. The example creates a presentation, adds a clustered
+// column chart, and configures the plot area using fractional coordinates to
+// control its position and size within the chart. The resulting presentation is
+// saved as a PPTX file. This pattern helps developers automate chart layout
+// adjustments in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Plot Area, Manual Layout,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting plot area manual layout for charts.
+// - Build C# tools for PowerPoint chart processing.
+// - Generate or transform PPTX files with custom chart layouts.
+// - Validate chart layout workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

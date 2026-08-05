@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Clone chart series and insert into slide using C#
+//
+// Description:
+// Demonstrates how to clone a slide that contains a chart, modify the first
+// chart series to display data labels, and save the updated presentation using
+// Aspose.Slides for .NET. The example loads an existing PPTX file, clones the
+// first slide, updates the chart series, and writes the result to a new file.
+// This pattern can be used to automate chart manipulation and slide duplication
+// in PowerPoint presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone, Chart, Series, Insert,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate cloning of slides with charts and customizing series data labels.
+// - Build C# tools for PowerPoint presentation processing and chart editing.
+// - Generate or transform PPTX files in .NET applications with chart modifications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

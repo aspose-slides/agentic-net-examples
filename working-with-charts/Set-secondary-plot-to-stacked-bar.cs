@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set secondary plot to stacked bar using C#
+//
+// Description:
+// Demonstrates how to configure the secondary plot of a PieOfPie chart as a
+// stacked bar using C# and Aspose.Slides for .NET. The example creates a new
+// presentation, adds a PieOfPie chart, sets secondary plot size, split type,
+// and split position, then saves the result. This pattern can be used to
+// automate PowerPoint chart customizations in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Secondary Plot, Stacked Bar,
+// Chart Customization, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting secondary plot to stacked bar in charts.
+// - Build C# utilities for PowerPoint chart manipulation.
+// - Generate or transform PPTX files with customized chart layouts.
+// - Validate chart configurations before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

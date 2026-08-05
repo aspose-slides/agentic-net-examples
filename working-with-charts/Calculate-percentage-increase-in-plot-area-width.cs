@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Calculate percentage increase in plot area width using C#
+//
+// Description:
+// Demonstrates how to calculate the percentage increase in a chart's plot area
+// width when switching the LayoutTargetType between Outer and Inner using
+// Aspose.Slides for .NET. The example creates a presentation, adds a clustered
+// column chart, configures manual layout, retrieves actual widths, computes the
+// increase, and saves the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Calculate, Percentage, Increase,
+// Plot Area, Chart Layout, LayoutTargetType, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Determine how plot area dimensions change with different layout targets.
+// - Automate analysis of chart layout effects in PowerPoint files.
+// - Build tools that validate or adjust chart sizing in .NET applications.
+// - Integrate chart layout calculations into reporting or presentation pipelines.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides.Export;
 

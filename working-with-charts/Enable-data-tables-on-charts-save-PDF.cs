@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Enable data tables on charts and save PDF in batch using C#
+//
+// Description:
+// Demonstrates how to enable data tables on all charts within PowerPoint
+// presentations located in a directory, then save each presentation as a PDF
+// using Aspose.Slides for .NET. The example processes supported presentation
+// formats, updates the charts, and optionally creates a backup of the modified
+// PPTX file. This pattern can be used to automate batch chart enhancements and
+// PDF generation in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Enable, Data, Tables,
+// Charts, Batch Processing, Directory, Automation
+//
+// Use Cases:
+// - Automate enabling data tables on charts across multiple presentations.
+// - Generate PDFs from updated PowerPoint files in bulk.
+// - Build C# tools for batch PowerPoint presentation processing.
+// - Validate and transform PPTX files before distribution or archiving.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

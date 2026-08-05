@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set logarithmic scale on chart axis using C#
+//
+// Description:
+// Demonstrates how to set a logarithmic scale on a chart's vertical axis using
+// C# and Aspose.Slides for .NET. The example creates a presentation, adds a
+// clustered column chart, configures the vertical axis to use a logarithmic
+// scale with a base of 10, and saves the file as a PPTX.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Logarithmic, Scale, Chart,
+// Axis, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting a logarithmic scale on chart axes.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files with customized chart settings.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

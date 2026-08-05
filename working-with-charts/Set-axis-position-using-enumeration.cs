@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set axis position using enumeration using C#
+//
+// Description:
+// Demonstrates how to set the positions of the horizontal and vertical axes
+// of a chart using enumeration values in C# with Aspose.Slides for .NET.
+// The example creates a presentation, adds a clustered column chart, sets the
+// axis positions, and saves the result as a PPTX file. This pattern can be
+// used to automate chart formatting in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Axis, Position, Enumeration,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting chart axis positions using enumeration values.
+// - Build C# tools for PowerPoint chart manipulation.
+// - Generate or modify PPTX files with specific chart layouts in .NET applications.
+// - Validate chart formatting before publishing or integration.
+// -----------------------------------------------------------------------------
 using Aspose.Slides;
 using Aspose.Slides.Export;
 

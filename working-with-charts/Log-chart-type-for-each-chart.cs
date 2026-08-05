@@ -1,3 +1,21 @@
+// -----------------------------------------------------------------------------
+// Example: Log chart type for each chart using C#
+//
+// Description:
+// Demonstrates how to iterate through all slides and shapes in a PowerPoint
+// presentation, identify chart objects, and log each chart's type to the console
+// using Aspose.Slides for .NET. The example also shows how to load a presentation,
+// optionally save it, and handle basic file‑existence and error scenarios.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Chart, ChartType, Logging, Presentation Processing
+//
+// Use Cases:
+// - Audit or report chart types used in existing presentations.
+// - Build tools that validate or document slide content.
+// - Automate extraction of chart metadata for further analysis.
+// - Integrate chart‑type logging into larger .NET PowerPoint automation workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

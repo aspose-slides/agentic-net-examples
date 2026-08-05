@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Enable minor gridlines on value axis using C#
+//
+// Description:
+// Demonstrates how to enable minor gridlines on the value axis of a chart in a
+// PowerPoint presentation using Aspose.Slides for .NET. The example creates a
+// new presentation, adds an Area chart, validates the chart layout, sets the
+// minor gridlines on the vertical (value) axis to be visible, and saves the
+// presentation as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Enable, Minor, Gridlines, Value,
+// Axis, Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate enabling minor gridlines on the value axis of charts.
+// - Build C# tools for PowerPoint chart customization.
+// - Generate or modify PPTX files with specific chart formatting in .NET
+//   applications.
+// - Validate chart appearance programmatically before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

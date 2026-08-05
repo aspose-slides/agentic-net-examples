@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add inner radius to pie of pie using C#
+//
+// Description:
+// Demonstrates how to set the inner radius (second pie size) of a Pie of Pie
+// chart using C# and Aspose.Slides for .NET. The example creates a new
+// presentation, adds a Pie of Pie chart, populates it with data, configures
+// the secondary pie size, and saves the file as a PPTX. This pattern can be
+// used to automate chart customization in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Pie of Pie, Inner Radius,
+// Chart Customization, Presentation Processing
+//
+// Use Cases:
+// - Automate setting inner radius for Pie of Pie charts.
+// - Build C# tools for PowerPoint chart manipulation.
+// - Generate or modify PPTX files with customized chart layouts.
+// - Validate chart configurations before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

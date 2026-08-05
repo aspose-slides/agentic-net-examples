@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Compare inside and outside plot area widths using C#
+//
+// Description:
+// Demonstrates how to compare the inner and outer plot area widths of a chart 
+// using Aspose.Slides for .NET. The example creates a presentation, adds a 
+// clustered column chart, sets a manual layout for the plot area, measures the 
+// width when the layout target is set to Inner and Outer, and outputs the 
+// results. This pattern helps developers understand layout behavior and 
+// automate chart sizing validation.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Chart, PlotArea, LayoutTargetType, 
+// Inner, Outer, Presentation Automation, Office Automation
+//
+// Use Cases:
+// - Determine differences between inner and outer plot area dimensions.
+// - Validate chart layout settings in automated PPTX generation.
+// - Build tools that adjust chart layouts based on size constraints.
+// - Ensure consistent visual appearance across generated presentations.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;

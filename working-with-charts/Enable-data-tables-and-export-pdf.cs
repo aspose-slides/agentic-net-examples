@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Enable data tables and export PDF using C#
+//
+// Description:
+// Demonstrates how to enable data tables for all charts in a presentation
+// and export the modified presentation to PDF using C# and Aspose.Slides for .NET.
+// The example processes PPTX, PPT, and ODP files in a specified input folder,
+// updates each chart to show its data table, saves the changes, and creates a
+// PDF version of the file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, PPT, ODP, Aspose.Slides for .NET, PDF, Enable Data Tables,
+// Charts, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate enabling data tables on charts and exporting presentations to PDF.
+// - Build C# utilities for batch processing of PowerPoint and OpenDocument files.
+// - Integrate chart data table activation into .NET applications.
+// - Validate and transform presentation content before distribution.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides.Export;

@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add outlier marker shape to scatter series using C#
+//
+// Description:
+// Demonstrates how to add custom outlier marker shapes to a scatter chart series 
+// using C# and Aspose.Slides for .NET. The example creates a presentation, adds a 
+// scatter chart with smooth lines, populates two series with data points, and 
+// highlights specific outlier points by setting their marker style and size. 
+// It then saves the presentation as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Scatter Chart, Outlier Marker, 
+// Custom Marker Shape, Chart Series, Presentation Automation
+//
+// Use Cases:
+// - Highlight outlier data points in scatter charts programmatically.
+// - Generate PowerPoint presentations with customized chart markers.
+// - Automate chart styling for data analysis reports.
+// - Integrate chart customization into .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;

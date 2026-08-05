@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Customize scatter plot marker shapes and sizes using C#
+//
+// Description:
+// Demonstrates how to create a scatter chart, add data points with literal X/Y
+// values, and customize individual marker shapes and sizes as well as the
+// default series marker using Aspose.Slides for .NET. The presentation is saved
+// as a PPTX file in a console application, illustrating typical steps for
+// PowerPoint chart manipulation.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, Scatter Chart, Marker Shape,
+// Marker Size, Chart Customization, Presentation Automation, Office Automation
+//
+// Use Cases:
+// - Generate scatter charts with custom marker appearances in PPTX files.
+// - Build .NET utilities that programmatically style chart data points.
+// - Automate creation of presentation assets with specific visual requirements.
+// - Validate and test chart rendering logic in PowerPoint automation workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

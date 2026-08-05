@@ -1,3 +1,27 @@
+// -----------------------------------------------------------------------------
+// Example: Create treemap chart with hierarchical level colors using C#
+//
+// Description:
+// Demonstrates how to create a Treemap chart with custom colors for each
+// hierarchical level, define grouping levels for leaf categories, and set a
+// parent label layout using Aspose.Slides for .NET. The example builds a
+// presentation from scratch, adds a Treemap chart, populates categories and
+// series, applies solid fill colors per level, and saves the result as a PPTX
+// file. This pattern can be used in console applications or integrated into
+// larger .NET solutions for automated PowerPoint generation.
+//
+// Keywords:
+// C#, .NET, PowerPoint, PPTX, Aspose.Slides, Aspose.Slides.Charts, Treemap,
+// Chart, Hierarchical Levels, Level Colors, Grouping, ParentLabelLayout,
+// FillType, Presentation Automation, Office Automation
+//
+// Use Cases:
+// - Generate Treemap charts with distinct colors per hierarchy level.
+// - Automate PowerPoint creation that requires grouped categories.
+// - Build C# utilities for customizing chart appearance in PPTX files.
+// - Validate and test presentation workflows involving Treemap charts.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.Drawing;
 using Aspose.Slides;

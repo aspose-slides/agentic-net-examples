@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Extract data table from chart to XLSX using C#
+//
+// Description:
+// Demonstrates how to extract a chart's data table from a PowerPoint presentation
+// and save it as an Excel (.xlsx) file using Aspose.Slides for .NET. The example
+// loads a PPTX file, locates the first chart, ensures a data table is present,
+// retrieves the internal workbook stream, and writes it to an XLSX file.
+// This pattern can be used to automate chart data extraction in .NET applications.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, Chart, Data Table, Excel, XLSX,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of chart data to Excel for analysis.
+// - Build tools that convert PowerPoint chart data into spreadsheet format.
+// - Integrate chart data retrieval into .NET workflows.
+// - Validate and process presentation content programmatically.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

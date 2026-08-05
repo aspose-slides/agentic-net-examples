@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Load pptx add 3d bubble slide using C#
+//
+// Description:
+// Demonstrates how to load an existing PPTX file and add a 3‑D bubble chart
+// slide using C# and Aspose.Slides for .NET. The example shows the required
+// presentation‑processing steps for PowerPoint files and produces the
+// requested output in a standalone console application. Developers can use
+// this pattern to automate PPTX workflows, generate charts, or integrate
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, Add, 3D, Bubble, Chart,
+// Slide, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding a 3‑D bubble chart to an existing PPTX.
+// - Build C# tools for PowerPoint presentation processing with custom charts.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

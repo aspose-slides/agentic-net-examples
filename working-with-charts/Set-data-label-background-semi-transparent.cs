@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set data label background semi transparent using C#
+//
+// Description:
+// Demonstrates how to set a semi‑transparent background color for data labels
+// of a chart series using Aspose.Slides for .NET. The example creates a new
+// presentation, adds a pie chart, configures a single series and category,
+// and applies a 50 % transparent yellow fill to the data label background.
+// It then saves the presentation as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Data Label, Background,
+// Semi‑Transparent, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Apply semi‑transparent backgrounds to chart data labels programmatically.
+// - Generate PowerPoint charts with customized label styling in .NET apps.
+// - Automate PPTX creation for reporting or dashboards with visual emphasis.
+// - Validate chart appearance before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

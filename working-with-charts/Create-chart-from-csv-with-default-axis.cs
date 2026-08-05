@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Create chart from csv with default axis using C#
+//
+// Description:
+// Demonstrates how to read data from a CSV file, create a clustered column
+// chart with the default axis setting, populate it with the CSV data, and
+// save the result as a PowerPoint presentation using Aspose.Slides for .NET.
+// The example shows the required presentation‑processing steps for PowerPoint
+// files and produces the requested output in a standalone console application.
+// Developers can use this pattern to automate PPTX workflows, validate results,
+// or integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, CSV, Default Axis,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of charts from CSV data with default axis settings.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

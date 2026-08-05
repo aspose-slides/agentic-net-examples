@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Read plot area dimensions from first chart using C#
+//
+// Description:
+// Demonstrates how to read plot area dimensions from the first chart on the
+// first slide of a PowerPoint presentation using C# and Aspose.Slides for .NET.
+// The example loads a presentation, locates the first chart, validates its
+// layout, retrieves the actual plot area coordinates and size, outputs them,
+// and saves the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Read, Plot Area, Dimensions,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of plot area dimensions from charts in PPTX files.
+// - Build C# utilities for PowerPoint presentation analysis.
+// - Validate chart layout during PPTX generation or transformation.
+// - Integrate plot area data retrieval into .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

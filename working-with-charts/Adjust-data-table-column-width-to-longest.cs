@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Adjust data table column width to longest using C#
+//
+// Description:
+// Demonstrates how to adjust the column widths of a data table in a PowerPoint
+// slide to fit the longest text in each column using Aspose.Slides for .NET.
+// The example loads a presentation, locates the first table on the first slide,
+// calculates the required width for each column based on cell text length, applies
+// the new widths, and saves the modified presentation.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Table, Column Width, Adjust, Data Table,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automatically resize table columns to accommodate content in generated PPTX files.
+// - Build .NET tools that ensure tables are readable without manual adjustment.
+// - Integrate table formatting into PowerPoint automation workflows.
+// - Validate and standardize table layouts before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -20,16 +40,16 @@ class Program
         try
         {
             // Load presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
-            Aspose.Slides.ISlide slide = presentation.Slides[0];
-            Aspose.Slides.ITable table = null;
+            Presentation presentation = new Presentation(inputPath);
+            ISlide slide = presentation.Slides[0];
+            ITable table = null;
 
             // Find the first table on the slide
-            foreach (Aspose.Slides.IShape shape in slide.Shapes)
+            foreach (IShape shape in slide.Shapes)
             {
-                if (shape is Aspose.Slides.ITable)
+                if (shape is ITable)
                 {
-                    table = (Aspose.Slides.ITable)shape;
+                    table = (ITable)shape;
                     break;
                 }
             }
@@ -37,7 +57,7 @@ class Program
             if (table == null)
             {
                 Console.WriteLine("No table found on the first slide.");
-                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                presentation.Save(outputPath, SaveFormat.Pptx);
                 return;
             }
 
@@ -49,9 +69,9 @@ class Program
             for (int col = 0; col < columnCount; col++)
             {
                 int maxLength = 0;
-                foreach (Aspose.Slides.IRow row in table.Rows)
+                foreach (IRow row in table.Rows)
                 {
-                    Aspose.Slides.ICell cell = row[col];
+                    ICell cell = row[col];
                     string text = cell.TextFrame != null ? cell.TextFrame.Text : string.Empty;
                     if (text != null && text.Length > maxLength)
                     {
@@ -65,7 +85,7 @@ class Program
             }
 
             // Save the modified presentation
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            presentation.Save(outputPath, SaveFormat.Pptx);
         }
         catch (NotSupportedException)
         {

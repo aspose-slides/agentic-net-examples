@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Link chart data to external excel workbook using C#
+//
+// Description:
+// Demonstrates how to link a chart's data to an external Excel workbook using
+// C# and Aspose.Slides for .NET. The example loads an existing presentation,
+// associates the first chart on the first slide with a specified workbook,
+// enables dynamic updates, and saves the modified presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Link, Chart, Data, External, Excel,
+// Workbook, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate linking chart data to an external Excel workbook.
+// - Build C# tools for PowerPoint presentation processing with external data sources.
+// - Generate or transform PPTX files that reference external Excel data in .NET applications.
+// - Validate and maintain chart data synchronization before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

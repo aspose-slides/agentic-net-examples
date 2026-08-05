@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add callout styles based on value thresholds using C#
+//
+// Description:
+// Demonstrates how to add callout styles to chart data points based on value
+// thresholds using C# and Aspose.Slides for .NET. The example creates a clustered
+// column chart, populates it with data, enables callouts for data labels, and
+// applies distinct fill and border styles to each callout depending on the
+// underlying numeric value. This pattern can be used to highlight high or low
+// values in PowerPoint charts programmatically.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Callout, Styles, Value, Thresholds,
+// Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Highlight chart data points with custom callout formatting based on value.
+// - Automate visual emphasis in PowerPoint presentations using .NET.
+// - Generate or modify PPTX files with conditional styling for data-driven reports.
+// - Integrate chart callout customization into enterprise reporting tools.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Drawing;

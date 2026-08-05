@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Set y axis logarithmic scale line chart using C#
+//
+// Description:
+// Demonstrates how to create a line chart with exponential data and configure
+// the vertical axis to use a logarithmic scale using Aspose.Slides for .NET.
+// The example builds a presentation, adds a line chart, populates it, sets
+// the Y‑axis to logarithmic with a base of 10, and saves the file.
+// This pattern can be used to automate chart scaling in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Line Chart, Axis, Logarithmic, Scale, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Generate line charts that require logarithmic Y‑axis scaling.
+// - Automate creation of PPTX files with custom chart configurations.
+// - Integrate chart scaling logic into .NET applications for reporting.
+// - Validate presentation workflows involving logarithmic axes.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

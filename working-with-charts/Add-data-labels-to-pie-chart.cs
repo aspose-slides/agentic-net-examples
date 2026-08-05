@@ -1,82 +1,75 @@
+// -----------------------------------------------------------------------------
+// Example: Add data labels to pie chart using C#
+//
+// Description:
+// Demonstrates how to create a pie chart, populate it with data, and enable
+// data labels (category name and value) using C# and Aspose.Slides for .NET.
+// The example shows the required steps to build a presentation, add a chart,
+// configure its data, turn on data labels, and save the result as a PPTX file.
+// Developers can use this pattern to automate chart creation, enhance visual
+// reporting, or integrate PowerPoint generation into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Pie Chart, Data Labels, Chart,
+// Presentation Generation, Office Automation
+//
+// Use Cases:
+// - Automate creation of pie charts with visible data labels.
+// - Build C# tools for generating PowerPoint reports with charts.
+// - Integrate chart generation into .NET applications or services.
+// - Produce presentations that include detailed chart annotations.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
-using System.Collections.Generic;
 using Aspose.Slides;
 using Aspose.Slides.Export;
-using Aspose.Slides.Import;
-using Aspose.Slides.Excel;
 
-namespace BatchChartGenerator
+namespace AddDataLabelsToPieChart
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Define data directory and file paths
-            string dataDir = Path.Combine(Directory.GetCurrentDirectory(), "Data");
-            string excelPath = Path.Combine(dataDir, "input.xlsx");
-            string outputPath = Path.Combine(dataDir, "output.pptx");
+            // Define output path for the generated presentation
+            string outputPath = Path.Combine(Directory.GetCurrentDirectory(), "AddDataLabelsToPieChart.pptx");
 
-            // Verify that the Excel file exists
-            if (!File.Exists(excelPath))
+            // Create a new presentation
+            using (Presentation pres = new Presentation())
             {
-                Console.WriteLine("Excel file not found: " + excelPath);
-                return;
-            }
+                // Use the first (default) slide
+                ISlide slide = pres.Slides[0];
 
-            try
-            {
-                // Load the Excel workbook
-                ExcelDataWorkbook workbook = new ExcelDataWorkbook(excelPath);
+                // Add a pie chart to the slide
+                IChart chart = slide.Shapes.AddChart(ChartType.Pie, 50, 50, 500, 400);
 
-                // Create a new presentation
-                Presentation pres = new Presentation();
+                // Access the chart's workbook to set data
+                IChartDataWorkbook wb = chart.ChartData.ChartDataWorkbook;
 
-                // Get a blank layout slide to use for new slides
-                ILayoutSlide blankLayout = pres.LayoutSlides.GetByType(SlideLayoutType.Blank);
+                // Clear any default series and categories
+                chart.ChartData.Series.Clear();
+                chart.ChartData.Categories.Clear();
 
-                // Iterate through each worksheet in the workbook
-                IEnumerable<string> worksheetNames = workbook.GetWorksheetNames();
-                foreach (string wsName in worksheetNames)
-                {
-                    // Get all charts from the current worksheet
-                    IDictionary<int, string> worksheetCharts = workbook.GetChartsFromWorksheet(wsName);
-                    foreach (KeyValuePair<int, string> chartInfo in worksheetCharts)
-                    {
-                        // Add a new empty slide
-                        ISlide slide = pres.Slides.AddEmptySlide(blankLayout);
+                // Add categories (slice names)
+                chart.ChartData.Categories.Add(wb.GetCell(0, 0, 1, "Category 1"));
+                chart.ChartData.Categories.Add(wb.GetCell(0, 0, 2, "Category 2"));
+                chart.ChartData.Categories.Add(wb.GetCell(0, 0, 3, "Category 3"));
 
-                        // Import the chart from the workbook onto the slide
-                        ExcelWorkbookImporter.AddChartFromWorkbook(
-                            slide.Shapes,
-                            10f,
-                            10f,
-                            workbook,
-                            wsName,
-                            chartInfo.Key,
-                            false);
-                    }
-                }
+                // Add a series and populate data points
+                IChartSeries series = chart.ChartData.Series.Add(ChartType.Pie);
+                series.DataPoints.AddDataPointForPieSeries(wb.GetCell(0, 1, 1, 30));
+                series.DataPoints.AddDataPointForPieSeries(wb.GetCell(0, 1, 2, 20));
+                series.DataPoints.AddDataPointForPieSeries(wb.GetCell(0, 1, 3, 50));
 
-                // Save the presentation
+                // Enable data labels: show both category name and value
+                series.Labels.DefaultDataLabelFormat.ShowCategoryName = true;
+                series.Labels.DefaultDataLabelFormat.ShowValue = true;
+
+                // Save the presentation to the specified file
                 pres.Save(outputPath, SaveFormat.Pptx);
             }
-            catch (ArgumentException ex)
-            {
-                // Handle unsupported format or missing chart errors
-                Console.WriteLine("Argument error: " + ex.Message);
-                // Format not supported
-            }
-            catch (InvalidOperationException ex)
-            {
-                // Handle external URL or web service errors
-                Console.WriteLine("Invalid operation: " + ex.Message);
-            }
-            catch (Exception ex)
-            {
-                // General exception handling
-                Console.WriteLine("An error occurred: " + ex.Message);
-            }
+
+            Console.WriteLine("Presentation saved to " + outputPath);
         }
     }
 }

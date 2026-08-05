@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export animated chart as high resolution PNG using C#
+//
+// Description:
+// Demonstrates how to create a clustered column chart, apply fade and series
+// appear animations, and export the start and end frames of the animation as
+// high‑resolution PNG images using Aspose.Slides for .NET. The example shows
+// how to generate a presentation, add chart animations, save the PPTX, and
+// capture animation frames in a console application.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Export, Animated, Chart,
+// High, Resolution, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of animated charts and capture key animation frames.
+// - Build C# tools for exporting animated chart visuals as high‑resolution images.
+// - Integrate chart animation export into .NET presentation processing pipelines.
+// - Validate and preview animated chart outputs before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set pie chart labels outside end using C#
+//
+// Description:
+// Demonstrates how to set pie chart data labels to the OutsideEnd position using
+// C# and Aspose.Slides for .NET. The example creates a new presentation, adds a
+// pie chart, populates it with categories and a data series, configures the
+// label position, and saves the result as a PPTX file. This pattern can be used
+// to automate chart formatting tasks in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Pie Chart, Labels, OutsideEnd,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting pie chart labels to OutsideEnd.
+// - Build C# utilities for PowerPoint chart formatting.
+// - Generate or modify PPTX files with custom chart label positions.
+// - Validate chart label configurations before publishing presentations.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;

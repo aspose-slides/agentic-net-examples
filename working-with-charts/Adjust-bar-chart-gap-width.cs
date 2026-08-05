@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Adjust bar chart gap width using C#
+//
+// Description:
+// Demonstrates how to adjust the gap width between bar clusters in a
+// clustered column chart using Aspose.Slides for .NET. The example creates a
+// new presentation, adds a clustered column chart, modifies the series group
+// gap width, and saves the result as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Adjust, Chart, Gap Width,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Programmatically change bar chart spacing in generated presentations.
+// - Build .NET utilities that customize chart appearance.
+// - Automate PPTX creation with specific visual styling requirements.
+// - Validate chart layout adjustments before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

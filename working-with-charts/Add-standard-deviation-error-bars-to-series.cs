@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add standard deviation error bars to a scatter chart series using C#
+//
+// Description:
+// Demonstrates how to add standard deviation error bars to a series in a
+// scatter chart with smooth lines using C# and Aspose.Slides for .NET.
+// The example creates a new presentation, inserts a scatter chart, configures
+// both X and Y error bars with a standard deviation multiplier, and saves the
+// result as a PPTX file. This pattern can be used to automate chart
+// enhancements in PowerPoint presentations.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, Scatter Chart, Error Bars,
+// Standard Deviation, Chart Automation, Presentation Processing
+//
+// Use Cases:
+// - Add standard deviation error bars to chart series programmatically.
+// - Generate PowerPoint presentations with enhanced data visualizations.
+// - Integrate chart error bar configuration into .NET reporting tools.
+// - Automate preparation of presentation assets for data analysis.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;

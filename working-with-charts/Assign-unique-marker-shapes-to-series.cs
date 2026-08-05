@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Assign unique marker shapes to series using C#
+//
+// Description:
+// Demonstrates how to assign distinct marker shapes to each data series in a
+// chart using C# and Aspose.Slides for .NET. The example loads an existing PPTX,
+// locates the first chart, applies a set of marker symbols to the series, and
+// saves the modified presentation. This pattern can be used to customize chart
+// appearance programmatically.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Assign, Unique, Marker, Shapes, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Programmatically customize chart series markers in PowerPoint files.
+// - Build .NET tools that automate visual styling of charts.
+// - Generate or modify PPTX presentations with specific chart aesthetics.
+// - Validate and standardize chart formatting before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -69,7 +88,7 @@ namespace AsposeSlidesExample
 
                     // Optionally set marker size
                     series.Marker.Size = 10;
-                    
+
                     // Existing error bar settings are preserved automatically; no changes made here
                 }
 

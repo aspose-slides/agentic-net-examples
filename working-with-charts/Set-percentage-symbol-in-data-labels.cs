@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set custom percentage symbol in chart data labels using C#
+//
+// Description:
+// Demonstrates how to create a clustered column chart, add categories and a series,
+// enable percentage display for data labels, and customize the percentage symbol
+// (e.g., using a per‑mille sign) via the NumberFormat property. The example uses
+// Aspose.Slides for .NET to generate a PPTX file with the customized chart.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Chart, Data Labels, Percentage Symbol,
+// NumberFormat, Clustered Column Chart, Presentation Automation
+//
+// Use Cases:
+// - Generate PowerPoint charts with custom percentage symbols.
+// - Automate chart creation and formatting in .NET applications.
+// - Produce presentations where data labels require non‑standard symbols.
+// - Integrate custom chart labeling into reporting tools.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

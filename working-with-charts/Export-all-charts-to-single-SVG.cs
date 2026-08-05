@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Export all charts to a single SVG using C#
+//
+// Description:
+// Demonstrates how to extract every chart from a PowerPoint presentation
+// and combine them into one SVG file using Aspose.Slides for .NET. The example
+// loads a PPTX, iterates through all slides and shapes, writes each chart as
+// SVG markup, and wraps the output in a single SVG root element. This pattern
+// is useful for creating composite vector graphics from multiple charts.
+//
+// Keywords:
+// C#, Aspose.Slides, PPTX, PowerPoint, SVG, Export, Charts, Single SVG,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Consolidate multiple chart visualizations into a single SVG for web or
+//   documentation purposes.
+// - Automate extraction of chart graphics from presentations in .NET tools.
+// - Generate vector‑based assets from PowerPoint files for further processing.
+// - Validate chart rendering in automated CI pipelines.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Text;
@@ -21,10 +43,10 @@ namespace ExportChartsToSvg
 
             try
             {
-                using (Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath))
+                using (Presentation pres = new Presentation(inputPath))
                 {
                     // Save presentation before exit as required
-                    pres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    pres.Save(inputPath, SaveFormat.Pptx);
 
                     using (FileStream outStream = new FileStream(outputSvgPath, FileMode.Create, FileAccess.Write))
                     {
@@ -32,9 +54,9 @@ namespace ExportChartsToSvg
                         byte[] headerBytes = Encoding.UTF8.GetBytes("<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\">\n");
                         outStream.Write(headerBytes, 0, headerBytes.Length);
 
-                        foreach (Aspose.Slides.ISlide slide in pres.Slides)
+                        foreach (ISlide slide in pres.Slides)
                         {
-                            foreach (Aspose.Slides.IShape shape in slide.Shapes)
+                            foreach (IShape shape in slide.Shapes)
                             {
                                 Aspose.Slides.Charts.IChart chart = shape as Aspose.Slides.Charts.IChart;
                                 if (chart != null)

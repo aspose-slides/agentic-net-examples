@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Create chart animation video and save mp4 using C#
+//
+// Description:
+// Demonstrates how to generate animation frames for a chart in a PowerPoint
+// presentation using Aspose.Slides for .NET, capture each frame as PNG images,
+// and outlines the steps required to assemble these frames into an MP4 video
+// (e.g., via a third‑party encoder). The example also saves the processed
+// presentation. This pattern can be used to automate chart animation extraction
+// and video creation workflows in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Animation, Video, MP4, 
+// Frame Extraction, PNG, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Extract chart animation frames from a PPTX and save as image sequence.
+// - Build tools to convert PowerPoint chart animations into video files.
+// - Integrate Aspose.Slides animation processing into .NET automation pipelines.
+// - Prepare assets for further video encoding with external tools like FFmpeg.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

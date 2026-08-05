@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Fallback plot area layouttargettype to inside using C#
+//
+// Description:
+// Demonstrates how to fallback a chart's plot area LayoutTargetType to Inner
+// when setting it to Outer results in invalid dimensions, using Aspose.Slides for .NET.
+// The example creates a presentation, adds a clustered column chart, applies manual
+// layout fractions, validates the layout, and switches to Inner layout if needed.
+// It then saves the presentation as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Fallback, Plot Area, LayoutTargetType,
+// Chart Layout, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Ensure chart plot area layout remains valid when using Outer layout.
+// - Build C# utilities that automatically adjust chart layouts in PowerPoint files.
+// - Generate or modify PPTX presentations with reliable chart positioning.
+// - Validate and correct chart layout configurations before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;

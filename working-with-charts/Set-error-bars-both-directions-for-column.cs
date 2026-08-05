@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Set error bars both directions for column using C#
+//
+// Description:
+// Demonstrates how to create a clustered column chart, add custom categories 
+// and series data, and configure error bars to display in both positive and 
+// negative directions using Aspose.Slides for .NET. The example includes the 
+// necessary steps to build a presentation, modify chart data, enable error 
+// bars, and save the result as a PPTX file in a console application. This 
+// pattern can be used to automate chart enhancements, validate visual data 
+// representations, or integrate advanced chart features into .NET solutions.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Column Chart, Error Bars, 
+// Both Directions, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding error bars in both directions to column charts.
+// - Build C# tools for enhancing PowerPoint chart visualizations.
+// - Generate or modify PPTX files with custom chart data in .NET applications.
+// - Validate chart configurations before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;

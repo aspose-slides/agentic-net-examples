@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Hide plot area border keep gridlines using C#
+//
+// Description:
+// Demonstrates how to hide the plot area border while preserving gridlines in a
+// chart using C# and Aspose.Slides for .NET. The example creates a presentation,
+// adds a clustered column chart, removes the plot area border by setting its
+// line width to zero, and saves the file. This pattern can be used to customize
+// chart appearance in automated PowerPoint processing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Hide Plot Area Border, Gridlines,
+// Chart Formatting, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Remove plot area borders from charts while keeping gridlines visible.
+// - Automate chart styling in bulk PowerPoint files.
+// - Build .NET tools for customizing chart appearance in presentations.
+// - Ensure consistent visual formatting across generated PPTX reports.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -25,7 +46,7 @@ class Program
             // Save the presentation
             try
             {
-                pres.Save("HidePlotAreaBorder.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+                pres.Save("HidePlotAreaBorder.pptx", SaveFormat.Pptx);
             }
             catch (NotSupportedException)
             {

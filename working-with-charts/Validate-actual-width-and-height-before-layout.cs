@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Validate actual chart plot area dimensions before layout using C#
+//
+// Description:
+// Demonstrates how to validate the actual width and height of a chart's plot
+// area after layout calculation using C# and Aspose.Slides for .NET. The
+// example creates a presentation, adds a clustered column chart, invokes
+// ValidateChartLayout to compute layout, reads PlotArea.ActualWidth and
+// PlotArea.ActualHeight, checks that they are greater than zero, and saves the
+// presentation. This pattern helps developers ensure chart dimensions are
+// valid before performing further manual adjustments.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, Chart, PlotArea, ValidateChartLayout, ActualWidth,
+// ActualHeight, PowerPoint, PPTX, Presentation Automation
+//
+// Use Cases:
+// - Verify chart plot area dimensions after automatic layout.
+// - Build .NET utilities that adjust chart layout based on actual size.
+// - Automate validation of chart dimensions in PowerPoint files.
+// - Ensure reliable chart rendering before further processing or publishing.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

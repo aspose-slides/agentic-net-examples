@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Export error bars to high resolution PNG using C#
+//
+// Description:
+// Demonstrates how to create a chart with error bars and export the presentation
+// slides to high‑resolution PNG images using C# and Aspose.Slides for .NET. The
+// example shows the required steps for adding a scatter chart with X and Y error
+// bars, saving the presentation, and rendering each slide at 2× scaling.
+// Developers can use this pattern to automate PPTX workflows, generate
+// high‑quality chart images, or integrate presentation logic into .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Export, Error Bars, High
+// Resolution, Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate export of charts with error bars to high‑resolution PNG.
+// - Build C# tools for PowerPoint presentation processing and image generation.
+// - Generate or transform PPTX files containing error‑bar charts in .NET
+//   applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

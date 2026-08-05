@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Read plot area dimensions from PPTX chart using C#
+//
+// Description:
+// Demonstrates how to read the plot area dimensions (X, Y, Width, Height) 
+// from the first chart on the first slide of a PPTX file using Aspose.Slides 
+// for .NET. The example validates the chart layout, outputs the actual plot 
+// area values to the console, and saves the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Read, Plot Area, Dimensions, 
+// Chart Layout Validation, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of plot area dimensions from PPTX charts.
+// - Build C# utilities for PowerPoint chart analysis.
+// - Integrate chart dimension validation into .NET applications.
+// - Verify chart layout before further processing or publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -60,7 +80,7 @@ class Program
                 }
 
                 // Save the presentation before exiting
-                pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                pres.Save(outputPath, SaveFormat.Pptx);
             }
         }
         catch (Exception ex)

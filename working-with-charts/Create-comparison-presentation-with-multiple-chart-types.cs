@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Create comparison presentation with multiple chart types using C#
+//
+// Description:
+// Demonstrates how to create a comparison presentation that showcases a variety
+// of chart types using C# and Aspose.Slides for .NET. The example builds a PowerPoint
+// file where each slide contains a different chart type with sample data, sets a
+// title indicating the chart type, and saves the result as a PPTX file. This pattern
+// helps developers automate chart comparison scenarios, generate sample presentations,
+// or validate chart rendering in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Comparison, Presentation,
+// Multiple, Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of a presentation that compares multiple chart types.
+// - Build C# tools for generating sample PowerPoint files with diverse charts.
+// - Validate chart rendering and formatting across different chart types.
+// - Integrate chart generation into .NET applications for reporting or analytics.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;

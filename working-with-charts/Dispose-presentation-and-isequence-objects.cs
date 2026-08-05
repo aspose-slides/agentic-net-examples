@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Dispose presentation and isequence objects using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file, access its first slide animation
+// timeline, clear the main ISequence of animation effects, save the modified
+// presentation, and properly dispose of the Presentation object using
+// Aspose.Slides for .NET. This pattern ensures resources are released and
+// animation sequences are managed in automated PowerPoint workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Dispose, Presentation,
+// ISequence, Objects, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate disposal of Presentation objects after processing.
+// - Manage and clear animation sequences (ISequence) in PPTX files.
+// - Build .NET tools for PowerPoint animation handling.
+// - Ensure proper resource cleanup in server-side PPTX processing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Remove chart legend from presentation using C#
+//
+// Description:
+// Demonstrates how to remove chart legends from all charts in a PowerPoint
+// presentation using C# and Aspose.Slides for .NET. The example loads an
+// existing PPTX file, iterates through each slide and chart shape, disables
+// the legend, and saves the modified presentation. This pattern can be used
+// to automate PPTX workflows, customize chart appearances, or integrate
+// presentation processing into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove, Chart, Legend,
+// Presentation, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate removal of chart legends from presentations.
+// - Build C# tools for PowerPoint presentation customization.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate and preprocess presentation content before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Clone chart enable data table and insert using C#
+//
+// Description:
+// Demonstrates how to clone a slide containing a chart, enable the data table
+// on the cloned chart, and insert the cloned slide into a presentation using
+// Aspose.Slides for .NET. The example loads an existing PPTX, processes the
+// chart, and saves the modified presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone, Chart, Data Table, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate cloning of charts with data tables in PowerPoint files.
+// - Build C# utilities for slide duplication and chart customization.
+// - Generate or modify PPTX presentations programmatically.
+// - Validate chart data table settings before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

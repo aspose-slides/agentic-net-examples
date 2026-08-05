@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export animated chart to SVG for web using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, add fade and
+// series/point animations to a chart, save the animated presentation, and
+// export the first slide as an SVG file using Aspose.Slides for .NET. This
+// console application shows the required steps for processing charts with
+// animation and generating web‑friendly SVG output.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, SVG, Export, Animated Chart,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding animations to charts in PowerPoint files.
+// - Generate SVG representations of animated slides for web integration.
+// - Build .NET tools for PowerPoint presentation manipulation and export.
+// - Validate and preview animated chart workflows before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

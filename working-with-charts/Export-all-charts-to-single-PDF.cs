@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export all charts to a single PDF using C#
+//
+// Description:
+// Demonstrates how to extract every chart from a PowerPoint presentation,
+// copy each chart onto its own slide in a new presentation, and then save the
+// resulting presentation as a single PDF file using Aspose.Slides for .NET.
+// The example includes loading the source PPTX, iterating through slides and
+// shapes, cloning chart objects, and handling unsupported format exceptions.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, PDF, Chart Export, Presentation Processing,
+// Office Automation, .NET
+//
+// Use Cases:
+// - Generate a PDF containing only the charts from a presentation.
+// - Automate reporting workflows that require chart extraction.
+// - Create lightweight PDF documents for review or distribution.
+// - Integrate chart-to-PDF conversion into .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

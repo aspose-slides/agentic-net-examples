@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Export chart as EMF vector using C#
+//
+// Description:
+// Demonstrates how to create a PowerPoint presentation, add a chart, save the
+// presentation, and export the slide containing the chart as an EMF vector file
+// using Aspose.Slides for .NET. The example illustrates the required steps for
+// chart creation, presentation saving, and EMF export in a console application.
+// Developers can adapt this pattern to automate chart extraction or generate
+// vector graphics from PPTX files.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Chart, EMF, Vector Export, Presentation
+// Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of PowerPoint chart slides to EMF vector graphics.
+// - Build tools that extract high‑resolution chart images from presentations.
+// - Integrate chart export functionality into .NET applications.
+// - Generate vector assets for documentation or publishing workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

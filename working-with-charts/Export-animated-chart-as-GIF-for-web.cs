@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Export animated chart as GIF for web using C#
+//
+// Description:
+// Demonstrates how to export an animated chart as a GIF for web using C# and 
+// Aspose.Slides for .NET. The example creates a presentation, adds a clustered 
+// column chart, applies fade and appear animations to the chart, its series, 
+// and individual data points, then saves the animation as a GIF file suitable 
+// for web delivery. It also saves the original presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Animated, Chart, GIF, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate export of animated charts as GIFs for web publishing.
+// - Build C# tools for PowerPoint presentation processing with animation.
+// - Generate or transform PPTX files with animated content in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.Drawing;
 using Aspose.Slides;

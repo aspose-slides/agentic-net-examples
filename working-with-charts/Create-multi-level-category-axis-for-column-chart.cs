@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Create multi level category axis for column chart using C#
+//
+// Description:
+// Demonstrates how to create a column chart with a multi‑level category axis
+// (region → country) using C# and Aspose.Slides for .NET. The example builds a
+// presentation from scratch, adds a clustered column chart, defines hierarchical
+// categories, populates a data series, and saves the result as a PPTX file.
+// This pattern can be used to automate chart creation, customize axis grouping,
+// or integrate advanced charting into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Multi, Level, Category, Axis,
+// Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of column charts with hierarchical categories.
+// - Build C# tools for PowerPoint presentation generation and manipulation.
+// - Generate or transform PPTX files with custom chart axes in .NET applications.
+// - Validate chart configurations before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;

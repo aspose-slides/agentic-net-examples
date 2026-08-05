@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Set layout target type to inside using C#
+//
+// Description:
+// Demonstrates how to set the layout target type of a chart's plot area to
+// inside (Inner) using C# and Aspose.Slides for .NET. The example creates a
+// presentation, adds a clustered column chart, manually defines the plot area
+// layout, sets the LayoutTargetType to Inner to exclude axes from the layout
+// region, and saves the result as a PPTX file. This pattern helps developers
+// automate chart layout adjustments in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, PlotArea, LayoutTargetType,
+// Inside, Inner, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Adjust chart plot area layout to exclude axes.
+// - Build C# tools for precise chart formatting in PowerPoint presentations.
+// - Generate or modify PPTX files with custom chart layouts in .NET applications.
+// - Validate chart layout configurations before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;

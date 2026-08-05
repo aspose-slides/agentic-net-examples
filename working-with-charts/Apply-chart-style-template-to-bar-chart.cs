@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Apply chart style template to bar chart using C#
+//
+// Description:
+// Demonstrates how to apply a predefined chart style template to a clustered
+// column (bar) chart using C# and Aspose.Slides for .NET. The example creates a
+// new presentation, adds a bar chart, sets the chart style, and saves the
+// result as a PPTX file. This pattern can be used to automate styling of
+// charts in PowerPoint presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, Chart, Style, Template,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate applying a chart style template to bar charts.
+// - Build C# utilities for consistent chart styling in PowerPoint files.
+// - Generate styled PPTX presentations programmatically.
+// - Ensure visual consistency across multiple presentations.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;

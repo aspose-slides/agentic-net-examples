@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Enable automatic pie chart label positioning using C#
+//
+// Description:
+// Demonstrates how to enable automatic pie chart label positioning using C#
+// and Aspose.Slides for .NET. The example creates a new presentation, adds a
+// pie chart, configures varied slice colors, and sets data label positioning
+// to BestFit to avoid overlapping. It then saves the presentation as a PPTX
+// file. Developers can use this pattern to automate PPTX workflows, validate
+// results, or integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Enable, Automatic, Pie, Chart,
+// Label, Positioning, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate enabling automatic pie chart label positioning.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files with customized chart labeling.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;

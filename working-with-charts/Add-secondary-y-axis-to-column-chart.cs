@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add secondary y axis to column chart using C#
+//
+// Description:
+// Demonstrates how to add a secondary Y axis to a clustered column chart using
+// C# and Aspose.Slides for .NET. The example creates a new presentation,
+// inserts a column chart, populates it with two product series, assigns the
+// second series to the secondary vertical axis, sets axis titles, and saves
+// the result as a PPTX file. This pattern can be used to automate chart
+// enhancements in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Secondary, Axis, Column, Chart,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding a secondary Y axis to column charts.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files with advanced chart configurations.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using Aspose.Slides.Export;
 using System;
 using System.Drawing;

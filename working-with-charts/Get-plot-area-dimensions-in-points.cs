@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Get plot area dimensions in points using C#
+//
+// Description:
+// Demonstrates how to retrieve the plot area dimensions (ActualX, ActualY,
+// ActualWidth, ActualHeight) in points using C# and Aspose.Slides for .NET.
+// The example creates a new presentation, adds a clustered column chart,
+// accesses the chart's PlotArea properties, outputs the values to the console,
+// and saves the presentation. This pattern helps developers automate PPTX
+// workflows that require precise chart layout information.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Plot Area, Dimensions, Points,
+// Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of chart plot area dimensions in points.
+// - Build C# tools for PowerPoint presentation analysis and validation.
+// - Generate or modify PPTX files with precise chart layout handling.
+// - Integrate chart dimension retrieval into .NET applications for reporting.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides.Export;
 

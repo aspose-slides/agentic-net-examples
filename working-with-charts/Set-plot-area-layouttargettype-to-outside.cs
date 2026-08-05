@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set plot area layouttargettype to outside using C#
+//
+// Description:
+// Demonstrates how to set the plot area LayoutTargetType to Outer (outside) using
+// C# and Aspose.Slides for .NET. The example creates a presentation, adds a
+// clustered column chart, defines a manual layout for the plot area, sets the
+// LayoutTargetType to Outer so that axes are included within the plotted region,
+// and saves the result as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, PlotArea, LayoutTargetType, 
+// Outer, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting plot area layout target to outside in PowerPoint charts.
+// - Build C# tools for chart layout customization in presentations.
+// - Generate or modify PPTX files with specific chart configurations.
+// - Validate chart layout behavior before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

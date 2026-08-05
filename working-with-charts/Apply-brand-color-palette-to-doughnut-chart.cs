@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Apply brand color palette to doughnut chart using C#
+//
+// Description:
+// Demonstrates how to apply a brand color palette to a doughnut chart using C# 
+// and Aspose.Slides for .NET. The example shows the required presentation‑processing 
+// steps for PowerPoint files and produces the requested output in a standalone 
+// console application. Developers can use this pattern to automate PPTX workflows, 
+// validate results, or integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, Brand, Color, Palette, 
+// Doughnut Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate applying a brand color palette to a doughnut chart.
+// - Build C# tools for PowerPoint presentation processing with custom chart colors.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Drawing;
@@ -14,14 +34,14 @@ namespace ApplyBrandColorPaletteToDoughnutChart
             try
             {
                 // Create a new presentation
-                Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation();
+                Presentation pres = new Presentation();
 
                 // Access the first slide
-                Aspose.Slides.ISlide slide = pres.Slides[0];
+                ISlide slide = pres.Slides[0];
 
                 // Add a doughnut chart
-                Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(
-                    Aspose.Slides.Charts.ChartType.Doughnut,
+                IChart chart = slide.Shapes.AddChart(
+                    ChartType.Doughnut,
                     50f, 50f, 400f, 400f);
 
                 // Clear default series and categories
@@ -29,13 +49,13 @@ namespace ApplyBrandColorPaletteToDoughnutChart
                 chart.ChartData.Categories.Clear();
 
                 // Get the chart data workbook
-                Aspose.Slides.Charts.IChartDataWorkbook workbook = chart.ChartData.ChartDataWorkbook;
+                IChartDataWorkbook workbook = chart.ChartData.ChartDataWorkbook;
                 int defaultWorksheetIndex = 0;
 
                 // Add a series
-                Aspose.Slides.Charts.IChartSeries series = chart.ChartData.Series.Add(
+                IChartSeries series = chart.ChartData.Series.Add(
                     workbook.GetCell(defaultWorksheetIndex, 0, 1, "Series 1"),
-                    Aspose.Slides.Charts.ChartType.Doughnut);
+                    ChartType.Doughnut);
 
                 // Add categories
                 chart.ChartData.Categories.Add(workbook.GetCell(defaultWorksheetIndex, 1, 0, "Category A"));
@@ -58,13 +78,13 @@ namespace ApplyBrandColorPaletteToDoughnutChart
                 // Apply brand colors to each data point
                 for (int i = 0; i < series.DataPoints.Count; i++)
                 {
-                    Aspose.Slides.Charts.IChartDataPoint point = series.DataPoints[i];
-                    point.Format.Fill.FillType = Aspose.Slides.FillType.Solid;
+                    IChartDataPoint point = series.DataPoints[i];
+                    point.Format.Fill.FillType = FillType.Solid;
                     point.Format.Fill.SolidFillColor.Color = brandColors[i % brandColors.Length];
                 }
 
                 // Save the presentation
-                pres.Save("BrandDoughnutChart.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+                pres.Save("BrandDoughnutChart.pptx", SaveFormat.Pptx);
             }
             catch (Exception ex)
             {

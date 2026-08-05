@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Create treemap chart with intensity palette using C#
+//
+// Description:
+// Demonstrates how to create a treemap chart with an intensity‑based color
+// palette using C# and Aspose.Slides for .NET. The example builds a presentation,
+// adds a treemap chart, defines hierarchical categories, assigns size values to
+// leaf nodes, and applies a red gradient fill that reflects the intensity of each
+// value. The resulting PPTX file can be used to visualize hierarchical data with
+// color‑coded intensity.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, Treemap chart, Intensity palette,
+// Chart color gradient, Presentation automation, Office automation
+//
+// Use Cases:
+// - Generate treemap charts with intensity‑driven colors for business reports.
+// - Automate creation of hierarchical visualizations in PowerPoint via .NET.
+// - Build C# utilities that process and enrich PPTX files with custom chart data.
+// - Validate chart rendering and color mapping before publishing presentations.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.Drawing;
 using Aspose.Slides;

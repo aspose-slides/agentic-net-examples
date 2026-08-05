@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Export animated chart to highresolution PNG using C#
+//
+// Description:
+// Demonstrates how to export an animated chart from a PowerPoint presentation
+// to a high‑resolution PNG image using C# and Aspose.Slides for .NET. The example
+// loads a PPTX file, locates the first chart on the first slide, renders the
+// chart at double the default resolution, saves the image, and then saves the
+// (potentially modified) presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Export, Animated, Chart,
+// Highresolution, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate export of animated chart to high‑resolution PNG.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -25,18 +46,18 @@ namespace ExportAnimatedChart
             try
             {
                 // Load the presentation
-                Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPresentationPath);
+                Presentation presentation = new Presentation(inputPresentationPath);
 
                 // Access the first slide
-                Aspose.Slides.ISlide slide = presentation.Slides[0];
+                ISlide slide = presentation.Slides[0];
 
                 // Find the first chart on the slide
-                Aspose.Slides.Charts.IChart chart = null;
+                IChart chart = null;
                 for (int i = 0; i < slide.Shapes.Count; i++)
                 {
-                    if (slide.Shapes[i] is Aspose.Slides.Charts.IChart)
+                    if (slide.Shapes[i] is IChart)
                     {
-                        chart = (Aspose.Slides.Charts.IChart)slide.Shapes[i];
+                        chart = (IChart)slide.Shapes[i];
                         break;
                     }
                 }
@@ -49,12 +70,12 @@ namespace ExportAnimatedChart
                 {
                     // Export the chart as a high‑resolution PNG image
                     // Using ShapeThumbnailBounds.Shape with scaling factors for high resolution
-                    Aspose.Slides.IImage chartImage = chart.GetImage(ShapeThumbnailBounds.Shape, 2f, 2f);
-                    chartImage.Save(outputChartImagePath, Aspose.Slides.ImageFormat.Png);
+                    IImage chartImage = chart.GetImage(ShapeThumbnailBounds.Shape, 2f, 2f);
+                    chartImage.Save(outputChartImagePath, ImageFormat.Png);
                 }
 
                 // Save the (potentially modified) presentation
-                presentation.Save(outputPresentationPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                presentation.Save(outputPresentationPath, SaveFormat.Pptx);
             }
             catch (NotSupportedException)
             {

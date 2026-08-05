@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Validate custom line positions by coordinates using C#
+//
+// Description:
+// Demonstrates how to create a line shape in a PowerPoint slide, retrieve its
+// start and end coordinates, and validate them against expected values using
+// Aspose.Slides for .NET. The example saves the presentation and reports the
+// validation result in a console application.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, line shape, coordinates, validation,
+// presentation automation, Office automation
+//
+// Use Cases:
+// - Verify that programmatically added line shapes are positioned correctly.
+// - Build automated tests for slide layout logic.
+// - Generate or modify PPTX files with precise geometric elements.
+// - Ensure consistency of custom graphics before publishing presentations.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

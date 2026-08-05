@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Set trendline forward zero backward three using C#
+//
+// Description:
+// Demonstrates how to add a scatter chart, populate it with data, and set a
+// linear trendline with forward length zero and backward length three using
+// Aspose.Slides for .NET. The example creates a presentation, configures the
+// chart, applies the trendline settings, and saves the result as a PPTX file.
+// This pattern helps developers automate chart trendline adjustments in
+// PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Scatter Chart, Trendline,
+// Forward Zero, Backward Three, Chart Data, Presentation Automation
+//
+// Use Cases:
+// - Automate setting trendline forward and backward lengths in charts.
+// - Build C# utilities for PowerPoint chart manipulation.
+// - Generate or modify PPTX files with customized trendlines.
+// - Validate chart configurations programmatically.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;

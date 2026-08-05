@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add callout with custom fill to scatter using C#
+//
+// Description:
+// Demonstrates how to add a callout with a custom fill to a scatter chart using
+// C# and Aspose.Slides for .NET. The example creates a presentation, inserts a
+// scatter chart, adds data points, enables callouts for data labels, and applies
+// custom fill and line colors to a specific outlier point's callout.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Callout, Custom Fill, Scatter Chart,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding callouts with custom styling to scatter charts.
+// - Build C# utilities for PowerPoint presentation manipulation.
+// - Generate or modify PPTX files with customized chart annotations.
+// - Validate chart appearance programmatically before distribution.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.Drawing;
 using Aspose.Slides;

@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add multi level category axis to column chart using C#
+//
+// Description:
+// Demonstrates how to add a multi‑level category axis to a clustered column chart
+// using C# and Aspose.Slides for .NET. The example creates a new presentation,
+// builds a column chart with hierarchical categories (Region → Country), populates
+// it with data, and saves the result as a PPTX file. This pattern can be used to
+// automate PowerPoint chart creation, integrate chart logic into .NET applications,
+// or validate presentation workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Multi‑Level Category Axis, Chart,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding multi‑level category axes to column charts.
+// - Build C# tools for PowerPoint chart generation and manipulation.
+// - Generate or transform PPTX files with hierarchical chart categories.
+// - Validate chart creation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;
@@ -10,7 +32,7 @@ class Program
         try
         {
             // Create a new presentation
-            var pres = new Aspose.Slides.Presentation();
+            var pres = new Presentation();
 
             // Access the first slide
             var slide = pres.Slides[0];
@@ -52,7 +74,7 @@ class Program
             series.DataPoints.AddDataPointForBarSeries(wb.GetCell(0, "D5", 13000));
 
             // Save the presentation
-            pres.Save("MultiLevelCategoryChart.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            pres.Save("MultiLevelCategoryChart.pptx", SaveFormat.Pptx);
         }
         catch (Exception ex)
         {

@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Handle ArgumentException for unsupported layout target type using C#
+//
+// Description:
+// Demonstrates how to handle an ArgumentException when setting an unsupported
+// LayoutTargetType value on a chart's PlotArea using Aspose.Slides for .NET.
+// The example creates a presentation, adds a clustered column chart, attempts
+// to assign an invalid LayoutTargetType, catches the resulting exception, and
+// falls back to a supported value before saving the file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, ArgumentException, Unsupported,
+// LayoutTargetType, Chart, PlotArea, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Safely handle invalid enum assignments when configuring chart layouts.
+// - Build robust .NET tools for PowerPoint chart manipulation.
+// - Automate PPTX generation with error handling for layout settings.
+// - Validate chart configuration before publishing presentations.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

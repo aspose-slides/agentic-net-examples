@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Apply custom easing to category animation in a chart using C#
+//
+// Description:
+// Demonstrates how to add a clustered column chart (or use an existing one),
+// populate it with sample data, and apply fade animation effects to each
+// series element within each category. The example also shows where a custom
+// easing function can be assigned to the animation timing using Aspose.Slides
+// for .NET. The presentation is loaded from a file, modified, and saved as a
+// new PPTX file in a console application.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Chart, Animation, Custom Easing,
+// Category Animation, Presentation Automation, .NET
+//
+// Use Cases:
+// - Add animated charts with per‑category effects to PowerPoint files.
+// - Apply custom easing to chart animations for smoother transitions.
+// - Generate or modify PPTX presentations programmatically in C#.
+// - Validate and test chart animation settings in automated workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

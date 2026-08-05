@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Export chart with callouts to PDF A using C#
+//
+// Description:
+// Demonstrates how to export a pie chart with data label callouts to a PDF/A-2a
+// file using C# and Aspose.Slides for .NET. The example creates a presentation,
+// adds a pie chart, enables value display and callout labels, configures PDF/A
+// compliance, and saves the result as a PDF/A document.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF/A, PDF, Export, Chart,
+// Callouts, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate exporting charts with callouts to PDF/A for archival.
+// - Build C# utilities for PowerPoint chart manipulation and PDF/A conversion.
+// - Integrate chart export functionality into .NET applications.
+// - Ensure compliance with PDF/A-2a standards when generating PDFs from PPTX.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;

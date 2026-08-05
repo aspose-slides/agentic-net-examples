@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Map bubble colors to categorical series using C#
+//
+// Description:
+// Demonstrates how to map bubble colors to categorical series using C# and 
+// Aspose.Slides for .NET. The example creates a bubble chart, assigns distinct
+// colors to each bubble to represent categorical data, and saves the result as
+// a PowerPoint presentation. This pattern helps automate PPTX workflows,
+// validate visual data representations, or integrate presentation logic into
+// .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Bubble, Colors, Categorical, 
+// Series, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate mapping of bubble colors to categorical series in presentations.
+// - Build C# tools for PowerPoint chart customization and processing.
+// - Generate or transform PPTX files with colored bubble charts in .NET apps.
+// - Validate chart visualizations before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

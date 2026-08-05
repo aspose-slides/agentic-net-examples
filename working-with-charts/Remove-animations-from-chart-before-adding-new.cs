@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Remove animations from chart before adding new using C#
+//
+// Description:
+// Demonstrates how to remove existing animations from a chart and then add a new
+// animation effect using Aspose.Slides for .NET. The example loads a PPTX file,
+// clears any chart animations on the first slide, applies a fade effect, and
+// saves the result. This pattern helps automate PowerPoint presentation processing
+// tasks such as animation management.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove, Animations, Chart,
+// Before, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate removal of chart animations before applying new ones.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files with controlled animations in .NET applications.
+// - Validate and adjust presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

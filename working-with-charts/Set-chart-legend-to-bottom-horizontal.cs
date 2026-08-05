@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Set chart legend to bottom horizontal using C#
+//
+// Description:
+// Demonstrates how to set a chart's legend to a bottom horizontal position using
+// C# and Aspose.Slides for .NET. The example creates a presentation, adds a
+// clustered column chart, configures the legend to appear below the chart in a
+// non‑overlay (horizontal) layout, and saves the result as a PPTX file.
+// This pattern can be used to automate legend positioning in PowerPoint
+// presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Legend, Bottom, Horizontal,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting chart legend to bottom horizontal in PPTX files.
+// - Build C# utilities for PowerPoint chart formatting.
+// - Generate or modify presentations with specific legend layouts.
+// - Validate chart appearance programmatically before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides.Export;
 

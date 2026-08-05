@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set error bars percentage on line series using C#
+//
+// Description:
+// Demonstrates how to set error bars percentage on a line series using C# and 
+// Aspose.Slides for .NET. The example shows the required 
+// presentation-processing steps for PowerPoint files and produces the 
+// requested output in a standalone console application. Developers can use 
+// this pattern to automate PPTX workflows, validate results, or integrate 
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Error, Bars, Percentage, Line, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate set error bars percentage on line series.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;

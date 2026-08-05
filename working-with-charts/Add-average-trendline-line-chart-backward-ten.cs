@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add average trendline line chart backward ten using C#
+//
+// Description:
+// Demonstrates how to add a moving average trendline to a line chart and set its
+// backward length to ten points using C# and Aspose.Slides for .NET. The example
+// creates a new presentation, inserts a line chart with sample data, configures
+// the trendline, and saves the result as a PPTX file. This pattern can be used to
+// automate chart enhancements in PowerPoint presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Average, Trendline, Line,
+// Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding a moving average trendline with a backward period of ten.
+// - Build C# tools for PowerPoint chart manipulation and enhancement.
+// - Generate or modify PPTX files programmatically in .NET applications.
+// - Validate chart trendline configurations before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;

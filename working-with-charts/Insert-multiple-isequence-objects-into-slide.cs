@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Insert multiple isequence objects into slide using C#
+//
+// Description:
+// Demonstrates how to insert multiple ISequence animation objects into a slide
+// using C# and Aspose.Slides for .NET. The example creates a presentation,
+// adds two different charts, and applies separate animation sequences to each
+// chart (by series and by category). It then saves the presentation as a PPTX
+// file. This pattern helps automate PowerPoint animation workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Insert, Multiple, ISequence,
+// Animation, Charts, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate insertion of multiple ISequence animation objects for charts.
+// - Build C# tools for adding animated charts to PowerPoint presentations.
+// - Generate or transform PPTX files with custom animation sequences in .NET.
+// - Validate animation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

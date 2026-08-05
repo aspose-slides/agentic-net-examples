@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Add formatted callout to line chart using C#
+//
+// Description:
+// Demonstrates how to add a formatted callout to a specific data point in a
+// line chart using C# and Aspose.Slides for .NET. The example creates a
+// presentation, inserts a line chart, adds data, and attaches a callout
+// label to the third data point. It shows the required presentation‑processing
+// steps for PowerPoint files and produces the output as a standalone console
+// application. Developers can use this pattern to automate PPTX workflows,
+// validate results, or integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Formatted Callout, Line Chart,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding a formatted callout to a line chart data point.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

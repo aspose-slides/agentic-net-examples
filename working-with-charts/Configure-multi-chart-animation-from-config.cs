@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Configure multi chart animation from config using C#
+//
+// Description:
+// Demonstrates how to read a JSON configuration file to add multiple charts
+// to specific slides and apply major and minor grouping animations using
+// Aspose.Slides for .NET. The example creates a presentation, inserts charts
+// based on the provided parameters, configures animation effects, and saves
+// the result as a PPTX file.
+//
+// Keywords:
+// C#, JSON, Configuration, Chart, Animation, Aspose.Slides for .NET, PPTX,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate the creation of charts with predefined animation settings.
+// - Build tools that apply complex chart animation from external config files.
+// - Integrate chart animation workflows into .NET applications.
+// - Validate and preview presentation animations before deployment.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;

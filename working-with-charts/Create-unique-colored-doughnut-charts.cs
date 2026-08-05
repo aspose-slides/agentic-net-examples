@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Create unique colored doughnut charts using C#
+//
+// Description:
+// Demonstrates how to generate multiple PowerPoint presentations, each
+// containing a doughnut chart with varied slice colors and a custom hole size
+// using Aspose.Slides for .NET. The example shows how to prepare chart data,
+// configure chart appearance, and save the resulting PPTX files in a batch
+// process. Developers can adapt this pattern to automate PPTX workflows,
+// produce batch reports, or integrate chart creation into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Doughnut Chart, Unique Colors,
+// Batch Generation, Presentation Automation, Charts, Office Automation
+//
+// Use Cases:
+// - Automate creation of multiple presentations with uniquely colored doughnut charts.
+// - Build .NET tools for batch generation of chart‑based reports.
+// - Integrate dynamic chart creation into enterprise applications.
+// - Validate and preview presentation content before distribution.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Drawing;

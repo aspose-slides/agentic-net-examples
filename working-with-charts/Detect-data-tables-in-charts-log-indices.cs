@@ -1,3 +1,21 @@
+// -----------------------------------------------------------------------------
+// Example: Detect data tables in charts log indices using C#
+//
+// Description:
+// Demonstrates how to detect data tables in charts within a PowerPoint presentation using C# and 
+// Aspose.Slides for .NET. The example iterates through slides and shapes, identifies charts that have
+// visible data tables, logs their slide indices, and saves the presentation.
+// This pattern helps automate PPTX analysis, validation, or transformation tasks.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Detect, Data Tables, Charts, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Identify charts with visible data tables in existing presentations.
+// - Build tools to audit or modify PPTX files based on chart data table presence.
+// - Integrate chart analysis into .NET applications for reporting or validation.
+// - Automate preprocessing steps before publishing or further processing of presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

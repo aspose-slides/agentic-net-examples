@@ -1,56 +1,94 @@
+// -----------------------------------------------------------------------------
+// Example: Compare pdf chart images before after trendlines using C#
+//
+// Description:
+// Demonstrates how to generate PDF images of a chart before and after adding
+// a linear trendline using C# and Aspose.Slides for .NET. The example creates a
+// clustered column chart, saves the presentation as PDF, adds a trendline to
+// the first series, saves a second PDF, and then performs a byte‑wise comparison
+// of the two PDF files. This pattern can be used to validate visual changes in
+// chart rendering or to automate regression testing of presentation content.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Compare, Chart, Trendline,
+// Images, Before, After, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate comparison of PDF chart images before and after applying trendlines.
+// - Build C# tools for PowerPoint presentation processing and visual regression testing.
+// - Generate or transform PPTX files and export them to PDF in .NET applications.
+// - Validate chart rendering changes in automated CI pipelines.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
+using Aspose.Slides;
+using Aspose.Slides.Charts;
 using Aspose.Slides.Export;
 
 class Program
 {
     static void Main()
     {
-        string outputPdfBefore = "ChartBefore.pdf";
-        string outputPdfAfter = "ChartAfter.pdf";
+        string inputPath = "input.pptx";
+        string outputPathBefore = "chart_before.pdf";
+        string outputPathAfter = "chart_after.pdf";
 
-        // Create a new presentation
-        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation();
+        // Verify input file exists
+        if (!File.Exists(inputPath))
+        {
+            Console.WriteLine("Input file does not exist.");
+            return;
+        }
 
-        // Access the first slide
-        Aspose.Slides.ISlide slide = pres.Slides[0];
-
-        // Add a clustered column chart to the slide
-        Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(
-            Aspose.Slides.Charts.ChartType.ClusteredColumn,
-            0f, 0f, 500f, 400f);
-
-        // Export PDF before adding trend lines
         try
         {
-            pres.Save(outputPdfBefore, Aspose.Slides.Export.SaveFormat.Pdf);
+            // Load presentation
+            Presentation pres = new Presentation(inputPath);
+            ISlide slide = pres.Slides[0];
+
+            // Add a clustered column chart
+            IChart chart = slide.Shapes.AddChart(ChartType.ClusteredColumn, 0, 0, 500, 400);
+
+            // Save PDF before adding trend lines
+            pres.Save(outputPathBefore, SaveFormat.Pdf);
+
+            // Add a linear trend line to the first series
+            ITrendline trendline = chart.ChartData.Series[0].TrendLines.Add(TrendlineType.Linear);
+            trendline.DisplayEquation = false;
+            trendline.DisplayRSquaredValue = false;
+
+            // Save PDF after adding trend lines
+            pres.Save(outputPathAfter, SaveFormat.Pdf);
+
+            // Compare the two PDF files (byte-wise)
+            byte[] beforeBytes = File.ReadAllBytes(outputPathBefore);
+            byte[] afterBytes = File.ReadAllBytes(outputPathAfter);
+            bool areIdentical = beforeBytes.Length == afterBytes.Length;
+            if (areIdentical)
+            {
+                for (int i = 0; i < beforeBytes.Length; i++)
+                {
+                    if (beforeBytes[i] != afterBytes[i])
+                    {
+                        areIdentical = false;
+                        break;
+                    }
+                }
+            }
+
+            Console.WriteLine(areIdentical ? "PDFs are identical." : "PDFs differ.");
+            pres.Dispose();
         }
-        catch (Exception)
+        catch (NotSupportedException)
         {
             // Format not supported
+            Console.WriteLine("The specified file format is not supported.");
         }
-
-        // Add a linear trend line to the first series
-        Aspose.Slides.Charts.ITrendline trendline = chart.ChartData.Series[0].TrendLines.Add(
-            Aspose.Slides.Charts.TrendlineType.Linear);
-        trendline.DisplayEquation = false;
-        trendline.DisplayRSquaredValue = false;
-
-        // Export PDF after adding trend lines
-        try
+        catch (Exception ex)
         {
-            pres.Save(outputPdfAfter, Aspose.Slides.Export.SaveFormat.Pdf);
+            // Handle other exceptions (e.g., external URLs or web services)
+            Console.WriteLine("Error: " + ex.Message);
         }
-        catch (Exception)
-        {
-            // Format not supported
-        }
-
-        // Placeholder: Compare the two PDF files to ensure visual consistency
-        // (Actual comparison logic would go here)
-
-        // Save the presentation before exiting
-        pres.Save("ChartPresentation.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
-        pres.Dispose();
     }
 }

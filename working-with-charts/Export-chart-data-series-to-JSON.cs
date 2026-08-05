@@ -1,120 +1,98 @@
+// -----------------------------------------------------------------------------
+// Example: Export chart data series to json using C#
+//
+// Description:
+// Demonstrates how to export chart data series to JSON using C# and 
+// Aspose.Slides for .NET. The example shows the required 
+// presentation-processing steps for PowerPoint files and produces the 
+// requested output in a standalone console application. Developers can use 
+// this pattern to automate PPTX workflows, validate results, or integrate 
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Chart, Data, Series, 
+// JSON, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate export of chart data series to JSON.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
+using System.Collections.Generic;
 using System.Text.Json;
 using Aspose.Slides;
-using Aspose.Slides.Charts;
 using Aspose.Slides.Export;
+using Aspose.Slides.Charts;
 
-namespace ExportChartDataToJson
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        string presentationPath = "input.pptx";
+        string jsonOutputPath = "chartData.json";
+
+        if (!File.Exists(presentationPath))
         {
-            // Path for the output presentation and JSON file
-            string presentationPath = "ChartExport.pptx";
-            string jsonPath = "ChartData.json";
-
-            try
-            {
-                // Create a new presentation
-                using (Presentation pres = new Presentation())
-                {
-                    // Access the first slide
-                    ISlide slide = pres.Slides[0];
-
-                    // Add a clustered column chart with sample data
-                    IChart chart = slide.Shapes.AddChart(ChartType.ClusteredColumn, 0f, 0f, 500f, 400f);
-
-                    // Clear default series and categories
-                    chart.ChartData.Series.Clear();
-                    chart.ChartData.Categories.Clear();
-
-                    // Get the chart data workbook
-                    IChartDataWorkbook workbook = chart.ChartData.ChartDataWorkbook;
-
-                    // Add two series
-                    IChartSeries series1 = chart.ChartData.Series.Add(workbook.GetCell(0, 0, 1, "Series 1"), ChartType.ClusteredColumn);
-                    IChartSeries series2 = chart.ChartData.Series.Add(workbook.GetCell(0, 0, 2, "Series 2"), ChartType.ClusteredColumn);
-
-                    // Add three categories
-                    chart.ChartData.Categories.Add(workbook.GetCell(0, 1, 0, "Category 1"));
-                    chart.ChartData.Categories.Add(workbook.GetCell(0, 2, 0, "Category 2"));
-                    chart.ChartData.Categories.Add(workbook.GetCell(0, 3, 0, "Category 3"));
-
-                    // Populate series data using literal double values (correct type)
-                    series1.DataPoints.AddDataPointForBarSeries(20.0);
-                    series1.DataPoints.AddDataPointForBarSeries(50.0);
-                    series1.DataPoints.AddDataPointForBarSeries(30.0);
-
-                    series2.DataPoints.AddDataPointForBarSeries(30.0);
-                    series2.DataPoints.AddDataPointForBarSeries(10.0);
-                    series2.DataPoints.AddDataPointForBarSeries(60.0);
-
-                    // Export chart data series to JSON
-                    ExportChartSeriesToJson(chart, jsonPath);
-
-                    // Save the presentation
-                    pres.Save(presentationPath, SaveFormat.Pptx);
-                }
-
-                Console.WriteLine("Presentation saved to " + presentationPath);
-                Console.WriteLine("Chart data exported to " + jsonPath);
-            }
-            catch (FileNotFoundException ex)
-            {
-                Console.WriteLine("File not found: " + ex.Message);
-            }
-            catch (NotSupportedException ex)
-            {
-                // Format not supported
-                Console.WriteLine("The requested file format is not supported: " + ex.Message);
-            }
-            catch (Exception ex)
-            {
-                // General exception handling (e.g., external URLs or web services)
-                Console.WriteLine("An error occurred: " + ex.Message);
-            }
+            Console.WriteLine("Presentation file not found.");
+            return;
         }
 
-        // Exports each series name and its data points to a JSON file
-        private static void ExportChartSeriesToJson(IChart chart, string jsonFilePath)
+        try
         {
-            // Create a serializable structure
-            var chartData = new System.Collections.Generic.List<SeriesData>();
-
-            // Iterate over each series
-            foreach (IChartSeries series in chart.ChartData.Series)
+            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(presentationPath))
             {
-                // Get series name
-                string seriesName = series.Name.ToString();
+                List<object> chartsData = new List<object>();
 
-                // Collect data point values
-                var values = new System.Collections.Generic.List<double>();
-                foreach (IChartDataPoint point in series.DataPoints)
+                foreach (Aspose.Slides.ISlide slide in presentation.Slides)
                 {
-                    // Value is IDoubleChartValue; convert to double
-                    double numericValue = point.Value.ToDouble();
-                    values.Add(numericValue);
+                    foreach (Aspose.Slides.IShape shape in slide.Shapes)
+                    {
+                        Aspose.Slides.Charts.IChart chart = shape as Aspose.Slides.Charts.IChart;
+                        if (chart != null)
+                        {
+                            List<object> seriesList = new List<object>();
+                            foreach (Aspose.Slides.Charts.IChartSeries series in chart.ChartData.Series)
+                            {
+                                List<object> points = new List<object>();
+                                foreach (Aspose.Slides.Charts.IChartDataPoint point in series.DataPoints)
+                                {
+                                    object value = null;
+                                    if (point.Value != null && point.Value.Data != null)
+                                    {
+                                        value = point.Value.Data;
+                                    }
+                                    points.Add(new { Value = value });
+                                }
+                                seriesList.Add(new { SeriesName = series.Name, DataPoints = points });
+                            }
+                            chartsData.Add(new
+                            {
+                                SlideIndex = slide.SlideNumber,
+                                ChartType = chart.Type.ToString(),
+                                Series = seriesList
+                            });
+                        }
+                    }
                 }
 
-                // Add to list
-                chartData.Add(new SeriesData { Name = seriesName, Values = values });
+                string json = System.Text.Json.JsonSerializer.Serialize(chartsData, new System.Text.Json.JsonSerializerOptions { WriteIndented = true });
+                File.WriteAllText(jsonOutputPath, json);
+
+                // Save presentation before exit
+                presentation.Save(presentationPath, Aspose.Slides.Export.SaveFormat.Pptx);
             }
-
-            // Serialize to JSON with indentation
-            JsonSerializerOptions options = new JsonSerializerOptions { WriteIndented = true };
-            string jsonString = JsonSerializer.Serialize(chartData, options);
-
-            // Write JSON to file
-            File.WriteAllText(jsonFilePath, jsonString);
         }
-
-        // Helper class for JSON serialization
-        private class SeriesData
+        catch (NotSupportedException)
         {
-            public string Name { get; set; }
-            public System.Collections.Generic.List<double> Values { get; set; }
+            // Format not supported
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error: " + ex.Message);
         }
     }
 }

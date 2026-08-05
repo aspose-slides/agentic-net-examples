@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Resize plot area using actual dimensions using C#
+//
+// Description:
+// Demonstrates how to resize a chart's plot area to a percentage of its actual
+// dimensions using Aspose.Slides for .NET. The example loads an existing PPTX,
+// adds a clustered column chart, obtains the plot area's actual width and height,
+// scales them to 80%, and saves the modified presentation. This pattern helps
+// developers programmatically adjust chart layouts in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Resize, Plot Area, Actual Dimensions,
+// Chart Layout, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Programmatically adjust chart plot area size based on actual dimensions.
+// - Automate PowerPoint chart formatting in .NET applications.
+// - Create tools that fine‑tune visual presentation of data.
+// - Validate and modify PPTX files before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

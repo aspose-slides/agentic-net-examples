@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Enable data table visibility for charts using C#
+//
+// Description:
+// Demonstrates how to enable data table visibility for charts in a PowerPoint
+// presentation using C# and Aspose.Slides for .NET. The example loads an
+// existing PPTX file, iterates through all slides and chart shapes, sets the
+// HasDataTable property to true, and saves the modified presentation.
+// This pattern can be used to automate chart formatting tasks in .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Enable, Data Table, Chart,
+// Visibility, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate enabling data tables for charts in existing presentations.
+// - Build C# utilities for batch processing of PPTX files.
+// - Integrate chart formatting into .NET applications.
+// - Ensure consistent chart appearance before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

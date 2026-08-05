@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Set pie chart data label percent decimal using C#
+//
+// Description:
+// Demonstrates how to create a pie chart, populate it with categories and series,
+// and configure the data labels to show percentages with one decimal place using
+// Aspose.Slides for .NET. The example includes creating a presentation, adding a
+// chart, setting label formatting, and saving the file as a PPTX.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Data, Label, Percent,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting pie chart data label percent decimal in presentations.
+// - Build C# utilities for PowerPoint chart customization.
+// - Generate or modify PPTX files with specific chart label formatting.
+// - Validate chart label settings before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

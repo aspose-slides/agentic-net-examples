@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add custom labels category value to pie using C#
+//
+// Description:
+// Demonstrates how to add custom data labels that display both the category name
+// and the value with a custom separator to a pie chart using C# and Aspose.Slides
+// for .NET. The example creates a new presentation, inserts a pie chart, configures
+// the data label format, and saves the presentation as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Pie Chart, Custom Labels,
+// Category Name, Value, Separator, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding custom category and value labels to pie charts.
+// - Build C# utilities for PowerPoint chart customization.
+// - Generate PPTX files with tailored chart labeling in .NET applications.
+// - Validate chart label configurations before publishing presentations.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

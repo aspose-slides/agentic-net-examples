@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Create sunburst chart with level colors using C#
+//
+// Description:
+// Demonstrates how to create a Sunburst chart with custom colors for each
+// hierarchy level using Aspose.Slides for .NET. The example builds a
+// presentation, adds a Sunburst chart, defines hierarchical categories,
+// assigns size values, applies varied colors and explicit level colors, and
+// saves the result as a PPTX file. This pattern can be used to automate
+// generation of Sunburst visualizations with level‑specific styling in
+// .NET applications.
+//
+// Keywords:
+// C#, Aspose.Slides, Sunburst chart, level colors, hierarchical chart, PPTX,
+// presentation automation, .NET, chart data workbook, chart series
+//
+// Use Cases:
+// - Generate Sunburst charts with distinct colors per hierarchy level.
+// - Automate PowerPoint report creation with custom chart styling.
+// - Integrate Sunburst visualizations into C# tools or services.
+// - Validate chart data and appearance programmatically before distribution.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

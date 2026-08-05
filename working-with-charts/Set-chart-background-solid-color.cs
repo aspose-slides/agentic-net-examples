@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set chart background solid color using C#
+//
+// Description:
+// Demonstrates how to set a chart's background to a solid color using C# and 
+// Aspose.Slides for .NET. The example creates a presentation, adds a clustered 
+// column chart, applies a theme accent color as the chart's background fill, 
+// and saves the result as a PPTX file. This pattern can be used to automate 
+// PowerPoint chart styling in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Background, Solid, 
+// Color, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting a chart's background to a solid color.
+// - Build C# tools for PowerPoint chart styling and processing.
+// - Generate or modify PPTX files with customized chart appearances.
+// - Validate chart formatting workflows before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Drawing;

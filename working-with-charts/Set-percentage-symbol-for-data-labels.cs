@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set custom percentage symbol for chart data labels using C#
+//
+// Description:
+// Demonstrates how to customize the percentage symbol displayed on data labels
+// of a percent‑stacked column chart using C# and Aspose.Slides for .NET. The
+// example creates a new presentation, adds a chart, populates series data,
+// enables percentage display on data labels, applies a custom number format
+// (e.g., replacing '%' with '‰'), and saves the result as a PPTX file. This
+// pattern can be used to automate chart formatting tasks in PowerPoint files.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, Chart, Percent Stacked Column,
+// Data Labels, Percentage Symbol, NumberFormat, Presentation Automation
+//
+// Use Cases:
+// - Customize percentage symbols on chart data labels.
+// - Automate chart formatting in PowerPoint presentations.
+// - Build .NET tools for generating or modifying PPTX charts.
+// - Apply custom number formats to data labels for branding or localization.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

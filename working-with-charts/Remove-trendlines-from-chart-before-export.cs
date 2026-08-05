@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Remove trendlines from chart before export using C#
+//
+// Description:
+// Demonstrates how to remove trendlines from a chart before exporting the
+// chart as an image and saving the presentation using Aspose.Slides for .NET.
+// The example creates a presentation, adds a clustered column chart, removes
+// all trendlines from each series, exports the chart to PNG, and saves the
+// presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove, Trendlines, Chart,
+// Export, Image, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate removal of trendlines from charts prior to image export.
+// - Build C# utilities for PowerPoint chart manipulation.
+// - Generate or transform PPTX files with customized chart visuals.
+// - Validate and prepare presentations before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;

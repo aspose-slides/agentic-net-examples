@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Convert presentation to PPTX with branded chart legends using C#
+//
+// Description:
+// Demonstrates how to load a PPTX presentation, iterate through its slides,
+// find chart objects, apply branded legend positioning and formatting, and
+// save the modified presentation as PPTX using Aspose.Slides for .NET.
+// This example is useful for automating chart legend branding in PowerPoint
+// files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Legend, Branding,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Apply corporate branding to chart legends across a presentation.
+// - Automate the adjustment of legend position, size, and style in PPTX files.
+// - Build .NET tools for consistent chart appearance in PowerPoint reports.
+// - Validate and enforce legend formatting before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

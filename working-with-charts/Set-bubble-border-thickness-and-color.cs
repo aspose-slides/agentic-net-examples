@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set bubble border thickness and color using C#
+//
+// Description:
+// Demonstrates how to create a bubble chart, add data points, and set a custom
+// border thickness and color for each bubble using Aspose.Slides for .NET.
+// The example covers presentation creation, chart configuration, data population,
+// and styling of bubble borders in a standalone console application.
+// Developers can adapt this pattern to automate PPTX workflows that require
+// customized bubble chart appearances.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Bubble, Border, Thickness, 
+// Color, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting bubble border thickness and color in PowerPoint charts.
+// - Build C# tools for customizing chart aesthetics in presentations.
+// - Generate or transform PPTX files with styled bubble charts in .NET applications.
+// - Validate and preview presentation visual styles before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

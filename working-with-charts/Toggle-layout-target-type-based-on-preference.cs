@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Toggle layout target type based on preference using C#
+//
+// Description:
+// Demonstrates how to toggle the LayoutTargetType of a chart's PlotArea 
+// (inner or outer) based on a command‑line preference using Aspose.Slides for .NET. 
+// The example loads or creates a presentation, ensures a chart exists, sets a 
+// manual layout for the PlotArea and applies the requested LayoutTargetType, 
+// then saves the result as a PPTX file.
+//
+// Keywords:
+// C#, Aspose.Slides, Chart, PlotArea, LayoutTargetType, Inner, Outer, PPTX, 
+// Presentation Automation, Office Automation
+//
+// Use Cases:
+// - Programmatically switch a chart's layout target between inner and outer bounds.
+// - Build command‑line tools that adjust chart formatting in PowerPoint files.
+// - Automate PPTX generation or modification with specific chart layout settings.
+// - Validate chart layout behavior before publishing presentations.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

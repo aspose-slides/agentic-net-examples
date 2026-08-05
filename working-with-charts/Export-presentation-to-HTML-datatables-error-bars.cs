@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export presentation to HTML datatables error bars using C#
+//
+// Description:
+// Demonstrates how to create a bubble chart with X and Y error bars, save the
+// presentation as PPTX, and export it to HTML using Aspose.Slides for .NET.
+// The example illustrates the required steps for chart creation, error bar
+// configuration, and HTML export in a console application.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, HTML, Export, Chart, Bubble,
+// Error Bars, Datatables, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Generate PowerPoint presentations containing bubble charts with error bars.
+// - Convert PPTX files to HTML for web viewing with datatable support.
+// - Automate chart creation and export workflows in .NET applications.
+// - Validate error bar rendering before publishing presentations.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;

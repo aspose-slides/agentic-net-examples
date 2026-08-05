@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Insert isequence animation into slide timeline using C#
+//
+// Description:
+// Demonstrates how to insert an ISequence animation effect into a slide's
+// timeline using C# and Aspose.Slides for .NET. The example loads an existing
+// PPTX file, adds an Appear animation to the first shape in the main sequence,
+// and saves the modified presentation. This pattern can be used to automate
+// animation insertion in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Insert, ISequence, Animation,
+// Slide, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate insertion of ISequence animations into PowerPoint slides.
+// - Build C# utilities for enhancing slide animations programmatically.
+// - Generate or modify PPTX files with custom animation effects in .NET
+//   applications.
+// - Validate and test animation workflows before publishing presentations.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

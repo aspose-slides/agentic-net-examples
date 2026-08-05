@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Export presentation with chart callouts to PNG using C#
+//
+// Description:
+// Demonstrates how to export a presentation that contains a pie chart with
+// data label callouts to PNG using C# and Aspose.Slides for .NET. The example
+// creates a new presentation, adds a pie chart, enables callout data labels,
+// saves the presentation as PPTX, and then exports both the chart and the
+// entire slide as PNG images.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Export, Presentation,
+// Chart, Callouts, Pie Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate export of a chart with callouts to PNG.
+// - Build C# tools for PowerPoint presentation processing that include chart
+//   callouts.
+// - Generate or transform PPTX files with chart visualizations in .NET
+//   applications.
+// - Validate chart callout appearance before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;

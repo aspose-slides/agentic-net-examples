@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Get vertical axis minimum value using C#
+//
+// Description:
+// Demonstrates how to retrieve the minimum value of the vertical axis from an
+// Area chart using Aspose.Slides for .NET. The example creates a presentation,
+// adds an Area chart, validates its layout, reads the vertical axis MinValue,
+// outputs it to the console, and saves the presentation. This pattern can be
+// used to programmatically inspect chart axis settings in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Axis, Vertical, Minimum,
+// Value, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Extract vertical axis minimum values from charts in PPTX files.
+// - Automate validation of chart axis settings.
+// - Build tools that analyze or modify PowerPoint chart data.
+// - Integrate chart property retrieval into .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

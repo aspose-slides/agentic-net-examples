@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Save presentation as PPTX with tables and error bars using C#
+//
+// Description:
+// Demonstrates how to create a new presentation, add a 2x2 table, insert a
+// bubble chart with X and Y error bars, and save the result as a PPTX file
+// using Aspose.Slides for .NET. The example includes configuring error bar
+// visibility, types, and formatting, and shows basic exception handling for
+// the save operation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Save, Presentation, Tables,
+// Charts, Error Bars, Bubble Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate generation of PPTX files containing tables and charts with error bars.
+// - Build C# tools for creating and customizing PowerPoint presentations.
+// - Produce reports or dashboards that require visual data representation with error metrics.
+// - Validate presentation creation workflows before deployment.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

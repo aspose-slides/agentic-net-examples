@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Toggle data table visibility based on boolean using C#
+//
+// Description:
+// Demonstrates how to toggle the visibility of a chart data table in a PowerPoint
+// presentation based on a boolean value supplied via command‑line arguments. The
+// example creates a new presentation, adds a clustered column chart, sets the
+// HasDataTable property according to the parsed boolean, and saves the file as
+// a PPTX using Aspose.Slides for .NET.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Toggle, Data Table, Visibility,
+// Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Programmatically show or hide chart data tables based on runtime conditions.
+// - Build command‑line utilities for PowerPoint chart customization.
+// - Integrate chart visibility logic into larger .NET automation workflows.
+// - Generate PPTX files with dynamic chart configurations.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

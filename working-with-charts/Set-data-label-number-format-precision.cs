@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Set data label number format precision using C#
+//
+// Description:
+// Demonstrates how to set a custom numeric format with precision for data
+// labels in a line chart using C# and Aspose.Slides for .NET. The example
+// creates a presentation, adds a line chart, enables data labels for the
+// first series, applies a number format (two decimal places as a percentage),
+// and saves the result as a PPTX file. This pattern can be used to automate
+// chart formatting tasks in PowerPoint presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Data Label, Number Format,
+// Precision, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting precise number formats for chart data labels.
+// - Build C# utilities for PowerPoint chart customization.
+// - Generate or modify PPTX files with specific chart label formatting.
+// - Validate chart presentation workflows before deployment.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;

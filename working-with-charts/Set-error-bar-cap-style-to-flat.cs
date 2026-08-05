@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set error bar cap style to flat using C#
+//
+// Description:
+// Demonstrates how to set the end cap style of both X and Y error bars to flat
+// in a scatter chart with smooth lines using C# and Aspose.Slides for .NET.
+// The example creates a presentation, adds a chart, configures error bars,
+// and saves the result as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Error Bars, Cap Style, Flat,
+// Chart, Scatter Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting flat end caps for error bars in chart series.
+// - Build C# utilities for customizing chart appearance in PowerPoint files.
+// - Generate or modify PPTX presentations with specific error bar styling.
+// - Validate chart formatting before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;

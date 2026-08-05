@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add error bars to line series using C#
+//
+// Description:
+// Demonstrates how to add custom error bars in both X and Y directions to a
+// line chart series using C# and Aspose.Slides for .NET. The example creates a
+// new presentation, inserts a line chart, configures custom error bar values
+// for each data point, and saves the result as a PPTX file. This pattern can be
+// used to automate chart enhancements in PowerPoint files.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Line Chart, Error Bars, Custom Error
+// Values, Chart Automation, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Programmatically add custom X/Y error bars to line charts.
+// - Generate PowerPoint reports with detailed chart error visualizations.
+// - Integrate chart error bar configuration into .NET applications.
+// - Automate presentation creation and modification workflows.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;

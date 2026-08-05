@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Synchronize chart animation with slide transition using C#
+//
+// Description:
+// Demonstrates how to create a presentation, add a clustered column chart,
+// populate its data, animate the chart series sequentially, apply a fade slide
+// transition with a specific advance time, and save the result as a PPTX file
+// using Aspose.Slides for .NET.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Chart Animation, Slide Transition, Fade,
+// Presentation Automation, .NET
+//
+// Use Cases:
+// - Generate PPTX files with charts whose series animations are synchronized
+//   with slide transitions.
+// - Build C# utilities that programmatically add charts, animations, and
+//   transitions to PowerPoint presentations.
+// - Automate reporting scenarios where animated charts need precise timing.
+// - Validate and test presentation workflows involving chart animations and
+//   slide transitions before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

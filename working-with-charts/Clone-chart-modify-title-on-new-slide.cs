@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Clone chart modify title on new slide using C#
+//
+// Description:
+// Demonstrates how to clone a chart from an existing slide, place it on a new
+// blank slide, and modify its title using Aspose.Slides for .NET. The example
+// loads a source presentation, finds the first chart, creates a new slide,
+// clones the chart with the same type and dimensions, sets a new chart title,
+// and saves the result as a new PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone Chart, Modify Title, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate cloning of charts with updated titles across slides.
+// - Build C# utilities for PowerPoint chart manipulation.
+// - Generate or transform PPTX files programmatically in .NET applications.
+// - Validate and test chart cloning workflows before deployment.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

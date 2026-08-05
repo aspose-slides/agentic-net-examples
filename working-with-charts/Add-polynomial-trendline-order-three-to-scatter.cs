@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Add polynomial trendline order three to scatter using C#
+//
+// Description:
+// Demonstrates how to add a polynomial trendline of order three to a scatter
+// chart with smooth lines using Aspose.Slides for .NET. The example creates a
+// new presentation, inserts a scatter chart, populates it with data, applies
+// the trendline, and saves the result as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Scatter Chart, Polynomial,
+// Trendline, Order Three, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding a third‑order polynomial trendline to scatter charts.
+// - Build C# utilities for PowerPoint chart manipulation.
+// - Generate or modify PPTX files with custom chart analytics.
+// - Validate chart trendline functionality in .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;

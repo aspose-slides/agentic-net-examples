@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add cubic trendline to scatter chart using C#
+//
+// Description:
+// Demonstrates how to add a cubic (polynomial order 3) trendline to a scatter
+// chart using C# and Aspose.Slides for .NET. The example shows the required
+// presentation-processing steps for PowerPoint files and produces the
+// requested output in a standalone console application. Developers can use
+// this pattern to automate PPTX workflows, validate results, or integrate
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Cubic, Trendline, Scatter,
+// Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding a cubic trendline to a scatter chart.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -35,7 +57,7 @@ class Program
             series1.DataPoints.AddDataPointForScatterSeries(workbook.GetCell(0, 2, 1, 1.0), workbook.GetCell(0, 2, 2, 2.0));
             series1.DataPoints.AddDataPointForScatterSeries(workbook.GetCell(0, 3, 1, 2.0), workbook.GetCell(0, 3, 2, 3.0));
 
-            // Add a polynomial trend line of order 3 to the first series
+            // Add a polynomial trend line of order 3 to the first series (cubic)
             ITrendline trendline = series1.TrendLines.Add(TrendlineType.Polynomial);
             trendline.Order = 3;
 

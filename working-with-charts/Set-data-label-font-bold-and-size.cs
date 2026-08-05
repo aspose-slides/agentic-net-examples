@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set data label font bold and size using C#
+//
+// Description:
+// Demonstrates how to set a data label's font to bold and increase its size
+// using C# and Aspose.Slides for .NET. The example creates a new presentation,
+// adds a pie chart, modifies the first data label's font properties, and saves
+// the result as a PPTX file. This pattern can be used to automate chart label
+// styling in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Data Label, Font, Bold,
+// Size, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting data label font boldness and size in charts.
+// - Build C# tools for PowerPoint chart formatting.
+// - Generate or modify PPTX files with customized chart labels in .NET
+//   applications.
+// - Validate chart label styling before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;

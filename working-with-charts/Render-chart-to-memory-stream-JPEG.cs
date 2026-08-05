@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Render chart to memory stream JPEG using C#
+//
+// Description:
+// Demonstrates how to create a chart in a presentation, render the slide
+// containing the chart to a JPEG image stored in a memory stream, and save
+// the presentation using Aspose.Slides for .NET. The example includes the
+// essential steps for chart creation, slide rendering, image saving to a
+// MemoryStream, and cleanup.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, JPEG, Render, Chart, Memory,
+// Stream, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Generate a JPEG image of a chart without writing to disk.
+// - Build .NET tools that need in‑memory image processing of PowerPoint slides.
+// - Automate creation and rendering of chart visuals for web or API services.
+// - Validate chart rendering as part of a presentation workflow.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

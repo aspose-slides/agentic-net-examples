@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add custom callout arrow to pie slice using C#
+//
+// Description:
+// Demonstrates how to add a custom callout arrow to a specific pie slice using
+// C# and Aspose.Slides for .NET. The example creates a new presentation, adds a
+// pie chart, configures data, enables a data callout for the second slice, and
+// optionally explodes that slice to highlight it. The resulting PPTX file
+// contains a pie chart with a callout arrow pointing to the chosen slice.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Custom, Callout, Arrow, Pie Slice,
+// Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding callout arrows to pie chart slices.
+// - Build C# tools for enhancing PowerPoint chart visualizations.
+// - Generate or modify PPTX files with custom chart annotations in .NET
+//   applications.
+// - Validate chart presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Enable display unit label on value axis using C#
+//
+// Description:
+// Demonstrates how to enable a display unit label (e.g., Millions) on the
+// vertical value axis of a clustered column chart using Aspose.Slides for .NET.
+// The example creates a new presentation, adds a chart, sets the display unit,
+// and saves the result as a PPTX file. This pattern can be used to automate
+// chart formatting in PowerPoint presentations.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Chart, Display Unit, Value Axis, 
+// Presentation Automation, .NET
+//
+// Use Cases:
+// - Programmatically set display units for chart axes in PPTX files.
+// - Build tools that standardize chart formatting across presentations.
+// - Generate PowerPoint reports with correctly labeled value axes.
+// - Integrate chart customization into .NET applications.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

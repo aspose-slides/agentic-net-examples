@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Export error bars configuration to json using C#
+//
+// Description:
+// Demonstrates how to extract error bar settings from charts in a PowerPoint
+// presentation and serialize them to a JSON file using C# and Aspose.Slides for
+// .NET. The example loads a PPTX, iterates through all slides and chart shapes,
+// captures X and Y error bar properties (including custom values), and writes
+// the collected configuration to a JSON document. This pattern can be used to
+// analyze, audit, or migrate chart error bar settings in automated workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Error Bars, Chart,
+// JSON, Serialization, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of chart error bar configurations for reporting.
+// - Build tools that audit or migrate PowerPoint chart settings.
+// - Integrate chart analysis into .NET applications.
+// - Validate presentation data before publishing or further processing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;
@@ -83,27 +104,33 @@ namespace ErrorBarExtractor
                         continue;
                     }
 
-                    ChartInfo chartInfo = new ChartInfo();
-                    chartInfo.SlideIndex = slideIdx;
-                    chartInfo.ChartIndex = chartIdx;
-                    chartInfo.Series = new List<SeriesInfo>();
+                    ChartInfo chartInfo = new ChartInfo
+                    {
+                        SlideIndex = slideIdx,
+                        ChartIndex = chartIdx,
+                        Series = new List<SeriesInfo>()
+                    };
 
                     for (int seriesIdx = 0; seriesIdx < chart.ChartData.Series.Count; seriesIdx++)
                     {
                         IChartSeries series = chart.ChartData.Series[seriesIdx];
-                        SeriesInfo seriesInfo = new SeriesInfo();
-                        seriesInfo.SeriesIndex = seriesIdx;
+                        SeriesInfo seriesInfo = new SeriesInfo
+                        {
+                            SeriesIndex = seriesIdx
+                        };
 
                         // X error bars
                         IErrorBarsFormat errBarsX = series.ErrorBarsXFormat;
                         if (errBarsX != null)
                         {
-                            ErrorBarInfo errInfoX = new ErrorBarInfo();
-                            errInfoX.IsVisible = errBarsX.IsVisible;
-                            errInfoX.Type = errBarsX.Type.ToString();
-                            errInfoX.Value = errBarsX.Value;
-                            errInfoX.ValueType = errBarsX.ValueType.ToString();
-                            errInfoX.HasEndCap = errBarsX.HasEndCap;
+                            ErrorBarInfo errInfoX = new ErrorBarInfo
+                            {
+                                IsVisible = errBarsX.IsVisible,
+                                Type = errBarsX.Type.ToString(),
+                                Value = errBarsX.Value,
+                                ValueType = errBarsX.ValueType.ToString(),
+                                HasEndCap = errBarsX.HasEndCap
+                            };
                             if (errBarsX.ValueType == ErrorBarValueType.Custom)
                             {
                                 errInfoX.CustomValues = new List<CustomValueInfo>();
@@ -114,12 +141,14 @@ namespace ErrorBarExtractor
                                     IErrorBarsCustomValues custom = point.ErrorBarsCustomValues;
                                     if (custom != null)
                                     {
-                                        CustomValueInfo cv = new CustomValueInfo();
-                                        cv.DataPointIndex = ptIdx;
-                                        if (custom.XMinus != null) cv.XMinus = custom.XMinus.AsLiteralDouble;
-                                        if (custom.XPlus != null) cv.XPlus = custom.XPlus.AsLiteralDouble;
-                                        if (custom.YMinus != null) cv.YMinus = custom.YMinus.AsLiteralDouble;
-                                        if (custom.YPlus != null) cv.YPlus = custom.YPlus.AsLiteralDouble;
+                                        CustomValueInfo cv = new CustomValueInfo
+                                        {
+                                            DataPointIndex = ptIdx,
+                                            XMinus = custom.XMinus?.AsLiteralDouble,
+                                            XPlus = custom.XPlus?.AsLiteralDouble,
+                                            YMinus = custom.YMinus?.AsLiteralDouble,
+                                            YPlus = custom.YPlus?.AsLiteralDouble
+                                        };
                                         errInfoX.CustomValues.Add(cv);
                                     }
                                 }
@@ -131,12 +160,14 @@ namespace ErrorBarExtractor
                         IErrorBarsFormat errBarsY = series.ErrorBarsYFormat;
                         if (errBarsY != null)
                         {
-                            ErrorBarInfo errInfoY = new ErrorBarInfo();
-                            errInfoY.IsVisible = errBarsY.IsVisible;
-                            errInfoY.Type = errBarsY.Type.ToString();
-                            errInfoY.Value = errBarsY.Value;
-                            errInfoY.ValueType = errBarsY.ValueType.ToString();
-                            errInfoY.HasEndCap = errBarsY.HasEndCap;
+                            ErrorBarInfo errInfoY = new ErrorBarInfo
+                            {
+                                IsVisible = errBarsY.IsVisible,
+                                Type = errBarsY.Type.ToString(),
+                                Value = errBarsY.Value,
+                                ValueType = errBarsY.ValueType.ToString(),
+                                HasEndCap = errBarsY.HasEndCap
+                            };
                             if (errBarsY.ValueType == ErrorBarValueType.Custom)
                             {
                                 errInfoY.CustomValues = new List<CustomValueInfo>();
@@ -147,12 +178,14 @@ namespace ErrorBarExtractor
                                     IErrorBarsCustomValues custom = point.ErrorBarsCustomValues;
                                     if (custom != null)
                                     {
-                                        CustomValueInfo cv = new CustomValueInfo();
-                                        cv.DataPointIndex = ptIdx;
-                                        if (custom.XMinus != null) cv.XMinus = custom.XMinus.AsLiteralDouble;
-                                        if (custom.XPlus != null) cv.XPlus = custom.XPlus.AsLiteralDouble;
-                                        if (custom.YMinus != null) cv.YMinus = custom.YMinus.AsLiteralDouble;
-                                        if (custom.YPlus != null) cv.YPlus = custom.YPlus.AsLiteralDouble;
+                                        CustomValueInfo cv = new CustomValueInfo
+                                        {
+                                            DataPointIndex = ptIdx,
+                                            XMinus = custom.XMinus?.AsLiteralDouble,
+                                            XPlus = custom.XPlus?.AsLiteralDouble,
+                                            YMinus = custom.YMinus?.AsLiteralDouble,
+                                            YPlus = custom.YPlus?.AsLiteralDouble
+                                        };
                                         errInfoY.CustomValues.Add(cv);
                                     }
                                 }

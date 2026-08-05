@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Set custom error bars using offset arrays using C#
+//
+// Description:
+// Demonstrates how to create a bubble chart and set custom error bars using
+// offset arrays for both X and Y directions with Aspose.Slides for .NET.
+// The example shows the required presentation-processing steps for PowerPoint
+// files and produces a PPTX file with custom error bars in a standalone console
+// application. Developers can use this pattern to automate chart error bar
+// customization, validate results, or integrate presentation logic into .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Custom Error Bars, Offset Arrays,
+// Bubble Chart, Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting custom error bars using offset arrays in charts.
+// - Build C# tools for PowerPoint chart manipulation.
+// - Generate or transform PPTX files with customized error bars in .NET apps.
+// - Validate chart error bar configurations before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

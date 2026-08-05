@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Apply custom gradient fill to plot area using C#
+//
+// Description:
+// Demonstrates how to apply a custom gradient fill to a chart's plot area using
+// C# and Aspose.Slides for .NET. The example creates a new presentation, adds a
+// clustered column chart, configures a gradient fill with defined gradient stops,
+// and saves the result as a PPTX file. This pattern can be used to automate
+// PowerPoint chart styling in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, Custom, Gradient, Fill,
+// Chart Plot Area, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate applying custom gradient fills to chart plot areas.
+// - Build C# tools for styling PowerPoint charts programmatically.
+// - Generate or transform PPTX files with customized chart appearances.
+// - Validate chart formatting workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Drawing;

@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add custom image marker to line chart using C#
+//
+// Description:
+// Demonstrates how to add a custom image marker to a specific data point in a
+// line chart using C# and Aspose.Slides for .NET. The example creates a new
+// presentation, inserts a line chart with markers, loads an external image,
+// and applies that image as a picture marker to the third data point.
+// This pattern can be used to customize chart appearance programmatically.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Custom Image Marker, Line Chart,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding custom image markers to line charts in PPTX files.
+// - Build C# utilities for PowerPoint presentation processing and styling.
+// - Generate or transform PPTX files with customized chart markers in .NET
+//   applications.
+// - Validate and preview chart customizations before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

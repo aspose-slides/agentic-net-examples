@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add custom error bars to scatter chart and export slides as PNG using C#
+//
+// Description:
+// Demonstrates how to add custom error bars to a scatter chart in a PowerPoint
+// presentation using Aspose.Slides for .NET, save the modified presentation,
+// and export each slide as a PNG image. The example processes all PPTX files
+// in a specified input folder, modifies the first series of each scatter chart
+// with custom error values, and writes the results to output folders.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Scatter Chart, Custom Error Bars,
+// PNG Export, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding custom error bars to scatter charts in PPTX files.
+// - Generate PNG images of slides after chart modifications.
+// - Build .NET tools for batch processing and visualizing PowerPoint content.
+// - Validate and transform presentations before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

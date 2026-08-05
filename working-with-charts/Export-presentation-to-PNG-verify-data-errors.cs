@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Export presentation to PNG verify data errors using C#
+//
+// Description:
+// Demonstrates how to export a PowerPoint presentation to PNG images while
+// verifying data error bars in charts using C# and Aspose.Slides for .NET.
+// The example loads or creates a presentation, adds a bubble chart with X and Y
+// error bars, exports each slide as a PNG image, and saves the updated
+// presentation. This pattern helps developers automate slide image generation
+// and validate chart error data in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Export, Presentation,
+// Verify, Data Errors, Error Bars, Charts, Image Export, Office Automation
+//
+// Use Cases:
+// - Automate export of presentation slides to PNG while checking chart error bars.
+// - Build C# tools for PowerPoint chart validation and image generation.
+// - Generate or transform PPTX files with chart data verification in .NET apps.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

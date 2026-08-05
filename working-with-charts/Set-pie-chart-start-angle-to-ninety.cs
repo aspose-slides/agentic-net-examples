@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set pie chart start angle to ninety using C#
+//
+// Description:
+// Demonstrates how to set the start angle of a pie chart to ninety degrees 
+// using C# and Aspose.Slides for .NET. The example creates a new presentation, 
+// adds a pie chart, configures the first slice start angle, and saves the 
+// presentation as a PPTX file. This pattern can be used to automate chart 
+// formatting tasks in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Pie Chart, Start Angle, 
+// Ninety Degrees, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting pie chart start angle to ninety degrees.
+// - Build C# utilities for PowerPoint chart customization.
+// - Generate or modify PPTX files with specific chart configurations.
+// - Validate chart appearance programmatically before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;

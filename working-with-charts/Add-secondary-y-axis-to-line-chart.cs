@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add secondary y axis to line chart using C#
+//
+// Description:
+// Demonstrates how to add a secondary Y axis to a line chart using C# and 
+// Aspose.Slides for .NET. The example creates a presentation, inserts a line 
+// chart, adds primary and secondary series, assigns the secondary series to the 
+// secondary vertical axis, optionally sets the secondary axis title, and saves 
+// the result as a PPTX file. This pattern can be used to automate chart 
+// enhancements in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Secondary, Axis, Line, Chart, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding a secondary Y axis to line charts in presentations.
+// - Build C# tools for PowerPoint chart manipulation.
+// - Generate or modify PPTX files with dual-axis charts in .NET applications.
+// - Validate chart configurations before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

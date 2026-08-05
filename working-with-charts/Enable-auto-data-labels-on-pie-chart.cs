@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Enable auto data labels on pie chart using C#
+//
+// Description:
+// Demonstrates how to enable auto data labels on a pie chart using C# and 
+// Aspose.Slides for .NET. The example creates a new presentation, adds a pie 
+// chart, configures the data labels to show values as callouts to avoid 
+// overlapping text, and saves the result as a PPTX file. This pattern can be 
+// used to automate PowerPoint presentation processing, validate chart 
+// configurations, or integrate chart generation into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Enable, Auto, Data, Labels, 
+// Pie Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate enabling auto data labels on pie charts.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files with configured chart data labels in .NET 
+//   applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;

@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Apply element animation to series point two second using C#
+//
+// Description:
+// Demonstrates how to apply a two‑second element animation to a specific series
+// point in a chart using Aspose.Slides for .NET. The example loads an existing
+// presentation, adds a fade effect to the whole chart, then adds an appear
+// animation to the second point of the first series with a custom duration of
+// two seconds, and finally saves the modified presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, Element, Animation,
+// Series, Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate applying element animation to a specific chart series point.
+// - Build C# tools for PowerPoint presentation processing with custom timings.
+// - Generate or transform PPTX files with animated chart elements in .NET
+//   applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

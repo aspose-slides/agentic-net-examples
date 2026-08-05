@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set chart data source to dynamic range using C#
+//
+// Description:
+// Demonstrates how to link a chart to an external Excel workbook and set a
+// dynamic data range for the chart using Aspose.Slides for .NET. The example
+// creates a new presentation, adds a chart without sample data, connects it to
+// a specified workbook, applies a range that can be expanded, and saves the
+// resulting PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, External Workbook, Dynamic
+// Range, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate linking chart data to external Excel sources.
+// - Build tools that set or update chart data ranges dynamically.
+// - Generate PowerPoint presentations with charts driven by external data.
+// - Validate chart data bindings in .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;

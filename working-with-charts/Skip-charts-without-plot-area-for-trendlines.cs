@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Skip charts without plot area for trendlines using C#
+//
+// Description:
+// Demonstrates how to safely add linear trend lines to chart series only when
+// the chart contains a plot area and supports trend lines, using Aspose.Slides
+// for .NET. The example loads a PPTX file, iterates through its slides and
+// shapes, skips charts lacking a plot area, and adds a linear trend line to
+// each series of supported chart types before saving the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Skip, Charts, Plot Area, Trendlines,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Add trend lines to charts in bulk while avoiding errors on charts without plot areas.
+// - Automate PowerPoint chart enhancements in .NET applications.
+// - Validate and preprocess PPTX files before publishing or further analysis.
+// - Integrate chart trend line logic into custom presentation workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

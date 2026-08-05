@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Get formatted plot area dimensions from chart using C#
+//
+// Description:
+// Demonstrates how to retrieve and format the actual dimensions of a chart's
+// plot area using Aspose.Slides for .NET. The example creates a presentation,
+// adds a chart, obtains the plot area coordinates and size, and outputs the
+// formatted values. This pattern can be used in console applications or
+// integrated into larger PowerPoint automation workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Plot Area, Dimensions, Chart,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Extract plot area measurements for layout analysis or custom rendering.
+// - Build tools that need precise chart positioning information.
+// - Automate validation of chart dimensions in generated presentations.
+// - Integrate chart size retrieval into .NET applications handling PPTX files.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Charts;

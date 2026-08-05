@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export animated chart as TIFF for print using C#
+//
+// Description:
+// Demonstrates how to create a clustered column chart, apply a series of
+// animations (fade, by series, and by element in series), and export the
+// animated slide to a high‑resolution TIFF image suitable for printing using
+// Aspose.Slides for .NET. The example includes setting TIFF options such as DPI
+// and compression.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Animated, Chart, TIFF,
+// Presentation Processing, Office Automation, High Resolution Print
+//
+// Use Cases:
+// - Automate creation and animation of charts in PowerPoint presentations.
+// - Generate print‑ready TIFF files from animated slides.
+// - Integrate chart animation and export functionality into .NET applications.
+// - Validate animated chart rendering before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export chart as SVG using C#
+//
+// Description:
+// Demonstrates how to export a chart as an SVG file using C# and Aspose.Slides for .NET. 
+// The example creates a presentation, adds a line chart, configures its data table 
+// and number format, writes the chart to an SVG file, and finally saves the presentation.
+// Developers can use this pattern to automate PPTX workflows, extract chart graphics, 
+// or integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SVG, Export, Chart, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate export of charts as SVG.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;
