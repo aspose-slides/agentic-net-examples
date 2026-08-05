@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Adjust slide margins after size change using C#
+//
+// Description:
+// Demonstrates how to resize a presentation's slide dimensions and adjust
+// the positions and sizes of all shapes (margins) accordingly using Aspose.Slides
+// for .NET. The example loads a PPTX file, changes the slide size without
+// automatic scaling, computes scaling factors, updates each shape, and saves the
+// result.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Adjust, Slide, Margins, Resize,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Resize slides while preserving layout by scaling shape margins.
+// - Build C# utilities for batch processing of PowerPoint files.
+// - Integrate slide size adjustments into .NET applications.
+// - Validate and transform PPTX presentations before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
