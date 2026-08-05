@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Remove last section and reassign slides using C#
+//
+// Description:
+// Demonstrates how to remove the last section from a PowerPoint presentation
+// and automatically reassign its slides using Aspose.Slides for .NET. The
+// example loads a PPTX file, removes the final section together with its
+// slides, reports the changes in slide and section counts, and saves the
+// resulting presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove Last Section, Reassign Slides,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate removal of the final section in a PPTX file.
+// - Update slide counts after section modifications.
+// - Integrate section management into .NET PowerPoint processing tools.
+// - Validate presentation structure before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
