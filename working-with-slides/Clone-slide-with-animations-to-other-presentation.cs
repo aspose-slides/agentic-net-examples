@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Clone slide with animations to other presentation using C#
+//
+// Description:
+// Demonstrates how to clone a slide, including its animations and master,
+// from a source PowerPoint presentation to a new destination presentation
+// using Aspose.Slides for .NET. The example loads the source file, copies the
+// first slide with all associated animation sequences, removes the default
+// empty slide created by the destination presentation, and saves the result
+// as a new PPTX file. This pattern is useful for automating slide reuse and
+// preserving animation effects across presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone Slide, Animations, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate cloning of slides with animations to other presentations.
+// - Build .NET tools for reusing animated content across multiple PPTX files.
+// - Generate or transform PPTX files while preserving animation timelines.
+// - Validate and test slide cloning workflows before deployment.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
