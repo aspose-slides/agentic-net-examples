@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Validate shape line width greater zero using C#
+//
+// Description:
+// Demonstrates how to validate that each shape's line width is greater than zero
+// using C# and Aspose.Slides for .NET. The example loads a presentation, checks
+// all shapes on all slides, and sets a minimal positive line width where needed.
+// It then saves the modified presentation. This pattern can be used to ensure
+// visual consistency and compliance with design guidelines in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Validate, Shape, Line, Width,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Ensure all shape outlines have a visible line width.
+// - Automate validation of presentation design standards.
+// - Prepare PPTX files for publishing where zero-width lines are not allowed.
+// - Integrate shape validation into .NET PowerPoint processing tools.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
