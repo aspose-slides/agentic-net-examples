@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Replace group alttext with id PPTX using C#
+//
+// Description:
+// Demonstrates how to replace the AlternativeText of each group shape in a
+// PowerPoint presentation with a generated unique identifier using C# and
+// Aspose.Slides for .NET. The example loads an existing PPTX file, iterates
+// through all slides and shapes, assigns a new alt text to every group shape,
+// and saves the modified presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Replace, Group, Alttext, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate replacement of group shape alt text with unique IDs in PPTX files.
+// - Build C# utilities for PowerPoint presentation metadata management.
+// - Generate or transform PPTX files programmatically in .NET applications.
+// - Validate and standardize group shape identifiers before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
