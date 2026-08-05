@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set master slide dashdot pattern using C#
+//
+// Description:
+// Demonstrates how to set the line dash style to DashDot for all shapes on
+// each master slide in a PowerPoint presentation using Aspose.Slides for .NET.
+// The example loads an existing PPTX file, updates the line formatting of
+// shapes on master slides, and saves the result as a new PPTX file.
+// This is useful for ensuring consistent line styling across master slides.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Master Slide, Shape, Line,
+// DashDot, LineDashStyle, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Apply a uniform DashDot line style to all shapes on master slides.
+// - Prepare presentations with consistent styling before distribution.
+// - Automate styling updates in batch processing of PPTX files.
+// - Integrate line style adjustments into .NET-based PowerPoint tooling.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
