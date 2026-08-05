@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Clone slide to presentation and rename title using C#
+//
+// Description:
+// Demonstrates how to clone the first slide from a source presentation into a
+// new presentation and rename its title placeholder using C# and Aspose.Slides
+// for .NET. The example loads a source PPTX file, creates an empty destination
+// presentation, copies the slide, updates the title text, and saves the result.
+// This pattern can be used to automate slide reuse and title customization in
+// PowerPoint workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone, Slide, Presentation,
+// Rename, Title, Placeholder, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate cloning of a slide from one presentation to another.
+// - Programmatically update slide titles during batch processing.
+// - Build .NET tools for PowerPoint content reuse and customization.
+// - Validate and transform PPTX files before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
