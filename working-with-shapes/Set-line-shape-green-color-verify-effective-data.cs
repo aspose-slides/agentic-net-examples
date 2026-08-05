@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set line shape green color verify effective data using C#
+//
+// Description:
+// Demonstrates how to add a line shape to a slide, set its line color to green,
+// retrieve the effective line format data, and save the presentation using 
+// Aspose.Slides for .NET. This example shows the required steps for PowerPoint 
+// file manipulation and can be used as a reference for automating shape 
+// formatting and validation in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Line Shape, Green Color, 
+// Effective Data, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting a line shape's green color and verify its effective format.
+// - Build C# utilities for PowerPoint shape formatting and validation.
+// - Generate or modify PPTX files programmatically in .NET.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
