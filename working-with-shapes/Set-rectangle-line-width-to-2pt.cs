@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set rectangle line width to 2pt using C#
+//
+// Description:
+// Demonstrates how to create a rectangle shape and set its line width to 2 points
+// using C# and Aspose.Slides for .NET. The example creates a new presentation,
+// adds a rectangle, configures its fill and line properties (including a 2pt
+// line width), retrieves the effective line width, and saves the result as a PPTX
+// file. This pattern can be used to automate shape styling in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Rectangle, Line Width, Shape Styling,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting rectangle line width to 2pt in presentations.
+// - Build C# tools for PowerPoint shape formatting.
+// - Generate or modify PPTX files with specific line styling in .NET applications.
+// - Validate shape appearance before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Drawing;
