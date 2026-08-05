@@ -1,3 +1,27 @@
+// -----------------------------------------------------------------------------
+// Example: Add retry to thumbnail file access using C#
+//
+// Description:
+// Demonstrates how to generate a slide thumbnail with a retry mechanism for
+// file access issues using C# and Aspose.Slides for .NET. The example loads a
+// PowerPoint presentation, creates a JPEG thumbnail of the first slide, saves
+// it with retry handling, and then saves the presentation without refreshing
+// its thumbnail. This pattern helps automate PPTX workflows where temporary
+// file locks may occur during image generation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Retry, Thumbnail, File Access,
+// Presentation Processing, Office Automation, JPEG, Image Generation
+//
+// Use Cases:
+// - Automate thumbnail generation with resilience to file access conflicts.
+// - Build C# tools for PowerPoint presentation processing that require
+//   reliable image extraction.
+// - Generate or transform PPTX files in .NET applications while preserving
+//   existing thumbnails.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
