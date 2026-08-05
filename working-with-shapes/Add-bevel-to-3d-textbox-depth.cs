@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add bevel to 3D textbox depth using C#
+//
+// Description:
+// Demonstrates how to add a bevel effect and set depth on a 3‑D text box shape 
+// using C# and Aspose.Slides for .NET. The example creates a new presentation, 
+// inserts an ellipse shape, formats its fill and line, adds text, applies a 
+// bevel preset with specific height and width, adjusts the 3‑D depth, and saves 
+// the result as a PPTX file. This pattern can be used to enhance visual 
+// appearance of shapes in automated PowerPoint generation scenarios.
+// 
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Bevel, 3D, Textbox, Depth, 
+// Shape Formatting, Presentation Automation
+//
+// Use Cases:
+// - Add bevel effects to 3‑D text boxes in generated presentations.
+// - Programmatically control 3‑D depth and bevel properties of shapes.
+// - Build .NET tools that create or modify PPTX files with enhanced visual styles.
+// - Automate styling of shapes for consistent branding across slides.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
