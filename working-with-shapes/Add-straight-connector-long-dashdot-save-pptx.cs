@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add straight connector long dashdot save pptx using C#
+//
+// Description:
+// Demonstrates how to add a straight connector with a long dash‑dot line style
+// to a slide and save the presentation as PPTX using C# and Aspose.Slides for .NET.
+// The example creates a new presentation, inserts a connector, configures its
+// dash style, and writes the result to a file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Straight, Connector, Long,
+// Dashdot, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding straight connectors with long dash‑dot styling to PPTX files.
+// - Build C# utilities for PowerPoint presentation manipulation.
+// - Generate or modify PPTX content programmatically in .NET applications.
+// - Validate connector styling in automated presentation workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
