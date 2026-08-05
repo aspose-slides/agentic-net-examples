@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Add placeholder slide and set tags using C#
+//
+// Description:
+// Demonstrates how to add a content placeholder to a blank layout slide,
+// assign a name tag to the placeholder, and create a new slide based on that
+// layout using Aspose.Slides for .NET. The example shows the essential steps
+// for manipulating placeholders and saving the resulting presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Placeholder, Slide, Tags,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Programmatically add placeholders to slide layouts.
+// - Tag placeholders for later content updates.
+// - Generate PPTX files with custom slide structures in .NET applications.
+// - Automate PowerPoint presentation creation and modification.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
