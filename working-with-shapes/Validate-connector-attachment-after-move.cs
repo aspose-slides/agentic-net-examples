@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Validate connector attachment after move using C#
+//
+// Description:
+// Demonstrates how to validate that a connector remains attached to a shape
+// after the shape is moved using C# and Aspose.Slides for .NET. The example
+// creates a presentation, adds an ellipse and a rectangle, connects them with
+// a bent connector, moves the ellipse, and verifies the connector's attachment.
+// It also saves the presentation and handles potential save errors.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Validate, Connector,
+// Attachment, After, Move, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate validation of connector attachment after shape movement.
+// - Build C# tools for PowerPoint presentation processing and verification.
+// - Generate or transform PPTX files while ensuring diagram integrity.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
