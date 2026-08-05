@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set advanceaftertime to zero for section using C#
+//
+// Description:
+// Demonstrates how to set the SlideShowTransition.AdvanceAfterTime property to
+// zero for all slides within a specific section of a presentation using
+// Aspose.Slides for .NET. The example creates a new presentation, adds slides,
+// defines a section, configures manual navigation for the section's slides,
+// and saves the result as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, AdvanceAfterTime, Zero,
+// Section, SlideShowTransition, Manual Navigation, Presentation Processing
+//
+// Use Cases:
+// - Ensure slides in a section advance only on mouse click.
+// - Build .NET tools that programmatically configure slide transitions.
+// - Automate creation of presentations with custom navigation behavior.
+// - Validate or modify existing PPTX files for specific section settings.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
