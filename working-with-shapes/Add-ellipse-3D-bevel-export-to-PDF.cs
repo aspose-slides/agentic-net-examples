@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add ellipse 3D bevel export to PDF using C#
+//
+// Description:
+// Demonstrates how to add an ellipse shape with a 3‑D bevel effect to a
+// presentation and export it to PDF using C# and Aspose.Slides for .NET.
+// The example creates a new presentation, configures fill, line, and 3‑D
+// properties of the ellipse, and saves the result as a PDF file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Ellipse, 3D Bevel, Export,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Generate PDF reports that include 3‑D styled ellipse shapes.
+// - Automate creation of presentation assets with advanced visual effects.
+// - Integrate shape styling and PDF export into .NET applications.
+// - Validate 3‑D bevel rendering before publishing presentations.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Drawing;
