@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Clone slide to presentation and merge notes using C#
+//
+// Description:
+// Demonstrates how to clone the first slide from a source presentation into a new
+// presentation and merge its speaker notes with the notes of the cloned slide using
+// Aspose.Slides for .NET. The example loads a source PPTX, creates a destination PPTX,
+// copies the slide, ensures notes slides exist, and appends the source notes to the
+// destination notes before saving the result.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Clone Slide, Merge Notes, Presentation Processing,
+// Office Automation
+//
+// Use Cases:
+// - Automate cloning of specific slides while preserving and merging speaker notes.
+// - Build .NET utilities for PowerPoint content reuse and note consolidation.
+// - Generate new presentations programmatically based on existing slide templates.
+// - Validate and transform PPTX files in batch processing scenarios.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
