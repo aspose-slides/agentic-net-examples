@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add arrow line to slide two using C#
+//
+// Description:
+// Demonstrates how to add an arrow line to the second slide of a PowerPoint
+// presentation using C# and Aspose.Slides for .NET. The example creates a new
+// presentation, adds a second slide, inserts a line shape with customized
+// line style, width, dash pattern, arrowheads, and color, and saves the result
+// as a PPTX file. This pattern can be used to automate drawing shapes with
+// arrows in presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Arrow, Line, Slide, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Programmatically add arrowed lines to specific slides.
+// - Build C# utilities for PowerPoint diagram creation.
+// - Generate or modify PPTX files with custom shapes in .NET applications.
+// - Automate visual annotations in presentation workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.Drawing;
 using Aspose.Slides.Export;
