@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add connector lock line color verify using C#
+//
+// Description:
+// Demonstrates how to add a connector between two shapes, set its line
+// color, and lock the connector's line format to prevent further modifications
+// using Aspose.Slides for .NET. The example creates a presentation, adds an
+// ellipse and a rectangle, connects them with a bent connector, applies a red
+// line color, locks edit points, and saves the result as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Connector, Lock, Line, Color,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding connectors with locked line formatting.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files while preserving visual styles.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
