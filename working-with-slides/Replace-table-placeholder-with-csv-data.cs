@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Replace table placeholder with csv data using C#
+//
+// Description:
+// Demonstrates how to replace a table placeholder in a PowerPoint slide with
+// data from a CSV file using C# and Aspose.Slides for .NET. The example creates
+// a new presentation, adds a layout slide with a table placeholder, reads CSV
+// content, populates a table at the placeholder location, and saves the result.
+// This pattern can be used to automate PPTX workflows that require dynamic
+// table generation from external data sources.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Replace, Table, Placeholder,
+// CSV, Data Import, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate the replacement of table placeholders with CSV data in presentations.
+// - Build C# tools for generating or updating tables in PowerPoint files.
+// - Integrate CSV-driven content into PPTX slides within .NET applications.
+// - Validate and test presentation workflows that involve dynamic data tables.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
