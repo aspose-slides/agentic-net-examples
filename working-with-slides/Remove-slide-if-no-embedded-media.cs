@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Remove slide if no embedded media using C#
+//
+// Description:
+// Demonstrates how to remove a slide that does not contain any embedded
+// media (video, audio, or OLE objects) using C# and Aspose.Slides for .NET.
+// The example loads a PPTX file, checks the first slide for media, removes the
+// slide when none is found, and saves the result.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove, Slide, Embedded, Media,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automatically clean up presentations by deleting empty or media‑free slides.
+// - Build .NET utilities for PowerPoint content validation and transformation.
+// - Integrate slide‑removal logic into larger document‑processing pipelines.
+// - Ensure presentations meet media requirements before distribution.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
