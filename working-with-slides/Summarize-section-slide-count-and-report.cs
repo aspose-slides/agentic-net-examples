@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Summarize section slide count and report using C#
+//
+// Description:
+// Demonstrates how to summarize section slide count and report using C# and 
+// Aspose.Slides for .NET. The example loads a PowerPoint presentation, reports 
+// the total number of slides, the number of sections, and the slide count per 
+// section, then saves the presentation. Developers can use this pattern to 
+// automate PPTX workflows, validate results, or integrate presentation logic 
+// into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Summarize, Section, Slide, 
+// Count, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate summarize section slide count and report.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -22,14 +44,14 @@ namespace SummarizeSections
             try
             {
                 // Load the presentation
-                using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
+                using (Presentation presentation = new Presentation(inputPath))
                 {
                     // Total slide count
-                    Aspose.Slides.ISlideCollection slideCollection = presentation.Slides;
+                    ISlideCollection slideCollection = presentation.Slides;
                     int totalSlides = slideCollection.Count;
 
                     // Sections information
-                    Aspose.Slides.ISectionCollection sections = presentation.Sections;
+                    ISectionCollection sections = presentation.Sections;
                     int sectionCount = sections.Count;
 
                     Console.WriteLine("Total Slides: " + totalSlides);
@@ -37,8 +59,8 @@ namespace SummarizeSections
 
                     for (int i = 0; i < sectionCount; i++)
                     {
-                        Aspose.Slides.ISection section = sections[i];
-                        Aspose.Slides.ISectionSlideCollection sectionSlides = section.GetSlidesListOfSection();
+                        ISection section = sections[i];
+                        ISectionSlideCollection sectionSlides = section.GetSlidesListOfSection();
                         int slidesInSection = sectionSlides.Count;
                         Console.WriteLine("Section " + (i + 1) + " (" + section.Name + "): " + slidesInSection + " slide(s)");
                     }
@@ -48,12 +70,12 @@ namespace SummarizeSections
                     presentation.Save(outputPath, SaveFormat.Pptx);
                 }
             }
-            catch (Aspose.Slides.PptxUnsupportedFormatException)
+            catch (PptxUnsupportedFormatException)
             {
                 // Format not supported for PPTX files
                 Console.WriteLine("The presentation format is not supported (PPTX).");
             }
-            catch (Aspose.Slides.PptUnsupportedFormatException)
+            catch (PptUnsupportedFormatException)
             {
                 // Format not supported for PPT files
                 Console.WriteLine("The presentation format is not supported (PPT).");
