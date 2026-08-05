@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add rectangle picture fill crop region using C#
+//
+// Description:
+// Demonstrates how to add a rectangle shape with a picture fill and crop the
+// picture region using C# and Aspose.Slides for .NET. The example creates a new
+// presentation, inserts an image as a picture fill for a rectangle, applies
+// cropping to focus on a specific area, and saves the result as a PPTX file.
+// This pattern can be used to automate PowerPoint image manipulation tasks.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Rectangle, Picture, Fill, Crop,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding rectangle shapes with picture fills and custom crop regions.
+// - Build C# utilities for PowerPoint image processing and layout adjustments.
+// - Generate or modify PPTX files programmatically in .NET applications.
+// - Validate picture fill and cropping behavior before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
