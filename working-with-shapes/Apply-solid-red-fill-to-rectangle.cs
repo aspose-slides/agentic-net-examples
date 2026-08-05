@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Apply solid red fill to rectangle using C#
+//
+// Description:
+// Demonstrates how to create a new presentation, add a rectangle shape, and
+// apply a solid red fill to that rectangle using C# and Aspose.Slides for .NET.
+// The example shows the required presentation-processing steps for PowerPoint
+// files and produces the requested output in a standalone console application.
+// Developers can use this pattern to automate PPTX workflows, validate results,
+// or integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, Solid, Fill, Rectangle,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate applying a solid red fill to a rectangle shape.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
