@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Compress remove unused layout slides using C#
+//
+// Description:
+// Demonstrates how to compress a PowerPoint presentation by removing unused
+// layout slides using C# and Aspose.Slides for .NET. The example loads a PPTX
+// file, optionally deletes a specific slide, invokes the layout slide cleanup
+// routine, and saves the optimized presentation. This pattern helps reduce
+// file size and improve performance for PowerPoint automation tasks.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Compress, Remove, Unused,
+// Layout, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate removal of unused layout slides to compress presentations.
+// - Build C# utilities for PowerPoint file optimization.
+// - Integrate presentation cleanup into .NET applications.
+// - Validate and streamline PPTX workflows before distribution.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
