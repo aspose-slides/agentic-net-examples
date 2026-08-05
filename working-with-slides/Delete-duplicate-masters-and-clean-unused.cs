@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Delete duplicate masters and clean unused using C#
+//
+// Description:
+// Demonstrates how to delete duplicate master slides and clean unused masters
+// in a PowerPoint presentation using C# and Aspose.Slides for .NET. The example
+// loads a source PPTX, copies unique master slides to a new presentation,
+// removes duplicate masters, cleans up any unused masters, and saves the
+// result. This pattern helps automate PPTX master slide management.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Delete duplicate masters, Clean unused masters, Presentation processing, Office automation
+//
+// Use Cases:
+// - Remove duplicate master slides from presentations.
+// - Clean up unused master slides to reduce file size.
+// - Build .NET tools for managing PowerPoint master slides.
+// - Automate presentation preparation workflows before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -62,7 +82,7 @@ class Program
                 destinationPresentation.Masters.RemoveUnused(false);
 
                 // Save the resulting presentation
-                destinationPresentation.Save(destinationPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                destinationPresentation.Save(destinationPath, SaveFormat.Pptx);
             }
         }
         catch (NotSupportedException)
