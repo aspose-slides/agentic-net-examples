@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Trigger ActiveX thumbnail generation from COM using C#
+//
+// Description:
+// Demonstrates how to generate a thumbnail image for a shape in a PowerPoint
+// presentation using Aspose.Slides for .NET. The code simulates a trigger that
+// could be invoked from a legacy COM/ActiveX environment, creates or loads a
+// presentation, adds a rectangle shape, extracts its thumbnail, saves the image
+// and the updated presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, ActiveX, COM, Thumbnail, Shape,
+// Image generation, Presentation processing
+//
+// Use Cases:
+// - Generate shape thumbnails from a COM/ActiveX call.
+// - Automate image extraction from PowerPoint slides in .NET.
+// - Create utilities that integrate with legacy Office automation.
+// - Save modified presentations after processing shapes.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
