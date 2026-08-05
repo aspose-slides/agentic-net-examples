@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Create thumbnail from shape ID using C#
+//
+// Description:
+// Demonstrates how to locate a shape by its OfficeInteropShapeId in a PowerPoint
+// presentation, generate a thumbnail image for that shape with optional scaling,
+// and save the image to disk. The example also shows how to load and save a
+// presentation using Aspose.Slides for .NET in a console application.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Shape thumbnail, Shape ID, IImage, 
+// GetShapeThumbnail, Presentation processing, Office automation
+//
+// Use Cases:
+// - Generate a thumbnail for a specific shape identified by its ID.
+// - Build utilities that extract visual representations of shapes from PPTX files.
+// - Automate batch processing of presentations to create shape previews.
+// - Integrate shape thumbnail generation into .NET applications or services.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
