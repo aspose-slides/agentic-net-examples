@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Configure comments on right side using C#
+//
+// Description:
+// Demonstrates how to configure comments to appear on the right side of slides
+// using C# and Aspose.Slides for .NET. The example loads a PPTX file, sets the
+// comments layout option, and saves the presentation as a SWF file. This pattern
+// can be used to automate PowerPoint to SWF conversion with custom comment
+// positioning.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, SWF, Aspose.Slides for .NET, Configure, Comments, Right,
+// Side, Presentation Processing, Export, Office Automation
+//
+// Use Cases:
+// - Convert PPTX presentations to SWF with comments positioned on the right.
+// - Build C# tools for customizing comment layout during export.
+// - Automate batch processing of presentations for web or e‑learning platforms.
+// - Validate comment positioning before publishing converted files.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
