@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Remove slides by title using predicate using C#
+//
+// Description:
+// Demonstrates how to remove slides by title using a predicate function with
+// C# and Aspose.Slides for .NET. The example loads a presentation, identifies
+// slides whose title (or name) contains a specific keyword, removes those
+// slides, and saves the resulting presentation. This pattern is useful for
+// automating PowerPoint slide management tasks.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove, Slides, Title,
+// Predicate, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate removal of slides based on title content.
+// - Build C# utilities for PowerPoint presentation cleanup.
+// - Integrate slide filtering logic into .NET applications.
+// - Validate and preprocess PPTX files before distribution or further processing.
+// -----------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
 using System.IO;
