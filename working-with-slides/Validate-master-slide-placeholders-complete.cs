@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Validate master slide placeholders complete using C#
+//
+// Description:
+// Demonstrates how to validate that each master slide in a PowerPoint presentation
+// contains all required placeholder types using Aspose.Slides for .NET. The example
+// loads a presentation, checks for Title, Body, DateAndTime, SlideNumber, Footer,
+// and Header placeholders on every master slide, reports missing placeholders,
+// and saves the (unchanged) presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Validate, Master Slide, Placeholders,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate validation of master slide placeholders completeness.
+// - Build C# tools for PowerPoint presentation quality assurance.
+// - Ensure consistent placeholder availability before publishing presentations.
+// - Integrate placeholder validation into .NET-based PPTX workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
