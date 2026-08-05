@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add straight connector second point bend using C#
+//
+// Description:
+// Demonstrates how to add a straight connector with a custom second adjustment
+// point bend using C# and Aspose.Slides for .NET. The example creates a new
+// presentation, adds two shapes, connects them with a straight line connector,
+// modifies the second adjustment point to create a bend, reroutes the connector,
+// and saves the result as a PPTX file. This pattern can be used to automate
+// connector styling and layout in PowerPoint presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Straight, Connector, Second,
+// Point, Bend, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding straight connectors with custom bends.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files with specific connector geometry.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
