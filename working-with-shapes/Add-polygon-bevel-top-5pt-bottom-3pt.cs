@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add polygon bevel top 5pt bottom 3pt using C#
+//
+// Description:
+// Demonstrates how to add a pentagon shape with a top bevel of 5 points and a
+// bottom bevel of 3 points using C# and Aspose.Slides for .NET. The example
+// creates a new presentation, inserts the shape, configures the 3‑D bevel
+// settings, and saves the result as a PPTX file. Developers can use this pattern
+// to automate bevel styling of polygon shapes in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Polygon, Bevel, Top, Bottom,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Apply custom top and bottom bevels to polygon shapes programmatically.
+// - Build C# utilities for PowerPoint 3‑D formatting.
+// - Generate or modify PPTX files with specific shape styling in .NET apps.
+// - Validate bevel configurations before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
