@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Move slide and verify new index using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file, move a slide to a new position,
+// verify the slide's new index, and save the updated presentation using
+// Aspose.Slides for .NET. The example includes basic error handling for missing
+// files and unsupported formats, making it suitable for console applications
+// that automate PowerPoint slide reordering.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Move Slide, Verify Index,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Reorder slides programmatically in a PowerPoint file.
+// - Validate slide positions after manipulation.
+// - Build .NET tools for automated PPTX editing and quality checks.
+// - Integrate slide management into larger presentation workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
