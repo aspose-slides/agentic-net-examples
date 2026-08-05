@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add line shape dash color variation using C#
+//
+// Description:
+// Demonstrates how to create a PowerPoint presentation, add multiple line
+// shapes each with a distinct dash style and line color, and save the result
+// using Aspose.Slides for .NET. The example iterates through predefined dash
+// styles and colors, creates a slide per variation, configures the line's
+// formatting, and writes the presentation to a PPTX file.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, LineShape, DashStyle, LineColor, 
+// PresentationGeneration, OfficeAutomation
+//
+// Use Cases:
+// - Generate presentations with visual line style variations.
+// - Automate creation of diagrammatic slides with custom dash patterns.
+// - Build .NET utilities for batch processing of PPTX files.
+// - Test and validate line formatting features in Aspose.Slides.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
