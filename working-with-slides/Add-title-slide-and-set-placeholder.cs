@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add title slide and set placeholder using C#
+//
+// Description:
+// Demonstrates how to add a title slide and set its title placeholder text 
+// using C# and Aspose.Slides for .NET. The example creates a new presentation, 
+// selects an appropriate slide layout (Title, TitleOnly, or Blank), inserts the 
+// slide at the beginning of the deck, and programmatically assigns text to the 
+// centered title placeholder. The resulting PPTX file is saved to disk.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Title Slide, Placeholder, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate the creation of a title slide with custom text.
+// - Build .NET tools for PowerPoint presentation generation or modification.
+// - Generate or transform PPTX files in server-side or desktop applications.
+// - Validate and test presentation workflows before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
@@ -7,43 +28,43 @@ class Program
     static void Main()
     {
         // Create a new presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        Presentation presentation = new Presentation();
 
         // Output file path
         string outputPath = "TitleSlide.pptx";
 
         // Get the layout slides collection from the first master slide
-        Aspose.Slides.IMasterLayoutSlideCollection layoutSlides = presentation.Masters[0].LayoutSlides;
+        IMasterLayoutSlideCollection layoutSlides = presentation.Masters[0].LayoutSlides;
 
         // Try to obtain a Title layout; fallback to TitleOnly or Blank if not found
-        Aspose.Slides.ILayoutSlide layoutSlide = layoutSlides.GetByType(Aspose.Slides.SlideLayoutType.Title) ??
-                                                layoutSlides.GetByType(Aspose.Slides.SlideLayoutType.TitleOnly);
+        ILayoutSlide layoutSlide = layoutSlides.GetByType(SlideLayoutType.Title) ??
+                                    layoutSlides.GetByType(SlideLayoutType.TitleOnly);
         if (layoutSlide == null)
         {
-            layoutSlide = layoutSlides.GetByType(Aspose.Slides.SlideLayoutType.Blank);
+            layoutSlide = layoutSlides.GetByType(SlideLayoutType.Blank);
         }
 
         // Insert a new empty slide at position 0 using the selected layout
-        Aspose.Slides.ISlide slide = presentation.Slides.InsertEmptySlide(0, layoutSlide);
+        ISlide slide = presentation.Slides.InsertEmptySlide(0, layoutSlide);
 
         // Set the title placeholder text programmatically
-        foreach (Aspose.Slides.IShape shape in slide.Shapes)
+        foreach (IShape shape in slide.Shapes)
         {
-            if (shape.Placeholder != null && shape is Aspose.Slides.IAutoShape)
+            if (shape.Placeholder != null && shape is IAutoShape)
             {
                 string text = null;
-                if (shape.Placeholder.Type == Aspose.Slides.PlaceholderType.CenteredTitle)
+                if (shape.Placeholder.Type == PlaceholderType.CenteredTitle)
                 {
                     text = "My Presentation Title";
                 }
                 if (text != null)
                 {
-                    ((Aspose.Slides.IAutoShape)shape).TextFrame.Text = text;
+                    ((IAutoShape)shape).TextFrame.Text = text;
                 }
             }
         }
 
         // Save the presentation
-        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+        presentation.Save(outputPath, SaveFormat.Pptx);
     }
 }
