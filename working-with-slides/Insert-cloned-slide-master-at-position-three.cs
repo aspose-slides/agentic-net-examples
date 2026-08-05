@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Insert cloned slide master at position three using C#
+//
+// Description:
+// Demonstrates how to insert a cloned slide master at position three in a
+// PowerPoint presentation using C# and Aspose.Slides for .NET. The example
+// loads an existing PPTX file, clones the first master slide, inserts the
+// clone at index three, and saves the result.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Insert, Cloned, Slide, Master,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate insertion of a cloned slide master at a specific position.
+// - Build .NET tools for PowerPoint presentation manipulation.
+// - Generate or modify PPTX files programmatically.
+// - Validate slide master workflows before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
