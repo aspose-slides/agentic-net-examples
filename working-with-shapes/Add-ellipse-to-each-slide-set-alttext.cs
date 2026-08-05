@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Add ellipse to each slide set alttext using C#
+//
+// Description:
+// Demonstrates how to add an ellipse shape to every slide in a presentation
+// and assign sequential Alternative Text (AltText) to each shape using C# and
+// Aspose.Slides for .NET. The example creates a presentation, clones slides,
+// adds ellipses, sets AltText, and saves the result as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Ellipse, Each, Slide, Alttext,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding ellipses with unique AltText to each slide.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
