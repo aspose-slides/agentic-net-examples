@@ -1,3 +1,27 @@
+// -----------------------------------------------------------------------------
+// Example: Export slide to BMP with 300 DPI using C#
+//
+// Description:
+// Demonstrates how to export the first slide of a PowerPoint presentation
+// to a BMP image at 300 DPI using C# and Aspose.Slides for .NET. The example
+// shows the required presentation‑processing steps, including loading a PPTX,
+// calculating the scaling factor for high‑resolution output, generating the
+// image, and saving both the BMP and a copy of the original presentation.
+// Developers can use this pattern to automate high‑resolution slide image
+// extraction, integrate slide rendering into .NET applications, or validate
+// presentation workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, BMP, 300 DPI,
+// Slide, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate export of a slide to BMP with 300 DPI for publishing or printing.
+// - Build C# utilities that generate high‑resolution slide images from PPTX files.
+// - Integrate slide rendering into .NET applications that require bitmap output.
+// - Validate and test presentation processing pipelines before deployment.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides.Export;
