@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Duplicate ellipses offset twenty points to pptx using C#
+//
+// Description:
+// Demonstrates how to duplicate all ellipse shapes on each slide of a PPTX
+// presentation, offsetting each duplicate by twenty points horizontally and
+// vertically, using Aspose.Slides for .NET. The example loads an existing PPTX,
+// processes each slide, creates copies of ellipses with the specified offset,
+// and saves the result as a new PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Duplicate, Ellipse, Offset, Twenty Points, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate duplication of ellipse shapes with a fixed offset in PowerPoint files.
+// - Build .NET utilities for batch processing and layout adjustments of PPTX content.
+// - Generate modified presentations programmatically for reporting or design workflows.
+// - Validate shape positioning logic before manual editing or publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;
