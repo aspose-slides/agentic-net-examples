@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Set custom transition duration for overview using C#
+//
+// Description:
+// Demonstrates how to set a custom transition duration for slides in the
+// "Overview" section using C# and Aspose.Slides for .NET. The example loads a
+// presentation, locates the Overview section, applies a 1.5‑second transition
+// duration to its slides, and saves the modified file. This pattern can be used
+// to automate PPTX workflows, validate results, or integrate presentation logic
+// into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Custom, Transition, Duration,
+// Overview, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting custom transition duration for an Overview section.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
