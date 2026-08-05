@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Convert all slides to png using foreach using C#
+//
+// Description:
+// Demonstrates how to convert all slides to PNG using a foreach loop in C#
+// with Aspose.Slides for .NET. The example shows the required presentation-
+// processing steps for PowerPoint files and produces PNG images for each slide
+// in a standalone console application. Developers can use this pattern to
+// automate PPTX workflows, validate results, or integrate presentation logic
+// into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Convert, Slides, Foreach,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of all slides to PNG using a foreach loop.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -22,22 +44,23 @@ class Program
 
         try
         {
-            // Load the presentation (rule: convert-slides-to-png)
-            Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
+            // Load the presentation
+            Presentation pres = new Presentation(inputPath);
 
-            // Iterate through all slides and export each to PNG
-            for (int index = 0; index < pres.Slides.Count; index++)
+            // Iterate through all slides using foreach and export each to PNG
+            int index = 0;
+            foreach (ISlide slide in pres.Slides)
             {
-                Aspose.Slides.ISlide slide = pres.Slides[index];
-                using (Aspose.Slides.IImage image = slide.GetImage())
+                using (IImage image = slide.GetImage())
                 {
-                    string outputPath = String.Format(outputFormat, index);
-                    image.Save(outputPath, Aspose.Slides.ImageFormat.Png);
+                    string outputPath = string.Format(outputFormat, index);
+                    image.Save(outputPath, ImageFormat.Png);
                 }
+                index++;
             }
 
-            // Save the presentation before exiting (no modifications made)
-            pres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            // No modifications made to the presentation, so saving is optional.
+            // pres.Save(inputPath, SaveFormat.Pptx);
             pres.Dispose();
         }
         catch (NotSupportedException)
