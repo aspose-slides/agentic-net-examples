@@ -1,3 +1,21 @@
+// -----------------------------------------------------------------------------
+// Example: List VBA modules and count lines using C#
+//
+// Description:
+// Demonstrates how to enumerate VBA modules in a PowerPoint macro-enabled file,
+// count the number of lines in each module, and output the results to the console.
+// The example also shows how to save the presentation in a different format
+// using Aspose.Slides for .NET.
+//
+// Keywords:
+// C#, Aspose.Slides, VBA, Modules, Line Count, PowerPoint, PPTM, PPTX, Presentation Processing
+//
+// Use Cases:
+// - Retrieve VBA module information from macro-enabled presentations.
+// - Generate line‑count statistics for VBA code embedded in PPTM files.
+// - Convert macro-enabled presentations to standard PPTX after analysis.
+// - Integrate VBA inspection into automated .NET PowerPoint workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;
