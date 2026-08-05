@@ -1,3 +1,21 @@
+// -----------------------------------------------------------------------------
+// Example: Add line shape begin open end none using C#
+//
+// Description:
+// Demonstrates how to add a line shape with an open arrowhead at the beginning
+// and no arrowhead at the end using C# and Aspose.Slides for .NET. The example
+// creates a presentation, inserts a line shape, configures its line format,
+// and saves the result as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Line Shape, Arrowhead, Begin Open, End None, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding line shapes with specific arrowhead styles.
+// - Build C# tools for customizing PowerPoint line graphics.
+// - Generate or modify PPTX files programmatically in .NET applications.
+// - Validate line shape configurations before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
