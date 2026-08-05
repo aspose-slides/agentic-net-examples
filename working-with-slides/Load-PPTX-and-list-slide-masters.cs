@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Load PPTX and list slide masters using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file and enumerate its master slides using
+// Aspose.Slides for .NET. The example opens a presentation, retrieves the
+// master slide collection, prints each master slide's name, and saves the
+// presentation unchanged. This pattern is useful for inspecting or validating
+// slide masters in automated workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, List, Slide Masters,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Retrieve and display master slide information from a PPTX file.
+// - Build tools that analyze or validate slide master structures.
+// - Integrate slide master enumeration into .NET applications.
+// - Automate reporting on presentation templates before further processing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -36,7 +56,7 @@ class Program
             }
 
             // Save the presentation (no modifications made)
-            presentation.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            presentation.Save(inputPath, SaveFormat.Pptx);
             presentation.Dispose();
         }
         catch (Exception ex)
