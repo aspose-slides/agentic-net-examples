@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Create vba project and embed macro bytes using C#
+//
+// Description:
+// Demonstrates how to create a VBA project, add VBA modules with source code,
+// include required VBA references, and save the presentation as a macro‑enabled
+// PPTM file using Aspose.Slides for .NET. The example shows the necessary
+// presentation‑processing steps for PowerPoint files in a standalone console
+// application.
+//
+// Keywords:
+// C#, PowerPoint, PPTM, Aspose.Slides for .NET, VBA, Macro, Embed, Presentation
+// Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of VBA projects and embedding of macro code in PPTM files.
+// - Build C# utilities for PowerPoint presentation processing with macros.
+// - Generate or transform macro‑enabled presentations in .NET applications.
+// - Validate VBA macro integration before publishing or deployment.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
