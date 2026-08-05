@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Apply solid fill and pattern overlay using C#
+//
+// Description:
+// Demonstrates how to apply a solid fill to a rectangle shape and then overlay
+// a pattern fill with semi-transparency using C# and Aspose.Slides for .NET.
+// The example creates a presentation, adds two overlapping rectangle shapes—one
+// with a solid blue fill and another with a diagonal cross pattern—then saves
+// the result as a PPTX file. This pattern can be used to automate visual styling
+// of shapes in PowerPoint presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, Solid, Fill, Pattern, Shape,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate applying solid fill and pattern overlay to shapes.
+// - Build C# tools for advanced shape styling in PowerPoint presentations.
+// - Generate or transform PPTX files with custom visual effects in .NET applications.
+// - Validate presentation workflows involving layered shape fills before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
