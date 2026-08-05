@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add connector between every shape pair using C#
+//
+// Description:
+// Demonstrates how to add a bent connector between every pair of shapes on each
+// slide of a presentation using C# and Aspose.Slides for .NET. The example loads an
+// existing PPTX file, iterates through all slides and shapes, creates connectors,
+// connects them to the shape pairs, reroutes the connectors, and saves the result.
+// This pattern can be used to automate diagram enhancements, validate shape
+// relationships, or integrate connector logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Connector, Between, Every, 
+// Shape, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding connectors between every shape pair in a presentation.
+// - Build C# tools for PowerPoint presentation processing and diagram enrichment.
+// - Generate or transform PPTX files with automated connector logic in .NET applications.
+// - Validate shape relationships and connectivity before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -35,7 +57,7 @@ class Program
                             IShape shape2 = shapes[j];
 
                             // Create a bent connector (default size, will be rerouted)
-                            IConnector connector = shapes.AddConnector(Aspose.Slides.ShapeType.BentConnector2, 0, 0, 10, 10);
+                            IConnector connector = shapes.AddConnector(ShapeType.BentConnector2, 0, 0, 10, 10);
                             connector.StartShapeConnectedTo = shape1;
                             connector.EndShapeConnectedTo = shape2;
                             connector.Reroute();
