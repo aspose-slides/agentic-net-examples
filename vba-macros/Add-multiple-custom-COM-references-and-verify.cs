@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add multiple custom COM references and verify using C#
+//
+// Description:
+// Demonstrates how to add multiple custom COM references, read document
+// properties via the COM interface, verify load formats, and merge slides
+// using Aspose.Slides for .NET. The example loads two PPTX files, extracts
+// their properties, confirms the presentation formats, clones a slide from
+// the second presentation into the first, and saves the merged result.
+// This pattern helps developers automate PowerPoint workflows that require
+// COM-based metadata access and presentation manipulation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, COM, DocumentProperties,
+// LoadFormat, Merge Slides, Presentation Processing, Automation
+//
+// Use Cases:
+// - Automate reading presentation metadata via COM interfaces.
+// - Verify presentation load formats before processing.
+// - Merge slides from multiple presentations programmatically.
+// - Build .NET tools for PowerPoint file validation and transformation.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
