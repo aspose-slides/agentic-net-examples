@@ -1,3 +1,19 @@
+// -----------------------------------------------------------------------------
+// Example: Set decorative line begin short end long using C#
+//
+// Description:
+// Demonstrates how to create a line shape with a short oval begin arrowhead and a long triangle end arrowhead, configure line style, width, dash pattern, and fill color using Aspose.Slides for .NET. The example creates a new presentation, adds the formatted line to the first slide, and saves the file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Decorative line, Begin arrowhead short, End arrowhead long, Line formatting, Presentation processing
+//
+// Use Cases:
+// - Automate creation of lines with specific decorative arrowheads in PPTX files.
+// - Build .NET tools for customizing shape appearance in PowerPoint presentations.
+// - Generate or modify presentations with precise line styling for reports or diagrams.
+// - Validate line formatting logic in automated slide generation workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
