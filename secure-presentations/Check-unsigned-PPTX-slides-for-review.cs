@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Check unsigned PPTX slides for review using C#
+//
+// Description:
+// Demonstrates how to check unsigned PPTX slides for review using C# and 
+// Aspose.Slides for .NET. The example loads a presentation, determines whether
+// it contains any digital signatures, reports the result, and saves the file.
+// This pattern can be used to automate PPTX validation workflows in .NET 
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Check, Unsigned, Slides, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate checking of unsigned PPTX slides for review.
+// - Build C# tools for PowerPoint presentation validation.
+// - Integrate presentation verification into .NET applications.
+// - Ensure presentations meet signing requirements before distribution.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

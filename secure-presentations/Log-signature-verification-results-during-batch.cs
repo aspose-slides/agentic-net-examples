@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Log signature verification results during batch using C#
+//
+// Description:
+// Demonstrates how to iterate through multiple PowerPoint presentations,
+// detect digital signatures, verify each signature, and log the verification
+// results to the console. The example uses Aspose.Slides for .NET to load
+// presentations, access DigitalSignature objects, and optionally re‑save the
+// files. It is suitable for batch processing scenarios where signature
+// validation needs to be recorded.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Digital Signature, Verification,
+// Batch Processing, Console Logging, Presentation Automation
+//
+// Use Cases:
+// - Validate digital signatures across a collection of PPTX files.
+// - Generate logs of signature validity for compliance auditing.
+// - Integrate signature verification into automated PowerPoint workflows.
+// - Ensure presentations are signed before distribution or publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

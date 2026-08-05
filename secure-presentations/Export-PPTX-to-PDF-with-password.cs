@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Export PPTX to PDF with password using C#
+//
+// Description:
+// Demonstrates how to export a password‑protected PPTX file to a password‑protected
+// PDF using C# and Aspose.Slides for .NET. The example shows how to load an
+// encrypted presentation, apply matching encryption settings to the PDF output,
+// and handle common errors in a standalone console application. Developers can
+// use this pattern to automate secure presentation workflows, validate results,
+// or integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Export, Password, Secure,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate export of password‑protected PPTX files to password‑protected PDFs.
+// - Build C# tools for secure PowerPoint presentation processing.
+// - Generate or transform encrypted PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

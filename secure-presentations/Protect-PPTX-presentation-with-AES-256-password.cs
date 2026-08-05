@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Protect PPTX presentation with AES 256 password using C#
+//
+// Description:
+// Demonstrates how to protect a PPTX presentation with an AES‑256 password using C#
+// and Aspose.Slides for .NET. The example creates a new presentation, applies
+// password protection (AES‑256 encryption is applied by default), saves the file,
+// and outputs the location of the protected file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Protect, AES 256, Presentation, 
+// Password, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate protecting PPTX presentations with AES‑256 encryption.
+// - Build C# utilities for securing PowerPoint files.
+// - Integrate password protection into .NET PowerPoint workflows.
+// - Ensure confidential presentations are encrypted before distribution.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

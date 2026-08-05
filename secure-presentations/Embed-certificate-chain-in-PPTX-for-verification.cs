@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Embed certificate chain in PPTX for verification using C#
+//
+// Description:
+// Demonstrates how to embed a full certificate chain into a PowerPoint
+// presentation (PPTX) using Aspose.Slides for .NET. The example creates a new
+// presentation, applies a digital signature from a PFX file (including the
+// certificate chain), and saves the signed file. This pattern can be used to
+// ensure PPTX files can be verified later using standard digital signature
+// validation tools.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Embed, Certificate, Chain,
+// DigitalSignature, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate embedding of a certificate chain in PPTX files for later verification.
+// - Build .NET utilities that sign PowerPoint presentations programmatically.
+// - Ensure compliance and authenticity of distributed PPTX documents.
+// - Integrate digital signing into PowerPoint workflow automation.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

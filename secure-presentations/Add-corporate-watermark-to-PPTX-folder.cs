@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add corporate watermark to PPTX folder using C#
+//
+// Description:
+// Demonstrates how to add a corporate watermark to all PPTX files in a
+// specified folder using C# and Aspose.Slides for .NET. The example loads each
+// presentation, inserts a transparent rectangle with the text "Confidential"
+// on each master slide, and saves the changes, overwriting the original files.
+// This pattern can be used to automate batch watermarking of PowerPoint
+// presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Corporate Watermark, Folder,
+// Batch Processing, Presentation Automation, Office Automation
+//
+// Use Cases:
+// - Apply a corporate "Confidential" watermark to multiple PPTX files in a
+//   directory.
+// - Build command‑line tools for batch PowerPoint presentation processing.
+// - Integrate watermarking into .NET applications or CI pipelines.
+// - Ensure consistent branding or confidentiality markings across presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

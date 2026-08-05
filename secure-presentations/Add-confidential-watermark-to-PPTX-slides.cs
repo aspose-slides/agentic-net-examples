@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add confidential watermark to PPTX slides using C#
+//
+// Description:
+// Demonstrates how to add a confidential watermark to all slides of a PPTX
+// presentation using C# and Aspose.Slides for .NET. The example creates a new
+// presentation, adds a semi‑transparent diagonal text watermark to the master
+// slide, and saves the result as a PPTX file. This pattern can be used to
+// automate watermarking of PowerPoint files in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Confidential, Watermark, Slides,
+// Presentation Processing, Office Automation, .NET
+//
+// Use Cases:
+// - Automatically apply a confidential watermark to generated PPTX files.
+// - Build C# utilities for securing PowerPoint presentations before distribution.
+// - Integrate watermarking into document generation pipelines.
+// - Ensure compliance by marking presentations as confidential in .NET apps.
+// -----------------------------------------------------------------------------
 using System;
 using System.Drawing;
 using Aspose.Slides;

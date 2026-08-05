@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Remove presentation opening password after LDAP authentication using C#
+//
+// Description:
+// Demonstrates how to remove a PowerPoint presentation opening password after
+// successful LDAP authentication using C# and Aspose.Slides for .NET. The example
+// loads a password‑protected PPTX file, validates the password, and then removes
+// the encryption, saving the file without a password. This pattern can be used
+// to automate secure presentation workflows in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove, Opening, Password, LDAP,
+// Authentication, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate removal of presentation opening passwords after LDAP user verification.
+// - Build C# tools for secure PowerPoint file handling.
+// - Integrate presentation de‑protection into .NET services or applications.
+// - Prepare PPTX files for distribution after confirming user credentials.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Rotate watermark 45 degrees on PPTX slides using C#
+//
+// Description:
+// Demonstrates how to rotate a text watermark 45 degrees on each slide of a
+// PowerPoint presentation using C# and Aspose.Slides for .NET. The example
+// creates a presentation, iterates through its slides, adds a rectangular
+// shape containing the word "CONFIDENTIAL", makes the shape transparent, rotates
+// it 45 degrees, and sets the text color to gray. The resulting presentation
+// is saved as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Rotate, Watermark, Degrees,
+// Pptx, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding a 45‑degree rotated watermark to PPTX slides.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

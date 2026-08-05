@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Remove digital signature from PPTX slides using C#
+//
+// Description:
+// Demonstrates how to remove all digital signatures from a PPTX presentation 
+// using Aspose.Slides for .NET. The example loads a presentation, clears any 
+// digital signatures, and saves the result while preserving other content and 
+// protections.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove, Digital, Signature, 
+// Presentation, File Processing, Office Automation
+//
+// Use Cases:
+// - Automate removal of digital signatures from PowerPoint files.
+// - Build .NET tools for cleaning PPTX presentations before distribution.
+// - Integrate signature removal into larger presentation processing pipelines.
+// - Ensure PPTX files are free of digital signatures for compliance or editing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;

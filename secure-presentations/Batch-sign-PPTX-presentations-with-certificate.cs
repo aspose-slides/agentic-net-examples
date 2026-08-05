@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Batch sign PPTX presentations with certificate using C#
+//
+// Description:
+// Demonstrates how to batch sign PPTX presentations located in a directory
+// using a PFX certificate with Aspose.Slides for .NET. The example loads each
+// PPTX file, applies a digital signature, and overwrites the original file.
+// This pattern can be used to automate signing of PowerPoint files in
+// .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Batch, Sign, Certificate,
+// DigitalSignature, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate batch signing of PPTX presentations with a digital certificate.
+// - Build C# utilities for secure PowerPoint document distribution.
+// - Integrate digital signing into .NET PowerPoint workflow pipelines.
+// - Ensure authenticity and integrity of PPTX files before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

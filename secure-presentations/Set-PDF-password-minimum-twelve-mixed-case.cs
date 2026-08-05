@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set PPTX password minimum twelve mixed case using C#
+//
+// Description:
+// Demonstrates how to apply password protection to a PowerPoint presentation
+// using a password that meets a minimum length of twelve characters and includes
+// both upper‑case and lower‑case letters. The example uses Aspose.Slides for .NET
+// to load a PPTX file, validate the password policy, encrypt the presentation,
+// and save the protected file. This pattern can be used in console applications
+// to automate PPTX security workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Password, Minimum, Twelve, Mixed, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting PPTX password with minimum twelve mixed‑case characters.
+// - Build C# tools for PowerPoint presentation security.
+// - Generate or transform PPTX files with encryption in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;

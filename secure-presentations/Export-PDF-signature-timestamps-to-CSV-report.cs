@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Export presentation signature timestamps to CSV report using C#
+//
+// Description:
+// Demonstrates how to extract digital signature information, including signer
+// name and signing time, from PowerPoint presentations and export it to a CSV
+// report using C# and Aspose.Slides for .NET. The example iterates over all
+// files in a specified directory, reads any digital signatures present in each
+// presentation, and writes the collected data to a CSV file. It also saves the
+// presentation back in PPTX format to preserve any changes.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Digital Signature, Export, CSV,
+// Report, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Generate a CSV report of digital signatures across multiple presentations.
+// - Automate validation of signed PowerPoint files in .NET applications.
+// - Integrate signature extraction into document management workflows.
+// - Ensure compliance by auditing signer information and timestamps.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Text;

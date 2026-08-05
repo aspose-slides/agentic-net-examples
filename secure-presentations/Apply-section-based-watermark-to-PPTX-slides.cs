@@ -1,3 +1,27 @@
+// -----------------------------------------------------------------------------
+// Example: Apply section based watermark to PPTX slides using C#
+//
+// Description:
+// Demonstrates how to apply a text watermark to each slide of a PowerPoint
+// presentation based on its section name using C# and Aspose.Slides for .NET.
+// The example loads a PPTX file, iterates through its sections, decides
+// whether to use "CONFIDENTIAL" or "DRAFT" as the watermark text, adds the
+// watermark shape to each slide in the section, and saves the modified file.
+// This pattern can be used to automate section‑aware watermarking in .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Section, Watermark, Presentation
+// Processing, Office Automation, Confidential, Draft
+//
+// Use Cases:
+// - Automatically add section‑specific watermarks (e.g., CONFIDENTIAL or DRAFT)
+//   to PowerPoint presentations.
+// - Build .NET tools that enforce branding or confidentiality policies per
+//   presentation section.
+// - Integrate watermarking into document generation or publishing pipelines.
+// - Validate and transform PPTX files before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
