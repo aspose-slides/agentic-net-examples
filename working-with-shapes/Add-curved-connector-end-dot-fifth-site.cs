@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Add curved connector end dot fifth site using C#
+//
+// Description:
+// Demonstrates how to add a bent (curved) connector between an ellipse and a
+// rectangle shape, set the connector's end connection site to the fifth site,
+// reroute it for the shortest path, and save the presentation using Aspose.Slides
+// for .NET. The example shows the required presentation-processing steps for
+// PowerPoint files and produces the requested output in a standalone console
+// application. Developers can use this pattern to automate PPTX workflows,
+// validate results, or integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Bent Connector, Curved Connector,
+// Connection Site, Fifth Site, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding a bent connector with a specific end connection site.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate connector routing and connection sites before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides.Export;
 
