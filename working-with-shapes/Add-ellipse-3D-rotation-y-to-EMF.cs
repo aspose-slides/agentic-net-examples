@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add ellipse 3D rotation y to EMF using C#
+//
+// Description:
+// Demonstrates how to add an ellipse shape with a 3‑D Y‑axis rotation,
+// export the slide as an EMF file, and save the presentation as PPTX using
+// Aspose.Slides for .NET. The example shows the required presentation‑processing
+// steps for PowerPoint files and produces the requested output in a standalone
+// console application. Developers can use this pattern to automate PPTX workflows,
+// generate EMF graphics, or integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, EMF, Aspose.Slides for .NET, Ellipse, Rotation, 3D,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding an ellipse with Y‑axis 3‑D rotation and exporting to EMF.
+// - Build C# tools for PowerPoint presentation processing and graphics extraction.
+// - Generate or transform PPTX files and corresponding EMF images in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
