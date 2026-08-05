@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Update placeholder text in a PowerPoint presentation and save using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file, iterate over shapes on the first slide,
+// replace placeholder text, and save the modified presentation using Aspose.Slides
+// for .NET. The example shows the required presentation‑processing steps for
+// PowerPoint files and produces the updated output in a standalone console
+// application. Developers can use this pattern to automate PPTX workflows,
+// update slide content, or integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Placeholder, Text Replacement,
+// Save, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate placeholder text replacement in PPTX files.
+// - Build C# utilities for PowerPoint content updates.
+// - Generate or modify presentations programmatically.
+// - Validate and preprocess slides before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
