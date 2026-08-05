@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Disable slide transitions in a specific section using C#
+//
+// Description:
+// Demonstrates how to load a PPTX file, locate a specific section (the first
+// section by default), and disable all slide transitions within that section
+// using Aspose.Slides for .NET. The program saves the modified presentation
+// to a new file. This example is useful for automating presentation cleanup
+// or preparing slides for environments where transitions are not desired.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Disable, Slide Transitions, Section,
+// Presentation Automation, .NET
+//
+// Use Cases:
+// - Remove slide transitions from a designated section before publishing.
+// - Prepare presentations for platforms that do not support transitions.
+// - Integrate transition management into C# PowerPoint processing tools.
+// - Ensure consistent slide behavior across a section in automated workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -44,7 +64,7 @@ namespace DisableSlideTransitions
                     }
 
                     // Save the modified presentation
-                    presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    presentation.Save(outputPath, SaveFormat.Pptx);
                 }
             }
             catch (NotSupportedException)
