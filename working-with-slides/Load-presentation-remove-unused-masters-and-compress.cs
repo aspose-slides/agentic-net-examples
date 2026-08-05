@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Load presentation remove unused masters and compress using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, remove unused master
+// slides, compress embedded images, and save the file with ZIP64 support using
+// Aspose.Slides for .NET. The example includes error handling for missing files
+// and unsupported formats, making it suitable for automation of PPTX
+// optimization tasks.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, Presentation, Remove Unused Masters, Image Compression, ZIP64, Office Automation
+//
+// Use Cases:
+// - Optimize PPTX files by removing unused masters and reducing image size.
+// - Automate presentation processing in .NET applications.
+// - Ensure large presentations are saved with ZIP64 when necessary.
+// - Integrate PPTX cleanup steps into build or deployment pipelines.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
