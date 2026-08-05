@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Add connector start second site disable reroute using C#
+//
+// Description:
+// Demonstrates how to add a bent connector whose start point is attached to the
+// second connection site of an ellipse shape while disabling automatic rerouting,
+// using C# and Aspose.Slides for .NET. The example creates a presentation, adds
+// shapes, configures the connector, and saves the result.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Connector, Start, Second, Site,
+// Reroute, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding connectors with specific connection sites and no reroute.
+// - Build C# tools for precise PowerPoint diagram manipulation.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate connector configurations before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
