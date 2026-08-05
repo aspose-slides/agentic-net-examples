@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Save thumbnail to UNC share permission error using C#
+//
+// Description:
+// Demonstrates how to save slide thumbnails to a UNC network share and handle
+// permission errors using C# and Aspose.Slides for .NET. The example also shows
+// how to save the modified presentation back to the same UNC share. It includes
+// necessary checks for file existence, directory accessibility, and proper
+// disposal of resources, making it suitable for automating PowerPoint workflows
+// that involve network storage.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Save, Thumbnail, UNC, Share,
+// Permission, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate saving slide thumbnails to a UNC network share with permission handling.
+// - Build C# utilities for PowerPoint presentation processing on shared storage.
+// - Generate or transform PPTX files and store results on network locations.
+// - Validate and troubleshoot permission-related issues in presentation workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
