@@ -1,3 +1,21 @@
+// -----------------------------------------------------------------------------
+// Example: Create standard VBA module with sample macro using C#
+//
+// Description:
+// Demonstrates how to create a standard VBA module containing a sample macro
+// using C# and Aspose.Slides for .NET. The example builds a new presentation,
+// adds a VBA project, inserts a module with macro code, adds required VBA
+// references, and saves the file as a PPTX.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, VBA, Module, Macro, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of a VBA module with a sample macro in PowerPoint files.
+// - Build .NET tools for adding VBA automation to presentations.
+// - Generate or modify PPTX files programmatically with embedded macros.
+// - Validate VBA integration before distributing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
