@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add ellipse picture fill to pptx using C#
+//
+// Description:
+// Demonstrates how to add an ellipse shape to a presentation and fill it
+// with a picture downloaded from a URL using C# and Aspose.Slides for .NET.
+// The example creates a new PPTX file, adds an ellipse, applies a picture
+// fill, and saves the result. This pattern can be used to automate picture
+// fills for shapes in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Ellipse, Picture, Fill, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding picture fills to ellipse shapes in PPTX files.
+// - Build .NET tools for dynamic slide generation with image content.
+// - Integrate picture-filled shapes into presentation workflows.
+// - Validate shape fill operations in automated tests.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Net.Http;
