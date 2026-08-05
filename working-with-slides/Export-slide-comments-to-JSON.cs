@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Export slide comments to JSON using C#
+//
+// Description:
+// Demonstrates how to extract all comments from each slide of a PowerPoint
+// presentation and serialize them to a JSON file using Aspose.Slides for .NET.
+// The example loads a PPTX file, iterates through slides, collects comment
+// details (author, text, creation time, slide number) into a POCO, and writes
+// the collection as formatted JSON. It also shows basic error handling for
+// unsupported formats and missing input files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Slide, Comments, JSON,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of slide comments for review or reporting.
+// - Build tools that convert PowerPoint annotations to JSON for further analysis.
+// - Integrate comment data into web services or databases.
+// - Validate comment presence before publishing presentations.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Collections.Generic;
@@ -32,12 +54,14 @@ namespace ExportComments
                         IComment[] comments = slide.GetSlideComments(null);
                         foreach (IComment comment in comments)
                         {
-                            CommentInfo info = new CommentInfo();
-                            info.SlideNumber = i + 1;
-                            info.AuthorName = comment.Author.Name;
-                            info.AuthorInitials = comment.Author.Initials;
-                            info.Text = comment.Text;
-                            info.CreatedTime = comment.CreatedTime;
+                            CommentInfo info = new CommentInfo
+                            {
+                                SlideNumber = i + 1,
+                                AuthorName = comment.Author.Name,
+                                AuthorInitials = comment.Author.Initials,
+                                Text = comment.Text,
+                                CreatedTime = comment.CreatedTime
+                            };
                             allComments.Add(info);
                         }
                     }
