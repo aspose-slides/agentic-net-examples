@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add appendix section and move slides using C#
+//
+// Description:
+// Demonstrates how to add an "Appendix" section starting at a specific slide
+// and optionally reorder slides using C# and Aspose.Slides for .NET. The example
+// loads a PPTX file, creates a new section beginning with slide 12, and saves
+// the modified presentation. Developers can adapt this pattern to automate
+// section management and slide ordering in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Appendix, Section, Move Slides,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding an appendix section to existing presentations.
+// - Build tools that reorganize slide order within sections.
+// - Generate or transform PPTX files programmatically in .NET applications.
+// - Validate and prepare presentations before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
