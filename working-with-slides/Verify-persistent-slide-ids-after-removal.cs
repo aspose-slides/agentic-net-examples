@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Verify persistent slide ids after removal using C#
+//
+// Description:
+// Demonstrates how to verify that slide persistent IDs remain unchanged after
+// removing a neighboring slide using C# and Aspose.Slides for .NET. The example
+// loads a presentation, records the IDs of the first and third slides, removes
+// the second slide, retrieves the original slides by their stored IDs, and
+// confirms that the IDs are still the same. The modified presentation is then
+// saved. This pattern helps developers ensure slide identity consistency during
+// automated PPTX manipulation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Verify, Persistent Slide ID, 
+// Slide Removal, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Verify slide ID stability after slide removal in automated workflows.
+// - Build C# utilities for reliable PowerPoint slide management.
+// - Ensure data integrity when programmatically editing PPTX files.
+// - Integrate slide ID verification into larger .NET presentation processing pipelines.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
