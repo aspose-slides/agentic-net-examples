@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Create group shape thumbnail composite image using C#
+//
+// Description:
+// Demonstrates how to create a thumbnail image of a group shape in a PowerPoint
+// presentation using Aspose.Slides for .NET. The example builds a presentation,
+// adds a group shape with several child shapes, renders the group shape to an
+// image, and saves both the image and the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Group Shape, Thumbnail, Image, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Generate thumbnail images of grouped shapes for documentation or UI previews.
+// - Automate creation of composite shape images in PowerPoint files.
+// - Build .NET tools that need visual representations of grouped slide elements.
+// - Validate and export group shape content as raster images.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
