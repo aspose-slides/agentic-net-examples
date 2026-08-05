@@ -1,3 +1,28 @@
+// -----------------------------------------------------------------------------
+// Example: Add rectangle jpeg picture fill 30pct using C#
+//
+// Description:
+// Demonstrates how to add a rectangle shape filled with a JPEG picture at
+// 30% transparency using C# and Aspose.Slides for .NET. The example creates a
+// new presentation, inserts a rectangle, applies a JPEG image as a picture
+// fill, adjusts the fill transparency to 30%, and saves the result as a PPTX
+// file. This pattern can be used to automate PowerPoint image‑fill workflows
+// in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, JPEG, Rectangle, Picture Fill,
+// Transparency, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding rectangle shapes with JPEG picture fills at a specific
+//   transparency level.
+// - Build C# tools for PowerPoint presentation processing that involve image
+//   fills.
+// - Generate or transform PPTX files with customized shape styling in .NET
+//   applications.
+// - Validate picture‑fill workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
