@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Retrieve effective line fill and log gradient using C#
+//
+// Description:
+// Demonstrates how to create a line shape with a gradient fill, retrieve its
+// effective line fill data, and log gradient details using C# and Aspose.Slides
+// for .NET. The example shows the necessary presentation‑processing steps for
+// PowerPoint files and saves the resulting presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Retrieve Effective Line Fill,
+// Gradient Fill, Line Shape, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Extract effective line fill properties from a shape.
+// - Log gradient fill details for debugging or analysis.
+// - Automate PowerPoint shape formatting validation.
+// - Build .NET tools that generate or modify PPTX files with gradient lines.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
