@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Set ellipse line width 2pt dashdot using C#
+//
+// Description:
+// Demonstrates how to set the line width of ellipse shapes to 2 points and
+// apply a dash‑dot line style using C# and Aspose.Slides for .NET. The example
+// loads an existing presentation (or creates a new one), finds all ellipse
+// auto‑shapes, modifies their line formatting, and saves the result.
+// This pattern can be used to automate line‑style adjustments in PowerPoint
+// files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Ellipse, Line Width, DashDot,
+// Shape Formatting, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Apply a 2pt dash‑dot border to all ellipses in a presentation.
+// - Build C# utilities for bulk updating shape line styles in PPTX files.
+// - Integrate line‑formatting logic into .NET applications that generate or
+//   modify PowerPoint content.
+// - Ensure consistent visual styling of ellipse shapes across slides.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
