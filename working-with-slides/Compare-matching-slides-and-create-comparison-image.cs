@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Compare matching slides and create comparison image using C#
+//
+// Description:
+// Demonstrates how to compare slides from two presentations, identify matching
+// slides, generate images for each matching pair, and create a side‑by‑side
+// comparison slide in a new presentation using Aspose.Slides for .NET.
+// The example loads two PPTX files, finds identical slides, renders them as
+// images, and assembles them into a result PPTX file.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, slide comparison, matching slides,
+// image generation, side‑by‑side comparison, presentation processing,
+// automation
+//
+// Use Cases:
+// - Detect duplicate or unchanged slides across different versions of a presentation.
+// - Produce visual comparison reports for review or QA.
+// - Build tools that highlight differences between presentation files.
+// - Automate creation of comparison decks for stakeholder presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
