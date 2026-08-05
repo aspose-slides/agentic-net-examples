@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Retrieve connector adjustment counts and log using C#
+//
+// Description:
+// Demonstrates how to create connectors of various types in a new presentation,
+// retrieve each connector's adjustment point count, and log the results to the
+// console. The example uses Aspose.Slides for .NET to add connectors, query the
+// Adjustments collection, and save the resulting presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Retrieve, Connector, 
+// Adjustment, Counts, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate retrieval of connector adjustment counts for validation.
+// - Build C# utilities that analyze or modify connector shapes in PPTX files.
+// - Generate sample presentations with connectors for testing or demos.
+// - Integrate connector inspection into larger .NET PowerPoint workflows.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
@@ -10,16 +29,16 @@ namespace ConnectorAdjustmentDemo
         {
             try
             {
-                var presentation = new Aspose.Slides.Presentation();
+                var presentation = new Presentation();
                 var shapes = presentation.Slides[0].Shapes;
 
                 // Define a set of connector shape types to examine
-                var connectorTypes = new Aspose.Slides.ShapeType[]
+                var connectorTypes = new ShapeType[]
                 {
-                    Aspose.Slides.ShapeType.BentConnector2,
-                    Aspose.Slides.ShapeType.StraightConnector1,
-                    Aspose.Slides.ShapeType.CurvedConnector2,
-                    Aspose.Slides.ShapeType.BentConnector3
+                    ShapeType.BentConnector2,
+                    ShapeType.StraightConnector1,
+                    ShapeType.CurvedConnector2,
+                    ShapeType.BentConnector3
                 };
 
                 foreach (var type in connectorTypes)
@@ -32,7 +51,7 @@ namespace ConnectorAdjustmentDemo
                 }
 
                 var outputPath = "ConnectorAdjustments.pptx";
-                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                presentation.Save(outputPath, SaveFormat.Pptx);
                 presentation.Dispose();
             }
             catch (Exception ex)
