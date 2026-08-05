@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Clone slide to end set section start using C#
+//
+// Description:
+// Demonstrates how to clone a slide to the end of a newly created section,
+// set the presentation's first slide number, and work with sections using
+// Aspose.Slides for .NET. The example loads an existing PPTX, adds shapes,
+// creates sections, clones a slide into a section, and saves the result.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone, Slide, Section, Start,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate cloning a slide into a specific section.
+// - Manage sections and slide numbering in PowerPoint files.
+// - Build .NET tools for presentation manipulation and automation.
+// - Validate and transform PPTX content programmatically.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
