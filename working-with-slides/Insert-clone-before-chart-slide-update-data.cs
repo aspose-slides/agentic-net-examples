@@ -1,3 +1,27 @@
+// -----------------------------------------------------------------------------
+// Example: Insert clone before chart slide update data using C#
+//
+// Description:
+// Demonstrates how to insert a clone of a slide containing a chart before the
+// original slide and update the chart's data source to an external workbook
+// using Aspose.Slides for .NET. The example shows the required presentation-
+// processing steps for PowerPoint files and produces the requested output in a
+// standalone console application. Developers can use this pattern to automate
+// PPTX workflows, validate results, or integrate presentation logic into .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Insert, Clone, Before, Chart,
+// External Workbook, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate cloning a slide before a chart slide and updating its data source.
+// - Build C# tools for PowerPoint presentation processing with external data.
+// - Generate or transform PPTX files in .NET applications using external Excel
+//   workbooks.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides.Export;
