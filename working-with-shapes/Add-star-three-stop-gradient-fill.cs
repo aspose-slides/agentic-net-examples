@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Add star three stop gradient fill using C#
+//
+// Description:
+// Demonstrates how to add a five‑pointed star shape with a three‑stop gradient
+// fill (blue → green → yellow) using C# and Aspose.Slides for .NET. The example
+// creates a new presentation, inserts the star, configures the gradient fill,
+// and saves the result as a PPTX file. This pattern can be used to automate
+// gradient styling of shapes in PowerPoint presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Star, Three‑Stop Gradient, Fill,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding a star shape with a custom three‑stop gradient fill.
+// - Build C# utilities for styling shapes in PowerPoint files.
+// - Generate or modify PPTX presentations programmatically.
+// - Validate gradient fill configurations before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.Drawing;
 using Aspose.Slides;
