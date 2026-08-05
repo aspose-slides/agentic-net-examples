@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Export slide transitions to XML using C#
+//
+// Description:
+// Demonstrates how to extract slide transition settings from a PowerPoint
+// presentation and export them to an XML file using C# and Aspose.Slides for .NET.
+// The example loads an existing PPTX file, iterates through its slides,
+// captures transition properties, writes them to an XML document, and saves
+// both the XML configuration and a copy of the (potentially unchanged) presentation.
+// This pattern can be used to automate PPTX analysis, generate reports, or
+// integrate transition data into other workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Slide, Transitions, XML,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of slide transition details to XML for reporting.
+// - Build C# tools that analyze or audit PowerPoint presentation animations.
+// - Integrate slide transition data into custom .NET applications or services.
+// - Validate and document presentation workflows before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Xml.Linq;
