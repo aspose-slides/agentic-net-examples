@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add line shape begin triangle end open using C#
+//
+// Description:
+// Demonstrates how to add a line shape with a triangular begin arrowhead and an
+// open end arrowhead using C# and Aspose.Slides for .NET. The example creates a
+// new presentation, inserts a line on the first slide, configures the arrowhead
+// styles, and saves the result as a PPTX file. This pattern can be used to
+// automate PowerPoint drawing tasks, generate custom diagrams, or integrate
+// arrow‑styled lines into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Line Shape, Arrowhead, Begin
+// Triangle, End Open, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of lines with specific arrowhead styles.
+// - Build C# utilities for PowerPoint diagram generation.
+// - Generate or modify PPTX files with custom line annotations.
+// - Validate arrowhead configurations in presentation workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
