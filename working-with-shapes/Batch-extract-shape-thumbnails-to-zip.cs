@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Batch extract shape thumbnails to zip using C#
+//
+// Description:
+// Demonstrates how to batch extract shape thumbnails from PowerPoint files
+// and store them in a ZIP archive using C# and Aspose.Slides for .NET. The
+// example processes all PPT/PPTX files in a specified input folder, creates
+// PNG thumbnails for each shape on every slide, and packages them into a
+// single ZIP file. This pattern can be used to automate thumbnail generation
+// for presentations in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Batch, Extract, Shape,
+// Thumbnails, ZIP, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate batch extraction of shape thumbnails into a ZIP archive.
+// - Build tools for PowerPoint content analysis or preview generation.
+// - Integrate shape thumbnail creation into .NET workflows.
+// - Prepare assets for documentation, reporting, or web publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.IO.Compression;
