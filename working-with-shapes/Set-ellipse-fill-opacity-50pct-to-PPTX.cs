@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Set ellipse fill opacity 50pct to PPTX using C#
+//
+// Description:
+// Demonstrates how to set ellipse fill opacity to 50% in a PPTX file using C#
+// and Aspose.Slides for .NET. The example loads an existing presentation,
+// iterates through all slides and shapes, identifies ellipse shapes, and
+// adjusts their solid fill opacity to 50% when the fill is currently
+// transparent. It then saves the modified presentation. Developers can use
+// this pattern to automate PPTX workflows, validate results, or integrate
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Ellipse, Fill, Opacity, 50Pct,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting ellipse fill opacity to 50% in PPTX files.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Drawing;
