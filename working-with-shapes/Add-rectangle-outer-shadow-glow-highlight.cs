@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add rectangle outer shadow glow highlight using C#
+//
+// Description:
+// Demonstrates how to add a rectangle shape with an outer shadow and glow
+// effect using C# and Aspose.Slides for .NET. The example creates a new
+// presentation, inserts a rectangle, configures its fill, outer shadow, and
+// glow, and saves the result as a PPTX file. This pattern can be used to
+// automate visual enhancements in PowerPoint presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Rectangle, Outer Shadow, Glow,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Apply outer shadow and glow effects to shapes programmatically.
+// - Build C# tools for enhancing PowerPoint visual elements.
+// - Generate or modify PPTX files with styled shapes in .NET applications.
+// - Automate design consistency checks for presentation assets.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
