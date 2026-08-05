@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Add line shape set miter join verify using C#
+//
+// Description:
+// Demonstrates how to add a line shape, set its line join style to Miter, retrieve
+// the effective line format data, and verify the miter limit using C# and 
+// Aspose.Slides for .NET. The example shows the required 
+// presentation-processing steps for PowerPoint files and produces the 
+// requested output in a standalone console application. Developers can use 
+// this pattern to automate PPTX workflows, validate results, or integrate 
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Line, Shape, Miter, Join, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding a line shape with a miter join and verify its properties.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate line join settings before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
