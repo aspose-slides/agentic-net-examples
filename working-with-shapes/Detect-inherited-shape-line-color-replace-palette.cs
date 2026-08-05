@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Detect inherited shape line color replace palette using C#
+//
+// Description:
+// Demonstrates how to detect inherited line formatting of shapes on a slide,
+// and replace the line color with a specific palette entry (Accent2) using
+// Aspose.Slides for .NET. The example loads a PPTX file, processes the first
+// slide, updates line colors where a visible line exists, and saves the
+// result. This pattern can be used to standardize line colors across
+// presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Detect, Inherited, Shape, Line,
+// Palette, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Detect and replace inherited shape line colors with a chosen palette entry.
+// - Automate line style standardization in PowerPoint files.
+// - Build .NET tools for batch processing of PPTX presentations.
+// - Ensure visual consistency before publishing or integrating presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;
