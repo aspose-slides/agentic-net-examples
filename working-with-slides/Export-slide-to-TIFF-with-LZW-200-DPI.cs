@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Export slide to TIFF with LZW 200 DPI using C#
+//
+// Description:
+// Demonstrates how to export a PowerPoint presentation to a multi‑page TIFF
+// file using LZW compression and a resolution of 200 DPI with Aspose.Slides for
+// .NET. The example loads a PPTX file, configures TIFF export options, and
+// saves the result as a TIFF image. This pattern can be used in console
+// applications to automate slide conversion tasks.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Slide, TIFF, LZW,
+// 200 DPI, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Convert PowerPoint presentations to high‑resolution TIFF images.
+// - Automate batch export of slides for archival or printing.
+// - Integrate slide‑to‑image conversion into .NET tools or services.
+// - Validate presentation rendering before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
