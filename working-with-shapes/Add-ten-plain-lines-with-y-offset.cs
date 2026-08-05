@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add ten plain lines with y offset using C#
+//
+// Description:
+// Demonstrates how to add ten plain lines with incremental Y offset to each
+// slide in a PowerPoint presentation using C# and Aspose.Slides for .NET.
+// The example loads an existing presentation (or creates a new one), adds
+// ten horizontal line shapes per slide with a vertical offset, and saves the
+// result. This pattern can be used to automate drawing guides, separators, or
+// custom layouts in PPTX files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Plain Lines, Y Offset,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Add multiple horizontal guide lines to slides programmatically.
+// - Build C# tools for automated slide layout adjustments.
+// - Generate or modify PPTX files with custom line graphics in .NET.
+// - Automate visual formatting tasks before publishing presentations.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
