@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Insert clone after chart slide using C#
+//
+// Description:
+// Demonstrates how to insert a clone of a slide that contains a chart immediately
+// after that slide using C# and Aspose.Slides for .NET. The example shows the
+// required presentation-processing steps for PowerPoint files and produces the
+// requested output in a standalone console application. Developers can use this
+// pattern to automate PPTX workflows, validate results, or integrate presentation
+// logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Insert, Clone, After, Chart,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate insertion of a cloned slide following a chart slide.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
