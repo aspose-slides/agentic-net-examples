@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Clone multiple slide masters to target using C#
+//
+// Description:
+// Demonstrates how to clone all slide masters from a source presentation into a
+// new destination presentation using Aspose.Slides for .NET. The example also
+// shows how to add a slide that uses one of the cloned masters. This pattern
+// can be used to consolidate slide masters across presentations or to prepare
+// a template with multiple masters for further editing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone, Multiple, Slide, Masters,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Transfer all slide masters from an existing PPTX to a new presentation.
+// - Build tools that combine slide master libraries for template creation.
+// - Automate preparation of presentations that require multiple master slides.
+// - Enable downstream editing of cloned masters in .NET applications.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
