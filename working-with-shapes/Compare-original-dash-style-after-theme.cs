@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Compare original dash style after theme using C#
+//
+// Description:
+// Demonstrates how to retrieve the original dash style set on a shape's line
+// format and compare it with the effective dash style after theme inheritance
+// using Aspose.Slides for .NET. The example loads a PPTX file, accesses the
+// first shape on the first slide, prints both dash styles, and saves the
+// presentation.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Dash Style, Line Format, Theme Inheritance,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Determine how a shape's line dash style changes after applying a theme.
+// - Build tools to audit or validate line formatting in PowerPoint files.
+// - Automate comparison of original and effective visual properties in .NET.
+// - Generate reports on shape formatting for presentation quality checks.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
