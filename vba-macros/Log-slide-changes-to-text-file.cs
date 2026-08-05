@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Log slide indices and shape text to a text file using C#
+//
+// Description:
+// Demonstrates how to iterate through all slides in a PowerPoint presentation,
+// record each slide index and any text contained in AutoShape shapes, and write
+// this information to a plain‑text log file. The example also shows how to load
+// a presentation, optionally save it, and handle common errors using Aspose.Slides
+// for .NET in a console application.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, slide index, shape text, logging,
+// text file, presentation processing, automation
+//
+// Use Cases:
+// - Create audit logs of slide content for review or compliance.
+// - Build utilities that extract slide metadata and text.
+// - Automate documentation of presentation structure in .NET projects.
+// - Validate or debug slide contents during PPTX processing workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -34,7 +54,7 @@ namespace SlideChangeLogger
                     {
                         Aspose.Slides.ISlide slide = presentation.Slides[i];
                         logWriter.WriteLine("Slide index accessed: " + i);
-                        // Example: log placeholder title if present
+                        // Log text of any AutoShape shapes on the slide
                         foreach (Aspose.Slides.IShape shape in slide.Shapes)
                         {
                             if (shape is Aspose.Slides.IAutoShape autoShape && autoShape.TextFrame != null)
