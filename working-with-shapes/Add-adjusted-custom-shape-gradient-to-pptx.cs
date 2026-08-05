@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add adjusted custom shape gradient to pptx using C#
+//
+// Description:
+// Demonstrates how to add an adjusted custom shape with a linear gradient fill
+// to a PPTX file using C# and Aspose.Slides for .NET. The example creates a new
+// presentation, inserts a rectangle shape, modifies its adjustment handle, applies
+// a linear gradient fill, and saves the result. This pattern can be used to
+// automate shape adjustments and gradient styling in PowerPoint presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Adjusted, Custom Shape, Gradient,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding adjusted custom shapes with gradient fills to PPTX files.
+// - Build C# tools for PowerPoint shape manipulation and styling.
+// - Generate or transform PPTX files with custom gradient effects in .NET.
+// - Validate shape adjustment and gradient rendering before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
