@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Log connector adjustment points from PPTX using C#
+//
+// Description:
+// Demonstrates how to enumerate connectors in a PPTX file and log the IDs of
+// connectors that have more than two adjustment points using Aspose.Slides for .NET.
+// The example loads a presentation, inspects each shape, and outputs relevant
+// connector information, then saves the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Connector, Adjustment Points, 
+// Shape Inspection, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Identify connectors with complex geometry in PowerPoint files.
+// - Build diagnostics tools for PPTX validation.
+// - Automate extraction of connector metadata in .NET applications.
+// - Integrate connector analysis into larger presentation processing workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
