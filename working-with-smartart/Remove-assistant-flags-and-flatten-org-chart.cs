@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Remove assistant flags from organization chart using C#
+//
+// Description:
+// Demonstrates how to remove assistant nodes from an organization chart SmartArt
+// using C# and Aspose.Slides for .NET. The example loads a PPTX file, locates the
+// first SmartArt shape, recursively deletes nodes marked as assistants, and saves
+// the modified presentation. This pattern can be used to clean up org charts
+// programmatically.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SmartArt, Organization Chart,
+// Assistant Nodes, Remove Assistant, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Clean up organization charts by removing assistant positions.
+// - Automate PowerPoint presentation modifications in .NET applications.
+// - Prepare PPTX files for publishing without assistant flags.
+// - Integrate SmartArt manipulation into custom tools or services.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;
