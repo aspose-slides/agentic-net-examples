@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Clone smartart shape to other slide using C#
+//
+// Description:
+// Demonstrates how to clone a SmartArt shape from one slide to another slide 
+// using C# and Aspose.Slides for .NET. The example loads a source presentation,
+// locates the first SmartArt shape, clones it onto a target slide while preserving 
+// its position, and saves the result. This pattern can be used in console 
+// applications for PowerPoint automation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone, SmartArt, Shape, Slide, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate cloning of SmartArt shapes between slides.
+// - Build C# tools for PowerPoint presentation manipulation.
+// - Generate or modify PPTX files programmatically.
+// - Validate and test SmartArt handling in .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
