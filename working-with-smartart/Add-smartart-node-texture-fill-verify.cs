@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Add smartart node texture fill verify using C#
+//
+// Description:
+// Demonstrates how to add a SmartArt node with a texture (picture) fill, verify
+// the texture image existence, and save the presentation using Aspose.Slides for .NET.
+// The example creates a presentation, inserts a SmartArt diagram, adds a node,
+// applies a tiled texture fill to the node's shapes, and saves the file.
+// This pattern helps automate PowerPoint SmartArt styling and validation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SmartArt, Node, Texture Fill, Picture Fill, Presentation Automation
+//
+// Use Cases:
+// - Automate adding texture fills to SmartArt nodes.
+// - Validate texture image resources before applying fills.
+// - Generate PowerPoint files with customized SmartArt styling in .NET applications.
+// - Integrate SmartArt texture processing into presentation workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
