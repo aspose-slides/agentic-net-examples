@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Apply pictureaccentblocks layout fill nodes from folder using C#
+//
+// Description:
+// Demonstrates how to apply the PictureAccentBlocks SmartArt layout and fill its
+// nodes with images loaded from a folder using C# and Aspose.Slides for .NET.
+// The example creates a new presentation, adds a SmartArt diagram, changes its
+// layout to PictureAccentBlocks, populates each node with picture fills from
+// image files in the Data folder, and saves the result as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, PictureAccentBlocks,
+// Layout, Fill, SmartArt, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate applying PictureAccentBlocks layout and filling nodes with images.
+// - Build C# tools for PowerPoint SmartArt processing and customization.
+// - Generate or transform PPTX files with image-filled SmartArt in .NET apps.
+// - Validate SmartArt workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
