@@ -1,3 +1,21 @@
+// -----------------------------------------------------------------------------
+// Example: Clone SmartArt shape, apply external theme, and compare PNG using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, locate the first SmartArt
+// shape, clone it, apply an external theme to the master slide, render the slide
+// to PNG before and after the modifications, and save the updated presentation.
+// This example uses Aspose.Slides for .NET in a console application.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, SmartArt, Clone, Theme, PNG, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Clone SmartArt shapes programmatically.
+// - Apply custom themes to presentations.
+// - Generate before/after PNG snapshots for visual comparison.
+// - Automate PowerPoint manipulation in .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -69,7 +87,7 @@ namespace CloneSmartArtWithTheme
                 IImage originalSlideImage = slide.GetImage();
                 originalSlideImage.Save(originalImagePath, Aspose.Slides.ImageFormat.Png);
 
-                // Clone the SmartArt shape using AddClone (compiler fix rule)
+                // Clone the SmartArt shape using AddClone
                 IShape clonedShape = slide.Shapes.AddClone((IShape)originalSmartArt);
                 ISmartArt clonedSmartArt = (ISmartArt)clonedShape;
 
@@ -97,7 +115,6 @@ namespace CloneSmartArtWithTheme
             catch (NotSupportedException)
             {
                 // Format not supported
-                // Comment: format not supported
                 Console.WriteLine("The file format is not supported.");
             }
             catch (Exception ex)
