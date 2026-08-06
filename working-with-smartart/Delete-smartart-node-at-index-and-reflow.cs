@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Delete smartart node at index and reflow using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, add a SmartArt diagram,
+// populate it with nodes, delete a node at a specific index, reapply the layout
+// to reflow the SmartArt hierarchy, and save the result using Aspose.Slides for .NET.
+// The example includes basic error handling and file existence checks.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Delete SmartArt Node, Index, Reflow,
+// SmartArt Layout, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate removal of a specific SmartArt node and reflow the diagram.
+// - Build C# utilities for PowerPoint SmartArt manipulation.
+// - Integrate SmartArt editing into .NET applications.
+// - Validate SmartArt structures after modifications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;
