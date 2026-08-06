@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Load presentation modify smartart node opacity using C#
+//
+// Description:
+// Demonstrates how to load a presentation and modify the opacity of a SmartArt
+// node's shape using C# and Aspose.Slides for .NET. The example shows the
+// required presentation-processing steps for PowerPoint files and produces the
+// requested output in a standalone console application. Developers can use this
+// pattern to automate PPTX workflows, adjust visual properties, or integrate
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, Presentation, Modify,
+// SmartArt, Opacity, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate loading a presentation and adjusting SmartArt node opacity.
+// - Build C# tools for PowerPoint presentation visual customization.
+// - Generate or transform PPTX files with specific visual effects in .NET
+//   applications.
+// - Validate and preview presentation appearance before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Drawing;
