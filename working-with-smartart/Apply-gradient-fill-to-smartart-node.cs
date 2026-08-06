@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Apply gradient fill to smartart node using C#
+//
+// Description:
+// Demonstrates how to apply a linear gradient fill to a SmartArt node shape 
+// using Aspose.Slides for .NET. The example creates a presentation, adds a 
+// SmartArt diagram, accesses the first node, sets a gradient fill, and saves 
+// the file as a PPTX. This pattern can be used to automate PowerPoint 
+// presentation styling in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Gradient Fill, SmartArt, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Programmatically apply gradient fills to SmartArt elements.
+// - Build .NET tools for customizing PowerPoint presentations.
+// - Generate or modify PPTX files with styled SmartArt.
+// - Automate visual consistency checks in presentation workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides.Export;
 
@@ -12,7 +33,8 @@ class Program
         Aspose.Slides.ISlide slide = presentation.Slides[0];
 
         // Add a SmartArt diagram
-        Aspose.Slides.SmartArt.ISmartArt smartArt = slide.Shapes.AddSmartArt(50, 50, 400, 300, Aspose.Slides.SmartArt.SmartArtLayoutType.BasicBlockList);
+        Aspose.Slides.SmartArt.ISmartArt smartArt = slide.Shapes.AddSmartArt(
+            50, 50, 400, 300, Aspose.Slides.SmartArt.SmartArtLayoutType.BasicBlockList);
 
         // Get the first node of the SmartArt
         Aspose.Slides.SmartArt.ISmartArtNode node = smartArt.AllNodes[0];
@@ -30,7 +52,7 @@ class Program
         // Save the presentation
         try
         {
-            presentation.Save("SmartArtGradient.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            presentation.Save("SmartArtGradient.pptx", SaveFormat.Pptx);
         }
         catch (Exception ex)
         {
