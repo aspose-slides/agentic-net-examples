@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Validate SmartArt shape hidden after applying external theme using C#
+//
+// Description:
+// Demonstrates how to add a SmartArt diagram to a slide, apply an external
+// .thmx theme to the presentation's master slide, and verify that the SmartArt's
+// Hidden property matches the expected value after the theme is applied.
+// The example includes loading a presentation, theme application, property
+// validation, and saving the modified file as a standalone console application.
+// Developers can use this pattern to automate PPTX workflows, ensure SmartArt
+// visibility consistency across themes, or integrate presentation logic into
+// .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SmartArt, Hidden property,
+// External theme, Master slide, Presentation processing, Office Automation
+//
+// Use Cases:
+// - Verify SmartArt visibility after applying an external theme.
+// - Build C# tools for PowerPoint presentation processing and validation.
+// - Ensure presentation styling changes do not unintentionally hide SmartArt.
+// - Integrate SmartArt property checks into CI pipelines or automated workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
