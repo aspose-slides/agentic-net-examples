@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Create thumbnail of smartart node and embed using C#
+//
+// Description:
+// Demonstrates how to generate a PNG thumbnail of a specific SmartArt node
+// within a PowerPoint presentation using Aspose.Slides for .NET, save the
+// thumbnail image, and save the modified presentation. The example also
+// outlines where to embed the generated PNG into another document.
+//
+// Keywords:
+// C#, Aspose.Slides, SmartArt, Thumbnail, Node, PNG, Presentation, PPTX,
+// ImageExport, Office Automation
+//
+// Use Cases:
+// - Generate visual previews of individual SmartArt nodes.
+// - Automate creation of thumbnails for reporting or documentation.
+// - Integrate SmartArt node images into external applications or reports.
+// - Process PowerPoint files programmatically in .NET environments.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
