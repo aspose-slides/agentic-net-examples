@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Assign random fill to SmartArt nodes and export slide as PNG using C#
+//
+// Description:
+// Demonstrates how to assign random solid fill colors to all SmartArt node shapes
+// in a presentation and then export the first slide as a high‑resolution PNG file
+// using Aspose.Slides for .NET. The example shows loading a PPTX, modifying SmartArt,
+// saving the updated presentation, and rendering a slide image.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SmartArt, Random Fill, PNG Export,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automatically apply random colors to SmartArt elements in bulk.
+// - Generate visual previews of slides after SmartArt modifications.
+// - Build .NET tools for PowerPoint content styling and image extraction.
+// - Validate SmartArt appearance programmatically before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Drawing;
