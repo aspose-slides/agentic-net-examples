@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Export SmartArt child node thumbnails in three sizes using C#
+//
+// Description:
+// Demonstrates how to extract thumbnails of each SmartArt child node from a
+// PowerPoint presentation and save them in three different scales (small,
+// medium, large). The example loads a PPTX file, iterates through slides and
+// SmartArt diagrams, generates PNG images for each node at 0.5x, 1x and 2x
+// scaling factors, and writes the images into separate folders. It also shows
+// basic error handling and saving the (unchanged) presentation.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, SmartArt, Thumbnail, Export, PowerPoint, PPTX,
+// Image scaling, Presentation processing, .NET console application
+//
+// Use Cases:
+// - Automate creation of multi‑size thumbnails for SmartArt elements.
+// - Build tools that need visual previews of SmartArt nodes.
+// - Integrate SmartArt thumbnail generation into .NET workflows.
+// - Validate or document SmartArt content in PowerPoint files.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
