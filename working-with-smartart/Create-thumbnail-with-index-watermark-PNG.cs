@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Create thumbnail with index watermark PNG using C#
+//
+// Description:
+// Demonstrates how to generate PNG thumbnails for each SmartArt node in a
+// presentation, overlaying an index watermark on the node shape using
+// Aspose.Slides for .NET. The example loads a PPTX, finds the first SmartArt,
+// adds a transparent rectangle with the node index as text, creates a thumbnail
+// image of the node, and saves the images as PNG files while preserving the
+// modified presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SmartArt, PNG, Thumbnail,
+// Index, Watermark, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of indexed thumbnails for SmartArt nodes.
+// - Build C# tools for PowerPoint SmartArt processing and visualization.
+// - Generate PNG assets from PPTX presentations for documentation or web use.
+// - Validate and enhance SmartArt layouts programmatically.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
