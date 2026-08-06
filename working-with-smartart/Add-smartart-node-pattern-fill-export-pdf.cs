@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add smartart node pattern fill export pdf using C#
+//
+// Description:
+// Demonstrates how to add SmartArt nodes with pattern fills and export the
+// presentation to PDF using C# and Aspose.Slides for .NET. The example shows
+// creating a presentation, inserting a SmartArt diagram, applying different
+// pattern fills to individual nodes, and saving the result as a PDF file.
+// This pattern can be used to automate PowerPoint workflows that require
+// custom SmartArt styling and PDF output.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, SmartArt, Node, Pattern,
+// Fill, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding SmartArt nodes with pattern fills and exporting to PDF.
+// - Build C# tools for PowerPoint presentation processing with custom styling.
+// - Generate or transform PPTX files with SmartArt content in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
