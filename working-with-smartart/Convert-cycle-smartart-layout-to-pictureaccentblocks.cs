@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Convert cycle smartart layout to pictureaccentblocks using C#
+//
+// Description:
+// Demonstrates how to convert a BasicCycle SmartArt layout to a PictureAccentBlocks
+// layout in a PowerPoint presentation using Aspose.Slides for .NET. The example
+// loads an existing PPTX file, iterates through its slides and shapes, identifies
+// SmartArt diagrams with the BasicCycle layout, changes them to PictureAccentBlocks,
+// and saves the result.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SmartArt, Convert, Cycle, Layout,
+// PictureAccentBlocks, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate conversion of BasicCycle SmartArt diagrams to PictureAccentBlocks.
+// - Build tools for bulk updating SmartArt layouts in existing presentations.
+// - Integrate SmartArt layout transformations into .NET applications.
+// - Prepare presentations for consistent visual styling before distribution.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
