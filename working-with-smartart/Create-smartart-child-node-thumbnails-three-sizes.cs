@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Create SmartArt child node thumbnails in three sizes using C#
+//
+// Description:
+// Demonstrates how to add an Organization Chart SmartArt diagram to a slide,
+// create child nodes, and generate PNG thumbnails for each child node at three
+// different scales (small, medium, large). The example uses Aspose.Slides for
+// .NET to load a presentation, manipulate SmartArt, export shape images, and
+// save the modified presentation.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, SmartArt, OrganizationChart,
+// ChildNode, Thumbnail, PNG, Scale, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Generate small, medium, and large thumbnails for SmartArt child nodes.
+// - Automate PowerPoint presentation processing and image extraction.
+// - Build C# utilities for extracting visual assets from SmartArt diagrams.
+// - Integrate SmartArt thumbnail generation into .NET applications.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
