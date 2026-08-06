@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Render SmartArt shapes to PNG per slide using C#
+//
+// Description:
+// Demonstrates how to iterate through slides and shapes in a PowerPoint
+// presentation, detect SmartArt diagrams, render each SmartArt shape to a PNG
+// image, and save the images with filenames that include slide and shape
+// indices. The example uses Aspose.Slides for .NET in a console application.
+// Developers can adapt this pattern to extract visual representations of
+// SmartArt for reporting, documentation, or further image processing.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, PowerPoint, PPTX, SmartArt, PNG, Image Export,
+// Slide Processing, Presentation Automation, Office Automation
+//
+// Use Cases:
+// - Extract SmartArt diagrams as PNG images from each slide.
+// - Automate generation of image assets from PowerPoint presentations.
+// - Build C# utilities for PowerPoint content analysis or migration.
+// - Integrate SmartArt rendering into .NET applications or services.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
