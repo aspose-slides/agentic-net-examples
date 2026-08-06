@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export smartart node geometry to JSON using C#
+//
+// Description:
+// Demonstrates how to export the geometry information of SmartArt nodes to a
+// JSON file using C# and Aspose.Slides for .NET. The example loads a PPTX,
+// iterates through all SmartArt shapes, extracts geometry path data for each
+// node shape, and writes a concise JSON representation. It also saves the
+// presentation after processing.
+//
+// Keywords:
+// C#, Aspose.Slides for .NET, SmartArt, Geometry, JSON, Export, PowerPoint,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of SmartArt geometry for analysis or conversion.
+// - Build tools that need to inspect or validate SmartArt layouts.
+// - Integrate SmartArt geometry data into downstream .NET applications.
+// - Generate JSON reports of PPTX content for documentation or testing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Text.Json;
