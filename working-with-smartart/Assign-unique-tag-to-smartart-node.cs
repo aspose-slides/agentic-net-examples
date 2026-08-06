@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Assign unique tag to smartart node using C#
+//
+// Description:
+// Demonstrates how to assign a unique tag to each SmartArt node in a PowerPoint
+// presentation using C# and Aspose.Slides for .NET. The example creates a new
+// presentation, adds an Organization Chart SmartArt diagram, assigns a distinct
+// tag (stored in the shape's AlternativeText) to every node, builds a mapping
+// of tags to node indices, serializes this mapping to a JSON file, and saves the
+// presentation. This pattern can be used to embed metadata within SmartArt
+// elements and export it for downstream processing.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SmartArt, Tag, AlternativeText,
+// JSON, Mapping, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Embed and export custom metadata for SmartArt nodes.
+// - Automate tagging of SmartArt elements in bulk PowerPoint files.
+// - Generate JSON mappings for integration with external systems.
+// - Validate and track SmartArt node identities during presentation workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;
