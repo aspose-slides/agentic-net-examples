@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Generate smartart node CSV report using C#
+//
+// Description:
+// Demonstrates how to generate a CSV report of SmartArt nodes from a PowerPoint
+// presentation using C# and Aspose.Slides for .NET. The example loads a PPTX,
+// extracts each SmartArt node's text, fill style, and assistant flag, writes
+// these details to a CSV file, and saves a copy of the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SmartArt, CSV, Report, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of SmartArt node CSV reports.
+// - Build C# utilities for PowerPoint presentation analysis.
+// - Export SmartArt metadata for downstream processing or validation.
+// - Integrate SmartArt data extraction into .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
