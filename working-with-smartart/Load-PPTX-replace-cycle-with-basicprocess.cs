@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Load PPTX and replace SmartArt BasicCycle layout with BasicProcess using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, iterate through its slides
+// and shapes, detect SmartArt diagrams with the BasicCycle layout, and replace
+// that layout with BasicProcess using Aspose.Slides for .NET. The modified
+// presentation is saved as a new PPTX file. This example is useful for automating
+// SmartArt layout transformations in .NET applications.
+//
+// Keywords:
+// C#, Aspose.Slides, SmartArt, BasicCycle, BasicProcess, PPTX, Presentation,
+// Layout Replacement, Office Automation
+//
+// Use Cases:
+// - Automate conversion of SmartArt layouts in existing presentations.
+// - Build tools to standardize SmartArt diagrams across multiple PPTX files.
+// - Integrate SmartArt processing into .NET workflows or CI pipelines.
+// - Update legacy presentations to newer SmartArt styles programmatically.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
