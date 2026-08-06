@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set multiple smartart nodes custom positions using C#
+//
+// Description:
+// Demonstrates how to set custom positions, sizes, and rotation for multiple
+// SmartArt nodes in a PowerPoint presentation using Aspose.Slides for .NET.
+// The example loads or creates a presentation, adds an Organization Chart
+// SmartArt diagram, modifies the geometry of several nodes, and saves the
+// result.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Multiple, SmartArt, Nodes,
+// Custom, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate custom positioning, resizing, and rotation of SmartArt nodes.
+// - Build C# tools for detailed SmartArt diagram manipulation in PowerPoint.
+// - Generate or transform PPTX files with tailored SmartArt layouts in .NET
+//   applications.
+// - Validate SmartArt diagram adjustments before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
