@@ -1,3 +1,21 @@
+// -----------------------------------------------------------------------------
+// Example: Report assistant nodes with parent list using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, iterate SmartArt shapes,
+// identify assistant nodes, retrieve their parent node text, and generate a
+// console report. The example also saves the presentation after processing,
+// illustrating typical Aspose.Slides for .NET workflow for SmartArt analysis.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SmartArt, Assistant Nodes, Parent List, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Generate a report of assistant nodes and their parents in a SmartArt diagram.
+// - Automate validation of SmartArt hierarchy in PowerPoint files.
+// - Build .NET tools for analyzing and transforming PPTX presentations.
+// - Integrate SmartArt inspection into larger presentation processing pipelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;
