@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Toggle smartart shape hidden and save using C#
+//
+// Description:
+// Demonstrates how to toggle the Hidden property of a SmartArt shape in a
+// PowerPoint presentation and save the changes using Aspose.Slides for .NET.
+// The example loads a PPTX file, finds the first SmartArt shape on the first
+// slide, toggles its visibility, and writes the result to a new file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Toggle, SmartArt, Shape,
+// Hidden, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate toggling SmartArt shape visibility in PPTX files.
+// - Build C# utilities for PowerPoint presentation manipulation.
+// - Integrate SmartArt visibility control into .NET applications.
+// - Validate and preprocess presentations before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
