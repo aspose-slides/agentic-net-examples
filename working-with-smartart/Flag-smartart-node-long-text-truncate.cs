@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Flag smartart node long text truncate using C#
+//
+// Description:
+// Demonstrates how to flag and truncate long text in SmartArt nodes using C# 
+// and Aspose.Slides for .NET. The example loads a PPTX file, iterates through 
+// all SmartArt diagrams, truncates any node text longer than 50 characters, 
+// and saves the modified presentation. This pattern helps automate PPTX 
+// processing tasks that require text length enforcement within SmartArt.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Flag, SmartArt, Node, Long Text, 
+// Truncate, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate truncation of overly long SmartArt node text.
+// - Build C# utilities for PowerPoint presentation cleanup.
+// - Ensure consistent text length in SmartArt diagrams across presentations.
+// - Integrate SmartArt text management into .NET applications.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
