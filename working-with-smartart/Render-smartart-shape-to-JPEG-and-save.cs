@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Render smartart shape to JPEG and save using C#
+//
+// Description:
+// Demonstrates how to create a presentation, add a SmartArt diagram, render the
+// SmartArt shape to a high‑resolution JPEG image, and save both the image and the
+// presentation using Aspose.Slides for .NET. The example shows the required
+// presentation‑processing steps for PowerPoint files and produces the requested
+// output in a standalone console application. Developers can use this pattern to
+// automate PPTX workflows, validate results, or integrate presentation logic into
+// .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, JPEG, Render, SmartArt, Shape,
+// Image, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate rendering of SmartArt shapes to JPEG images.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
