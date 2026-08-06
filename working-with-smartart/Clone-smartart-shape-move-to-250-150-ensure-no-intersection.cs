@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Clone smartart shape move to 250 150 ensure no intersection using C#
+//
+// Description:
+// Demonstrates how to clone an existing SmartArt shape, position it at (250,150),
+// and adjust its location to avoid intersecting any other shapes on the slide
+// using C# and Aspose.Slides for .NET. The example loads or creates a presentation,
+// ensures a SmartArt object is present, clones it, checks for intersections,
+// and saves the result.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone, SmartArt, Shape, Move,
+// Intersection, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate cloning of SmartArt shapes with repositioning to avoid overlap.
+// - Build C# utilities for PowerPoint presentation manipulation.
+// - Generate or modify PPTX files programmatically in .NET applications.
+// - Validate and adjust slide layouts before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
