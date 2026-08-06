@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Assign unique identifiers to smartart nodes using C#
+//
+// Description:
+// Demonstrates how to assign unique integer identifiers to SmartArt nodes in a
+// PowerPoint presentation using C# and Aspose.Slides for .NET. The example
+// creates a presentation, adds a SmartArt diagram, inserts root and child
+// nodes, maps each node to a unique ID using a dictionary, outputs the mapping,
+// and saves the resulting PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Assign, Unique, Identifiers,
+// SmartArt, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate the assignment of unique identifiers to SmartArt nodes.
+// - Build C# tools for PowerPoint presentation processing and analysis.
+// - Generate or transform PPTX files with custom SmartArt metadata in .NET
+//   applications.
+// - Validate SmartArt structures before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
 using Aspose.Slides.Export;
