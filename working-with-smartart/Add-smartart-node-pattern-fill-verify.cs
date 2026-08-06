@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add smartart node pattern fill verify using C#
+//
+// Description:
+// Demonstrates how to add a SmartArt node with a pattern fill and verify the
+// result using C# and Aspose.Slides for .NET. The example creates a presentation,
+// inserts a SmartArt diagram, adds a node, applies a diagonal‑cross pattern
+// fill to the node's shapes, and saves the file. This pattern can be used to
+// automate PPTX workflows, validate SmartArt styling, or integrate presentation
+// logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SmartArt, Node, Pattern Fill,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding a SmartArt node with pattern fill.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files with custom SmartArt styling.
+// - Validate SmartArt node appearance before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
