@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Promote first child after node removal using C#
+//
+// Description:
+// Demonstrates how to promote the first child node of a SmartArt organization
+// chart after removing its root node using C# and Aspose.Slides for .NET. The
+// example creates a presentation, adds an organization chart SmartArt, builds
+// a root node with two children, removes the root, and promotes the first
+// child to become a new root node. The resulting presentation is saved as a
+// PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SmartArt, OrganizationChart,
+// Promote, First Child, Node Removal, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate promotion of a child node after root removal in SmartArt diagrams.
+// - Build C# utilities for manipulating SmartArt structures in PowerPoint files.
+// - Generate or transform PPTX presentations with dynamic hierarchy changes.
+// - Validate SmartArt hierarchy workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
