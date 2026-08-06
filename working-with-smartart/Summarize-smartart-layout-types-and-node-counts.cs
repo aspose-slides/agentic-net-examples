@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Summarize smartart layout types and node counts using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, iterate through its slides,
+// identify SmartArt shapes, and output each SmartArt's layout type and node count.
+// The example also saves the presentation after processing. This pattern helps
+// developers automate PPTX analysis, validate SmartArt usage, or integrate
+// presentation insights into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Summarize, SmartArt, Layout,
+// Node Count, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of SmartArt layout types and node counts from presentations.
+// - Build C# tools for PowerPoint content analysis and reporting.
+// - Generate or transform PPTX files while preserving existing content.
+// - Validate SmartArt structures before publishing or further processing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
