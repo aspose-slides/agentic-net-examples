@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Add smartart node custom text solid accent using C#
+//
+// Description:
+// Demonstrates how to add a SmartArt node with custom text and apply a solid
+// accent fill using the theme's Accent1 color in a PowerPoint presentation
+// with Aspose.Slides for .NET. The example creates a new presentation, inserts a
+// Closed Chevron Process SmartArt diagram, adds a node with custom text, sets a
+// solid fill on each shape within the node, and saves the result as a PPTX file.
+// This pattern can be used to automate SmartArt customization in .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SmartArt, Node, Custom Text,
+// Solid Fill, Accent Color, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding SmartArt nodes with custom text and accent styling.
+// - Build C# tools for PowerPoint presentation processing and customization.
+// - Generate or transform PPTX files with themed SmartArt elements in .NET.
+// - Validate and preview SmartArt modifications before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
