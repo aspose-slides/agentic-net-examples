@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Assign database pictures to org chart nodes using C#
+//
+// Description:
+// Demonstrates how to assign pictures from a simulated database to nodes of an
+// organization chart SmartArt diagram in a PowerPoint presentation using
+// Aspose.Slides for .NET. The example creates a new presentation, adds an
+// organization chart SmartArt, maps node text to image file paths, loads the
+// images, assigns them to the corresponding SmartArt node shapes, verifies the
+// assignments, and saves the resulting PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SmartArt, Organization Chart,
+// Assign Pictures, Database Images, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate assigning images to organization chart nodes based on external data.
+// - Build .NET tools for generating PowerPoint presentations with SmartArt.
+// - Integrate image assignment logic into enterprise applications.
+// - Validate SmartArt node image handling before publishing presentations.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Collections.Generic;

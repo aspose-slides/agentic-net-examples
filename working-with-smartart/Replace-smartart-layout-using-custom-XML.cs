@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Replace smartart layout using custom XML using C#
+//
+// Description:
+// Demonstrates how to replace a SmartArt layout with a custom layout using
+// custom XML in a PowerPoint presentation with Aspose.Slides for .NET. The
+// example loads an existing PPTX file, reads a custom layout definition from
+// an XML file (placeholder for actual API usage), locates the first SmartArt
+// shape on the first slide, sets its layout to Custom, and saves the result.
+// This pattern can be used to automate SmartArt layout transformations in
+// .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SmartArt, Custom Layout, XML,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate replacement of SmartArt layouts using custom XML definitions.
+// - Build .NET tools for PowerPoint presentation customization.
+// - Integrate SmartArt layout manipulation into document generation pipelines.
+// - Validate and test SmartArt transformations before deployment.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Render SmartArt diagram to PNG with transparency using C#
+//
+// Description:
+// Demonstrates how to render a SmartArt diagram to a PNG image with a transparent
+// background using C# and Aspose.Slides for .NET. The example creates a new
+// presentation, sets the slide background to transparent, adds a SmartArt shape,
+// renders the SmartArt to an image, saves the PNG file, and finally saves the
+// presentation file.
+//
+// Keywords:
+// C#, Aspose.Slides, SmartArt, PNG, Transparency, Render, Presentation, .NET,
+// PowerPoint, Image Export, Slide Background
+//
+// Use Cases:
+// - Automate rendering of SmartArt diagrams to PNG images with transparent backgrounds.
+// - Generate image assets from PowerPoint presentations for web or UI integration.
+// - Build .NET tools that extract visual elements from PPTX files.
+// - Validate and process SmartArt content programmatically before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -11,32 +32,32 @@ namespace RenderSmartArtToPng
         static void Main(string[] args)
         {
             // Create a new presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+            Presentation presentation = new Presentation();
 
             // Get the first slide
-            Aspose.Slides.ISlide slide = presentation.Slides[0];
+            ISlide slide = presentation.Slides[0];
 
             // Set slide background to transparent (no fill)
-            slide.Background.Type = Aspose.Slides.BackgroundType.OwnBackground;
-            slide.Background.FillFormat.FillType = Aspose.Slides.FillType.NoFill;
+            slide.Background.Type = BackgroundType.OwnBackground;
+            slide.Background.FillFormat.FillType = FillType.NoFill;
 
             // Add a SmartArt diagram to the slide
-            Aspose.Slides.SmartArt.ISmartArt smartArt = slide.Shapes.AddSmartArt(
+            ISmartArt smartArt = slide.Shapes.AddSmartArt(
                 0f,               // X position
                 0f,               // Y position
                 400f,             // Width
                 400f,             // Height
-                Aspose.Slides.SmartArt.SmartArtLayoutType.BasicBlockList);
+                SmartArtLayoutType.BasicBlockList);
 
             // Optionally customize the SmartArt (quick style, color, etc.)
-            // smartArt.QuickStyle = Aspose.Slides.SmartArt.SmartArtQuickStyleType.Polished;
-            // smartArt.ColorStyle = Aspose.Slides.SmartArt.SmartArtColorType.TransparentGradientRangeAccent1;
+            // smartArt.QuickStyle = SmartArtQuickStyleType.Polished;
+            // smartArt.ColorStyle = SmartArtColorType.TransparentGradientRangeAccent1;
 
             // Retrieve the SmartArt shape (the last shape added to the slide)
-            Aspose.Slides.SmartArt.SmartArt smartArtShape = (Aspose.Slides.SmartArt.SmartArt)slide.Shapes[slide.Shapes.Count - 1];
+            SmartArt smartArtShape = (SmartArt)slide.Shapes[slide.Shapes.Count - 1];
 
             // Render the SmartArt to an image
-            Aspose.Slides.IImage smartArtImage = smartArtShape.GetImage();
+            IImage smartArtImage = smartArtShape.GetImage();
 
             // Define output path
             string outputPath = "SmartArt.png";
@@ -44,23 +65,21 @@ namespace RenderSmartArtToPng
             try
             {
                 // Save the image as PNG with transparent background
-                smartArtImage.Save(outputPath, Aspose.Slides.ImageFormat.Png);
+                smartArtImage.Save(outputPath, ImageFormat.Png);
             }
             catch (NotSupportedException)
             {
-                // Format not supported
-                // Comment: PNG format not supported for this operation
+                // PNG format not supported for this operation
             }
 
             // Save the presentation (required before exit)
             try
             {
-                presentation.Save("SmartArtPresentation.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+                presentation.Save("SmartArtPresentation.pptx", SaveFormat.Pptx);
             }
             catch (NotSupportedException)
             {
-                // Format not supported
-                // Comment: PPTX format not supported for this operation
+                // PPTX format not supported for this operation
             }
 
             // Clean up

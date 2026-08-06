@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add smartart node with unique id using C#
+//
+// Description:
+// Demonstrates how to add a SmartArt node with a unique identifier using C#
+// and Aspose.Slides for .NET. The example loads an existing presentation,
+// inserts an Organization Chart SmartArt diagram, adds a new node, assigns a
+// GUID as its unique ID, optionally sets the node text, and saves the result.
+// This pattern can be used for automating PowerPoint workflows that require
+// tracking SmartArt nodes.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SmartArt, Node, Unique ID,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding SmartArt nodes with unique identifiers.
+// - Build C# tools for PowerPoint presentation manipulation.
+// - Generate or modify PPTX files in .NET applications.
+// - Track SmartArt elements for later processing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
 using System.IO;

@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Set assistant flag on SmartArt node and verify indentation using C#
+//
+// Description:
+// Demonstrates how to set the IsAssistant flag on a SmartArt node and verify
+// its hierarchical indentation (Level) using Aspose.Slides for .NET. The
+// example loads a PPTX file, accesses the first SmartArt shape, modifies the
+// first node, outputs the node level, and saves the updated presentation.
+// This pattern can be used for automating SmartArt manipulation and validation
+// in PowerPoint files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SmartArt, Assistant Flag, Node,
+// Level, Hierarchical Indentation, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting the assistant flag on SmartArt nodes.
+// - Validate SmartArt hierarchy after modifications.
+// - Build .NET tools for PowerPoint SmartArt manipulation.
+// - Integrate SmartArt processing into presentation workflows.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

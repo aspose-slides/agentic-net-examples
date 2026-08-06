@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Increase smartart node opacity by ten percent using C#
+//
+// Description:
+// Demonstrates how to increase the fill opacity of each shape within all
+// SmartArt nodes by ten percent using C# and Aspose.Slides for .NET. The
+// example loads a presentation, iterates through every SmartArt diagram,
+// adjusts the opacity of each associated shape, and saves the modified file.
+// This pattern can be used to automate visual styling of SmartArt in PPTX
+// files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Increase, SmartArt, Node,
+// Opacity, FillFormat, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Programmatically increase SmartArt node opacity for consistent visual
+//   appearance.
+// - Build .NET tools that modify SmartArt styling in bulk.
+// - Integrate SmartArt opacity adjustments into automated PPTX workflows.
+// - Validate and transform presentation content before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

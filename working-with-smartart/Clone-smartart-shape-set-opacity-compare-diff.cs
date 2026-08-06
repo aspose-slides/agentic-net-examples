@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Clone smartart shape set opacity compare diff using C#
+//
+// Description:
+// Demonstrates how to clone a SmartArt shape, set different fill opacities
+// for the original and cloned shapes, and export slide images for visual
+// comparison using C# and Aspose.Slides for .NET. The example shows the
+// required presentation-processing steps for PowerPoint files and produces
+// the requested output in a standalone console application. Developers can
+// use this pattern to automate PPTX workflows, validate results, or integrate
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone, SmartArt, Shape,
+// Opacity, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate cloning of SmartArt shapes with different opacity settings.
+// - Build C# tools for PowerPoint presentation processing and visual diff.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Clone smartart shape move verify no overlap using C#
+//
+// Description:
+// Demonstrates how to clone a SmartArt shape, move the clone, and verify that
+// it does not overlap the original shape using C# and Aspose.Slides for .NET.
+// The example creates a presentation, adds a SmartArt diagram, clones it,
+// positions the clone, checks for overlap, and saves the result.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone, SmartArt, Shape, Move,
+// Overlap, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate cloning and repositioning of SmartArt shapes without overlap.
+// - Build C# utilities for PowerPoint presentation manipulation.
+// - Generate or transform PPTX files while ensuring layout integrity.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
@@ -10,18 +30,18 @@ class Program
         try
         {
             // Create a new presentation
-            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+            Presentation presentation = new Presentation();
 
             // Get the first slide
-            Aspose.Slides.ISlide slide = presentation.Slides[0];
+            ISlide slide = presentation.Slides[0];
 
             // Add a SmartArt diagram to the slide
-            Aspose.Slides.SmartArt.ISmartArt smartArt = slide.Shapes.AddSmartArt(
+            ISmartArt smartArt = slide.Shapes.AddSmartArt(
                 0, 0, 400, 400,
-                Aspose.Slides.SmartArt.SmartArtLayoutType.BasicBlockList);
+                SmartArtLayoutType.BasicBlockList);
 
             // Clone the SmartArt shape and move the clone to (100, 200)
-            Aspose.Slides.IShape clonedShape = slide.Shapes.AddClone(smartArt, 100, 200);
+            IShape clonedShape = slide.Shapes.AddClone(smartArt, 100, 200);
 
             // Verify that the cloned shape does not overlap the original
             float originalRight = smartArt.X + smartArt.Width;
@@ -37,7 +57,7 @@ class Program
             Console.WriteLine("No overlap: " + noOverlap);
 
             // Save the presentation
-            presentation.Save("CloneSmartArt_out.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            presentation.Save("CloneSmartArt_out.pptx", SaveFormat.Pptx);
         }
         catch (Exception ex)
         {

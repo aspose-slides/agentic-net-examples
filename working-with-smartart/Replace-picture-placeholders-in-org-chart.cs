@@ -1,7 +1,28 @@
+// -----------------------------------------------------------------------------
+// Example: Replace picture placeholders in org chart using C#
+//
+// Description:
+// Demonstrates how to replace picture placeholders in an organization chart using
+// C# and Aspose.Slides for .NET. The example loads a PPTX file, iterates over
+// picture shapes on the first slide, replaces each placeholder image with a
+// high‑resolution image retrieved (simulated) from a database, and saves the
+// modified presentation. This pattern can be used to automate PPTX workflows,
+// validate results, or integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Replace, Picture, Placeholders,
+// Chart, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate replacement of picture placeholders in organization charts.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Net;
-
 using Aspose.Slides.Export;
 
 namespace AsposeSlidesExample

@@ -1,3 +1,28 @@
+// -----------------------------------------------------------------------------
+// Example: Apply gradient three stops orientation verify using C#
+//
+// Description:
+// Demonstrates how to apply a three‑stop linear gradient to the shapes of a
+// SmartArt node, verify that the gradient orientation is set to FromCorner1,
+// and save the resulting presentation using Aspose.Slides for .NET.
+// The example covers creating a presentation, adding SmartArt, configuring
+// gradient fill properties, checking the orientation, and persisting the file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, Gradient, Three, Stops,
+// SmartArt, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate applying a three‑stop gradient with a specific orientation to
+//   SmartArt elements.
+// - Build C# utilities for PowerPoint presentation processing that involve
+//   SmartArt styling.
+// - Generate or transform PPTX files with customized SmartArt graphics in .NET
+//   applications.
+// - Validate gradient orientation settings before publishing or further
+//   integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
@@ -44,6 +69,7 @@ class Program
         {
             // Format not supported
         }
+
         presentation.Dispose();
     }
 }

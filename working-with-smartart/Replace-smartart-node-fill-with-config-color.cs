@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Replace smartart node fill with config color using C#
+//
+// Description:
+// Demonstrates how to read a color value from a configuration file and apply
+// it as a solid fill to all SmartArt node shapes in a PowerPoint presentation
+// using Aspose.Slides for .NET. The example loads an input PPTX, updates the
+// SmartArt node fills, and saves the result to an output PPTX.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Replace, SmartArt, Node, Fill,
+// Configuration, Color, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Apply a uniform fill color to SmartArt nodes based on external configuration.
+// - Automate PowerPoint styling tasks in .NET applications.
+// - Generate or modify PPTX files with custom SmartArt appearance.
+// - Validate and enforce presentation design standards programmatically.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

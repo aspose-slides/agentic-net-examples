@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Add smartart node assistant verify indentation using C#
+//
+// Description:
+// Demonstrates how to add a SmartArt node, set it as an assistant, and verify
+// the indentation level change using C# and Aspose.Slides for .NET. The example
+// creates a presentation, inserts an OrganizationChart SmartArt, adds a node,
+// toggles its IsAssistant property, and outputs the node level before and after
+// the change. This illustrates how assistant nodes affect hierarchy depth in
+// SmartArt diagrams.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SmartArt, Node, Assistant,
+// Verify, Indentation, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding SmartArt assistant nodes and validate hierarchy changes.
+// - Build C# tools for PowerPoint presentation processing involving SmartArt.
+// - Generate or modify PPTX files with specific SmartArt structures in .NET.
+// - Verify SmartArt node properties for correct visual layout before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

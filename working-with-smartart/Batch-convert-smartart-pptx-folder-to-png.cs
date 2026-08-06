@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Batch convert smartart pptx folder to png using C#
+//
+// Description:
+// Demonstrates how to batch convert SmartArt shapes from PPTX files in a
+// folder to PNG images using C# and Aspose.Slides for .NET. The example loads
+// each presentation, iterates through slides and shapes, extracts SmartArt
+// diagrams as thumbnails, and saves them as PNG files. This pattern can be
+// used to automate PowerPoint SmartArt extraction and image generation in
+// .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Batch, Convert, SmartArt,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate batch extraction of SmartArt diagrams to PNG images.
+// - Build C# tools for PowerPoint presentation processing and asset generation.
+// - Generate image assets from PPTX files for web or documentation purposes.
+// - Validate and preview SmartArt content before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Increase smartart node border thickness using C#
+//
+// Description:
+// Demonstrates how to increase the border thickness of SmartArt nodes in a
+// PowerPoint presentation using C# and Aspose.Slides for .NET. The example
+// loads an existing PPTX file, iterates through all SmartArt shapes, and
+// increments each node's line width by one point before saving the result.
+// This pattern can be used to automate visual styling of SmartArt diagrams.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Increase, SmartArt, Node,
+// Border, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Programmatically enhance SmartArt node borders in bulk.
+// - Build .NET tools for styling PowerPoint presentations.
+// - Integrate SmartArt formatting into automated PPTX generation pipelines.
+// - Validate and adjust visual properties of SmartArt before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

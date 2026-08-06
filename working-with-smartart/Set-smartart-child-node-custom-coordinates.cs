@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set smartart child node custom coordinates using C#
+//
+// Description:
+// Demonstrates how to set custom coordinates, size, and rotation for individual
+// SmartArt child nodes in a PowerPoint presentation using Aspose.Slides for .NET.
+// The example creates an Organization Chart SmartArt, modifies the position,
+// dimensions, and rotation of specific child node shapes, and saves the result.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SmartArt, Child Node, Custom Coordinates,
+// Position, Size, Rotation, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Adjust layout of SmartArt elements programmatically.
+// - Build tools to fine‑tune SmartArt node appearance in PPTX files.
+// - Automate presentation styling tasks in .NET applications.
+// - Validate and test SmartArt modifications before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

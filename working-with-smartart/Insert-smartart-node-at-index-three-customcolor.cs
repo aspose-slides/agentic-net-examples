@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Insert smartart node at index three customcolor using C#
+//
+// Description:
+// Demonstrates how to insert a SmartArt node at index three with a custom
+// bullet fill color using C# and Aspose.Slides for .NET. The example creates a
+// new presentation, adds a Basic Block List SmartArt diagram, ensures at least
+// three existing nodes, inserts a new node at the fourth position (zero‑based
+// index three), applies an orange solid fill to the node's bullet, and saves
+// the result as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Insert, SmartArt, Node, Index,
+// Custom Color, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate insertion of a SmartArt node at a specific index with custom styling.
+// - Build C# tools for PowerPoint presentation processing that modify SmartArt.
+// - Generate or transform PPTX files with customized SmartArt elements in .NET applications.
+// - Validate SmartArt manipulation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

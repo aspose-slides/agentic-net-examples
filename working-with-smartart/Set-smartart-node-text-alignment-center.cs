@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Set smartart node text alignment center using C#
+//
+// Description:
+// Demonstrates how to set the text alignment of all SmartArt nodes to center 
+// using C# and Aspose.Slides for .NET. The example loads an existing PPTX file, 
+// iterates through each SmartArt shape, updates the paragraph alignment of each 
+// node's text frame to center, and saves the modified presentation. This pattern 
+// can be used to automate text formatting within SmartArt diagrams in PowerPoint 
+// files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SmartArt, Node, Text, Alignment, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting SmartArt node text alignment to center across a presentation.
+// - Build C# utilities for consistent SmartArt formatting in PPTX files.
+// - Integrate SmartArt text alignment adjustments into .NET applications.
+// - Validate and enforce presentation style guidelines before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
@@ -39,25 +61,25 @@ namespace AsposeSlidesExample
                                 foreach (ISmartArtNode node in smartArt.AllNodes)
                                 {
                                     // Get the first paragraph of the node's text frame
-                                    Aspose.Slides.IParagraph paragraph = node.TextFrame.Paragraphs[0];
+                                    IParagraph paragraph = node.TextFrame.Paragraphs[0];
                                     // Set paragraph alignment to center
-                                    paragraph.ParagraphFormat.Alignment = Aspose.Slides.TextAlignment.Center;
+                                    paragraph.ParagraphFormat.Alignment = TextAlignment.Center;
                                 }
                             }
                         }
                     }
 
                     // Save the modified presentation
-                    pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    pres.Save(outputPath, SaveFormat.Pptx);
                 }
             }
             // Handle unsupported file format exceptions
-            catch (Aspose.Slides.PptxUnsupportedFormatException)
+            catch (PptxUnsupportedFormatException)
             {
                 // Format not supported
                 Console.WriteLine("The presentation format is not supported (PPTX).");
             }
-            catch (Aspose.Slides.PptUnsupportedFormatException)
+            catch (PptUnsupportedFormatException)
             {
                 // Format not supported
                 Console.WriteLine("The presentation format is not supported (PPT).");

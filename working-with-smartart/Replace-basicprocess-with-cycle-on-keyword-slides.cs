@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Replace BasicProcess with BasicCycle on keyword slides using C#
+//
+// Description:
+// Demonstrates how to locate slides containing specific keywords and replace
+// SmartArt layouts of type BasicProcess with BasicCycle using Aspose.Slides for
+// .NET. The example loads a PPTX file, searches each slide for defined keywords,
+// updates matching SmartArt objects, and saves the result.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SmartArt, BasicProcess, BasicCycle,
+// Keyword Search, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate replacement of BasicProcess SmartArt with BasicCycle on targeted slides.
+// - Build C# utilities for keyword‑driven PowerPoint content transformation.
+// - Integrate SmartArt layout updates into .NET applications or CI pipelines.
+// - Validate and modify PPTX files before distribution.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

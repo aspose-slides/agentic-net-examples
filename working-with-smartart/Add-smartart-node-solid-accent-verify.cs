@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add smartart node solid accent verify using C#
+//
+// Description:
+// Demonstrates how to add a SmartArt node with a solid fill using the theme's
+// Accent1 color in a PowerPoint presentation using Aspose.Slides for .NET.
+// The example creates a new presentation, inserts a SmartArt diagram, adds a
+// node, applies a solid accent fill to the node's shapes, and saves the file.
+// This pattern can be used to automate SmartArt modifications and verify visual
+// styling in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SmartArt, Node, Solid, Accent,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding SmartArt nodes with specific accent styling.
+// - Build C# tools for PowerPoint presentation processing and styling.
+// - Generate or transform PPTX files with customized SmartArt in .NET apps.
+// - Verify SmartArt visual properties before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

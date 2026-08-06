@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Clone smartart shape change basiccycle compare nodes using C#
+//
+// Description:
+// Demonstrates how to clone a SmartArt shape, change its layout to BasicCycle,
+// and compare node counts before and after the layout change using C# and
+// Aspose.Slides for .NET. The example creates a presentation, adds a SmartArt
+// diagram, clones it, modifies the clone, and saves the result.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone, SmartArt, Shape, Change,
+// Layout, BasicCycle, Node Count, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate cloning of SmartArt diagrams and modifying their layouts.
+// - Build C# tools for PowerPoint presentation processing and validation.
+// - Generate or transform PPTX files with SmartArt modifications in .NET
+//   applications.
+// - Compare SmartArt node structures before and after layout changes.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Add three smartart children and set positions using C#
+//
+// Description:
+// Demonstrates how to add three SmartArt child nodes to an Organization Chart
+// SmartArt diagram and set their positions using Aspose.Slides for .NET. The
+// example creates a new presentation, inserts a SmartArt layout, adds child
+// nodes at specific positions, assigns text, and saves the file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SmartArt, OrganizationChart,
+// AddChildNodes, SetPositions, Presentation Processing
+//
+// Use Cases:
+// - Programmatically add multiple SmartArt child nodes with defined order.
+// - Automate creation of hierarchical diagrams in PowerPoint files.
+// - Build .NET tools for generating or modifying SmartArt structures.
+// - Validate SmartArt layout modifications before deployment.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

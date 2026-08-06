@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Export SmartArt hierarchy to JSON using C#
+//
+// Description:
+// Demonstrates how to export the hierarchy of SmartArt shapes from a PowerPoint
+// presentation to a JSON file using C# and Aspose.Slides for .NET. The example
+// loads a PPTX file, traverses all slides and SmartArt objects, extracts node
+// information (slide index, SmartArt name, node id, parent id, text) and writes
+// it to a formatted JSON document. It also saves the original presentation
+// unchanged, satisfying repository rules.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, SmartArt, Hierarchy,
+// JSON, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of SmartArt hierarchy data for analysis or reporting.
+// - Build .NET tools that process PowerPoint files and generate structured
+//   JSON output.
+// - Integrate SmartArt information into downstream applications or services.
+// - Validate and document presentation content before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Collections.Generic;
@@ -72,7 +95,7 @@ namespace SmartArtHierarchyExport
                     Console.WriteLine("SmartArt hierarchy exported to: " + jsonOutputPath);
 
                     // Save presentation (no modifications made, but required by rules)
-                    pres.Save(presentationSavePath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    pres.Save(presentationSavePath, SaveFormat.Pptx);
                 }
             }
             catch (PptxUnsupportedFormatException)

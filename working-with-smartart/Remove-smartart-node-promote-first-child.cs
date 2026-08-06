@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Remove smartart node promote first child using C#
+//
+// Description:
+// Demonstrates how to remove a SmartArt node and promote its first child node
+// using C# and Aspose.Slides for .NET. The example loads a PPTX file, finds the
+// first SmartArt shape, extracts the text of its first child, removes the
+// original node, and inserts a new node at the same position containing the
+// child's text. The modified presentation is saved as a new PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove, SmartArt, Node, Promote,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate removal of a SmartArt node while preserving its first child.
+// - Build C# tools for PowerPoint presentation manipulation.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate SmartArt structures before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

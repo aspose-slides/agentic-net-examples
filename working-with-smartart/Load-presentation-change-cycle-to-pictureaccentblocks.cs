@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Load presentation change cycle to pictureaccentblocks using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, locate SmartArt diagrams 
+// with the BasicCycle layout, and change their layout to PictureAccentBlocks 
+// using Aspose.Slides for .NET. The example shows the required steps for 
+// processing SmartArt objects and saving the modified presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, Presentation, SmartArt, 
+// Layout Change, BasicCycle, PictureAccentBlocks, Office Automation
+//
+// Use Cases:
+// - Automate conversion of SmartArt cycle diagrams to picture accent blocks.
+// - Build C# tools for batch updating SmartArt layouts in PPTX files.
+// - Integrate SmartArt processing into .NET applications.
+// - Ensure consistent visual styles across presentations before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

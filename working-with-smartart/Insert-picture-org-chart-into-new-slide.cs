@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Insert picture org chart into new slide using C#
+//
+// Description:
+// Demonstrates how to create a new presentation, add a Picture Organization
+// Chart SmartArt diagram, load image files from a specified folder, assign
+// those images to the SmartArt nodes, and save the result as a PPTX file using
+// Aspose.Slides for .NET. The example shows the required presentation‑processing
+// steps for PowerPoint files and produces the requested output in a standalone
+// console application. Developers can use this pattern to automate PPTX
+// workflows, validate results, or integrate presentation logic into .NET
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Insert, Picture, SmartArt,
+// Organization Chart, Slide, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate insertion of picture organization chart into a new slide.
+// - Build C# tools for PowerPoint presentation processing with image assets.
+// - Generate or transform PPTX files in .NET applications using SmartArt.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

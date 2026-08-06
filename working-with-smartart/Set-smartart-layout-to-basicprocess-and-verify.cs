@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Set smartart layout to basicprocess and verify using C#
+//
+// Description:
+// Demonstrates how to set a SmartArt diagram's layout to BasicProcess and verify the change using C#
+// and Aspose.Slides for .NET. The example creates a new presentation, adds a SmartArt shape,
+// modifies its layout, checks the result, and saves the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SmartArt, Layout, BasicProcess, 
+// Verify, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate changing SmartArt layout to BasicProcess and verify the operation.
+// - Build C# utilities for PowerPoint presentation manipulation.
+// - Generate or modify PPTX files programmatically in .NET applications.
+// - Validate SmartArt configurations before publishing or further processing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

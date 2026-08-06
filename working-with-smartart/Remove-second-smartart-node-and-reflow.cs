@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Remove second SmartArt node and reflow using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, locate the first SmartArt
+// shape on the first slide, remove its second root node (if present), and save
+// the modified presentation. The example uses Aspose.Slides for .NET and
+// illustrates a typical presentation-processing workflow for SmartArt manipulation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SmartArt, Remove node, Reflow,
+// Presentation processing, Office automation
+//
+// Use Cases:
+// - Automate removal of a specific SmartArt node in bulk presentations.
+// - Build .NET tools that modify SmartArt structures programmatically.
+// - Ensure consistent layout after node removal by leveraging Aspose.Slides automatic reflow.
+// - Validate and transform PPTX files as part of a CI/CD pipeline.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides.Export;

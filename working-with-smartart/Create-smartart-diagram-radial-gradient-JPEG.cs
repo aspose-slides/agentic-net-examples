@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Create smartart diagram radial gradient JPEG using C#
+//
+// Description:
+// Demonstrates how to create a SmartArt diagram with a radial gradient fill
+// applied to each shape, save the presentation as PPTX, and export the slide
+// as a JPEG image using Aspose.Slides for .NET. The example shows the required
+// presentation-processing steps for PowerPoint files and produces the
+// requested output in a standalone console application. Developers can use
+// this pattern to automate PPTX workflows, validate results, or integrate
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, JPEG, Aspose.Slides for .NET, SmartArt, Radial Gradient,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of SmartArt diagrams with radial gradient fills.
+// - Build C# tools for PowerPoint presentation processing and image export.
+// - Generate or transform PPTX files with custom SmartArt styling in .NET.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

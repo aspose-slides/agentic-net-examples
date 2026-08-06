@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Remove smartart node at specific index reflow using C#
+//
+// Description:
+// Demonstrates how to remove a SmartArt node at a specific zero‑based index
+// causing the diagram to automatically reflow, using C# and Aspose.Slides for .NET.
+// The example loads a presentation, adds a SmartArt diagram if none exists,
+// removes the node, and saves the result.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove, SmartArt, Node,
+// Specific, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate removal of a SmartArt node at a given index with automatic reflow.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

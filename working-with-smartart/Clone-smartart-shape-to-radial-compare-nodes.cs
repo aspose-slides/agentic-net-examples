@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Clone smartart shape to radial compare nodes using C#
+//
+// Description:
+// Demonstrates how to clone a SmartArt shape, reposition it, and change its
+// layout to a radial layout using C# and Aspose.Slides for .NET. The example
+// creates a presentation, adds a basic block list SmartArt, clones it, switches
+// the clone to a BasicRadial layout, and outputs node counts before and after
+// the layout change. The resulting presentation is saved as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone, SmartArt, Shape, Radial,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate cloning of SmartArt shapes and converting them to radial layouts.
+// - Build C# tools for PowerPoint presentation processing involving SmartArt.
+// - Generate or transform PPTX files with customized SmartArt structures in .NET.
+// - Validate SmartArt node consistency after layout transformations.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.SmartArt;

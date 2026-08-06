@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add smartart node long text wrap using C#
+//
+// Description:
+// Demonstrates how to add a SmartArt node containing a long paragraph of text
+// and enable text wrapping within the node using C# and Aspose.Slides for .NET.
+// The example creates a new presentation, inserts a SmartArt diagram, adds a
+// node with extensive text, activates wrapping, and saves the result as a PPTX
+// file. This pattern helps developers automate PowerPoint content creation and
+// ensure proper text layout in SmartArt elements.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SmartArt, Node, Long Text, Text Wrapping,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding SmartArt nodes with long wrapped text.
+// - Build C# utilities for PowerPoint presentation generation and editing.
+// - Generate or transform PPTX files that include complex SmartArt layouts.
+// - Validate SmartArt text formatting before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

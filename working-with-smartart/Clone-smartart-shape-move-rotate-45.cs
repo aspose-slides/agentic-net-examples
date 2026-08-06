@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Clone smartart shape move rotate 45 using C#
+//
+// Description:
+// Demonstrates how to clone a SmartArt shape, reposition it, and rotate it
+// by 45 degrees using C# and Aspose.Slides for .NET. The example loads an
+// existing presentation (or creates a new one), ensures a SmartArt shape is
+// present, clones it onto a new slide at coordinates (50,50), applies a
+// 45‑degree rotation, and saves the result as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone, SmartArt, Shape, Move,
+// Rotate, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate cloning of SmartArt shapes with repositioning and rotation.
+// - Build C# utilities for PowerPoint presentation manipulation.
+// - Generate or modify PPTX files programmatically in .NET applications.
+// - Validate SmartArt layout transformations before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

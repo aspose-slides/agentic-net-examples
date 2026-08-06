@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Apply assistant flag to SmartArt nodes from external hierarchy and save using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, apply the IsAssistant
+// flag to SmartArt nodes based on an external hierarchy dictionary, and save
+// the modified presentation using Aspose.Slides for .NET. The example shows
+// the required steps for processing SmartArt diagrams, updating node properties,
+// and persisting the changes in a standalone console application.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SmartArt, Assistant Flag, Hierarchy, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting assistant flags on SmartArt nodes from external data.
+// - Build C# utilities for PowerPoint SmartArt manipulation.
+// - Generate or transform PPTX files with customized SmartArt hierarchy.
+// - Validate SmartArt configurations before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Collections.Generic;

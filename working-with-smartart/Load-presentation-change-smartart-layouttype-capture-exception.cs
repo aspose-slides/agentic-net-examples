@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Load presentation change smartart layouttype capture exception using C#
+//
+// Description:
+// Demonstrates how to load a PowerPoint presentation, iterate through its
+// shapes, change the layout type of any SmartArt objects to
+// BasicProcess, and capture exceptions that may occur during loading,
+// layout modification, or saving using Aspose.Slides for .NET.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, Presentation, Change,
+// SmartArt, Layout, Exception Handling, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Load a PPTX file and safely modify SmartArt layout types.
+// - Build robust C# tools that handle errors when processing SmartArt in presentations.
+// - Automate PPTX transformations while ensuring graceful failure handling.
+// - Validate and update SmartArt structures in batch processing scenarios.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

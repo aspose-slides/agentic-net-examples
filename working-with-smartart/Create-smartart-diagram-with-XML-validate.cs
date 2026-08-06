@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Create smartart diagram with XML validate using C#
+//
+// Description:
+// Demonstrates how to create a SmartArt diagram (OrganizationChart layout) in a
+// PowerPoint presentation using Aspose.Slides for .NET, traverse its hierarchy,
+// and output node levels to the console. The example also notes the lack of
+// direct API support for assigning a custom layout XML, serving as a reference
+// for developers who need to validate SmartArt structures programmatically.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SmartArt, OrganizationChart, XML,
+// Validation, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of SmartArt diagrams in PowerPoint files.
+// - Validate SmartArt hierarchy levels in .NET applications.
+// - Generate or transform PPTX files with custom SmartArt structures.
+// - Provide console‑based diagnostics for SmartArt content before publishing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

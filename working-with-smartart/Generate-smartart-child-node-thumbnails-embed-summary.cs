@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Generate SmartArt child node thumbnails and embed summary slide using C#
+//
+// Description:
+// Demonstrates how to iterate through SmartArt child nodes, create 100x100
+// thumbnail images for each node's primary shape, and place those thumbnails
+// on a separate summary slide. The example uses Aspose.Slides for .NET to
+// create a presentation, add SmartArt, generate shape thumbnails, and save the
+// result as a PPTX file.
+//
+// Keywords:
+// C#, Aspose.Slides, SmartArt, Thumbnail, Summary Slide, Presentation Automation,
+// PowerPoint, PPTX, Image Generation, .NET
+//
+// Use Cases:
+// - Automate creation of summary slides with visual thumbnails of SmartArt nodes.
+// - Build tools that extract and display SmartArt content as images.
+// - Generate compact visual overviews of complex SmartArt diagrams.
+// - Integrate SmartArt thumbnail generation into .NET PowerPoint processing pipelines.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides.Export;

@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Apply picture fill to smartart node using C#
+//
+// Description:
+// Demonstrates how to apply a picture fill to a SmartArt node using C# and
+// Aspose.Slides for .NET. The example creates a presentation, adds a SmartArt
+// diagram, retrieves an image from a web service, and sets the image as the
+// fill for the first shape within the first SmartArt node. The resulting
+// presentation is saved as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SmartArt, Picture Fill, Image,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate applying picture fills to SmartArt nodes in PowerPoint files.
+// - Build .NET tools for dynamic presentation styling.
+// - Integrate external images into SmartArt diagrams programmatically.
+// - Validate and test SmartArt formatting workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Net.Http;

@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Increase SmartArt node title font size by two points using C#
+//
+// Description:
+// This example loads a PPTX file, locates all SmartArt diagrams, and
+// increases the font height of every text portion within each SmartArt node
+// by 2 points. It demonstrates slide and shape traversal, SmartArt node
+// access, and saving the modified presentation using Aspose.Slides for .NET.
+// The console application can be used as a template for automating PowerPoint
+// font adjustments.
+//
+// Keywords:
+// C#, Aspose.Slides, SmartArt, FontHeight, PPTX, Presentation Processing, .NET, Office Automation
+//
+// Use Cases:
+// - Programmatically enlarge SmartArt node titles across a presentation.
+// - Create C# utilities for bulk font size adjustments in PowerPoint files.
+// - Integrate SmartArt text formatting into .NET automation workflows.
+// - Validate and modify PPTX content before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Find smartart node by text using C#
+//
+// Description:
+// Demonstrates how to traverse SmartArt objects in a PowerPoint presentation,
+// collect the text of each SmartArt node, and optionally locate a node by its
+// text using C# and Aspose.Slides for .NET. The example loads a PPTX file,
+// performs a depth‑first traversal of all SmartArt nodes, prints the collected
+// titles, and saves the presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SmartArt, Node, Text, Traversal,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Extract all SmartArt node texts from a presentation.
+// - Search for a specific SmartArt node by its text.
+// - Build C# tools for PowerPoint presentation analysis.
+// - Automate PPTX workflows that involve SmartArt content.
+// -----------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
 using System.IO;

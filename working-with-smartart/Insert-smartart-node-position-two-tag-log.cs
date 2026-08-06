@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Insert smartart node position two tag log using C#
+//
+// Description:
+// Demonstrates how to insert a SmartArt node at position two, assign a unique
+// tag to it, and log the operation using C# and Aspose.Slides for .NET. The
+// example shows the required presentation‑processing steps for PowerPoint files
+// and produces the requested output in a standalone console application.
+// Developers can use this pattern to automate PPTX workflows, validate results,
+// or integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Insert, SmartArt, Node,
+// Position, Tag, Logging, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate insertion of a SmartArt node at a specific position with a tag.
+// - Build C# tools for PowerPoint presentation processing that require node
+//   identification and logging.
+// - Generate or transform PPTX files in .NET applications while tracking changes.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

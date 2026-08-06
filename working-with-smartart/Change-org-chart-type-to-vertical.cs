@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Change org chart type to vertical using C#
+//
+// Description:
+// Demonstrates how to change an organization chart SmartArt layout to a vertical
+// (left hanging) orientation using C# and Aspose.Slides for .NET. The example
+// creates a presentation, adds a default horizontal organization chart, modifies
+// its root node layout to vertical, and saves the result as a PPTX file.
+// This pattern can be used to automate SmartArt transformations in PowerPoint
+// files.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SmartArt, Organization Chart,
+// Layout, Vertical, Left Hanging, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Convert horizontal organization charts to vertical layout programmatically.
+// - Build C# utilities for SmartArt manipulation in PowerPoint presentations.
+// - Integrate org chart layout adjustments into .NET applications or CI pipelines.
+// - Automate preparation of PPTX files with specific SmartArt configurations.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

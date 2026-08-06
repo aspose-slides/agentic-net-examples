@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Clone smartart shape apply theme compare pixels using C#
+//
+// Description:
+// Demonstrates how to clone a SmartArt shape, apply an external theme to the
+// destination slide's master, render both original and cloned slides to PNG
+// images, and compare the images pixel‑by‑pixel using Aspose.Slides for .NET.
+// The example includes loading a presentation, handling missing files, and
+// saving the modified presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone, SmartArt, Shape, Apply Theme,
+// Image Rendering, Pixel Comparison, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate cloning of SmartArt shapes while preserving visual fidelity.
+// - Apply external themes to slides programmatically.
+// - Generate PNG previews of slides for validation or documentation.
+// - Compare slide renderings pixel by pixel to verify that cloning and theming
+//   produce identical visual results.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

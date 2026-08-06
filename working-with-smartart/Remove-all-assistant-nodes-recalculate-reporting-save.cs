@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Remove all assistant nodes recalculate reporting save using C#
+//
+// Description:
+// Demonstrates how to remove all assistant nodes from a SmartArt organization
+// chart, recalculate the reporting hierarchy, and save the updated presentation
+// using C# and Aspose.Slides for .NET. The example shows the required
+// presentation-processing steps for PowerPoint files and produces the
+// requested output in a standalone console application. Developers can use
+// this pattern to automate PPTX workflows, validate results, or integrate
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove, Assistant, Nodes,
+// SmartArt, Organization Chart, Recalculate, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate removal of all assistant nodes and recalculate reporting in SmartArt.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate SmartArt organization chart workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using System.Collections.Generic;

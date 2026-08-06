@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Extract smartart text from pptx to csv using C#
+//
+// Description:
+// Demonstrates how to extract SmartArt text from PPTX files to a CSV file using
+// C# and Aspose.Slides for .NET. The example loads each presentation in an
+// input folder, iterates through its slides and SmartArt shapes, extracts the
+// text from each SmartArt node, and writes the results to a CSV file. This
+// pattern can be used to automate PowerPoint content analysis, generate reports,
+// or integrate SmartArt processing into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Extract, SmartArt, Text, CSV,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate extraction of SmartArt text from multiple PPTX files.
+// - Build C# tools for analyzing or reporting on PowerPoint presentations.
+// - Integrate SmartArt content extraction into larger .NET workflows.
+// - Validate SmartArt data before publishing or further processing.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;
