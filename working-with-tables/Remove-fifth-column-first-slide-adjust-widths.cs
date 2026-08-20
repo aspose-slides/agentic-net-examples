@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Remove fifth column first slide adjust widths using C#
+//
+// Description:
+// Demonstrates how to remove the fifth column from the first slide's table and
+// evenly redistribute the remaining column widths using C# and Aspose.Slides for .NET.
+// The example creates a sample presentation if none exists, processes the table,
+// and saves the modified presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove, Fifth, Column, First Slide,
+// Table, Adjust Widths, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate removal of a specific column from a table on the first slide.
+// - Rebalance column widths after column deletion in PowerPoint presentations.
+// - Build .NET tools for table manipulation within PPTX files.
+// - Validate and transform presentation layouts programmatically.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
