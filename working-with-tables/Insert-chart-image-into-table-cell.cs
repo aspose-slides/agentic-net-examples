@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Insert chart image into table cell using C#
+//
+// Description:
+// Demonstrates how to create a chart, render it as an image, and embed that
+// image into a table cell within a PowerPoint presentation using Aspose.Slides
+// for .NET. The example covers creating a presentation, adding a chart, converting
+// the chart to an image, adding a table, and setting the cell fill to the chart
+// image, then saving the result as a PPTX file.
+//
+// Keywords:
+// C#, Aspose.Slides, PowerPoint, PPTX, Insert, Chart, Image, Table, Cell,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate embedding dynamically generated chart images into table cells.
+// - Build .NET tools for enriching PowerPoint slides with visual data.
+// - Generate or transform PPTX files that combine charts and tables.
+// - Validate presentation workflows that require chart-to-image conversion.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
