@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Lock table aspect ratio before scaling using C#
+//
+// Description:
+// Demonstrates how to lock a table's aspect ratio before scaling it using C# 
+// and Aspose.Slides for .NET. The example creates a presentation, adds a table,
+// locks its aspect ratio, doubles its size, and saves the result as a PPTX file.
+// This pattern can be used to automate PowerPoint table transformations while 
+// preserving visual proportions.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Lock, Table, Aspect, Ratio, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate locking table aspect ratio before scaling in presentations.
+// - Build C# utilities for PowerPoint table manipulation.
+// - Generate or modify PPTX files while maintaining table proportions.
+// - Validate presentation layouts programmatically.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
