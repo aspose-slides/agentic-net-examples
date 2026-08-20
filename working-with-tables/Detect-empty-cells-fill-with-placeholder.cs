@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Detect empty cells and fill with placeholder using C#
+//
+// Description:
+// Demonstrates how to detect empty table cells in a PowerPoint presentation
+// and fill them with a placeholder text using Aspose.Slides for .NET. The
+// example loads an existing PPTX file, iterates through all tables, checks each
+// cell for empty text, replaces empty values with a predefined placeholder, and
+// saves the modified presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Detect, Empty Cells, Fill,
+// Placeholder, Table Processing, Presentation Automation
+//
+// Use Cases:
+// - Ensure all table cells contain meaningful data before publishing.
+// - Automate cleanup of PowerPoint reports by inserting default values.
+// - Build .NET tools that validate and enrich PPTX content.
+// - Integrate placeholder insertion into larger presentation generation pipelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
