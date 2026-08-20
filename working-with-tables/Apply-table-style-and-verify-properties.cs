@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Apply table style and verify properties using C#
+//
+// Description:
+// Demonstrates how to create a table, apply a predefined table style, and
+// verify effective formatting properties such as fill type using C# and
+// Aspose.Slides for .NET. The example creates a presentation, adds a table,
+// applies the MediumStyle2Accent1 style, checks the effective fill format,
+// and saves the result as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, Table, Style, Verify,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate applying a table style and validating its properties.
+// - Build C# utilities for PowerPoint presentation processing.
+// - Generate or transform PPTX files with styled tables in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
