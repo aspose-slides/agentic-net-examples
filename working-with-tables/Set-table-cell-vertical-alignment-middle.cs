@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Set table cell vertical alignment middle using C#
+//
+// Description:
+// Demonstrates how to set a table cell's vertical alignment to middle using 
+// C# and Aspose.Slides for .NET. The example creates a presentation, adds a 
+// table, inserts text into a cell, and configures the cell's text anchor to 
+// center (vertical middle). It then saves the presentation as a PPTX file. 
+// This pattern can be used to automate PPTX workflows, validate results, or 
+// integrate presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Table, Cell, Vertical Alignment, 
+// Text Anchor, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting table cell vertical alignment to middle.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
