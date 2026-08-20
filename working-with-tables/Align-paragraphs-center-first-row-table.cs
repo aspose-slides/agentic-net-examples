@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Align paragraphs center first row table using C#
+//
+// Description:
+// Demonstrates how to align the paragraphs in the first row of a table to the
+// center using C# and Aspose.Slides for .NET. The example loads an existing
+// presentation, accesses the first table on the first slide, applies a
+// centered paragraph format to all cells in the first row, and saves the
+// modified presentation.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Table, Paragraph Alignment,
+// Center Alignment, First Row, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Center-align text in the first row of tables within PowerPoint slides.
+// - Automate formatting of table content in bulk PPTX files.
+// - Build .NET utilities for consistent presentation styling.
+// - Prepare presentations for publishing with standardized table layouts.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
