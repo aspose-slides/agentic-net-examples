@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Autoadjust table columns to longest text using C#
+//
+// Description:
+// Demonstrates how to automatically adjust the widths of table columns to
+// accommodate the longest text in each column using C# and Aspose.Slides for .NET.
+// The example creates a presentation, adds a table with sample data, estimates
+// required column widths, applies padding, and saves the result as a PPTX file.
+// This pattern can be used to ensure table readability in generated PowerPoint
+// presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Autoadjust, Table, Columns,
+// Longest, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automatically size table columns based on content length.
+// - Build .NET tools for dynamic PowerPoint table generation.
+// - Ensure consistent layout when exporting data to PPTX.
+// - Integrate table auto‑sizing into presentation automation workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
