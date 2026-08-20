@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Export presentation to XPS preserve borders shading using C#
+//
+// Description:
+// Demonstrates how to export a PowerPoint presentation to XPS while preserving
+// table borders and cell shading using C# and Aspose.Slides for .NET. The example
+// creates a new presentation, adds a table with custom borders and background
+// colors, configures XPS export options, and saves the result as an XPS file.
+// This pattern can be used to automate PPTX to XPS conversion with visual
+// fidelity for tables.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, XPS, Presentation,
+// Preserve Borders, Cell Shading, Table Formatting, Office Automation
+//
+// Use Cases:
+// - Automate conversion of presentations to XPS while retaining table styling.
+// - Build .NET tools that generate XPS documents from PPTX with custom table designs.
+// - Integrate table border and shading preservation into document processing pipelines.
+// - Validate visual consistency of exported XPS files before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.Drawing;
 using Aspose.Slides;
