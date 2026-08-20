@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Identify merged cells rowspan colspan log using C#
+//
+// Description:
+// Demonstrates how to identify merged cells, retrieve their RowSpan and 
+// ColSpan values, and log this information using C# and Aspose.Slides for 
+// .NET. The example creates a presentation (or loads an existing one), adds a 
+// table, merges specific cells, iterates through the table to detect merged 
+// cells, outputs their span details, and saves the resulting presentation. 
+// This pattern can be used to automate PPTX workflows that require analysis 
+// of table structures.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Identify, Merged, Cells, 
+// Rowspan, Colspan, Table, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate detection and logging of merged table cells in PowerPoint files.
+// - Build C# tools for analyzing table structures within PPTX presentations.
+// - Generate or modify PPTX files with merged cells in .NET applications.
+// - Validate table layouts before publishing or integrating presentations.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides.Export;

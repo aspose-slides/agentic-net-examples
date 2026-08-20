@@ -1,3 +1,25 @@
+// -----------------------------------------------------------------------------
+// Example: Set first row header bold text using C#
+//
+// Description:
+// Demonstrates how to set the first row of a table as a header and apply bold
+// text formatting to that row using C# and Aspose.Slides for .NET. The example
+// loads a PPTX file, locates the first table on the first slide, marks its
+// first row as a header, applies a bold font style to all cells in that row,
+// and saves the modified presentation. This pattern can be used to automate
+// table header styling in PowerPoint presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Table, Header, Bold, Text,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting first row header bold text in PowerPoint tables.
+// - Build C# tools for PowerPoint presentation processing and styling.
+// - Generate or transform PPTX files with consistent table header formatting.
+// - Validate and enforce presentation design guidelines programmatically.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Insert png image into cell keep ratio using C#
+//
+// Description:
+// Demonstrates how to insert a PNG image into a table cell while preserving
+// its aspect ratio using C# and Aspose.Slides for .NET. The example creates a
+// new presentation, adds a table, loads an external PNG file, places the image
+// into a specific cell with picture fill mode that maintains the original
+// proportions, and saves the result as a PPTX file. This pattern can be used to
+// automate PowerPoint table image insertion tasks.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Insert, Image, Table, Cell, Keep Ratio, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate insertion of PNG images into table cells while keeping aspect ratio.
+// - Build C# utilities for PowerPoint table manipulation.
+// - Generate or modify PPTX files programmatically in .NET applications.
+// - Validate presentation layouts that include images within tables.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

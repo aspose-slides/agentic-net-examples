@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Add hyperlink to table cell open webpage using C#
+//
+// Description:
+// Demonstrates how to add a hyperlink to a table cell that opens a web page 
+// using C# and Aspose.Slides for .NET. The example creates a presentation, 
+// inserts a table, sets cell text, assigns a hyperlink with a tooltip, and 
+// saves the file as a PPTX. This pattern can be used to automate PowerPoint 
+// hyperlink insertion in .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Hyperlink, Table, Cell, Open 
+// Webpage, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding hyperlinks to table cells that open web pages.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or modify PPTX files with interactive content in .NET.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

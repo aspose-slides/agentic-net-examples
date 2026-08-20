@@ -1,3 +1,18 @@
+// -----------------------------------------------------------------------------
+// Example: Copy table to another slide preserve formatting using C#
+//
+// Description:
+// Demonstrates how to copy the first table from one slide to another slide while preserving its formatting using C# and Aspose.Slides for .NET. The example loads a presentation, finds the first table on the first slide, clones it onto a second slide (or creates one), and saves the result.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Copy, Table, Another, Slide, Preserve Formatting, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate copying a table between slides while keeping its style.
+// - Build C# utilities for PowerPoint slide manipulation.
+// - Generate or modify PPTX files programmatically in .NET applications.
+// - Validate table layout consistency across slides.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

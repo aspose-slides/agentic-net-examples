@@ -1,3 +1,26 @@
+// -----------------------------------------------------------------------------
+// Example: Add comment to table cell and retrieve using C#
+//
+// Description:
+// Demonstrates how to add a comment to a specific table cell in a PowerPoint
+// slide, retrieve the comment, and output its details using C# and Aspose.Slides
+// for .NET. The example creates a presentation, inserts a table, adds text to a
+// target cell, associates a comment with that cell, enumerates comments on the
+// slide, and saves the result as a PPTX file. This pattern can be used to
+// automate comment handling in presentations, validate content, or integrate
+// PowerPoint workflows into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Comment, Table, Cell, Retrieve,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate adding comments to specific table cells in PowerPoint slides.
+// - Build C# tools for extracting and processing comments from presentations.
+// - Generate or modify PPTX files with table annotations in .NET applications.
+// - Validate comment placement and content before publishing or integration.
+// -----------------------------------------------------------------------------
+
 using System;
 using System.Drawing;
 using Aspose.Slides;

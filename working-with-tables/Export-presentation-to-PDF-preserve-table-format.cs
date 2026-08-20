@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Export presentation to PDF preserving table format using C#
+//
+// Description:
+// Demonstrates how to create a PowerPoint presentation with a table, apply a
+// built‑in table style and cell background colors, and export the presentation
+// to PDF while preserving the table formatting using Aspose.Slides for .NET.
+// The example includes creating a new presentation, adding a table shape,
+// customizing cell fill colors, and saving the result as a PDF file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Export, Table, Formatting,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Export PowerPoint tables to PDF with original styling intact.
+// - Automate generation of PDF reports from PPTX presentations containing tables.
+// - Build .NET tools that preserve table appearance during format conversion.
+// - Validate table rendering in PDF outputs for presentation workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

@@ -1,3 +1,22 @@
+// -----------------------------------------------------------------------------
+// Example: Merge cells two columns fourth row alignright using C#
+//
+// Description:
+// Demonstrates how to merge the first two columns of the fourth row in a table
+// and align the text to the right using C# and Aspose.Slides for .NET. The example
+// creates a new presentation, adds a table, merges cells, sets right-aligned text,
+// and saves the result as a PPTX file.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Merge Cells, Table, Columns, Row,
+// Align Right, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate merging of table cells across columns in a specific row with right alignment.
+// - Build C# utilities for PowerPoint table manipulation.
+// - Generate or modify PPTX files programmatically in .NET applications.
+// - Validate table layout transformations before publishing presentations.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

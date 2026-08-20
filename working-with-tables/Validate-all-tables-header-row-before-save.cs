@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Validate all tables header row before save using C#
+//
+// Description:
+// Demonstrates how to ensure that the first row of every table in a PowerPoint
+// presentation is marked as a header before saving the file using C# and
+// Aspose.Slides for .NET. The example loads a PPTX file, iterates through all
+// slides and tables, sets the FirstRow property where needed, and saves the
+// updated presentation. This pattern helps automate validation of table
+// structures in PPTX workflows.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Validate, Tables, Header, 
+// Before Save, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate validation of table header rows before publishing presentations.
+// - Build C# utilities for PowerPoint content verification.
+// - Ensure consistent table formatting in generated or transformed PPTX files.
+// - Integrate table validation into .NET presentation processing pipelines.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;

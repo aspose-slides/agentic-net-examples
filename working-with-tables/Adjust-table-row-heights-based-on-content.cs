@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Adjust table row heights based on content using C#
+//
+// Description:
+// Demonstrates how to adjust table row heights based on the length of the
+// cell content using C# and Aspose.Slides for .NET. The example creates a
+// presentation, adds a single‑column table, fills it with text of varying
+// lengths, calculates a suitable row height for each entry, and saves the
+// result. This pattern can be used to automate PowerPoint table formatting
+// where rows need to expand to accommodate their content.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Adjust, Table, Row, Height,
+// Content, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automatically adjust table row heights based on cell content.
+// - Build .NET tools for PowerPoint presentation processing and formatting.
+// - Generate or transform PPTX files with dynamic table layouts.
+// - Validate and preview presentation layouts before publishing.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;

@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Create presentation add slide and insert table using C#
+//
+// Description:
+// Demonstrates how to create a presentation, add a slide, and insert a table using C# 
+// and Aspose.Slides for .NET. The example shows the required 
+// presentation‑processing steps for PowerPoint files and produces the 
+// requested output in a standalone console application. Developers can use 
+// this pattern to automate PPTX workflows, validate results, or integrate 
+// presentation logic into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Presentation, Slide, Insert, 
+// Table, Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate creation of a presentation, add a slide, and insert a table.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files in .NET applications.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
 using Aspose.Slides.Export;
