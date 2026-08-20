@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Set table cell padding five points using C#
+//
+// Description:
+// Demonstrates how to set table cell padding to five points using C# and 
+// Aspose.Slides for .NET. The example creates a new presentation, adds a table,
+// applies a 5‑point margin to each cell, and saves the result as a PPTX file.
+// This pattern can be used to automate PowerPoint table formatting in .NET 
+// applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Table, Cell, Padding, Five, 
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate setting table cell padding to five points.
+// - Build C# tools for PowerPoint presentation processing.
+// - Generate or transform PPTX files with custom table formatting in .NET.
+// - Validate presentation workflows before publishing or integration.
+// -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides.Export;
 
