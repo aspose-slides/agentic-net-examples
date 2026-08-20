@@ -1,3 +1,24 @@
+// -----------------------------------------------------------------------------
+// Example: Report table rows columns count per slide using C#
+//
+// Description:
+// Demonstrates how to report the number of rows and columns for each table 
+// found on every slide of a PowerPoint presentation using C# and Aspose.Slides 
+// for .NET. The example loads a presentation, iterates through its slides and 
+// shapes, identifies tables, outputs their dimensions to the console, and 
+// optionally saves the presentation to a new file. This pattern helps automate 
+// PPTX analysis, validation, or integration into .NET applications.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Table, Rows, Columns, 
+// Presentation Processing, Office Automation, Slide Analysis
+//
+// Use Cases:
+// - Generate a report of table dimensions across all slides in a presentation.
+// - Build C# utilities for PowerPoint content inspection and validation.
+// - Automate extraction of table metadata for downstream processing.
+// - Integrate table analysis into larger .NET-based Office automation workflows.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
