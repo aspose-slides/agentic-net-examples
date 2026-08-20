@@ -1,3 +1,23 @@
+// -----------------------------------------------------------------------------
+// Example: Update PPTX modify cell at second slide using C#
+//
+// Description:
+// Demonstrates how to update a PPTX file by modifying the text of a specific
+// cell in the first table on the second slide using C# and Aspose.Slides for .NET.
+// The example loads a presentation, locates the target cell, updates its text,
+// and saves the result as a new PPTX file. This pattern can be used to automate
+// table content updates in PowerPoint presentations.
+//
+// Keywords:
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Update, Modify, Cell, Table,
+// Presentation Processing, Office Automation
+//
+// Use Cases:
+// - Automate updating specific table cells in PowerPoint slides.
+// - Build C# utilities for batch processing of PPTX files.
+// - Integrate table content manipulation into .NET applications.
+// - Validate and transform presentation data before distribution.
+// -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using Aspose.Slides;
