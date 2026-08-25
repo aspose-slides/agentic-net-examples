@@ -9,6 +9,18 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 // Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Merge PPTX 3d objects preserve transformations using C#
 
@@ -18,7 +30,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -34,7 +62,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // Demonstrates how to merge PPTX presentations while preserving 3D object
+
+
+
+
+
+
+
+
 
 
 
@@ -50,7 +94,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // source presentations, clones their first slides together with the associated
+
+
+
+
+
+
+
+
 
 
 
@@ -66,7 +126,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // approach maintains the original 3D object positions, rotations, and scaling
+
+
+
+
+
+
+
+
 
 
 
@@ -82,7 +158,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -98,7 +190,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // C#, PowerPoint, PPTX, Aspose.Slides for .NET, Merge, 3D objects, Preserve,
+
+
+
+
+
+
+
+
 
 
 
@@ -114,7 +222,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -130,7 +254,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Automate merging of PPTX files that contain 3D objects without losing
+
+
+
+
+
+
+
+
 
 
 
@@ -146,7 +286,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Build C# utilities for consolidating presentations while retaining visual
+
+
+
+
+
+
+
+
 
 
 
@@ -162,7 +318,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Integrate PPTX merging functionality into .NET applications that handle
+
+
+
+
+
+
+
+
 
 
 
@@ -178,7 +350,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Validate and test presentation workflows involving 3D graphics before
+
+
+
+
+
+
+
+
 
 
 
@@ -194,7 +382,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // -----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
 
 
 
@@ -210,6 +414,14 @@ using System;
 
 
 
+
+
+
+
+
+
+
+
 using System.IO;
 
 
@@ -218,7 +430,23 @@ using System.IO;
 
 
 
+
+
+
+
+
+
+
+
 using Aspose.Slides;
+
+
+
+
+
+
+
+
 
 
 
@@ -242,7 +470,31 @@ using Aspose.Slides.Export;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Program
+
+
+
+
+
+
+
+
 
 
 
@@ -258,7 +510,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
     static void Main()
+
+
+
+
+
+
+
+
 
 
 
@@ -274,7 +542,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         // Input and output file paths
+
+
+
+
+
+
+
+
 
 
 
@@ -290,7 +574,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         string sourcePath2 = "source2.pptx";
+
+
+
+
+
+
+
+
 
 
 
@@ -314,7 +614,31 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         // Verify that source files exist
+
+
+
+
+
+
+
+
 
 
 
@@ -330,7 +654,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         {
+
+
+
+
+
+
+
+
 
 
 
@@ -346,6 +686,14 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             return;
 
 
@@ -354,7 +702,31 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -378,7 +750,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         {
+
+
+
+
+
+
+
+
 
 
 
@@ -394,7 +782,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             Aspose.Slides.Presentation srcPres1 = new Aspose.Slides.Presentation(sourcePath1);
+
+
+
+
+
+
+
+
 
 
 
@@ -418,7 +822,31 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Create destination presentation
+
+
+
+
+
+
+
+
 
 
 
@@ -442,7 +870,31 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Clone first slide from the first source presentation with its master
+
+
+
+
+
+
+
+
 
 
 
@@ -458,6 +910,14 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             Aspose.Slides.IMasterSlide sourceMaster1 = sourceSlide1.LayoutSlide.MasterSlide;
 
 
@@ -466,7 +926,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             Aspose.Slides.IMasterSlide destMaster1 = destPres.Masters.AddClone(sourceMaster1);
+
+
+
+
+
+
+
+
 
 
 
@@ -490,7 +966,31 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Clone first slide from the second source presentation with its master
+
+
+
+
+
+
+
+
 
 
 
@@ -506,6 +1006,14 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             Aspose.Slides.IMasterSlide sourceMaster2 = sourceSlide2.LayoutSlide.MasterSlide;
 
 
@@ -514,7 +1022,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             Aspose.Slides.IMasterSlide destMaster2 = destPres.Masters.AddClone(sourceMaster2);
+
+
+
+
+
+
+
+
 
 
 
@@ -538,7 +1062,31 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Save the merged presentation
+
+
+
+
+
+
+
+
 
 
 
@@ -562,7 +1110,31 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Dispose all presentations
+
+
+
+
+
+
+
+
 
 
 
@@ -578,7 +1150,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             srcPres2.Dispose();
+
+
+
+
+
+
+
+
 
 
 
@@ -594,7 +1182,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -610,7 +1214,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         {
+
+
+
+
+
+
+
+
 
 
 
@@ -626,6 +1246,14 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             Console.WriteLine("One of the files has an unsupported format.");
 
 
@@ -634,7 +1262,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -650,7 +1294,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         {
+
+
+
+
+
+
+
+
 
 
 
@@ -666,7 +1326,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -682,7 +1358,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
 
 
 
