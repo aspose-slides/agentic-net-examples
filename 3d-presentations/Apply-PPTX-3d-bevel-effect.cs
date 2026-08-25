@@ -3,12 +3,26 @@
 
 
 
+
+
+
+
+
+
 // Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Apply PPTX 3d bevel effect using C#
 
 
 
+
+
+
+
 //
+
+
+
+
 
 
 
@@ -16,7 +30,15 @@
 
 
 
+
+
+
+
 // Demonstrates how to apply a 3‑D bevel effect to a shape in a PowerPoint
+
+
+
+
 
 
 
@@ -24,7 +46,15 @@
 
 
 
+
+
+
+
 // presentation, adds an ellipse, configures fill and line formatting, applies
+
+
+
+
 
 
 
@@ -32,7 +62,15 @@
 
 
 
+
+
+
+
 // Developers can use this pattern to automate PPTX bevel styling, generate
+
+
+
+
 
 
 
@@ -40,7 +78,15 @@
 
 
 
+
+
+
+
 //
+
+
+
+
 
 
 
@@ -48,7 +94,15 @@
 
 
 
+
+
+
+
 // C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, 3D, Bevel, Effect,
+
+
+
+
 
 
 
@@ -56,7 +110,15 @@
 
 
 
+
+
+
+
 //
+
+
+
+
 
 
 
@@ -64,7 +126,15 @@
 
 
 
+
+
+
+
 // - Automate applying 3‑D bevel effects to shapes in PowerPoint files.
+
+
+
+
 
 
 
@@ -72,7 +142,15 @@
 
 
 
+
+
+
+
 // - Generate or transform PPTX files with custom 3‑D visual effects.
+
+
+
+
 
 
 
@@ -80,7 +158,15 @@
 
 
 
+
+
+
+
 // -----------------------------------------------------------------------------
+
+
+
+
 
 
 
@@ -88,11 +174,23 @@ using System;
 
 
 
+
+
+
+
 using System.Drawing;
 
 
 
+
+
+
+
 using Aspose.Slides;
+
+
+
+
 
 
 
@@ -104,7 +202,19 @@ using Aspose.Slides.Export;
 
 
 
+
+
+
+
+
+
+
+
 namespace BevelEffectDemo
+
+
+
+
 
 
 
@@ -112,7 +222,15 @@ namespace BevelEffectDemo
 
 
 
+
+
+
+
     class Program
+
+
+
+
 
 
 
@@ -120,7 +238,15 @@ namespace BevelEffectDemo
 
 
 
+
+
+
+
         static void Main(string[] args)
+
+
+
+
 
 
 
@@ -128,7 +254,15 @@ namespace BevelEffectDemo
 
 
 
+
+
+
+
             try
+
+
+
+
 
 
 
@@ -136,7 +270,15 @@ namespace BevelEffectDemo
 
 
 
+
+
+
+
                 // Create a new presentation
+
+
+
+
 
 
 
@@ -148,7 +290,19 @@ namespace BevelEffectDemo
 
 
 
+
+
+
+
+
+
+
+
                 // Get the first slide
+
+
+
+
 
 
 
@@ -160,7 +314,19 @@ namespace BevelEffectDemo
 
 
 
+
+
+
+
+
+
+
+
                 // Add an ellipse shape
+
+
+
+
 
 
 
@@ -168,7 +334,15 @@ namespace BevelEffectDemo
 
 
 
+
+
+
+
                     Aspose.Slides.ShapeType.Ellipse,
+
+
+
+
 
 
 
@@ -180,11 +354,27 @@ namespace BevelEffectDemo
 
 
 
+
+
+
+
+
+
+
+
                 // Set fill color
 
 
 
+
+
+
+
                 shape.FillFormat.FillType = Aspose.Slides.FillType.Solid;
+
+
+
+
 
 
 
@@ -196,7 +386,19 @@ namespace BevelEffectDemo
 
 
 
+
+
+
+
+
+
+
+
                 // Set line format
+
+
+
+
 
 
 
@@ -204,7 +406,15 @@ namespace BevelEffectDemo
 
 
 
+
+
+
+
                 shape.LineFormat.FillFormat.SolidFillColor.Color = System.Drawing.Color.Blue;
+
+
+
+
 
 
 
@@ -216,7 +426,19 @@ namespace BevelEffectDemo
 
 
 
+
+
+
+
+
+
+
+
                 // Apply 3D bevel effect
+
+
+
+
 
 
 
@@ -224,7 +446,15 @@ namespace BevelEffectDemo
 
 
 
+
+
+
+
                 shape.ThreeDFormat.BevelTop.BevelType = Aspose.Slides.BevelPresetType.Circle;
+
+
+
+
 
 
 
@@ -232,7 +462,15 @@ namespace BevelEffectDemo
 
 
 
+
+
+
+
                 shape.ThreeDFormat.BevelTop.Width = 5;
+
+
+
+
 
 
 
@@ -240,7 +478,15 @@ namespace BevelEffectDemo
 
 
 
+
+
+
+
                 shape.ThreeDFormat.LightRig.LightType = Aspose.Slides.LightRigPresetType.ThreePt;
+
+
+
+
 
 
 
@@ -252,7 +498,19 @@ namespace BevelEffectDemo
 
 
 
+
+
+
+
+
+
+
+
                 // Save the presentation
+
+
+
+
 
 
 
@@ -260,7 +518,15 @@ namespace BevelEffectDemo
 
 
 
+
+
+
+
             }
+
+
+
+
 
 
 
@@ -268,7 +534,15 @@ namespace BevelEffectDemo
 
 
 
+
+
+
+
             {
+
+
+
+
 
 
 
@@ -276,7 +550,15 @@ namespace BevelEffectDemo
 
 
 
+
+
+
+
             }
+
+
+
+
 
 
 
@@ -284,11 +566,23 @@ namespace BevelEffectDemo
 
 
 
+
+
+
+
     }
 
 
 
+
+
+
+
 }
+
+
+
+
 
 
 
