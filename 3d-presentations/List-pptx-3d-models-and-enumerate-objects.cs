@@ -9,6 +9,18 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 // Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: List pptx 3d models and enumerate objects using C#
 
@@ -18,7 +30,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -34,7 +62,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // Demonstrates how to load a PPTX file, enumerate all 3‑D shapes, retrieve
+
+
+
+
+
+
+
+
 
 
 
@@ -50,7 +94,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // settings), count the total number of 3‑D objects and save the presentation.
+
+
+
+
+
+
+
+
 
 
 
@@ -66,6 +126,14 @@
 
 
 
+
+
+
+
+
+
+
+
 // adapted for automation, validation or integration scenarios.
 
 
@@ -74,7 +142,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -90,7 +174,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // C#, PowerPoint, PPTX, Aspose.Slides for .NET, List, 3D Models, Enumerate,
+
+
+
+
+
+
+
+
 
 
 
@@ -106,7 +206,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -122,7 +238,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Automate discovery and reporting of 3‑D objects in PowerPoint files.
+
+
+
+
+
+
+
+
 
 
 
@@ -138,7 +270,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Integrate 3‑D shape analysis into .NET applications or CI pipelines.
+
+
+
+
+
+
+
+
 
 
 
@@ -154,7 +302,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // -----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
 
 
 
@@ -170,7 +334,23 @@ using System;
 
 
 
+
+
+
+
+
+
+
+
 using System.IO;
+
+
+
+
+
+
+
+
 
 
 
@@ -194,7 +374,31 @@ using Aspose.Slides.Export;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 namespace AsposeSlides3DExample
+
+
+
+
+
+
+
+
 
 
 
@@ -210,7 +414,23 @@ namespace AsposeSlides3DExample
 
 
 
+
+
+
+
+
+
+
+
     class Program
+
+
+
+
+
+
+
+
 
 
 
@@ -226,7 +446,23 @@ namespace AsposeSlides3DExample
 
 
 
+
+
+
+
+
+
+
+
         static void Main(string[] args)
+
+
+
+
+
+
+
+
 
 
 
@@ -242,6 +478,14 @@ namespace AsposeSlides3DExample
 
 
 
+
+
+
+
+
+
+
+
             // Input and output file paths
 
 
@@ -250,7 +494,23 @@ namespace AsposeSlides3DExample
 
 
 
+
+
+
+
+
+
+
+
             string inputPath = args.Length > 0 ? args[0] : "input.pptx";
+
+
+
+
+
+
+
+
 
 
 
@@ -274,7 +534,31 @@ namespace AsposeSlides3DExample
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Verify input file exists
+
+
+
+
+
+
+
+
 
 
 
@@ -290,7 +574,23 @@ namespace AsposeSlides3DExample
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -306,7 +606,23 @@ namespace AsposeSlides3DExample
 
 
 
+
+
+
+
+
+
+
+
                 return;
+
+
+
+
+
+
+
+
 
 
 
@@ -330,7 +646,31 @@ namespace AsposeSlides3DExample
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             try
+
+
+
+
+
+
+
+
 
 
 
@@ -346,6 +686,14 @@ namespace AsposeSlides3DExample
 
 
 
+
+
+
+
+
+
+
+
                 // Load the presentation
 
 
@@ -354,7 +702,31 @@ namespace AsposeSlides3DExample
 
 
 
+
+
+
+
+
+
+
+
                 Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -386,7 +758,31 @@ namespace AsposeSlides3DExample
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 // Iterate through all slides and shapes
+
+
+
+
+
+
+
+
 
 
 
@@ -402,7 +798,23 @@ namespace AsposeSlides3DExample
 
 
 
+
+
+
+
+
+
+
+
                 {
+
+
+
+
+
+
+
+
 
 
 
@@ -418,7 +830,23 @@ namespace AsposeSlides3DExample
 
 
 
+
+
+
+
+
+
+
+
                     for (int shapeIndex = 0; shapeIndex < slide.Shapes.Count; shapeIndex++)
+
+
+
+
+
+
+
+
 
 
 
@@ -434,7 +862,23 @@ namespace AsposeSlides3DExample
 
 
 
+
+
+
+
+
+
+
+
                         Aspose.Slides.IShape shape = slide.Shapes[shapeIndex];
+
+
+
+
+
+
+
+
 
 
 
@@ -450,7 +894,23 @@ namespace AsposeSlides3DExample
 
 
 
+
+
+
+
+
+
+
+
                         if (shape.ThreeDFormat != null)
+
+
+
+
+
+
+
+
 
 
 
@@ -466,6 +926,14 @@ namespace AsposeSlides3DExample
 
 
 
+
+
+
+
+
+
+
+
                             threeDObjectCount++;
 
 
@@ -474,7 +942,23 @@ namespace AsposeSlides3DExample
 
 
 
+
+
+
+
+
+
+
+
                             // Get effective 3D data
+
+
+
+
+
+
+
+
 
 
 
@@ -498,7 +982,31 @@ namespace AsposeSlides3DExample
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                             Console.WriteLine($"Slide {slideIndex + 1}, Shape {shapeIndex + 1}:");
+
+
+
+
+
+
+
+
 
 
 
@@ -514,7 +1022,23 @@ namespace AsposeSlides3DExample
 
 
 
+
+
+
+
+
+
+
+
                             Console.WriteLine($"  Extrusion Height: {effectiveData.ExtrusionHeight}");
+
+
+
+
+
+
+
+
 
 
 
@@ -530,7 +1054,23 @@ namespace AsposeSlides3DExample
 
 
 
+
+
+
+
+
+
+
+
                             Console.WriteLine($"  Camera Type: {effectiveData.Camera.CameraType}");
+
+
+
+
+
+
+
+
 
 
 
@@ -546,6 +1086,14 @@ namespace AsposeSlides3DExample
 
 
 
+
+
+
+
+
+
+
+
                     }
 
 
@@ -554,7 +1102,31 @@ namespace AsposeSlides3DExample
 
 
 
+
+
+
+
+
+
+
+
                 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -586,7 +1158,31 @@ namespace AsposeSlides3DExample
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 // Save the presentation before exit
+
+
+
+
+
+
+
+
 
 
 
@@ -602,6 +1198,14 @@ namespace AsposeSlides3DExample
 
 
 
+
+
+
+
+
+
+
+
                 pres.Dispose();
 
 
@@ -610,7 +1214,23 @@ namespace AsposeSlides3DExample
 
 
 
+
+
+
+
+
+
+
+
             }
+
+
+
+
+
+
+
+
 
 
 
@@ -626,7 +1246,23 @@ namespace AsposeSlides3DExample
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -642,7 +1278,23 @@ namespace AsposeSlides3DExample
 
 
 
+
+
+
+
+
+
+
+
                 Console.WriteLine("An error occurred while processing the presentation: " + ex.Message);
+
+
+
+
+
+
+
+
 
 
 
@@ -658,7 +1310,23 @@ namespace AsposeSlides3DExample
 
 
 
+
+
+
+
+
+
+
+
                 // Note: If the exception is due to an unsupported file format, it will be caught here.
+
+
+
+
+
+
+
+
 
 
 
@@ -674,7 +1342,23 @@ namespace AsposeSlides3DExample
 
 
 
+
+
+
+
+
+
+
+
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -690,7 +1374,23 @@ namespace AsposeSlides3DExample
 
 
 
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
 
 
 
