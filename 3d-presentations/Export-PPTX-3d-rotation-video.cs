@@ -1,225 +1,450 @@
 // -----------------------------------------------------------------------------
 
+
+
+
 // Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Export PPTX 3D rotation video using C#
 
+
+
 //
+
+
 
 // Description:
 
+
+
 // Demonstrates how to add a 3D rotation animation to a shape in a PPTX file,
+
+
 
 // generate animation frames at a specified frame rate, and save the frames as PNG
 
+
+
 // images using Aspose.Slides for .NET. The example also saves the modified
+
+
 
 // presentation. The generated PNG sequence can later be combined into a video
 
+
+
 // (e.g., with FFmpeg) to produce a rotation video of the 3‑D object.
 
+
+
 //
+
+
 
 // Keywords:
 
+
+
 // C#, Aspose.Slides, PowerPoint, PPTX, 3D rotation, animation, video export,
+
+
 
 // frame generation, PNG, presentation processing, .NET
 
+
+
 //
+
+
 
 // Use Cases:
 
+
+
 // - Automate creation of rotation videos from PowerPoint 3‑D objects.
+
+
 
 // - Generate frame sequences for further video encoding.
 
+
+
 // - Integrate 3‑D animation export into C# tools and services.
+
+
 
 // - Validate and preview 3‑D animations programmatically.
 
+
+
 // -----------------------------------------------------------------------------
+
+
 
 using System;
 
+
+
 using System.IO;
+
+
 
 using Aspose.Slides;
 
+
+
 using Aspose.Slides.Animation;
+
+
 
 using Aspose.Slides.Export;
 
 
 
+
+
+
+
 namespace Export3DRotationVideo
+
+
 
 {
 
+
+
     class Program
+
+
 
     {
 
+
+
         static void Main(string[] args)
+
+
 
         {
 
+
+
             // Input presentation path
+
+
 
             string inputPath = "input.pptx";
 
+
+
             // Output directory for generated frames
+
+
 
             string outputDir = "output_frames";
 
 
 
+
+
+
+
             // Verify input file exists
+
+
 
             if (!File.Exists(inputPath))
 
+
+
             {
+
+
 
                 Console.WriteLine("Input file does not exist: " + inputPath);
 
+
+
                 return;
 
+
+
             }
+
+
+
+
 
 
 
             // Ensure output directory exists
 
+
+
             Directory.CreateDirectory(outputDir);
+
+
+
+
 
 
 
             try
 
+
+
             {
+
+
 
                 // Load the presentation
 
+
+
                 using (Presentation presentation = new Presentation(inputPath))
+
+
 
                 {
 
+
+
                     // Assume the first slide contains a 3D shape to animate
+
+
 
                     ISlide slide = presentation.Slides[0];
 
+
+
                     // Use the first shape on the slide (adjust as needed)
+
+
 
                     IShape shape = slide.Shapes[0];
 
 
 
+
+
+
+
                     // Create a rotation behavior using BehaviorFactory (instance, not static)
 
+
+
                     BehaviorFactory behaviorFactory = new BehaviorFactory();
+
+
 
                     IRotationEffect rotationEffect = behaviorFactory.CreateRotationEffect();
 
 
 
+
+
+
+
                     // Configure rotation from 0 to 360 degrees over the animation duration
+
+
 
                     rotationEffect.From = 0f;
 
+
+
                     rotationEffect.To = 360f;
 
+
+
                     // Ensure the effect does not rewind automatically
+
+
 
                     rotationEffect.Timing.Rewind = false;
 
 
 
+
+
+
+
                     // Add an effect to the main sequence and attach the rotation behavior
+
+
 
                     IEffect effect = slide.Timeline.MainSequence.AddEffect(
 
+
+
                         shape,
+
+
 
                         EffectType.Fly,
 
+
+
                         EffectSubtype.None,
 
+
+
                         EffectTriggerType.AfterPrevious);
+
+
 
                     effect.Behaviors.Add(rotationEffect);
 
 
 
+
+
+
+
                     // Set the total duration of the animation to 10 seconds (10000 ms)
+
+
 
                     // The timing of the effect inherits the duration from the behavior
 
+
+
                     // (Aspose.Slides does not expose a direct Duration property on IEffect,
+
+
 
                     //  so we rely on the default timing and the frame rate to achieve ~10 seconds.)
 
 
 
+
+
+
+
                     // Generate animation frames at 30 FPS
+
+
 
                     using (PresentationAnimationsGenerator animationsGenerator = new PresentationAnimationsGenerator(presentation))
 
+
+
                     {
+
+
 
                         using (PresentationPlayer player = new PresentationPlayer(animationsGenerator, 30))
 
+
+
                         {
+
+
 
                             player.FrameTick += (sender, eventArgs) =>
 
+
+
                             {
+
+
 
                                 string framePath = Path.Combine(outputDir, $"frame_{sender.FrameIndex}.png");
 
+
+
                                 eventArgs.GetFrame().Save(framePath, ImageFormat.Png);
+
+
 
                             };
 
 
 
+
+
+
+
                             // Run the animation generation for all slides
+
+
 
                             animationsGenerator.Run(presentation.Slides);
 
+
+
                         }
+
+
 
                     }
 
 
 
+
+
+
+
                     // Save the (potentially modified) presentation before exiting
 
+
+
                     presentation.Save("output.pptx", SaveFormat.Pptx);
+
+
 
                 }
 
 
 
+
+
+
+
                 // Note: The generated PNG frames can be combined into a video using external tools (e.g., FFmpeg).
 
+
+
             }
+
+
 
             catch (Exception ex)
 
+
+
             {
+
+
 
                 // Handle unsupported format or other errors
 
+
+
                 Console.WriteLine("An error occurred: " + ex.Message);
+
+
 
                 // If the format is not supported, comment accordingly
 
+
+
                 // Format not supported.
+
+
 
             }
 
+
+
         }
+
+
 
     }
 
+
+
 }
+
+
 
