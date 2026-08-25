@@ -9,6 +9,18 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 // Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Load PPTX 3D JPEG texture using C#
 
@@ -18,7 +30,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -34,7 +62,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // Demonstrates how to load an existing PPTX file, add a JPEG image as a texture
+
+
+
+
+
+
+
+
 
 
 
@@ -50,7 +94,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // and save the modified presentation using Aspose.Slides for .NET. The example
+
+
+
+
+
+
+
+
 
 
 
@@ -66,6 +126,14 @@
 
 
 
+
+
+
+
+
+
+
+
 // applications.
 
 
@@ -74,7 +142,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -90,7 +174,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // C#, PowerPoint, PPTX, Aspose.Slides for .NET, JPEG, Load, Texture, 3D, 
+
+
+
+
+
+
+
+
 
 
 
@@ -106,7 +206,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -122,7 +238,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Apply a JPEG texture to a 3‑D shape in an existing PowerPoint file.
+
+
+
+
+
+
+
+
 
 
 
@@ -138,7 +270,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Build .NET tools that modify PPTX files with custom 3‑D visual effects.
+
+
+
+
+
+
+
+
 
 
 
@@ -154,7 +302,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // -----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
 
 
 
@@ -170,6 +334,14 @@ using System;
 
 
 
+
+
+
+
+
+
+
+
 using System.IO;
 
 
@@ -178,7 +350,23 @@ using System.IO;
 
 
 
+
+
+
+
+
+
+
+
 using Aspose.Slides;
+
+
+
+
+
+
+
+
 
 
 
@@ -202,7 +390,31 @@ using Aspose.Slides.Export;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 namespace LoadPptx3dJpegTexture
+
+
+
+
+
+
+
+
 
 
 
@@ -218,7 +430,23 @@ namespace LoadPptx3dJpegTexture
 
 
 
+
+
+
+
+
+
+
+
     class Program
+
+
+
+
+
+
+
+
 
 
 
@@ -234,7 +462,23 @@ namespace LoadPptx3dJpegTexture
 
 
 
+
+
+
+
+
+
+
+
         static void Main(string[] args)
+
+
+
+
+
+
+
+
 
 
 
@@ -250,6 +494,14 @@ namespace LoadPptx3dJpegTexture
 
 
 
+
+
+
+
+
+
+
+
             // Paths to the source presentation and the JPEG texture image
 
 
@@ -258,7 +510,23 @@ namespace LoadPptx3dJpegTexture
 
 
 
+
+
+
+
+
+
+
+
             string presentationPath = "input.pptx";
+
+
+
+
+
+
+
+
 
 
 
@@ -282,7 +550,31 @@ namespace LoadPptx3dJpegTexture
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Verify that the presentation file exists
+
+
+
+
+
+
+
+
 
 
 
@@ -298,7 +590,23 @@ namespace LoadPptx3dJpegTexture
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -314,6 +622,14 @@ namespace LoadPptx3dJpegTexture
 
 
 
+
+
+
+
+
+
+
+
                 return;
 
 
@@ -322,7 +638,31 @@ namespace LoadPptx3dJpegTexture
 
 
 
+
+
+
+
+
+
+
+
             }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -346,7 +686,23 @@ namespace LoadPptx3dJpegTexture
 
 
 
+
+
+
+
+
+
+
+
             if (!File.Exists(textureImagePath))
+
+
+
+
+
+
+
+
 
 
 
@@ -362,7 +718,23 @@ namespace LoadPptx3dJpegTexture
 
 
 
+
+
+
+
+
+
+
+
                 Console.WriteLine("Error: Texture image file not found: " + textureImagePath);
+
+
+
+
+
+
+
+
 
 
 
@@ -378,7 +750,31 @@ namespace LoadPptx3dJpegTexture
 
 
 
+
+
+
+
+
+
+
+
             }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -402,7 +798,23 @@ namespace LoadPptx3dJpegTexture
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -418,7 +830,23 @@ namespace LoadPptx3dJpegTexture
 
 
 
+
+
+
+
+
+
+
+
                 using (Presentation presentation = new Presentation(presentationPath))
+
+
+
+
+
+
+
+
 
 
 
@@ -434,7 +862,23 @@ namespace LoadPptx3dJpegTexture
 
 
 
+
+
+
+
+
+
+
+
                     // Add the JPEG image to the presentation's image collection
+
+
+
+
+
+
+
+
 
 
 
@@ -450,7 +894,23 @@ namespace LoadPptx3dJpegTexture
 
 
 
+
+
+
+
+
+
+
+
                     using (FileStream imageStream = new FileStream(textureImagePath, FileMode.Open, FileAccess.Read))
+
+
+
+
+
+
+
+
 
 
 
@@ -466,7 +926,23 @@ namespace LoadPptx3dJpegTexture
 
 
 
+
+
+
+
+
+
+
+
                         textureImage = presentation.Images.AddImage(imageStream, LoadingStreamBehavior.KeepLocked);
+
+
+
+
+
+
+
+
 
 
 
@@ -490,7 +966,31 @@ namespace LoadPptx3dJpegTexture
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     // Add a rectangle shape that will act as the 3‑D object
+
+
+
+
+
+
+
+
 
 
 
@@ -514,7 +1014,31 @@ namespace LoadPptx3dJpegTexture
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     // Apply a material preset (using a valid enum value)
+
+
+
+
+
+
+
+
 
 
 
@@ -538,6 +1062,22 @@ namespace LoadPptx3dJpegTexture
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     // Set some 3‑D properties
 
 
@@ -546,7 +1086,23 @@ namespace LoadPptx3dJpegTexture
 
 
 
+
+
+
+
+
+
+
+
                     shape.ThreeDFormat.Depth = 5.0;
+
+
+
+
+
+
+
+
 
 
 
@@ -570,6 +1126,22 @@ namespace LoadPptx3dJpegTexture
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     // Apply the JPEG as a texture by setting the fill to picture type
 
 
@@ -578,7 +1150,23 @@ namespace LoadPptx3dJpegTexture
 
 
 
+
+
+
+
+
+
+
+
                     shape.FillFormat.FillType = FillType.Picture;
+
+
+
+
+
+
+
+
 
 
 
@@ -602,7 +1190,31 @@ namespace LoadPptx3dJpegTexture
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     // Save the modified presentation
+
+
+
+
+
+
+
+
 
 
 
@@ -618,6 +1230,14 @@ namespace LoadPptx3dJpegTexture
 
 
 
+
+
+
+
+
+
+
+
                 }
 
 
@@ -626,7 +1246,23 @@ namespace LoadPptx3dJpegTexture
 
 
 
+
+
+
+
+
+
+
+
             }
+
+
+
+
+
+
+
+
 
 
 
@@ -642,7 +1278,23 @@ namespace LoadPptx3dJpegTexture
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -658,7 +1310,23 @@ namespace LoadPptx3dJpegTexture
 
 
 
+
+
+
+
+
+
+
+
                 // Comment: format not supported
+
+
+
+
+
+
+
+
 
 
 
@@ -674,7 +1342,23 @@ namespace LoadPptx3dJpegTexture
 
 
 
+
+
+
+
+
+
+
+
             }
+
+
+
+
+
+
+
+
 
 
 
@@ -690,7 +1374,23 @@ namespace LoadPptx3dJpegTexture
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -706,7 +1406,23 @@ namespace LoadPptx3dJpegTexture
 
 
 
+
+
+
+
+
+
+
+
                 Console.WriteLine("An error occurred: " + ex.Message);
+
+
+
+
+
+
+
+
 
 
 
@@ -722,7 +1438,23 @@ namespace LoadPptx3dJpegTexture
 
 
 
+
+
+
+
+
+
+
+
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -738,7 +1470,23 @@ namespace LoadPptx3dJpegTexture
 
 
 
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
 
 
 
