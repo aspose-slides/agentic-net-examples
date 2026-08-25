@@ -1,139 +1,278 @@
 // -----------------------------------------------------------------------------
 
+
+
+
 // Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Compress PPTX 3D assets for distribution using C#
 
+
+
 //
+
+
 
 // Description:
 
+
+
 // Demonstrates how to compress a PowerPoint presentation while preserving
+
+
 
 // embedded 3‑D assets using Aspose.Slides for .NET. The sample loads a PPTX file,
 
+
+
 // applies low‑code font compression (which keeps 3‑D objects intact), and saves
+
+
 
 // the result as a smaller PPTX suitable for distribution.
 
+
+
 //
+
+
 
 // Keywords:
 
+
+
 // C#, Aspose.Slides, PPTX, 3D assets, compression, console application, 
+
+
 
 // presentation processing, LowCode Compress, Embedded fonts
 
+
+
 //
+
+
 
 // Use Cases:
 
+
+
 // - Reduce the size of PPTX files that contain 3‑D models before sharing.
+
+
 
 // - Automate PPTX preparation in build or CI pipelines.
 
+
+
 // - Build command‑line tools for PowerPoint asset optimization.
+
+
 
 // - Integrate presentation compression into larger .NET solutions.
 
+
+
 // -----------------------------------------------------------------------------
+
+
 
 using System;
 
+
+
 using System.IO;
+
+
 
 using Aspose.Slides.Export;
 
 
 
+
+
+
+
 namespace CompressPresentationApp
+
+
 
 {
 
+
+
     class Program
+
+
 
     {
 
+
+
         static void Main(string[] args)
+
+
 
         {
 
+
+
             // Define input and output file paths
 
+
+
             string inputPath = "input.pptx";
+
+
 
             string outputPath = "output_compressed.pptx";
 
 
 
+
+
+
+
             // Verify that the input file exists
+
+
 
             if (!File.Exists(inputPath))
 
+
+
             {
+
+
 
                 Console.WriteLine("Input file does not exist: " + inputPath);
 
+
+
                 return;
 
+
+
             }
+
+
+
+
 
 
 
             try
 
+
+
             {
 
+
+
                 // Load the presentation
+
+
 
                 Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
 
 
 
+
+
+
+
                 // Compress embedded fonts (preserves 3D assets)
+
+
 
                 Aspose.Slides.LowCode.Compress.CompressEmbeddedFonts(presentation);
 
 
 
+
+
+
+
                 // Save the compressed presentation
+
+
 
                 presentation.Save(outputPath, SaveFormat.Pptx);
 
 
 
+
+
+
+
                 // Release resources
+
+
 
                 presentation.Dispose();
 
 
 
+
+
+
+
                 Console.WriteLine("Presentation compressed successfully.");
 
+
+
             }
+
+
 
             catch (NotSupportedException)
 
+
+
             {
+
+
 
                 // Handle unsupported file format
 
+
+
                 Console.WriteLine("The presentation format is not supported for compression.");
 
+
+
             }
+
+
 
             catch (Exception ex)
 
+
+
             {
+
+
 
                 // General exception handling
 
+
+
                 Console.WriteLine("An error occurred: " + ex.Message);
+
+
 
             }
 
+
+
         }
+
+
 
     }
 
+
+
 }
+
+
 

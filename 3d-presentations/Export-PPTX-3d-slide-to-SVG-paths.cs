@@ -1,163 +1,326 @@
 // -----------------------------------------------------------------------------
 
+
+
+
 // Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Export PPTX 3d slide to SVG paths using C#
 
+
+
 //
+
+
 
 // Description:
 
+
+
 // Demonstrates how to export a 3D slide from a PPTX file to SVG paths using
+
+
 
 // C# and Aspose.Slides for .NET. The example loads a presentation, selects the
 
+
+
 // first slide (which may contain 3D objects), and writes it as an SVG file
+
+
 
 // with default export options. This pattern can be used to automate PPTX
 
+
+
 // workflows, validate results, or integrate presentation logic into .NET
+
+
 
 // applications.
 
+
+
 //
+
+
 
 // Keywords:
 
+
+
 // C#, PowerPoint, PPTX, Aspose.Slides for .NET, SVG, Export, 3D, Slide,
+
+
 
 // Paths, Presentation Processing, Office Automation
 
+
+
 //
+
+
 
 // Use Cases:
 
+
+
 // - Automate export of a 3D slide from PPTX to SVG paths.
+
+
 
 // - Build C# tools for PowerPoint presentation processing.
 
+
+
 // - Generate or transform PPTX files in .NET applications.
+
+
 
 // - Validate presentation workflows before publishing or integration.
 
+
+
 // -----------------------------------------------------------------------------
+
+
 
 using System;
 
+
+
 using System.IO;
 
+
+
 using Aspose.Slides;
+
+
 
 using Aspose.Slides.Export;
 
 
 
+
+
+
+
 namespace SvgExportExample
+
+
 
 {
 
+
+
     class Program
+
+
 
     {
 
+
+
         static void Main(string[] args)
+
+
 
         {
 
+
+
             // Input and output file paths
 
+
+
             string inputPath = "input.pptx";
+
+
 
             string outputPath = "slide.svg";
 
 
 
+
+
+
+
             // Override paths with command line arguments if provided
+
+
 
             if (args.Length >= 2)
 
+
+
             {
+
+
 
                 inputPath = args[0];
 
+
+
                 outputPath = args[1];
 
+
+
             }
+
+
+
+
 
 
 
             // Verify that the input file exists
 
+
+
             if (!File.Exists(inputPath))
+
+
 
             {
 
+
+
                 Console.WriteLine("Input file does not exist: " + inputPath);
+
+
 
                 return;
 
+
+
             }
+
+
+
+
 
 
 
             try
 
+
+
             {
+
+
 
                 // Load the presentation
 
+
+
                 using (Presentation pres = new Presentation(inputPath))
+
+
 
                 {
 
+
+
                     // Create SVG export options (default settings)
+
+
 
                     SVGOptions svgOptions = new SVGOptions();
 
 
 
+
+
+
+
                     // Export the first slide as SVG with the specified options
+
+
 
                     using (FileStream fs = File.Create(outputPath))
 
+
+
                     {
 
+
+
                         pres.Slides[0].WriteAsSvg(fs, svgOptions);
+
+
 
                     }
 
 
 
+
+
+
+
                     // Save the presentation before exiting (no changes made)
+
+
 
                     pres.Save(inputPath, SaveFormat.Pptx);
 
+
+
                 }
 
+
+
             }
+
+
 
             catch (NotSupportedException)
 
+
+
             {
+
+
 
                 // Format not supported
 
+
+
                 Console.WriteLine("The specified file format is not supported for SVG conversion.");
 
+
+
             }
+
+
 
             catch (Exception ex)
 
+
+
             {
+
+
 
                 // Handle other exceptions (e.g., external resources, I/O errors)
 
+
+
                 Console.WriteLine("An error occurred: " + ex.Message);
+
+
 
             }
 
+
+
         }
+
+
 
     }
 
+
+
 }
+
+
 
