@@ -9,6 +9,18 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 // Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Adjust PPTX 3D ambient intensity using C#
 
@@ -18,7 +30,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -34,7 +62,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // Demonstrates how to increase the ambient lighting of 3‑D formatted shapes
+
+
+
+
+
+
+
+
 
 
 
@@ -50,7 +94,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // example loads an existing PPTX file, modifies the LightRig settings of each
+
+
+
+
+
+
+
+
 
 
 
@@ -66,7 +126,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // This pattern can be used to programmatically enhance the visual appearance
+
+
+
+
+
+
+
+
 
 
 
@@ -82,7 +158,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -98,7 +190,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // C#, PowerPoint, PPTX, Aspose.Slides for .NET, 3D, Ambient Intensity, LightRig,
+
+
+
+
+
+
+
+
 
 
 
@@ -114,7 +222,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -130,7 +254,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Increase ambient lighting of 3‑D shapes in bulk.
+
+
+
+
+
+
+
+
 
 
 
@@ -146,7 +286,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Automate PPTX transformations that involve 3‑D formatting.
+
+
+
+
+
+
+
+
 
 
 
@@ -162,7 +318,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // -----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
 
 
 
@@ -178,6 +350,14 @@ using System;
 
 
 
+
+
+
+
+
+
+
+
 using System.IO;
 
 
@@ -186,7 +366,23 @@ using System.IO;
 
 
 
+
+
+
+
+
+
+
+
 using Aspose.Slides;
+
+
+
+
+
+
+
+
 
 
 
@@ -210,7 +406,31 @@ using Aspose.Slides.Export;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 namespace Adjust3DLighting
+
+
+
+
+
+
+
+
 
 
 
@@ -226,7 +446,23 @@ namespace Adjust3DLighting
 
 
 
+
+
+
+
+
+
+
+
     class Program
+
+
+
+
+
+
+
+
 
 
 
@@ -242,7 +478,23 @@ namespace Adjust3DLighting
 
 
 
+
+
+
+
+
+
+
+
         static void Main(string[] args)
+
+
+
+
+
+
+
+
 
 
 
@@ -258,6 +510,14 @@ namespace Adjust3DLighting
 
 
 
+
+
+
+
+
+
+
+
             // Define input and output file paths
 
 
@@ -266,7 +526,23 @@ namespace Adjust3DLighting
 
 
 
+
+
+
+
+
+
+
+
             string inputPath = "input.pptx";
+
+
+
+
+
+
+
+
 
 
 
@@ -290,7 +566,31 @@ namespace Adjust3DLighting
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Verify that the input file exists
+
+
+
+
+
+
+
+
 
 
 
@@ -306,7 +606,23 @@ namespace Adjust3DLighting
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -322,6 +638,14 @@ namespace Adjust3DLighting
 
 
 
+
+
+
+
+
+
+
+
                 return;
 
 
@@ -330,7 +654,31 @@ namespace Adjust3DLighting
 
 
 
+
+
+
+
+
+
+
+
             }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -354,6 +702,14 @@ namespace Adjust3DLighting
 
 
 
+
+
+
+
+
+
+
+
             {
 
 
@@ -362,7 +718,23 @@ namespace Adjust3DLighting
 
 
 
+
+
+
+
+
+
+
+
                 // Load the presentation
+
+
+
+
+
+
+
+
 
 
 
@@ -386,7 +758,31 @@ namespace Adjust3DLighting
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 // Iterate through all slides
+
+
+
+
+
+
+
+
 
 
 
@@ -402,7 +798,23 @@ namespace Adjust3DLighting
 
 
 
+
+
+
+
+
+
+
+
                 {
+
+
+
+
+
+
+
+
 
 
 
@@ -426,7 +838,31 @@ namespace Adjust3DLighting
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     // Iterate through all shapes on the slide
+
+
+
+
+
+
+
+
 
 
 
@@ -442,7 +878,23 @@ namespace Adjust3DLighting
 
 
 
+
+
+
+
+
+
+
+
                     {
+
+
+
+
+
+
+
+
 
 
 
@@ -466,7 +918,31 @@ namespace Adjust3DLighting
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                         // Check if the shape has 3D formatting
+
+
+
+
+
+
+
+
 
 
 
@@ -482,7 +958,23 @@ namespace Adjust3DLighting
 
 
 
+
+
+
+
+
+
+
+
                         {
+
+
+
+
+
+
+
+
 
 
 
@@ -498,7 +990,23 @@ namespace Adjust3DLighting
 
 
 
+
+
+
+
+
+
+
+
                             shape.ThreeDFormat.LightRig.LightType = LightRigPresetType.Balanced;
+
+
+
+
+
+
+
+
 
 
 
@@ -514,6 +1022,14 @@ namespace Adjust3DLighting
 
 
 
+
+
+
+
+
+
+
+
                         }
 
 
@@ -522,7 +1038,23 @@ namespace Adjust3DLighting
 
 
 
+
+
+
+
+
+
+
+
                     }
+
+
+
+
+
+
+
+
 
 
 
@@ -546,6 +1078,22 @@ namespace Adjust3DLighting
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 // Save the modified presentation
 
 
@@ -554,7 +1102,23 @@ namespace Adjust3DLighting
 
 
 
+
+
+
+
+
+
+
+
                 presentation.Save(outputPath, SaveFormat.Pptx);
+
+
+
+
+
+
+
+
 
 
 
@@ -578,6 +1142,22 @@ namespace Adjust3DLighting
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 Console.WriteLine("Presentation saved to: " + outputPath);
 
 
@@ -586,7 +1166,23 @@ namespace Adjust3DLighting
 
 
 
+
+
+
+
+
+
+
+
             }
+
+
+
+
+
+
+
+
 
 
 
@@ -602,7 +1198,23 @@ namespace Adjust3DLighting
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -618,7 +1230,23 @@ namespace Adjust3DLighting
 
 
 
+
+
+
+
+
+
+
+
                 Console.WriteLine("An error occurred: " + ex.Message);
+
+
+
+
+
+
+
+
 
 
 
@@ -634,7 +1262,23 @@ namespace Adjust3DLighting
 
 
 
+
+
+
+
+
+
+
+
                 // Format not supported.
+
+
+
+
+
+
+
+
 
 
 
@@ -650,7 +1294,23 @@ namespace Adjust3DLighting
 
 
 
+
+
+
+
+
+
+
+
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -666,7 +1326,23 @@ namespace Adjust3DLighting
 
 
 
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
 
 
 
