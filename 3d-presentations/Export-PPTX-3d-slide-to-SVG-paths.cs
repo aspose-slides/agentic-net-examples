@@ -9,6 +9,18 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 // Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Export PPTX 3d slide to SVG paths using C#
 
@@ -18,7 +30,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -34,7 +62,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // Demonstrates how to export a 3D slide from a PPTX file to SVG paths using
+
+
+
+
+
+
+
+
 
 
 
@@ -50,7 +94,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // first slide (which may contain 3D objects), and writes it as an SVG file
+
+
+
+
+
+
+
+
 
 
 
@@ -66,7 +126,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // workflows, validate results, or integrate presentation logic into .NET
+
+
+
+
+
+
+
+
 
 
 
@@ -82,7 +158,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -98,7 +190,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // C#, PowerPoint, PPTX, Aspose.Slides for .NET, SVG, Export, 3D, Slide,
+
+
+
+
+
+
+
+
 
 
 
@@ -114,7 +222,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -130,7 +254,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Automate export of a 3D slide from PPTX to SVG paths.
+
+
+
+
+
+
+
+
 
 
 
@@ -146,7 +286,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Generate or transform PPTX files in .NET applications.
+
+
+
+
+
+
+
+
 
 
 
@@ -162,7 +318,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // -----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
 
 
 
@@ -178,6 +350,14 @@ using System;
 
 
 
+
+
+
+
+
+
+
+
 using System.IO;
 
 
@@ -186,7 +366,23 @@ using System.IO;
 
 
 
+
+
+
+
+
+
+
+
 using Aspose.Slides;
+
+
+
+
+
+
+
+
 
 
 
@@ -210,7 +406,31 @@ using Aspose.Slides.Export;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 namespace SvgExportExample
+
+
+
+
+
+
+
+
 
 
 
@@ -226,7 +446,23 @@ namespace SvgExportExample
 
 
 
+
+
+
+
+
+
+
+
     class Program
+
+
+
+
+
+
+
+
 
 
 
@@ -242,7 +478,23 @@ namespace SvgExportExample
 
 
 
+
+
+
+
+
+
+
+
         static void Main(string[] args)
+
+
+
+
+
+
+
+
 
 
 
@@ -258,6 +510,14 @@ namespace SvgExportExample
 
 
 
+
+
+
+
+
+
+
+
             // Input and output file paths
 
 
@@ -266,7 +526,23 @@ namespace SvgExportExample
 
 
 
+
+
+
+
+
+
+
+
             string inputPath = "input.pptx";
+
+
+
+
+
+
+
+
 
 
 
@@ -290,7 +566,31 @@ namespace SvgExportExample
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Override paths with command line arguments if provided
+
+
+
+
+
+
+
+
 
 
 
@@ -306,7 +606,23 @@ namespace SvgExportExample
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -322,6 +638,14 @@ namespace SvgExportExample
 
 
 
+
+
+
+
+
+
+
+
                 outputPath = args[1];
 
 
@@ -330,7 +654,31 @@ namespace SvgExportExample
 
 
 
+
+
+
+
+
+
+
+
             }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -354,7 +702,23 @@ namespace SvgExportExample
 
 
 
+
+
+
+
+
+
+
+
             if (!File.Exists(inputPath))
+
+
+
+
+
+
+
+
 
 
 
@@ -370,7 +734,23 @@ namespace SvgExportExample
 
 
 
+
+
+
+
+
+
+
+
                 Console.WriteLine("Input file does not exist: " + inputPath);
+
+
+
+
+
+
+
+
 
 
 
@@ -386,7 +766,31 @@ namespace SvgExportExample
 
 
 
+
+
+
+
+
+
+
+
             }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -410,7 +814,23 @@ namespace SvgExportExample
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -426,7 +846,23 @@ namespace SvgExportExample
 
 
 
+
+
+
+
+
+
+
+
                 using (Presentation pres = new Presentation(inputPath))
+
+
+
+
+
+
+
+
 
 
 
@@ -442,7 +878,23 @@ namespace SvgExportExample
 
 
 
+
+
+
+
+
+
+
+
                     // Create SVG export options (default settings)
+
+
+
+
+
+
+
+
 
 
 
@@ -466,7 +918,31 @@ namespace SvgExportExample
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     // Export the first slide as SVG with the specified options
+
+
+
+
+
+
+
+
 
 
 
@@ -482,6 +958,14 @@ namespace SvgExportExample
 
 
 
+
+
+
+
+
+
+
+
                     {
 
 
@@ -490,7 +974,23 @@ namespace SvgExportExample
 
 
 
+
+
+
+
+
+
+
+
                         pres.Slides[0].WriteAsSvg(fs, svgOptions);
+
+
+
+
+
+
+
+
 
 
 
@@ -514,7 +1014,31 @@ namespace SvgExportExample
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     // Save the presentation before exiting (no changes made)
+
+
+
+
+
+
+
+
 
 
 
@@ -530,6 +1054,14 @@ namespace SvgExportExample
 
 
 
+
+
+
+
+
+
+
+
                 }
 
 
@@ -538,7 +1070,23 @@ namespace SvgExportExample
 
 
 
+
+
+
+
+
+
+
+
             }
+
+
+
+
+
+
+
+
 
 
 
@@ -554,7 +1102,23 @@ namespace SvgExportExample
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -570,6 +1134,14 @@ namespace SvgExportExample
 
 
 
+
+
+
+
+
+
+
+
                 Console.WriteLine("The specified file format is not supported for SVG conversion.");
 
 
@@ -578,7 +1150,23 @@ namespace SvgExportExample
 
 
 
+
+
+
+
+
+
+
+
             }
+
+
+
+
+
+
+
+
 
 
 
@@ -594,7 +1182,23 @@ namespace SvgExportExample
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -610,7 +1214,23 @@ namespace SvgExportExample
 
 
 
+
+
+
+
+
+
+
+
                 Console.WriteLine("An error occurred: " + ex.Message);
+
+
+
+
+
+
+
+
 
 
 
@@ -626,7 +1246,23 @@ namespace SvgExportExample
 
 
 
+
+
+
+
+
+
+
+
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -642,7 +1278,23 @@ namespace SvgExportExample
 
 
 
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
 
 
 
