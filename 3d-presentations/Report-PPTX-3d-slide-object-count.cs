@@ -9,6 +9,18 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 // Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Report PPTX 3D slide object count using C#
 
@@ -18,7 +30,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -34,7 +62,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // Demonstrates how to count 3‑dimensional objects on each slide of a PPTX file
+
+
+
+
+
+
+
+
 
 
 
@@ -50,7 +94,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // through its slides, checks each shape for a ThreeDFormat, reports the count per
+
+
+
+
+
+
+
+
 
 
 
@@ -66,6 +126,14 @@
 
 
 
+
+
+
+
+
+
+
+
 // validate 3D content in PowerPoint files.
 
 
@@ -74,7 +142,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -90,7 +174,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // C#, PowerPoint, PPTX, Aspose.Slides for .NET, Report, 3D, Slide, Object,
+
+
+
+
+
+
+
+
 
 
 
@@ -106,7 +206,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -122,7 +238,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Generate reports of 3D object usage in PowerPoint presentations.
+
+
+
+
+
+
+
+
 
 
 
@@ -138,7 +270,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Build automation tools for PPTX content analysis in .NET applications.
+
+
+
+
+
+
+
+
 
 
 
@@ -154,7 +302,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // -----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
 
 
 
@@ -170,6 +334,14 @@ using System;
 
 
 
+
+
+
+
+
+
+
+
 using System.IO;
 
 
@@ -178,7 +350,23 @@ using System.IO;
 
 
 
+
+
+
+
+
+
+
+
 using Aspose.Slides;
+
+
+
+
+
+
+
+
 
 
 
@@ -202,7 +390,31 @@ using Aspose.Slides.Export;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Program
+
+
+
+
+
+
+
+
 
 
 
@@ -218,7 +430,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
     static void Main(string[] args)
+
+
+
+
+
+
+
+
 
 
 
@@ -234,7 +462,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         // Determine input file path (first argument or default)
+
+
+
+
+
+
+
+
 
 
 
@@ -258,7 +502,31 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         // Check if the file exists
+
+
+
+
+
+
+
+
 
 
 
@@ -274,7 +542,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         {
+
+
+
+
+
+
+
+
 
 
 
@@ -290,6 +574,14 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             return;
 
 
@@ -298,7 +590,31 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -322,7 +638,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         {
+
+
+
+
+
+
+
+
 
 
 
@@ -338,7 +670,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             using (var presentation = new Presentation(inputPath))
+
+
+
+
+
+
+
+
 
 
 
@@ -354,7 +702,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                 // Iterate through each slide
+
+
+
+
+
+
+
+
 
 
 
@@ -370,6 +734,14 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                 {
 
 
@@ -378,7 +750,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                     var slide = presentation.Slides[i];
+
+
+
+
+
+
+
+
 
 
 
@@ -402,7 +790,31 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     // Count shapes that have a 3D format
+
+
+
+
+
+
+
+
 
 
 
@@ -418,7 +830,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                     {
+
+
+
+
+
+
+
+
 
 
 
@@ -434,7 +862,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                             count3D++;
+
+
+
+
+
+
+
+
 
 
 
@@ -458,7 +902,31 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     Console.WriteLine($"Slide {i + 1}: {count3D} 3D object(s)");
+
+
+
+
+
+
+
+
 
 
 
@@ -482,7 +950,31 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 // Save the presentation before exiting
+
+
+
+
+
+
+
+
 
 
 
@@ -498,6 +990,14 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             }
 
 
@@ -506,7 +1006,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -522,6 +1038,14 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         catch (Aspose.Slides.PptxUnsupportedFormatException ex)
 
 
@@ -530,7 +1054,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         {
+
+
+
+
+
+
+
+
 
 
 
@@ -546,7 +1086,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -562,7 +1118,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         {
+
+
+
+
+
+
+
+
 
 
 
@@ -578,7 +1150,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -594,7 +1182,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         catch (Exception ex)
+
+
+
+
+
+
+
+
 
 
 
@@ -610,7 +1214,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             Console.WriteLine("Error: " + ex.Message);
+
+
+
+
+
+
+
+
 
 
 
@@ -626,6 +1246,14 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
     }
 
 
@@ -634,7 +1262,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
 
 
 
