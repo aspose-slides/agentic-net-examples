@@ -3,12 +3,26 @@
 
 
 
+
+
+
+
+
+
 // Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Rotate PPTX 3d shapes around y axis using C#
 
 
 
+
+
+
+
 //
+
+
+
+
 
 
 
@@ -16,7 +30,15 @@
 
 
 
+
+
+
+
 // Demonstrates how to rotate 3D shapes around the Y axis in a PPTX file using
+
+
+
+
 
 
 
@@ -24,7 +46,15 @@
 
 
 
+
+
+
+
 // 45‑degree Y‑axis rotation to each shape's 3D format, and saves the result.
+
+
+
+
 
 
 
@@ -32,11 +62,23 @@
 
 
 
+
+
+
+
 // applications.
 
 
 
+
+
+
+
 //
+
+
+
+
 
 
 
@@ -44,7 +86,15 @@
 
 
 
+
+
+
+
 // C#, PowerPoint, PPTX, Aspose.Slides for .NET, Rotate, 3D, Shapes, Y-Axis,
+
+
+
+
 
 
 
@@ -52,7 +102,15 @@
 
 
 
+
+
+
+
 //
+
+
+
+
 
 
 
@@ -60,7 +118,15 @@
 
 
 
+
+
+
+
 // - Automate rotating PPTX 3D shapes around the Y axis.
+
+
+
+
 
 
 
@@ -68,11 +134,23 @@
 
 
 
+
+
+
+
 // - Generate or transform PPTX files with custom 3D rotations in .NET.
 
 
 
+
+
+
+
 // - Validate 3D presentation workflows before publishing or integration.
+
+
+
+
 
 
 
@@ -84,7 +162,19 @@
 
 
 
+
+
+
+
+
+
+
+
 using System;
+
+
+
+
 
 
 
@@ -92,7 +182,15 @@ using System.IO;
 
 
 
+
+
+
+
 using Aspose.Slides;
+
+
+
+
 
 
 
@@ -104,7 +202,19 @@ using Aspose.Slides.Export;
 
 
 
+
+
+
+
+
+
+
+
 class Program
+
+
+
+
 
 
 
@@ -112,7 +222,15 @@ class Program
 
 
 
+
+
+
+
     static void Main()
+
+
+
+
 
 
 
@@ -120,7 +238,15 @@ class Program
 
 
 
+
+
+
+
         string inputPath = "input.pptx";
+
+
+
+
 
 
 
@@ -132,7 +258,19 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         if (!File.Exists(inputPath))
+
+
+
+
 
 
 
@@ -140,7 +278,15 @@ class Program
 
 
 
+
+
+
+
             Console.WriteLine("Input file does not exist.");
+
+
+
+
 
 
 
@@ -148,7 +294,19 @@ class Program
 
 
 
+
+
+
+
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -160,7 +318,15 @@ class Program
 
 
 
+
+
+
+
         {
+
+
+
+
 
 
 
@@ -168,7 +334,15 @@ class Program
 
 
 
+
+
+
+
             foreach (var slide in presentation.Slides)
+
+
+
+
 
 
 
@@ -176,7 +350,15 @@ class Program
 
 
 
+
+
+
+
                 foreach (var shape in slide.Shapes)
+
+
+
+
 
 
 
@@ -184,7 +366,15 @@ class Program
 
 
 
+
+
+
+
                     // Apply 45-degree rotation around Y-axis
+
+
+
+
 
 
 
@@ -192,11 +382,27 @@ class Program
 
 
 
+
+
+
+
                 }
 
 
 
+
+
+
+
             }
+
+
+
+
+
+
+
+
 
 
 
@@ -208,7 +414,15 @@ class Program
 
 
 
+
+
+
+
             var outDir = Path.GetDirectoryName(Path.GetFullPath(outputPath));
+
+
+
+
 
 
 
@@ -216,11 +430,23 @@ class Program
 
 
 
+
+
+
+
             {
 
 
 
+
+
+
+
                 Directory.CreateDirectory(outDir);
+
+
+
+
 
 
 
@@ -232,11 +458,27 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             presentation.Save(outputPath, SaveFormat.Pptx);
 
 
 
+
+
+
+
         }
+
+
+
+
 
 
 
@@ -244,7 +486,15 @@ class Program
 
 
 
+
+
+
+
         {
+
+
+
+
 
 
 
@@ -252,7 +502,15 @@ class Program
 
 
 
+
+
+
+
             Console.WriteLine("Error: " + ex.Message);
+
+
+
+
 
 
 
@@ -260,11 +518,23 @@ class Program
 
 
 
+
+
+
+
     }
 
 
 
+
+
+
+
 }
+
+
+
+
 
 
 
