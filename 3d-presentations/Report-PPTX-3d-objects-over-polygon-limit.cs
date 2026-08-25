@@ -9,6 +9,18 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 // Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Report PPTX 3d objects over polygon limit using C#
 
@@ -18,7 +30,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -34,7 +62,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // Demonstrates how to scan a PowerPoint presentation for 3‑D shapes whose
+
+
+
+
+
+
+
+
 
 
 
@@ -50,7 +94,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // shape name and polygon count. The example uses Aspose.Slides for .NET to
+
+
+
+
+
+
+
+
 
 
 
@@ -66,7 +126,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // Developers can adapt this pattern to validate 3‑D content before publishing
+
+
+
+
+
+
+
+
 
 
 
@@ -82,7 +158,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -98,7 +190,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // C#, PowerPoint, PPTX, Aspose.Slides for .NET, 3D objects, Polygon limit,
+
+
+
+
+
+
+
+
 
 
 
@@ -114,7 +222,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -130,7 +254,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Detect and report 3‑D shapes that exceed polygon limits in PPTX files.
+
+
+
+
+
+
+
+
 
 
 
@@ -146,7 +286,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Build tools that enforce rendering performance constraints for 3‑D content.
+
+
+
+
+
+
+
+
 
 
 
@@ -162,7 +318,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // -----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
 
 
 
@@ -178,6 +350,14 @@ using System;
 
 
 
+
+
+
+
+
+
+
+
 using System.IO;
 
 
@@ -186,7 +366,23 @@ using System.IO;
 
 
 
+
+
+
+
+
+
+
+
 using Aspose.Slides;
+
+
+
+
+
+
+
+
 
 
 
@@ -210,7 +406,31 @@ using Aspose.Slides.Export;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 namespace Report3DObjects
+
+
+
+
+
+
+
+
 
 
 
@@ -226,7 +446,23 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
     class Program
+
+
+
+
+
+
+
+
 
 
 
@@ -242,7 +478,23 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
         static void Main(string[] args)
+
+
+
+
+
+
+
+
 
 
 
@@ -258,7 +510,23 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
             // Path to the input presentation file (first argument or default)
+
+
+
+
+
+
+
+
 
 
 
@@ -282,7 +550,31 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Verify that the file exists
+
+
+
+
+
+
+
+
 
 
 
@@ -298,7 +590,23 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -314,6 +622,14 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
                 return;
 
 
@@ -322,7 +638,31 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
             }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -346,7 +686,31 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
             int polygonThreshold = 1000;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -370,7 +734,23 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
             try
+
+
+
+
+
+
+
+
 
 
 
@@ -386,6 +766,14 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
                 using (Presentation presentation = new Presentation(inputPath))
 
 
@@ -394,7 +782,23 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
                 {
+
+
+
+
+
+
+
+
 
 
 
@@ -418,7 +822,31 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     // Iterate through all slides
+
+
+
+
+
+
+
+
 
 
 
@@ -434,7 +862,23 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
                     {
+
+
+
+
+
+
+
+
 
 
 
@@ -458,7 +902,31 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                         // Iterate through all shapes on the slide
+
+
+
+
+
+
+
+
 
 
 
@@ -474,7 +942,23 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
                         {
+
+
+
+
+
+
+
+
 
 
 
@@ -498,7 +982,31 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                             // Check if the shape has 3‑D formatting (i.e., is a 3‑D object)
+
+
+
+
+
+
+
+
 
 
 
@@ -514,7 +1022,23 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
                             {
+
+
+
+
+
+
+
+
 
 
 
@@ -530,7 +1054,23 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
                                 // If such an API becomes available, replace the placeholder below with the actual value.
+
+
+
+
+
+
+
+
 
 
 
@@ -554,7 +1094,31 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                 // Report shapes that exceed the threshold
+
+
+
+
+
+
+
+
 
 
 
@@ -570,7 +1134,23 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
                                 {
+
+
+
+
+
+
+
+
 
 
 
@@ -586,7 +1166,23 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
                                     Console.WriteLine("Slide {0}, Shape \"{1}\" exceeds polygon threshold. Polygon count: {2}",
+
+
+
+
+
+
+
+
 
 
 
@@ -602,7 +1198,23 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
                                         shape.Name,
+
+
+
+
+
+
+
+
 
 
 
@@ -618,7 +1230,23 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
                                 }
+
+
+
+
+
+
+
+
 
 
 
@@ -634,6 +1262,14 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
                         }
 
 
@@ -642,7 +1278,31 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
                     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -666,6 +1326,14 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
                     {
 
 
@@ -674,7 +1342,23 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
                         Console.WriteLine("No 3‑D objects exceed the polygon count threshold of " + polygonThreshold + ".");
+
+
+
+
+
+
+
+
 
 
 
@@ -698,7 +1382,31 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     // Save the (potentially unchanged) presentation before exiting
+
+
+
+
+
+
+
+
 
 
 
@@ -714,7 +1422,23 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
                     presentation.Save(outputPath, SaveFormat.Pptx);
+
+
+
+
+
+
+
+
 
 
 
@@ -730,7 +1454,23 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
             }
+
+
+
+
+
+
+
+
 
 
 
@@ -746,7 +1486,23 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -762,7 +1518,23 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
             }
+
+
+
+
+
+
+
+
 
 
 
@@ -778,7 +1550,23 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -794,7 +1582,23 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
             }
+
+
+
+
+
+
+
+
 
 
 
@@ -810,7 +1614,23 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -826,7 +1646,23 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
             }
+
+
+
+
+
+
+
+
 
 
 
@@ -842,6 +1678,14 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
     }
 
 
@@ -850,7 +1694,23 @@ namespace Report3DObjects
 
 
 
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
 
 
 
