@@ -3,12 +3,26 @@
 
 
 
+
+
+
+
+
+
 // Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Replace PPTX 3d default lights with directional using C#
 
 
 
+
+
+
+
 //
+
+
+
+
 
 
 
@@ -16,7 +30,15 @@
 
 
 
+
+
+
+
 // Demonstrates how to replace the default 3D lighting of shapes in a PPTX
+
+
+
+
 
 
 
@@ -24,7 +46,15 @@
 
 
 
+
+
+
+
 // The example loads a presentation, iterates through all shapes on each slide,
+
+
+
+
 
 
 
@@ -32,11 +62,23 @@
 
 
 
+
+
+
+
 // This pattern can be used to automate lighting adjustments in PowerPoint files.
 
 
 
+
+
+
+
 //
+
+
+
+
 
 
 
@@ -44,7 +86,15 @@
 
 
 
+
+
+
+
 // C#, PowerPoint, PPTX, Aspose.Slides for .NET, Replace, 3D Lights, Directional Light,
+
+
+
+
 
 
 
@@ -52,7 +102,15 @@
 
 
 
+
+
+
+
 //
+
+
+
+
 
 
 
@@ -60,7 +118,15 @@
 
 
 
+
+
+
+
 // - Automate replacement of default 3D lights with a directional light in PPTX files.
+
+
+
+
 
 
 
@@ -68,7 +134,15 @@
 
 
 
+
+
+
+
 // - Generate or transform PPTX files with customized 3D lighting in .NET applications.
+
+
+
+
 
 
 
@@ -76,7 +150,15 @@
 
 
 
+
+
+
+
 // -----------------------------------------------------------------------------
+
+
+
+
 
 
 
@@ -84,11 +166,23 @@ using System;
 
 
 
+
+
+
+
 using System.IO;
 
 
 
+
+
+
+
 using Aspose.Slides;
+
+
+
+
 
 
 
@@ -100,7 +194,19 @@ using Aspose.Slides.Export;
 
 
 
+
+
+
+
+
+
+
+
 namespace Replace3DLights
+
+
+
+
 
 
 
@@ -108,7 +214,15 @@ namespace Replace3DLights
 
 
 
+
+
+
+
     class Program
+
+
+
+
 
 
 
@@ -116,7 +230,15 @@ namespace Replace3DLights
 
 
 
+
+
+
+
         static void Main(string[] args)
+
+
+
+
 
 
 
@@ -124,7 +246,15 @@ namespace Replace3DLights
 
 
 
+
+
+
+
             string inputPath;
+
+
+
+
 
 
 
@@ -132,7 +262,15 @@ namespace Replace3DLights
 
 
 
+
+
+
+
             {
+
+
+
+
 
 
 
@@ -140,7 +278,15 @@ namespace Replace3DLights
 
 
 
+
+
+
+
             }
+
+
+
+
 
 
 
@@ -148,7 +294,15 @@ namespace Replace3DLights
 
 
 
+
+
+
+
             {
+
+
+
+
 
 
 
@@ -156,7 +310,19 @@ namespace Replace3DLights
 
 
 
+
+
+
+
             }
+
+
+
+
+
+
+
+
 
 
 
@@ -168,7 +334,15 @@ namespace Replace3DLights
 
 
 
+
+
+
+
             {
+
+
+
+
 
 
 
@@ -176,11 +350,27 @@ namespace Replace3DLights
 
 
 
+
+
+
+
                 return;
 
 
 
+
+
+
+
             }
+
+
+
+
+
+
+
+
 
 
 
@@ -192,7 +382,15 @@ namespace Replace3DLights
 
 
 
+
+
+
+
             {
+
+
+
+
 
 
 
@@ -200,7 +398,15 @@ namespace Replace3DLights
 
 
 
+
+
+
+
                 {
+
+
+
+
 
 
 
@@ -208,7 +414,15 @@ namespace Replace3DLights
 
 
 
+
+
+
+
                     for (int i = 0; i < slideCount; i++)
+
+
+
+
 
 
 
@@ -216,7 +430,15 @@ namespace Replace3DLights
 
 
 
+
+
+
+
                         IShape[] shapes = pres.Slides[i].Shapes.ToArray();
+
+
+
+
 
 
 
@@ -224,7 +446,15 @@ namespace Replace3DLights
 
 
 
+
+
+
+
                         {
+
+
+
+
 
 
 
@@ -232,7 +462,15 @@ namespace Replace3DLights
 
 
 
+
+
+
+
                             if (shape.ThreeDFormat != null)
+
+
+
+
 
 
 
@@ -240,7 +478,15 @@ namespace Replace3DLights
 
 
 
+
+
+
+
                                 // Set a single directional light source
+
+
+
+
 
 
 
@@ -248,7 +494,15 @@ namespace Replace3DLights
 
 
 
+
+
+
+
                                 shape.ThreeDFormat.LightRig.Direction = LightingDirection.Top;
+
+
+
+
 
 
 
@@ -256,7 +510,15 @@ namespace Replace3DLights
 
 
 
+
+
+
+
                         }
+
+
+
+
 
 
 
@@ -268,7 +530,19 @@ namespace Replace3DLights
 
 
 
+
+
+
+
+
+
+
+
                     string outputPath = "output.pptx";
+
+
+
+
 
 
 
@@ -276,7 +550,15 @@ namespace Replace3DLights
 
 
 
+
+
+
+
                     Console.WriteLine("Presentation saved to: " + outputPath);
+
+
+
+
 
 
 
@@ -284,7 +566,15 @@ namespace Replace3DLights
 
 
 
+
+
+
+
             }
+
+
+
+
 
 
 
@@ -292,7 +582,15 @@ namespace Replace3DLights
 
 
 
+
+
+
+
             {
+
+
+
+
 
 
 
@@ -300,7 +598,15 @@ namespace Replace3DLights
 
 
 
+
+
+
+
             }
+
+
+
+
 
 
 
@@ -308,7 +614,15 @@ namespace Replace3DLights
 
 
 
+
+
+
+
             {
+
+
+
+
 
 
 
@@ -316,7 +630,15 @@ namespace Replace3DLights
 
 
 
+
+
+
+
             }
+
+
+
+
 
 
 
@@ -324,7 +646,15 @@ namespace Replace3DLights
 
 
 
+
+
+
+
             {
+
+
+
+
 
 
 
@@ -332,7 +662,15 @@ namespace Replace3DLights
 
 
 
+
+
+
+
             }
+
+
+
+
 
 
 
@@ -340,11 +678,23 @@ namespace Replace3DLights
 
 
 
+
+
+
+
     }
 
 
 
+
+
+
+
 }
+
+
+
+
 
 
 

@@ -3,12 +3,26 @@
 
 
 
+
+
+
+
+
+
 // Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Export PPTX 3d models to OBJ files using C#
 
 
 
+
+
+
+
 //
+
+
+
+
 
 
 
@@ -16,7 +30,15 @@
 
 
 
+
+
+
+
 // Demonstrates how to locate 3D models within a PPTX presentation and
+
+
+
+
 
 
 
@@ -24,7 +46,15 @@
 
 
 
+
+
+
+
 // iterates through slides and shapes, identifies shapes with a 3D format,
+
+
+
+
 
 
 
@@ -32,11 +62,23 @@
 
 
 
+
+
+
+
 // saves the presentation after processing.
 
 
 
+
+
+
+
 //
+
+
+
+
 
 
 
@@ -44,7 +86,15 @@
 
 
 
+
+
+
+
 // C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, 3D models, OBJ, 
+
+
+
+
 
 
 
@@ -52,7 +102,15 @@
 
 
 
+
+
+
+
 //
+
+
+
+
 
 
 
@@ -60,7 +118,15 @@
 
 
 
+
+
+
+
 // - Automate extraction of 3D models from PPTX files to OBJ format.
+
+
+
+
 
 
 
@@ -68,7 +134,15 @@
 
 
 
+
+
+
+
 // - Integrate 3D model handling into .NET applications.
+
+
+
+
 
 
 
@@ -76,7 +150,15 @@
 
 
 
+
+
+
+
 // -----------------------------------------------------------------------------
+
+
+
+
 
 
 
@@ -84,11 +166,23 @@ using System;
 
 
 
+
+
+
+
 using System.IO;
 
 
 
+
+
+
+
 using Aspose.Slides;
+
+
+
+
 
 
 
@@ -100,7 +194,19 @@ using Aspose.Slides.Export;
 
 
 
+
+
+
+
+
+
+
+
 class Program
+
+
+
+
 
 
 
@@ -108,7 +214,15 @@ class Program
 
 
 
+
+
+
+
     static void Main(string[] args)
+
+
+
+
 
 
 
@@ -116,7 +230,15 @@ class Program
 
 
 
+
+
+
+
         // Input presentation path
+
+
+
+
 
 
 
@@ -128,7 +250,19 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         // Verify that the input file exists
+
+
+
+
 
 
 
@@ -136,7 +270,15 @@ class Program
 
 
 
+
+
+
+
         {
+
+
+
+
 
 
 
@@ -144,11 +286,27 @@ class Program
 
 
 
+
+
+
+
             return;
 
 
 
+
+
+
+
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -160,11 +318,23 @@ class Program
 
 
 
+
+
+
+
         {
 
 
 
+
+
+
+
             // Load the presentation
+
+
+
+
 
 
 
@@ -176,7 +346,19 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             // Iterate through slides and shapes to find 3D models
+
+
+
+
 
 
 
@@ -184,7 +366,15 @@ class Program
 
 
 
+
+
+
+
             foreach (Aspose.Slides.ISlide slide in pres.Slides)
+
+
+
+
 
 
 
@@ -192,7 +382,15 @@ class Program
 
 
 
+
+
+
+
                 int shapeIdx = 0;
+
+
+
+
 
 
 
@@ -200,7 +398,15 @@ class Program
 
 
 
+
+
+
+
                 {
+
+
+
+
 
 
 
@@ -208,7 +414,15 @@ class Program
 
 
 
+
+
+
+
                     if (shape.ThreeDFormat != null)
+
+
+
+
 
 
 
@@ -216,7 +430,15 @@ class Program
 
 
 
+
+
+
+
                         // Construct output OBJ file name
+
+
+
+
 
 
 
@@ -228,7 +450,19 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                         // TODO: Extract vertex coordinates from the 3D shape and write them to the OBJ file.
+
+
+
+
 
 
 
@@ -236,7 +470,15 @@ class Program
 
 
 
+
+
+
+
                         // Example placeholder:
+
+
+
+
 
 
 
@@ -244,7 +486,15 @@ class Program
 
 
 
+
+
+
+
                         // {
+
+
+
+
 
 
 
@@ -252,7 +502,15 @@ class Program
 
 
 
+
+
+
+
                         //     // Write vertex data...
+
+
+
+
 
 
 
@@ -264,7 +522,19 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                         Console.WriteLine($"3D shape found on slide {slideIdx}, shape {shapeIdx}. Export to {objPath} (implementation pending).");
+
+
+
+
 
 
 
@@ -272,7 +542,15 @@ class Program
 
 
 
+
+
+
+
                     shapeIdx++;
+
+
+
+
 
 
 
@@ -280,7 +558,15 @@ class Program
 
 
 
+
+
+
+
                 slideIdx++;
+
+
+
+
 
 
 
@@ -292,7 +578,19 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             // Save the presentation before exiting (as required)
+
+
+
+
 
 
 
@@ -300,7 +598,15 @@ class Program
 
 
 
+
+
+
+
             pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+
+
+
+
 
 
 
@@ -308,7 +614,15 @@ class Program
 
 
 
+
+
+
+
         }
+
+
+
+
 
 
 
@@ -316,7 +630,15 @@ class Program
 
 
 
+
+
+
+
         {
+
+
+
+
 
 
 
@@ -324,11 +646,23 @@ class Program
 
 
 
+
+
+
+
             Console.WriteLine("The presentation format is not supported for this operation.");
 
 
 
+
+
+
+
         }
+
+
+
+
 
 
 
@@ -336,7 +670,15 @@ class Program
 
 
 
+
+
+
+
         {
+
+
+
+
 
 
 
@@ -344,7 +686,15 @@ class Program
 
 
 
+
+
+
+
             Console.WriteLine("Error: " + ex.Message);
+
+
+
+
 
 
 
@@ -352,11 +702,23 @@ class Program
 
 
 
+
+
+
+
     }
 
 
 
+
+
+
+
 }
+
+
+
+
 
 
 

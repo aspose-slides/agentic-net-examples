@@ -259,5 +259,9 @@ Generated: 2026-08-25
 
 Generated examples were tested with Aspose.Slides for .NET 26.8.0 on 2026-08-25.
 
-No examples are currently quarantined.
+The following examples failed latest-version validation or were deleted during review and are removed from generated example listings:
+
+- `3d-presentations/Export-PPTX-3d-scene-to-OBJ.cs`
+
+Local quarantine files are intentionally not committed or pushed.
 <!-- latest-slides-verification:end -->

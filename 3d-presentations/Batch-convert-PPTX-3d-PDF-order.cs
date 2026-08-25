@@ -3,12 +3,26 @@
 
 
 
+
+
+
+
+
+
 // Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Batch convert PPTX to PDF order using C#
 
 
 
+
+
+
+
 //
+
+
+
+
 
 
 
@@ -16,7 +30,15 @@
 
 
 
+
+
+
+
 // Demonstrates how to batch convert PPTX files to PDF while preserving slide
+
+
+
+
 
 
 
@@ -24,7 +46,15 @@
 
 
 
+
+
+
+
 // saves it as a PDF, and writes the output to a dedicated folder. This pattern
+
+
+
+
 
 
 
@@ -32,11 +62,23 @@
 
 
 
+
+
+
+
 // presentation conversion into .NET applications.
 
 
 
+
+
+
+
 //
+
+
+
+
 
 
 
@@ -44,7 +86,15 @@
 
 
 
+
+
+
+
 // C#, PowerPoint, PPTX, PDF, Aspose.Slides for .NET, Batch, Convert, Presentation
+
+
+
+
 
 
 
@@ -52,7 +102,15 @@
 
 
 
+
+
+
+
 //
+
+
+
+
 
 
 
@@ -60,7 +118,15 @@
 
 
 
+
+
+
+
 // - Automate batch conversion of PPTX files to PDF preserving slide order.
+
+
+
+
 
 
 
@@ -68,7 +134,15 @@
 
 
 
+
+
+
+
 // - Generate PDF versions of presentations in .NET applications.
+
+
+
+
 
 
 
@@ -76,7 +150,15 @@
 
 
 
+
+
+
+
 // -----------------------------------------------------------------------------
+
+
+
+
 
 
 
@@ -84,7 +166,15 @@ using System;
 
 
 
+
+
+
+
 using System.IO;
+
+
+
+
 
 
 
@@ -96,7 +186,19 @@ using Aspose.Slides.Export;
 
 
 
+
+
+
+
+
+
+
+
 class Program
+
+
+
+
 
 
 
@@ -104,7 +206,15 @@ class Program
 
 
 
+
+
+
+
     static void Main(string[] args)
+
+
+
+
 
 
 
@@ -112,7 +222,15 @@ class Program
 
 
 
+
+
+
+
         // Determine the input folder: use first argument if provided, otherwise current directory
+
+
+
+
 
 
 
@@ -120,11 +238,23 @@ class Program
 
 
 
+
+
+
+
         if (args.Length > 0 && !string.IsNullOrEmpty(args[0]))
 
 
 
+
+
+
+
         {
+
+
+
+
 
 
 
@@ -132,7 +262,15 @@ class Program
 
 
 
+
+
+
+
         }
+
+
+
+
 
 
 
@@ -140,7 +278,15 @@ class Program
 
 
 
+
+
+
+
         {
+
+
+
+
 
 
 
@@ -148,7 +294,19 @@ class Program
 
 
 
+
+
+
+
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -160,7 +318,15 @@ class Program
 
 
 
+
+
+
+
         if (!Directory.Exists(inputFolder))
+
+
+
+
 
 
 
@@ -168,7 +334,15 @@ class Program
 
 
 
+
+
+
+
             Console.WriteLine("Input folder does not exist: " + inputFolder);
+
+
+
+
 
 
 
@@ -176,7 +350,19 @@ class Program
 
 
 
+
+
+
+
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -188,7 +374,15 @@ class Program
 
 
 
+
+
+
+
         string outputFolder = Path.Combine(Environment.CurrentDirectory, "PdfOutput");
+
+
+
+
 
 
 
@@ -196,7 +390,15 @@ class Program
 
 
 
+
+
+
+
         {
+
+
+
+
 
 
 
@@ -204,7 +406,19 @@ class Program
 
 
 
+
+
+
+
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -216,7 +430,15 @@ class Program
 
 
 
+
+
+
+
         string[] pptxFiles = Directory.GetFiles(inputFolder, "*.pptx");
+
+
+
+
 
 
 
@@ -224,7 +446,15 @@ class Program
 
 
 
+
+
+
+
         {
+
+
+
+
 
 
 
@@ -232,7 +462,15 @@ class Program
 
 
 
+
+
+
+
             try
+
+
+
+
 
 
 
@@ -240,7 +478,15 @@ class Program
 
 
 
+
+
+
+
                 // Load the presentation
+
+
+
+
 
 
 
@@ -252,11 +498,27 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                 // Build the output PDF file path
 
 
 
+
+
+
+
                 string fileNameWithoutExt = Path.GetFileNameWithoutExtension(pptxPath);
+
+
+
+
 
 
 
@@ -268,7 +530,19 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                 // Save the presentation as PDF (preserves slide order)
+
+
+
+
 
 
 
@@ -280,7 +554,19 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                 // Dispose the presentation before moving to the next file
+
+
+
+
 
 
 
@@ -292,11 +578,27 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                 Console.WriteLine("Converted: " + pptxPath + " -> " + pdfPath);
 
 
 
+
+
+
+
             }
+
+
+
+
 
 
 
@@ -304,7 +606,15 @@ class Program
 
 
 
+
+
+
+
             {
+
+
+
+
 
 
 
@@ -312,11 +622,23 @@ class Program
 
 
 
+
+
+
+
                 Console.WriteLine("File format not supported: " + pptxPath);
 
 
 
+
+
+
+
             }
+
+
+
+
 
 
 
@@ -324,7 +646,15 @@ class Program
 
 
 
+
+
+
+
             {
+
+
+
+
 
 
 
@@ -332,7 +662,15 @@ class Program
 
 
 
+
+
+
+
                 Console.WriteLine("Error processing file: " + pptxPath);
+
+
+
+
 
 
 
@@ -340,7 +678,15 @@ class Program
 
 
 
+
+
+
+
             }
+
+
+
+
 
 
 
@@ -348,11 +694,23 @@ class Program
 
 
 
+
+
+
+
     }
 
 
 
+
+
+
+
 }
+
+
+
+
 
 
 
