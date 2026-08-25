@@ -9,6 +9,18 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 // Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Export PPTX 3D rotation video using C#
 
@@ -18,7 +30,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -34,7 +62,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // Demonstrates how to add a 3D rotation animation to a shape in a PPTX file,
+
+
+
+
+
+
+
+
 
 
 
@@ -50,7 +94,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // images using Aspose.Slides for .NET. The example also saves the modified
+
+
+
+
+
+
+
+
 
 
 
@@ -66,6 +126,14 @@
 
 
 
+
+
+
+
+
+
+
+
 // (e.g., with FFmpeg) to produce a rotation video of the 3‑D object.
 
 
@@ -74,7 +142,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -90,7 +174,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // C#, Aspose.Slides, PowerPoint, PPTX, 3D rotation, animation, video export,
+
+
+
+
+
+
+
+
 
 
 
@@ -106,7 +206,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -122,7 +238,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Automate creation of rotation videos from PowerPoint 3‑D objects.
+
+
+
+
+
+
+
+
 
 
 
@@ -138,7 +270,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Integrate 3‑D animation export into C# tools and services.
+
+
+
+
+
+
+
+
 
 
 
@@ -154,7 +302,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // -----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
 
 
 
@@ -170,7 +334,23 @@ using System;
 
 
 
+
+
+
+
+
+
+
+
 using System.IO;
+
+
+
+
+
+
+
+
 
 
 
@@ -186,7 +366,23 @@ using Aspose.Slides;
 
 
 
+
+
+
+
+
+
+
+
 using Aspose.Slides.Animation;
+
+
+
+
+
+
+
+
 
 
 
@@ -210,7 +406,31 @@ using Aspose.Slides.Export;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 namespace Export3DRotationVideo
+
+
+
+
+
+
+
+
 
 
 
@@ -226,7 +446,23 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
     class Program
+
+
+
+
+
+
+
+
 
 
 
@@ -242,7 +478,23 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
         static void Main(string[] args)
+
+
+
+
+
+
+
+
 
 
 
@@ -258,7 +510,23 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
             // Input presentation path
+
+
+
+
+
+
+
+
 
 
 
@@ -274,7 +542,23 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
             // Output directory for generated frames
+
+
+
+
+
+
+
+
 
 
 
@@ -298,7 +582,31 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Verify input file exists
+
+
+
+
+
+
+
+
 
 
 
@@ -314,7 +622,23 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -330,6 +654,14 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
                 return;
 
 
@@ -338,7 +670,31 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
             }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -362,7 +718,31 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
             Directory.CreateDirectory(outputDir);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -386,7 +766,23 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -402,7 +798,23 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
                 using (Presentation presentation = new Presentation(inputPath))
+
+
+
+
+
+
+
+
 
 
 
@@ -418,7 +830,23 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
                     // Assume the first slide contains a 3D shape to animate
+
+
+
+
+
+
+
+
 
 
 
@@ -434,7 +862,23 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
                     // Use the first shape on the slide (adjust as needed)
+
+
+
+
+
+
+
+
 
 
 
@@ -458,6 +902,22 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     // Create a rotation behavior using BehaviorFactory (instance, not static)
 
 
@@ -466,7 +926,23 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
                     BehaviorFactory behaviorFactory = new BehaviorFactory();
+
+
+
+
+
+
+
+
 
 
 
@@ -490,7 +966,31 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     // Configure rotation from 0 to 360 degrees over the animation duration
+
+
+
+
+
+
+
+
 
 
 
@@ -506,6 +1006,14 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
                     rotationEffect.To = 360f;
 
 
@@ -514,7 +1022,23 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
                     // Ensure the effect does not rewind automatically
+
+
+
+
+
+
+
+
 
 
 
@@ -538,7 +1062,31 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     // Add an effect to the main sequence and attach the rotation behavior
+
+
+
+
+
+
+
+
 
 
 
@@ -554,7 +1102,23 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
                         shape,
+
+
+
+
+
+
+
+
 
 
 
@@ -570,6 +1134,14 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
                         EffectSubtype.None,
 
 
@@ -578,7 +1150,23 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
                         EffectTriggerType.AfterPrevious);
+
+
+
+
+
+
+
+
 
 
 
@@ -602,7 +1190,31 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     // Set the total duration of the animation to 10 seconds (10000 ms)
+
+
+
+
+
+
+
+
 
 
 
@@ -618,7 +1230,23 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
                     // (Aspose.Slides does not expose a direct Duration property on IEffect,
+
+
+
+
+
+
+
+
 
 
 
@@ -642,7 +1270,31 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     // Generate animation frames at 30 FPS
+
+
+
+
+
+
+
+
 
 
 
@@ -658,7 +1310,23 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
                     {
+
+
+
+
+
+
+
+
 
 
 
@@ -674,7 +1342,23 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
                         {
+
+
+
+
+
+
+
+
 
 
 
@@ -690,7 +1374,23 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
                             {
+
+
+
+
+
+
+
+
 
 
 
@@ -706,7 +1406,23 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
                                 eventArgs.GetFrame().Save(framePath, ImageFormat.Png);
+
+
+
+
+
+
+
+
 
 
 
@@ -730,7 +1446,31 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                             // Run the animation generation for all slides
+
+
+
+
+
+
+
+
 
 
 
@@ -746,7 +1486,23 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
                         }
+
+
+
+
+
+
+
+
 
 
 
@@ -770,6 +1526,22 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     // Save the (potentially modified) presentation before exiting
 
 
@@ -778,7 +1550,23 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
                     presentation.Save("output.pptx", SaveFormat.Pptx);
+
+
+
+
+
+
+
+
 
 
 
@@ -802,6 +1590,22 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 // Note: The generated PNG frames can be combined into a video using external tools (e.g., FFmpeg).
 
 
@@ -810,7 +1614,23 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
             }
+
+
+
+
+
+
+
+
 
 
 
@@ -826,7 +1646,23 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -842,7 +1678,23 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
                 Console.WriteLine("An error occurred: " + ex.Message);
+
+
+
+
+
+
+
+
 
 
 
@@ -858,7 +1710,23 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
                 // Format not supported.
+
+
+
+
+
+
+
+
 
 
 
@@ -874,7 +1742,23 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -890,7 +1774,23 @@ namespace Export3DRotationVideo
 
 
 
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
 
 
 
