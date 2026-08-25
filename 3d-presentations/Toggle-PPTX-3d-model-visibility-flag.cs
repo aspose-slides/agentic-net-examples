@@ -9,6 +9,18 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 // Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Toggle PPTX 3d model visibility flag using C#
 
@@ -18,7 +30,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -34,7 +62,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // Demonstrates how to toggle the visibility of 3‑D models in a PPTX file by
+
+
+
+
+
+
+
+
 
 
 
@@ -50,7 +94,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // example loads a presentation, optionally sets the visibility based on a
+
+
+
+
+
+
+
+
 
 
 
@@ -66,6 +126,14 @@
 
 
 
+
+
+
+
+
+
+
+
 // .NET and can be integrated into automation scripts or desktop tools.
 
 
@@ -74,7 +142,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -90,7 +174,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // C#, PowerPoint, PPTX, Aspose.Slides for .NET, Toggle, 3D Model, Visibility,
+
+
+
+
+
+
+
+
 
 
 
@@ -106,7 +206,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -122,7 +238,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Programmatically hide or show 3‑D objects in PowerPoint slides.
+
+
+
+
+
+
+
+
 
 
 
@@ -138,6 +270,14 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Validate 3‑D model settings before publishing presentations.
 
 
@@ -146,7 +286,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Integrate 3‑D visibility control into larger document‑generation workflows.
+
+
+
+
+
+
+
+
 
 
 
@@ -170,7 +326,31 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 using System;
+
+
+
+
+
+
+
+
 
 
 
@@ -186,7 +366,23 @@ using System.IO;
 
 
 
+
+
+
+
+
+
+
+
 using Aspose.Slides;
+
+
+
+
+
+
+
+
 
 
 
@@ -210,7 +406,31 @@ using Aspose.Slides.Export;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Program
+
+
+
+
+
+
+
+
 
 
 
@@ -226,7 +446,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
     static void Main(string[] args)
+
+
+
+
+
+
+
+
 
 
 
@@ -242,7 +478,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         string inputPath = "input.pptx";
+
+
+
+
+
+
+
+
 
 
 
@@ -258,7 +510,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         {
+
+
+
+
+
+
+
+
 
 
 
@@ -274,7 +542,31 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -298,7 +590,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         {
+
+
+
+
+
+
+
+
 
 
 
@@ -314,6 +622,14 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             return;
 
 
@@ -322,7 +638,31 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -346,7 +686,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         if (args.Length > 1)
+
+
+
+
+
+
+
+
 
 
 
@@ -362,7 +718,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             bool parsed;
+
+
+
+
+
+
+
+
 
 
 
@@ -378,7 +750,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -394,6 +782,14 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             }
 
 
@@ -402,7 +798,31 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -426,7 +846,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         {
+
+
+
+
+
+
+
+
 
 
 
@@ -442,7 +878,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -458,7 +910,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                 for (int i = 0; i < slide.Shapes.Count; i++)
+
+
+
+
+
+
+
+
 
 
 
@@ -474,7 +942,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                     IShape shape = slide.Shapes[i];
+
+
+
+
+
+
+
+
 
 
 
@@ -490,7 +974,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                     {
+
+
+
+
+
+
+
+
 
 
 
@@ -506,7 +1006,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                         {
+
+
+
+
+
+
+
+
 
 
 
@@ -522,7 +1038,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                         }
+
+
+
+
+
+
+
+
 
 
 
@@ -538,7 +1070,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                         {
+
+
+
+
+
+
+
+
 
 
 
@@ -554,6 +1102,14 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                         }
 
 
@@ -562,7 +1118,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                     }
+
+
+
+
+
+
+
+
 
 
 
@@ -586,7 +1158,31 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 string outputPath = "output.pptx";
+
+
+
+
+
+
+
+
 
 
 
@@ -602,6 +1198,14 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             }
 
 
@@ -610,7 +1214,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -626,7 +1246,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         {
+
+
+
+
+
+
+
+
 
 
 
@@ -642,7 +1278,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -658,7 +1310,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         {
+
+
+
+
+
+
+
+
 
 
 
@@ -674,7 +1342,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -690,7 +1374,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
 
 
 
