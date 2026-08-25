@@ -9,6 +9,18 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 // Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Add PPTX 3d circular motion path using C#
 
@@ -18,7 +30,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -34,7 +62,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // Demonstrates how to add a 3‑D circular motion path to a shape in a PPTX file 
+
+
+
+
+
+
+
+
 
 
 
@@ -50,7 +94,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // inserts a rectangle shape with 3‑D extrusion, builds a circular motion path 
+
+
+
+
+
+
+
+
 
 
 
@@ -66,6 +126,14 @@
 
 
 
+
+
+
+
+
+
+
+
 // saves the result as a PPTX file.
 
 
@@ -74,7 +142,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -90,7 +174,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // C#, PowerPoint, PPTX, Aspose.Slides for .NET, 3D, Circular Motion Path, Animation, 
+
+
+
+
+
+
+
+
 
 
 
@@ -106,7 +206,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -122,7 +238,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Automate adding 3‑D circular motion paths to PowerPoint slides.
+
+
+
+
+
+
+
+
 
 
 
@@ -138,7 +270,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Generate or modify PPTX files programmatically in .NET applications.
+
+
+
+
+
+
+
+
 
 
 
@@ -154,7 +302,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // -----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
 
 
 
@@ -170,7 +334,23 @@ using System;
 
 
 
+
+
+
+
+
+
+
+
 using System.IO;
+
+
+
+
+
+
+
+
 
 
 
@@ -186,6 +366,14 @@ using System.Drawing;
 
 
 
+
+
+
+
+
+
+
+
 using Aspose.Slides;
 
 
@@ -194,7 +382,23 @@ using Aspose.Slides;
 
 
 
+
+
+
+
+
+
+
+
 using Aspose.Slides.Export;
+
+
+
+
+
+
+
+
 
 
 
@@ -218,7 +422,31 @@ using Aspose.Slides.Animation;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Program
+
+
+
+
+
+
+
+
 
 
 
@@ -234,7 +462,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
     static void Main(string[] args)
+
+
+
+
+
+
+
+
 
 
 
@@ -250,7 +494,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         try
+
+
+
+
+
+
+
+
 
 
 
@@ -266,7 +526,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             // Create a new presentation
+
+
+
+
+
+
+
+
 
 
 
@@ -290,7 +566,31 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Get the first slide
+
+
+
+
+
+
+
+
 
 
 
@@ -314,7 +614,31 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Add a rectangle shape and configure it as a 3D object
+
+
+
+
+
+
+
+
 
 
 
@@ -330,6 +654,14 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             shape.TextFrame.Text = "3D";
 
 
@@ -338,7 +670,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             shape.ThreeDFormat.Depth = 100;
+
+
+
+
+
+
+
+
 
 
 
@@ -362,7 +710,31 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Add a motion path effect to the shape
+
+
+
+
+
+
+
+
 
 
 
@@ -378,7 +750,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             IEffect effect = timeline.MainSequence.AddEffect(
+
+
+
+
+
+
+
+
 
 
 
@@ -394,6 +782,14 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                 EffectType.PathUser,
 
 
@@ -402,7 +798,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                 EffectSubtype.None,
+
+
+
+
+
+
+
+
 
 
 
@@ -426,7 +838,31 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Get the motion effect behavior
+
+
+
+
+
+
+
+
 
 
 
@@ -450,7 +886,31 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Create a circular motion path using multiple LineTo commands (8 points)
+
+
+
+
+
+
+
+
 
 
 
@@ -474,7 +934,31 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Start from the current position
+
+
+
+
+
+
+
+
 
 
 
@@ -490,6 +974,14 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                 new PointF[] { new PointF(0, 0) },
 
 
@@ -498,7 +990,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                 MotionPathPointsType.Auto,
+
+
+
+
+
+
+
+
 
 
 
@@ -522,7 +1030,31 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Define radius (as percent of shape size) and number of segments
+
+
+
+
+
+
+
+
 
 
 
@@ -538,7 +1070,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             int segments = 8;
+
+
+
+
+
+
+
+
 
 
 
@@ -562,7 +1110,31 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             for (int i = 0; i < segments; i++)
+
+
+
+
+
+
+
+
 
 
 
@@ -578,7 +1150,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                 float x = radius * (float)Math.Cos(i * angleStep);
+
+
+
+
+
+
+
+
 
 
 
@@ -594,7 +1182,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                 motionPath.Add(MotionCommandPathType.LineTo,
+
+
+
+
+
+
+
+
 
 
 
@@ -610,6 +1214,14 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                     MotionPathPointsType.Auto,
 
 
@@ -618,7 +1230,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                     true);
+
+
+
+
+
+
+
+
 
 
 
@@ -642,7 +1270,31 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // End the path
+
+
+
+
+
+
+
+
 
 
 
@@ -666,7 +1318,31 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Assign the constructed path to the motion effect
+
+
+
+
+
+
+
+
 
 
 
@@ -690,7 +1366,31 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Save the presentation
+
+
+
+
+
+
+
+
 
 
 
@@ -706,6 +1406,14 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             presentation.Save(outPath, SaveFormat.Pptx);
 
 
@@ -714,7 +1422,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -730,7 +1454,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         {
+
+
+
+
+
+
+
+
 
 
 
@@ -746,7 +1486,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             Console.WriteLine("Error: " + ex.Message);
+
+
+
+
+
+
+
+
 
 
 
@@ -762,6 +1518,14 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
     }
 
 
@@ -770,7 +1534,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
 
 
 
