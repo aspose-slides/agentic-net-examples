@@ -9,6 +9,18 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 // Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Check PPTX 3D shapes have names using C#
 
@@ -18,7 +30,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -34,7 +62,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // Demonstrates how to verify that all 3‑D shapes in a PPTX file have non‑empty
+
+
+
+
+
+
+
+
 
 
 
@@ -50,7 +94,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // slide and shape, assigns a default name to any 3‑D shape lacking one, and
+
+
+
+
+
+
+
+
 
 
 
@@ -66,6 +126,14 @@
 
 
 
+
+
+
+
+
+
+
+
 // naming of 3‑D objects before further processing or publishing.
 
 
@@ -74,7 +142,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -90,7 +174,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // C#, PowerPoint, PPTX, Aspose.Slides for .NET, Check, Pptx, Shapes, Have, Names,
+
+
+
+
+
+
+
+
 
 
 
@@ -106,7 +206,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -122,7 +238,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Validate that 3‑D shapes in a presentation have names.
+
+
+
+
+
+
+
+
 
 
 
@@ -138,7 +270,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Prepare PPTX files for downstream automation or publishing.
+
+
+
+
+
+
+
+
 
 
 
@@ -154,7 +302,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // -----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
 
 
 
@@ -170,6 +334,14 @@ using System;
 
 
 
+
+
+
+
+
+
+
+
 using System.IO;
 
 
@@ -178,7 +350,23 @@ using System.IO;
 
 
 
+
+
+
+
+
+
+
+
 using Aspose.Slides;
+
+
+
+
+
+
+
+
 
 
 
@@ -202,7 +390,31 @@ using Aspose.Slides.Export;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 namespace Validate3DShapeNames
+
+
+
+
+
+
+
+
 
 
 
@@ -218,7 +430,23 @@ namespace Validate3DShapeNames
 
 
 
+
+
+
+
+
+
+
+
     class Program
+
+
+
+
+
+
+
+
 
 
 
@@ -234,7 +462,23 @@ namespace Validate3DShapeNames
 
 
 
+
+
+
+
+
+
+
+
         static void Main()
+
+
+
+
+
+
+
+
 
 
 
@@ -250,6 +494,14 @@ namespace Validate3DShapeNames
 
 
 
+
+
+
+
+
+
+
+
             // Input and output file paths
 
 
@@ -258,7 +510,23 @@ namespace Validate3DShapeNames
 
 
 
+
+
+
+
+
+
+
+
             string inputPath = "input.pptx";
+
+
+
+
+
+
+
+
 
 
 
@@ -282,7 +550,31 @@ namespace Validate3DShapeNames
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Verify that the input file exists
+
+
+
+
+
+
+
+
 
 
 
@@ -298,7 +590,23 @@ namespace Validate3DShapeNames
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -314,6 +622,14 @@ namespace Validate3DShapeNames
 
 
 
+
+
+
+
+
+
+
+
                 return;
 
 
@@ -322,7 +638,31 @@ namespace Validate3DShapeNames
 
 
 
+
+
+
+
+
+
+
+
             }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -346,7 +686,23 @@ namespace Validate3DShapeNames
 
 
 
+
+
+
+
+
+
+
+
             Presentation presentation = null;
+
+
+
+
+
+
+
+
 
 
 
@@ -362,7 +718,23 @@ namespace Validate3DShapeNames
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -378,7 +750,23 @@ namespace Validate3DShapeNames
 
 
 
+
+
+
+
+
+
+
+
             }
+
+
+
+
+
+
+
+
 
 
 
@@ -394,7 +782,23 @@ namespace Validate3DShapeNames
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -410,7 +814,23 @@ namespace Validate3DShapeNames
 
 
 
+
+
+
+
+
+
+
+
                 Console.WriteLine("Failed to load presentation: " + ex.Message);
+
+
+
+
+
+
+
+
 
 
 
@@ -426,6 +846,14 @@ namespace Validate3DShapeNames
 
 
 
+
+
+
+
+
+
+
+
                 return;
 
 
@@ -434,7 +862,31 @@ namespace Validate3DShapeNames
 
 
 
+
+
+
+
+
+
+
+
             }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -458,7 +910,23 @@ namespace Validate3DShapeNames
 
 
 
+
+
+
+
+
+
+
+
             for (int slideIndex = 0; slideIndex < presentation.Slides.Count; slideIndex++)
+
+
+
+
+
+
+
+
 
 
 
@@ -474,7 +942,23 @@ namespace Validate3DShapeNames
 
 
 
+
+
+
+
+
+
+
+
                 ISlide slide = presentation.Slides[slideIndex];
+
+
+
+
+
+
+
+
 
 
 
@@ -490,7 +974,23 @@ namespace Validate3DShapeNames
 
 
 
+
+
+
+
+
+
+
+
                 {
+
+
+
+
+
+
+
+
 
 
 
@@ -514,7 +1014,31 @@ namespace Validate3DShapeNames
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     // Check if the shape has 3‑D formatting
+
+
+
+
+
+
+
+
 
 
 
@@ -530,7 +1054,23 @@ namespace Validate3DShapeNames
 
 
 
+
+
+
+
+
+
+
+
                     {
+
+
+
+
+
+
+
+
 
 
 
@@ -546,7 +1086,23 @@ namespace Validate3DShapeNames
 
 
 
+
+
+
+
+
+
+
+
                         if (string.IsNullOrEmpty(shape.Name))
+
+
+
+
+
+
+
+
 
 
 
@@ -562,7 +1118,23 @@ namespace Validate3DShapeNames
 
 
 
+
+
+
+
+
+
+
+
                             Console.WriteLine($"3D shape on slide {slideIndex + 1}, index {shapeIndex} has an empty name. Assigning a default name.");
+
+
+
+
+
+
+
+
 
 
 
@@ -578,7 +1150,23 @@ namespace Validate3DShapeNames
 
 
 
+
+
+
+
+
+
+
+
                         }
+
+
+
+
+
+
+
+
 
 
 
@@ -594,7 +1182,23 @@ namespace Validate3DShapeNames
 
 
 
+
+
+
+
+
+
+
+
                 }
+
+
+
+
+
+
+
+
 
 
 
@@ -618,7 +1222,31 @@ namespace Validate3DShapeNames
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Save the presentation before exiting
+
+
+
+
+
+
+
+
 
 
 
@@ -634,7 +1262,23 @@ namespace Validate3DShapeNames
 
 
 
+
+
+
+
+
+
+
+
             presentation.Dispose();
+
+
+
+
+
+
+
+
 
 
 
@@ -650,6 +1294,14 @@ namespace Validate3DShapeNames
 
 
 
+
+
+
+
+
+
+
+
     }
 
 
@@ -658,7 +1310,23 @@ namespace Validate3DShapeNames
 
 
 
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
 
 
 

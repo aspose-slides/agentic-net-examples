@@ -9,6 +9,18 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 // Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Validate PPTX 3d texture formats using C#
 
@@ -18,7 +30,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -34,7 +62,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // Demonstrates how to validate the texture file formats used by 3‑D objects 
+
+
+
+
+
+
+
+
 
 
 
@@ -50,7 +94,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // presentation, iterates through all slides and shapes, checks each shape that 
+
+
+
+
+
+
+
+
 
 
 
@@ -66,7 +126,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // can be performed. The presentation is then saved, allowing integration into 
+
+
+
+
+
+
+
+
 
 
 
@@ -82,7 +158,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -98,7 +190,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // C#, PowerPoint, PPTX, Aspose.Slides for .NET, Validate, 3D, Texture, Formats, 
+
+
+
+
+
+
+
+
 
 
 
@@ -114,7 +222,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -130,7 +254,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Automate validation of texture formats used by 3‑D objects in PPTX files.
+
+
+
+
+
+
+
+
 
 
 
@@ -146,7 +286,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Integrate texture‑format checks into CI/CD pipelines for PowerPoint assets.
+
+
+
+
+
+
+
+
 
 
 
@@ -162,7 +318,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // -----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
 
 
 
@@ -178,6 +350,14 @@ using System;
 
 
 
+
+
+
+
+
+
+
+
 using System.IO;
 
 
@@ -186,7 +366,23 @@ using System.IO;
 
 
 
+
+
+
+
+
+
+
+
 using Aspose.Slides;
+
+
+
+
+
+
+
+
 
 
 
@@ -210,7 +406,31 @@ using Aspose.Slides.Export;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Program
+
+
+
+
+
+
+
+
 
 
 
@@ -226,7 +446,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
     static void Main(string[] args)
+
+
+
+
+
+
+
+
 
 
 
@@ -242,7 +478,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         // Determine input file path
+
+
+
+
+
+
+
+
 
 
 
@@ -258,7 +510,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         if (args.Length > 0)
+
+
+
+
+
+
+
+
 
 
 
@@ -274,6 +542,14 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             inputPath = args[0];
 
 
@@ -282,7 +558,31 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -306,7 +606,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         if (!File.Exists(inputPath))
+
+
+
+
+
+
+
+
 
 
 
@@ -322,7 +638,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             Console.WriteLine("Input file does not exist: " + inputPath);
+
+
+
+
+
+
+
+
 
 
 
@@ -338,7 +670,31 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -362,7 +718,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         {
+
+
+
+
+
+
+
+
 
 
 
@@ -378,7 +750,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             using (Presentation pres = new Presentation(inputPath))
+
+
+
+
+
+
+
+
 
 
 
@@ -394,7 +782,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                 // Validate that all 3D objects use supported texture file formats
+
+
+
+
+
+
+
+
 
 
 
@@ -410,7 +814,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                 {
+
+
+
+
+
+
+
+
 
 
 
@@ -426,7 +846,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                     {
+
+
+
+
+
+
+
+
 
 
 
@@ -442,7 +878,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                         if (threeDFormat != null)
+
+
+
+
+
+
+
+
 
 
 
@@ -458,7 +910,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                             // Placeholder for texture format validation.
+
+
+
+
+
+
+
+
 
 
 
@@ -474,7 +942,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                             // Supported formats could be .png, .jpg, .jpeg, .bmp, etc.
+
+
+
+
+
+
+
+
 
 
 
@@ -490,7 +974,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                     }
+
+
+
+
+
+
+
+
 
 
 
@@ -514,7 +1014,31 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 // Save the presentation before exiting
+
+
+
+
+
+
+
+
 
 
 
@@ -530,7 +1054,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                 pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+
+
+
+
+
+
+
+
 
 
 
@@ -546,7 +1086,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -562,7 +1118,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         {
+
+
+
+
+
+
+
+
 
 
 
@@ -578,6 +1150,14 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             Console.WriteLine("Unsupported PPTX format: " + ex.Message);
 
 
@@ -586,7 +1166,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -602,7 +1198,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         {
+
+
+
+
+
+
+
+
 
 
 
@@ -618,6 +1230,14 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             Console.WriteLine("Unsupported PPT format: " + ex.Message);
 
 
@@ -626,7 +1246,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -642,7 +1278,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         {
+
+
+
+
+
+
+
+
 
 
 
@@ -658,6 +1310,14 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             Console.WriteLine("Format not supported: " + ex.Message);
 
 
@@ -666,7 +1326,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -682,7 +1358,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         {
+
+
+
+
+
+
+
+
 
 
 
@@ -698,7 +1390,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             Console.WriteLine("Error: " + ex.Message);
+
+
+
+
+
+
+
+
 
 
 
@@ -714,6 +1422,14 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
     }
 
 
@@ -722,7 +1438,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
 
 
 

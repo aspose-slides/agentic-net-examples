@@ -9,6 +9,18 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 // Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Add PPTX 3d cube set size using C#
 
@@ -18,7 +30,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -34,7 +62,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // Demonstrates how to add a 3‑D cube of a specific size to a PPTX file using
+
+
+
+
+
+
+
+
 
 
 
@@ -50,7 +94,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // inserts a rectangular shape, configures its 3‑D format to form a cube with
+
+
+
+
+
+
+
+
 
 
 
@@ -66,7 +126,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -82,7 +158,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // C#, PowerPoint, PPTX, Aspose.Slides for .NET, 3D, Cube, Size, Presentation Processing, Office Automation
+
+
+
+
+
+
+
+
 
 
 
@@ -98,7 +190,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // Use Cases:
+
+
+
+
+
+
+
+
 
 
 
@@ -114,7 +222,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Build C# utilities for precise 3‑D shape creation in PPTX files.
+
+
+
+
+
+
+
+
 
 
 
@@ -130,7 +254,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Validate 3‑D formatting and dimensions before publishing.
+
+
+
+
+
+
+
+
 
 
 
@@ -146,6 +286,14 @@
 
 
 
+
+
+
+
+
+
+
+
 using System;
 
 
@@ -154,7 +302,23 @@ using System;
 
 
 
+
+
+
+
+
+
+
+
 using Aspose.Slides;
+
+
+
+
+
+
+
+
 
 
 
@@ -178,7 +342,31 @@ using Aspose.Slides.Export;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 namespace AsposeSlidesDemo
+
+
+
+
+
+
+
+
 
 
 
@@ -194,7 +382,23 @@ namespace AsposeSlidesDemo
 
 
 
+
+
+
+
+
+
+
+
     class Program
+
+
+
+
+
+
+
+
 
 
 
@@ -210,7 +414,23 @@ namespace AsposeSlidesDemo
 
 
 
+
+
+
+
+
+
+
+
         static void Main(string[] args)
+
+
+
+
+
+
+
+
 
 
 
@@ -226,7 +446,23 @@ namespace AsposeSlidesDemo
 
 
 
+
+
+
+
+
+
+
+
             // Create a new presentation
+
+
+
+
+
+
+
+
 
 
 
@@ -250,7 +486,31 @@ namespace AsposeSlidesDemo
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Get the first slide (or any specific slide by index)
+
+
+
+
+
+
+
+
 
 
 
@@ -274,7 +534,31 @@ namespace AsposeSlidesDemo
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Define size of 2 centimeters in points (1 cm ≈ 28.3464567 points)
+
+
+
+
+
+
+
+
 
 
 
@@ -298,7 +582,31 @@ namespace AsposeSlidesDemo
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Add a rectangle shape that will be transformed into a 3D cube
+
+
+
+
+
+
+
+
 
 
 
@@ -314,7 +622,23 @@ namespace AsposeSlidesDemo
 
 
 
+
+
+
+
+
+
+
+
                 Aspose.Slides.ShapeType.Rectangle,
+
+
+
+
+
+
+
+
 
 
 
@@ -330,7 +654,23 @@ namespace AsposeSlidesDemo
 
 
 
+
+
+
+
+
+
+
+
                 100f, // Y position
+
+
+
+
+
+
+
+
 
 
 
@@ -346,7 +686,23 @@ namespace AsposeSlidesDemo
 
 
 
+
+
+
+
+
+
+
+
                 sizeInPoints  // Height
+
+
+
+
+
+
+
+
 
 
 
@@ -370,7 +726,31 @@ namespace AsposeSlidesDemo
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Set 3D properties to make it appear as a cube
+
+
+
+
+
+
+
+
 
 
 
@@ -386,7 +766,23 @@ namespace AsposeSlidesDemo
 
 
 
+
+
+
+
+
+
+
+
             cubeShape.ThreeDFormat.ExtrusionHeight = sizeInPoints;    // Extrusion height equal to size
+
+
+
+
+
+
+
+
 
 
 
@@ -410,6 +806,22 @@ namespace AsposeSlidesDemo
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Optional: set a simple fill color for better visibility
 
 
@@ -418,7 +830,23 @@ namespace AsposeSlidesDemo
 
 
 
+
+
+
+
+
+
+
+
             cubeShape.FillFormat.FillType = Aspose.Slides.FillType.Solid;
+
+
+
+
+
+
+
+
 
 
 
@@ -442,7 +870,31 @@ namespace AsposeSlidesDemo
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Save the presentation
+
+
+
+
+
+
+
+
 
 
 
@@ -458,7 +910,23 @@ namespace AsposeSlidesDemo
 
 
 
+
+
+
+
+
+
+
+
             presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+
+
+
+
+
+
+
+
 
 
 
@@ -474,6 +942,14 @@ namespace AsposeSlidesDemo
 
 
 
+
+
+
+
+
+
+
+
     }
 
 
@@ -482,7 +958,23 @@ namespace AsposeSlidesDemo
 
 
 
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
 
 
 

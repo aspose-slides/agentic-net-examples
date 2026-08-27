@@ -27,17 +27,17 @@ When working in this repository:
 
 ## Repository Overview
 
-This repository contains **2273** working code examples demonstrating Aspose.Slides for .NET capabilities.
+This repository contains **2272** working code examples demonstrating Aspose.Slides for .NET capabilities.
 
 **Statistics** (as of 2026-08-25):
 - Version: 26.8.0
-- Total Examples: 2273
+- Total Examples: 2272
 - Categories: 19
 
 ## Category Details
 
 ### 3d-presentations
-- Examples: 30
+- Examples: 29
 - Guide: [AGENTS.md](./3d-presentations/AGENTS.md)
 
 ### animations
@@ -259,9 +259,5 @@ Generated: 2026-08-25
 
 Generated examples were tested with Aspose.Slides for .NET 26.8.0 on 2026-08-25.
 
-The following examples failed latest-version validation or were deleted during review and are removed from generated example listings:
-
-- `3d-presentations/Export-PPTX-3d-scene-to-OBJ.cs`
-
-Local quarantine files are intentionally not committed or pushed.
+No examples are currently quarantined.
 <!-- latest-slides-verification:end -->

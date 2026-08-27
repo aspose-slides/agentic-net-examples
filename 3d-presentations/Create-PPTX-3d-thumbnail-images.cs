@@ -9,6 +9,18 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 // Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Create PPTX 3D thumbnail images using C#
 
@@ -18,7 +30,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -34,7 +62,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // Demonstrates how to generate JPEG thumbnail images for each slide of a
+
+
+
+
+
+
+
+
 
 
 
@@ -50,7 +94,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // The example loads a presentation, calculates scaling factors to produce
+
+
+
+
+
+
+
+
 
 
 
@@ -66,6 +126,14 @@
 
 
 
+
+
+
+
+
+
+
+
 // saves the presentation.
 
 
@@ -74,7 +142,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -90,7 +174,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // C#, PowerPoint, PPTX, Aspose.Slides for .NET, Thumbnail, Images, 3D,
+
+
+
+
+
+
+
+
 
 
 
@@ -106,7 +206,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -122,7 +238,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Automate creation of thumbnail previews for PPTX files containing 3D content.
+
+
+
+
+
+
+
+
 
 
 
@@ -138,7 +270,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Integrate slide thumbnail generation into .NET applications or services.
+
+
+
+
+
+
+
+
 
 
 
@@ -154,7 +302,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // -----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
 
 
 
@@ -170,6 +334,14 @@ using System;
 
 
 
+
+
+
+
+
+
+
+
 using System.IO;
 
 
@@ -178,7 +350,23 @@ using System.IO;
 
 
 
+
+
+
+
+
+
+
+
 using Aspose.Slides;
+
+
+
+
+
+
+
+
 
 
 
@@ -202,7 +390,31 @@ using Aspose.Slides.Export;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Program
+
+
+
+
+
+
+
+
 
 
 
@@ -218,7 +430,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
     static void Main()
+
+
+
+
+
+
+
+
 
 
 
@@ -234,7 +462,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         // Input presentation path
+
+
+
+
+
+
+
+
 
 
 
@@ -250,7 +494,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         // Output directory for thumbnails
+
+
+
+
+
+
+
+
 
 
 
@@ -274,7 +534,31 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         // Verify input file exists
+
+
+
+
+
+
+
+
 
 
 
@@ -290,7 +574,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         {
+
+
+
+
+
+
+
+
 
 
 
@@ -306,6 +606,14 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             return;
 
 
@@ -314,7 +622,31 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -338,7 +670,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         if (!Directory.Exists(outputDir))
+
+
+
+
+
+
+
+
 
 
 
@@ -354,6 +702,14 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             Directory.CreateDirectory(outputDir);
 
 
@@ -362,7 +718,31 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -386,6 +766,14 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         {
 
 
@@ -394,7 +782,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             // Load the presentation
+
+
+
+
+
+
+
+
 
 
 
@@ -418,6 +822,22 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Desired thumbnail dimensions
 
 
@@ -426,7 +846,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             int desiredX = 200;
+
+
+
+
+
+
+
+
 
 
 
@@ -450,6 +886,22 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Calculate scaling factors based on slide size
 
 
@@ -458,7 +910,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             float scaleX = (float)(1.0 / presentation.SlideSize.Size.Width) * desiredX;
+
+
+
+
+
+
+
+
 
 
 
@@ -482,7 +950,31 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Iterate through each slide (assuming all are 3D slides)
+
+
+
+
+
+
+
+
 
 
 
@@ -498,7 +990,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -514,7 +1022,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                 Aspose.Slides.IImage image = slide.GetImage(scaleX, scaleY);
+
+
+
+
+
+
+
+
 
 
 
@@ -530,6 +1054,14 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                 image.Save(outputPath, Aspose.Slides.ImageFormat.Jpeg);
 
 
@@ -538,7 +1070,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
                 image.Dispose();
+
+
+
+
+
+
+
+
 
 
 
@@ -562,7 +1110,31 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Save the presentation before exiting
+
+
+
+
+
+
+
+
 
 
 
@@ -578,6 +1150,14 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             presentation.Dispose();
 
 
@@ -586,7 +1166,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -602,7 +1198,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         {
+
+
+
+
+
+
+
+
 
 
 
@@ -618,7 +1230,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -634,7 +1262,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         {
+
+
+
+
+
+
+
+
 
 
 
@@ -650,7 +1294,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -666,7 +1326,23 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
 
 
 

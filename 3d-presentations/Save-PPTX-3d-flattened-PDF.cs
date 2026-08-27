@@ -9,6 +9,18 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 // Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Save PPTX 3d flattened PDF using C#
 
@@ -18,7 +30,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -34,7 +62,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // Demonstrates how to load a PPTX file, configure PDF export options to flatten
+
+
+
+
+
+
+
+
 
 
 
@@ -50,7 +94,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // Aspose.Slides for .NET. The example includes basic file existence checks and
+
+
+
+
+
+
+
+
 
 
 
@@ -66,7 +126,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -82,7 +158,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Save, Flattened 3D, 
+
+
+
+
+
+
+
+
 
 
 
@@ -98,7 +190,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -114,7 +222,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Convert PPTX presentations containing 3‑D models to PDF with flattened graphics.
+
+
+
+
+
+
+
+
 
 
 
@@ -130,6 +254,14 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Ensure compatibility of exported PDFs across viewers by rasterizing 3‑D content.
 
 
@@ -138,7 +270,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Integrate PPTX to PDF conversion into build pipelines or server‑side services.
+
+
+
+
+
+
+
+
 
 
 
@@ -162,7 +310,31 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 using System;
+
+
+
+
+
+
+
+
 
 
 
@@ -178,7 +350,23 @@ using System.IO;
 
 
 
+
+
+
+
+
+
+
+
 using Aspose.Slides;
+
+
+
+
+
+
+
+
 
 
 
@@ -202,7 +390,31 @@ using Aspose.Slides.Export;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 namespace AsposeSlidesPdfExport
+
+
+
+
+
+
+
+
 
 
 
@@ -218,7 +430,23 @@ namespace AsposeSlidesPdfExport
 
 
 
+
+
+
+
+
+
+
+
     class Program
+
+
+
+
+
+
+
+
 
 
 
@@ -234,7 +462,23 @@ namespace AsposeSlidesPdfExport
 
 
 
+
+
+
+
+
+
+
+
         static void Main(string[] args)
+
+
+
+
+
+
+
+
 
 
 
@@ -250,6 +494,14 @@ namespace AsposeSlidesPdfExport
 
 
 
+
+
+
+
+
+
+
+
             // Define input and output file paths
 
 
@@ -258,7 +510,23 @@ namespace AsposeSlidesPdfExport
 
 
 
+
+
+
+
+
+
+
+
             string inputFilePath = Path.Combine(Directory.GetCurrentDirectory(), "input.pptx");
+
+
+
+
+
+
+
+
 
 
 
@@ -282,7 +550,31 @@ namespace AsposeSlidesPdfExport
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Check if the input file exists
+
+
+
+
+
+
+
+
 
 
 
@@ -298,7 +590,23 @@ namespace AsposeSlidesPdfExport
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -314,6 +622,14 @@ namespace AsposeSlidesPdfExport
 
 
 
+
+
+
+
+
+
+
+
                 return;
 
 
@@ -322,7 +638,31 @@ namespace AsposeSlidesPdfExport
 
 
 
+
+
+
+
+
+
+
+
             }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -346,6 +686,14 @@ namespace AsposeSlidesPdfExport
 
 
 
+
+
+
+
+
+
+
+
             {
 
 
@@ -354,7 +702,23 @@ namespace AsposeSlidesPdfExport
 
 
 
+
+
+
+
+
+
+
+
                 // Load the presentation
+
+
+
+
+
+
+
+
 
 
 
@@ -378,7 +742,31 @@ namespace AsposeSlidesPdfExport
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 // Configure PDF options to flatten 3D objects into static images
+
+
+
+
+
+
+
+
 
 
 
@@ -394,7 +782,23 @@ namespace AsposeSlidesPdfExport
 
 
 
+
+
+
+
+
+
+
+
                 {
+
+
+
+
+
+
+
+
 
 
 
@@ -410,7 +814,23 @@ namespace AsposeSlidesPdfExport
 
 
 
+
+
+
+
+
+
+
+
                     IncludeOleData = false     // Do not include OLE data
+
+
+
+
+
+
+
+
 
 
 
@@ -434,7 +854,31 @@ namespace AsposeSlidesPdfExport
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 // Save the presentation as PDF
+
+
+
+
+
+
+
+
 
 
 
@@ -458,7 +902,31 @@ namespace AsposeSlidesPdfExport
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 // Dispose the presentation
+
+
+
+
+
+
+
+
 
 
 
@@ -482,6 +950,22 @@ namespace AsposeSlidesPdfExport
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 Console.WriteLine("Presentation successfully saved as PDF: " + outputFilePath);
 
 
@@ -490,7 +974,23 @@ namespace AsposeSlidesPdfExport
 
 
 
+
+
+
+
+
+
+
+
             }
+
+
+
+
+
+
+
+
 
 
 
@@ -506,7 +1006,23 @@ namespace AsposeSlidesPdfExport
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -522,6 +1038,14 @@ namespace AsposeSlidesPdfExport
 
 
 
+
+
+
+
+
+
+
+
                 Console.WriteLine("The file format is not supported for conversion.");
 
 
@@ -530,7 +1054,23 @@ namespace AsposeSlidesPdfExport
 
 
 
+
+
+
+
+
+
+
+
             }
+
+
+
+
+
+
+
+
 
 
 
@@ -546,7 +1086,23 @@ namespace AsposeSlidesPdfExport
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -562,7 +1118,23 @@ namespace AsposeSlidesPdfExport
 
 
 
+
+
+
+
+
+
+
+
                 Console.WriteLine("An error occurred: " + ex.Message);
+
+
+
+
+
+
+
+
 
 
 
@@ -578,7 +1150,23 @@ namespace AsposeSlidesPdfExport
 
 
 
+
+
+
+
+
+
+
+
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -594,7 +1182,23 @@ namespace AsposeSlidesPdfExport
 
 
 
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
 
 
 

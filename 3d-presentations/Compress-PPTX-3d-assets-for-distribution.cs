@@ -9,6 +9,18 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 // Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Compress PPTX 3D assets for distribution using C#
 
@@ -18,7 +30,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -34,7 +62,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // Demonstrates how to compress a PowerPoint presentation while preserving
+
+
+
+
+
+
+
+
 
 
 
@@ -50,7 +94,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // applies low‑code font compression (which keeps 3‑D objects intact), and saves
+
+
+
+
+
+
+
+
 
 
 
@@ -66,7 +126,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -82,7 +158,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // C#, Aspose.Slides, PPTX, 3D assets, compression, console application, 
+
+
+
+
+
+
+
+
 
 
 
@@ -98,7 +190,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -114,7 +222,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Reduce the size of PPTX files that contain 3‑D models before sharing.
+
+
+
+
+
+
+
+
 
 
 
@@ -130,7 +254,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Build command‑line tools for PowerPoint asset optimization.
+
+
+
+
+
+
+
+
 
 
 
@@ -146,7 +286,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // -----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
 
 
 
@@ -162,7 +318,23 @@ using System;
 
 
 
+
+
+
+
+
+
+
+
 using System.IO;
+
+
+
+
+
+
+
+
 
 
 
@@ -186,7 +358,31 @@ using Aspose.Slides.Export;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 namespace CompressPresentationApp
+
+
+
+
+
+
+
+
 
 
 
@@ -202,7 +398,23 @@ namespace CompressPresentationApp
 
 
 
+
+
+
+
+
+
+
+
     class Program
+
+
+
+
+
+
+
+
 
 
 
@@ -218,7 +430,23 @@ namespace CompressPresentationApp
 
 
 
+
+
+
+
+
+
+
+
         static void Main(string[] args)
+
+
+
+
+
+
+
+
 
 
 
@@ -234,6 +462,14 @@ namespace CompressPresentationApp
 
 
 
+
+
+
+
+
+
+
+
             // Define input and output file paths
 
 
@@ -242,7 +478,23 @@ namespace CompressPresentationApp
 
 
 
+
+
+
+
+
+
+
+
             string inputPath = "input.pptx";
+
+
+
+
+
+
+
+
 
 
 
@@ -266,7 +518,31 @@ namespace CompressPresentationApp
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Verify that the input file exists
+
+
+
+
+
+
+
+
 
 
 
@@ -282,7 +558,23 @@ namespace CompressPresentationApp
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -298,6 +590,14 @@ namespace CompressPresentationApp
 
 
 
+
+
+
+
+
+
+
+
                 return;
 
 
@@ -306,7 +606,31 @@ namespace CompressPresentationApp
 
 
 
+
+
+
+
+
+
+
+
             }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -330,6 +654,14 @@ namespace CompressPresentationApp
 
 
 
+
+
+
+
+
+
+
+
             {
 
 
@@ -338,7 +670,23 @@ namespace CompressPresentationApp
 
 
 
+
+
+
+
+
+
+
+
                 // Load the presentation
+
+
+
+
+
+
+
+
 
 
 
@@ -362,7 +710,31 @@ namespace CompressPresentationApp
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 // Compress embedded fonts (preserves 3D assets)
+
+
+
+
+
+
+
+
 
 
 
@@ -386,7 +758,31 @@ namespace CompressPresentationApp
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 // Save the compressed presentation
+
+
+
+
+
+
+
+
 
 
 
@@ -410,7 +806,31 @@ namespace CompressPresentationApp
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 // Release resources
+
+
+
+
+
+
+
+
 
 
 
@@ -434,6 +854,22 @@ namespace CompressPresentationApp
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 Console.WriteLine("Presentation compressed successfully.");
 
 
@@ -442,7 +878,23 @@ namespace CompressPresentationApp
 
 
 
+
+
+
+
+
+
+
+
             }
+
+
+
+
+
+
+
+
 
 
 
@@ -458,7 +910,23 @@ namespace CompressPresentationApp
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -474,6 +942,14 @@ namespace CompressPresentationApp
 
 
 
+
+
+
+
+
+
+
+
                 Console.WriteLine("The presentation format is not supported for compression.");
 
 
@@ -482,7 +958,23 @@ namespace CompressPresentationApp
 
 
 
+
+
+
+
+
+
+
+
             }
+
+
+
+
+
+
+
+
 
 
 
@@ -498,7 +990,23 @@ namespace CompressPresentationApp
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -514,7 +1022,23 @@ namespace CompressPresentationApp
 
 
 
+
+
+
+
+
+
+
+
                 Console.WriteLine("An error occurred: " + ex.Message);
+
+
+
+
+
+
+
+
 
 
 
@@ -530,7 +1054,23 @@ namespace CompressPresentationApp
 
 
 
+
+
+
+
+
+
+
+
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -546,7 +1086,23 @@ namespace CompressPresentationApp
 
 
 
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
 
 
 

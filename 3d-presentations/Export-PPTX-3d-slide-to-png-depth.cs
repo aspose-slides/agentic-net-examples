@@ -9,6 +9,18 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 // Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Export PPTX 3d slide to png depth using C#
 
@@ -18,7 +30,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -34,7 +62,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // Demonstrates how to load a PPTX file, locate the first slide containing a
+
+
+
+
+
+
+
+
 
 
 
@@ -50,7 +94,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // image that preserves depth shading. The example also saves the original
+
+
+
+
+
+
+
+
 
 
 
@@ -66,7 +126,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // applications to automate PowerPoint 3‑D slide extraction and image generation
+
+
+
+
+
+
+
+
 
 
 
@@ -82,7 +158,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -98,7 +190,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Export, 3D, Slide, Depth,
+
+
+
+
+
+
+
+
 
 
 
@@ -114,7 +222,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -130,7 +254,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Automate export of a 3‑D PowerPoint slide to a depth‑preserving PNG.
+
+
+
+
+
+
+
+
 
 
 
@@ -146,7 +286,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Integrate PPTX 3‑D processing into .NET applications.
+
+
+
+
+
+
+
+
 
 
 
@@ -162,7 +318,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // -----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
 
 
 
@@ -178,6 +350,14 @@ using System;
 
 
 
+
+
+
+
+
+
+
+
 using System.IO;
 
 
@@ -186,7 +366,23 @@ using System.IO;
 
 
 
+
+
+
+
+
+
+
+
 using Aspose.Slides;
+
+
+
+
+
+
+
+
 
 
 
@@ -210,7 +406,31 @@ using Aspose.Slides.Export;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 namespace Export3DSlide
+
+
+
+
+
+
+
+
 
 
 
@@ -226,7 +446,23 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
     class Program
+
+
+
+
+
+
+
+
 
 
 
@@ -242,7 +478,23 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
         static void Main(string[] args)
+
+
+
+
+
+
+
+
 
 
 
@@ -258,7 +510,23 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
             // Define input and output file paths
+
+
+
+
+
+
+
+
 
 
 
@@ -274,7 +542,23 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
             string outputImagePath = Path.Combine(Directory.GetCurrentDirectory(), "slide3d.png");
+
+
+
+
+
+
+
+
 
 
 
@@ -298,7 +582,31 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Verify that the input file exists
+
+
+
+
+
+
+
+
 
 
 
@@ -314,7 +622,23 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -330,6 +654,14 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
                 return;
 
 
@@ -338,7 +670,31 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
             }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -362,7 +718,23 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -378,7 +750,23 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
                 using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
+
+
+
+
+
+
+
+
 
 
 
@@ -394,7 +782,23 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
                     // Find the first slide that contains a shape with 3D formatting
+
+
+
+
+
+
+
+
 
 
 
@@ -410,7 +814,23 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
                     for (int i = 0; i < presentation.Slides.Count; i++)
+
+
+
+
+
+
+
+
 
 
 
@@ -426,7 +846,23 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
                         Aspose.Slides.ISlide slide = presentation.Slides[i];
+
+
+
+
+
+
+
+
 
 
 
@@ -442,7 +878,23 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
                         {
+
+
+
+
+
+
+
+
 
 
 
@@ -458,7 +910,23 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
                             {
+
+
+
+
+
+
+
+
 
 
 
@@ -474,7 +942,23 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
                                 break;
+
+
+
+
+
+
+
+
 
 
 
@@ -490,7 +974,23 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
                         }
+
+
+
+
+
+
+
+
 
 
 
@@ -506,6 +1006,14 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
                             break;
 
 
@@ -514,7 +1022,31 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
                     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -538,7 +1070,23 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
                     {
+
+
+
+
+
+
+
+
 
 
 
@@ -554,7 +1102,23 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
                     }
+
+
+
+
+
+
+
+
 
 
 
@@ -570,7 +1134,23 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
                     {
+
+
+
+
+
+
+
+
 
 
 
@@ -586,6 +1166,14 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
                         Aspose.Slides.ISlide targetSlide = presentation.Slides[slideIndexWith3D];
 
 
@@ -594,7 +1182,23 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
                         float scaleX = 3f; // High‑resolution scaling factor
+
+
+
+
+
+
+
+
 
 
 
@@ -618,7 +1222,31 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                         using (Aspose.Slides.IImage image = targetSlide.GetImage(scaleX, scaleY))
+
+
+
+
+
+
+
+
 
 
 
@@ -634,7 +1262,23 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
                             image.Save(outputImagePath, Aspose.Slides.ImageFormat.Png);
+
+
+
+
+
+
+
+
 
 
 
@@ -658,7 +1302,31 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                         Console.WriteLine("Slide exported to PNG: " + outputImagePath);
+
+
+
+
+
+
+
+
 
 
 
@@ -682,7 +1350,31 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     // Save the presentation before exiting (as required)
+
+
+
+
+
+
+
+
 
 
 
@@ -698,6 +1390,14 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
                 }
 
 
@@ -706,7 +1406,23 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
             }
+
+
+
+
+
+
+
+
 
 
 
@@ -722,7 +1438,23 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -738,7 +1470,23 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
                 // Comment: The requested format is not supported by the current Aspose.Slides version.
+
+
+
+
+
+
+
+
 
 
 
@@ -754,7 +1502,23 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
             }
+
+
+
+
+
+
+
+
 
 
 
@@ -770,7 +1534,23 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -786,7 +1566,23 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
                 Console.WriteLine("An error occurred: " + ex.Message);
+
+
+
+
+
+
+
+
 
 
 
@@ -802,7 +1598,23 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -818,7 +1630,23 @@ namespace Export3DSlide
 
 
 
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
 
 
 

@@ -9,6 +9,18 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 // Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Apply PPTX 3d matte material using C#
 
@@ -18,7 +30,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -34,7 +62,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // Demonstrates how to apply a matte material to 3‑D shapes in a PPTX file using
+
+
+
+
+
+
+
+
 
 
 
@@ -50,7 +94,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // 3‑D rectangle when the input file is missing, otherwise it loads an existing
+
+
+
+
+
+
+
+
 
 
 
@@ -66,7 +126,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // that has a ThreeDFormat to MaterialPresetType.Matte. The result is saved as a
+
+
+
+
+
+
+
+
 
 
 
@@ -82,7 +158,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -98,7 +190,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, 3D, Matte, Material, 
+
+
+
+
+
+
+
+
 
 
 
@@ -114,7 +222,23 @@
 
 
 
+
+
+
+
+
+
+
+
 //
+
+
+
+
+
+
+
+
 
 
 
@@ -130,7 +254,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Automatically apply matte material to all 3‑D objects in a presentation.
+
+
+
+
+
+
+
+
 
 
 
@@ -146,7 +286,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // - Integrate PPTX material adjustments into .NET automation pipelines.
+
+
+
+
+
+
+
+
 
 
 
@@ -162,7 +318,23 @@
 
 
 
+
+
+
+
+
+
+
+
 // -----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
 
 
 
@@ -178,6 +350,14 @@ using System;
 
 
 
+
+
+
+
+
+
+
+
 using System.IO;
 
 
@@ -186,7 +366,23 @@ using System.IO;
 
 
 
+
+
+
+
+
+
+
+
 using Aspose.Slides;
+
+
+
+
+
+
+
+
 
 
 
@@ -210,7 +406,31 @@ using Aspose.Slides.Export;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 namespace ApplyMatteMaterial
+
+
+
+
+
+
+
+
 
 
 
@@ -226,7 +446,23 @@ namespace ApplyMatteMaterial
 
 
 
+
+
+
+
+
+
+
+
     class Program
+
+
+
+
+
+
+
+
 
 
 
@@ -242,7 +478,23 @@ namespace ApplyMatteMaterial
 
 
 
+
+
+
+
+
+
+
+
         static void Main(string[] args)
+
+
+
+
+
+
+
+
 
 
 
@@ -258,6 +510,14 @@ namespace ApplyMatteMaterial
 
 
 
+
+
+
+
+
+
+
+
             // Input and output file paths
 
 
@@ -266,7 +526,23 @@ namespace ApplyMatteMaterial
 
 
 
+
+
+
+
+
+
+
+
             string inputPath = "input.pptx";
+
+
+
+
+
+
+
+
 
 
 
@@ -290,7 +566,31 @@ namespace ApplyMatteMaterial
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Allow overriding input path via command line argument
+
+
+
+
+
+
+
+
 
 
 
@@ -306,7 +606,23 @@ namespace ApplyMatteMaterial
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -322,7 +638,31 @@ namespace ApplyMatteMaterial
 
 
 
+
+
+
+
+
+
+
+
             }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -346,7 +686,23 @@ namespace ApplyMatteMaterial
 
 
 
+
+
+
+
+
+
+
+
             if (!File.Exists(inputPath))
+
+
+
+
+
+
+
+
 
 
 
@@ -362,7 +718,23 @@ namespace ApplyMatteMaterial
 
 
 
+
+
+
+
+
+
+
+
                 using (Presentation pres = new Presentation())
+
+
+
+
+
+
+
+
 
 
 
@@ -378,7 +750,23 @@ namespace ApplyMatteMaterial
 
 
 
+
+
+
+
+
+
+
+
                     // Add a rectangle shape and give it a 3D effect
+
+
+
+
+
+
+
+
 
 
 
@@ -394,7 +782,23 @@ namespace ApplyMatteMaterial
 
 
 
+
+
+
+
+
+
+
+
                     shape.ThreeDFormat.Depth = 5;
+
+
+
+
+
+
+
+
 
 
 
@@ -418,7 +822,31 @@ namespace ApplyMatteMaterial
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     // Save the newly created presentation
+
+
+
+
+
+
+
+
 
 
 
@@ -434,7 +862,31 @@ namespace ApplyMatteMaterial
 
 
 
+
+
+
+
+
+
+
+
                 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -458,7 +910,31 @@ namespace ApplyMatteMaterial
 
 
 
+
+
+
+
+
+
+
+
             }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -482,7 +958,23 @@ namespace ApplyMatteMaterial
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -498,7 +990,23 @@ namespace ApplyMatteMaterial
 
 
 
+
+
+
+
+
+
+
+
                 using (Presentation pres = new Presentation(inputPath))
+
+
+
+
+
+
+
+
 
 
 
@@ -514,7 +1022,23 @@ namespace ApplyMatteMaterial
 
 
 
+
+
+
+
+
+
+
+
                     // Iterate through all slides and shapes
+
+
+
+
+
+
+
+
 
 
 
@@ -530,7 +1054,23 @@ namespace ApplyMatteMaterial
 
 
 
+
+
+
+
+
+
+
+
                     {
+
+
+
+
+
+
+
+
 
 
 
@@ -546,7 +1086,23 @@ namespace ApplyMatteMaterial
 
 
 
+
+
+
+
+
+
+
+
                         {
+
+
+
+
+
+
+
+
 
 
 
@@ -562,7 +1118,23 @@ namespace ApplyMatteMaterial
 
 
 
+
+
+
+
+
+
+
+
                             if (shape.ThreeDFormat != null)
+
+
+
+
+
+
+
+
 
 
 
@@ -578,7 +1150,23 @@ namespace ApplyMatteMaterial
 
 
 
+
+
+
+
+
+
+
+
                                 shape.ThreeDFormat.Material = MaterialPresetType.Matte;
+
+
+
+
+
+
+
+
 
 
 
@@ -594,7 +1182,23 @@ namespace ApplyMatteMaterial
 
 
 
+
+
+
+
+
+
+
+
                         }
+
+
+
+
+
+
+
+
 
 
 
@@ -618,7 +1222,31 @@ namespace ApplyMatteMaterial
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     // Save the modified presentation
+
+
+
+
+
+
+
+
 
 
 
@@ -634,6 +1262,14 @@ namespace ApplyMatteMaterial
 
 
 
+
+
+
+
+
+
+
+
                 }
 
 
@@ -642,7 +1278,23 @@ namespace ApplyMatteMaterial
 
 
 
+
+
+
+
+
+
+
+
             }
+
+
+
+
+
+
+
+
 
 
 
@@ -658,7 +1310,23 @@ namespace ApplyMatteMaterial
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -674,6 +1342,14 @@ namespace ApplyMatteMaterial
 
 
 
+
+
+
+
+
+
+
+
                 Console.WriteLine("The presentation format is not supported (PPTX).");
 
 
@@ -682,7 +1358,23 @@ namespace ApplyMatteMaterial
 
 
 
+
+
+
+
+
+
+
+
             }
+
+
+
+
+
+
+
+
 
 
 
@@ -698,7 +1390,23 @@ namespace ApplyMatteMaterial
 
 
 
+
+
+
+
+
+
+
+
             {
+
+
+
+
+
+
+
+
 
 
 
@@ -714,7 +1422,23 @@ namespace ApplyMatteMaterial
 
 
 
+
+
+
+
+
+
+
+
                 Console.WriteLine("The presentation format is not supported (PPT).");
+
+
+
+
+
+
+
+
 
 
 
@@ -730,7 +1454,23 @@ namespace ApplyMatteMaterial
 
 
 
+
+
+
+
+
+
+
+
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -746,7 +1486,23 @@ namespace ApplyMatteMaterial
 
 
 
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
 
 
 
