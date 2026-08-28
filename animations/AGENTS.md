@@ -98,9 +98,7 @@ Total files: 31
 
 
 
-- Total examples: 34
-
-
+- Total examples: 31
 
 ## Key API Surface
 
