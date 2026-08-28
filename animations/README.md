@@ -47,6 +47,8 @@ These files are tested and verified with Aspose.Slides for .NET v26.8.0.
 
 
 
+Total examples: 31
+
 - [Add-animation-timing-to-PDF-metadata.cs](./Add-animation-timing-to-PDF-metadata.cs)
 - [Add-color-change-animation-sync-sound.cs](./Add-color-change-animation-sync-sound.cs)
 - [Add-custom-bezier-motion-path-animation.cs](./Add-custom-bezier-motion-path-animation.cs)
