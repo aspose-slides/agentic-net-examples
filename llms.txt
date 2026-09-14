@@ -2,7 +2,7 @@
 
 > Build-validated, standalone C# examples for Aspose.Slides for .NET and .NET 10.
 
-- Examples: 2273
+- Examples: 2241
 - Categories: 19
 - Coding-agent instructions: ./AGENTS.md
 - Structured index: ./index.json
@@ -10,17 +10,17 @@
 - API reference: https://reference.aspose.com/slides/net/
 
 ## Categories
-- [3d-presentations](./3d-presentations/): 30 standalone examples; instructions in [AGENTS.md](./3d-presentations/AGENTS.md)
-- [animations](./animations/): 34 standalone examples; instructions in [AGENTS.md](./animations/AGENTS.md)
-- [comments-and-notes](./comments-and-notes/): 120 standalone examples; instructions in [AGENTS.md](./comments-and-notes/AGENTS.md)
-- [conversion](./conversion/): 397 standalone examples; instructions in [AGENTS.md](./conversion/AGENTS.md)
-- [design-presentations](./design-presentations/): 161 standalone examples; instructions in [AGENTS.md](./design-presentations/AGENTS.md)
+- [3d-presentations](./3d-presentations/): 29 standalone examples; instructions in [AGENTS.md](./3d-presentations/AGENTS.md)
+- [animations](./animations/): 31 standalone examples; instructions in [AGENTS.md](./animations/AGENTS.md)
+- [comments-and-notes](./comments-and-notes/): 117 standalone examples; instructions in [AGENTS.md](./comments-and-notes/AGENTS.md)
+- [conversion](./conversion/): 378 standalone examples; instructions in [AGENTS.md](./conversion/AGENTS.md)
+- [design-presentations](./design-presentations/): 157 standalone examples; instructions in [AGENTS.md](./design-presentations/AGENTS.md)
 - [manage-presentation](./manage-presentation/): 64 standalone examples; instructions in [AGENTS.md](./manage-presentation/AGENTS.md)
 - [manage-presentation-content](./manage-presentation-content/): 101 standalone examples; instructions in [AGENTS.md](./manage-presentation-content/AGENTS.md)
 - [manage-presentation-media-files](./manage-presentation-media-files/): 149 standalone examples; instructions in [AGENTS.md](./manage-presentation-media-files/AGENTS.md)
 - [manage-presentation-text](./manage-presentation-text/): 104 standalone examples; instructions in [AGENTS.md](./manage-presentation-text/AGENTS.md)
 - [manage-tags-and-custom-data](./manage-tags-and-custom-data/): 40 standalone examples; instructions in [AGENTS.md](./manage-tags-and-custom-data/AGENTS.md)
-- [math-equations](./math-equations/): 29 standalone examples; instructions in [AGENTS.md](./math-equations/AGENTS.md)
+- [math-equations](./math-equations/): 27 standalone examples; instructions in [AGENTS.md](./math-equations/AGENTS.md)
 - [presentation-ink-objects](./presentation-ink-objects/): 35 standalone examples; instructions in [AGENTS.md](./presentation-ink-objects/AGENTS.md)
 - [secure-presentations](./secure-presentations/): 29 standalone examples; instructions in [AGENTS.md](./secure-presentations/AGENTS.md)
 - [vba-macros](./vba-macros/): 34 standalone examples; instructions in [AGENTS.md](./vba-macros/AGENTS.md)
