@@ -2,7 +2,7 @@
 
 > Build-validated, standalone C# examples for Aspose.Slides for .NET and .NET 10.
 
-- Examples: 2241
+- Examples: 2245
 - Categories: 19
 - Coding-agent instructions: ./AGENTS.md
 - Structured index: ./index.json
@@ -10,7 +10,7 @@
 - API reference: https://reference.aspose.com/slides/net/
 
 ## Categories
-- [3d-presentations](./3d-presentations/): 29 standalone examples; instructions in [AGENTS.md](./3d-presentations/AGENTS.md)
+- [3d-presentations](./3d-presentations/): 33 standalone examples; instructions in [AGENTS.md](./3d-presentations/AGENTS.md)
 - [animations](./animations/): 31 standalone examples; instructions in [AGENTS.md](./animations/AGENTS.md)
 - [comments-and-notes](./comments-and-notes/): 117 standalone examples; instructions in [AGENTS.md](./comments-and-notes/AGENTS.md)
 - [conversion](./conversion/): 378 standalone examples; instructions in [AGENTS.md](./conversion/AGENTS.md)
