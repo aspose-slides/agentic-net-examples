@@ -10,7 +10,7 @@ This repository provides working code examples demonstrating Aspose.Slides for .
 ## Repository Structure
 
 Examples are organized by feature category:
-- `3d-presentations/` - 29 example(s)
+- `3d-presentations/` - 33 example(s)
 - `animations/` - 31 example(s)
 - `comments-and-notes/` - 117 example(s)
 - `conversion/` - 378 example(s)
