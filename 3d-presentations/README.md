@@ -14,9 +14,43 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This category contains 29 standalone C# examples for Aspose.Slides for .NET. These examples help developers automate PowerPoint presentation workflows related to 3d presentations.
 
+
+
 These files are tested and verified with Aspose.Slides for .NET v26.8.0.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -48,6 +82,22 @@ These files are tested and verified with Aspose.Slides for .NET v26.8.0.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - Automate repetitive presentation-processing tasks in .NET applications.
 
 
@@ -56,7 +106,23 @@ These files are tested and verified with Aspose.Slides for .NET v26.8.0.
 
 
 
+
+
+
+
+
+
+
+
 - Generate, inspect, transform, or validate PPTX files in server-side workflows.
+
+
+
+
+
+
+
+
 
 
 
@@ -80,7 +146,39 @@ These files are tested and verified with Aspose.Slides for .NET v26.8.0.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Example Files
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -144,7 +242,31 @@ Total examples: 29
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - [Category instructions](./AGENTS.md)
+
+
+
+
+
+
+
+
 
 
 
@@ -160,7 +282,23 @@ Total examples: 29
 
 
 
+
+
+
+
+
+
+
+
 - [Structured index](../index.json)
+
+
+
+
+
+
+
+
 
 
 
@@ -172,7 +310,19 @@ Total examples: 29
 
 
 
+
+
+
+
 ## Developer FAQ
+
+
+
+
+
+
+
+
 
 
 
@@ -188,7 +338,19 @@ These questions target common developer searches for Aspose.Slides for .NET `3d-
 
 
 
+
+
+
+
+
+
+
+
 ### How do I convert PowerPoint PPTX files to PDF, HTML, SVG, PNG, or JPEG in C#?
+
+
+
+
 
 
 
@@ -200,7 +362,19 @@ Use the conversion and export examples to load a `Presentation`, configure forma
 
 
 
+
+
+
+
+
+
+
+
 ### How do I add, clone, reorder, or remove PowerPoint slides in .NET?
+
+
+
+
 
 
 
@@ -212,7 +386,19 @@ Use slide management examples to work with `ISlide`, slide collections, layouts,
 
 
 
+
+
+
+
+
+
+
+
 ### How do I edit PowerPoint shapes, text, tables, or SmartArt in C#?
+
+
+
+
 
 
 
@@ -224,7 +410,19 @@ Use the shape, text, table, and SmartArt examples to locate shapes on a slide, c
 
 
 
+
+
+
+
+
+
+
+
 ### How do I add or inspect PowerPoint animations in C#?
+
+
+
+
 
 
 
@@ -236,7 +434,19 @@ Use animation examples to work with slide timelines, animation sequences, effect
 
 
 
+
+
+
+
+
+
+
+
 ### How do I extract presentation metadata, comments, notes, tags, VBA, or security information?
+
+
+
+
 
 
 
@@ -248,7 +458,19 @@ Use the inspection and management examples to access document properties, commen
 
 
 
+
+
+
+
+
+
+
+
 ### How do I use Aspose.Slides for .NET for 3d presentations in C#?
+
+
+
+
 
 
 
@@ -260,7 +482,19 @@ Use the `3d-presentations` examples to find standalone C# patterns for 3d presen
 
 
 
+
+
+
+
+
+
+
+
 <!-- SEO-FAQ:END -->
+
+
+
+
 
 
 
