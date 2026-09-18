@@ -3,11 +3,24 @@
 
 
 
+
+
+
+
+
 // Example: Extract PPTX metadata and log using C#
 
 
 
+
+
+
+
 //
+
+
+
+
 
 
 
@@ -15,7 +28,15 @@
 
 
 
+
+
+
+
 // Demonstrates how to extract basic PPTX metadata such as author and creation
+
+
+
+
 
 
 
@@ -23,7 +44,15 @@
 
 
 
+
+
+
+
 // loads a presentation, reads document properties, writes them to the console,
+
+
+
+
 
 
 
@@ -31,11 +60,23 @@
 
 
 
+
+
+
+
 // metadata extraction, validation, or logging in PowerPoint processing workflows.
 
 
 
+
+
+
+
 //
+
+
+
+
 
 
 
@@ -43,7 +84,15 @@
 
 
 
+
+
+
+
 // C#, PowerPoint, PPTX, Aspose.Slides for .NET, Extract, Metadata, Document
+
+
+
+
 
 
 
@@ -51,7 +100,15 @@
 
 
 
+
+
+
+
 //
+
+
+
+
 
 
 
@@ -59,7 +116,15 @@
 
 
 
+
+
+
+
 // - Automate extraction of PPTX author and creation time.
+
+
+
+
 
 
 
@@ -67,11 +132,24 @@
 
 
 
+
+
+
+
 // - Validate presentation properties before publishing or integration.
 
 
 
+
+
+
+
 // - Generate copies of presentations while preserving original metadata.
+
+
+
+
+
 
 
 
@@ -80,7 +158,15 @@
 
 
 
+
+
+
+
 using System;
+
+
+
+
 
 
 
@@ -88,7 +174,15 @@ using System.IO;
 
 
 
+
+
+
+
 using Aspose.Slides;
+
+
+
+
 
 
 
@@ -100,7 +194,19 @@ using Aspose.Slides.Export;
 
 
 
+
+
+
+
+
+
+
+
 namespace Extract3DMetadata
+
+
+
+
 
 
 
@@ -108,7 +214,15 @@ namespace Extract3DMetadata
 
 
 
+
+
+
+
     class Program
+
+
+
+
 
 
 
@@ -116,7 +230,15 @@ namespace Extract3DMetadata
 
 
 
+
+
+
+
         static void Main(string[] args)
+
+
+
+
 
 
 
@@ -124,7 +246,15 @@ namespace Extract3DMetadata
 
 
 
+
+
+
+
             // Determine input file path
+
+
+
+
 
 
 
@@ -136,7 +266,19 @@ namespace Extract3DMetadata
 
 
 
+
+
+
+
+
+
+
+
             // Check if the file exists
+
+
+
+
 
 
 
@@ -144,7 +286,15 @@ namespace Extract3DMetadata
 
 
 
+
+
+
+
             {
+
+
+
+
 
 
 
@@ -152,11 +302,27 @@ namespace Extract3DMetadata
 
 
 
+
+
+
+
                 return;
 
 
 
+
+
+
+
             }
+
+
+
+
+
+
+
+
 
 
 
@@ -168,7 +334,15 @@ namespace Extract3DMetadata
 
 
 
+
+
+
+
             {
+
+
+
+
 
 
 
@@ -176,7 +350,15 @@ namespace Extract3DMetadata
 
 
 
+
+
+
+
                 using (Presentation presentation = new Presentation(inputPath))
+
+
+
+
 
 
 
@@ -184,7 +366,15 @@ namespace Extract3DMetadata
 
 
 
+
+
+
+
                     // Access document properties
+
+
+
+
 
 
 
@@ -196,11 +386,27 @@ namespace Extract3DMetadata
 
 
 
+
+
+
+
+
+
+
+
                     // Log author and creation date
 
 
 
+
+
+
+
                     Console.WriteLine("Author: " + properties.Author);
+
+
+
+
 
 
 
@@ -212,7 +418,19 @@ namespace Extract3DMetadata
 
 
 
+
+
+
+
+
+
+
+
                     // Save the presentation before exiting (no changes made)
+
+
+
+
 
 
 
@@ -220,7 +438,15 @@ namespace Extract3DMetadata
 
 
 
+
+
+
+
                         Path.GetDirectoryName(inputPath) ?? "",
+
+
+
+
 
 
 
@@ -228,7 +454,15 @@ namespace Extract3DMetadata
 
 
 
+
+
+
+
                     presentation.Save(outputPath, SaveFormat.Pptx);
+
+
+
+
 
 
 
@@ -236,7 +470,15 @@ namespace Extract3DMetadata
 
 
 
+
+
+
+
             }
+
+
+
+
 
 
 
@@ -244,7 +486,15 @@ namespace Extract3DMetadata
 
 
 
+
+
+
+
             {
+
+
+
+
 
 
 
@@ -252,11 +502,23 @@ namespace Extract3DMetadata
 
 
 
+
+
+
+
                 Console.WriteLine("The file format is not supported (PPTX).");
 
 
 
+
+
+
+
             }
+
+
+
+
 
 
 
@@ -264,7 +526,15 @@ namespace Extract3DMetadata
 
 
 
+
+
+
+
             {
+
+
+
+
 
 
 
@@ -272,11 +542,23 @@ namespace Extract3DMetadata
 
 
 
+
+
+
+
                 Console.WriteLine("The file format is not supported (PPT).");
 
 
 
+
+
+
+
             }
+
+
+
+
 
 
 
@@ -284,7 +566,15 @@ namespace Extract3DMetadata
 
 
 
+
+
+
+
             {
+
+
+
+
 
 
 
@@ -292,7 +582,15 @@ namespace Extract3DMetadata
 
 
 
+
+
+
+
                 Console.WriteLine("An error occurred: " + ex.Message);
+
+
+
+
 
 
 
@@ -300,7 +598,15 @@ namespace Extract3DMetadata
 
 
 
+
+
+
+
         }
+
+
+
+
 
 
 
@@ -308,7 +614,15 @@ namespace Extract3DMetadata
 
 
 
+
+
+
+
 }
+
+
+
+
 
 
 
