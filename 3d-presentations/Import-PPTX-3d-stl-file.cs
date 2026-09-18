@@ -3,11 +3,24 @@
 
 
 
+
+
+
+
+
 // Example: Import STL 3D model into a PPTX using C#
 
 
 
+
+
+
+
 //
+
+
+
+
 
 
 
@@ -15,7 +28,15 @@
 
 
 
+
+
+
+
 // Demonstrates how to embed an STL 3D model file into a PowerPoint presentation
+
+
+
+
 
 
 
@@ -23,7 +44,15 @@
 
 
 
+
+
+
+
 // presentation, adds the STL file as an OLE object covering the entire slide,
+
+
+
+
 
 
 
@@ -31,7 +60,15 @@
 
 
 
+
+
+
+
 // This pattern can be used to automate the inclusion of 3D models in PowerPoint
+
+
+
+
 
 
 
@@ -39,7 +76,15 @@
 
 
 
+
+
+
+
 //
+
+
+
+
 
 
 
@@ -47,7 +92,15 @@
 
 
 
+
+
+
+
 // C#, PowerPoint, PPTX, STL, 3D model, Aspose.Slides for .NET, OLE object, 
+
+
+
+
 
 
 
@@ -55,7 +108,15 @@
 
 
 
+
+
+
+
 //
+
+
+
+
 
 
 
@@ -63,7 +124,15 @@
 
 
 
+
+
+
+
 // - Automate embedding STL 3D models into PowerPoint slides.
+
+
+
+
 
 
 
@@ -71,11 +140,24 @@
 
 
 
+
+
+
+
 // - Integrate 3D model visualization into .NET presentation workflows.
 
 
 
+
+
+
+
 // - Validate and process STL files for inclusion in Office documents.
+
+
+
+
+
 
 
 
@@ -84,7 +166,15 @@
 
 
 
+
+
+
+
 using System;
+
+
+
+
 
 
 
@@ -92,11 +182,23 @@ using System.IO;
 
 
 
+
+
+
+
 using Aspose.Slides;
 
 
 
+
+
+
+
 using Aspose.Slides.Export;
+
+
+
+
 
 
 
@@ -108,7 +210,19 @@ using Aspose.Slides.DOM.Ole;
 
 
 
+
+
+
+
+
+
+
+
 class Program
+
+
+
+
 
 
 
@@ -116,7 +230,15 @@ class Program
 
 
 
+
+
+
+
     static void Main()
+
+
+
+
 
 
 
@@ -124,7 +246,15 @@ class Program
 
 
 
+
+
+
+
         string stlPath = "model.stl";
+
+
+
+
 
 
 
@@ -136,7 +266,19 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         if (!File.Exists(stlPath))
+
+
+
+
 
 
 
@@ -144,7 +286,15 @@ class Program
 
 
 
+
+
+
+
             Console.WriteLine("STL file not found: " + stlPath);
+
+
+
+
 
 
 
@@ -152,7 +302,19 @@ class Program
 
 
 
+
+
+
+
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -164,11 +326,23 @@ class Program
 
 
 
+
+
+
+
         {
 
 
 
+
+
+
+
             Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+
+
+
+
 
 
 
@@ -180,7 +354,19 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             byte[] stlData = File.ReadAllBytes(stlPath);
+
+
+
+
 
 
 
@@ -192,15 +378,35 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             Aspose.Slides.IOleObjectFrame oleObjectFrame = slide.Shapes.AddOleObjectFrame(
 
 
 
+
+
+
+
                 0,
 
 
 
+
+
+
+
                 0,
+
+
+
+
 
 
 
@@ -208,7 +414,15 @@ class Program
 
 
 
+
+
+
+
                 presentation.SlideSize.Size.Height,
+
+
+
+
 
 
 
@@ -220,7 +434,19 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             // Show the 3D object instead of an icon
+
+
+
+
 
 
 
@@ -232,7 +458,19 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
             presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+
+
+
+
 
 
 
@@ -240,7 +478,15 @@ class Program
 
 
 
+
+
+
+
         }
+
+
+
+
 
 
 
@@ -248,7 +494,15 @@ class Program
 
 
 
+
+
+
+
         {
+
+
+
+
 
 
 
@@ -256,7 +510,15 @@ class Program
 
 
 
+
+
+
+
             Console.WriteLine("Error: " + ex.Message);
+
+
+
+
 
 
 
@@ -264,11 +526,23 @@ class Program
 
 
 
+
+
+
+
     }
 
 
 
+
+
+
+
 }
+
+
+
+
 
 
 
