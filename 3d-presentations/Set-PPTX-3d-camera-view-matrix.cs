@@ -3,11 +3,24 @@
 
 
 
+
+
+
+
+
 // Example: Set PPTX 3d camera view matrix using C#
 
 
 
+
+
+
+
 //
+
+
+
+
 
 
 
@@ -15,7 +28,15 @@
 
 
 
+
+
+
+
 // Demonstrates how to set a 3D camera view matrix (via rotation) for shapes
+
+
+
+
 
 
 
@@ -23,7 +44,15 @@
 
 
 
+
+
+
+
 // The example loads a presentation, iterates through slides and shapes, applies
+
+
+
+
 
 
 
@@ -31,7 +60,15 @@
 
 
 
+
+
+
+
 // This pattern can be used to automate 3D camera adjustments in PowerPoint
+
+
+
+
 
 
 
@@ -39,7 +76,15 @@
 
 
 
+
+
+
+
 //
+
+
+
+
 
 
 
@@ -47,7 +92,15 @@
 
 
 
+
+
+
+
 // C#, PowerPoint, PPTX, Aspose.Slides for .NET, 3D, Camera, View Matrix, Rotation,
+
+
+
+
 
 
 
@@ -55,7 +108,15 @@
 
 
 
+
+
+
+
 //
+
+
+
+
 
 
 
@@ -63,7 +124,15 @@
 
 
 
+
+
+
+
 // - Automate setting a 3D camera view matrix for PPTX files.
+
+
+
+
 
 
 
@@ -71,11 +140,24 @@
 
 
 
+
+
+
+
 // - Generate or transform PPTX files with custom 3D camera angles in .NET applications.
 
 
 
+
+
+
+
 // - Validate and preview 3D camera settings before publishing presentations.
+
+
+
+
+
 
 
 
@@ -84,7 +166,15 @@
 
 
 
+
+
+
+
 using System;
+
+
+
+
 
 
 
@@ -92,7 +182,15 @@ using System.IO;
 
 
 
+
+
+
+
 using Aspose.Slides;
+
+
+
+
 
 
 
@@ -104,7 +202,19 @@ using Aspose.Slides.Export;
 
 
 
+
+
+
+
+
+
+
+
 namespace Set3DCameraView
+
+
+
+
 
 
 
@@ -112,7 +222,15 @@ namespace Set3DCameraView
 
 
 
+
+
+
+
     class Program
+
+
+
+
 
 
 
@@ -120,7 +238,15 @@ namespace Set3DCameraView
 
 
 
+
+
+
+
         static void Main(string[] args)
+
+
+
+
 
 
 
@@ -128,11 +254,23 @@ namespace Set3DCameraView
 
 
 
+
+
+
+
             // Define input and output file paths
 
 
 
+
+
+
+
             string inputPath = "input.pptx";
+
+
+
+
 
 
 
@@ -144,7 +282,19 @@ namespace Set3DCameraView
 
 
 
+
+
+
+
+
+
+
+
             // Verify that the input file exists
+
+
+
+
 
 
 
@@ -152,7 +302,15 @@ namespace Set3DCameraView
 
 
 
+
+
+
+
             {
+
+
+
+
 
 
 
@@ -160,11 +318,27 @@ namespace Set3DCameraView
 
 
 
+
+
+
+
                 return;
 
 
 
+
+
+
+
             }
+
+
+
+
+
+
+
+
 
 
 
@@ -176,7 +350,15 @@ namespace Set3DCameraView
 
 
 
+
+
+
+
             {
+
+
+
+
 
 
 
@@ -184,7 +366,15 @@ namespace Set3DCameraView
 
 
 
+
+
+
+
                 using (Presentation presentation = new Presentation(inputPath))
+
+
+
+
 
 
 
@@ -192,7 +382,15 @@ namespace Set3DCameraView
 
 
 
+
+
+
+
                     // Iterate through all slides
+
+
+
+
 
 
 
@@ -200,7 +398,15 @@ namespace Set3DCameraView
 
 
 
+
+
+
+
                     {
+
+
+
+
 
 
 
@@ -212,7 +418,19 @@ namespace Set3DCameraView
 
 
 
+
+
+
+
+
+
+
+
                         // Iterate through all shapes on the slide
+
+
+
+
 
 
 
@@ -220,7 +438,15 @@ namespace Set3DCameraView
 
 
 
+
+
+
+
                         {
+
+
+
+
 
 
 
@@ -232,7 +458,19 @@ namespace Set3DCameraView
 
 
 
+
+
+
+
+
+
+
+
                             // Check if the shape has 3D formatting
+
+
+
+
 
 
 
@@ -240,7 +478,15 @@ namespace Set3DCameraView
 
 
 
+
+
+
+
                             {
+
+
+
+
 
 
 
@@ -248,7 +494,15 @@ namespace Set3DCameraView
 
 
 
+
+
+
+
                                 // Example: rotate 30 degrees around X, 45 degrees around Y, 0 degrees around Z
+
+
+
+
 
 
 
@@ -260,7 +514,19 @@ namespace Set3DCameraView
 
 
 
+
+
+
+
+
+
+
+
                                 // Optionally set the camera type to a perspective preset
+
+
+
+
 
 
 
@@ -268,11 +534,23 @@ namespace Set3DCameraView
 
 
 
+
+
+
+
                             }
 
 
 
+
+
+
+
                         }
+
+
+
+
 
 
 
@@ -284,7 +562,19 @@ namespace Set3DCameraView
 
 
 
+
+
+
+
+
+
+
+
                     // Save the modified presentation
+
+
+
+
 
 
 
@@ -292,11 +582,23 @@ namespace Set3DCameraView
 
 
 
+
+
+
+
                 }
 
 
 
+
+
+
+
             }
+
+
+
+
 
 
 
@@ -304,7 +606,15 @@ namespace Set3DCameraView
 
 
 
+
+
+
+
             {
+
+
+
+
 
 
 
@@ -312,11 +622,23 @@ namespace Set3DCameraView
 
 
 
+
+
+
+
                 Console.WriteLine("The provided file format is not supported.");
 
 
 
+
+
+
+
             }
+
+
+
+
 
 
 
@@ -324,7 +646,15 @@ namespace Set3DCameraView
 
 
 
+
+
+
+
             {
+
+
+
+
 
 
 
@@ -332,7 +662,15 @@ namespace Set3DCameraView
 
 
 
+
+
+
+
                 Console.WriteLine($"An error occurred: {ex.Message}");
+
+
+
+
 
 
 
@@ -340,7 +678,15 @@ namespace Set3DCameraView
 
 
 
+
+
+
+
         }
+
+
+
+
 
 
 
@@ -348,7 +694,15 @@ namespace Set3DCameraView
 
 
 
+
+
+
+
 }
+
+
+
+
 
 
 
