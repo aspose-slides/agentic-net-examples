@@ -3,11 +3,24 @@
 
 
 
+
+
+
+
+
 // Example: Export PPTX 3D HTML5 WebGL using C#
 
 
 
+
+
+
+
 //
+
+
+
+
 
 
 
@@ -15,7 +28,15 @@
 
 
 
+
+
+
+
 // Demonstrates how to export a PPTX file containing 3D content to an HTML5
+
+
+
+
 
 
 
@@ -23,7 +44,15 @@
 
 
 
+
+
+
+
 // the required presentation-processing steps for PowerPoint files and
+
+
+
+
 
 
 
@@ -31,7 +60,15 @@
 
 
 
+
+
+
+
 // can use this pattern to automate PPTX workflows, validate results, or integrate
+
+
+
+
 
 
 
@@ -39,7 +76,15 @@
 
 
 
+
+
+
+
 //
+
+
+
+
 
 
 
@@ -47,7 +92,15 @@
 
 
 
+
+
+
+
 // C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Html5, WebGL, 3D, 
+
+
+
+
 
 
 
@@ -55,7 +108,15 @@
 
 
 
+
+
+
+
 //
+
+
+
+
 
 
 
@@ -63,7 +124,15 @@
 
 
 
+
+
+
+
 // - Automate export of PPTX 3D presentations to HTML5 WebGL.
+
+
+
+
 
 
 
@@ -71,11 +140,24 @@
 
 
 
+
+
+
+
 // - Generate or transform PPTX files in .NET applications while preserving 3D models.
 
 
 
+
+
+
+
 // - Validate presentation workflows before publishing or integration.
+
+
+
+
+
 
 
 
@@ -84,7 +166,15 @@
 
 
 
+
+
+
+
 using System;
+
+
+
+
 
 
 
@@ -92,7 +182,15 @@ using System.IO;
 
 
 
+
+
+
+
 using Aspose.Slides;
+
+
+
+
 
 
 
@@ -104,7 +202,19 @@ using Aspose.Slides.Export;
 
 
 
+
+
+
+
+
+
+
+
 namespace Html5ExportExample
+
+
+
+
 
 
 
@@ -112,7 +222,15 @@ namespace Html5ExportExample
 
 
 
+
+
+
+
     class Program
+
+
+
+
 
 
 
@@ -120,7 +238,15 @@ namespace Html5ExportExample
 
 
 
+
+
+
+
         static void Main(string[] args)
+
+
+
+
 
 
 
@@ -128,7 +254,15 @@ namespace Html5ExportExample
 
 
 
+
+
+
+
             // Input and output paths
+
+
+
+
 
 
 
@@ -136,7 +270,15 @@ namespace Html5ExportExample
 
 
 
+
+
+
+
             string outputDirectory = "output";
+
+
+
+
 
 
 
@@ -148,7 +290,19 @@ namespace Html5ExportExample
 
 
 
+
+
+
+
+
+
+
+
             // Verify input file exists
+
+
+
+
 
 
 
@@ -156,7 +310,15 @@ namespace Html5ExportExample
 
 
 
+
+
+
+
             {
+
+
+
+
 
 
 
@@ -164,11 +326,27 @@ namespace Html5ExportExample
 
 
 
+
+
+
+
                 return;
 
 
 
+
+
+
+
             }
+
+
+
+
+
+
+
+
 
 
 
@@ -180,7 +358,15 @@ namespace Html5ExportExample
 
 
 
+
+
+
+
             if (!Directory.Exists(outputDirectory))
+
+
+
+
 
 
 
@@ -188,11 +374,27 @@ namespace Html5ExportExample
 
 
 
+
+
+
+
                 Directory.CreateDirectory(outputDirectory);
 
 
 
+
+
+
+
             }
+
+
+
+
+
+
+
+
 
 
 
@@ -204,11 +406,23 @@ namespace Html5ExportExample
 
 
 
+
+
+
+
             {
 
 
 
+
+
+
+
                 // Load presentation
+
+
+
+
 
 
 
@@ -220,7 +434,19 @@ namespace Html5ExportExample
 
 
 
+
+
+
+
+
+
+
+
                 // Configure HTML5 export options
+
+
+
+
 
 
 
@@ -228,7 +454,15 @@ namespace Html5ExportExample
 
 
 
+
+
+
+
                 {
+
+
+
+
 
 
 
@@ -236,7 +470,15 @@ namespace Html5ExportExample
 
 
 
+
+
+
+
                     EmbedImages = true,
+
+
+
+
 
 
 
@@ -244,11 +486,23 @@ namespace Html5ExportExample
 
 
 
+
+
+
+
                     OutputPath = outputDirectory,
 
 
 
+
+
+
+
                     // Note: Aspose.Slides renders 3D models using WebGL automatically when exporting to HTML5
+
+
+
+
 
 
 
@@ -260,7 +514,19 @@ namespace Html5ExportExample
 
 
 
+
+
+
+
+
+
+
+
                 // Save as HTML5
+
+
+
+
 
 
 
@@ -272,7 +538,19 @@ namespace Html5ExportExample
 
 
 
+
+
+
+
+
+
+
+
                 // Dispose presentation
+
+
+
+
 
 
 
@@ -284,11 +562,27 @@ namespace Html5ExportExample
 
 
 
+
+
+
+
+
+
+
+
                 Console.WriteLine("Presentation exported successfully to: " + outputHtmlPath);
 
 
 
+
+
+
+
             }
+
+
+
+
 
 
 
@@ -296,7 +590,15 @@ namespace Html5ExportExample
 
 
 
+
+
+
+
             {
+
+
+
+
 
 
 
@@ -304,11 +606,23 @@ namespace Html5ExportExample
 
 
 
+
+
+
+
                 Console.WriteLine("The provided file format is not supported for conversion.");
 
 
 
+
+
+
+
             }
+
+
+
+
 
 
 
@@ -316,7 +630,15 @@ namespace Html5ExportExample
 
 
 
+
+
+
+
             {
+
+
+
+
 
 
 
@@ -324,7 +646,15 @@ namespace Html5ExportExample
 
 
 
+
+
+
+
                 Console.WriteLine("An error occurred: " + ex.Message);
+
+
+
+
 
 
 
@@ -332,7 +662,15 @@ namespace Html5ExportExample
 
 
 
+
+
+
+
         }
+
+
+
+
 
 
 
@@ -340,7 +678,15 @@ namespace Html5ExportExample
 
 
 
+
+
+
+
 }
+
+
+
+
 
 
 
