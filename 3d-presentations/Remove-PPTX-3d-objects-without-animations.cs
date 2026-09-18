@@ -3,11 +3,24 @@
 
 
 
+
+
+
+
+
 // Example: Remove PPTX 3d objects without animations using C#
 
 
 
+
+
+
+
 //
+
+
+
+
 
 
 
@@ -15,7 +28,15 @@
 
 
 
+
+
+
+
 // Demonstrates how to remove 3‑D objects that have no animation effects from a
+
+
+
+
 
 
 
@@ -23,7 +44,15 @@
 
 
 
+
+
+
+
 // PPTX file, scans each slide for shapes with a ThreeDFormat, checks the slide
+
+
+
+
 
 
 
@@ -31,11 +60,23 @@
 
 
 
+
+
+
+
 // animations, and saves the modified presentation.
 
 
 
+
+
+
+
 //
+
+
+
+
 
 
 
@@ -43,7 +84,15 @@
 
 
 
+
+
+
+
 // C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove, 3D Objects, Without,
+
+
+
+
 
 
 
@@ -51,7 +100,15 @@
 
 
 
+
+
+
+
 //
+
+
+
+
 
 
 
@@ -59,7 +116,15 @@
 
 
 
+
+
+
+
 // - Clean up PPTX files by deleting unused 3‑D shapes.
+
+
+
+
 
 
 
@@ -67,11 +132,24 @@
 
 
 
+
+
+
+
 // - Automate preprocessing of PowerPoint files before publishing.
 
 
 
+
+
+
+
 // - Integrate 3‑D object removal into .NET based document workflows.
+
+
+
+
+
 
 
 
@@ -84,7 +162,19 @@
 
 
 
+
+
+
+
+
+
+
+
 using System;
+
+
+
+
 
 
 
@@ -92,7 +182,15 @@ using System.IO;
 
 
 
+
+
+
+
 using Aspose.Slides;
+
+
+
+
 
 
 
@@ -104,7 +202,19 @@ using Aspose.Slides.Export;
 
 
 
+
+
+
+
+
+
+
+
 class Program
+
+
+
+
 
 
 
@@ -112,7 +222,15 @@ class Program
 
 
 
+
+
+
+
     static void Main()
+
+
+
+
 
 
 
@@ -120,7 +238,15 @@ class Program
 
 
 
+
+
+
+
         string inputPath = "input.pptx";
+
+
+
+
 
 
 
@@ -132,7 +258,19 @@ class Program
 
 
 
+
+
+
+
+
+
+
+
         if (!File.Exists(inputPath))
+
+
+
+
 
 
 
@@ -140,7 +278,15 @@ class Program
 
 
 
+
+
+
+
             Console.WriteLine("Input file does not exist.");
+
+
+
+
 
 
 
@@ -148,7 +294,19 @@ class Program
 
 
 
+
+
+
+
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -160,11 +318,23 @@ class Program
 
 
 
+
+
+
+
         try
 
 
 
+
+
+
+
         {
+
+
+
+
 
 
 
@@ -172,7 +342,15 @@ class Program
 
 
 
+
+
+
+
         }
+
+
+
+
 
 
 
@@ -180,7 +358,15 @@ class Program
 
 
 
+
+
+
+
         {
+
+
+
+
 
 
 
@@ -188,7 +374,15 @@ class Program
 
 
 
+
+
+
+
             Console.WriteLine("File format not supported or error loading presentation.");
+
+
+
+
 
 
 
@@ -196,7 +390,19 @@ class Program
 
 
 
+
+
+
+
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -208,7 +414,15 @@ class Program
 
 
 
+
+
+
+
         {
+
+
+
+
 
 
 
@@ -216,7 +430,15 @@ class Program
 
 
 
+
+
+
+
             foreach (Aspose.Slides.IShape shape in slide.Shapes)
+
+
+
+
 
 
 
@@ -224,7 +446,15 @@ class Program
 
 
 
+
+
+
+
                 if (shape.ThreeDFormat != null)
+
+
+
+
 
 
 
@@ -232,7 +462,15 @@ class Program
 
 
 
+
+
+
+
                     int effectCount = slide.Timeline.MainSequence.GetCount(shape);
+
+
+
+
 
 
 
@@ -240,7 +478,15 @@ class Program
 
 
 
+
+
+
+
                     {
+
+
+
+
 
 
 
@@ -248,7 +494,15 @@ class Program
 
 
 
+
+
+
+
                     }
+
+
+
+
 
 
 
@@ -256,7 +510,19 @@ class Program
 
 
 
+
+
+
+
             }
+
+
+
+
+
+
+
+
 
 
 
@@ -268,7 +534,15 @@ class Program
 
 
 
+
+
+
+
             {
+
+
+
+
 
 
 
@@ -276,11 +550,27 @@ class Program
 
 
 
+
+
+
+
             }
 
 
 
+
+
+
+
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -292,7 +582,15 @@ class Program
 
 
 
+
+
+
+
         {
+
+
+
+
 
 
 
@@ -300,7 +598,15 @@ class Program
 
 
 
+
+
+
+
         }
+
+
+
+
 
 
 
@@ -308,7 +614,15 @@ class Program
 
 
 
+
+
+
+
         {
+
+
+
+
 
 
 
@@ -316,7 +630,15 @@ class Program
 
 
 
+
+
+
+
         }
+
+
+
+
 
 
 
@@ -324,7 +646,15 @@ class Program
 
 
 
+
+
+
+
         {
+
+
+
+
 
 
 
@@ -332,7 +662,15 @@ class Program
 
 
 
+
+
+
+
             {
+
+
+
+
 
 
 
@@ -340,7 +678,15 @@ class Program
 
 
 
+
+
+
+
             }
+
+
+
+
 
 
 
@@ -348,11 +694,23 @@ class Program
 
 
 
+
+
+
+
     }
 
 
 
+
+
+
+
 }
+
+
+
+
 
 
 
