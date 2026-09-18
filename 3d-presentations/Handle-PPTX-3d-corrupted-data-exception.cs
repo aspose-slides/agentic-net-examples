@@ -3,11 +3,24 @@
 
 
 
+
+
+
+
+
 // Example: Handle PPTX 3d corrupted data exception using C#
 
 
 
+
+
+
+
 //
+
+
+
+
 
 
 
@@ -15,7 +28,15 @@
 
 
 
+
+
+
+
 // Demonstrates how to detect and handle a corrupted 3D data exception in a PPTX
+
+
+
+
 
 
 
@@ -23,7 +44,15 @@
 
 
 
+
+
+
+
 // optionally processes it, and saves the result while catching specific
+
+
+
+
 
 
 
@@ -31,11 +60,23 @@
 
 
 
+
+
+
+
 // This pattern helps developers build robust PowerPoint automation tools.
 
 
 
+
+
+
+
 //
+
+
+
+
 
 
 
@@ -43,7 +84,15 @@
 
 
 
+
+
+
+
 // C#, PowerPoint, PPTX, Aspose.Slides for .NET, Handle, Pptx, Corrupted, Data,
+
+
+
+
 
 
 
@@ -51,7 +100,15 @@
 
 
 
+
+
+
+
 //
+
+
+
+
 
 
 
@@ -59,7 +116,15 @@
 
 
 
+
+
+
+
 // - Automate handling of PPTX files that may contain corrupted 3D data.
+
+
+
+
 
 
 
@@ -67,11 +132,24 @@
 
 
 
+
+
+
+
 // - Generate or transform PPTX files while gracefully handling format issues.
 
 
 
+
+
+
+
 // - Validate and log presentation integrity before further integration.
+
+
+
+
+
 
 
 
@@ -84,7 +162,19 @@
 
 
 
+
+
+
+
+
+
+
+
 using System;
+
+
+
+
 
 
 
@@ -92,7 +182,15 @@ using System.IO;
 
 
 
+
+
+
+
 using Aspose.Slides;
+
+
+
+
 
 
 
@@ -104,7 +202,19 @@ using Aspose.Slides.Export;
 
 
 
+
+
+
+
+
+
+
+
 namespace AsposeSlidesExample
+
+
+
+
 
 
 
@@ -112,7 +222,15 @@ namespace AsposeSlidesExample
 
 
 
+
+
+
+
     class Program
+
+
+
+
 
 
 
@@ -120,7 +238,15 @@ namespace AsposeSlidesExample
 
 
 
+
+
+
+
         static void Main(string[] args)
+
+
+
+
 
 
 
@@ -128,7 +254,15 @@ namespace AsposeSlidesExample
 
 
 
+
+
+
+
             string inputPath = Path.Combine(Directory.GetCurrentDirectory(), "input.pptx");
+
+
+
+
 
 
 
@@ -140,7 +274,19 @@ namespace AsposeSlidesExample
 
 
 
+
+
+
+
+
+
+
+
             if (!File.Exists(inputPath))
+
+
+
+
 
 
 
@@ -148,7 +294,15 @@ namespace AsposeSlidesExample
 
 
 
+
+
+
+
                 Console.WriteLine("Input file does not exist.");
+
+
+
+
 
 
 
@@ -156,7 +310,19 @@ namespace AsposeSlidesExample
 
 
 
+
+
+
+
             }
+
+
+
+
+
+
+
+
 
 
 
@@ -168,11 +334,23 @@ namespace AsposeSlidesExample
 
 
 
+
+
+
+
             {
 
 
 
+
+
+
+
                 Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+
+
+
+
 
 
 
@@ -184,7 +362,19 @@ namespace AsposeSlidesExample
 
 
 
+
+
+
+
+
+
+
+
                 presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+
+
+
+
 
 
 
@@ -192,7 +382,15 @@ namespace AsposeSlidesExample
 
 
 
+
+
+
+
             }
+
+
+
+
 
 
 
@@ -200,7 +398,15 @@ namespace AsposeSlidesExample
 
 
 
+
+
+
+
             {
+
+
+
+
 
 
 
@@ -208,7 +414,15 @@ namespace AsposeSlidesExample
 
 
 
+
+
+
+
             }
+
+
+
+
 
 
 
@@ -216,7 +430,15 @@ namespace AsposeSlidesExample
 
 
 
+
+
+
+
             {
+
+
+
+
 
 
 
@@ -224,11 +446,23 @@ namespace AsposeSlidesExample
 
 
 
+
+
+
+
                 Console.WriteLine("Unsupported presentation format: " + ex.Message);
 
 
 
+
+
+
+
             }
+
+
+
+
 
 
 
@@ -236,7 +470,15 @@ namespace AsposeSlidesExample
 
 
 
+
+
+
+
             {
+
+
+
+
 
 
 
@@ -244,7 +486,15 @@ namespace AsposeSlidesExample
 
 
 
+
+
+
+
             }
+
+
+
+
 
 
 
@@ -252,11 +502,23 @@ namespace AsposeSlidesExample
 
 
 
+
+
+
+
     }
 
 
 
+
+
+
+
 }
+
+
+
+
 
 
 
