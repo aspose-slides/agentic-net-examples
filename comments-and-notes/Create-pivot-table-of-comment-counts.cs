@@ -16,6 +16,7 @@
 // - Build C# tools that generate data for Excel pivot tables from PPTX comments.
 // - Integrate comment analysis into .NET applications handling PPTX files.
 // - Validate and audit comment usage before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
