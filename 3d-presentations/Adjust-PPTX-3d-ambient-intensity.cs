@@ -1,5 +1,4 @@
 // -----------------------------------------------------------------------------
-// Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Adjust PPTX 3D ambient intensity using C#
 //
 // Description:
@@ -19,6 +18,7 @@
 // - Build C# utilities for PowerPoint visual enhancements.
 // - Automate PPTX transformations that involve 3‑D formatting.
 // - Validate and adjust 3‑D lighting before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
