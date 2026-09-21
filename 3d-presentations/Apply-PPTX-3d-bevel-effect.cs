@@ -1,5 +1,4 @@
 // -----------------------------------------------------------------------------
-// Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Apply PPTX 3d bevel effect using C#
 //
 // Description:
@@ -19,6 +18,7 @@
 // - Build C# utilities for PowerPoint presentation styling.
 // - Generate or transform PPTX files with custom 3‑D visual effects.
 // - Validate presentation rendering before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.Drawing;
