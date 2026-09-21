@@ -17,6 +17,7 @@
 // - Automate generation of printable or archival TIFF documents from PPTX.
 // - Integrate slide‑notes extraction into .NET tools or services.
 // - Create batch conversion utilities for PowerPoint to TIFF with LZW compression.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
