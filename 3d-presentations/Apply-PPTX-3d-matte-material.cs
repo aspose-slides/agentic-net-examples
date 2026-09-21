@@ -1,5 +1,4 @@
 // -----------------------------------------------------------------------------
-// Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Apply PPTX 3d matte material using C#
 //
 // Description:
@@ -19,6 +18,7 @@
 // - Generate sample PPTX files with 3‑D shapes for testing.
 // - Integrate PPTX material adjustments into .NET automation pipelines.
 // - Validate and transform existing presentations before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
