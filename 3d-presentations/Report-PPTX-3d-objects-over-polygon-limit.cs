@@ -1,5 +1,4 @@
 // -----------------------------------------------------------------------------
-// Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Report PPTX 3d objects over polygon limit using C#
 //
 // Description:
@@ -19,6 +18,7 @@
 // - Integrate polygon‑count validation into CI/CD pipelines for presentations.
 // - Build tools that enforce rendering performance constraints for 3‑D content.
 // - Automate quality checks for PowerPoint files before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
