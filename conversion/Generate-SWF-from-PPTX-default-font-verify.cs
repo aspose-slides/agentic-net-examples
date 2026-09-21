@@ -18,6 +18,7 @@
 // - Automate conversion of PowerPoint presentations to SWF with default fonts.
 // - Build .NET tools for presentation processing and validation.
 // - Ensure consistent font rendering in SWF output across different environments.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
