@@ -17,6 +17,7 @@
 // - Validate and enforce presentation guidelines before publishing.
 // - Automate PowerPoint slide timing and transition settings.
 // - Build tools that process PPTX files and modify slide show behavior.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
