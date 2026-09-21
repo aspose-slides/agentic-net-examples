@@ -18,6 +18,7 @@
 // - Build C# tools for generating PNG assets from presentations.
 // - Integrate slide-to-image conversion into .NET workflows.
 // - Validate and process PowerPoint content before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
