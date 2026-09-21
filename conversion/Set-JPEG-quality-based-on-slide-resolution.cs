@@ -16,6 +16,7 @@
 // - Build automation tools that adapt image compression based on slide dimensions.
 // - Integrate conditional image export into .NET PowerPoint processing pipelines.
 // - Validate and preview slide images before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
