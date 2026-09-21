@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint to SWF conversion with performance tracking.
 // - Integrate conversion timing into automated workflows or CI pipelines.
 // - Diagnose and optimize presentation conversion performance.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
