@@ -17,6 +17,7 @@
 // - Automate extraction and upload of PowerPoint notes in .NET tools.
 // - Build C# utilities for PowerPoint presentation processing and integration.
 // - Validate and update slide notes programmatically before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
