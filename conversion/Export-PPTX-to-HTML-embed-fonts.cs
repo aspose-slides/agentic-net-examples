@@ -17,6 +17,7 @@
 // - Build automation tools that prepare PowerPoint content for web publishing.
 // - Ensure font fidelity when displaying slides in browsers without installing fonts.
 // - Integrate PPTX-to-HTML conversion into .NET services or desktop applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
