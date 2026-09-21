@@ -17,6 +17,7 @@
 // - Integrate PPTX‑to‑GIF conversion into C# tools or services.
 // - Automate generation of lightweight GIF previews for PowerPoint files.
 // - Validate visual output of presentations in automated pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
