@@ -19,6 +19,7 @@
 // - Build C# utilities for extracting and formatting PowerPoint notes.
 // - Generate LaTeX‑based documentation or handouts from presentations.
 // - Validate and review presentation notes before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
