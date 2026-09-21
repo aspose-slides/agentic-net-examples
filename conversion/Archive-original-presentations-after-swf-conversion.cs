@@ -16,6 +16,7 @@
 // - Build C# utilities for PowerPoint to SWF transformation workflows.
 // - Manage presentation assets by separating processed files from originals.
 // - Integrate presentation conversion and archiving into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
