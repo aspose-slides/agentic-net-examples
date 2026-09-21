@@ -17,6 +17,7 @@
 // - Build .NET tools for extracting and publishing presentation notes.
 // - Integrate slide‑notes extraction into CI/CD pipelines or content management systems.
 // - Validate and archive presentation metadata before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
