@@ -17,6 +17,7 @@
 // - Implement retry mechanisms for transient file system errors.
 // - Integrate presentation processing into .NET command‑line tools.
 // - Perform simple transformations (e.g., slide renaming) during conversion.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
