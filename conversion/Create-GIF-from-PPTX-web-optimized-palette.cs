@@ -17,6 +17,7 @@
 // - Build .NET tools for generating animated previews of slides.
 // - Integrate PPTX‑to‑GIF conversion into web services or desktop utilities.
 // - Ensure consistent GIF output settings across multiple presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
