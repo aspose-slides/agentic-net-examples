@@ -17,6 +17,7 @@
 // - Build C# utilities for processing slide notes and images in presentations.
 // - Generate PDFs with notes that have consistent visual styling.
 // - Validate and transform presentation content before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
