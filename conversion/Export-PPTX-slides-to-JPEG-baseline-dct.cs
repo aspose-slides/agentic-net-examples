@@ -19,6 +19,7 @@
 // - Integrate slide-to-image conversion into larger document processing
 //   pipelines.
 // - Validate slide rendering and image quality before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
