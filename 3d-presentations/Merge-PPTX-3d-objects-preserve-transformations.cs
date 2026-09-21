@@ -1,5 +1,4 @@
 // -----------------------------------------------------------------------------
-// Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Merge PPTX 3d objects preserve transformations using C#
 //
 // Description:
@@ -23,6 +22,7 @@
 //   complex slide assets.
 // - Validate and test presentation workflows involving 3D graphics before
 //   publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
