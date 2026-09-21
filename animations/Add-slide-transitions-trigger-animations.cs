@@ -17,6 +17,7 @@
 // - Build C# tools for PowerPoint presentation enhancement.
 // - Generate or modify PPTX files with custom slide transitions in .NET applications.
 // - Prepare presentations with predefined transition effects before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;

@@ -16,6 +16,7 @@
 // - Build C# tools for PowerPoint presentation analysis.
 // - Integrate animation checks into .NET applications or CI pipelines.
 // - Generate reports on animation types before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

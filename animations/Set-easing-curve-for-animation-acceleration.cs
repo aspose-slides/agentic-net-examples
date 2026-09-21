@@ -17,6 +17,7 @@
 // - Build C# tools for PowerPoint presentation processing with custom animation timing.
 // - Generate or transform PPTX files in .NET applications with specific animation effects.
 // - Validate animation workflows before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

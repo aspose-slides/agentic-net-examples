@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint presentation processing and web preview.
 // - Integrate presentation conversion into .NET applications.
 // - Validate and preview slide animations before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

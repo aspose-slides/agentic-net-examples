@@ -17,6 +17,7 @@
 // - Build tools that generate reports on slide animations.
 // - Validate animation sequences before publishing.
 // - Integrate animation analysis into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

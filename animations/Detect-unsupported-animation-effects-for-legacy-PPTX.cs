@@ -17,6 +17,7 @@
 // - Automate validation of presentations before distribution to older PowerPoint versions.
 // - Integrate animation compatibility checks into .NET build or CI pipelines.
 // - Generate reports of unsupported animations for content remediation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

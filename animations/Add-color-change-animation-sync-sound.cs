@@ -17,6 +17,7 @@
 // - Build .NET utilities that enrich PPTX files with synchronized media.
 // - Automate generation of presentations with animated and audio effects.
 // - Test or validate animation‑sound synchronization in PowerPoint files.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -18,6 +18,7 @@
 // - Generate image sequences for video creation or GIFs.
 // - Validate slide animations programmatically.
 // - Build tools that need per-frame visual output of presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

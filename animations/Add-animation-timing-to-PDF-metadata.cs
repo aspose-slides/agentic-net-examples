@@ -17,6 +17,7 @@
 // - Automate PowerPoint to PDF conversion while preserving custom properties.
 // - Build .NET tools for presentation analysis and reporting.
 // - Validate animation sequences before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
