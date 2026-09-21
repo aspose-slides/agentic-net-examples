@@ -17,6 +17,7 @@
 // - Automate validation of presentation conversion workflows.
 // - Build .NET tools for batch processing and quality checking of ODP files.
 // - Ensure reliable output before publishing or integrating SWF presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
