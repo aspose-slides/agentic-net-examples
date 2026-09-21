@@ -18,6 +18,7 @@
 // - Automate insertion of modern comments into presentations via .NET.
 // - Build tools that prepare PowerPoint files with author metadata and notes.
 // - Streamline collaborative presentation workflows in enterprise environments.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
