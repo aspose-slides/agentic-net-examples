@@ -16,6 +16,7 @@
 // - Automate batch processing of mixed-format presentations.
 // - Validate and transform PPT and ODP files in .NET applications.
 // - Build tools for presentation content consolidation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
