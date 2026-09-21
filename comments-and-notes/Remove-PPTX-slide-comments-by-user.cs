@@ -18,6 +18,7 @@
 // - Build C# tools for managing PowerPoint comment metadata.
 // - Automate preparation of presentations before distribution.
 // - Integrate comment removal into document workflow pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
