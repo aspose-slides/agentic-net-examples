@@ -18,6 +18,7 @@
 // - Create reporting or documentation from presentation notes.
 // - Automate extraction of presenter notes for review or publishing.
 // - Integrate notes extraction into larger .NET workflows or services.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
