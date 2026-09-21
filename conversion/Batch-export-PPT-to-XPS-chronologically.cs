@@ -17,6 +17,7 @@
 // - Generate date‑organized XPS outputs for compliance or record‑keeping.
 // - Integrate PowerPoint to XPS conversion into .NET batch processing tools.
 // - Automate conversion pipelines that require chronological folder structures.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
