@@ -18,6 +18,7 @@
 // - Build C# utilities for PowerPoint presentation processing and export.
 // - Integrate SWF generation into .NET workflows or web services.
 // - Validate presentation rendering quality before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
