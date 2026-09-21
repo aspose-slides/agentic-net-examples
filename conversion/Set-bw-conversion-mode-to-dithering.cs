@@ -18,6 +18,7 @@
 // - Automate generation of BW TIFF assets from presentations.
 // - Integrate Aspose.Slides export settings into .NET batch processing tools.
 // - Ensure consistent image quality when preparing slides for archival.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
