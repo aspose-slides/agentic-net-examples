@@ -17,6 +17,7 @@
 // - Create command‑line tools for updating slide animations programmatically.
 // - Integrate XML‑driven animation configuration into .NET presentation workflows.
 // - Validate and test animation definitions before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
