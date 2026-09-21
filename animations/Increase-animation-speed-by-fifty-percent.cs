@@ -17,6 +17,7 @@
 // - Create tools that adjust animation timing for faster presentations.
 // - Integrate animation speed adjustments into .NET automation pipelines.
 // - Prepare PPTX files for time‑constrained presentations or demos.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
