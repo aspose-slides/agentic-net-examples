@@ -16,6 +16,7 @@
 // - Automate PPTX to SWF conversion with notes for e‑learning or archival.
 // - Build validation tools for presentation workflows in .NET.
 // - Ensure generated SWF files contain required metadata before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
