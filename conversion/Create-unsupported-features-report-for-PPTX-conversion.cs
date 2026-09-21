@@ -18,6 +18,7 @@
 // - Build C# tools that validate PowerPoint presentations before conversion.
 // - Generate conversion logs for troubleshooting unsupported features.
 // - Integrate presentation conversion and reporting into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
