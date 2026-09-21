@@ -18,6 +18,7 @@
 // - Build command‑line tools for batch processing of PPTX files.
 // - Integrate slide‑size normalization into document conversion pipelines.
 // - Validate and adjust presentation layouts programmatically.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
