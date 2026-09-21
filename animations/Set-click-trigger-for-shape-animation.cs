@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint presentation creation or modification.
 // - Generate PPTX files with custom animation sequences.
 // - Validate animation settings before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
