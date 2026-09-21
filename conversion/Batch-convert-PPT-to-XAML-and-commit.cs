@@ -18,6 +18,7 @@
 // - Build tools that prepare presentation assets for WPF or other XAML‑based
 //   platforms.
 // - Validate and manage presentation conversions in .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
