@@ -18,6 +18,7 @@
 // - Integrate PPTX to SWF conversion into automated .NET workflows.
 // - Prepare legacy Flash-compatible presentations while ensuring consistent rendering.
 // - Provide fallback formats for environments where hardware acceleration is unavailable.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
