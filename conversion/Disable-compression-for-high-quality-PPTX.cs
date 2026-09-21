@@ -16,6 +16,7 @@
 // - Generate PPTX files without ZIP64 compression for archival or printing.
 // - Integrate high‑quality PPTX export into .NET automation tools.
 // - Validate and transform presentations based on external configuration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
