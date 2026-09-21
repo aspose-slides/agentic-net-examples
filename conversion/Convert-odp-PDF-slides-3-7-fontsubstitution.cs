@@ -15,6 +15,7 @@
 // - Automate batch processing of ODP files in .NET applications.
 // - Ensure consistent rendering when original fonts are unavailable.
 // - Integrate ODP to PDF conversion into document management workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
