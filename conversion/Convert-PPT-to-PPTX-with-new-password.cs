@@ -17,6 +17,7 @@
 // - Build .NET tools for securing PowerPoint presentations.
 // - Automate batch processing of presentations with encryption.
 // - Integrate password-protected PPTX generation into larger workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
