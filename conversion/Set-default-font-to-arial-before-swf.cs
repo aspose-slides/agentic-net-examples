@@ -18,6 +18,7 @@
 // - Build command‑line tools for batch conversion of presentations to SWF.
 // - Integrate font‑consistent conversion into .NET services or applications.
 // - Automate validation of presentation rendering before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
