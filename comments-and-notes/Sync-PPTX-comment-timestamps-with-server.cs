@@ -17,6 +17,7 @@
 // - Build .NET tools that add time‑stamped comments to PowerPoint files.
 // - Integrate presentation comment handling into server‑based workflows.
 // - Validate and generate PPTX files with accurate comment metadata.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
