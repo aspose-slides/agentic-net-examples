@@ -17,6 +17,7 @@
 // - Generate size reports for original and converted presentations.
 // - Integrate PowerPoint to SWF conversion into .NET command‑line tools.
 // - Validate conversion results before publishing or further processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
