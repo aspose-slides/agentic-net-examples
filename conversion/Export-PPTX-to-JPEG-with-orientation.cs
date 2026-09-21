@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint slide extraction.
 // - Integrate slide‑to‑image conversion into .NET applications.
 // - Prepare images with correct orientation metadata for downstream use.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
