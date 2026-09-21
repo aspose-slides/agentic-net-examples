@@ -17,6 +17,7 @@
 // - Include default‑value verification in automated test suites.
 // - Provide developers with a minimal example for checking export option defaults.
 // - Ensure consistent behavior when generating SWF files from presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
