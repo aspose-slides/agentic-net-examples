@@ -16,6 +16,7 @@
 // - Build .NET tools that apply corporate branding to PowerPoint slides before export.
 // - Generate SWF files for web viewers that require a consistent background color.
 // - Validate and process PowerPoint files in batch workflows prior to publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
