@@ -17,6 +17,7 @@
 // - Build .NET utilities that automate PowerPoint to XPS transformations.
 // - Integrate slide‑frame based margin simulation into document workflows.
 // - Validate and troubleshoot XPS export settings in automated pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
