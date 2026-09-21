@@ -17,6 +17,7 @@
 // - Integrate notes length checks into automated PowerPoint publishing pipelines.
 // - Build command‑line tools for PowerPoint quality assurance.
 // - Ensure compliance with corporate presentation standards.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
