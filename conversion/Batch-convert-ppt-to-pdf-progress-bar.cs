@@ -18,6 +18,7 @@
 // - Build command‑line tools for PowerPoint to PDF transformation.
 // - Integrate conversion progress feedback into .NET applications.
 // - Validate and monitor large presentation conversion workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
