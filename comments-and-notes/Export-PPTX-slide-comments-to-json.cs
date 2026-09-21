@@ -18,6 +18,7 @@
 // - Build C# utilities for PowerPoint presentation analysis.
 // - Integrate comment data into .NET applications or services.
 // - Validate and audit presentation content before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
