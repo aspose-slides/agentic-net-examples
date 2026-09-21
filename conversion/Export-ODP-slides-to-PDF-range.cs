@@ -17,6 +17,7 @@
 // - Build C# utilities for ODP to PDF conversion with slide selection.
 // - Generate PDFs from specific slides in presentation workflows.
 // - Validate and test slide extraction before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
