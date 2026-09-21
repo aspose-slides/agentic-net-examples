@@ -17,6 +17,7 @@
 // - Build diagnostic tools for PowerPoint to SWF workflows.
 // - Automate batch conversion with error logging for corrupted or unsupported files.
 // - Integrate robust conversion logic into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
