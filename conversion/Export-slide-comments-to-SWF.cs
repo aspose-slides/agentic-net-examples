@@ -16,6 +16,7 @@
 // - Build C# utilities for PowerPoint comment extraction and conversion.
 // - Integrate comment-aware SWF generation into .NET applications.
 // - Validate presentation comment layouts before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
