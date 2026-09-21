@@ -17,6 +17,7 @@
 // - Automate PowerPoint to SWF conversion with viewer UI in .NET applications.
 // - Validate SWF navigation buttons across different browsers.
 // - Integrate presentation conversion into custom C# tools or services.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
