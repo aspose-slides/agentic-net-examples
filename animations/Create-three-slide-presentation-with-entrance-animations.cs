@@ -17,6 +17,7 @@
 // - Automate PowerPoint content creation for training, marketing, or reporting.
 // - Build .NET tools that programmatically add animation effects to slides.
 // - Validate animation workflows before manual editing or publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides.Export;
