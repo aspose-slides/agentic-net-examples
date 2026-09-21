@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint to SWF conversion with image quality control.
 // - Automate batch processing of presentations with customized compression.
 // - Validate SWF output quality in .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
