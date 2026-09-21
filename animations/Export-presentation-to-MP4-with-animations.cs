@@ -17,6 +17,7 @@
 // - Build .NET tools for generating video content from PowerPoint files.
 // - Integrate presentation-to-video functionality into larger applications.
 // - Validate that slide animations are correctly rendered in exported videos.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
