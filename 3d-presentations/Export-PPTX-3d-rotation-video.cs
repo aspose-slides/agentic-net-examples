@@ -1,5 +1,4 @@
 // -----------------------------------------------------------------------------
-// Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Export PPTX 3D rotation video using C#
 //
 // Description:
@@ -18,6 +17,7 @@
 // - Generate frame sequences for further video encoding.
 // - Integrate 3‑D animation export into C# tools and services.
 // - Validate and preview 3‑D animations programmatically.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
