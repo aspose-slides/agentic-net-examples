@@ -17,6 +17,7 @@
 // - Build .NET tools for automated PowerPoint conversion workflows.
 // - Validate font availability and substitution behavior before publishing.
 // - Integrate font substitution logging into larger presentation processing pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
