@@ -18,6 +18,7 @@
 // - Build C# tools for managing PowerPoint comments and notes.
 // - Integrate comment synchronization into collaborative web or desktop apps.
 // - Automate comment editing and broadcasting as part of PPTX workflow automation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

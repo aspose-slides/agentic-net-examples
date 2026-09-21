@@ -17,6 +17,7 @@
 // - Build C# tools for PowerPoint presentation analysis.
 // - Generate reports of external references in slide notes.
 // - Validate presentation content before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

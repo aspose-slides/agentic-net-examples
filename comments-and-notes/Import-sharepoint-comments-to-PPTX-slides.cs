@@ -17,6 +17,7 @@
 // - Build .NET tools for enriching presentations with external feedback.
 // - Integrate SharePoint comment data into PPTX files during CI/CD pipelines.
 // - Validate and preview comment placement before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

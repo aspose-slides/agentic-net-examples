@@ -16,6 +16,7 @@
 // - Build tools that generate comment reports from PowerPoint files.
 // - Integrate comment processing into .NET applications.
 // - Validate and archive presentation feedback before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

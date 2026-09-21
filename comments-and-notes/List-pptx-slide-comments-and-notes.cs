@@ -17,6 +17,7 @@
 // - Build C# utilities for reviewing or auditing presentation content.
 // - Integrate comment and note extraction into .NET applications or services.
 // - Generate reports or perform quality checks on PPTX assets before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

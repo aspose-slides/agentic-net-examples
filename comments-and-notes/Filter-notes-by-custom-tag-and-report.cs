@@ -17,6 +17,7 @@
 // - Build C# utilities that generate reports from PowerPoint presentations.
 // - Integrate note‑tag validation into .NET workflows before publishing.
 // - Create audit trails of presentation content based on custom annotations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

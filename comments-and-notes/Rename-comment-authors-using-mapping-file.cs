@@ -17,6 +17,7 @@
 // - Integrate comment author updates into CI/CD pipelines for documentation.
 // - Prepare presentations for publishing with standardized author names.
 // - Automate PPTX metadata cleanup before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

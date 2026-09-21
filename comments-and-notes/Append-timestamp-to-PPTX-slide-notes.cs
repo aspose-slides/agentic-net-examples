@@ -18,6 +18,7 @@
 // - Build .NET tools that enrich PowerPoint presentations with metadata.
 // - Generate audit trails for presentations in corporate environments.
 // - Integrate timestamping into PowerPoint workflow automation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

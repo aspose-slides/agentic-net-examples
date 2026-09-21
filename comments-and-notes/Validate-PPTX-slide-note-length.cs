@@ -18,6 +18,7 @@
 // - Build C# tools for PowerPoint presentation processing with content checks.
 // - Enforce note length policies before publishing or integration.
 // - Integrate slide note validation into CI/CD pipelines for presentation assets.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

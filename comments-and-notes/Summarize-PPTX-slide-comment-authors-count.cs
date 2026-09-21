@@ -17,6 +17,7 @@
 // - Build tools that validate or audit comments before publishing.
 // - Integrate comment summarization into larger .NET PowerPoint workflows.
 // - Automate saving of presentations after analysis.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

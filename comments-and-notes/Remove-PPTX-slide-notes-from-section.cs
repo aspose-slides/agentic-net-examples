@@ -18,6 +18,7 @@
 // - Build C# utilities for cleaning up PPTX files before distribution.
 // - Integrate note removal into larger PowerPoint automation workflows.
 // - Prepare presentations for publishing where notes should be omitted.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

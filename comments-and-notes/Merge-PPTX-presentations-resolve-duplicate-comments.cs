@@ -17,6 +17,7 @@
 // - Preserve and correctly reassign comments when author names collide.
 // - Automate comment handling during presentation consolidation.
 // - Build .NET tools for PowerPoint comment management and workflow automation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

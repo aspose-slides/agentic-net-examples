@@ -17,6 +17,7 @@
 // - Build .NET tools that integrate AI translation into PowerPoint workflows.
 // - Prepare localized presentations by translating notes and comments.
 // - Validate and process presentation content before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

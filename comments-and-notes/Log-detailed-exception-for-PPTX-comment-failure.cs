@@ -16,6 +16,7 @@
 // - Build utilities that add and read comments in PowerPoint files.
 // - Ensure robust exception handling in presentation automation scripts.
 // - Save and dispose presentations after processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -18,6 +18,7 @@
 // - Build tools that process or migrate presentation comments in .NET.
 // - Generate reports on comment activity across slides.
 // - Validate or audit presentation feedback before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;

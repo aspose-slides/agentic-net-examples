@@ -18,6 +18,7 @@
 // - Build C# utilities that protect confidential presentation content.
 // - Integrate encrypted note extraction into .NET PowerPoint workflows.
 // - Validate and safeguard presentation data before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -17,6 +17,7 @@
 // - Automate documentation or review workflows that involve PPTX files.
 // - Build tools that enrich presentations with author‑attributed notes.
 // - Integrate markdown‑based feedback into existing PowerPoint assets.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

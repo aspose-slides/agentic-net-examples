@@ -17,6 +17,7 @@
 // - Automate creation of presentation dashboards highlighting review activity.
 // - Integrate comment analysis into .NET PowerPoint processing tools.
 // - Generate reports for stakeholders to identify heavily commented slides.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

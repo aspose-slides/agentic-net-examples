@@ -16,6 +16,7 @@
 // - Automate font family updates for corporate branding in PowerPoint decks.
 // - Build .NET tools that modify or standardize fonts in existing presentations.
 // - Generate new presentations with a predefined font when source files are absent.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

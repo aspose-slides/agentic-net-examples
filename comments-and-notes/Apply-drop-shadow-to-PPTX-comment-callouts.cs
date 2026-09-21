@@ -17,6 +17,7 @@
 // - Build C# utilities for enhancing PowerPoint comment visuals.
 // - Generate or transform PPTX files with styled comment callouts in .NET applications.
 // - Validate and preview presentation comment formatting before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.Drawing;

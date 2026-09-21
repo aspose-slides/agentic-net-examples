@@ -17,6 +17,7 @@
 // - Build tools for extracting documentation or speaker notes from PowerPoint.
 // - Automate content analysis or translation workflows for slide notes.
 // - Integrate slide notes extraction into .NET applications or CI pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

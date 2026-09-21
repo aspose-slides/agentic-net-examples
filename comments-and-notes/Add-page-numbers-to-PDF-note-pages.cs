@@ -18,6 +18,7 @@
 //   them to PDF with annotated notes.
 // - Generate PDFs with detailed slide information for documentation or review.
 // - Validate and enhance presentation workflows before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

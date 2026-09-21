@@ -17,6 +17,7 @@
 // - Build automated validation tools for presentation content.
 // - Generate reports of slides with specific note keywords.
 // - Integrate note‑search functionality into .NET PowerPoint utilities.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

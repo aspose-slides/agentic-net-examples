@@ -18,6 +18,7 @@
 // - Build C# utilities for synchronizing external comment repositories with PPTX.
 // - Generate or enrich PPTX presentations with comment metadata in .NET applications.
 // - Validate and test comment import processes before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

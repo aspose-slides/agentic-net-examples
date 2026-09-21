@@ -17,6 +17,7 @@
 // - Build C# utilities for processing and enhancing PowerPoint notes.
 // - Generate or transform PPTX files with highlighted note content in .NET.
 // - Validate and prepare presentation notes before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

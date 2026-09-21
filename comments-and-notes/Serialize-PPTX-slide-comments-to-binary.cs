@@ -16,6 +16,7 @@
 // - Reconstruct presentations from serialized comment data.
 // - Build tools that need to backup or migrate PowerPoint comment information.
 // - Automate validation of comment data in PowerPoint workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

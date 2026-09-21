@@ -17,6 +17,7 @@
 // - Build tools that convert PPTX comment threads to markdown format.
 // - Integrate comment export functionality into .NET applications.
 // - Validate or review comments in PowerPoint files programmatically.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

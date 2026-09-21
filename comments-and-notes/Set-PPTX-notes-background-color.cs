@@ -17,6 +17,7 @@
 // - Build .NET tools that standardize the appearance of PowerPoint notes.
 // - Integrate notes styling into presentation generation workflows.
 // - Ensure consistent branding across notes sections of presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -18,6 +18,7 @@
 // - Integrate disclaimer insertion into .NET PowerPoint processing pipelines.
 // - Ensure compliance by embedding standard notices in presentation files.
 // - Generate or modify PPTX files with consistent comment metadata.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

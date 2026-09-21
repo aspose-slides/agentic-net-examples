@@ -16,6 +16,7 @@
 // - Build tools that need to report status while handling slide comments.
 // - Integrate comment analysis or transformation into .NET applications.
 // - Validate and log comment handling before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

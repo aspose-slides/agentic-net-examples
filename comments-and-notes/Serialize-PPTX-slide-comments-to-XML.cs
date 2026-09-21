@@ -17,6 +17,7 @@
 // - Create tools that audit or archive PowerPoint comment data.
 // - Integrate comment extraction into .NET applications or CI pipelines.
 // - Transform comment information for reporting or migration purposes.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

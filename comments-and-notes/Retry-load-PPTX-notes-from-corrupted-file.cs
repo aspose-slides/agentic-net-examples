@@ -18,6 +18,7 @@
 // - Extract and display notes from each slide in a presentation.
 // - Build C# tools for PowerPoint presentation processing and recovery.
 // - Save processed presentations after handling errors.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

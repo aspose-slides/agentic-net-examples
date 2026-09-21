@@ -17,6 +17,7 @@
 // - Include clickable hyperlinks within speaker notes.
 // - Automate generation of presentation templates with predefined notes.
 // - Build .NET utilities for PowerPoint content enrichment and validation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;

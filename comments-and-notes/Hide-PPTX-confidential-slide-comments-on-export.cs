@@ -16,6 +16,7 @@
 // - Build C# tools for sanitizing PowerPoint presentations.
 // - Generate or transform PPTX files while ensuring sensitive information is omitted.
 // - Validate presentation workflows to comply with confidentiality requirements.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -18,6 +18,7 @@
 //   notes content.
 // - Convert external RTF note collections into PPTX notes for distribution.
 // - Validate and test notes‑embedding workflows before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

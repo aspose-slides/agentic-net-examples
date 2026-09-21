@@ -17,6 +17,7 @@
 // - Automate validation of slide comments in .NET applications.
 // - Integrate comment checks into PowerPoint processing pipelines.
 // - Generate default comments for slides lacking annotations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

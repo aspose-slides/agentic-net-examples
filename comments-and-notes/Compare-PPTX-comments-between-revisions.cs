@@ -16,6 +16,7 @@
 // - Automate review processes for PowerPoint files.
 // - Build tools that track comment changes across revisions.
 // - Integrate comment comparison into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
