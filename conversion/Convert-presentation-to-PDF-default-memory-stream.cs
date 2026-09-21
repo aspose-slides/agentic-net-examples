@@ -18,6 +18,7 @@
 // - Process PDF data in-memory for web services or APIs.
 // - Integrate PDF conversion into .NET applications that require stream handling.
 // - Perform post-conversion operations such as uploading or further analysis.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
