@@ -18,6 +18,7 @@
 // - Automate PowerPoint to SWF conversion using external configuration files.
 // - Build C# tools for PowerPoint presentation processing and SWF output customization.
 // - Validate and fine‑tune SWF conversion settings before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
