@@ -18,6 +18,7 @@
 // - Add custom EXIF metadata to slide images for cataloging or archival.
 // - Build .NET utilities for batch processing of PowerPoint presentations.
 // - Integrate slide export functionality into larger document‑management systems.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
