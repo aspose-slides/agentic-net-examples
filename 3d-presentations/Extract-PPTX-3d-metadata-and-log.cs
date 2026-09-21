@@ -1,5 +1,4 @@
 // -----------------------------------------------------------------------------
-// Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Extract PPTX metadata and log using C#
 //
 // Description:
@@ -18,6 +17,7 @@
 // - Build C# tools for logging PowerPoint presentation metadata.
 // - Validate presentation properties before publishing or integration.
 // - Generate copies of presentations while preserving original metadata.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
