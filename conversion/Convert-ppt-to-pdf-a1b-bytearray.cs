@@ -18,6 +18,7 @@
 // - Build .NET tools that process PowerPoint presentations from byte arrays.
 // - Integrate presentation conversion into server‑side or cloud services.
 // - Validate and archive presentations in a PDF/A‑1b format for long‑term storage.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
