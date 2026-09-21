@@ -19,6 +19,7 @@
 // - Build .NET utilities that ensure presentation assets are ready for web
 //   publishing in SWF format.
 // - Detect unsupported or corrupted PowerPoint files before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
