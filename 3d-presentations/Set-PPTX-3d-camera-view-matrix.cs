@@ -1,5 +1,4 @@
 // -----------------------------------------------------------------------------
-// Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Set PPTX 3d camera view matrix using C#
 //
 // Description:
@@ -19,6 +18,7 @@
 // - Build C# tools that modify 3D camera properties in PowerPoint presentations.
 // - Generate or transform PPTX files with custom 3D camera angles in .NET applications.
 // - Validate and preview 3D camera settings before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
