@@ -17,6 +17,7 @@
 // - Build .NET tools for batch processing of presentations with branding.
 // - Integrate watermarking into document generation pipelines.
 // - Validate presentation conversion workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
