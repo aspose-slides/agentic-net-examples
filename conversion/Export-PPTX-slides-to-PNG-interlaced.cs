@@ -19,6 +19,7 @@
 // - Build C# tools for PowerPoint presentation processing.
 // - Generate image assets from presentations in .NET applications.
 // - Prepare slide images for web publishing where interlaced PNGs are required.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
