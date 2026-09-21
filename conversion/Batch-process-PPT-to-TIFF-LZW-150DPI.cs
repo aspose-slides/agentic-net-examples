@@ -19,6 +19,7 @@
 // - Integrate TIFF export with specific compression and resolution settings
 //   into .NET workflows.
 // - Validate and preprocess presentations before publishing or distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
