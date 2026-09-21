@@ -18,6 +18,7 @@
 // - Build C# utilities for PowerPoint presentation cleanup.
 // - Integrate presentation sanitization into .NET applications.
 // - Prepare PPTX files for publishing by ensuring they contain only meaningful content.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
