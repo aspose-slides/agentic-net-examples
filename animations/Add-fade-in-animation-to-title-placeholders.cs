@@ -17,6 +17,7 @@
 // - Build .NET tools that enhance slide presentations with predefined animations.
 // - Integrate animation logic into PowerPoint generation or transformation pipelines.
 // - Validate and preview presentation animations before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
