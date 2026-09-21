@@ -18,6 +18,7 @@
 // - Build command‑line tools for high‑throughput presentation processing.
 // - Integrate parallel TIFF conversion into CI/CD pipelines.
 // - Reduce conversion time for large collections of presentation files.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
