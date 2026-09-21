@@ -17,6 +17,7 @@
 // - Build command‑line tools for PowerPoint document transformation.
 // - Integrate PPTX to XPS export functionality into larger .NET workflows.
 // - Validate presentation rendering before distribution or printing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
