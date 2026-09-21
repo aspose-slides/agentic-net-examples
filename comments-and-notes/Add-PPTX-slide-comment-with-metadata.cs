@@ -17,6 +17,7 @@
 // - Build C# tools for annotating PPTX presentations.
 // - Generate or modify PPTX files with author and timestamp information.
 // - Validate comment handling in presentation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
