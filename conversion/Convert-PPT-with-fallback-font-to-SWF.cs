@@ -16,6 +16,7 @@
 // - Automate batch conversion of PowerPoint files in .NET applications.
 // - Ensure consistent rendering when original fonts are unavailable.
 // - Integrate presentation conversion into custom tooling or services.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
