@@ -17,6 +17,7 @@
 // - Integrate ODP to TIFF conversion into .NET command‑line tools.
 // - Prepare presentation assets for printing or archival.
 // - Automate image generation from OpenDocument slides in CI pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
