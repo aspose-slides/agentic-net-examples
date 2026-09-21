@@ -17,6 +17,7 @@
 // - Build C# utilities for converting PPTX to SWF with notes preservation.
 // - Integrate PowerPoint to SWF conversion into .NET applications.
 // - Validate and preview presentation content before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
