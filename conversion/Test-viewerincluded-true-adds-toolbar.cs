@@ -17,6 +17,7 @@
 // - Create self‑contained SWF presentations for web embedding.
 // - Automate batch conversion of PowerPoint files to SWF with toolbar support.
 // - Validate SWF output that includes navigation controls.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
