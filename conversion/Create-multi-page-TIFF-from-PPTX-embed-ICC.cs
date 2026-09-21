@@ -17,6 +17,7 @@
 // - Build C# utilities that handle color‑managed image export from presentations.
 // - Integrate PPTX to TIFF transformation into .NET applications or workflows.
 // - Validate and test presentation rendering with ICC profile support.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
