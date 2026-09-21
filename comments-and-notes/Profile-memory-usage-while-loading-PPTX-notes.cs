@@ -17,6 +17,7 @@
 // - Validate memory usage for large presentations.
 // - Build tools that need to monitor resource usage during PowerPoint processing.
 // - Ensure comment data is loaded correctly when profiling.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
