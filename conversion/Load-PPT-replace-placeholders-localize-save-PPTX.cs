@@ -16,6 +16,7 @@
 // - Build .NET tools for batch processing and updating PPTX files.
 // - Integrate presentation text updates into larger applications or workflows.
 // - Validate and test placeholder handling before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
