@@ -16,6 +16,7 @@
 // - Build C# utilities for annotating PPTX files in compliance workflows.
 // - Integrate comment tagging into document management or review systems.
 // - Ensure presentation comments meet audit and regulatory requirements.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
