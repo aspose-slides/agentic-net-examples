@@ -17,6 +17,7 @@
 // - Integrate slide animation analysis into .NET automation tools.
 // - Validate or audit animation settings before publishing.
 // - Build utilities that process PPTX files and output structured data.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
