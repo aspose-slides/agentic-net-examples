@@ -19,6 +19,7 @@
 // - Build C# utilities for PowerPoint presentation export.
 // - Generate GIF previews of presentations in .NET applications.
 // - Validate visual fidelity of PPTX content before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
