@@ -17,6 +17,7 @@
 // - Build C# tools for PowerPoint presentation export.
 // - Generate PDF booklets with specific slide layouts in .NET applications.
 // - Integrate presentation conversion into automated workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
