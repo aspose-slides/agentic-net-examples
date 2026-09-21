@@ -15,6 +15,7 @@
 // - Automate preparation of slide decks for interactive delivery.
 // - Integrate animation pause settings into .NET based PowerPoint tooling.
 // - Ensure consistent click‑to‑advance behavior across all slides.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
