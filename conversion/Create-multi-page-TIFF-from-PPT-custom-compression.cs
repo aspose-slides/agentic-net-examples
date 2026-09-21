@@ -16,6 +16,7 @@
 // - Build .NET tools for archiving or printing PowerPoint slides as TIFF images.
 // - Integrate slide‑to‑image conversion into document processing pipelines.
 // - Apply specific DPI and compression settings for optimized TIFF output.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
