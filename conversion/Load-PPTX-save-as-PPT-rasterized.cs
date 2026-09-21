@@ -16,6 +16,7 @@
 // - Automate batch conversion of PowerPoint files in .NET environments.
 // - Preserve visual fidelity by rasterizing unsupported features.
 // - Integrate PPTX to PPT conversion into custom tools or workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
