@@ -17,6 +17,7 @@
 // - Build .NET tools that standardize notes formatting across presentations.
 // - Generate or transform PPTX files with customized notes layout.
 // - Validate and enforce presentation style guidelines before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
