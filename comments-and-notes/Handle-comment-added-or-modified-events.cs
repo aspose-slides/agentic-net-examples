@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint comment management.
 // - Integrate comment event handling into .NET presentation workflows.
 // - Validate and transform PPTX files with comment tracking.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
