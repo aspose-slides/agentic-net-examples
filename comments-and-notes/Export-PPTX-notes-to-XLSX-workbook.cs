@@ -19,6 +19,7 @@
 // - Build C# utilities for PowerPoint presentation analysis.
 // - Convert presentation notes into a format consumable by Excel.
 // - Validate and process slide notes before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
