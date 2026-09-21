@@ -17,6 +17,7 @@
 // - Build automated tools for PPTX cleanup or preparation.
 // - Integrate animation ordering logic into .NET applications.
 // - Validate and adjust presentation workflows before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
