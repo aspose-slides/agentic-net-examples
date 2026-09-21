@@ -16,6 +16,7 @@
 // - Automate generation of SWF files for environments that provide custom viewers.
 // - Validate that the produced SWF works with a specific SWF player.
 // - Integrate SWF conversion into .NET batch processing or CI pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
