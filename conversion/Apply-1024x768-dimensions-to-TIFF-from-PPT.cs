@@ -17,6 +17,7 @@
 // - Generate high‑resolution slide thumbnails for documentation or web use.
 // - Integrate PPTX to TIFF conversion into .NET batch processing pipelines.
 // - Ensure consistent image dimensions across exported slide assets.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
