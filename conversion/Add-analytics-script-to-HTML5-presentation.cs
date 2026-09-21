@@ -17,6 +17,7 @@
 // - Add custom JavaScript tracking to generated HTML5 slides.
 // - Build .NET tools for automated presentation publishing workflows.
 // - Integrate analytics reporting into PowerPoint-to-HTML5 pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
