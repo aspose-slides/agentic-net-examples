@@ -15,6 +15,7 @@
 // - Integrate exported HTML5 slides into React components.
 // - Automate PPTX to HTML5 conversion in .NET tools.
 // - Validate and preview presentations before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
