@@ -16,6 +16,7 @@
 // - Automate batch conversion of PPTX files to TIFF in .NET applications.
 // - Integrate presentation export functionality into custom tools or services.
 // - Validate and test PPTX to TIFF conversion workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
