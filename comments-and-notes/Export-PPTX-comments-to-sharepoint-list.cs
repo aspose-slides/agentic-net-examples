@@ -16,6 +16,7 @@
 // - Build C# utilities that synchronize presentation comments with SharePoint lists.
 // - Automate comment analysis or reporting from PowerPoint files.
 // - Integrate Aspose.Slides comment handling into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
