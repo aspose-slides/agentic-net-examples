@@ -17,6 +17,7 @@
 // - Automate notes layout customization across all slides.
 // - Build .NET tools for PowerPoint presentation processing and branding.
 // - Validate and transform PPTX files before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
