@@ -18,6 +18,7 @@
 // - Build .NET tools for PowerPoint to SWF conversion with slide visibility
 //   checks.
 // - Integrate presentation validation into CI pipelines or publishing workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
