@@ -16,6 +16,7 @@
 // - Automate creation of handouts or documentation from PowerPoint notes.
 // - Integrate notes‑only PDF export into .NET tools or CI pipelines.
 // - Validate that notes are correctly extracted from presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
