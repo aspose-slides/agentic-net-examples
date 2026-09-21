@@ -18,6 +18,7 @@
 // - Build .NET tools that embed slide content directly into HTML pages.
 // - Automate batch conversion of PPTX files for publishing or documentation.
 // - Validate and preview PPTX content in browsers without external image files.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
