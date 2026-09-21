@@ -18,6 +18,7 @@
 // - Integrate size‑based filtering into automated document conversion workflows.
 // - Build command‑line tools for presentation processing in .NET environments.
 // - Prevent out‑of‑memory or performance issues caused by very large source files.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
