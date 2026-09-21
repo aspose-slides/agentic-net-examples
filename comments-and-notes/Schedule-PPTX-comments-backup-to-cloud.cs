@@ -18,6 +18,7 @@
 // - Build C# utilities for PowerPoint presentation data extraction.
 // - Integrate comment and note archiving into .NET applications.
 // - Ensure data persistence for collaborative presentation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
