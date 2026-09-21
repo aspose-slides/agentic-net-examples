@@ -17,6 +17,7 @@
 // - Build tools that clean up presentation metadata in .NET applications.
 // - Integrate comment visibility control into PowerPoint processing pipelines.
 // - Ensure draft slides do not expose comments during review or distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
