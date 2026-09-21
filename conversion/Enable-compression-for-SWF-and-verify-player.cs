@@ -17,6 +17,7 @@
 // - Automate verification of SWF output in CI pipelines.
 // - Build .NET utilities that prepare presentations for Flash Player.
 // - Ensure SWF files are generated with compression to reduce size.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
