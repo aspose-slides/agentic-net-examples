@@ -17,6 +17,7 @@
 // - Automate generation of watermarked PDF handouts from PowerPoint decks.
 // - Integrate notes-page watermarking into .NET document processing pipelines.
 // - Ensure consistent branding on exported presentation notes.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
