@@ -1,5 +1,4 @@
 // -----------------------------------------------------------------------------
-// Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Compress PPTX 3D assets for distribution using C#
 //
 // Description:
@@ -17,6 +16,7 @@
 // - Automate PPTX preparation in build or CI pipelines.
 // - Build command‑line tools for PowerPoint asset optimization.
 // - Integrate presentation compression into larger .NET solutions.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
