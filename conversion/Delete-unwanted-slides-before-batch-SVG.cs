@@ -18,6 +18,7 @@
 // - Generate SVG images for all remaining slides in a batch operation.
 // - Build command‑line tools for PPTX cleanup and conversion to SVG.
 // - Integrate slide manipulation and SVG export into .NET workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
