@@ -16,6 +16,7 @@
 // - Build C# utilities that generate SWF files with specific JPEG quality settings.
 // - Ensure compatibility of presentation conversion pipelines with low-quality JPEG output.
 // - Validate Aspose.Slides behavior before integrating into larger .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
