@@ -17,6 +17,7 @@
 // - Create automated tools that produce SWF presentations with specific slide visibility.
 // - Test and validate presentation conversion workflows in .NET applications.
 // - Generate SWF assets for web publishing while controlling hidden slide inclusion.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
