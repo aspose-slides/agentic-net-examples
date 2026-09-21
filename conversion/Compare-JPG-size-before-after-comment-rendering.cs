@@ -17,6 +17,7 @@
 // - Build C# tools for PowerPoint slide image export with optional comment inclusion.
 // - Validate the impact of comment rendering on exported slide assets.
 // - Integrate slide export and size analysis into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
