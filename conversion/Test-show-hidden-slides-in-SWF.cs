@@ -18,6 +18,7 @@
 // - Build C# utilities for PowerPoint to SWF conversion.
 // - Automate presentation workflows that require hidden slide visibility.
 // - Validate and test SWF export settings in .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
