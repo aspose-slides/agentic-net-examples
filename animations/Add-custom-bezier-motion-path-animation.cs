@@ -16,6 +16,7 @@
 // - Build C# tools for advanced animation scripting in presentations.
 // - Generate or modify PPTX files with custom motion paths in .NET applications.
 // - Validate and test animation workflows before deployment.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
