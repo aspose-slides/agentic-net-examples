@@ -16,6 +16,7 @@
 // - Record conversion settings in a metadata file for auditing or reproducibility.
 // - Build C# utilities for batch processing of presentations.
 // - Integrate conversion workflows into .NET applications with traceable parameters.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
