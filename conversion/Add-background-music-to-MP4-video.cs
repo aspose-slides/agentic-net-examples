@@ -18,6 +18,7 @@
 // - Build automated pipelines that generate marketing or training videos from PPTX.
 // - Integrate presentation-to-video conversion into .NET applications.
 // - Add custom audio tracks to slide‑show videos for e‑learning content.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
