@@ -17,6 +17,7 @@
 // - Build .NET utilities that need to embed all assets into a single HTML file.
 // - Automate batch conversion of PPTX files to portable HTML documents.
 // - Validate and test presentation rendering in browsers without external files.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
