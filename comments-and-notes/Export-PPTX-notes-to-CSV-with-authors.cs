@@ -17,6 +17,7 @@
 // - Build tools that need note text alongside slide identifiers.
 // - Integrate note export functionality into .NET applications.
 // - Prepare data for downstream processing where author information may be added.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
