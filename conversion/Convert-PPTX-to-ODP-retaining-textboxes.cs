@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint presentation processing.
 // - Integrate PPTX to ODP conversion into .NET applications.
 // - Validate that text boxes survive format conversion before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
