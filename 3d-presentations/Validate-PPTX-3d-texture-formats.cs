@@ -1,5 +1,4 @@
 // -----------------------------------------------------------------------------
-// Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Validate PPTX 3d texture formats using C#
 //
 // Description:
@@ -19,6 +18,7 @@
 // - Build .NET tools that enforce texture‑format compliance before publishing.
 // - Integrate texture‑format checks into CI/CD pipelines for PowerPoint assets.
 // - Extend the placeholder to enforce specific corporate image standards.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

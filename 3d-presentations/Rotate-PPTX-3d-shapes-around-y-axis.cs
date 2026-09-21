@@ -1,5 +1,4 @@
 // -----------------------------------------------------------------------------
-// Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Rotate PPTX 3d shapes around y axis using C#
 //
 // Description:
@@ -18,6 +17,7 @@
 // - Build C# tools for PowerPoint 3D presentation processing.
 // - Generate or transform PPTX files with custom 3D rotations in .NET.
 // - Validate 3D presentation workflows before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

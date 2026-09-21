@@ -1,5 +1,4 @@
 // -----------------------------------------------------------------------------
-// Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Export PPTX 3d slide to png depth using C#
 //
 // Description:
@@ -19,6 +18,7 @@
 // - Build C# utilities for extracting and converting 3‑D slide content.
 // - Integrate PPTX 3‑D processing into .NET applications.
 // - Validate and preview 3‑D slide rendering before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

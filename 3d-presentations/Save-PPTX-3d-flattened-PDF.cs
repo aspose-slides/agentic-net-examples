@@ -1,5 +1,4 @@
 // -----------------------------------------------------------------------------
-// Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Save PPTX 3d flattened PDF using C#
 //
 // Description:
@@ -17,6 +16,7 @@
 // - Automate generation of PDF reports from PowerPoint files in .NET environments.
 // - Ensure compatibility of exported PDFs across viewers by rasterizing 3‑D content.
 // - Integrate PPTX to PDF conversion into build pipelines or server‑side services.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

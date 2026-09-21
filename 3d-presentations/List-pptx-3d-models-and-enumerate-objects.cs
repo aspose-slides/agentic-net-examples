@@ -1,5 +1,4 @@
 // -----------------------------------------------------------------------------
-// Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: List pptx 3d models and enumerate objects using C#
 //
 // Description:
@@ -18,6 +17,7 @@
 // - Build tools that validate or transform PPTX presentations containing 3‑D shapes.
 // - Integrate 3‑D shape analysis into .NET applications or CI pipelines.
 // - Generate processed copies of presentations after extracting 3‑D metadata.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

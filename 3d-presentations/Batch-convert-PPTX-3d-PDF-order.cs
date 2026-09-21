@@ -1,5 +1,4 @@
 // -----------------------------------------------------------------------------
-// Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Batch convert PPTX to PDF order using C#
 //
 // Description:
@@ -18,6 +17,7 @@
 // - Build C# utilities for PowerPoint presentation processing.
 // - Generate PDF versions of presentations in .NET applications.
 // - Validate and transform presentation files before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

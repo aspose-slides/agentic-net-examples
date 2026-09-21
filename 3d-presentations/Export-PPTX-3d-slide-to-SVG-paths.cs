@@ -1,5 +1,4 @@
 // -----------------------------------------------------------------------------
-// Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Export PPTX 3d slide to SVG paths using C#
 //
 // Description:
@@ -19,6 +18,7 @@
 // - Build C# tools for PowerPoint presentation processing.
 // - Generate or transform PPTX files in .NET applications.
 // - Validate presentation workflows before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

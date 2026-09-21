@@ -1,5 +1,4 @@
 // -----------------------------------------------------------------------------
-// Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Replace PPTX 3d default lights with directional using C#
 //
 // Description:
@@ -18,6 +17,7 @@
 // - Build C# utilities for PowerPoint presentation processing and styling.
 // - Generate or transform PPTX files with customized 3D lighting in .NET applications.
 // - Validate and standardize presentation lighting before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

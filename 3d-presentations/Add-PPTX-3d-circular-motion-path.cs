@@ -1,5 +1,4 @@
 // -----------------------------------------------------------------------------
-// Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Add PPTX 3d circular motion path using C#
 //
 // Description:
@@ -18,6 +17,7 @@
 // - Build C# utilities for enriching presentations with custom animations.
 // - Generate or modify PPTX files programmatically in .NET applications.
 // - Validate and preview motion effects before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

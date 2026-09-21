@@ -1,5 +1,4 @@
 // -----------------------------------------------------------------------------
-// Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Report PPTX 3D slide object count using C#
 //
 // Description:
@@ -18,6 +17,7 @@
 // - Validate that slides contain the expected number of 3D elements.
 // - Build automation tools for PPTX content analysis in .NET applications.
 // - Integrate 3D object counting into larger presentation processing workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

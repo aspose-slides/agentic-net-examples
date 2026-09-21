@@ -1,5 +1,4 @@
 // -----------------------------------------------------------------------------
-// Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Load PPTX 3D JPEG texture using C#
 //
 // Description:
@@ -18,6 +17,7 @@
 // - Automate texture mapping for 3‑D objects in presentations.
 // - Build .NET tools that modify PPTX files with custom 3‑D visual effects.
 // - Validate and preview 3‑D texture integration before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -1,5 +1,4 @@
 // -----------------------------------------------------------------------------
-// Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Add PPTX 3d cube set size using C#
 //
 // Description:
@@ -16,6 +15,7 @@
 // - Build C# utilities for precise 3‑D shape creation in PPTX files.
 // - Generate or modify PPTX content programmatically in .NET applications.
 // - Validate 3‑D formatting and dimensions before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;

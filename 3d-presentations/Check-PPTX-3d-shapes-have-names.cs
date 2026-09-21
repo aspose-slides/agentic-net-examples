@@ -1,5 +1,4 @@
 // -----------------------------------------------------------------------------
-// Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Check PPTX 3D shapes have names using C#
 //
 // Description:
@@ -18,6 +17,7 @@
 // - Automatically assign default names to unnamed 3‑D shapes.
 // - Prepare PPTX files for downstream automation or publishing.
 // - Integrate shape‑name validation into .NET PowerPoint processing tools.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

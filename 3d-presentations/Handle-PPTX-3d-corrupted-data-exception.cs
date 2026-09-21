@@ -1,5 +1,4 @@
 // -----------------------------------------------------------------------------
-// Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Handle PPTX 3d corrupted data exception using C#
 //
 // Description:
@@ -18,6 +17,7 @@
 // - Build C# utilities for safe PowerPoint presentation processing.
 // - Generate or transform PPTX files while gracefully handling format issues.
 // - Validate and log presentation integrity before further integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
