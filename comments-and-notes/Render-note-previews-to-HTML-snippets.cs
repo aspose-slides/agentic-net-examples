@@ -18,6 +18,7 @@
 // - Build tools that extract and display PowerPoint notes in documentation.
 // - Integrate note extraction into .NET applications for reporting or analysis.
 // - Validate and process PPTX files before distribution or archival.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
