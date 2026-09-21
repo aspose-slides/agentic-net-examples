@@ -18,6 +18,7 @@
 // - Build .NET tools for automating note management in PPTX files.
 // - Integrate external note data sources into existing slide decks.
 // - Validate and transform presentation content programmatically.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
