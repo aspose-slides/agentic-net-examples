@@ -20,6 +20,7 @@
 // - Manage sound playback across slide boundaries.
 // - Generate logs or metrics for animation durations.
 // - Integrate animation control into .NET applications handling PPTX files.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
