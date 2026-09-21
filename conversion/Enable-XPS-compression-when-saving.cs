@@ -16,6 +16,7 @@
 // - Build C# utilities that convert PPTX to XPS with optimized output.
 // - Integrate XPS export functionality into .NET applications.
 // - Validate and automate PowerPoint to XPS conversion workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
