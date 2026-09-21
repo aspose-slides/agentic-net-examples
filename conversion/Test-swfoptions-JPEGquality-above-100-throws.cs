@@ -17,6 +17,7 @@
 // - Include exception‑handling tests in automated CI pipelines for presentation conversion.
 // - Demonstrate proper error handling when configuring SwfOptions.
 // - Provide a reference for developers implementing custom SWF export logic.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
