@@ -17,6 +17,7 @@
 // - Attempt video conversion of presentations where supported.
 // - Build .NET tools for PowerPoint presentation processing.
 // - Validate and preserve original presentations after processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
