@@ -17,6 +17,7 @@
 // - Build C# utilities for converting presentations to SWF with default rasterization.
 // - Validate visual fidelity of complex graphics in SWF output.
 // - Integrate SWF conversion into .NET automation pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
