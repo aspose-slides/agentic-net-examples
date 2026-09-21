@@ -17,6 +17,7 @@
 // - Build C# tools for PowerPoint presentation processing with notes.
 // - Generate handout PDFs that include slide notes in .NET applications.
 // - Validate presentation workflows before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
