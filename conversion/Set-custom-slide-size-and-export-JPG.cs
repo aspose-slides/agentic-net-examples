@@ -18,6 +18,7 @@
 // - Generate JPEG images from each slide for web preview or documentation.
 // - Build C# utilities for batch processing of PPTX files.
 // - Integrate slide size adjustment and image export into larger .NET workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
