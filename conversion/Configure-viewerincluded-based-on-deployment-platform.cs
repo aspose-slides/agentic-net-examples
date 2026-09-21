@@ -17,6 +17,7 @@
 // - Build automation scripts that adapt presentation export settings for web or desktop deployments.
 // - Integrate conditional presentation export logic into .NET applications.
 // - Validate and test platform‑specific export configurations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
