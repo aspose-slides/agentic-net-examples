@@ -20,6 +20,7 @@
 // - Build .NET tools for batch processing of presentations with combined
 //   notes/comments output.
 // - Validate presentation content before publishing or archiving.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
