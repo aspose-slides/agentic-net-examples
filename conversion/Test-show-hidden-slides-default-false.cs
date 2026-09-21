@@ -18,6 +18,7 @@
 // - Build C# tests for presentation conversion settings.
 // - Ensure SWF conversion respects hidden slide settings.
 // - Automate validation of Aspose.Slides conversion options.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
