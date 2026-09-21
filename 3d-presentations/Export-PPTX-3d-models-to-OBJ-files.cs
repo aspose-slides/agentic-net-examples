@@ -1,5 +1,4 @@
 // -----------------------------------------------------------------------------
-// Tested and verified with Aspose.Slides for .NET 26.8.0.
 // Example: Export PPTX 3d models to OBJ files using C#
 //
 // Description:
@@ -18,6 +17,7 @@
 // - Build C# utilities for PowerPoint 3D content processing.
 // - Integrate 3D model handling into .NET applications.
 // - Validate and transform PPTX presentations containing 3D shapes.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
