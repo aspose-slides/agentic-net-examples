@@ -17,6 +17,7 @@
 // - Generate a PDF document from a presentation by embedding rendered slide images.
 // - Automate slide‑to‑image and image‑to‑PDF workflows in .NET applications.
 // - Validate and process PowerPoint files before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
