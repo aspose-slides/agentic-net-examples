@@ -19,6 +19,7 @@
 // - Build a lightweight service that watches a shared folder and processes
 //   presentations in real time.
 // - Integrate PowerPoint workflow automation into existing .NET infrastructure.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
