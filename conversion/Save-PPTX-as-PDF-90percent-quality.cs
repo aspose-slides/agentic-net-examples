@@ -17,6 +17,7 @@
 // - Build C# utilities for batch processing of PowerPoint files.
 // - Integrate PDF export with specific JPEG quality settings into .NET apps.
 // - Ensure consistent visual fidelity while reducing PDF file size.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
