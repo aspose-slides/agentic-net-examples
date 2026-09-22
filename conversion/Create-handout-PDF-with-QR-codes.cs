@@ -17,6 +17,7 @@
 // - Build .NET tools that enrich presentations with scan‑able links.
 // - Generate or transform PPTX files into PDF handouts in batch processes.
 // - Validate and preview presentation workflows before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
