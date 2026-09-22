@@ -16,6 +16,7 @@
 // - Generate TIFF images with a specific margin for document workflows.
 // - Build .NET utilities that automate PPTX to image transformations.
 // - Validate and test presentation export settings in automated pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
