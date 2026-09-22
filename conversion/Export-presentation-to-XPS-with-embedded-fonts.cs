@@ -16,6 +16,7 @@
 // - Build .NET tools for reliable PowerPoint to XPS transformation.
 // - Ensure visual fidelity of exported documents across platforms.
 // - Integrate presentation export functionality into larger applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
