@@ -17,6 +17,7 @@
 // - Build command‑line tools for PowerPoint‑compatible format processing.
 // - Generate SVG assets for web or documentation from ODP slides.
 // - Produce XPS files for printing or archival from ODP sources.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
