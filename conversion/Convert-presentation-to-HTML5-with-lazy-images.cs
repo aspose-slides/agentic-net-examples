@@ -18,6 +18,7 @@
 // - Build tools that generate web‑ready slideshows from PPTX files.
 // - Integrate presentation conversion into .NET services or CI pipelines.
 // - Reduce HTML size by using lazy loading of images for faster page loads.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
