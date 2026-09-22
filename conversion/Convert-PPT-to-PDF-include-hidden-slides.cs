@@ -18,6 +18,7 @@
 // - Build C# utilities for PowerPoint presentation export and archiving.
 // - Integrate hidden-slide-aware PDF generation into .NET applications.
 // - Validate and preview presentation content before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
