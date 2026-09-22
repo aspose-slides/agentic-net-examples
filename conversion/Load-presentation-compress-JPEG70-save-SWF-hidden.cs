@@ -17,6 +17,7 @@
 // - Build C# utilities for batch conversion of presentations with image
 //   compression and hidden slide handling.
 // - Validate and automate PowerPoint workflows before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
