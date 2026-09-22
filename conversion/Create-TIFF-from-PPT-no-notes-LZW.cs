@@ -18,6 +18,7 @@
 // - Build .NET tools for PowerPoint to image conversion.
 // - Generate TIFF assets for publishing or archival purposes.
 // - Validate presentation conversion processes in CI pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
