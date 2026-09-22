@@ -18,6 +18,7 @@
 // - Build C# utilities for PowerPoint content analysis.
 // - Integrate slide metadata into documentation or data pipelines.
 // - Validate presentation structures before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
