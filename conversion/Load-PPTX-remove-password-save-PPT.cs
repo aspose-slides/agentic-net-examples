@@ -17,6 +17,7 @@
 // - Convert protected PPTX presentations to unprotected PPT format.
 // - Build .NET tools for batch processing of encrypted PowerPoint files.
 // - Integrate decryption and format conversion into larger Office automation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
