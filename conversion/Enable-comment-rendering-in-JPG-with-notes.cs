@@ -16,6 +16,7 @@
 // - Build C# tools for PowerPoint presentation processing.
 // - Generate JPEG images of slides that contain comments, including notes.
 // - Validate presentation workflows before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
