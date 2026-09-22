@@ -17,6 +17,7 @@
 // - Upload converted TIFF files to cloud storage services programmatically.
 // - Build .NET tools that integrate presentation conversion with cloud APIs.
 // - Validate and monitor PowerPoint processing pipelines before deployment.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
