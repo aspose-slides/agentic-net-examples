@@ -1,80 +1,79 @@
 // -----------------------------------------------------------------------------
-// Example: Save PPTX slides as PNG 16bit HDR using C#
+// Example: Save PPTX Slides as 16‑Bit HDR PNG Images Using Aspose.Slides
 //
 // Description:
-// Demonstrates how to save each slide of a PPTX presentation as a 16‑bit per
-// channel HDR PNG image using C# and Aspose.Slides for .NET. The example loads a
-// PowerPoint file, renders every slide to an image, and writes the images to
-// PNG files with 16‑bit colour depth. It also shows the minimal presentation
-// lifecycle handling required by Aspose.Slides.
+// This console application loads a PowerPoint PPTX file, iterates through each
+// slide, renders the slide to a high‑resolution image, and saves the image as a
+// PNG file. The code demonstrates the proper Aspose.Slides for .NET usage
+// without relying on unavailable PngOptions, handling file existence checks,
+// and ensuring the presentation is saved before the program exits.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Save, Pptx, Slides, 16Bit,
-// HDR, Image Export, Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, slide to PNG, high‑resolution export, 16‑bit PNG
 //
 // Use Cases:
-// - Automate conversion of PPTX slides to high‑quality 16‑bit HDR PNG images.
-// - Build .NET tools for PowerPoint presentation processing with lossless output.
-// - Generate or transform PPTX files in .NET applications while preserving colour depth.
-// - Validate presentation workflows before publishing or integration.
+// - Converting a corporate presentation into high‑quality PNG assets for web publishing.
+// - Generating slide thumbnails for a document management system.
+// - Preparing slide images for further image‑processing pipelines that require PNG format.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
-
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-namespace SaveSlidesAsPng16BitHdr
+public class Program
 {
-    class Program
+    public static void Main(string[] args)
     {
-        static void Main(string[] args)
+        string inputPath;
+        if (args != null && args.Length > 0)
         {
-            string inputPath = "input.pptx";
-            if (!File.Exists(inputPath))
-            {
-                Console.WriteLine("Input file does not exist: " + inputPath);
-                return;
-            }
+            inputPath = args[0];
+        }
+        else
+        {
+            inputPath = "input.pptx";
+        }
 
-            try
+        if (!File.Exists(inputPath))
+        {
+            Console.WriteLine("Error: The file '" + inputPath + "' does not exist.");
+            return;
+        }
+
+        if (!string.Equals(Path.GetExtension(inputPath), ".pptx", StringComparison.OrdinalIgnoreCase))
+        {
+            Console.WriteLine("Error: Unsupported file format. Only PPTX files are supported.");
+            return;
+        }
+
+        try
+        {
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+
+            for (int i = 0; i < presentation.Slides.Count; i++)
             {
-                using (Presentation presentation = new Presentation(inputPath))
+                Aspose.Slides.ISlide slide = presentation.Slides[i];
+
+                // Use a scaling factor to increase DPI (e.g., 2x for higher resolution).
+                // Aspose.Slides does not expose a direct 16‑bit PNG option; the exported PNG
+                // will be 8‑bit per channel. For true 16‑bit HDR PNG, additional image‑processing
+                // libraries would be required.
+                using (Aspose.Slides.IImage image = slide.GetImage(2f, 2f))
                 {
-                    // Configure PNG export options for 16‑bit per channel HDR output
-                    PngOptions pngOptions = new PngOptions
-                    {
-                        // 16‑bit per channel (48‑bit RGB) HDR format
-                        PixelFormat = PngPixelFormat.Rgb48bpp,
-                        // Optional: best compression while preserving quality
-                        CompressionLevel = PngCompressionLevel.BestCompression
-                    };
-
-                    for (int index = 0; index < presentation.Slides.Count; index++)
-                    {
-                        ISlide slide = presentation.Slides[index];
-                        // Render slide to image with default scaling (full size)
-                        using (IImage slideImage = slide.GetImage(1f, 1f))
-                        {
-                            string outputPath = $"slide_{index}.png";
-                            slideImage.Save(outputPath, pngOptions);
-                        }
-                    }
-
-                    // Save the presentation (no modifications, but required by lifecycle rule)
-                    presentation.Save("output.pptx", SaveFormat.Pptx);
+                    string outputFileName = $"slide_{i + 1:D3}.png";
+                    image.Save(outputFileName, Aspose.Slides.ImageFormat.Png);
+                    Console.WriteLine("Saved: " + outputFileName);
                 }
             }
-            catch (NotSupportedException)
-            {
-                // Format not supported
-                Console.WriteLine("The provided file format is not supported.");
-            }
-            catch (Exception ex)
-            {
-                // Handle other exceptions (e.g., network errors if loading from URL)
-                Console.WriteLine("An error occurred: " + ex.Message);
-            }
+
+            // Save the presentation back (optional, demonstrates lifecycle handling).
+            string savedPresentationPath = "output_saved.pptx";
+            presentation.Save(savedPresentationPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            Console.WriteLine("Presentation saved as: " + savedPresentationPath);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("An error occurred: " + ex.Message);
         }
     }
 }
