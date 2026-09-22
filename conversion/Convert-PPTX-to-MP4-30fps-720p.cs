@@ -16,6 +16,7 @@
 // - Automate PPTX to MP4 conversion workflow using external encoders.
 // - Build .NET tools for slide animation extraction.
 // - Validate slide size and animation rendering before video production.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
