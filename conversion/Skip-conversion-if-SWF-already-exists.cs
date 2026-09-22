@@ -18,6 +18,7 @@
 // - Build C# utilities for PowerPoint presentation processing with conditional logic.
 // - Integrate conditional conversion steps into .NET applications or CI pipelines.
 // - Ensure efficient handling of large numbers of presentations by skipping existing outputs.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
