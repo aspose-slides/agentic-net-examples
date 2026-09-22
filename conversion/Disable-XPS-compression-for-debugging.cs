@@ -18,6 +18,7 @@
 // - Prepare a baseline for comparing compressed vs. uncompressed XPS.
 // - Integrate XPS conversion into automated .NET build or test pipelines.
 // - Serve as a reference for handling missing API features in Aspose.Slides.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
