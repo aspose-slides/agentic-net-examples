@@ -17,6 +17,7 @@
 // - Include hidden slides in exported PDF documents.
 // - Build C# utilities for PowerPoint presentation processing and transformation.
 // - Validate and generate PDF outputs from PowerPoint sources in .NET environments.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
