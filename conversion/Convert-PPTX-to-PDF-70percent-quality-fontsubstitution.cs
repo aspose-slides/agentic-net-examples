@@ -18,6 +18,7 @@
 // - Apply font substitution to ensure correct rendering when source fonts are unavailable.
 // - Build .NET tools for batch processing of PPTX files into PDF format.
 // - Integrate PDF conversion with custom quality settings into larger automation pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
