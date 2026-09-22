@@ -18,6 +18,7 @@
 // - Build C# utilities for PowerPoint presentation processing and publishing.
 // - Integrate PPTX to HTML5 conversion into .NET services or CI pipelines.
 // - Validate and transform presentations before web deployment.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
