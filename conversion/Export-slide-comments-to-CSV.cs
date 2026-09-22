@@ -16,6 +16,7 @@
 // - Build C# utilities for PowerPoint comment analysis.
 // - Integrate comment export into .NET automation pipelines.
 // - Validate and review presentation feedback before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
