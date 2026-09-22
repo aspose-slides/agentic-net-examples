@@ -17,6 +17,7 @@
 // - Generate animated GIF previews of PowerPoint files with watermarks.
 // - Build .NET tools for presentation branding and conversion workflows.
 // - Validate and preview PPTX content before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
