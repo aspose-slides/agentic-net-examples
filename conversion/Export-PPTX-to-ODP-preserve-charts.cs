@@ -1,76 +1,70 @@
 // -----------------------------------------------------------------------------
-// Example: Export PPTX to ODP preserving charts using C#
+// Example: Export PPTX to ODP Preserving Charts Using Aspose.Slides for .NET
 //
 // Description:
-// Demonstrates how to export a PPTX file to ODP while preserving chart objects
-// using C# and Aspose.Slides for .NET. The example loads a PowerPoint presentation,
-// configures ODP save options to keep charts intact, and saves the result as an
-// OpenDocument Presentation file. This pattern can be used in console utilities,
-// automated workflows, or any .NET application that needs to retain chart fidelity
-// during format conversion.
+// This console application loads an existing PowerPoint PPTX file, then
+// converts and saves it as an OpenDocument Presentation (ODP) file while
+// preserving all chart objects. It demonstrates the use of Aspose.Slides for
+// .NET to perform format conversion with chart fidelity, suitable for batch
+// processing or automated workflows.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, ODP, Aspose.Slides for .NET, Export, Preserve Charts, 
-// Presentation Conversion, Office Automation
+// C#, PowerPoint, PPTX, ODP, Aspose.Slides for .NET, chart conversion, format export
 //
 // Use Cases:
-// - Convert PPTX to ODP without losing chart data.
-// - Build C# tools that maintain visual integrity of presentations during export.
-// - Integrate chart‑preserving conversion into .NET services or batch processes.
-// - Validate and automate presentation workflows that involve ODP output.
+// - Convert corporate slide decks from PPTX to ODP for use with LibreOffice.
+// - Automate batch conversion of presentations while retaining chart data.
+// - Integrate PPTX to ODP conversion into CI/CD pipelines for documentation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
-
 using System;
-using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-namespace ExportPptxToOdp
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        // Validate arguments
+        if (args.Length < 1)
         {
-            // Input PPTX file path
-            string inputPath = "input.pptx";
-            // Output ODP file path
-            string outputPath = "output.odp";
+            Console.WriteLine("Usage: ExportPptxToOdp <input-pptx-path> [output-odp-path]");
+            return;
+        }
 
-            // Verify input file exists
-            if (!File.Exists(inputPath))
-            {
-                Console.WriteLine("Input file does not exist: " + inputPath);
-                return;
-            }
+        string inputPath = args[0];
+        string outputPath;
 
-            try
-            {
-                // Load the presentation
-                using (Presentation presentation = new Presentation(inputPath))
-                {
-                    // Configure ODP save options to preserve charts
-                    OdpSaveOptions saveOptions = new OdpSaveOptions
-                    {
-                        PreserveCharts = true
-                    };
+        if (args.Length >= 2)
+        {
+            outputPath = args[1];
+        }
+        else
+        {
+            string inputDirectory = System.IO.Path.GetDirectoryName(inputPath);
+            string inputFileNameWithoutExt = System.IO.Path.GetFileNameWithoutExtension(inputPath);
+            outputPath = System.IO.Path.Combine(inputDirectory, inputFileNameWithoutExt + ".odp");
+        }
 
-                    // Save as ODP format with the specified options
-                    presentation.Save(outputPath, saveOptions);
-                }
+        // Check if input file exists
+        if (!System.IO.File.Exists(inputPath))
+        {
+            Console.WriteLine($"Error: Input file \"{inputPath}\" does not exist.");
+            return;
+        }
 
-                Console.WriteLine("Presentation successfully exported to ODP with charts preserved.");
-            }
-            catch (NotSupportedException)
-            {
-                // Format not supported
-                // Comment: The requested format is not supported by Aspose.Slides.
-                Console.WriteLine("The ODP format is not supported for this operation.");
-            }
-            catch (Exception ex)
-            {
-                // Handle other exceptions (e.g., I/O errors)
-                Console.WriteLine("An error occurred: " + ex.Message);
-            }
+        try
+        {
+            // Load the PPTX presentation
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+
+            // Save as ODP format. Charts are preserved by default.
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Odp);
+
+            Console.WriteLine($"Successfully exported \"{inputPath}\" to ODP format at \"{outputPath}\".");
+        }
+        catch (System.Exception ex)
+        {
+            Console.WriteLine("An error occurred during conversion:");
+            Console.WriteLine(ex.Message);
         }
     }
 }
