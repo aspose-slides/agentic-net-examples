@@ -16,6 +16,7 @@
 // - Build command‑line utilities for batch processing of presentations.
 // - Integrate configurable SWF export into .NET applications.
 // - Validate and test presentation conversion workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
