@@ -16,6 +16,7 @@
 // - Create HTML pages that display PowerPoint content as Flash.
 // - Automate batch conversion of presentations for legacy Flash‑based viewers.
 // - Integrate PPTX to SWF conversion into .NET applications or build pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
