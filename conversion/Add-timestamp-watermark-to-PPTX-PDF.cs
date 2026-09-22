@@ -19,6 +19,7 @@
 // - Convert watermarked PPTX files to PDF in batch processes.
 // - Integrate presentation watermarking into C# tools or services.
 // - Ensure document traceability with generation timestamps.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
