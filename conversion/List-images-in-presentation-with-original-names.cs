@@ -18,6 +18,7 @@
 // - Build tools that audit or document presentation assets.
 // - Integrate image enumeration into .NET automation workflows.
 // - Produce Markdown reports for documentation or review processes.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
