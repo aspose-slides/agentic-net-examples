@@ -18,6 +18,7 @@
 // - Validate that master themes are retained after conversion.
 // - Build C# utilities for PowerPoint presentation migration.
 // - Integrate presentation format checks into .NET workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
