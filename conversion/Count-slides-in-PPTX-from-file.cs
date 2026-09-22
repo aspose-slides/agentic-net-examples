@@ -17,6 +17,7 @@
 // - Build command‑line tools for PowerPoint presentation analysis.
 // - Integrate slide counting into larger .NET workflows or CI pipelines.
 // - Validate presentation content before publishing or further transformation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
