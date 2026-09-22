@@ -17,6 +17,7 @@
 // - Create self‑contained markdown files for web publishing or documentation.
 // - Automate conversion of PPTX to markdown in CI/CD pipelines.
 // - Preserve visual content without external image files.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
