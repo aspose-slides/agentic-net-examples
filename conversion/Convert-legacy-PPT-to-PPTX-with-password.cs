@@ -18,6 +18,7 @@
 // - Build C# utilities for secure PowerPoint presentation processing.
 // - Integrate PPT to PPTX transformation into .NET applications with password handling.
 // - Validate and preserve presentation protection during format migration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
