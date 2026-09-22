@@ -16,6 +16,7 @@
 // - Build command‑line tools for batch conversion of presentations to SWF.
 // - Integrate slide‑sequence validation into CI pipelines for presentation assets.
 // - Generate SWF files for web preview while ensuring content integrity.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
