@@ -19,6 +19,7 @@
 // - Generate a combined multi‑page TIFF for archival or printing purposes.
 // - Build C# utilities for PowerPoint presentation processing and image extraction.
 // - Validate and preview slide content by exporting to TIFF format.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
