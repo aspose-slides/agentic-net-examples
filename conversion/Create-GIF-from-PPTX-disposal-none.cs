@@ -22,6 +22,7 @@
 // - Integrate PPTX-to-GIF conversion into .NET applications or CI pipelines.
 // - Prototype presentation export workflows before implementing full disposal
 //   control.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
