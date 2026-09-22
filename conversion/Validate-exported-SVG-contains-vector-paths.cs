@@ -17,6 +17,7 @@
 // - Build .NET tools that process PowerPoint presentations and verify SVG output.
 // - Ensure text is correctly vectorized during SVG export.
 // - Integrate SVG validation into CI pipelines for presentation assets.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
