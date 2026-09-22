@@ -17,6 +17,7 @@
 // - Validate presentation content before generating PDFs.
 // - Build .NET tools for PowerPoint to PDF conversion with pre‑conversion checks.
 // - Automate slide count reporting in batch processing pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
