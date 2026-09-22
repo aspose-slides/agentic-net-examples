@@ -17,6 +17,7 @@
 // - Generate SWF files with and without the integrated viewer for comparison.
 // - Integrate PowerPoint to SWF conversion into .NET automation pipelines.
 // - Validate presentation conversion settings before deployment.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
