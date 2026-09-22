@@ -18,6 +18,7 @@
 // - Build C# tools for PowerPoint to SWF conversion with quality control.
 // - Generate or transform PPTX files into SWF in .NET applications.
 // - Validate presentation conversion workflows before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

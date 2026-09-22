@@ -17,6 +17,7 @@
 // - Build automated tools that process PowerPoint presentations in .NET.
 // - Generate SWF output without the built‑in viewer for custom viewers.
 // - Integrate PowerPoint conversion into CI/CD pipelines or batch jobs.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

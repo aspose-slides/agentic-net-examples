@@ -18,6 +18,7 @@
 // - Generate SVG representations of slides for scalable graphics workflows.
 // - Build automated pipelines that convert PowerPoint content to image assets.
 // - Integrate slide-to-image conversion into CI/CD or reporting tools.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

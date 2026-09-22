@@ -17,6 +17,7 @@
 // - Track output file sizes for storage or compliance purposes.
 // - Detect and record font substitutions during conversion.
 // - Integrate presentation conversion into .NET automation pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

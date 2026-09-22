@@ -19,6 +19,7 @@
 // - Build C# utilities for PowerPoint content extraction and documentation generation.
 // - Integrate PPTX processing into .NET applications or CI pipelines.
 // - Validate and transform presentation files before publishing or further analysis.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

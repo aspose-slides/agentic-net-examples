@@ -18,6 +18,7 @@
 // - Generate image versions of slides without including speaker notes.
 // - Build .NET tools for batch processing of PowerPoint files.
 // - Integrate PPTX‑to‑TIFF conversion into document management systems.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

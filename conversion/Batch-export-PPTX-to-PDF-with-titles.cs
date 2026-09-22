@@ -18,6 +18,7 @@
 // - Generate PDF reports from PowerPoint decks with an overview of slide titles.
 // - Integrate slide‑title extraction into document workflows.
 //
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

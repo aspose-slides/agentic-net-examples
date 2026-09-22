@@ -18,6 +18,7 @@
 // - Convert PPTX files to HTML while forcing font substitution.
 // - Retrieve and log font substitution information for diagnostics.
 // - Automate presentation processing workflows that require custom font handling.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -15,6 +15,7 @@
 // - Build command‑line tools that convert PowerPoint notes to searchable text files.
 // - Integrate notes extraction into larger .NET workflows that process presentations.
 // - Validate and archive presentation content without manual copy‑paste.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

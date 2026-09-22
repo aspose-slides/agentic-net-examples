@@ -17,6 +17,7 @@
 // - Build automated tests for font handling in Aspose.Slides.
 // - Generate SWF output from presentations with a specified default font.
 // - Integrate font validation logic into .NET PowerPoint processing tools.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;

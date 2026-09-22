@@ -17,6 +17,7 @@
 // - Build C# utilities for extracting slide graphics for web or documentation.
 // - Generate image assets from presentations in .NET workflows.
 // - Validate slide rendering before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -17,6 +17,7 @@
 // - Build .NET tools that generate web-friendly presentations with lazy loading.
 // - Integrate PowerPoint to web content pipelines in C# applications.
 // - Validate and test presentation export settings before deployment.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

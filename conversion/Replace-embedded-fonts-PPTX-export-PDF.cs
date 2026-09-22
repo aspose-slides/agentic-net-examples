@@ -16,6 +16,7 @@
 // - Build C# utilities for PowerPoint presentation processing.
 // - Generate PDF output from PPTX files with consistent font usage.
 // - Validate and standardize fonts in presentations prior to publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

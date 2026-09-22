@@ -18,6 +18,7 @@
 // - Automate quality‑impact testing for PowerPoint to SWF conversions.
 // - Build C# utilities for presentation format validation.
 // - Integrate SWF quality checks into .NET CI pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

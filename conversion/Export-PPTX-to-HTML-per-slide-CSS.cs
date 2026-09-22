@@ -19,6 +19,7 @@
 // - Build command‑line tools for batch exporting PPTX files to HTML.
 // - Integrate slide‑by‑slide HTML generation into .NET services or pipelines.
 // - Preserve the original PPTX while creating HTML representations for publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

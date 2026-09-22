@@ -17,6 +17,7 @@
 // - Build tools that validate slide visibility before publishing.
 // - Automate PowerPoint processing workflows in .NET applications.
 // - Integrate hidden slide analysis into custom presentation pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

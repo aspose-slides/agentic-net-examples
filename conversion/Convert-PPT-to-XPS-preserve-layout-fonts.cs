@@ -17,6 +17,7 @@
 // - Build .NET tools for high‑quality document archiving or printing.
 // - Integrate PowerPoint to XPS conversion into server‑side or desktop apps.
 // - Ensure visual consistency when distributing presentations in XPS format.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

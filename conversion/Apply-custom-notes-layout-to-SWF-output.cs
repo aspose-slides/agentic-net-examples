@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint presentation processing and publishing.
 // - Generate SWF output with speaker annotations positioned at the bottom.
 // - Validate presentation conversion workflows before integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

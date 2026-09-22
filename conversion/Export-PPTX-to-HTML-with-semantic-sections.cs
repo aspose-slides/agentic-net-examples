@@ -17,6 +17,7 @@
 // - Produce HTML output that follows semantic markup guidelines.
 // - Integrate PPTX‑to‑HTML conversion into .NET automation scripts or tools.
 // - Customize exported HTML structure for web publishing or further processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

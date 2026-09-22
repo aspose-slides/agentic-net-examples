@@ -18,6 +18,7 @@
 // - Build C# tools for batch conversion of PPTX slides to SVG format.
 // - Generate or transform PPTX files with slide numbering in .NET applications.
 // - Validate and automate presentation workflows prior to publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -16,6 +16,7 @@
 // - Build .NET tools that process multiple presentations efficiently.
 // - Reduce memory overhead by reusing a single TiffOptions object.
 // - Integrate PowerPoint to image conversion into larger workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

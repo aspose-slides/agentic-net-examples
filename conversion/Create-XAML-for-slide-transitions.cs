@@ -17,6 +17,7 @@
 // - Create tooling that converts PowerPoint presentations to XAML for UI frameworks.
 // - Automate batch processing of PPTX files to generate XAML representations.
 // - Validate and test slide transition settings in a CI pipeline.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

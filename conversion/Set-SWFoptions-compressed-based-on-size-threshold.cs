@@ -15,6 +15,7 @@
 // - Build C# utilities for PowerPoint to SWF conversion with size‑based logic.
 // - Generate SWF output with appropriate compression for downstream consumption.
 // - Validate conversion settings in automated presentation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

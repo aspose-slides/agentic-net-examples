@@ -16,6 +16,7 @@
 // - Generate JPG images from each slide of a presentation.
 // - Build .NET tools for ODP to image conversion workflows.
 // - Validate and preprocess presentations before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

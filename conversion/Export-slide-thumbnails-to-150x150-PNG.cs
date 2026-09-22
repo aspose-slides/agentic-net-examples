@@ -17,6 +17,7 @@
 // - Build tools that create low‑resolution thumbnails for quick browsing.
 // - Integrate slide thumbnail extraction into .NET applications.
 // - Validate presentation content by visual inspection of generated images.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

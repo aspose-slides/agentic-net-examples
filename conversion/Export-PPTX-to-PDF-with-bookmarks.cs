@@ -16,6 +16,7 @@
 // - Integrate PPTX to PDF conversion into C# applications or services.
 // - Automate document generation workflows that require PDF bookmarks.
 // - Validate and process presentations before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

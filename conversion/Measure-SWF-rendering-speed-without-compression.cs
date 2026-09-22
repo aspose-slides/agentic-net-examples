@@ -19,6 +19,7 @@
 // - Build C# tools for PPTX to SWF conversion and performance benchmarking.
 // - Generate animation frames at different frame rates for analysis.
 // - Validate presentation workflows before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

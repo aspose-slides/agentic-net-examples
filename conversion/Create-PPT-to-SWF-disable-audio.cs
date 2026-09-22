@@ -17,6 +17,7 @@
 // - Build C# utilities that process presentations and remove sound.
 // - Automate batch conversion of presentations to lightweight SWF files.
 // - Integrate audio‑free presentation export into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

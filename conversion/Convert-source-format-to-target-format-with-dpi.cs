@@ -17,6 +17,7 @@
 // - Generate high‑resolution TIFF images from presentations by specifying DPI.
 // - Build command‑line tools for batch processing of PowerPoint files.
 // - Integrate format conversion into .NET applications or CI pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

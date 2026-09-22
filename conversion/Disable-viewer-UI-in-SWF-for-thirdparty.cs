@@ -17,6 +17,7 @@
 // - Automate batch processing of presentations for third‑party distribution.
 // - Build .NET tools that prepare presentation assets for external platforms.
 // - Ensure SWF output complies with external UI requirements.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

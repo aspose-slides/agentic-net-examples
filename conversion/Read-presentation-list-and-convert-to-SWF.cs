@@ -18,6 +18,7 @@
 // - Build C# utilities that process multiple presentation files based on a list.
 // - Integrate presentation conversion into .NET applications or CI pipelines.
 // - Validate and transform PPTX files before publishing or archiving.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -14,6 +14,7 @@
 // - Build command‑line tools for PowerPoint to PDF transformation.
 // - Integrate simple PDF export functionality into .NET applications.
 // - Validate PPTX files before distribution by generating PDFs.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

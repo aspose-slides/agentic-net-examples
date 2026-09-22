@@ -16,6 +16,7 @@
 // - Automate batch conversion of presentations to TIFF with watermarks.
 // - Integrate watermarking into .NET applications that generate or process slides.
 // - Validate presentation output in image format for publishing or archiving.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

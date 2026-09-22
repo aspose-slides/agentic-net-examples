@@ -17,6 +17,7 @@
 // - Validate the effect of compression on SWF output size.
 // - Integrate SWF size checks into automated PowerPoint conversion pipelines.
 // - Build utilities that need to ensure uncompressed SWF meets size expectations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

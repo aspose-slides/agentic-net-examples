@@ -17,6 +17,7 @@
 // - Create custom HTML5 pages that embed SWF files generated from PowerPoint.
 // - Automate presentation processing pipelines that require UI‑free SWF output.
 // - Integrate Aspose.Slides conversion into .NET applications or build tools.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

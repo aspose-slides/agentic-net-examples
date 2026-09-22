@@ -18,6 +18,7 @@
 // - Build C# utilities for PowerPoint presentation handling.
 // - Integrate secure PPT processing into .NET applications.
 // - Validate and transform legacy PowerPoint presentations before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

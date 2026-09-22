@@ -16,6 +16,7 @@
 // - Automate creation of handouts that include presentation content and annotations.
 // - Build .NET tools for converting PPTX files to PDF with custom layout options.
 // - Integrate PowerPoint to PDF conversion into larger document processing pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

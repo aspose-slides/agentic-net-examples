@@ -18,6 +18,7 @@
 // - Build C# utilities for converting PPTX slides to JPEG with specific dimensions.
 // - Integrate slide‑size manipulation and image rendering into .NET workflows.
 // - Validate and preprocess presentations prior to publishing or further processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

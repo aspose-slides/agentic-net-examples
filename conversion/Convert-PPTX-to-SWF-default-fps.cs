@@ -17,6 +17,7 @@
 // - Integrate PowerPoint to SWF conversion into .NET tools or services.
 // - Generate SWF assets for web or e‑learning platforms from PPTX sources.
 // - Validate presentation rendering before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

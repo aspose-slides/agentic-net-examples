@@ -16,6 +16,7 @@
 // - Automate testing of comment inclusion in image exports.
 // - Build .NET utilities for PowerPoint to image conversion with comments.
 // - Ensure presentation workflows produce expected visual output.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

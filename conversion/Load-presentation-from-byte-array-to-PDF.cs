@@ -18,6 +18,7 @@
 // - Build .NET tools that process presentations in memory without temporary files.
 // - Integrate PPTX to PDF conversion into web services or background jobs.
 // - Validate and transform presentation data programmatically before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

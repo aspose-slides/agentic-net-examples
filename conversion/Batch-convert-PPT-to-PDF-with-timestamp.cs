@@ -16,6 +16,7 @@
 // - Add consistent footer information to all slides during batch processing.
 // - Automate document archival or publishing workflows in .NET environments.
 // - Detect and report unsupported presentation formats while processing batches.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

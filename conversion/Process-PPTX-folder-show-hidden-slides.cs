@@ -19,6 +19,7 @@
 // - Build C# tools for PowerPoint presentation processing in .NET environments.
 // - Generate PDFs from presentations while retaining hidden content for review.
 // - Validate and archive PowerPoint files with hidden slides preserved.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

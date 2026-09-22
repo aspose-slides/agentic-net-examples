@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint presentation processing.
 // - Generate GIF previews of slides in .NET applications.
 // - Validate presentation conversion workflows before deployment.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

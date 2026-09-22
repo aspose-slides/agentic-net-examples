@@ -18,6 +18,7 @@
 // - Automate batch conversion of PPTX files to CCITT4‑compressed TIFFs.
 // - Integrate high‑compression image export into document processing pipelines.
 // - Validate TIFF export settings in CI/CD pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

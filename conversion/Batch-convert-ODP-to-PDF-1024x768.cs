@@ -18,6 +18,7 @@
 // - Build command‑line tools for PowerPoint/ODP processing in .NET.
 // - Integrate ODP to PDF conversion into larger document‑management systems.
 // - Validate and standardize slide sizes before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -16,6 +16,7 @@
 // - Ensure SWF export works without errors for presentations with hidden slides.
 // - Build automated tests for Aspose.Slides export options.
 // - Integrate hidden slide handling into .NET PowerPoint processing tools.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

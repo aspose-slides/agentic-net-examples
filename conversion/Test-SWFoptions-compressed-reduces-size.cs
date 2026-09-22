@@ -17,6 +17,7 @@
 // - Build utilities for PPTX to SWF conversion with configurable compression.
 // - Automate testing of Aspose.Slides compression settings.
 // - Integrate SWF generation into .NET applications with size optimization.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

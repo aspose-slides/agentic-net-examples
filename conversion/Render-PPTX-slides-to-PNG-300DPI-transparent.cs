@@ -16,6 +16,7 @@
 // - Automate slide rendering for web or print workflows.
 // - Prepare presentations with transparent backgrounds for further graphics work.
 // - Integrate PPTX to PNG conversion into .NET tools or services.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -19,6 +19,7 @@
 // - Build command‑line tools for previewing PowerPoint presentations.
 // - Integrate slide thumbnail creation into .NET applications or CI pipelines.
 // - Automate batch processing of PPTX files to produce lightweight image assets.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -17,6 +17,7 @@
 // - Build C# tools for exporting PowerPoint slides to images with exact size.
 // - Ensure consistent image output in .NET presentation processing workflows.
 // - Validate presentation export results before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

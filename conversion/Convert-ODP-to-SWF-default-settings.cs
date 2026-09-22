@@ -17,6 +17,7 @@
 // - Build command‑line tools for OpenDocument to Flash conversion.
 // - Integrate ODP to SWF conversion into .NET automation pipelines.
 // - Validate ODP presentations before publishing as SWF.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

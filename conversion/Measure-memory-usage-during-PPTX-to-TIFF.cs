@@ -17,6 +17,7 @@
 // - Build .NET utilities for batch conversion of PPTX files to high‑resolution images.
 // - Optimize resource consumption in server‑side presentation processing.
 // - Validate memory impact of different load options before deployment.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -18,6 +18,7 @@
 // - Build C# utilities for creating GIF previews of presentations.
 // - Integrate slide-to-GIF functionality into .NET applications.
 // - Validate and test PowerPoint content by generating visual GIF outputs.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

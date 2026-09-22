@@ -18,6 +18,7 @@
 // - Build C# tools for PowerPoint to TIFF conversion with custom DPI.
 // - Generate printable TIFF files from slides in .NET applications.
 // - Automate batch processing of presentations with specific image settings.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

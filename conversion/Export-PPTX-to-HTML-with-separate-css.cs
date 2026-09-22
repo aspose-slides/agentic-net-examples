@@ -16,6 +16,7 @@
 // - Build .NET tools that generate web-friendly versions of PowerPoint files.
 // - Integrate presentation export functionality into larger applications.
 // - Separate content from style for easier web maintenance.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

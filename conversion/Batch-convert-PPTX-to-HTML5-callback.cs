@@ -18,6 +18,7 @@
 // - Build command‑line tools for PowerPoint presentation processing in .NET.
 // - Integrate presentation conversion into CI pipelines or web services.
 // - Monitor conversion progress for large or numerous presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

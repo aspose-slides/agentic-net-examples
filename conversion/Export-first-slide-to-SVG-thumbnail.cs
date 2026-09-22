@@ -17,6 +17,7 @@
 // - Build C# tools for PowerPoint slide extraction and conversion.
 // - Automate batch processing of PPTX files to create preview images.
 // - Integrate slide export functionality into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

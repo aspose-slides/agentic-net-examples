@@ -16,6 +16,7 @@
 // - Build C# utilities for PowerPoint to SWF conversion with robust error handling.
 // - Automate validation of presentation export settings in .NET applications.
 // - Ensure reliable workflow when integrating Aspose.Slides into larger systems.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

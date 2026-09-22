@@ -16,6 +16,7 @@
 // - Build .NET tools that process presentations concurrently.
 // - Apply custom SwfOptions per thread during conversion.
 // - Automate presentation workflow pipelines that require SWF output.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

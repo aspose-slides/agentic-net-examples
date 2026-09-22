@@ -18,6 +18,7 @@
 // - Build C# tools that ensure correct font rendering in SWF output.
 // - Automate batch conversion of PowerPoint files while minimizing file size.
 // - Integrate font‑aware PPTX to SWF conversion into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -17,6 +17,7 @@
 // - Build C# utilities for batch processing of OpenDocument slides.
 // - Integrate ODP to PDF conversion into .NET workflows.
 // - Validate ODP files before publishing or distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

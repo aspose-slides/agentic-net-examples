@@ -18,6 +18,7 @@
 // - Automate alphabetical processing of presentations before conversion.
 // - Integrate PowerPoint to SWF conversion into .NET build or deployment pipelines.
 // - Validate and handle unsupported formats during bulk conversion.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

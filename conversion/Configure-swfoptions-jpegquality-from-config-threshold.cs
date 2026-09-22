@@ -17,6 +17,7 @@
 // - Build C# tools for PowerPoint presentation processing with configurable settings.
 // - Generate or transform presentations in .NET applications while controlling image quality.
 // - Validate presentation workflows before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -19,6 +19,7 @@
 // - Generate slide thumbnails or archives in automated build pipelines.
 // - Build command‑line tools that batch‑process PowerPoint files in .NET.
 // - Validate and transform presentation assets before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

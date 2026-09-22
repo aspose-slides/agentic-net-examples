@@ -18,6 +18,7 @@
 // - Build C# utilities for PowerPoint presentation processing and export.
 // - Generate optimized PDF versions of presentations for distribution.
 // - Integrate PPTX to PDF conversion into larger .NET automation pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

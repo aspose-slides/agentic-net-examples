@@ -17,6 +17,7 @@
 // - Build tools to verify PPTX conversion pipelines.
 // - Ensure PPTX files are compatible before further processing or publishing.
 // - Automate validation in CI/CD for presentation assets.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

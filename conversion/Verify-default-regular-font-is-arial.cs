@@ -16,6 +16,7 @@
 // - Build C# utilities that validate font settings before converting PPTX to SWF.
 // - Automate PowerPoint to SWF conversion with consistent font handling.
 // - Integrate font verification into .NET presentation processing pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -18,6 +18,7 @@
 // - Automate generation of video tutorials from presentations.
 // - Integrate slide-to-video conversion in .NET applications.
 // - Batch process multiple PPTX files into MP4 videos.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

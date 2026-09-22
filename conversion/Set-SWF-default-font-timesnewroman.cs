@@ -18,6 +18,7 @@
 // - Build C# tools for PowerPoint presentation processing that need SWF output.
 // - Ensure consistent font rendering in SWF files generated from presentations.
 // - Integrate presentation conversion into .NET applications or CI pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

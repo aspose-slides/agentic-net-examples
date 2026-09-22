@@ -17,6 +17,7 @@
 // - Build .NET utilities for presentation format transformation.
 // - Integrate GIF export functionality into larger applications.
 // - Prototype workflows that later may include custom color‑palette handling.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

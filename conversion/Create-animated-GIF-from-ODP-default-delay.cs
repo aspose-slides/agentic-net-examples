@@ -16,6 +16,7 @@
 // - Build command‑line tools for batch ODP to GIF conversion.
 // - Integrate ODP rendering into .NET applications.
 // - Validate ODP files before publishing as GIF animations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

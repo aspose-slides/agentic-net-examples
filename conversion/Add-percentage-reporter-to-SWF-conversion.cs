@@ -16,6 +16,7 @@
 // - Build C# tools for PowerPoint presentation processing that require status reporting.
 // - Generate or transform PPTX files to SWF in .NET applications.
 // - Monitor long‑running conversions to improve user experience.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

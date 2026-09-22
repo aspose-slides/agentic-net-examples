@@ -16,6 +16,7 @@
 // - Automate archival of presentations with PDF/A compliance.
 // - Build .NET utilities for secure presentation distribution.
 // - Integrate PDF/A conversion into document management workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -16,6 +16,7 @@
 // - Generate high‑quality PDFs for printing or distribution.
 // - Integrate slide size and image quality settings into .NET document workflows.
 // - Validate and process PowerPoint files before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

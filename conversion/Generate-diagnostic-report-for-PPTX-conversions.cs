@@ -17,6 +17,7 @@
 // - Build C# tools for validating presentation file size changes during conversion.
 // - Integrate conversion diagnostics into .NET applications handling OpenDocument presentations.
 // - Detect and log unsupported formats or processing errors in batch conversion scenarios.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

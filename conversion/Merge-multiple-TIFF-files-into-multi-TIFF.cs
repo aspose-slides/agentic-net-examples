@@ -19,6 +19,7 @@
 // - Build C# tools for PowerPoint presentation processing that output TIFFs.
 // - Generate combined TIFF documents from slide images in .NET applications.
 // - Validate and streamline image consolidation workflows before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

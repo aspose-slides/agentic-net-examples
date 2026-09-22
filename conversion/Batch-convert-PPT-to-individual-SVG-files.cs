@@ -18,6 +18,7 @@
 // - Integrate slide‑to‑SVG conversion into .NET workflows or CI pipelines.
 // - Preserve original presentations while generating SVG assets for web or 
 //   documentation purposes.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

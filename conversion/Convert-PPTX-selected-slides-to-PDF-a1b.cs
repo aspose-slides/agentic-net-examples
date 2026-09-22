@@ -18,6 +18,7 @@
 // - Build C# tools for selective slide export with compliance requirements.
 // - Generate PDF/A‑1b documents from PowerPoint presentations in .NET apps.
 // - Validate and process specific slides before publishing or archiving.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

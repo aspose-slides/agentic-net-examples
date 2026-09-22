@@ -17,6 +17,7 @@
 // - Build C# utilities for batch processing of PowerPoint presentations.
 // - Integrate slide image extraction into .NET workflows.
 // - Validate slide rendering before publishing or further processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
