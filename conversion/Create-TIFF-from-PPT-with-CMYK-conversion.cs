@@ -17,6 +17,7 @@
 // - Build .NET utilities for batch conversion of presentations to TIFF.
 // - Integrate presentation conversion into publishing workflows.
 // - Validate and preview PPTX content before printing or distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
