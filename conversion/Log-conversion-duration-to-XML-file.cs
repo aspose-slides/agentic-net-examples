@@ -19,6 +19,7 @@
 // - Generate XML reports of conversion outcomes for auditing or monitoring.
 // - Integrate conversion timing into CI/CD pipelines or server-side services.
 // - Diagnose and handle unsupported formats or conversion errors.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
