@@ -17,6 +17,7 @@
 // - Automate font replacement in batch PowerPoint processing tools.
 // - Build .NET utilities that prepare presentations for publishing with consistent fonts.
 // - Integrate custom font handling into larger document workflow pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
