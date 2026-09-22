@@ -18,6 +18,7 @@
 // - Reduce JavaScript payload size by applying GZIP compression.
 // - Integrate PowerPoint conversion into CI/CD pipelines or server‑side services.
 // - Prepare offline‑compatible HTML5 presentations with compressed resources.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
