@@ -17,6 +17,7 @@
 // - Build .NET tools for preserving vector graphics when exporting presentations.
 // - Integrate PPTX to PDF conversion into server‑side or desktop applications.
 // - Ensure PDF output meets publishing standards for graphics fidelity.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
