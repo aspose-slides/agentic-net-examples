@@ -17,6 +17,7 @@
 // - Build .NET tools that convert presentation content to audio files.
 // - Integrate slide content export into larger document processing pipelines.
 // - Validate and preprocess PPTX files before publishing or distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
