@@ -17,6 +17,7 @@
 // - Convert signed PowerPoint files to PDF for secure sharing.
 // - Automate signing and conversion workflows in .NET applications.
 // - Integrate digital signature processing into presentation management tools.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
