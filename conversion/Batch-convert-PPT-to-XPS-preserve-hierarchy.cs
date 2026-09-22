@@ -18,6 +18,7 @@
 // - Maintain source folder structure in the converted output.
 // - Integrate PowerPoint conversion into .NET backend services or tools.
 // - Process presentations from network shares with error handling.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
