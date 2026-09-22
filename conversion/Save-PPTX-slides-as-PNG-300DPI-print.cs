@@ -17,6 +17,7 @@
 // - Automate batch processing of presentations in .NET tools.
 // - Generate image assets from PowerPoint files for documentation or publishing.
 // - Validate and copy presentations as part of a workflow.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
