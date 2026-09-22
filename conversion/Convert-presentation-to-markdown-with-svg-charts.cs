@@ -18,6 +18,7 @@
 // - Build C# tools for extracting visual content from PPTX files.
 // - Generate documentation or web content from presentations.
 // - Integrate slide-to-markdown conversion into CI/CD pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
