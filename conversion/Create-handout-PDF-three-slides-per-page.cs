@@ -17,6 +17,7 @@
 // - Build C# utilities for batch conversion of presentations to handout PDFs.
 // - Integrate handout creation into document management or e‑learning platforms.
 // - Automate PDF handout production as part of a CI/CD pipeline.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
