@@ -17,6 +17,7 @@
 // - Include hidden slides in the generated PDF.
 // - Automate document conversion in batch processing or CI pipelines.
 // - Integrate PowerPoint to PDF conversion into .NET services or tools.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
