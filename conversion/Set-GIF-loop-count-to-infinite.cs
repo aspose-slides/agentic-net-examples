@@ -17,6 +17,7 @@
 // - Verify GIF loop metadata programmatically.
 // - Integrate GIF export with infinite looping into .NET applications.
 // - Automate presentation-to-GIF workflows for web or desktop publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
