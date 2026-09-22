@@ -17,6 +17,7 @@
 // - Build C# tools for PowerPoint and ODP processing in .NET applications.
 // - Generate conversion reports for monitoring and optimization.
 // - Validate and log presentation workflow timings before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
