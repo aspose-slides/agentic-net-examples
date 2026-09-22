@@ -16,6 +16,7 @@
 // - Build tools for validating visual fidelity of converted slide images.
 // - Integrate slide‑to‑TIFF conversion into .NET applications or CI pipelines.
 // - Perform pixel‑wise comparison of original slides versus generated TIFFs.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
