@@ -17,6 +17,7 @@
 // - Build .NET utilities for PowerPoint content conversion.
 // - Integrate slide‑to‑image rendering into reporting or publishing pipelines.
 // - Preserve original slide dimensions when generating image assets.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
