@@ -17,6 +17,7 @@
 // - Understand API limitations regarding GIF loop count and quality settings.
 // - Build C# tools for PowerPoint presentation processing and validation.
 // - Automate presentation workflows that involve GIF output.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
