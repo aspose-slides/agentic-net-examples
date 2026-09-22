@@ -18,6 +18,7 @@
 // - Assess impact of JPEG compression on PowerPoint to SWF conversion.
 // - Build tools for automated quality testing of presentation exports.
 // - Generate SWF files with specific image quality requirements.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
