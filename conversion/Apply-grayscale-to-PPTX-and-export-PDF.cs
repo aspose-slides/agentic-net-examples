@@ -17,6 +17,7 @@
 // - Build .NET tools for batch processing of PowerPoint presentations.
 // - Integrate image effect workflows into existing C# applications.
 // - Validate visual consistency of presentations before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
