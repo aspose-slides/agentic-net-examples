@@ -17,6 +17,7 @@
 // - Build C# tools for PowerPoint image processing.
 // - Generate or transform PPTX files in .NET applications.
 // - Apply visual enhancements to slide images before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
