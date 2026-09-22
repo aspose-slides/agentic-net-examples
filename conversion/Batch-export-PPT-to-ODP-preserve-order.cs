@@ -18,6 +18,7 @@
 // - Integrate PowerPoint to ODP conversion into .NET build or deployment pipelines.
 // - Create command‑line tools for bulk presentation format migration.
 // - Validate and process presentations before publishing to OpenDocument platforms.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
