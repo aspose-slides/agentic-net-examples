@@ -17,6 +17,7 @@
 // - Generate a console report of font substitutions for quality checks.
 // - Integrate font validation into automated PowerPoint processing pipelines.
 // - Build .NET tools that convert presentations while ensuring font compatibility.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
