@@ -17,6 +17,7 @@
 // - Build C# tools for securing exported presentation PDFs.
 // - Integrate PDF protection into PowerPoint processing workflows.
 // - Ensure confidential presentation content is protected before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
