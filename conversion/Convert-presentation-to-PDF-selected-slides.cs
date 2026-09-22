@@ -18,6 +18,7 @@
 // - Build command‑line utilities for slide‑specific PDF generation.
 // - Integrate selective slide conversion into larger .NET workflows.
 // - Automate reporting or documentation tasks that require only part of a deck.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
