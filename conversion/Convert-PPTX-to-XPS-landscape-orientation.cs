@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint slide orientation adjustments.
 // - Integrate PPTX to XPS conversion into .NET workflows or services.
 // - Validate and process presentation files before distribution or printing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
