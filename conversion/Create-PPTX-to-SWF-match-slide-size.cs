@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint to SWF conversion in .NET applications.
 // - Automate batch processing of presentations for legacy Flash viewers.
 // - Ensure size fidelity when integrating PowerPoint content into SWF-based workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
