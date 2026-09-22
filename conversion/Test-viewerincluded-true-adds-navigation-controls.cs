@@ -17,6 +17,7 @@
 // - Add navigation controls to converted presentations automatically.
 // - Automate batch conversion of PPTX to SWF with viewer support.
 // - Integrate presentation conversion into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
