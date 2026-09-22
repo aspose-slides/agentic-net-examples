@@ -19,6 +19,7 @@
 //   or security reasons.
 // - Integrate PowerPoint to PDF conversion into automated workflows or APIs.
 // - Validate presentation conversion results before further processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
