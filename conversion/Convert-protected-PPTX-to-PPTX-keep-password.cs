@@ -16,6 +16,7 @@
 // - Build C# utilities for re‑encrypting or copying password‑protected presentations.
 // - Automate batch processing of secured PowerPoint files in .NET applications.
 // - Validate and maintain protection during presentation file transformations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
