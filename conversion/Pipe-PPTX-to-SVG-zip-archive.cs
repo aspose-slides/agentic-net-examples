@@ -18,6 +18,7 @@
 // - Build .NET tools for batch processing of PowerPoint presentations.
 // - Generate SVG assets for web or documentation from PowerPoint slides.
 // - Ensure large presentations are saved with Zip64 support.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
