@@ -16,6 +16,7 @@
 // - Build console utilities that provide user feedback during file processing.
 // - Integrate progress reporting into .NET applications that handle slide exports.
 // - Automate batch conversion of presentations with real‑time status updates.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
