@@ -19,6 +19,7 @@
 // - Automate batch conversion of PPTX files to GIF for quick sharing or review.
 // - Incorporate slide‑to‑GIF conversion into custom .NET tools or services.
 // - Validate presentation content by creating visual previews before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
