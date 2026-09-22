@@ -17,6 +17,7 @@
 // - Build C# utilities for batch conversion of presentations with notes.
 // - Automate validation of notes layout options in PowerPoint workflows.
 // - Integrate notes‑aware SWF generation into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
