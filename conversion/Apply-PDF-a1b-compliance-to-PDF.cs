@@ -18,6 +18,7 @@
 // - Build C# utilities that enforce PDF archival standards on generated PDFs.
 // - Integrate PDF/A-1b conversion into automated document workflows.
 // - Validate presentation output before publishing or distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
