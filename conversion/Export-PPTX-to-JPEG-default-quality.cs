@@ -17,6 +17,7 @@
 // - Automate slide image extraction in .NET tools or services.
 // - Prepare slide thumbnails for web galleries or documentation.
 // - Validate slide rendering without custom quality parameters.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
