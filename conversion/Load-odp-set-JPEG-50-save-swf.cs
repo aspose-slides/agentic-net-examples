@@ -18,6 +18,7 @@
 // - Build automated tools for batch conversion of presentations.
 // - Integrate ODP to SWF conversion into .NET workflows.
 // - Adjust image quality during format conversion for size optimization.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
