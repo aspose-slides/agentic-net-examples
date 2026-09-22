@@ -17,6 +17,7 @@
 // - Integrate password validation into .NET PowerPoint processing pipelines.
 // - Generate audit output files for reporting or further analysis.
 // - Ensure presentations meet security requirements before transformation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
