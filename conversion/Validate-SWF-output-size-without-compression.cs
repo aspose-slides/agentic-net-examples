@@ -17,6 +17,7 @@
 // - Automate validation of presentation conversion settings.
 // - Build tools for PowerPoint to SWF conversion testing.
 // - Ensure optimal file size for publishing or distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
