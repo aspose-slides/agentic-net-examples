@@ -17,6 +17,7 @@
 // - Automate audit of font compatibility across multiple PPTX files.
 // - Integrate font substitution reporting into .NET tools or CI pipelines.
 // - Ensure presentation fidelity before publishing or conversion.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
