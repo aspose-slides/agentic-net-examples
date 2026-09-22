@@ -16,6 +16,7 @@
 // - Ensure BwConversionMode is only applied to CCITT4 compression.
 // - Build C# tools for PowerPoint to TIFF conversion with specific compression settings.
 // - Automate validation of image compression in presentation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
