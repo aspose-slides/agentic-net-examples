@@ -18,6 +18,7 @@
 // - Ensure PDF outputs retain original typography across platforms.
 // - Integrate font‑embedding PDF export into .NET automation pipelines.
 // - Prepare presentation archives for distribution without font dependencies.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
