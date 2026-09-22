@@ -17,6 +17,7 @@
 // - Preserve slide backgrounds when converting PPTX to GIF.
 // - Build C# tools for PowerPoint presentation processing and export.
 // - Generate visual previews of presentations for web or documentation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
