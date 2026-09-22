@@ -18,6 +18,7 @@
 //   SWF viewer and a host web page.
 // - Automate batch conversion of presentations in .NET tools or CI pipelines.
 // - Validate SWF output before publishing or integrating into web applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
