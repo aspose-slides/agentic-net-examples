@@ -1,108 +1,130 @@
 // -----------------------------------------------------------------------------
-// Example: Export PPTX to HTML zip archive using C#
+// Example: Export PPTX to HTML with Resources and Package into ZIP
 //
 // Description:
-// Demonstrates how to export a PPTX presentation to an HTML file along with
-// its associated resources, and then package both the HTML file and the
-// resources folder into a ZIP archive using Aspose.Slides for .NET. The example
-// shows loading a presentation, configuring HTML export options (including
-// PNG slide images), saving the HTML output, locating the generated resources
-// folder, and creating a ZIP archive that preserves the folder structure.
-// This pattern can be used in console applications or automated workflows.
+// This console application loads a PowerPoint PPTX file using Aspose.Slides for .NET,
+// exports it to an HTML file with PNG slide images, and then creates a ZIP archive
+// containing the HTML file and its associated resources folder. It demonstrates
+// handling file existence checks, configuring HtmlOptions, and using .NET's
+// ZipFile class to package the output for distribution.
 //
 // Keywords:
-// C#, Aspose.Slides, PPTX, HTML export, ZIP archive, Presentation conversion,
-// PowerPoint, Slide images, Console application, .NET
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, HTML export, ZIP archive, slide images
 //
 // Use Cases:
-// - Convert PowerPoint presentations to web‑ready HTML with embedded assets.
-// - Package exported HTML and resources into a single distributable ZIP file.
-// - Automate batch conversion of PPTX files for web publishing or archiving.
-// - Integrate presentation export functionality into .NET tools or services.
+// - Automating conversion of presentations to web-friendly HTML bundles.
+// - Preparing presentation assets for deployment to static web servers.
+// - Integrating PPTX to HTML conversion into CI/CD pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.IO.Compression;
-using System.Drawing.Imaging;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-namespace ExportPresentationToHtmlZip
+namespace AsposeSlidesHtmlExport
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            // Input and output paths
-            string inputPath = "input.pptx";
+            // Input PPTX file path
+            string inputPptxPath = "input.pptx";
+            // Output HTML file path
             string outputHtmlPath = "output.html";
-            string outputZipPath = "output.zip";
+            // Output ZIP file path
+            string outputZipPath = "PresentationExport.zip";
 
             // Verify input file exists
-            if (!File.Exists(inputPath))
+            if (!File.Exists(inputPptxPath))
             {
-                Console.WriteLine("Input file does not exist: " + inputPath);
+                Console.WriteLine("Input file not found: " + inputPptxPath);
                 return;
             }
 
             try
             {
-                // Load the presentation
-                using (Presentation presentation = new Presentation(inputPath))
-                {
-                    // Configure HTML export options
-                    HtmlOptions htmlOptions = new HtmlOptions();
-                    // Set slide images to PNG format using SlideImageFormat.Bitmap
-                    htmlOptions.SlideImageFormat = SlideImageFormat.Bitmap(1f, ImageFormat.Png);
+                // Load presentation
+                Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPptxPath);
 
-                    // Save presentation as HTML (creates HTML file and a resources folder)
-                    presentation.Save(outputHtmlPath, SaveFormat.Html, htmlOptions);
+                // Configure HTML export options (default uses PNG for slide images)
+                Aspose.Slides.Export.HtmlOptions htmlOptions = new Aspose.Slides.Export.HtmlOptions();
+
+                // Save presentation as HTML
+                presentation.Save(outputHtmlPath, Aspose.Slides.Export.SaveFormat.Html, htmlOptions);
+
+                // Determine resources folder (Aspose creates a folder named <htmlFileName>_files)
+                string resourcesFolder = Path.Combine(Path.GetDirectoryName(outputHtmlPath), Path.GetFileNameWithoutExtension(outputHtmlPath) + "_files");
+
+                // Verify resources folder exists
+                if (!Directory.Exists(resourcesFolder))
+                {
+                    Console.WriteLine("Resources folder not found: " + resourcesFolder);
                 }
 
-                // Determine the resources folder created by the HTML export
-                string resourcesFolder = Path.Combine(
-                    Path.GetDirectoryName(outputHtmlPath),
-                    Path.GetFileNameWithoutExtension(outputHtmlPath) + "_files");
+                // Create temporary directory to hold HTML and resources together for zipping
+                string tempExportDir = Path.Combine(Path.GetTempPath(), "AsposeSlidesExport_" + Guid.NewGuid().ToString("N"));
+                Directory.CreateDirectory(tempExportDir);
 
-                // Create ZIP archive containing the HTML file and its resources
-                using (FileStream zipStream = new FileStream(outputZipPath, FileMode.Create))
+                // Copy HTML file
+                string tempHtmlPath = Path.Combine(tempExportDir, Path.GetFileName(outputHtmlPath));
+                File.Copy(outputHtmlPath, tempHtmlPath, true);
+
+                // Copy resources folder
+                if (Directory.Exists(resourcesFolder))
                 {
-                    using (ZipArchive archive = new ZipArchive(zipStream, ZipArchiveMode.Create))
-                    {
-                        // Add the main HTML file
-                        archive.CreateEntryFromFile(outputHtmlPath, Path.GetFileName(outputHtmlPath));
-
-                        // Add all resource files if the folder exists
-                        if (Directory.Exists(resourcesFolder))
-                        {
-                            string[] resourceFiles = Directory.GetFiles(resourcesFolder, "*", SearchOption.AllDirectories);
-                            foreach (string filePath in resourceFiles)
-                            {
-                                // Preserve folder structure inside the ZIP
-                                string relativePath = Path.GetRelativePath(resourcesFolder, filePath);
-                                string entryName = Path.Combine(Path.GetFileName(resourcesFolder), relativePath).Replace('\\', '/');
-                                archive.CreateEntryFromFile(filePath, entryName);
-                            }
-                        }
-                    }
+                    string tempResourcesPath = Path.Combine(tempExportDir, Path.GetFileName(resourcesFolder));
+                    CopyDirectory(resourcesFolder, tempResourcesPath);
                 }
 
-                Console.WriteLine("Export completed successfully. ZIP archive created at: " + outputZipPath);
-            }
-            catch (PptxUnsupportedFormatException)
-            {
-                // Handle unsupported PPTX format
-                Console.WriteLine("The input file format is not supported (PPTX).");
-            }
-            catch (PptUnsupportedFormatException)
-            {
-                // Handle unsupported PPT format
-                Console.WriteLine("The input file format is not supported (PPT).");
+                // Create ZIP archive from temporary directory
+                if (File.Exists(outputZipPath))
+                {
+                    File.Delete(outputZipPath);
+                }
+                System.IO.Compression.ZipFile.CreateFromDirectory(tempExportDir, outputZipPath, CompressionLevel.Optimal, false);
+
+                // Clean up temporary directory
+                Directory.Delete(tempExportDir, true);
+
+                // Dispose presentation
+                presentation.Dispose();
+
+                Console.WriteLine("Export completed successfully.");
+                Console.WriteLine("HTML file: " + outputHtmlPath);
+                Console.WriteLine("Resources folder: " + resourcesFolder);
+                Console.WriteLine("ZIP archive: " + outputZipPath);
             }
             catch (Exception ex)
             {
-                // General exception handling
-                Console.WriteLine("An error occurred: " + ex.Message);
+                Console.WriteLine("An error occurred during export: " + ex.Message);
+            }
+        }
+
+        // Helper method to copy a directory recursively
+        private static void CopyDirectory(string sourceDir, string destinationDir)
+        {
+            DirectoryInfo dir = new DirectoryInfo(sourceDir);
+            if (!dir.Exists)
+            {
+                throw new DirectoryNotFoundException("Source directory does not exist: " + sourceDir);
+            }
+
+            DirectoryInfo[] subDirs = dir.GetDirectories();
+            Directory.CreateDirectory(destinationDir);
+
+            // Copy files
+            FileInfo[] files = dir.GetFiles();
+            foreach (FileInfo file in files)
+            {
+                string targetFilePath = Path.Combine(destinationDir, file.Name);
+                file.CopyTo(targetFilePath, true);
+            }
+
+            // Copy subdirectories
+            foreach (DirectoryInfo subDir in subDirs)
+            {
+                string newDestinationDir = Path.Combine(destinationDir, subDir.Name);
+                CopyDirectory(subDir.FullName, newDestinationDir);
             }
         }
     }
