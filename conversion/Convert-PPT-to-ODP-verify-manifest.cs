@@ -18,6 +18,7 @@
 // - Ensure that all media assets (e.g., images) are correctly packaged.
 // - Build .NET tools that process and verify PowerPoint presentations before
 //   publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
