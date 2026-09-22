@@ -17,6 +17,7 @@
 // - Preserve original filenames during batch processing.
 // - Integrate PPT to PPTX conversion into .NET build or deployment pipelines.
 // - Provide a simple command‑line tool for users to upgrade PowerPoint files.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
