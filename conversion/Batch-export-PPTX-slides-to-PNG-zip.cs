@@ -18,6 +18,7 @@
 // - Package slide images into a ZIP archive for distribution or storage.
 // - Build .NET tools for PowerPoint slide extraction and archiving.
 // - Integrate slide-to-image conversion into larger document processing pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
