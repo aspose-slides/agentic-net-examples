@@ -16,6 +16,7 @@
 // - Build automation tools for PowerPoint to SWF conversion in .NET.
 // - Integrate presentation conversion into larger document processing pipelines.
 // - Validate and test SWF output generation from PPTX sources.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
