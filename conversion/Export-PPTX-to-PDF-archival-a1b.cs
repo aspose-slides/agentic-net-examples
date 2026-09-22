@@ -16,6 +16,7 @@
 // - Ensure long-term preservation of slides with full font embedding.
 // - Automate PPTX-to-PDF/A conversion in .NET applications.
 // - Validate presentation files before distribution or archiving.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
