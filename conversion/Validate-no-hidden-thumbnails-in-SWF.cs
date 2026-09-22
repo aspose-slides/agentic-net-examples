@@ -18,6 +18,7 @@
 // - Automate PowerPoint to SWF conversion while respecting slide visibility.
 // - Build validation tools for presentation workflows before publishing.
 // - Integrate slide visibility checks into .NET applications handling PPTX files.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
