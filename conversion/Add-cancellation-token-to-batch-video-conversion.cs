@@ -19,6 +19,7 @@
 // - Integrate presentation‑to‑video conversion into CI/CD pipelines with
 //   interrupt handling.
 // - Provide fallback handling when the target video format is unavailable.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
