@@ -17,6 +17,7 @@
 // - Validate that the conversion produced a non‑empty SWF file.
 // - Integrate ODP‑to‑SWF conversion into .NET batch processing tools.
 // - Ensure file existence and size checks after conversion.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
