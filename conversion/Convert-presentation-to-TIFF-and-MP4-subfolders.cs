@@ -18,6 +18,7 @@
 // - Generate separate TIFF and MP4 outputs for archival or publishing pipelines.
 // - Build command‑line tools for PowerPoint processing in .NET environments.
 // - Validate conversion workflows before integrating into larger systems.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
