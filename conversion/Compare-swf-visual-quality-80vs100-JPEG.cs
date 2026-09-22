@@ -17,6 +17,7 @@
 // - Automate generation of SWF files with different quality levels.
 // - Integrate quality comparison logic into .NET presentation processing tools.
 // - Validate conversion settings before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
