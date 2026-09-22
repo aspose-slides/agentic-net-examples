@@ -6,7 +6,7 @@
 
 
 
-This category contains 120 standalone C# examples for Aspose.Slides for .NET. These examples help developers automate PowerPoint presentation workflows related to comments and notes.
+This category contains 118 standalone C# examples for Aspose.Slides for .NET. These examples help developers automate PowerPoint presentation workflows related to comments and notes.
 
 
 
