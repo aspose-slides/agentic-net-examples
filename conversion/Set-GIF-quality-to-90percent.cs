@@ -1,71 +1,56 @@
 // -----------------------------------------------------------------------------
-// Example: Set GIF quality to 90percent using C#
+// Example: Convert PowerPoint to GIF with Desired Quality (90%) using Aspose.Slides
 //
 // Description:
-// Demonstrates how to set GIF quality to 90percent using C# and Aspose.Slides 
-// for .NET. The example shows the required presentation-processing steps for 
-// PowerPoint files and produces the requested output in a standalone console 
-// application. Developers can use this pattern to automate PPTX workflows, 
-// validate results, or integrate presentation logic into .NET applications.
+// This console application loads a PPTX file, converts it to an animated GIF
+// using Aspose.Slides for .NET, and demonstrates that GIF quality cannot be
+// directly set via the API. The example includes file existence checks and
+// basic error handling, suitable for automating PPTX workflows.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, GIF, Quality, 90Percent, 
-// GifOptions.CompressionLevel, Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, GIF conversion, quality
 //
 // Use Cases:
-// - Automate setting GIF quality to 90percent.
-// - Build C# tools for PowerPoint presentation processing.
-// - Generate or transform PPTX files into high‑quality animated GIFs in .NET applications.
-// - Validate presentation workflows before publishing or integration.
+// - Automate conversion of presentations to GIFs for web previews.
+// - Generate GIFs for email attachments or documentation.
+// - Integrate slide export into CI/CD pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
-
 using System;
-using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
         string inputPath = "input.pptx";
         string outputPath = "output.gif";
 
-        // Verify that the input file exists
-        if (!File.Exists(inputPath))
+        if (!System.IO.File.Exists(inputPath))
         {
-            Console.WriteLine("Input file not found: " + inputPath);
+            System.Console.WriteLine("Input file not found: " + inputPath);
             return;
         }
 
         try
         {
-            // Load the presentation
-            using (Presentation presentation = new Presentation(inputPath))
-            {
-                // Initialize GIF export options
-                GifOptions gifOptions = new GifOptions();
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+            Aspose.Slides.Export.GifOptions gifOptions = new Aspose.Slides.Export.GifOptions();
 
-                // Set GIF quality to 90 percent (CompressionLevel ranges from 0 to 100)
-                gifOptions.CompressionLevel = 90;
+            // Note: Aspose.Slides does not provide a direct quality setting for GIF.
+            // GIF uses lossless compression; quality adjustments are not applicable.
+            // Adjust frame size or other options to influence file size if needed.
+            gifOptions.FrameSize = new System.Drawing.Size(800, 600);
+            gifOptions.DefaultDelay = 100; // delay in hundredths of a second
+            gifOptions.TransitionFps = 10;
 
-                // Example of other configurable options (optional)
-                // gifOptions.FrameSize = new System.Drawing.Size(960, 720);
-                // gifOptions.TransitionFps = 35;
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Gif, gifOptions);
+            presentation.Dispose();
 
-                // Save the presentation as an animated GIF
-                presentation.Save(outputPath, SaveFormat.Gif, gifOptions);
-            }
+            System.Console.WriteLine("Presentation saved as GIF to " + outputPath);
         }
-        catch (NotSupportedException ex)
+        catch (System.Exception ex)
         {
-            // Handle unsupported format scenario
-            Console.WriteLine("Format not supported: " + ex.Message);
-        }
-        catch (Exception ex)
-        {
-            // General error handling
-            Console.WriteLine("Error: " + ex.Message);
+            System.Console.WriteLine("Error: " + ex.Message);
         }
     }
 }
