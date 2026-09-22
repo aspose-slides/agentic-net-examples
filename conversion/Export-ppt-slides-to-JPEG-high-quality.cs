@@ -18,6 +18,7 @@
 // - Build C# tools for PowerPoint presentation image extraction.
 // - Generate or transform PPTX files into image assets in .NET applications.
 // - Validate presentation rendering before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
