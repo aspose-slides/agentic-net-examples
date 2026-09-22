@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint document preservation.
 // - Integrate PDF/A-1b export into .NET applications handling presentations.
 // - Validate and generate archival-compliant PDFs before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
