@@ -18,6 +18,7 @@
 // - Verify that GIF frames correspond to the original slide sequence.
 // - Build automated tools for presentation quality checks in .NET.
 // - Integrate GIF generation and validation into CI pipelines or reporting systems.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
