@@ -17,6 +17,7 @@
 // - Generate PDF versions of presentations after image removal.
 // - Build .NET tools for preparing slide decks for review or publishing.
 // - Integrate image placeholder logic into larger presentation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
