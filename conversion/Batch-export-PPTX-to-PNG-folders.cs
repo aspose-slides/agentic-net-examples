@@ -17,6 +17,7 @@
 // - Generate image assets from presentations for web or documentation.
 // - Build C# utilities that process multiple PowerPoint files in a directory.
 // - Create per‑presentation output structures for downstream processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
