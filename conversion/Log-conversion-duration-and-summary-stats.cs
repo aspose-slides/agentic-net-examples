@@ -17,6 +17,7 @@
 // - Record conversion time for each file and overall batch performance.
 // - Apply uniform slide settings (e.g., transition duration) during conversion.
 // - Integrate conversion timing into monitoring or reporting tools.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
