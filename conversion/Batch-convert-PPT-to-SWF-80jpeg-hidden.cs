@@ -19,6 +19,7 @@
 // - Include hidden slides during conversion for complete presentation output.
 // - Build C# utilities for PowerPoint presentation processing and publishing.
 // - Validate and transform presentation files in .NET environments.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
