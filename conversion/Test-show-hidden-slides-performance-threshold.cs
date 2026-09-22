@@ -17,6 +17,7 @@
 //   acceptable limits.
 // - Integrate performance checks into CI pipelines for PowerPoint processing tools.
 // - Generate GIFs from presentations with or without hidden slides.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
