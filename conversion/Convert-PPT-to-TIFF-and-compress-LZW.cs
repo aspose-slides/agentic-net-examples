@@ -18,6 +18,7 @@
 // - Apply LZW compression to TIFF files using a third‑party utility.
 // - Build console utilities for batch processing of presentations.
 // - Integrate slide‑to‑image conversion and compression into .NET workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
