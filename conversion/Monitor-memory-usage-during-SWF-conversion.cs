@@ -18,6 +18,7 @@
 // - Build console tools for automated PowerPoint to SWF conversion with
 //   resource monitoring.
 // - Validate conversion performance and resource impact before deployment.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
