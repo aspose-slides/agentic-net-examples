@@ -16,6 +16,7 @@
 // - Build .NET tools that ensure font consistency during PPTX conversion.
 // - Automate font substitution in batch processing of presentations.
 // - Prevent rendering issues caused by unavailable fonts in generated slides.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
