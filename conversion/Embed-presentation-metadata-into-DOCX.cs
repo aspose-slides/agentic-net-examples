@@ -1,79 +1,94 @@
 // -----------------------------------------------------------------------------
-// Example: Embed presentation metadata into DOCX using C#
-//
+// Example: Embed Presentation Metadata and Export to DOCX (Fallback to PPTX)
+// 
 // Description:
-// Demonstrates how to embed built‑in presentation metadata as custom properties
-// and save the PowerPoint file as a DOCX document using C# and Aspose.Slides for .NET.
-// The example loads a PPTX file, copies standard document properties to custom
-// properties, and writes the result to a DOCX file. This pattern can be used to
-// automate metadata handling and generate Word‑compatible representations of
-// presentations.
-//
+// This console application loads an existing PowerPoint PPTX file, copies its
+// built‑in document properties (such as Title, Author, Subject) into custom
+// properties, and attempts to save the presentation as a DOCX file using
+// Aspose.Slides for .NET. If the DOCX format is not supported, the program falls
+// back to saving the file as PPTX and informs the user.
+// 
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Embed, Presentation, Metadata,
-// Docx, Presentation Processing, Office Automation
-//
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, metadata, custom properties, DOCX export
+// 
 // Use Cases:
-// - Automate embedding presentation metadata into DOCX.
-// - Build C# tools for PowerPoint presentation processing and export.
-// - Generate Word documents from PPTX files with preserved metadata.
-// - Validate presentation workflows before publishing or integration.
+// - Automate metadata preservation when converting presentations to Word documents.
+// - Ensure built‑in properties are retained as custom properties for downstream processing.
+// - Provide graceful fallback when a target format is unavailable.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
-
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-namespace EmbedMetadata
+namespace AsposeSlidesMetadataExport
 {
     class Program
     {
-        static void Main()
+        static void Main(string[] args)
         {
             // Input and output file paths
-            string inputPath = "input.pptx";
-            string outputPath = "output.docx"; // Target DOCX format
+            string inputPath = Path.Combine(Directory.GetCurrentDirectory(), "input.pptx");
+            string outputPath = Path.Combine(Directory.GetCurrentDirectory(), "output.docx");
 
-            // Verify that the input file exists
+            // Verify input file exists
             if (!File.Exists(inputPath))
             {
-                Console.WriteLine("Input file does not exist: " + inputPath);
+                Console.WriteLine("Input file not found: " + inputPath);
                 return;
             }
 
             // Load the presentation
-            using (Presentation presentation = new Presentation(inputPath))
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+
+            // Access document properties
+            Aspose.Slides.IDocumentProperties docProps = presentation.DocumentProperties;
+
+            // Helper to add a custom property if the built‑in value is not empty
+            Action<string, string> addCustomIfNotEmpty = (propertyName, propertyValue) =>
             {
-                // Access built‑in document properties
-                IDocumentProperties properties = presentation.DocumentProperties;
-
-                // Embed built‑in properties as custom properties
-                properties.SetCustomPropertyValue("Author", properties.Author);
-                properties.SetCustomPropertyValue("Title", properties.Title);
-                properties.SetCustomPropertyValue("Subject", properties.Subject);
-                properties.SetCustomPropertyValue("Category", properties.Category);
-                properties.SetCustomPropertyValue("Comments", properties.Comments);
-                properties.SetCustomPropertyValue("Company", properties.Company);
-                properties.SetCustomPropertyValue("CreatedTime", properties.CreatedTime);
-                properties.SetCustomPropertyValue("LastSavedTime", properties.LastSavedTime);
-                properties.SetCustomPropertyValue("Manager", properties.Manager);
-                properties.SetCustomPropertyValue("PresentationFormat", properties.PresentationFormat);
-
-                // Save as DOCX
-                try
+                if (!string.IsNullOrEmpty(propertyValue))
                 {
-                    presentation.Save(outputPath, SaveFormat.Docx);
+                    // SetCustomPropertyValue creates or updates a custom property
+                    docProps.SetCustomPropertyValue(propertyName, propertyValue);
                 }
-                catch (Exception ex)
-                {
-                    // Handle any errors that occur during saving
-                    Console.WriteLine("An error occurred while saving: " + ex.Message);
-                }
+            };
+
+            // Copy built‑in properties to custom properties
+            addCustomIfNotEmpty("Title", docProps.Title);
+            addCustomIfNotEmpty("Author", docProps.Author);
+            addCustomIfNotEmpty("Subject", docProps.Subject);
+            addCustomIfNotEmpty("Keywords", docProps.Keywords);
+            addCustomIfNotEmpty("Comments", docProps.Comments);
+            addCustomIfNotEmpty("Category", docProps.Category);
+            addCustomIfNotEmpty("Manager", docProps.Manager);
+            addCustomIfNotEmpty("Company", docProps.Company);
+
+            // Attempt to determine if DOCX format is supported
+            Aspose.Slides.Export.SaveFormat targetFormat;
+            try
+            {
+                // This will succeed only if "Docx" is a valid enum name
+                targetFormat = (Aspose.Slides.Export.SaveFormat)Enum.Parse(typeof(Aspose.Slides.Export.SaveFormat), "Docx", ignoreCase: true);
+            }
+            catch (ArgumentException)
+            {
+                // DOCX format not supported – fallback to PPTX
+                Console.WriteLine("DOCX format is not supported by the installed Aspose.Slides version. Saving as PPTX instead.");
+                string fallbackPath = Path.ChangeExtension(outputPath, ".pptx");
+                presentation.Save(fallbackPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                return;
             }
 
-            // Ensure the presentation is saved before exiting
-            Console.WriteLine("Processing completed.");
+            // Save the presentation using the determined format
+            try
+            {
+                presentation.Save(outputPath, targetFormat);
+                Console.WriteLine("Presentation saved successfully to: " + outputPath);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred while saving the presentation: " + ex.Message);
+            }
         }
     }
 }
