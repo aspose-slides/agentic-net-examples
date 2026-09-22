@@ -17,6 +17,7 @@
 // - Build resilient .NET tools that handle unsupported formats gracefully.
 // - Integrate PowerPoint conversion with custom error reporting mechanisms.
 // - Validate and monitor presentation processing pipelines before deployment.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
