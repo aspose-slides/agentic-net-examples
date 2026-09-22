@@ -18,6 +18,7 @@
 // - Integrate PPTX-to-TIFF conversion into .NET build or deployment pipelines.
 // - Create utilities for bulk image extraction from PowerPoint files.
 // - Validate and preprocess presentations before further processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
