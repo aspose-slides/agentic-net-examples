@@ -16,6 +16,7 @@
 // - Convert protected PPT presentations to PPTX for further editing.
 // - Automate batch processing of encrypted PowerPoint files.
 // - Integrate password‑removal into .NET document management workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
