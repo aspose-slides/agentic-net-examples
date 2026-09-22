@@ -17,6 +17,7 @@
 // - Automate conversion of specific slides to PDF.
 // - Generate CSV-compatible logs for integration with reporting tools.
 // - Build .NET utilities for PowerPoint presentation workflow automation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
