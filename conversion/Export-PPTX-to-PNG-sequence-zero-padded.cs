@@ -21,6 +21,7 @@
 //   file naming.
 // - Prepare slide assets for publishing, documentation, or further image
 //   processing pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
