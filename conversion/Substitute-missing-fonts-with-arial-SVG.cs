@@ -18,6 +18,7 @@
 // - Automate presentation conversion pipelines in .NET applications.
 // - Ensure consistent visual output when original fonts are unavailable.
 // - Integrate SVG export functionality into custom tools or services.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
