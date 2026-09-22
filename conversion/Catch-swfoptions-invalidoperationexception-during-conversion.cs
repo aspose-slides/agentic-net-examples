@@ -17,6 +17,7 @@
 // - Build robust .NET tools for converting PPTX files to SWF.
 // - Implement detailed error handling for presentation processing workflows.
 // - Ensure graceful fallback when conversion features are not available.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
