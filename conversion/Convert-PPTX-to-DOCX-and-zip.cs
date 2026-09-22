@@ -1,84 +1,86 @@
 // -----------------------------------------------------------------------------
-// Example: Convert PPTX to PDF and zip using C#
+// Example: Convert PPTX to PDF and ZIP Archive using Aspose.Slides for .NET
 //
 // Description:
-// Demonstrates how to convert a PPTX file to PDF using Aspose.Slides for .NET
-// and then compress the resulting PDF into a ZIP archive. The example shows
-// the required presentation-processing steps for PowerPoint files and
-// produces the requested output in a standalone console application. Developers
-// can use this pattern to automate PPTX to PDF workflows, validate results,
-// or integrate presentation logic into .NET applications.
+// This console application demonstrates how to load a PowerPoint PPTX file,
+// convert it to a PDF document using Aspose.Slides for .NET, and then compress
+// the resulting PDF into a ZIP archive. It includes file existence checks,
+// handles unsupported format exceptions, and ensures the presentation is saved
+// before the application exits.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, PDF, Aspose.Slides for .NET, Convert, Presentation Processing,
-// Office Automation, Zip, Compression
+// C#, PowerPoint, PPTX, PDF, ZIP, Aspose.Slides for .NET, presentation conversion, automation
 //
 // Use Cases:
-// - Automate conversion of PPTX to PDF and archive the result.
-// - Build C# tools for PowerPoint presentation processing.
-// - Generate or transform PPTX files in .NET applications.
-// - Validate presentation workflows before publishing or integration.
+// - Automate batch conversion of PPTX presentations to PDF for archival.
+// - Integrate PPTX to PDF workflow into a CI/CD pipeline.
+// - Provide downloadable PDF packages of slide decks in web applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
-
-using Aspose.Slides;
-using Aspose.Slides.Export;
 using System;
 using System.IO;
 using System.IO.Compression;
 
-namespace ConvertPptxToPdfAndZip
+namespace AsposeSlidesPptxToPdfZip
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            string inputFile = "input.pptx";
-            string outputPdf = "output.pdf";
-            string zipFile = "output.zip";
-
-            if (!File.Exists(inputFile))
+            string inputPath;
+            if (args.Length > 0)
             {
-                Console.WriteLine("Input file does not exist: " + inputFile);
+                inputPath = args[0];
+            }
+            else
+            {
+                Console.WriteLine("Please provide the full path to the PPTX file as the first argument.");
                 return;
             }
 
+            if (!File.Exists(inputPath))
+            {
+                Console.WriteLine($"Input file not found: {inputPath}");
+                return;
+            }
+
+            string pdfPath = Path.ChangeExtension(inputPath, ".pdf");
+            string zipPath = Path.ChangeExtension(inputPath, ".zip");
+
             try
             {
-                using (Presentation presentation = new Presentation(inputFile))
-                {
-                    // Convert PPTX to PDF.
-                    presentation.Save(outputPdf, SaveFormat.Pdf);
-                }
+                // Load the PPTX presentation
+                Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
 
-                // Compress the resulting PDF using zip compression.
-                if (File.Exists(outputPdf))
-                {
-                    if (File.Exists(zipFile))
-                    {
-                        File.Delete(zipFile);
-                    }
+                // Convert and save as PDF
+                presentation.Save(pdfPath, Aspose.Slides.Export.SaveFormat.Pdf);
 
-                    using (FileStream zipToOpen = new FileStream(zipFile, FileMode.Create))
+                // Ensure the presentation resources are released
+                presentation.Dispose();
+
+                // Create ZIP archive containing the PDF
+                using (FileStream zipToOpen = new FileStream(zipPath, FileMode.Create))
+                {
                     using (ZipArchive archive = new ZipArchive(zipToOpen, ZipArchiveMode.Create))
                     {
-                        archive.CreateEntryFromFile(outputPdf, Path.GetFileName(outputPdf), CompressionLevel.Optimal);
+                        archive.CreateEntryFromFile(pdfPath, Path.GetFileName(pdfPath));
                     }
+                }
 
-                    Console.WriteLine("Compression completed: " + zipFile);
-                }
-                else
-                {
-                    Console.WriteLine("PDF file was not created.");
-                }
+                Console.WriteLine($"Conversion successful. PDF saved to: {pdfPath}");
+                Console.WriteLine($"ZIP archive created at: {zipPath}");
             }
-            catch (NotSupportedException)
+            catch (Aspose.Slides.PptxUnsupportedFormatException ex)
             {
-                // Format not supported.
-                Console.WriteLine("The requested format is not supported by Aspose.Slides.");
+                Console.WriteLine($"The provided file is not a supported PPTX format: {ex.Message}");
+            }
+            catch (Aspose.Slides.PptUnsupportedFormatException ex)
+            {
+                Console.WriteLine($"The provided file is not a supported PPT format: {ex.Message}");
             }
             catch (Exception ex)
             {
-                Console.WriteLine("An error occurred: " + ex.Message);
+                Console.WriteLine($"An unexpected error occurred: {ex.Message}");
             }
         }
     }
