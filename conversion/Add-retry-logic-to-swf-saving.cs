@@ -17,6 +17,7 @@
 // - Build .NET utilities that need resilient saving of presentations.
 // - Automate PowerPoint to SWF transformation in CI/CD pipelines.
 // - Handle transient file access issues during presentation processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
