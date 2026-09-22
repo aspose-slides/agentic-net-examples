@@ -18,6 +18,7 @@
 // - Build C# utilities for PowerPoint to SWF conversion with size validation.
 // - Integrate presentation conversion steps into .NET applications.
 // - Verify output file sizes before publishing or further processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
