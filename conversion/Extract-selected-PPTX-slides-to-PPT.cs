@@ -17,6 +17,7 @@
 // - Build tools that generate custom slide decks based on user selection.
 // - Automate content reuse across multiple PowerPoint files.
 // - Validate and preprocess presentations before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
