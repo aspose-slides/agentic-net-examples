@@ -17,6 +17,7 @@
 // - Automate validation of hyperlink preservation during format conversion.
 // - Build .NET tools for batch processing of presentations with hyperlink checks.
 // - Integrate presentation conversion and verification into CI pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
