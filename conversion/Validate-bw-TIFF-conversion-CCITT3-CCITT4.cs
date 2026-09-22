@@ -18,6 +18,7 @@
 // - Build C# utilities for PowerPoint to TIFF conversion testing.
 // - Integrate presentation processing checks into CI pipelines.
 // - Ensure correct image compression settings before publishing assets.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
