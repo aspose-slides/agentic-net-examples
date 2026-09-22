@@ -17,6 +17,7 @@
 // - Build .NET tools for batch conversion of PowerPoint slides to scalable graphics.
 // - Integrate PPTX merging and SVG export into document processing pipelines.
 // - Validate and preview combined presentations before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
