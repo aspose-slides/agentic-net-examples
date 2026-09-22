@@ -16,6 +16,7 @@
 // - Build .NET utilities that require high‑resolution graphics in SWF output.
 // - Automate batch conversion of presentations while preserving image fidelity.
 // - Integrate SWF export into larger document processing pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
