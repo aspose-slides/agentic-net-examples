@@ -17,6 +17,7 @@
 // - Export slide thumbnails or images from a PPTX file.
 // - Automate PPTX modifications and re‑save with updated font settings.
 // - Integrate presentation processing into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
