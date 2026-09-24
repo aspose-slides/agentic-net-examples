@@ -17,6 +17,7 @@
 // - Build command‑line tools that ensure PDF output preserves original typography.
 // - Automate batch processing of presentations for publishing or archiving.
 // - Validate font embedding in generated PDFs before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
