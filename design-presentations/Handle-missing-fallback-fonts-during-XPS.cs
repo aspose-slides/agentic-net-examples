@@ -18,6 +18,7 @@
 // - Integrate fallback handling into .NET applications that generate or
 //   transform presentations.
 // - Validate presentation files before publishing to guarantee visual fidelity.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
