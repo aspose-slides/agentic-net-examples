@@ -17,6 +17,7 @@
 // - Replace missing or unsupported fonts in existing PPTX files.
 // - Build .NET tools that modify text styling in bulk.
 // - Prepare presentations for distribution where specific fonts are required.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
