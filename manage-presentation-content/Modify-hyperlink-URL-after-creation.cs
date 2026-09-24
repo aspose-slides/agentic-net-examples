@@ -18,6 +18,7 @@
 // - Build C# utilities that need to adjust links after initial creation.
 // - Automate PPTX generation where link destinations may change during runtime.
 // - Validate and test hyperlink behavior in presentation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides.Export;
