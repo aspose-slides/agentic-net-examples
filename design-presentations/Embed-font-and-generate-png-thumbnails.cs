@@ -18,6 +18,7 @@
 // - Generate PNG preview images for each slide in a presentation.
 // - Build console tools for PowerPoint presentation processing.
 // - Prepare presentations for distribution where font embedding is required.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
