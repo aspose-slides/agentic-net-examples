@@ -18,6 +18,7 @@
 // - Build .NET utilities that guarantee correct Japanese text rendering.
 // - Automate PPTX generation or conversion with custom font handling.
 // - Validate font fallback configurations before deployment.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
