@@ -17,6 +17,7 @@
 // - Build automated tools that generate PDF reports from PPTX files.
 // - Ensure consistent branding when exporting slides to PDF in .NET applications.
 // - Preserve embedded fonts and theme colors during batch conversion processes.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
