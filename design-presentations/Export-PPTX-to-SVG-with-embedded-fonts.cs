@@ -17,6 +17,7 @@
 // - Create automated tools that generate SVG assets from PPTX files.
 // - Ensure SVG outputs retain original typography without requiring external fonts.
 // - Integrate slide-to-SVG conversion into .NET applications or CI pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
