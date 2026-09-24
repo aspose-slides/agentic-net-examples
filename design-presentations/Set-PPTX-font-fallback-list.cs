@@ -20,6 +20,7 @@
 // - Automate font fallback configuration for batch processing of presentations.
 // - Integrate font fallback handling into custom PowerPoint generation tools.
 // - Validate and adjust font settings before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
