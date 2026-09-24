@@ -17,6 +17,7 @@
 // - Automate validation of presentation properties in batch processing scripts.
 // - Integrate title length checks into .NET applications that generate or modify PPTX files.
 // - Prevent errors or warnings from downstream systems that enforce title length limits.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
