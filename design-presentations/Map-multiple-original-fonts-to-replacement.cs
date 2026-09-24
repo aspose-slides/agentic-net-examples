@@ -17,6 +17,7 @@
 // - Build C# tools for batch processing of PowerPoint presentations.
 // - Integrate font substitution logic into .NET applications.
 // - Prepare presentations for environments with limited font availability.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
