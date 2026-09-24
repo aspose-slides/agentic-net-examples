@@ -20,6 +20,7 @@
 // - Integrate property‑checking logic into CI pipelines or document‑management
 //   systems.
 // - Create unchanged copies of source presentations while performing analysis.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
