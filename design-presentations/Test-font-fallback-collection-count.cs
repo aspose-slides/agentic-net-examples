@@ -16,6 +16,7 @@
 // - Build automated tests for font fallback configurations.
 // - Create utilities that manipulate font fallback settings in PPTX files.
 // - Ensure presentation compatibility across different language scripts.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
