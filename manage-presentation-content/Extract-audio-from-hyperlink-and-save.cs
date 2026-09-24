@@ -17,6 +17,7 @@
 // - Build tools for PowerPoint content analysis and media extraction.
 // - Integrate audio retrieval into .NET applications processing presentations.
 // - Validate and process presentation assets before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
