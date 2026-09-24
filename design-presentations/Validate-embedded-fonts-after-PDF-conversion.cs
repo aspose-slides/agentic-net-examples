@@ -17,6 +17,7 @@
 // - Build C# tools for PowerPoint presentation processing and PDF export.
 // - Ensure font compliance before publishing or distribution of PDFs.
 // - Integrate font embedding checks into .NET applications handling PPTX files.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
