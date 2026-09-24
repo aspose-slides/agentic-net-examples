@@ -18,6 +18,7 @@
 // - Implement audit trails for PowerPoint document properties.
 // - Restore or migrate properties across presentations.
 // - Automate property management in batch processing tools.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
