@@ -17,6 +17,7 @@
 // - Build .NET tools that enrich existing presentations with notes.
 // - Generate or modify PPTX files programmatically in batch processes.
 // - Validate and preview presentation content before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
