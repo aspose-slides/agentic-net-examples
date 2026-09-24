@@ -18,6 +18,7 @@
 // - Build C# tools that ensure consistent font rendering in PowerPoint presentations.
 // - Integrate font fallback logic into .NET applications handling PPTX files.
 // - Prepare presentations for environments where certain fonts may be missing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
