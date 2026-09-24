@@ -18,6 +18,7 @@
 // - Convert a slide to an image file.
 // - Save a presentation after applying font settings.
 // - Automate PowerPoint processing in .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
