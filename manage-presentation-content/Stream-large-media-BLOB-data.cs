@@ -17,6 +17,7 @@
 // - Process large media BLOBs in a memory‑efficient way.
 // - Build tools that need to archive or analyze presentation media.
 // - Automate PPTX workflows that involve media handling.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
