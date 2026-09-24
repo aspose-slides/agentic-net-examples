@@ -17,6 +17,7 @@
 // - Build C# utilities for bulk updating PowerPoint presentations.
 // - Integrate shape property modifications into .NET applications.
 // - Validate and enforce presentation standards before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
