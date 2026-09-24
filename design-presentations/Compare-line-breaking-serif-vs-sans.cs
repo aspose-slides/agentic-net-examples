@@ -17,6 +17,7 @@
 // - Automated generation of test presentations to evaluate typography.
 // - Integration of font‑impact analysis into .NET PowerPoint workflows.
 // - Validation of default font settings in presentation automation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
