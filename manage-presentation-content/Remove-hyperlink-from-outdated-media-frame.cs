@@ -18,6 +18,7 @@
 // - Build .NET tools that prepare PPTX files for publishing or archiving.
 // - Ensure compliance by stripping interactive links from media objects.
 // - Integrate hyperlink removal into automated PowerPoint workflow pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
