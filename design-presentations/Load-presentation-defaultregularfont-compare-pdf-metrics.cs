@@ -18,6 +18,7 @@
 // - Extract and compare text metrics between original PPTX and generated PDF.
 // - Automate PPTX processing workflows that require font substitution.
 // - Build .NET tools for validating presentation content before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

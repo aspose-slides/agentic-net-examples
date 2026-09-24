@@ -17,6 +17,7 @@
 // - Build automated tests or tools for font management in PowerPoint files.
 // - Integrate font embedding and removal logic into .NET applications.
 // - Ensure compliance of PPTX files with font licensing requirements.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

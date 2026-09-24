@@ -17,6 +17,7 @@
 // - Build automated tools for preparing presentations before distribution.
 // - Integrate background styling into .NET PowerPoint workflow pipelines.
 // - Validate and enforce visual consistency across multiple PPTX files.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

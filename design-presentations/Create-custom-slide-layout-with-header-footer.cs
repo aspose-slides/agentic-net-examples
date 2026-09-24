@@ -20,6 +20,7 @@
 //   layouts.
 // - Integrate custom slide designs into presentation generation workflows.
 // - Validate and test slide layout configurations before deployment.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

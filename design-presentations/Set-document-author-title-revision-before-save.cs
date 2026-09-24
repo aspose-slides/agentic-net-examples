@@ -16,6 +16,7 @@
 // - Build C# utilities for PowerPoint presentation metadata management.
 // - Integrate metadata updates into .NET applications handling PPTX files.
 // - Ensure consistent document properties across generated or modified presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

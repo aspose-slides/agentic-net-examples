@@ -18,6 +18,7 @@
 // - Build .NET tools that guarantee correct Cyrillic text rendering.
 // - Automate PPTX creation or modification with custom font fallback rules.
 // - Validate font fallback configurations before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

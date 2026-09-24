@@ -17,6 +17,7 @@
 // - Build C# utilities for updating slide content programmatically.
 // - Integrate text editing into .NET applications that generate or modify PPTX.
 // - Validate and transform presentations before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -16,6 +16,7 @@
 // - Automate font fallback configuration in batch PowerPoint processing.
 // - Build .NET tools that modify and re‑save presentations with custom font handling.
 // - Validate and render presentations with multilingual content.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

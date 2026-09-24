@@ -16,6 +16,7 @@
 // - Build .NET tools for consistent branding across PowerPoint presentations.
 // - Generate or modify PPTX files programmatically with Aspose.Slides.
 // - Validate and test presentation workflows before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

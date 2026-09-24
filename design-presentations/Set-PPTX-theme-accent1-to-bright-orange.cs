@@ -17,6 +17,7 @@
 // - Build C# tools for PowerPoint theme color customization.
 // - Generate or transform PPTX files with specific theme colors in .NET apps.
 // - Validate and standardize presentation theme colors before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

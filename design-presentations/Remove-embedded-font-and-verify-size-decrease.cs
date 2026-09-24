@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint file optimization.
 // - Validate that font removal impacts file size as expected.
 // - Integrate font management into .NET presentation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

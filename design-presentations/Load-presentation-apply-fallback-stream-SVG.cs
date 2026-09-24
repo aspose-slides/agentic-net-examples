@@ -17,6 +17,7 @@
 // - Generate SVG streams of slides for web or API delivery.
 // - Build .NET tools that modify and export PowerPoint content.
 // - Validate and transform PPTX files before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

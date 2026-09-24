@@ -16,6 +16,7 @@
 // - Build C# utilities for PowerPoint presentation analysis and validation.
 // - Integrate custom XML handling into .NET applications that process PPTX files.
 // - Verify and audit embedded XML content before publishing or further transformation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

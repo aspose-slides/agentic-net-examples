@@ -17,6 +17,7 @@
 // - Ensure Asian fonts are correctly applied during processing.
 // - Automate validation of presentation integrity in .NET applications.
 // - Build tools for PPTX workflow testing and automation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

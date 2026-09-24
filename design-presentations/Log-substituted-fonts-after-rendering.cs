@@ -18,6 +18,7 @@
 // - Build tools that validate font usage in PPTX files.
 // - Automate reporting of missing or substituted fonts in .NET applications.
 // - Ensure visual fidelity before publishing or converting presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

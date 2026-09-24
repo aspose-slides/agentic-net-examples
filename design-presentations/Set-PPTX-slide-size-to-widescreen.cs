@@ -17,6 +17,7 @@
 // - Apply a solid background color to slides programmatically.
 // - Generate PowerPoint files with predefined layout and styling.
 // - Integrate slide size and background customization into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;

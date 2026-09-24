@@ -15,6 +15,7 @@
 // - Automate slide image generation in .NET applications.
 // - Integrate slide export functionality into custom tools.
 // - Validate slide rendering before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

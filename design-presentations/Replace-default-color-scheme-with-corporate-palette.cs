@@ -18,6 +18,7 @@
 // - Build C# utilities for consistent branding across PowerPoint files.
 // - Generate or transform PPTX files programmatically in .NET applications.
 // - Validate and enforce corporate design standards before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

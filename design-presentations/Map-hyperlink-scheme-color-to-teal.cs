@@ -18,6 +18,7 @@
 // - Build C# tools for PowerPoint presentation processing with specific branding.
 // - Automate PPTX workflows that require consistent hyperlink styling.
 // - Integrate presentation color customization into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

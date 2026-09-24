@@ -16,6 +16,7 @@
 // - Ensure proper rendering of Arabic characters in PPTX files.
 // - Automate font fallback configuration in .NET PowerPoint workflows.
 // - Integrate presentation processing into C# applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

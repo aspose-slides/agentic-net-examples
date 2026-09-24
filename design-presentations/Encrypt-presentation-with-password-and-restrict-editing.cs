@@ -18,6 +18,7 @@
 // - Build C# tools for securing PPTX files in .NET applications.
 // - Generate or transform PPTX files with protection before publishing.
 // - Validate presentation security workflows in automated pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -18,6 +18,7 @@
 // - Build .NET tools for processing PowerPoint files in bulk.
 // - Generate slide images for web previews or documentation.
 // - Ensure consistent rendering when original fonts are unavailable.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

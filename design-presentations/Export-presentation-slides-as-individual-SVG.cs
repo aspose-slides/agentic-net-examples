@@ -16,6 +16,7 @@
 // - Automate batch processing of presentations to SVG format.
 // - Integrate slide‑to‑SVG conversion into .NET tools or services.
 // - Prepare assets for responsive design or further graphic manipulation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -18,6 +18,7 @@
 // - Build .NET utilities that enforce font substitution policies.
 // - Generate or modify PPTX files with custom font fallback settings.
 // - Validate multilingual presentations before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

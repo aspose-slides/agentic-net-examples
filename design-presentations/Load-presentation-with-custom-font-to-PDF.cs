@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint presentation processing with font control.
 // - Ensure consistent rendering of presentations when the original fonts are missing.
 // - Validate and test presentation workflows before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

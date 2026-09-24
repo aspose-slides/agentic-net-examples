@@ -21,6 +21,7 @@
 // - Integrate slide‑to‑image conversion into .NET applications for reporting
 //   or preview features.
 // - Preserve original presentation while extracting visual content.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

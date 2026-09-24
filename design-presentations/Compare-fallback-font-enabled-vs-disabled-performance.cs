@@ -18,6 +18,7 @@
 // - Evaluate the performance impact of custom font fallback rules.
 // - Automate generation of slide images for reporting or preview purposes.
 // - Integrate rendering performance tests into CI pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.Diagnostics;

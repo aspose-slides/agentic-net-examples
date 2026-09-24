@@ -15,6 +15,7 @@
 // - Ensure default font rendering when loading PPTX files.
 // - Prepare presentations for environments without specific font mappings.
 // - Automate PowerPoint file cleanup in .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

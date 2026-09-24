@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint presentation cleanup before distribution.
 // - Ensure presentations rely on default system fonts for consistent rendering.
 // - Integrate font fallback management into .NET-based document workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

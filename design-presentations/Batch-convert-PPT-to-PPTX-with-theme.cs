@@ -19,6 +19,7 @@
 // - Integrate theme application into .NET workflows for presentation
 //   preparation or publishing.
 // - Validate and transform PPT files before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

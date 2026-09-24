@@ -17,6 +17,7 @@
 // - Generate textual summaries of presentations for accessibility.
 // - Build command‑line tools that process PPTX files in batch.
 // - Validate and log presentation content before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

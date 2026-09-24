@@ -19,6 +19,7 @@
 // - Export the list of fonts used in a presentation to JSON.
 // - Build C# tools for PowerPoint font management and processing.
 // - Validate and troubleshoot font dependencies in PPTX files.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

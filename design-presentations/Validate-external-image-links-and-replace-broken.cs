@@ -19,6 +19,7 @@
 // - Automate replacement of broken images with a default placeholder.
 // - Build .NET tools for preparing presentations for publishing or sharing.
 // - Integrate image link validation into larger PowerPoint workflow pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

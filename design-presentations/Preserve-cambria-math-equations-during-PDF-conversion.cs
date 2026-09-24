@@ -17,6 +17,7 @@
 // - Build C# utilities for processing PowerPoint presentations with mathematical content.
 // - Generate PDF outputs from PPTX files while maintaining equation fidelity.
 // - Integrate reliable presentation-to-PDF workflows into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

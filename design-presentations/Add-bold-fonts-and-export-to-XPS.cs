@@ -16,6 +16,7 @@
 // - Convert PowerPoint presentations to XPS format.
 // - Build .NET tools for preparing presentations with proper font embedding.
 // - Automate font management and XPS conversion in CI pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

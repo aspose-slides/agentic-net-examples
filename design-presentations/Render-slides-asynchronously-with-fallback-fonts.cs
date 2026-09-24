@@ -18,6 +18,7 @@
 // - Build .NET tools that generate slide thumbnails or previews.
 // - Integrate slide rendering into CI pipelines for documentation validation.
 // - Create utilities that ensure consistent visual output despite missing fonts.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

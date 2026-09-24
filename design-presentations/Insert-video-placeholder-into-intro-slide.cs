@@ -18,6 +18,7 @@
 // - Build .NET tools for PowerPoint presentation generation or modification.
 // - Generate PPTX files with embedded video frames for e‑learning or marketing.
 // - Validate video playback settings in automated presentation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -18,6 +18,7 @@
 // - Build .NET tools for web‑friendly rendering of slide decks.
 // - Integrate slide conversion into server‑side or desktop applications.
 // - Validate and preview presentation content before publishing online.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

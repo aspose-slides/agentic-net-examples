@@ -18,6 +18,7 @@
 // - Export PowerPoint slides to SVG for web or vector graphics workflows.
 // - Automate PPTX processing and conversion in C# console applications.
 // - Integrate font fallback configuration into existing .NET presentation pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -18,6 +18,7 @@
 // - Generate or transform PPTX files with specific language settings in .NET
 //   applications.
 // - Validate language configuration before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

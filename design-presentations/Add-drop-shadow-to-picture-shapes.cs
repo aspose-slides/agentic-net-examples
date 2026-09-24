@@ -17,6 +17,7 @@
 // - Integrate picture styling into .NET PowerPoint processing pipelines.
 // - Prepare PPTX files with consistent visual effects before distribution.
 // - Validate and transform presentations in batch operations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

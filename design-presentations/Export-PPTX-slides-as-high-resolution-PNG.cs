@@ -18,6 +18,7 @@
 // - Build C# utilities for PowerPoint slide image extraction.
 // - Generate visual assets for web, documentation, or e‑learning platforms.
 // - Integrate slide rendering into .NET workflows or services.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

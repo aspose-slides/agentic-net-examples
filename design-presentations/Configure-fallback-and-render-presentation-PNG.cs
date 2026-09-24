@@ -16,6 +16,7 @@
 // - Generate PNG images from slides for thumbnails or previews.
 // - Automate PowerPoint processing workflows in .NET applications.
 // - Validate and transform PPTX files before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

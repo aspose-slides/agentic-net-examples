@@ -16,6 +16,7 @@
 // - Ensure proper rendering of characters when original fonts are unavailable.
 // - Build .NET tools for batch processing of PowerPoint files with font fallback.
 // - Validate presentation rendering workflows before deployment.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

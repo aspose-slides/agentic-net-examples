@@ -16,6 +16,7 @@
 // - Ensure compliance with licensing policies in generated presentations.
 // - Build .NET tools for batch processing of PowerPoint files.
 // - Integrate font substitution into CI/CD pipelines for document publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

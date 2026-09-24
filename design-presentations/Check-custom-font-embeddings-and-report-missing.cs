@@ -16,6 +16,7 @@
 // - Build validation tools for PowerPoint files in .NET environments.
 // - Ensure presentations meet embedding requirements before distribution.
 // - Integrate font‑embedding checks into automated CI/CD pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

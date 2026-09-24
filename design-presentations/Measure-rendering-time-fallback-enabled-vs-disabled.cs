@@ -18,6 +18,7 @@
 // - Benchmark Aspose.Slides rendering under different font handling settings.
 // - Automate generation of slide images for reporting or preview purposes.
 // - Validate that fallback fonts do not adversely affect rendering speed.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

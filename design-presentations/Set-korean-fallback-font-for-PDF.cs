@@ -21,6 +21,7 @@
 // - Integrate Korean font fallback handling into .NET applications that
 //   generate PDFs from PowerPoint files.
 // - Automate validation of PDF output for multilingual presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
