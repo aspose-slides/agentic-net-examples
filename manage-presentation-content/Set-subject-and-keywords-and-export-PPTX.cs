@@ -17,6 +17,7 @@
 // - Build C# utilities for creating or modifying PPTX presentations.
 // - Generate PPTX files with custom document properties in .NET applications.
 // - Integrate presentation metadata handling into larger automation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
