@@ -19,6 +19,7 @@
 // - Validate that presentations use expected fonts before publishing.
 // - Build tools that audit or transform PowerPoint files in .NET.
 // - Automate extraction of slide metadata for reporting or compliance.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
