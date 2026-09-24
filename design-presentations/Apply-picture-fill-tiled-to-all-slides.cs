@@ -17,6 +17,7 @@
 // - Generate or modify PPTX files with custom tiled backgrounds in .NET
 //   applications.
 // - Validate background fill settings before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
