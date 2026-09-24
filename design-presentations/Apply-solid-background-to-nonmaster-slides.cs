@@ -18,6 +18,7 @@
 // - Prepare presentations with consistent slide backgrounds in batch processes.
 // - Integrate background styling into .NET applications that generate PPTX files.
 // - Ensure slides have explicit backgrounds before publishing or further editing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
