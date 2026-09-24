@@ -17,6 +17,7 @@
 // - Build tools for PowerPoint presentation inspection in .NET.
 // - Integrate slide metadata extraction into CI pipelines or reporting systems.
 // - Validate slide structures before publishing or further processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
