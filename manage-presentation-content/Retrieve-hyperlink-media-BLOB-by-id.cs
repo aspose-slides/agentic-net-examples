@@ -17,6 +17,7 @@
 // - Build tools for analyzing or repurposing media assets in PPTX files.
 // - Integrate media extraction into .NET workflows or migration pipelines.
 // - Validate and archive presentation content before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
