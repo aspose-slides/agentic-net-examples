@@ -17,6 +17,7 @@
 // - Build .NET tools for batch processing of PowerPoint presentations.
 // - Generate image assets for web or print from slide decks.
 // - Validate slide rendering quality before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
