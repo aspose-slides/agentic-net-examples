@@ -17,6 +17,7 @@
 // - Apply font fallback to ensure emoji rendering across platforms.
 // - Export slides containing emojis to PNG for preview or publishing.
 // - Automate PPTX processing and image extraction in .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
