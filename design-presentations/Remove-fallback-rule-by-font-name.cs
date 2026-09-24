@@ -16,6 +16,7 @@
 // - Prepare presentations for environments where certain fonts are unavailable.
 // - Automate cleanup of font fallback configurations in batch processing.
 // - Integrate font management into .NET PowerPoint automation tools.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
