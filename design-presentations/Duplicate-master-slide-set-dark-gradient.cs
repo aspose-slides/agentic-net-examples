@@ -17,6 +17,7 @@
 // - Build .NET tools for enhancing PowerPoint master slide designs.
 // - Generate or modify PPTX files with specific visual themes in batch processes.
 // - Validate and preview master slide changes before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
