@@ -17,6 +17,7 @@
 // - Build command‑line tools for PowerPoint to PDF transformation in .NET.
 // - Ensure missing fonts are substituted to avoid rendering issues.
 // - Integrate presentation conversion into CI/CD pipelines or document workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
