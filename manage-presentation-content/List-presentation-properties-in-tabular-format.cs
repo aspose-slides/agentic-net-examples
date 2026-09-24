@@ -17,6 +17,7 @@
 // - Build tools that validate required document properties before publishing.
 // - Automate the collection of custom property values across multiple PPTX files.
 // - Integrate presentation property handling into .NET applications or CI pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
