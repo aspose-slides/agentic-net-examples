@@ -17,6 +17,7 @@
 // - Convert watermarked PowerPoint files to PDF format in .NET applications.
 // - Automate preprocessing of slide decks for compliance or branding.
 // - Integrate slide watermarking and PDF conversion into CI/CD pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
