@@ -16,6 +16,7 @@
 // - Ensure all fonts are embedded to guarantee visual fidelity across devices.
 // - Automate PDF/A generation in batch processing or CI pipelines.
 // - Integrate PDF/A export functionality into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
