@@ -17,6 +17,7 @@
 // - Estimate audio length and validate against slide timing.
 // - Automate compliance checks for presentation audio and transitions.
 // - Build .NET tools for processing and validating PowerPoint content.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
