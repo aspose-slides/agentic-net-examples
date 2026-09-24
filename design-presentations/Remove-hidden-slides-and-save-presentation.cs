@@ -18,6 +18,7 @@
 //   automation solutions.
 // - Validate and preprocess presentations to ensure only visible slides are
 //   included in final deliverables.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
