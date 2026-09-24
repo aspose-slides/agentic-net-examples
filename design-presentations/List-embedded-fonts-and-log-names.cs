@@ -16,6 +16,7 @@
 // - Generate reports of embedded font usage.
 // - Integrate font checks into CI/CD pipelines for PowerPoint assets.
 // - Build tools that process or transform PPTX files while preserving font data.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
