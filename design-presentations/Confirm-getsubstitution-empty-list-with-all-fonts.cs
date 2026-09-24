@@ -16,6 +16,7 @@
 // - Automate validation of font availability in PowerPoint files.
 // - Integrate font substitution checks into .NET presentation workflows.
 // - Ensure consistent rendering of slides across environments.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
