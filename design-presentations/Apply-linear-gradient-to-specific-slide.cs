@@ -17,6 +17,7 @@
 // - Build C# tools for PowerPoint presentation styling.
 // - Generate or transform PPTX files with custom slide backgrounds in .NET.
 // - Validate slide design workflows before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
