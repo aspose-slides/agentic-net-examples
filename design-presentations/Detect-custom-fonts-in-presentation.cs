@@ -17,6 +17,7 @@
 // - Build C# utilities that log missing or embedded fonts for compliance checks.
 // - Integrate font verification into .NET PowerPoint processing pipelines.
 // - Validate presentation assets before publishing or distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
