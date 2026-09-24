@@ -18,6 +18,7 @@
 // - Build C# tools for PowerPoint presentation processing with specific view scaling.
 // - Generate or transform PPTX files while controlling slide and notes view scales.
 // - Validate presentation view settings before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
