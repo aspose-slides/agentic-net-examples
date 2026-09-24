@@ -17,6 +17,7 @@
 // - Build diagnostic tools that track read/write times for presentation metadata.
 // - Optimize automation workflows that modify PPTX metadata.
 // - Validate and benchmark Aspose.Slides property handling in .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
