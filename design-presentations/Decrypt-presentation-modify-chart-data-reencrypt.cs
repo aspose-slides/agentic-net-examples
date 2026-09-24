@@ -17,6 +17,7 @@
 // - Automate chart data updates in secured presentations.
 // - Build .NET tools for secure PowerPoint workflow automation.
 // - Validate and transform encrypted PPTX files in enterprise environments.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
