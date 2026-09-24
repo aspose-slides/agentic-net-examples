@@ -17,6 +17,7 @@
 // - Automate validation of hyperlink sound resources in PPTX files.
 // - Build .NET tools for auditing or processing PowerPoint presentations.
 // - Integrate checksum calculation into PowerPoint workflow automation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
