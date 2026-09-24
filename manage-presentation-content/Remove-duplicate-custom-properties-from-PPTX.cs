@@ -19,6 +19,7 @@
 // - Build C# tools for cleaning up PowerPoint presentation metadata.
 // - Integrate presentation metadata validation into .NET applications.
 // - Prepare PPTX files for publishing by ensuring unique custom properties.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
