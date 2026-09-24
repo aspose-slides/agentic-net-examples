@@ -18,6 +18,7 @@
 // - Build utilities that migrate or duplicate PPTX files with their custom properties.
 // - Integrate slide cloning and property copying into document management workflows.
 // - Validate and test presentation transformations in automated pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
