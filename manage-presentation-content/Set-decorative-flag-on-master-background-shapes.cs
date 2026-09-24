@@ -17,6 +17,7 @@
 // - Build tools that prepare PPTX files for compliance with accessibility standards.
 // - Integrate decorative flag handling into .NET applications that process presentations.
 // - Validate or modify master slide content programmatically before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
