@@ -17,6 +17,7 @@
 // - Convert PowerPoint presentations to PDF after adjusting font handling.
 // - Build .NET utilities for batch processing of presentations with custom fonts.
 // - Ensure correct font rendering in exported PDFs when original fonts are missing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
