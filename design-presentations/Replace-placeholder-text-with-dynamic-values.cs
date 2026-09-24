@@ -17,6 +17,7 @@
 // - Build .NET utilities that modify slide content before distribution.
 // - Integrate dynamic text replacement into reporting or marketing workflows.
 // - Validate and test slide text transformations in CI pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
