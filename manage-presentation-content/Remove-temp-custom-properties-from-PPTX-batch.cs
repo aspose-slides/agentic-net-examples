@@ -17,6 +17,7 @@
 // - Prepare presentations for publishing or distribution.
 // - Integrate property cleanup into automated .NET build or CI pipelines.
 // - Ensure compliance with corporate naming conventions for custom properties.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
