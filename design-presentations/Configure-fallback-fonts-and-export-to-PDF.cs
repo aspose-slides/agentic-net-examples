@@ -17,6 +17,7 @@
 // - Export PowerPoint files to PDF while preserving text layout.
 // - Build automation tools for batch conversion of PPTX to PDF.
 // - Ensure consistent font rendering across different environments.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
