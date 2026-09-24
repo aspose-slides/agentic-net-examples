@@ -18,6 +18,7 @@
 // - Generate slide images after applying custom font substitution.
 // - Automate presentation processing pipelines that require specific font handling.
 // - Validate that fallback fonts are correctly applied for unsupported characters.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
