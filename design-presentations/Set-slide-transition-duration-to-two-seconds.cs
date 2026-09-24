@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint presentation customization.
 // - Generate or modify PPTX files programmatically in .NET.
 // - Ensure consistent slide transitions before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
