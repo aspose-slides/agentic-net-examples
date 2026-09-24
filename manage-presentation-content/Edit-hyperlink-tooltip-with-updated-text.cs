@@ -16,6 +16,7 @@
 // - Build .NET utilities for refining PPTX content before distribution.
 // - Integrate tooltip modifications into larger PowerPoint processing pipelines.
 // - Ensure accessibility and clarity of hyperlink descriptions in slides.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
