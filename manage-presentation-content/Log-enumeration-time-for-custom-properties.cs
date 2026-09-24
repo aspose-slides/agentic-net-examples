@@ -17,6 +17,7 @@
 // - Create diagnostic tools that report document property details and access time.
 // - Integrate property inspection into automated PowerPoint processing pipelines.
 // - Validate and log custom metadata before publishing or further transformation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.Diagnostics;
