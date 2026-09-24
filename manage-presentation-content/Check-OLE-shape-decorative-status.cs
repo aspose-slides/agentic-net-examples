@@ -16,6 +16,7 @@
 // - Build .NET tools that need to inspect or modify OLE shape properties.
 // - Automate validation of PowerPoint files before publishing.
 // - Integrate OLE shape analysis into larger presentation processing workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
