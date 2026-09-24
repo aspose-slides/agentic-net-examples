@@ -17,6 +17,7 @@
 // - Automate batch image extraction from PowerPoint presentations.
 // - Integrate slide-to-image conversion into .NET applications.
 // - Prepare slide images for further processing or publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
