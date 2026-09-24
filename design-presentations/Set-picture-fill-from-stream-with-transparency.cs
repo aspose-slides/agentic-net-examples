@@ -17,6 +17,7 @@
 // - Build .NET tools for PowerPoint presentation processing that require dynamic image fills.
 // - Generate or transform PPTX files with picture backgrounds in server-side applications.
 // - Validate presentation workflows involving image streams and visual effects.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
