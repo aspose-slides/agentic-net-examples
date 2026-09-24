@@ -17,6 +17,7 @@
 // - Build .NET utilities that programmatically style hyperlink text.
 // - Automate creation of PPTX files with branded hyperlink colors.
 // - Validate hyperlink formatting in presentation processing pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.Drawing;
