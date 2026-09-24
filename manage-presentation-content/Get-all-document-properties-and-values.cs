@@ -17,6 +17,7 @@
 // - Build tools that validate or audit PowerPoint files in .NET applications.
 // - Integrate property retrieval into larger PPTX processing workflows.
 // - Generate documentation or logs of presentation attributes before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
