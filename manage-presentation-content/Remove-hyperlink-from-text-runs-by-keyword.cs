@@ -17,6 +17,7 @@
 // - Build .NET utilities for sanitizing PowerPoint files before distribution.
 // - Integrate hyperlink removal into larger presentation‑processing pipelines.
 // - Ensure compliance by removing links from specific content in PPTX files.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
