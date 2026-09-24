@@ -22,6 +22,7 @@
 //   embedded or external fonts.
 // - Generate or transform PPTX files in .NET applications with custom typography.
 // - Validate presentation workflows that depend on specific font resources.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
