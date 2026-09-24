@@ -17,6 +17,7 @@
 // - Export slides as SVG files for web or documentation purposes.
 // - Automate PPTX processing and SVG generation in .NET tools.
 // - Validate multilingual presentation rendering before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
