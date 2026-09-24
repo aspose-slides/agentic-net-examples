@@ -17,6 +17,7 @@
 // - Integrate slide title validation into CI/CD pipelines for presentation assets.
 // - Build command‑line tools that audit PPTX files for required placeholders.
 // - Ensure consistency of slide layouts in automated PowerPoint generation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
