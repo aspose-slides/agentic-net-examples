@@ -17,6 +17,7 @@
 // - Protect presentations from accidental edits in automated pipelines.
 // - Build .NET tools that enforce read‑only settings before distribution.
 // - Integrate presentation protection into larger document processing systems.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
