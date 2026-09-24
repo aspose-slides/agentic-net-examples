@@ -18,6 +18,7 @@
 // - Build tools that enforce corporate branding fonts across presentations.
 // - Automate batch processing of PowerPoint files to apply a consistent font.
 // - Validate and modify presentation styles before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
