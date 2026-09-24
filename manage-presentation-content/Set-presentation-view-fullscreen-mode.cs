@@ -16,6 +16,7 @@
 // - Build .NET tools that modify presentation display settings.
 // - Automate PPTX generation with predefined slide show behavior.
 // - Ensure consistent presentation experience across devices.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
