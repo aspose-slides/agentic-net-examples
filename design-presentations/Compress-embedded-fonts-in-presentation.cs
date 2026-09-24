@@ -17,6 +17,7 @@
 // - Integrate font compression into batch processing tools.
 // - Prepare PPTX files for distribution with smaller payloads.
 // - Automate PowerPoint optimization in CI/CD pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
