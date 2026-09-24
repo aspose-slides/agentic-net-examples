@@ -20,6 +20,7 @@
 // - Add SmartArt diagrams programmatically to PowerPoint presentations.
 // - Build C# tools for PowerPoint presentation processing and image export.
 // - Validate and transform PPTX files in .NET applications before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
