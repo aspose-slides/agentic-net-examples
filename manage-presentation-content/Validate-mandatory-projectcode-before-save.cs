@@ -18,6 +18,7 @@
 // - Build C# tools for PowerPoint presentation metadata enforcement.
 // - Prevent publishing of presentations missing required information.
 // - Integrate validation steps into .NET presentation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
