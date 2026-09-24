@@ -16,6 +16,7 @@
 // - Build C# tools for PowerPoint presentation processing with in‑memory fonts.
 // - Validate font availability before rendering or converting presentations.
 // - Integrate custom font handling into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
