@@ -17,6 +17,7 @@
 // - Verify which font Aspose.Slides selects for specific text runs.
 // - Detect and log font substitutions performed during rendering.
 // - Automate PPTX processing and save results after font handling.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
