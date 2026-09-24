@@ -17,6 +17,7 @@
 // - Build .NET tools that need to process PPTX files with specific font resources.
 // - Automate font handling for PowerPoint automation scenarios.
 // - Validate and transform presentations while ensuring correct font rendering.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
