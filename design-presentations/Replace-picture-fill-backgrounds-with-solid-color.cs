@@ -18,6 +18,7 @@
 // - Ensure consistent background styling across presentations.
 // - Build C# tools for PowerPoint presentation cleanup or rebranding.
 // - Integrate background normalization into .NET applications handling PPTX files.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
