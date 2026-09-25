@@ -18,6 +18,7 @@
 // - Build command‑line tools for updating media assets in PPTX files.
 // - Integrate audio update functionality into .NET applications.
 // - Validate and test presentation media workflows before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
