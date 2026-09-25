@@ -17,6 +17,7 @@
 // - Build C# utilities for media handling in presentations.
 // - Convert slide‑specific audio to MP3 for further processing or distribution.
 // - Validate and audit audio content within PPTX files.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
