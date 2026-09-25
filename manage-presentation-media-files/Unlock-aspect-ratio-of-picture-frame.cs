@@ -18,6 +18,7 @@
 // - Build tools that modify slide content before publishing.
 // - Automate batch processing of presentations to adjust image dimensions.
 // - Validate and prepare PPTX files for downstream workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
