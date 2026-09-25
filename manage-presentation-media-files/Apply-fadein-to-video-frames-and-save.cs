@@ -1,90 +1,70 @@
 // -----------------------------------------------------------------------------
-// Example: Apply fadein to video frames and save using C#
-//
+// Example: Apply Fade‑In Animation to Video Frame in PowerPoint using C#
+// 
 // Description:
-// Demonstrates how to apply fade‑in to video frames and save using C# and 
-// Aspose.Slides for .NET. The example shows the required 
-// presentation‑processing steps for PowerPoint files and produces the 
-// requested output in a standalone console application. Developers can use 
-// this pattern to automate PPTX workflows, validate results, or integrate 
-// presentation logic into .NET applications.
-//
+// This console application demonstrates how to insert a video frame into a
+// PPTX file, configure its playback settings, apply a fade‑in animation effect,
+// and save the modified presentation. It uses Aspose.Slides for .NET to
+// manipulate PowerPoint files programmatically.
+// 
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, Fadein, Video, Frames, 
-// Presentation Processing, Office Automation
-//
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, video frame, fade‑in animation, automation
+// 
 // Use Cases:
-// - Automate apply fade‑in to video frames and save.
-// - Build C# tools for PowerPoint presentation processing.
-// - Generate or transform PPTX files in .NET applications.
-// - Validate presentation workflows before publishing or integration.
+// - Automate adding instructional videos with entrance animations to slide decks.
+// - Generate presentations with consistent video playback settings for e‑learning.
+// - Integrate video‑enhanced slides into a CI/CD pipeline for report generation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-namespace FadeInVideoFrames
+namespace AsposeSlidesVideoFadeIn
 {
     class Program
     {
         static void Main(string[] args)
         {
-            string inputPath = "input.pptx";
-            string outputPath = "output.pptx";
+            // Input video file path
+            string videoPath = "sample_video.mp4";
+            // Output presentation path
+            string outputPath = "VideoFadeInPresentation.pptx";
 
-            if (!File.Exists(inputPath))
+            // Verify input video exists
+            if (!File.Exists(videoPath))
             {
-                Console.WriteLine("Input file does not exist.");
+                Console.WriteLine("Error: Video file not found at " + videoPath);
                 return;
-            }
-
-            Presentation presentation = null;
-            try
-            {
-                presentation = new Presentation(inputPath);
-            }
-            catch (Exception ex)
-            {
-                // Handle unsupported format or loading errors
-                Console.WriteLine("Failed to load presentation: " + ex.Message);
-                // format not supported
-                return;
-            }
-
-            // Iterate through all slides and shapes
-            for (int slideIndex = 0; slideIndex < presentation.Slides.Count; slideIndex++)
-            {
-                ISlide slide = presentation.Slides[slideIndex];
-                for (int shapeIndex = 0; shapeIndex < slide.Shapes.Count; shapeIndex++)
-                {
-                    IShape shape = slide.Shapes[shapeIndex];
-
-                    // Apply fade‑in to video frames
-                    IVideoFrame videoFrame = shape as IVideoFrame;
-                    if (videoFrame != null)
-                    {
-                        videoFrame.FadeInDuration = 200f; // 200 ms fade‑in
-                    }
-
-                    // If needed, other video properties can be set here.
-                }
             }
 
             try
             {
-                presentation.Save(outputPath, SaveFormat.Pptx);
+                // Create a new presentation
+                Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+
+                // Access the first slide
+                Aspose.Slides.ISlide slide = presentation.Slides[0];
+
+                // Add video frame to the slide
+                Aspose.Slides.IVideoFrame videoFrame = slide.Shapes.AddVideoFrame(50, 150, 300, 150, videoPath);
+                videoFrame.PlayMode = Aspose.Slides.VideoPlayModePreset.Auto;
+                videoFrame.Volume = Aspose.Slides.AudioVolumeMode.Loud;
+
+                // Apply fade‑in animation effect to the video frame
+                slide.Timeline.MainSequence.AddEffect(
+                    videoFrame,
+                    Aspose.Slides.Animation.EffectType.Fade,
+                    Aspose.Slides.Animation.EffectSubtype.None,
+                    Aspose.Slides.Animation.EffectTriggerType.AfterPrevious);
+
+                // Save the presentation
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                Console.WriteLine("Presentation saved successfully to " + outputPath);
+                presentation.Dispose();
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Failed to save presentation: " + ex.Message);
-            }
-            finally
-            {
-                if (presentation != null)
-                {
-                    presentation.Dispose();
-                }
+                Console.WriteLine("An error occurred: " + ex.Message);
             }
         }
     }
