@@ -17,6 +17,7 @@
 //   artwork.
 // - Integrate SVG handling and rotation into presentation workflows.
 // - Validate SVG rendering and transformation before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
