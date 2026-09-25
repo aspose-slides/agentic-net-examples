@@ -17,6 +17,7 @@
 // - Build C# utilities for extracting and reusing vector graphics from presentations.
 // - Automate batch processing of PowerPoint files to create web‑ready SVG assets.
 // - Validate and transform presentation media for integration into web applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
