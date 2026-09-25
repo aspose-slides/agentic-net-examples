@@ -17,6 +17,7 @@
 // - Build C# utilities for interactive media control in slides.
 // - Generate or modify PPTX files with audio playback controls.
 // - Validate audio interaction workflows before deployment.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
