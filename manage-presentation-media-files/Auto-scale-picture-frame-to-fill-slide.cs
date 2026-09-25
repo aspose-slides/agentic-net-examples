@@ -17,6 +17,7 @@
 // - Build .NET utilities for batch processing of PowerPoint files.
 // - Ensure consistent visual layout when inserting media into slides.
 // - Integrate image scaling logic into reporting or content generation tools.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
