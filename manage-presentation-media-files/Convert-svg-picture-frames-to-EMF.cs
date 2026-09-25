@@ -18,6 +18,7 @@
 // - Build C# utilities that normalize image formats within PowerPoint files.
 // - Integrate SVG-to-EMF conversion into larger .NET presentation workflows.
 // - Ensure compatibility of presentation assets with tools that require EMF.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
