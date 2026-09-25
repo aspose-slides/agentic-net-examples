@@ -17,6 +17,7 @@
 // - Automatically bring larger images to the front in generated presentations.
 // - Build tools that clean up slide layouts before publishing.
 // - Integrate overlap detection into .NET PowerPoint automation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
