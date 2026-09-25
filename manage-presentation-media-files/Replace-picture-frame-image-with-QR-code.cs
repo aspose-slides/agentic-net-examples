@@ -18,6 +18,7 @@
 // - Build C# utilities for batch updating PPTX files.
 // - Integrate QR code insertion into reporting or marketing workflows.
 // - Validate and test presentation modifications before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
