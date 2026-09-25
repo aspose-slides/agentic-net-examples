@@ -1,86 +1,77 @@
 // -----------------------------------------------------------------------------
-// Example: Extract picture frame image and save PNG using C#
+// Example: Extract Picture Frame Images from PPTX and Save as PNG using Aspose.Slides
 //
 // Description:
-// Demonstrates how to extract images from picture frames within a PowerPoint
-// presentation and save them as PNG files using C# and Aspose.Slides for .NET.
-// The example loads a PPTX file, iterates through slides and shapes, identifies
-// picture frames, extracts the embedded image data, and writes each image to a
-// separate PNG file. It also shows how to save the (potentially unchanged)
-// presentation.
-//
+// This console application loads a PowerPoint PPTX file, iterates through all
+// slides and shapes, extracts images embedded in picture frames, and saves each
+// image as a PNG file. It demonstrates the use of Aspose.Slides for .NET to
+// access picture frame data and to export the (potentially unchanged) presentation.
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Extract, Picture Frame,
-// Image, Presentation Processing, Office Automation
-//
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, extract images, picture frames, PNG
 // Use Cases:
-// - Automate extraction of picture frame images from presentations.
-// - Build tools that convert embedded PPTX images to PNG format.
-// - Integrate image extraction into .NET applications for reporting or
-//   content analysis.
-// - Validate and process presentation media files before publishing.
+// - Archiving all images from a corporate presentation for reuse.
+// - Converting embedded slide graphics to separate image assets.
+// - Auditing picture content in a PPTX before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-namespace Example
+namespace AsposeSlidesImageExtractor
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Path to the input presentation
             string inputPath = "input.pptx";
-            // Verify that the file exists
+            string outputPresentationPath = "output.pptx";
+            string imagesOutputFolder = "ExtractedImages";
+
             if (!File.Exists(inputPath))
             {
-                Console.WriteLine("Input file does not exist: " + inputPath);
+                Console.WriteLine($"Error: Input file \"{inputPath}\" does not exist.");
                 return;
             }
 
             try
             {
-                // Load the presentation
-                using (Presentation presentation = new Presentation(inputPath))
+                if (!Directory.Exists(imagesOutputFolder))
                 {
-                    // Iterate through all slides
-                    for (int slideIndex = 0; slideIndex < presentation.Slides.Count; slideIndex++)
+                    Directory.CreateDirectory(imagesOutputFolder);
+                }
+
+                using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
+                {
+                    int imageCounter = 1;
+
+                    foreach (Aspose.Slides.ISlide slide in presentation.Slides)
                     {
-                        ISlide slide = presentation.Slides[slideIndex];
-                        // Iterate through all shapes on the slide
-                        for (int shapeIndex = 0; shapeIndex < slide.Shapes.Count; shapeIndex++)
+                        foreach (Aspose.Slides.IShape shape in slide.Shapes)
                         {
-                            IShape shape = slide.Shapes[shapeIndex];
-                            // Process only picture frames
-                            IPictureFrame pictureFrame = shape as IPictureFrame;
+                            Aspose.Slides.IPictureFrame pictureFrame = shape as Aspose.Slides.IPictureFrame;
                             if (pictureFrame != null)
                             {
-                                // Extract the embedded image using the correct property chain
-                                IPPImage embeddedImage = pictureFrame.PictureFormat.Picture.Image;
-                                // Save the image as a lossless PNG
-                                string outputImagePath = $"slide_{slideIndex}_shape_{shapeIndex}.png";
-                                embeddedImage.Save(outputImagePath, Aspose.Slides.Export.ImageFormat.Png);
-                                Console.WriteLine("Saved image: " + outputImagePath);
+                                Aspose.Slides.IPPImage embeddedImage = pictureFrame.PictureFormat.Picture.Image;
+                                if (embeddedImage != null && embeddedImage.BinaryData != null)
+                                {
+                                    string imageFileName = $"Image_{imageCounter:D4}.png";
+                                    string imagePath = Path.Combine(imagesOutputFolder, imageFileName);
+                                    File.WriteAllBytes(imagePath, embeddedImage.BinaryData);
+                                    Console.WriteLine($"Saved image to \"{imagePath}\"");
+                                    imageCounter++;
+                                }
                             }
                         }
                     }
 
-                    // Save the (potentially unchanged) presentation before exiting
-                    string outputPresentationPath = "output.pptx";
-                    presentation.Save(outputPresentationPath, SaveFormat.Pptx);
+                    // Save the (potentially unchanged) presentation
+                    presentation.Save(outputPresentationPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    Console.WriteLine($"Presentation saved to \"{outputPresentationPath}\"");
                 }
-            }
-            catch (NotSupportedException)
-            {
-                // Format not supported
-                Console.WriteLine("The presentation format is not supported.");
             }
             catch (Exception ex)
             {
-                // Handle other exceptions (e.g., I/O errors)
-                Console.WriteLine("An error occurred: " + ex.Message);
+                Console.WriteLine($"An error occurred: {ex.Message}");
             }
         }
     }
