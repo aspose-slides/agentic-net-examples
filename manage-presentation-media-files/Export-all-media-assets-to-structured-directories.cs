@@ -12,6 +12,7 @@
 // - Build tools that organize presentation assets for reuse or analysis.
 // - Integrate media export functionality into .NET applications.
 // - Prepare media assets for web publishing or content management systems.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
