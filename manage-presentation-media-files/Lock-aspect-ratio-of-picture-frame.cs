@@ -18,6 +18,7 @@
 // - Build C# tools for consistent image handling in PowerPoint files.
 // - Generate or transform PPTX files while preserving image proportions.
 // - Validate presentation layouts before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
