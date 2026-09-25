@@ -17,6 +17,7 @@
 // - Build automation tools that protect PPTX files in batch processes.
 // - Integrate presentation encryption into .NET applications.
 // - Ensure media assets within a presentation are encrypted along with the file.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
