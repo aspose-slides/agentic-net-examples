@@ -18,6 +18,7 @@
 // - Detect and handle unsupported media formats during presentation generation.
 // - Automate creation of presentations that include media placeholders.
 // - Validate media insertion workflows before deployment.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
