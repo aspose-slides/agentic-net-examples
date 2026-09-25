@@ -18,6 +18,7 @@
 // - Integrate audio processing into .NET workflows that handle Office documents.
 // - Validate and inspect presentation media before publishing or further
 //   transformation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
