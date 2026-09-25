@@ -17,6 +17,7 @@
 // - Build .NET tools for enhancing slide visuals programmatically.
 // - Generate or transform PPTX files with custom visual effects.
 // - Validate presentation styling before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
