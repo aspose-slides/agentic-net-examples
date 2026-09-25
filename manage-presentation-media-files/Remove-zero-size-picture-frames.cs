@@ -17,6 +17,7 @@
 // - Prepare PPTX files for publishing or conversion.
 // - Automate validation of slide content in .NET applications.
 // - Integrate presentation sanitization into CI pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
