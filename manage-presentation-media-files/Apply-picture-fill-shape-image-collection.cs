@@ -17,6 +17,7 @@
 // - Build C# utilities for customizing slide graphics programmatically.
 // - Generate or modify PPTX files with tiled image backgrounds in .NET apps.
 // - Validate picture fill settings before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
