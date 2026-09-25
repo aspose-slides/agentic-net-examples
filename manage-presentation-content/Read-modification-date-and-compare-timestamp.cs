@@ -18,6 +18,7 @@
 // - Build validation tools for PowerPoint files in .NET applications.
 // - Automate consistency checks during document management workflows.
 // - Integrate presentation metadata verification into CI/CD pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -18,6 +18,7 @@
 // - Build C# tools for PowerPoint presentation processing with accessibility in mind.
 // - Generate or transform PPTX files in .NET applications while managing accessibility properties.
 // - Validate presentation accessibility before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -17,6 +17,7 @@
 // - Automate hyperlink insertion across multiple slides and shapes.
 // - Build .NET tools for bulk presentation content updates.
 // - Prepare presentations for distribution with consistent link styling.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

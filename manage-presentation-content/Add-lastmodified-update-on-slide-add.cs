@@ -22,6 +22,7 @@
 //   workflows.
 // - Ensure compliance with document management policies that require
 //   correct LastSavedTime values.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

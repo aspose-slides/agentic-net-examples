@@ -15,6 +15,7 @@
 // - Automate batch resizing of PPTX files in .NET applications.
 // - Integrate slide size adjustments into custom PowerPoint processing tools.
 // - Ensure content fits when changing slide dimensions programmatically.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

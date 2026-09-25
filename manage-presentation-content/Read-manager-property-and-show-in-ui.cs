@@ -17,6 +17,7 @@
 // - Provide a simple UI for editing document properties.
 // - Automate updating presentation metadata in .NET tools.
 // - Validate and persist changes to PowerPoint files programmatically.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

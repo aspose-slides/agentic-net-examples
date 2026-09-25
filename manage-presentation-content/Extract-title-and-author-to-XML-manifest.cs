@@ -18,6 +18,7 @@
 // - Build tools that validate or audit PowerPoint files before publishing.
 // - Integrate metadata extraction into larger document management systems.
 // - Automate reporting of presentation properties in .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

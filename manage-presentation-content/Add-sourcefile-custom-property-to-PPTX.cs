@@ -17,6 +17,7 @@
 // - Automate batch processing of PowerPoint files to embed origin information.
 // - Build .NET tools for managing and tracking presentation assets.
 // - Ensure PPTX files contain custom properties for downstream workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

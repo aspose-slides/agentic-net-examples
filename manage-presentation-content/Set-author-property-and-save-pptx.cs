@@ -17,6 +17,7 @@
 // - Automate metadata management for PowerPoint presentations.
 // - Integrate author property updates into .NET build or publishing pipelines.
 // - Prepare presentations with correct attribution before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

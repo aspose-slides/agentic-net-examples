@@ -16,6 +16,7 @@
 // - Build C# utilities for PowerPoint view configuration.
 // - Generate or modify PPTX files with specific zoom settings in .NET applications.
 // - Validate presentation view settings before distribution or further processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

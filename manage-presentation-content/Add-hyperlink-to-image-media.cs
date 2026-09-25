@@ -17,6 +17,7 @@
 // - Build tools that generate linked visual content in presentations.
 // - Automate creation of marketing or documentation decks with embedded URLs.
 // - Validate image hyperlink functionality in PPTX files.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

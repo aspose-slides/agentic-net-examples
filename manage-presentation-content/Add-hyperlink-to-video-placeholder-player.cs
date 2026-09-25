@@ -21,6 +21,7 @@
 // - Automate the creation of slide decks that reference online video resources.
 // - Validate and test video hyperlink functionality in PowerPoint automation
 //   workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

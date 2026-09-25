@@ -17,6 +17,7 @@
 // - Build .NET utilities for PowerPoint content generation and editing.
 // - Automate PPTX creation with custom navigation cues.
 // - Validate and test hyperlink metadata in presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;

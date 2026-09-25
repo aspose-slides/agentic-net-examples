@@ -17,6 +17,7 @@
 // - Prepare presentations for downstream processing that expects date values.
 // - Automate validation and correction of metadata in PPTX files.
 // - Integrate custom property handling into .NET PowerPoint workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

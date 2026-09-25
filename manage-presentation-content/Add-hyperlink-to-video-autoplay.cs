@@ -18,6 +18,7 @@
 // - Build C# tools for enriching PowerPoint slides with interactive media.
 // - Generate or modify PPTX files programmatically in .NET applications.
 // - Validate video and hyperlink integration before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

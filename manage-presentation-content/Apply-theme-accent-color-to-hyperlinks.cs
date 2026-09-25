@@ -17,6 +17,7 @@
 // - Build tools that standardize hyperlink appearance in generated PPTX files.
 // - Update existing presentations to match a new corporate theme automatically.
 // - Validate hyperlink styling as part of a CI pipeline for presentation assets.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

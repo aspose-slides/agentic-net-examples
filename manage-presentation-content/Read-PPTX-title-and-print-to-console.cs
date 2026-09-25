@@ -17,6 +17,7 @@
 // - Build tools that validate or catalog PowerPoint presentations based on properties.
 // - Automate metadata extraction in batch processing pipelines.
 // - Integrate presentation metadata handling into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

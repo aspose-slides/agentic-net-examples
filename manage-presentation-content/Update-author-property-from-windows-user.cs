@@ -17,6 +17,7 @@
 // - Integrate author metadata updates into batch processing scripts.
 // - Ensure compliance with document management policies by standardizing author info.
 // - Build .NET tools that modify PowerPoint metadata before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

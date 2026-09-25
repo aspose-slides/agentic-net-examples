@@ -17,6 +17,7 @@
 // - Build C# tools for checking accessibility‑related properties in PowerPoint.
 // - Integrate shape property validation into .NET presentation workflows.
 // - Ensure presentations meet decorative‑shape requirements before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

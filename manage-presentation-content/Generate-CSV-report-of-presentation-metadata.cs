@@ -17,6 +17,7 @@
 // - Build .NET tools for batch processing and validation of PowerPoint files.
 // - Integrate presentation metadata extraction into CI/CD pipelines.
 // - Preserve original presentation formats while performing analysis.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

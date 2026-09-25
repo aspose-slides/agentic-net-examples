@@ -17,6 +17,7 @@
 // - Add clickable hyperlinks to audio frames for external resources.
 // - Build .NET tools for presentation generation and manipulation.
 // - Validate audio playback settings programmatically before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

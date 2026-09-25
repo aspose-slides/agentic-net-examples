@@ -17,6 +17,7 @@
 // - Build .NET tools that need to track or report presentation security state.
 // - Integrate encryption status checks into larger PPTX workflow pipelines.
 // - Validate presentation properties before distribution or publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

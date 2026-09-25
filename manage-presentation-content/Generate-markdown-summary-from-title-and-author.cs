@@ -17,6 +17,7 @@
 // - Build tools that extract metadata from PPTX files for reporting.
 // - Integrate presentation metadata extraction into .NET applications.
 // - Validate and archive presentation information before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

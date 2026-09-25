@@ -16,6 +16,7 @@
 // - Build C# tools for PowerPoint presentation metadata handling.
 // - Generate or transform PPTX files with consistent footers in .NET applications.
 // - Validate and enforce presentation metadata before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

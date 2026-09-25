@@ -18,6 +18,7 @@
 // - Automate backup and restoration of PowerPoint document properties.
 // - Build .NET tools that modify or validate PPTX metadata.
 // - Integrate document property handling into larger Office automation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

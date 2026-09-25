@@ -18,6 +18,7 @@
 // - Build command-line tools for bulk updating presentation properties.
 // - Integrate property copying into document management or migration pipelines.
 // - Ensure consistent author, title, and other metadata across PPTX assets.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -17,6 +17,7 @@
 // - Build .NET tools for managing PowerPoint metadata.
 // - Generate or transform PPTX files with custom properties in batch jobs.
 // - Validate and track presentation versions before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

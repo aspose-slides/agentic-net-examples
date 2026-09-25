@@ -17,6 +17,7 @@
 // - Build C# utilities that analyze or audit PPTX metadata.
 // - Integrate presentation metadata handling into .NET applications.
 // - Validate and log presentation properties before publishing or further processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
