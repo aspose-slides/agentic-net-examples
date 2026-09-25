@@ -17,6 +17,7 @@
 // - Create .NET tools that preprocess presentations for platforms without Flash support.
 // - Generate or transform PPTX files while maintaining layout integrity.
 // - Validate and clean up legacy presentations before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
