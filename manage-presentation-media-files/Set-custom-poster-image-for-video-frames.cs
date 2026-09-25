@@ -17,6 +17,7 @@
 // - Build .NET utilities that prepare presentations with specific media assets.
 // - Automate validation of video and poster resources before generating PPTX files.
 // - Integrate video handling into larger presentation processing workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
