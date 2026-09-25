@@ -16,6 +16,7 @@
 // - Build C# utilities for fine‑tuning media playback in PowerPoint files.
 // - Automate PPTX media settings in .NET applications.
 // - Ensure correct audio behavior before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
