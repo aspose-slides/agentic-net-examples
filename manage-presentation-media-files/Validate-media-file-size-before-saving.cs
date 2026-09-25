@@ -17,6 +17,7 @@
 // - Build automated validation tools for PowerPoint presentations in .NET.
 // - Prevent oversized media from causing performance or storage issues.
 // - Integrate media size checks into CI/CD pipelines for presentation assets.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
