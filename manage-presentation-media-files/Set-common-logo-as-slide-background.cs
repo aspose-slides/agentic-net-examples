@@ -1,85 +1,66 @@
 // -----------------------------------------------------------------------------
-// Example: Set common logo as slide background using C#
+// Example: Set Common Logo as Slide Background using Aspose.Slides for .NET
 //
 // Description:
-// Demonstrates how to set a common logo as the background image for every slide
-// in a PowerPoint presentation using C# and Aspose.Slides for .NET. The example
-// loads an existing presentation and a logo image, applies the logo as a
-// stretched background to each slide, and saves the result as a new PPTX file.
-// This pattern can be used to automate branding or watermarking of slides.
-//
+// This console application loads an existing PPTX file and a logo image,
+// then applies the logo as a stretched picture background to every slide.
+// It demonstrates branding or watermarking of presentations using C# and
+// Aspose.Slides for .NET, and saves the modified presentation as a new PPTX.
+// 
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Common, Logo, Slide, 
-// Background, Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, slide background image, branding, watermark
 //
 // Use Cases:
-// - Automate setting a common logo as slide background across a presentation.
-// - Build C# tools for PowerPoint branding and visual consistency.
-// - Generate or transform PPTX files with custom background images in .NET.
-// - Validate presentation workflows before publishing or integration.
+// - Automatically add corporate logo to all slides in a presentation.
+// - Create branded slide decks for marketing or internal communications.
+// - Apply a consistent watermark across multiple presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
-using System.Drawing;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-namespace SlideBackgroundUpdater
+namespace SlideBackgroundLogoExample
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Define file paths
-            string inputPath = "input.pptx";
-            string logoPath = "logo.png";
-            string outputPath = "output.pptx";
+            string inputPresentationPath = "input.pptx";
+            string logoImagePath = "logo.png";
+            string outputPresentationPath = "output.pptx";
 
-            // Verify input presentation exists
-            if (!File.Exists(inputPath))
+            if (!File.Exists(inputPresentationPath))
             {
-                Console.WriteLine("Input presentation file not found: " + inputPath);
+                Console.WriteLine("Input presentation not found: " + inputPresentationPath);
                 return;
             }
 
-            // Verify logo image exists
-            if (!File.Exists(logoPath))
+            if (!File.Exists(logoImagePath))
             {
-                Console.WriteLine("Logo image file not found: " + logoPath);
+                Console.WriteLine("Logo image not found: " + logoImagePath);
                 return;
             }
 
             try
             {
-                // Load the presentation
-                using (Presentation pres = new Presentation(inputPath))
+                byte[] logoBytes = File.ReadAllBytes(logoImagePath);
+                Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPresentationPath);
+                Aspose.Slides.IPPImage logoImage = presentation.Images.AddImage(logoBytes);
+
+                for (int i = 0; i < presentation.Slides.Count; i++)
                 {
-                    // Load the logo image and add it to the presentation's image collection
-                    Image logoImage = Image.FromFile(logoPath);
-                    IPPImage logoIppImage = pres.Images.AddImage(logoImage);
-
-                    // Apply the logo as background image to each slide
-                    for (int i = 0; i < pres.Slides.Count; i++)
-                    {
-                        ISlide slide = pres.Slides[i];
-                        slide.Background.Type = BackgroundType.OwnBackground;
-                        slide.Background.FillFormat.FillType = FillType.Picture;
-                        slide.Background.FillFormat.PictureFillFormat.PictureFillMode = PictureFillMode.Stretch;
-                        slide.Background.FillFormat.PictureFillFormat.Picture.Image = logoIppImage;
-                    }
-
-                    // Save the modified presentation
-                    pres.Save(outputPath, SaveFormat.Pptx);
+                    Aspose.Slides.ISlide slide = presentation.Slides[i];
+                    slide.Background.Type = Aspose.Slides.BackgroundType.OwnBackground;
+                    slide.Background.FillFormat.FillType = Aspose.Slides.FillType.Picture;
+                    slide.Background.FillFormat.PictureFillFormat.Picture.Image = logoImage;
+                    slide.Background.FillFormat.PictureFillFormat.PictureFillMode = Aspose.Slides.PictureFillMode.Stretch;
                 }
-            }
-            catch (NotSupportedException)
-            {
-                // Format not supported
-                Console.WriteLine("The provided file format is not supported.");
+
+                presentation.Save(outputPresentationPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                Console.WriteLine("Presentation saved to: " + outputPresentationPath);
             }
             catch (Exception ex)
             {
-                // General exception handling
                 Console.WriteLine("An error occurred: " + ex.Message);
             }
         }
