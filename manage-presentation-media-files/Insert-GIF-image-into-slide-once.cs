@@ -16,6 +16,7 @@
 // - Build .NET tools that download and embed media into presentations.
 // - Apply a one‑time play animation to GIFs in PPTX files.
 // - Generate or transform PPTX files with embedded animated content.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
