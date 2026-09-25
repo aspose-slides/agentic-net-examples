@@ -17,6 +17,7 @@
 // - Adjust video playback start positions programmatically in presentations.
 // - Automate extraction of slide images that contain video content.
 // - Build .NET tools for processing and modifying PowerPoint media assets.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

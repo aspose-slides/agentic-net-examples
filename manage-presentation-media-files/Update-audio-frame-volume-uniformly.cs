@@ -17,6 +17,7 @@
 // - Create automated tools for adjusting audio settings in presentations.
 // - Prepare presentations for consistent audio experience before distribution.
 // - Integrate audio volume normalization into .NET based PPTX workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

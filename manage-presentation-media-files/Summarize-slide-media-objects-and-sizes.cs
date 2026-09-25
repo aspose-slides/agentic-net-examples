@@ -18,6 +18,7 @@
 // - Validate that slide media does not exceed size constraints.
 // - Automate extraction of media metadata for content management systems.
 // - Integrate media auditing into .NET build or CI pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -18,6 +18,7 @@
 // - Build validation tools for PowerPoint presentations in .NET.
 // - Enforce consistent picture frame lock settings before publishing.
 // - Integrate picture frame consistency checks into automated PPTX workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

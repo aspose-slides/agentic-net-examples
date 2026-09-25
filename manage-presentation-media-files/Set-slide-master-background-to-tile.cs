@@ -17,6 +17,7 @@
 // - Build C# utilities for consistent slide design in PowerPoint files.
 // - Generate or modify PPTX presentations programmatically in .NET.
 // - Ensure visual branding by applying tiled backgrounds automatically.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

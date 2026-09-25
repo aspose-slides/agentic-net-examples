@@ -18,6 +18,7 @@
 // - Extend the example with external libraries to read video duration and resolution.
 // - Automate PPTX analysis for media compliance.
 // - Build tools that validate or transform presentations containing video content.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

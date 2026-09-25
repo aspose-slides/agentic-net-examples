@@ -17,6 +17,7 @@
 // - Build .NET tools that generate presentations with embedded assets.
 // - Automate creation of slide decks without external image files.
 // - Ensure consistent branding by using embedded resources for graphics.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

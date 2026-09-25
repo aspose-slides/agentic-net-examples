@@ -18,6 +18,7 @@
 // - Build tools for analyzing or repurposing presentation media assets.
 // - Integrate video extraction into larger .NET workflows or services.
 // - Validate and audit presentation content before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

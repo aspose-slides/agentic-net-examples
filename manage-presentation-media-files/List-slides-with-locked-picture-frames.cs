@@ -18,6 +18,7 @@
 // - Build validation tools for PowerPoint presentations in .NET.
 // - Automate reporting of specific shape properties across slides.
 // - Integrate aspect‑ratio checks into larger PPTX processing pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

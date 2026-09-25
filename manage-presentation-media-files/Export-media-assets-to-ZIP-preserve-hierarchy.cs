@@ -21,6 +21,7 @@
 // - Integrate media export functionality into .NET applications or CI/CD
 //   workflows.
 // - Validate and archive presentation assets before publishing or distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -17,6 +17,7 @@
 // - Automate validation of media assets before publishing or distribution.
 // - Build .NET tools that ensure PPTX files contain only valid media references.
 // - Integrate media integrity checks into larger PowerPoint processing pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

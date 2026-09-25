@@ -18,6 +18,7 @@
 // - Create automated validation tools for audio timing in presentations.
 // - Integrate audio duration reporting into .NET PowerPoint processing pipelines.
 // - Ensure audio assets meet duration requirements before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

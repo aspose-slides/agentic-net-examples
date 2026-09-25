@@ -16,6 +16,7 @@
 // - Build .NET tools that consolidate presentations with efficient media handling.
 // - Automate preparation of slide decks for distribution or publishing.
 // - Ensure minimal file size by reusing identical audio/video assets.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

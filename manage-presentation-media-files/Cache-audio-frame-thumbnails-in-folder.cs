@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint media asset management.
 // - Generate visual previews of embedded audio for documentation or UI.
 // - Validate and process presentation media before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

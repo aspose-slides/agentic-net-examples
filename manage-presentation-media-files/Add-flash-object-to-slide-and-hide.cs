@@ -16,6 +16,7 @@
 // - Build C# utilities for managing media objects in presentations.
 // - Generate or modify PPTX files with embedded flash content in .NET apps.
 // - Validate presentation media handling before deployment.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

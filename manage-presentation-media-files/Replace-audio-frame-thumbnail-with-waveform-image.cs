@@ -19,6 +19,7 @@
 // - Build C# utilities for PowerPoint presentation media customization.
 // - Generate or transform PPTX files with enhanced audio visual cues in .NET.
 // - Validate and test presentation workflows before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

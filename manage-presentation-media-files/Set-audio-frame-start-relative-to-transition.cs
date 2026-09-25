@@ -17,6 +17,7 @@
 // - Build C# tools for precise media timing in PowerPoint files.
 // - Automate embedding and trimming of audio in PPTX documents.
 // - Validate audio synchronization before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

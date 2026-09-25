@@ -17,6 +17,7 @@
 // - Automate validation of presentation media assets.
 // - Integrate thumbnail checks into .NET PowerPoint processing pipelines.
 // - Generate reports on missing media metadata in PPTX files.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

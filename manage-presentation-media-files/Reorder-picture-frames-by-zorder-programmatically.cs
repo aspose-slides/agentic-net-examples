@@ -17,6 +17,7 @@
 // - Build .NET tools that adjust visual layering of images for consistent output.
 // - Integrate picture‑frame ordering logic into larger PowerPoint processing pipelines.
 // - Validate and correct Z‑order issues before publishing or further manipulation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

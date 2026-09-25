@@ -17,6 +17,7 @@
 // - Automate visual styling of picture frames in presentation generation.
 // - Build .NET utilities that programmatically modify slide content.
 // - Prepare PPTX files with branded or highlighted image overlays.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
