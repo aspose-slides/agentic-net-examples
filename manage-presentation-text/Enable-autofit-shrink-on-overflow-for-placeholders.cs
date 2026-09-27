@@ -17,6 +17,7 @@
 // - Build .NET tools that adjust text fitting behavior in existing presentations.
 // - Prepare presentations for consistent text layout before distribution.
 // - Integrate placeholder text formatting into larger PowerPoint automation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
