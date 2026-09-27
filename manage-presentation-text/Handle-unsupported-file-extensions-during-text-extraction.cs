@@ -17,6 +17,7 @@
 //   format compatibility issues.
 // - Automate text extraction workflows for reporting or indexing PowerPoint files.
 // - Integrate robust presentation handling into larger .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
