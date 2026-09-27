@@ -17,6 +17,7 @@
 // - Automate validation of presentation content in .NET tools.
 // - Build utilities for extracting and analyzing slide text.
 // - Ensure consistency of slide metadata before publishing or further processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
