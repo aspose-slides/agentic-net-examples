@@ -16,6 +16,7 @@
 // - Automate extraction of presentation text for review or publishing.
 // - Build C# utilities for PowerPoint content analysis.
 // - Integrate slide text reporting into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
