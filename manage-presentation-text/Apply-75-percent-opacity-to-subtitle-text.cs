@@ -17,6 +17,7 @@
 // - Automate subtitle styling across multiple slides.
 // - Integrate subtitle opacity adjustments into .NET PowerPoint processing tools.
 // - Prepare presentations with consistent subtitle appearance before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
