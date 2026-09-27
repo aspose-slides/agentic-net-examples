@@ -17,6 +17,7 @@
 // - Automate extraction of slide notes or text for content analysis.
 // - Build tools that generate markdown files from presentations for static sites.
 // - Integrate slide-to-markdown conversion into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
