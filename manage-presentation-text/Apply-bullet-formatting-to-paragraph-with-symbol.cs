@@ -17,6 +17,7 @@
 // - Build .NET tools that format text with custom bullet symbols.
 // - Generate or modify PPTX files programmatically with specific bullet styles.
 // - Validate bullet formatting in presentation workflows before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
