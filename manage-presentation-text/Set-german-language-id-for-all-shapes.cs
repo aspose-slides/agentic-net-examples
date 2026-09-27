@@ -17,6 +17,7 @@
 // - Automate localization preparation for PowerPoint files.
 // - Build tools that standardize language settings across presentations.
 // - Integrate language ID updates into .NET-based document workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
