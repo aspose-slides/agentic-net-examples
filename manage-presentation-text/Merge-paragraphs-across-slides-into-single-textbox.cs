@@ -18,6 +18,7 @@
 // - Build tools that extract and combine slide content for reporting.
 // - Automate preparation of presentation assets before publishing.
 // - Simplify content review by aggregating paragraphs into one location.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
