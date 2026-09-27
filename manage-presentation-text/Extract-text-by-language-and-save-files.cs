@@ -18,6 +18,7 @@
 // - Build tools that generate language‑specific text files from PPTX.
 // - Automate saving modified presentations after processing.
 // - Integrate language‑aware text extraction into .NET workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
