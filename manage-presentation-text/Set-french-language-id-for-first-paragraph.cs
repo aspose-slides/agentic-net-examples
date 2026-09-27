@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint language localization.
 // - Generate or modify PPTX files with language metadata in .NET applications.
 // - Validate language settings before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
