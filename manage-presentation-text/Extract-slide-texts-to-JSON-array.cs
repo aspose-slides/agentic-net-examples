@@ -16,6 +16,7 @@
 // - Generate JSON representations of presentations for web services.
 // - Build .NET tools that need to analyze or transform PPTX content.
 // - Validate slide content before publishing or further processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
