@@ -19,6 +19,7 @@
 // - Create C# tools for styling PowerPoint lists programmatically.
 // - Automate PPTX transformations as part of a CI/CD pipeline.
 // - Validate and enforce presentation design guidelines before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
