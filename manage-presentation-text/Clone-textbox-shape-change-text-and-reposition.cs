@@ -18,6 +18,7 @@
 // - Build tools for repositioning and editing shapes in PowerPoint files.
 // - Generate or transform PPTX presentations programmatically in .NET.
 // - Validate and test presentation workflows before deployment.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
