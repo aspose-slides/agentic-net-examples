@@ -17,6 +17,7 @@
 // - Build .NET tools for generating localized PowerPoint presentations.
 // - Create or transform PPTX files with language‑specific formatting.
 // - Validate multilingual presentation workflows before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
