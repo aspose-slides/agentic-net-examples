@@ -17,6 +17,7 @@
 // - Automate extraction of slide content, notes, and comments in .NET tools.
 // - Integrate slide text mapping into custom PowerPoint processing pipelines.
 // - Validate presentation content before publishing or further transformation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
