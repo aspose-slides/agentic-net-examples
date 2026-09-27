@@ -17,6 +17,7 @@
 // - Build .NET tools that embed formatted HTML into presentations.
 // - Automate generation of PPTX files from web content.
 // - Validate HTML rendering within PowerPoint slides.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
