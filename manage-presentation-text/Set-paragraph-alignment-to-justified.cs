@@ -18,6 +18,7 @@
 // - Build C# utilities for bulk text formatting in PowerPoint files.
 // - Generate or transform PPTX files with consistent paragraph alignment.
 // - Validate and test presentation formatting before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
