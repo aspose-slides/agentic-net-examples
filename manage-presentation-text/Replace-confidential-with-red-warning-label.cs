@@ -16,6 +16,7 @@
 // - Build C# utilities for batch processing of PowerPoint presentations.
 // - Integrate text replacement and styling into .NET applications.
 // - Ensure compliance by highlighting sensitive content before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
