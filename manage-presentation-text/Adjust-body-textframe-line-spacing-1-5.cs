@@ -16,6 +16,7 @@
 // - Build C# utilities for consistent PowerPoint formatting.
 // - Integrate line‑spacing adjustments into document generation workflows.
 // - Validate and enforce presentation style guidelines programmatically.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
