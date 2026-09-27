@@ -17,6 +17,7 @@
 // - Build C# tools for PowerPoint presentation processing that require custom bullet styles.
 // - Generate or transform PPTX files with image-based bullets in .NET applications.
 // - Validate presentation workflows involving picture bullets before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
