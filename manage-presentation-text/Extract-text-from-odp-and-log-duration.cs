@@ -16,6 +16,7 @@
 // - Measure performance of text extraction operations.
 // - Build tools for analyzing or indexing ODP slide content.
 // - Integrate ODP processing into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
