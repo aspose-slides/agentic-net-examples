@@ -18,6 +18,7 @@
 // - Build .NET tools for analyzing or indexing PPTX content.
 // - Re‑save presentations after read‑only processing.
 // - Validate presentation files before further manipulation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
