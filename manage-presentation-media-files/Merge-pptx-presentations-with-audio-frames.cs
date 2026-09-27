@@ -18,6 +18,7 @@
 //   merged slides.
 // - Generate consolidated presentations for training, webinars, or e‑learning
 //   where audio cues must remain functional.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

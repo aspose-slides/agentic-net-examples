@@ -18,6 +18,7 @@
 // - Build tools that convert presentation audio to standard WAV format.
 // - Integrate audio media handling into .NET applications that process PPTX.
 // - Validate and archive audio assets from presentations before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

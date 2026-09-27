@@ -15,6 +15,7 @@
 // - Build C# utilities for managing media assets in presentations.
 // - Convert or archive Flash content from PowerPoint slides.
 // - Validate and process presentation files before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

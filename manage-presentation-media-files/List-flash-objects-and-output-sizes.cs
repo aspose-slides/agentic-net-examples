@@ -17,6 +17,7 @@
 // - Validate size of ActiveX controls before publishing or conversion.
 // - Build tooling to audit or clean up legacy flash content in presentations.
 // - Integrate flash object inspection into automated .NET workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

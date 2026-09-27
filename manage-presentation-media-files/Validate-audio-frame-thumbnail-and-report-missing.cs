@@ -17,6 +17,7 @@
 // - Build C# tools for detecting missing media assets before publishing.
 // - Integrate presentation quality checks into .NET applications.
 // - Generate reports on media completeness in PPTX files.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -17,6 +17,7 @@
 // - Automate updating slide graphics with SVG assets.
 // - Build .NET tools for batch processing of PPTX files.
 // - Ensure high‑quality rendering of images at any resolution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

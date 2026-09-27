@@ -17,6 +17,7 @@
 // - Generate slide thumbnails for preview or indexing purposes.
 // - Build .NET tools for PPTX manipulation and media handling.
 // - Validate presentation content before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

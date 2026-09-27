@@ -18,6 +18,7 @@
 // - Build C# utilities for customizing slide appearance with color overlays.
 // - Generate or modify PPTX files with branded background styles in .NET.
 // - Validate visual presentation workflows before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -17,6 +17,7 @@
 // - Automate creation of slides from SVG assets in .NET applications.
 // - Build tools that transform vector images into presentation-ready content.
 // - Integrate SVG-to-PPTX conversion into document generation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

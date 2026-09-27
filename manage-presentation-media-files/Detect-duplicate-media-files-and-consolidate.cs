@@ -17,6 +17,7 @@
 // - Build tools to consolidate unique media into a single PPTX for reuse.
 // - Manage media assets in PowerPoint files programmatically.
 // - Validate and optimize presentation media before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

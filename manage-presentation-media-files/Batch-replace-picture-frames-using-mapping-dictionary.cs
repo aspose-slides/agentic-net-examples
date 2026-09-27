@@ -18,6 +18,7 @@
 // - Build tools for updating images in existing PPTX files programmatically.
 // - Integrate image replacement logic into .NET applications handling presentations.
 // - Validate and preprocess presentations before distribution or further processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;

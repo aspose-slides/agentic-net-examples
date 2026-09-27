@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint image manipulation.
 // - Integrate picture cropping into .NET document processing pipelines.
 // - Prepare presentations with consistent image margins before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

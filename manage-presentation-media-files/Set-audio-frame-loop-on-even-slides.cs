@@ -18,6 +18,7 @@
 // - Build tools that embed and configure media in PPTX files.
 // - Generate presentations with customized audio behavior programmatically.
 // - Validate audio settings in PowerPoint automation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

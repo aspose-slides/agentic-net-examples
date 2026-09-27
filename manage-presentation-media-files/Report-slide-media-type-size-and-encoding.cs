@@ -17,6 +17,7 @@
 // - Build C# utilities for validating embedded media in presentations.
 // - Integrate media reporting into .NET applications that process PPTX files.
 // - Ensure media compliance before publishing or further transformation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

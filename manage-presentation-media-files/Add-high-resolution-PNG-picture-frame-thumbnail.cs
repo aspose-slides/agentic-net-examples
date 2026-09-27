@@ -18,6 +18,7 @@
 // - Build C# tools for PowerPoint presentation processing that include image scaling.
 // - Generate or transform PPTX files with embedded thumbnails in .NET applications.
 // - Validate image handling workflows before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

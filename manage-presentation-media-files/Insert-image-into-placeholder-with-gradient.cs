@@ -17,6 +17,7 @@
 // - Build .NET tools for PowerPoint presentation creation and styling.
 // - Generate or transform PPTX files programmatically in C# applications.
 // - Validate presentation layouts and visual effects before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

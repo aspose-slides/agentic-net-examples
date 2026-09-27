@@ -17,6 +17,7 @@
 // - Adjust audio playback volume in generated presentations.
 // - Configure audio frames to start automatically when the slide is shown.
 // - Automate creation of PPTX files with embedded media for .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

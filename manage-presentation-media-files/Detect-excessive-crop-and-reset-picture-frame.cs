@@ -17,6 +17,7 @@
 // - Automate cleanup of presentations to ensure images are not unintentionally cropped.
 // - Build .NET tools for PowerPoint presentation processing and validation.
 // - Integrate picture frame normalization into document workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

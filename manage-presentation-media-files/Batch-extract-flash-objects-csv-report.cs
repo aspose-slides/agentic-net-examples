@@ -18,6 +18,7 @@
 // - Build C# utilities for auditing PowerPoint presentations for embedded flash content.
 // - Integrate flash object analysis into .NET applications or CI pipelines.
 // - Validate and document presentation assets before publishing or migration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

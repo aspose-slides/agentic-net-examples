@@ -18,6 +18,7 @@
 // - Build C# tools for managing media playback behavior in PowerPoint files.
 // - Generate or modify PPTX presentations with specific audio playback settings.
 // - Validate and test presentation media workflows before deployment.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

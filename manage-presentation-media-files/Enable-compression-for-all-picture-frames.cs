@@ -18,6 +18,7 @@
 // - Build C# tools for batch processing of PPTX presentations.
 // - Integrate image compression into document generation pipelines.
 // - Validate and optimize presentation assets before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

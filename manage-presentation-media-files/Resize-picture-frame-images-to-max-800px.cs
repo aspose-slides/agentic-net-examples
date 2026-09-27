@@ -19,6 +19,7 @@
 // - Build automated tools that preprocess PPTX files before publishing.
 // - Integrate image‑size validation into CI pipelines for presentation assets.
 // - Create batch scripts that adjust image dimensions across multiple slides.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

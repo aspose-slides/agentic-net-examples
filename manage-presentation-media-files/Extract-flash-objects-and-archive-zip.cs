@@ -17,6 +17,7 @@
 // - Create ZIP archives of extracted Flash assets for backup or analysis.
 // - Save large presentations with ZIP64 support to avoid size limitations.
 // - Integrate Flash extraction into .NET tools for presentation processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

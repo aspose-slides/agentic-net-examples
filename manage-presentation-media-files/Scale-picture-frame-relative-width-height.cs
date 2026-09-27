@@ -17,6 +17,7 @@
 // - Build tools that resize images within slides based on scaling factors.
 // - Generate or modify PPTX files with custom image sizing in .NET.
 // - Validate image scaling behavior before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

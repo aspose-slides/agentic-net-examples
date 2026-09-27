@@ -17,6 +17,7 @@
 // - Build .NET utilities for managing PowerPoint media assets.
 // - Generate or modify PPTX files programmatically in enterprise workflows.
 // - Validate presentation transformations that involve embedded media.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

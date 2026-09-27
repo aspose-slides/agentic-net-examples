@@ -18,6 +18,7 @@
 // - Build C# utilities for PowerPoint media handling and presentation automation.
 // - Generate or modify PPTX files programmatically in .NET applications.
 // - Validate media integration workflows before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -16,6 +16,7 @@
 // - Build .NET tools for applying visual effects to slide content.
 // - Generate or modify PPTX files programmatically with hue‑shift effects.
 // - Validate image processing workflows in presentation automation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

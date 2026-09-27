@@ -16,6 +16,7 @@
 // - Build .NET tools for dynamic PPTX generation or modification.
 // - Integrate image data received as Base64 strings into presentations.
 // - Validate and test presentation workflows that involve image handling.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

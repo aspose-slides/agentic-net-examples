@@ -19,6 +19,7 @@
 // - Build C# tools for PowerPoint media handling and presentation processing.
 // - Generate or transform PPTX files with media content in .NET applications.
 // - Validate media embedding workflows before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

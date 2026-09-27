@@ -18,6 +18,7 @@
 // - Prepare PowerPoint files for web publishing with controlled DPI.
 // - Automate image optimization in batch processing of presentations.
 // - Integrate image compression into .NET applications handling PPTX files.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

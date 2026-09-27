@@ -18,6 +18,7 @@
 // - Build C# utilities for PowerPoint presentation processing and archival.
 // - Generate PNG assets from PPTX files for web or documentation purposes.
 // - Ensure embedded audio, video, or other media remain functional after processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

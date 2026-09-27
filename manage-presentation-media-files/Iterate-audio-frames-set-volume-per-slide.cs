@@ -18,6 +18,7 @@
 // - Integrate audio handling into .NET applications that generate or modify
 //   presentations.
 // - Validate and test audio settings before publishing a presentation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

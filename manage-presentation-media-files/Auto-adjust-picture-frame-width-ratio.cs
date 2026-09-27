@@ -18,6 +18,7 @@
 // - Build .NET utilities that modify image scaling in PowerPoint files.
 // - Automate preparation of presentations with consistent visual layout.
 // - Validate and transform PPTX media assets programmatically.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

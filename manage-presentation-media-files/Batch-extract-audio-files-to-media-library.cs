@@ -19,6 +19,7 @@
 // - Build C# tools for PowerPoint media asset management.
 // - Generate or transform PPTX files in .NET applications while preserving media.
 // - Validate and archive presentation audio content before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

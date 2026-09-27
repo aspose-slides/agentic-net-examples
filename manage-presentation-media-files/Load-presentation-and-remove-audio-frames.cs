@@ -15,6 +15,7 @@
 // - Prepare PPTX files for distribution without audio content.
 // - Build .NET tools for cleaning up media elements in PowerPoint files.
 // - Integrate audio frame removal into larger presentation processing pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

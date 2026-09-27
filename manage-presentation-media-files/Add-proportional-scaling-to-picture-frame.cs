@@ -20,6 +20,7 @@
 // - Apply uniform scaling to picture frames for consistent display.
 // - Automate generation of PowerPoint files with correctly scaled graphics.
 // - Build .NET tools that process and export presentations with image handling.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

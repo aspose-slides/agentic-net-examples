@@ -19,6 +19,7 @@
 // - Build C# tools for processing and converting slide graphics to SVG.
 // - Generate or transform PPTX files while preserving vector assets.
 // - Validate and test presentation workflows before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
