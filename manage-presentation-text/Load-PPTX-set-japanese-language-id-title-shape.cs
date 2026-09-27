@@ -15,6 +15,7 @@
 // - Build C# utilities for localization of PowerPoint presentations.
 // - Integrate language ID adjustments into .NET presentation workflows.
 // - Validate and prepare PPTX files for Japanese audiences before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

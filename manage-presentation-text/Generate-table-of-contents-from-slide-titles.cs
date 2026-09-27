@@ -18,6 +18,7 @@
 // - Build .NET tools that analyze and augment PowerPoint files.
 // - Generate navigation aids for large slide decks.
 // - Validate and transform PPTX content in batch processes.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

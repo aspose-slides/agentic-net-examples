@@ -17,6 +17,7 @@
 // - Build C# utilities for analyzing presentation content.
 // - Integrate word count metrics into reporting or quality‑control pipelines.
 // - Validate presentation text before publishing or further processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

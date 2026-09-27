@@ -18,6 +18,7 @@
 // - Build C# tools for PowerPoint text styling and processing.
 // - Generate or transform PPTX files with custom text effects in .NET apps.
 // - Validate presentation workflows before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

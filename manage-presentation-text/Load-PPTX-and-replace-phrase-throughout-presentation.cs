@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint text manipulation.
 // - Integrate presentation text updates into .NET applications.
 // - Validate and preprocess PPTX files before distribution or further processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

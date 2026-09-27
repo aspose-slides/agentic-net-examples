@@ -18,6 +18,7 @@
 // - Generate a consolidated report presentation for review or documentation.
 // - Build tools for bulk processing of PowerPoint files in .NET applications.
 // - Validate and archive presentation content before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

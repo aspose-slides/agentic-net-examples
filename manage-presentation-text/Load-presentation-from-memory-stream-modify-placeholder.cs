@@ -18,6 +18,7 @@
 // - Build C# tools that modify PPTX content in-memory for web services or APIs.
 // - Generate or transform PPTX files dynamically in .NET applications.
 // - Validate and test presentation workflows before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

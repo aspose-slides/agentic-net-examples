@@ -17,6 +17,7 @@
 // - Build C# tools for PowerPoint text processing and language verification.
 // - Generate or modify PPTX presentations with specific language settings in .NET.
 // - Validate language configuration before publishing or further integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

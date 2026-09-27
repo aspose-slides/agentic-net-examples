@@ -16,6 +16,7 @@
 // - Build tools that generate XML reports of PowerPoint slide text properties.
 // - Integrate PowerPoint data extraction into .NET applications.
 // - Validate and audit presentation formatting before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

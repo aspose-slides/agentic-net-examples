@@ -18,6 +18,7 @@
 // - Build C# tools for validating PowerPoint presentation consistency.
 // - Generate or transform PPTX files while ensuring master-layout alignment.
 // - Integrate presentation validation into .NET applications before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

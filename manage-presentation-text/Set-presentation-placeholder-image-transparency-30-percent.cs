@@ -19,6 +19,7 @@
 // - Build C# utilities for batch processing of PowerPoint presentations.
 // - Integrate image transparency adjustments into .NET applications.
 // - Validate and transform presentation content before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

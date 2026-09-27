@@ -19,6 +19,7 @@
 // - Build .NET tools that enforce specific list styles across multiple PPTX files.
 // - Integrate custom text transformation logic into PowerPoint processing pipelines.
 // - Validate and standardize list formatting before publishing or sharing slides.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

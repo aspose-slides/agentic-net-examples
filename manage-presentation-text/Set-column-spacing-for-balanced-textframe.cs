@@ -18,6 +18,7 @@
 // - Build C# utilities for customizing PPTX content programmatically.
 // - Generate or modify PowerPoint files with specific column spacing.
 // - Validate and test column formatting before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;

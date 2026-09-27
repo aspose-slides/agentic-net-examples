@@ -17,6 +17,7 @@
 // - Build C# utilities for generating PowerPoint files with specific text direction.
 // - Integrate text direction settings into automated PPTX generation pipelines.
 // - Validate and enforce text direction consistency across presentation assets.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;

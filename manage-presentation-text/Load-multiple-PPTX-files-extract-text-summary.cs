@@ -17,6 +17,7 @@
 // - Generate consolidated reports of presentation content.
 // - Create summary presentations for review or documentation purposes.
 // - Integrate PowerPoint text analysis into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

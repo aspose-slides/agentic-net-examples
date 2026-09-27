@@ -18,6 +18,7 @@
 // - Convert PowerPoint content to JSON for web services or APIs.
 // - Build command‑line utilities that process PPTX files.
 // - Validate and audit presentation content programmatically.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

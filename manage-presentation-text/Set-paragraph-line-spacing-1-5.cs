@@ -17,6 +17,7 @@
 // - Build tools that enforce consistent paragraph formatting across slides.
 // - Process and transform PPTX files programmatically in .NET applications.
 // - Prepare presentations for publishing with standardized spacing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

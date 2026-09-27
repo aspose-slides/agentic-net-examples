@@ -17,6 +17,7 @@
 // - Build C# tools for bulk language localization of PPTX content.
 // - Integrate language property updates into .NET presentation workflows.
 // - Validate language settings before publishing or further processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

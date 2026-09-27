@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint presentation enhancement.
 // - Integrate animation logic into .NET applications that generate or modify PPTX files.
 // - Ensure consistent slide animations before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint content auditing.
 // - Generate data files for downstream analysis from PPTX presentations.
 // - Validate and document presentation content before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

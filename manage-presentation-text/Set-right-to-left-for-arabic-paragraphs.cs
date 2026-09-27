@@ -17,6 +17,7 @@
 // - Build .NET tools that prepare PPTX files for Arabic audiences.
 // - Integrate RTL text handling into automated PowerPoint workflows.
 // - Validate and transform slide content before publishing or distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

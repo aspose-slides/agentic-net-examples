@@ -19,6 +19,7 @@
 // - Build C# utilities for PowerPoint presentation analysis.
 // - Generate reports or perform validation on specific slides in PPTX files.
 // - Integrate slide text extraction into larger .NET workflows or services.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;

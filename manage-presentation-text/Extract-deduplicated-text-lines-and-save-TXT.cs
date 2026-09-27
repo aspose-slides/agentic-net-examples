@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint content analysis.
 // - Generate plain‑text representations of presentations.
 // - Integrate text extraction into .NET automation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

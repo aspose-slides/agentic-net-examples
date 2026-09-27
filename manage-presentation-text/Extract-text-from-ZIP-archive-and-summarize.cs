@@ -20,6 +20,7 @@
 // - Build C# tools for PowerPoint, PPT, and ODP presentation processing.
 // - Generate or transform presentation files in .NET applications.
 // - Validate presentation workflows before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

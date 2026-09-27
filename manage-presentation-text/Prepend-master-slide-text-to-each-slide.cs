@@ -17,6 +17,7 @@
 // - Build .NET tools that combine master and slide text for documentation or analysis.
 // - Automate extraction and transformation of PPTX content in batch processes.
 // - Validate and archive presentation text before further processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

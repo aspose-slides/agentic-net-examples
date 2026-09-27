@@ -18,6 +18,7 @@
 // - Validate slide content before publishing.
 // - Automate diagnostics for PowerPoint presentations.
 // - Integrate slide analysis into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

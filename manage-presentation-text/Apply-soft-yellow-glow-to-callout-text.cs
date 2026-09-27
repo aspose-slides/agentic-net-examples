@@ -18,6 +18,7 @@
 // - Build C# utilities for enhancing visual emphasis in PowerPoint files.
 // - Generate or transform PPTX files with custom text effects in .NET applications.
 // - Validate and preview presentation styling before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

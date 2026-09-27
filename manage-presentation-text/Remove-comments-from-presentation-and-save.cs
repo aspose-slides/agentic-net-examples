@@ -17,6 +17,7 @@
 // - Build tools that sanitize presentations by clearing comment content.
 // - Integrate comment cleanup into .NET applications handling PPTX files.
 // - Automate batch processing of presentations to ensure no residual comments.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

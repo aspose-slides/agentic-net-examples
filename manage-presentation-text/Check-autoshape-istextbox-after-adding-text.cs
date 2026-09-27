@@ -18,6 +18,7 @@
 // - Build C# utilities for PowerPoint presentation analysis and transformation.
 // - Validate shape properties in automated PPTX generation pipelines.
 // - Integrate shape‑type checks into larger .NET office automation solutions.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;

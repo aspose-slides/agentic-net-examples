@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint content analysis or migration.
 // - Generate plain‑text representations of slides for indexing or search.
 // - Validate and transform presentation content before further processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

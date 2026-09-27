@@ -16,6 +16,7 @@
 // - Build .NET tools for PowerPoint presentation styling.
 // - Generate or transform PPTX files with consistent title fonts.
 // - Validate and enforce branding guidelines in presentation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

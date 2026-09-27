@@ -18,6 +18,7 @@
 // - Build tools that customize slide templates before distribution.
 // - Integrate placeholder text replacement into automated PPTX workflows.
 // - Validate and modify slide content in .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

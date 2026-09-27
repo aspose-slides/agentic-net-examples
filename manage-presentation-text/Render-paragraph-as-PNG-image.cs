@@ -17,6 +17,7 @@
 // - Create visual assets from slide text for documentation or web use.
 // - Automate extraction and rendering of slide content in .NET applications.
 // - Validate paragraph rendering before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

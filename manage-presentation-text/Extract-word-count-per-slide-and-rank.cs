@@ -16,6 +16,7 @@
 // - Rank slides by textual content volume for review or editing priorities.
 // - Integrate slide‑level text analytics into .NET automation tools.
 // - Save a processed copy of the original presentation after analysis.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

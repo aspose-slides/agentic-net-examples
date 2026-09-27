@@ -17,6 +17,7 @@
 // - Automate text style updates across slides and master layouts.
 // - Build .NET tools for bulk formatting of PPTX files.
 // - Prepare presentations for branding or visual guidelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

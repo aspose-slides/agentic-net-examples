@@ -18,6 +18,7 @@
 // - Build tools that enrich PowerPoint content with clickable links.
 // - Generate or modify PPTX files in .NET applications.
 // - Validate hyperlink functionality in automated presentation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;

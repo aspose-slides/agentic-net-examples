@@ -17,6 +17,7 @@
 // - Build C# utilities for extracting and publishing slide content.
 // - Integrate paragraph-to-HTML transformation in .NET applications.
 // - Validate and preview presentation text in web-friendly format.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

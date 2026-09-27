@@ -18,6 +18,7 @@
 // - Preserve text formatting while saving using specific save options.
 // - Build .NET tools that process PPTX files without intermediate disk files.
 // - Automate generation or transformation of presentations in memory.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

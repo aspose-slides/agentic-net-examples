@@ -18,6 +18,7 @@
 // - Create summary or documentation presentations from existing slides.
 // - Build C# utilities for PowerPoint content analysis and transformation.
 // - Integrate slide text extraction into larger .NET workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
