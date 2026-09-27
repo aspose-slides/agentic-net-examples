@@ -17,6 +17,7 @@
 // - Build tools for validating or reporting hyperlink usage in presentations.
 // - Integrate hyperlink analysis into .NET applications that process PowerPoint.
 // - Generate reports or transform presentations based on extracted link data.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
