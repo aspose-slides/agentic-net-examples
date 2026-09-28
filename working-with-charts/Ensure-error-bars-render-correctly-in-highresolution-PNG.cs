@@ -20,6 +20,7 @@
 // - Build C# tools for PowerPoint presentation generation and processing.
 // - Generate or transform PPTX files with custom chart formatting in .NET applications.
 // - Validate visual fidelity of error bars before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
