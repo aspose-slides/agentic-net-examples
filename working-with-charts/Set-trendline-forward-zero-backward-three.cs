@@ -18,6 +18,7 @@
 // - Build C# utilities for PowerPoint chart manipulation.
 // - Generate or modify PPTX files with customized trendlines.
 // - Validate chart configurations programmatically.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
