@@ -17,6 +17,7 @@
 // - Build .NET tools for customizing chart appearance in PowerPoint.
 // - Automate generation of presentations with specific chart formatting.
 // - Validate chart configurations before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
