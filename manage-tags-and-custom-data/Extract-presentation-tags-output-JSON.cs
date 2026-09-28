@@ -18,6 +18,7 @@
 // - Build tools for PowerPoint metadata analysis in .NET.
 // - Integrate tag data into downstream systems or reporting pipelines.
 // - Validate and audit presentation custom data before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -17,6 +17,7 @@
 // - Implement versioning of custom data within PowerPoint files.
 // - Build .NET tools that manage tag-based metadata in presentations.
 // - Automate safe updates of presentation custom data in CI/CD pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -18,6 +18,7 @@
 // - Build C# tools for extracting PowerPoint custom data tags.
 // - Generate reports of tag names for validation or documentation.
 // - Integrate tag extraction into .NET applications for PowerPoint automation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

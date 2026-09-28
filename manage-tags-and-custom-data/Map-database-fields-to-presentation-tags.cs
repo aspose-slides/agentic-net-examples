@@ -17,6 +17,7 @@
 // - Programmatically add charts and link them to external data sources.
 // - Build .NET tools for PowerPoint presentation manipulation and validation.
 // - Generate or transform PPTX files with custom metadata in automated workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;

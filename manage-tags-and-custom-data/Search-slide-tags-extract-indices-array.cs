@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint presentation analysis.
 // - Integrate tag‑based slide selection into .NET applications.
 // - Validate or transform PPTX files based on custom tag data.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;

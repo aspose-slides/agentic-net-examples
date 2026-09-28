@@ -17,6 +17,7 @@
 // - Build tools that convert presentation metadata to JSON for downstream processing.
 // - Integrate custom data export into .NET applications or CI pipelines.
 // - Validate and audit custom data embedded in PowerPoint presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -17,6 +17,7 @@
 // - Clean up chart-related custom data to ensure privacy.
 // - Automate preparation of PPTX files for compliance or archiving.
 // - Integrate presentation sanitization into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

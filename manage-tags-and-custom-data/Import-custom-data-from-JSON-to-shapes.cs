@@ -21,6 +21,7 @@
 // - Generate or transform PPTX files in .NET applications.
 // - Validate presentation workflows before publishing or integration.
 // - Update shape text and chart labels based on external JSON data.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

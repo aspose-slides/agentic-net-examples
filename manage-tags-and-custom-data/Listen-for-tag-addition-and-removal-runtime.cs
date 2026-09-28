@@ -18,6 +18,7 @@
 // - Build C# tools that react to custom data changes in PowerPoint files.
 // - Integrate tag event handling into .NET applications for dynamic PPTX workflows.
 // - Validate and log custom data modifications before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

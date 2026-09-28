@@ -17,6 +17,7 @@
 // - Build tools that propagate custom metadata from templates to new presentations.
 // - Generate PPTX files with predefined tags for downstream processing.
 // - Ensure consistent slide metadata across multiple presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
