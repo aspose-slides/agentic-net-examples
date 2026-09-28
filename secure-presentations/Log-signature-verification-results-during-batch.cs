@@ -18,6 +18,7 @@
 // - Generate logs of signature validity for compliance auditing.
 // - Integrate signature verification into automated PowerPoint workflows.
 // - Ensure presentations are signed before distribution or publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
