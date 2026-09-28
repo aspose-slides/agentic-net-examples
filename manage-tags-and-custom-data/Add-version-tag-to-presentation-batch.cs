@@ -18,6 +18,7 @@
 // - Prepare slide decks for release with consistent version labeling.
 // - Integrate version tagging into CI/CD pipelines for documentation assets.
 // - Perform bulk modifications of PPT/PPTX/ODP files in .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
