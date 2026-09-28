@@ -17,6 +17,7 @@
 // - Detect and validate write protection and open passwords.
 // - Remove write protection programmatically.
 // - Automate secure PPTX processing in .NET tools.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

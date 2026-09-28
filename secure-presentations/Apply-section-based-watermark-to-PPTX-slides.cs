@@ -21,6 +21,7 @@
 //   presentation section.
 // - Integrate watermarking into document generation or publishing pipelines.
 // - Validate and transform PPTX files before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

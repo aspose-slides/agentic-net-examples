@@ -19,6 +19,7 @@
 // - Build command‑line tools for batch PowerPoint presentation processing.
 // - Integrate watermarking into .NET applications or CI pipelines.
 // - Ensure consistent branding or confidentiality markings across presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

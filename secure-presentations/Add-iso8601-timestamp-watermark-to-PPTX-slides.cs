@@ -19,6 +19,7 @@
 // - Integrate timestamp watermarking into CI/CD pipelines for document
 //   generation.
 // - Ensure presentation provenance by embedding creation time in each slide.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;

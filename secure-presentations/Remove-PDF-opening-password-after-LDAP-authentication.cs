@@ -17,6 +17,7 @@
 // - Build C# tools for secure PowerPoint file handling.
 // - Integrate presentation de‑protection into .NET services or applications.
 // - Prepare PPTX files for distribution after confirming user credentials.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

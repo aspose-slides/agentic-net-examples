@@ -17,6 +17,7 @@
 // - Build C# utilities for secure PowerPoint document handling.
 // - Integrate digital signing into .NET applications that process presentations.
 // - Ensure authenticity and integrity of PPTX files before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

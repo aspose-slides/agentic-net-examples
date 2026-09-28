@@ -17,6 +17,7 @@
 // - Automate validation of PPTX checksum after password removal.
 // - Build .NET tools for secure presentation handling.
 // - Ensure correct password and file integrity before further processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

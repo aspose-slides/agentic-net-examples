@@ -17,6 +17,7 @@
 // - Build C# utilities for securing PowerPoint presentations before distribution.
 // - Integrate watermarking into document generation pipelines.
 // - Ensure compliance by marking presentations as confidential in .NET apps.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.Drawing;
