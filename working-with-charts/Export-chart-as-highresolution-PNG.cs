@@ -18,6 +18,7 @@
 // - Automate extraction of chart visuals from existing presentations.
 // - Create sample presentations with charts and export them as images.
 // - Integrate chart image generation into .NET applications or CI pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
