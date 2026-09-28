@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint chart manipulation and validation.
 // - Generate or transform PPTX files with custom chart layouts in .NET apps.
 // - Verify chart layout changes before publishing or integrating into workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
