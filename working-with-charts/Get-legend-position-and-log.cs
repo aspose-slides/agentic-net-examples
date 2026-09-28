@@ -18,6 +18,7 @@
 // - Build C# utilities for PowerPoint chart inspection and debugging.
 // - Generate or modify PPTX files with chart metadata in .NET applications.
 // - Validate presentation content before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
