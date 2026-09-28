@@ -1,54 +1,72 @@
 // -----------------------------------------------------------------------------
-// Example: Set data label offset from axis using C#
+// Example: Set Data Label Offset from Axis in Aspose.Slides Chart
 //
 // Description:
-// Demonstrates how to set the distance of data labels from the axis in a chart 
-// using C# and Aspose.Slides for .NET. The example creates a presentation, adds a 
-// clustered column chart, configures the horizontal axis label offset, and saves 
-// the result as a PPTX file. This pattern can be used to automate PowerPoint 
-// chart formatting, validate presentation output, or integrate chart customization 
-// into .NET applications.
+// This console application creates a new PowerPoint presentation, adds a
+// clustered column chart, sets the horizontal axis label offset to control the
+// distance of data labels from the axis, and saves the result as a PPTX file.
+// It demonstrates chart customization using Aspose.Slides for .NET.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Data Label, Offset, Axis, 
-// Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, chart label offset, horizontal axis, data label distance
 //
 // Use Cases:
-// - Automate setting data label offset from axis in PowerPoint charts.
-// - Build C# tools for PowerPoint presentation processing and chart customization.
-// - Generate or transform PPTX files with specific chart label positioning.
-// - Validate chart formatting workflows before publishing or integration.
+// - Automating chart formatting in generated presentations.
+// - Validating visual output of PowerPoint reports in CI pipelines.
+// - Integrating custom chart styling into .NET business applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
-using Aspose.Slides;
-using Aspose.Slides.Export;
+using System;
+using System.IO;
 
-class Program
+namespace AsposeSlidesChartLabelOffset
 {
-    static void Main()
+    class Program
     {
-        try
+        static void Main(string[] args)
         {
-            // Create a new presentation
-            Presentation presentation = new Presentation();
+            // Define output file path
+            string outputPath = Path.Combine(Environment.CurrentDirectory, "ChartLabelOffsetDemo.pptx");
 
-            // Get the first slide
-            ISlide slide = presentation.Slides[0];
+            // Ensure the output directory exists
+            string outputDirectory = Path.GetDirectoryName(outputPath);
+            if (!Directory.Exists(outputDirectory))
+            {
+                Directory.CreateDirectory(outputDirectory);
+            }
 
-            // Add a clustered column chart
-            Charts.IChart chart = slide.Shapes.AddChart(
-                Charts.ChartType.ClusteredColumn,
-                50, 50, 400, 300);
+            try
+            {
+                // Create a new presentation
+                Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-            // Set the distance of data labels from the axis (using axis label offset)
-            chart.Axes.HorizontalAxis.LabelOffset = (ushort)100; // value between 0 and 1000
+                // Access the first slide
+                Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-            // Save the presentation
-            presentation.Save("Output.pptx", SaveFormat.Pptx);
-        }
-        catch (System.Exception ex)
-        {
-            // Handle exceptions (e.g., unsupported format)
-            // Format not supported
+                // Add a clustered column chart
+                float chartX = 50f;
+                float chartY = 50f;
+                float chartWidth = 600f;
+                float chartHeight = 400f;
+                Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(
+                    Aspose.Slides.Charts.ChartType.ClusteredColumn,
+                    chartX,
+                    chartY,
+                    chartWidth,
+                    chartHeight);
+
+                // Set the horizontal axis label offset (distance from axis)
+                // Value is in points; using 20 as an example
+                chart.Axes.HorizontalAxis.LabelOffset = (ushort)20;
+
+                // Save the presentation
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            }
+            catch (Exception ex)
+            {
+                // Handle any unexpected errors (e.g., missing Aspose.Slides license)
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
         }
     }
 }
