@@ -17,6 +17,7 @@
 // - Build .NET tools for PowerPoint presentation processing with VBA support.
 // - Generate or transform PPTX files while preserving or reusing VBA code.
 // - Validate and test VBA macro integration in automated workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
