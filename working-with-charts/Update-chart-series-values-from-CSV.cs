@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint chart data manipulation.
 // - Integrate CSV-driven chart updates into .NET applications.
 // - Validate and transform PPTX files with external data before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
