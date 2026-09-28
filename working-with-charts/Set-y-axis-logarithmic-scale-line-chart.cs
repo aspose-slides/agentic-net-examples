@@ -16,6 +16,7 @@
 // - Automate creation of PPTX files with custom chart configurations.
 // - Integrate chart scaling logic into .NET applications for reporting.
 // - Validate presentation workflows involving logarithmic axes.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
