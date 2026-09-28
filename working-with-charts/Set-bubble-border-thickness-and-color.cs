@@ -18,6 +18,7 @@
 // - Build C# tools for customizing chart aesthetics in presentations.
 // - Generate or transform PPTX files with styled bubble charts in .NET applications.
 // - Validate and preview presentation visual styles before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
