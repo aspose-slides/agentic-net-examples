@@ -16,6 +16,7 @@
 // - Automate creation of PowerPoint slides containing mathematical equations.
 // - Export mathematical content to MathML for interoperability.
 // - Build robust .NET tools for PowerPoint and MathML handling.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
