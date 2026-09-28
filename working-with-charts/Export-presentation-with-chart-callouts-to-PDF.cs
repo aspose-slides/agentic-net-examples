@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint chart manipulation and PDF conversion.
 // - Generate or transform PPTX files with customized chart labeling in .NET.
 // - Validate chart callout rendering before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
