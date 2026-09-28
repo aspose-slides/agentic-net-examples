@@ -16,6 +16,7 @@
 // - Prepare presentations for distribution without dependency issues.
 // - Automate VBA reference management in batch processing pipelines.
 // - Integrate VBA cleanup into .NET PowerPoint manipulation tools.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
