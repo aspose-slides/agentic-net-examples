@@ -16,6 +16,7 @@
 // - Build automated tests for slide layout logic.
 // - Generate or modify PPTX files with precise geometric elements.
 // - Ensure consistency of custom graphics before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
