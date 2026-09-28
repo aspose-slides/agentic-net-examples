@@ -19,6 +19,7 @@
 // - Build .NET utilities that adjust chart layout based on actual size.
 // - Automate validation of chart dimensions in PowerPoint files.
 // - Ensure reliable chart rendering before further processing or publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
