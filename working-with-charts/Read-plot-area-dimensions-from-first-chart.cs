@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint presentation analysis.
 // - Validate chart layout during PPTX generation or transformation.
 // - Integrate plot area data retrieval into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
