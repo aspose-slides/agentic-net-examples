@@ -17,6 +17,7 @@
 // - Build validation tools for mathematical content in PowerPoint files.
 // - Automate extraction of math equation metadata from PPTX presentations.
 // - Integrate math detection into .NET applications that process slides.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

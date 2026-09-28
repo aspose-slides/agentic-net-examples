@@ -16,6 +16,7 @@
 // - Build tools that analyze or validate PPTX content for math expressions.
 // - Integrate math detection into automated PowerPoint workflows.
 // - Prepare presentations for further processing based on math content.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

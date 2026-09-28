@@ -17,6 +17,7 @@
 // - Build .NET tools that process or transform mathematical content.
 // - Validate or archive MathML representations of slide equations.
 // - Integrate MathML extraction into larger document processing pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

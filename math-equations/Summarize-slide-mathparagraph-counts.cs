@@ -17,6 +17,7 @@
 // - Build C# tools for analyzing mathematical content in PPTX files.
 // - Integrate slide math analysis into .NET applications.
 // - Validate and report on presentation content before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -17,6 +17,7 @@
 // - Build C# utilities for slide‑by‑slide mathematical content analysis.
 // - Integrate MathML extraction into .NET applications or services.
 // - Validate and transform mathematical equations in PPTX files before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;

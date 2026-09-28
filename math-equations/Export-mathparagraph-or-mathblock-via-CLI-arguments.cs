@@ -19,6 +19,7 @@
 //   content for documentation or web publishing.
 // - Integrate math export functionality into .NET applications or CI pipelines.
 // - Validate and test math equation rendering and export in PowerPoint files.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

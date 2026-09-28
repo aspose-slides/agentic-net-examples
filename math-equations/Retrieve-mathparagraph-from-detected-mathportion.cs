@@ -17,6 +17,7 @@
 // - Build C# tools for processing mathematical equations in PowerPoint.
 // - Generate LaTeX representations of slide equations.
 // - Validate and transform math content before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides.Export;

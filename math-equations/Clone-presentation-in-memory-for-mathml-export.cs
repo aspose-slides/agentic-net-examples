@@ -17,6 +17,7 @@
 // - Export mathematical equations from PowerPoint slides to MathML.
 // - Build .NET tools that manipulate PPTX files and extract MathML content.
 // - Validate or transform presentations containing math equations before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

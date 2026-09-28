@@ -2,7 +2,16 @@
 
 
 
+
+
+
+
 This category contains 29 standalone C# examples for Aspose.Slides for .NET. These examples help developers automate PowerPoint presentation workflows related to math equations.
+These files are tested and verified with Aspose.Slides for .NET v26.9.0.
+
+
+
+
 
 
 
@@ -10,11 +19,23 @@ This category contains 29 standalone C# examples for Aspose.Slides for .NET. The
 
 
 
+
+
+
+
 - Automate repetitive presentation-processing tasks in .NET applications.
+
+
 
 - Generate, inspect, transform, or validate PPTX files in server-side workflows.
 
+
+
 - Provide coding agents with direct, category-specific examples and API usage patterns.
+
+
+
+
 
 
 
@@ -22,63 +43,107 @@ This category contains 29 standalone C# examples for Aspose.Slides for .NET. The
 
 
 
-- `Apply-superscript-to-mathportion-before-export.cs`
-
-- `Capture-mathml-from-memorystream-as-bytearray.cs`
-
-- `Check-shapes-for-mathparagraphs-in-PPTX.cs`
-
-- `Clone-presentation-in-memory-for-mathml-export.cs`
-
-- `Close-filestream-after-writeasmathml-failure.cs`
-
-- `Convert-memorystream-to-utf8-string.cs`
-
-- `Debug-writeasmathml-output-to-console.cs`
-
-- `Ensure-writeasmathml-does-not-modify-original.cs`
-
-- `Export-mathblock-to-mathml-using-memorystream.cs`
-
-- `Export-mathml-from-shapes-with-alttext.cs`
-
-- `Export-mathml-to-UNC-share.cs`
-
-- `Export-mathparagraph-or-mathblock-via-CLI-arguments.cs`
 
 
+
+
+Total examples: 29
+
+- [Apply-superscript-to-mathportion-before-export.cs](./Apply-superscript-to-mathportion-before-export.cs)
+- [Capture-mathml-from-memorystream-as-bytearray.cs](./Capture-mathml-from-memorystream-as-bytearray.cs)
+- [Check-shapes-for-mathparagraphs-in-PPTX.cs](./Check-shapes-for-mathparagraphs-in-PPTX.cs)
+- [Clone-presentation-in-memory-for-mathml-export.cs](./Clone-presentation-in-memory-for-mathml-export.cs)
+- [Close-filestream-after-writeasmathml-failure.cs](./Close-filestream-after-writeasmathml-failure.cs)
+- [Convert-memorystream-to-utf8-string.cs](./Convert-memorystream-to-utf8-string.cs)
+- [Debug-writeasmathml-output-to-console.cs](./Debug-writeasmathml-output-to-console.cs)
+- [Ensure-writeasmathml-does-not-modify-original.cs](./Ensure-writeasmathml-does-not-modify-original.cs)
+- [Export-mathblock-to-mathml-using-memorystream.cs](./Export-mathblock-to-mathml-using-memorystream.cs)
+- [Export-mathml-from-shapes-with-alttext.cs](./Export-mathml-from-shapes-with-alttext.cs)
+- [Export-mathml-to-UNC-share.cs](./Export-mathml-to-UNC-share.cs)
+- [Export-mathparagraph-or-mathblock-via-CLI-arguments.cs](./Export-mathparagraph-or-mathblock-via-CLI-arguments.cs)
+- [Export-mathparagraph-to-mathml-with-filestream.cs](./Export-mathparagraph-to-mathml-with-filestream.cs)
+- [Find-mathportions-in-PPTX-slides.cs](./Find-mathportions-in-PPTX-slides.cs)
+- [Generate-mathml-from-slide-notes.cs](./Generate-mathml-from-slide-notes.cs)
+- [Load-PPTX-presentation-and-extract-math.cs](./Load-PPTX-presentation-and-extract-math.cs)
+- [Log-slide-index-shape-mathml-path.cs](./Log-slide-index-shape-mathml-path.cs)
+- [Log-writeasmathml-exception-for-unsupported-mathblock.cs](./Log-writeasmathml-exception-for-unsupported-mathblock.cs)
+- [Map-slide-numbers-to-mathml-dictionary.cs](./Map-slide-numbers-to-mathml-dictionary.cs)
+- [Measure-writeasmathml-execution-time.cs](./Measure-writeasmathml-execution-time.cs)
+- [Retrieve-mathparagraph-from-detected-mathportion.cs](./Retrieve-mathparagraph-from-detected-mathportion.cs)
+- [Retry-writeasmathml-on-transient-IO-errors.cs](./Retry-writeasmathml-on-transient-IO-errors.cs)
+- [Save-mathml-bytearray-to-XML-file.cs](./Save-mathml-bytearray-to-XML-file.cs)
+- [Select-mathportions-with-variable-using-LINQ.cs](./Select-mathportions-with-variable-using-LINQ.cs)
+- [Skip-hidden-slides-during-mathml-export.cs](./Skip-hidden-slides-during-mathml-export.cs)
+- [Skip-mathblock-on-writeasmathml-notsupportedexception.cs](./Skip-mathblock-on-writeasmathml-notsupportedexception.cs)
+- [Summarize-slide-mathparagraph-counts.cs](./Summarize-slide-mathparagraph-counts.cs)
+- [Validate-exported-mathml-against-expected-XML.cs](./Validate-exported-mathml-against-expected-XML.cs)
+- [Verify-presentation-file-size-and-checksum.cs](./Verify-presentation-file-size-and-checksum.cs)
 
 ## Related Files
 
 
 
+
+
+
+
 - [Category instructions](./AGENTS.md)
+
+
 
 - [Repository agent guide](../AGENTS.md)
 
+
+
 - [Structured index](../index.json)
 
+
+
 <!-- SEO-FAQ:BEGIN -->
+
 ## Developer FAQ
+
+
 
 These questions target common developer searches for Aspose.Slides for .NET `math-equations` examples.
 
+
+
 ### How do I add, clone, reorder, or remove PowerPoint slides in .NET?
+
 Use slide management examples to work with `ISlide`, slide collections, layouts, masters, and sections while preserving presentation structure.
 
+
+
 ### How do I edit PowerPoint shapes, text, tables, or SmartArt in C#?
+
 Use the shape, text, table, and SmartArt examples to locate shapes on a slide, cast to the appropriate Aspose.Slides interfaces, update content or formatting, and save the modified PPTX.
 
+
+
 ### How do I extract presentation metadata, comments, notes, tags, VBA, or security information?
+
 Use the inspection and management examples to access document properties, comments, notes slides, custom tags, VBA projects, signatures, protection settings, and related metadata.
 
+
+
 ### How do I use Aspose.Slides for .NET for math equations in C#?
+
 Use the `math-equations` examples to find standalone C# patterns for math equations. Each example shows how to load or create an `Aspose.Slides.Presentation`, apply the operation, and save output with the correct Aspose.Slides API.
 
+
+
 ### Which math equations examples are best for coding agents?
+
 Start with the files listed in this directory and the category AGENTS.md. The strongest search terms for this category are: pptx, export, mathml, slide, slides.
 
+
+
 ### Are the math-equations examples standalone C# programs?
+
 Yes. The examples are generated as standalone console-style C# files and are intended to compile and run independently in .NET workflows.
 
+
+
 <!-- SEO-FAQ:END -->
+

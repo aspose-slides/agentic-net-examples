@@ -19,6 +19,7 @@
 // - Automate testing of math rendering in PowerPoint presentations.
 // - Build C# utilities for verifying equation export consistency.
 // - Ensure exported MathML meets expected standards before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

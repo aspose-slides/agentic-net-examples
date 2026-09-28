@@ -18,6 +18,7 @@
 // - Build C# tools for extracting mathematical equations from PowerPoint presentations.
 // - Generate or transform PPTX files with embedded equations in .NET applications.
 // - Validate and test presentation workflows involving MathML conversion.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -19,6 +19,7 @@
 // - Generate per‑shape MathML files for further processing or analysis.
 // - Log slide and shape information for auditing or debugging presentation content.
 // - Integrate MathML extraction into .NET applications or CI pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

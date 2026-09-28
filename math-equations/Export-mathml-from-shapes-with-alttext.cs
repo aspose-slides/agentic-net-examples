@@ -18,6 +18,7 @@
 // - Build tools that harvest mathematical equations from presentations.
 // - Validate or archive mathematical content embedded in slides.
 // - Integrate MathML extraction into .NET applications handling PowerPoint data.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

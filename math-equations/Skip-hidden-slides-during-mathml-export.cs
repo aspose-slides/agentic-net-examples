@@ -17,6 +17,7 @@
 // - Build C# tools for PowerPoint slide management.
 // - Automate PPTX generation while omitting hidden slides.
 // - Integrate slide filtering into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
