@@ -17,6 +17,7 @@
 // - Build C# utilities for batch processing of PowerPoint and OpenDocument files.
 // - Integrate chart data table activation into .NET applications.
 // - Validate and transform presentation content before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
