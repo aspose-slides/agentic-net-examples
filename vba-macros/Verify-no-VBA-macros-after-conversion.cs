@@ -17,6 +17,7 @@
 // - Automate macro removal in batch processing pipelines.
 // - Validate presentations after conversion or editing steps.
 // - Integrate macro‑free checks into .NET applications handling PPTX files.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
