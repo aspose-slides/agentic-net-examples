@@ -1,75 +1,95 @@
 // -----------------------------------------------------------------------------
-// Example: Add data labels to pie chart using C#
+// Example: Add Data Labels to Pie Chart using Aspose.Slides for .NET
 //
 // Description:
-// Demonstrates how to create a pie chart, populate it with data, and enable
-// data labels (category name and value) using C# and Aspose.Slides for .NET.
-// The example shows the required steps to build a presentation, add a chart,
-// configure its data, turn on data labels, and save the result as a PPTX file.
-// Developers can use this pattern to automate chart creation, enhance visual
-// reporting, or integrate PowerPoint generation into .NET applications.
+// This console application creates a new PowerPoint presentation, adds a
+// pie chart, populates it with sample categories and values, and enables data
+// labels to show both category names and values. The result is saved as a PPTX
+// file. Useful for automating chart generation in reporting or .NET
+// applications.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Pie Chart, Data Labels, Chart,
-// Presentation Generation, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, pie chart, data labels
 //
 // Use Cases:
-// - Automate creation of pie charts with visible data labels.
-// - Build C# tools for generating PowerPoint reports with charts.
-// - Integrate chart generation into .NET applications or services.
-// - Produce presentations that include detailed chart annotations.
+// - Generate sales distribution charts programmatically.
+// - Create automated PowerPoint reports with labeled pie charts.
+// - Integrate chart creation into a .NET backend service.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
-
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-namespace AddDataLabelsToPieChart
+namespace AsposeSlidesPieChartExample
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Define output path for the generated presentation
-            string outputPath = Path.Combine(Directory.GetCurrentDirectory(), "AddDataLabelsToPieChart.pptx");
+            string outputPath = "PieChartWithDataLabels.pptx";
 
-            // Create a new presentation
-            using (Presentation pres = new Presentation())
+            try
             {
-                // Use the first (default) slide
-                ISlide slide = pres.Slides[0];
+                // Ensure the output directory exists
+                string outputDirectory = Path.GetDirectoryName(Path.GetFullPath(outputPath));
+                if (!String.IsNullOrEmpty(outputDirectory) && !Directory.Exists(outputDirectory))
+                {
+                    Directory.CreateDirectory(outputDirectory);
+                }
+
+                // Create a new presentation
+                Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+
+                // Get the first slide
+                Aspose.Slides.ISlide slide = presentation.Slides[0];
 
                 // Add a pie chart to the slide
-                IChart chart = slide.Shapes.AddChart(ChartType.Pie, 50, 50, 500, 400);
+                Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(
+                    Aspose.Slides.Charts.ChartType.Pie,
+                    50f, 50f, 500f, 400f);
 
-                // Access the chart's workbook to set data
-                IChartDataWorkbook wb = chart.ChartData.ChartDataWorkbook;
+                // Access chart data
+                Aspose.Slides.Charts.IChartData chartData = chart.ChartData;
 
-                // Clear any default series and categories
-                chart.ChartData.Series.Clear();
-                chart.ChartData.Categories.Clear();
+                // Clear default series and categories
+                chartData.Series.Clear();
+                chartData.Categories.Clear();
 
-                // Add categories (slice names)
-                chart.ChartData.Categories.Add(wb.GetCell(0, 0, 1, "Category 1"));
-                chart.ChartData.Categories.Add(wb.GetCell(0, 0, 2, "Category 2"));
-                chart.ChartData.Categories.Add(wb.GetCell(0, 0, 3, "Category 3"));
+                // Sample data
+                string[] categories = new string[] { "Apples", "Bananas", "Cherries", "Dates" };
+                double[] values = new double[] { 30, 20, 25, 25 };
 
-                // Add a series and populate data points
-                IChartSeries series = chart.ChartData.Series.Add(ChartType.Pie);
-                series.DataPoints.AddDataPointForPieSeries(wb.GetCell(0, 1, 1, 30));
-                series.DataPoints.AddDataPointForPieSeries(wb.GetCell(0, 1, 2, 20));
-                series.DataPoints.AddDataPointForPieSeries(wb.GetCell(0, 1, 3, 50));
+                // Add categories
+                for (int i = 0; i < categories.Length; i++)
+                {
+                    Aspose.Slides.Charts.IChartCategory category = chartData.Categories.Add(
+                        chartData.ChartDataWorkbook.GetCell(0, i, 0, categories[i]));
+                }
 
-                // Enable data labels: show both category name and value
+                // Add a series
+                Aspose.Slides.Charts.IChartSeries series = chartData.Series.Add(
+                    chartData.ChartDataWorkbook.GetCell(0, 0, 1, "Series 1"),
+                    chart.Type);
+
+                // Add data points for the series
+                for (int i = 0; i < values.Length; i++)
+                {
+                    series.DataPoints.AddDataPointForPieSeries(
+                        chartData.ChartDataWorkbook.GetCell(0, i, 1, values[i]));
+                }
+
+                // Enable data labels: show category name and value
                 series.Labels.DefaultDataLabelFormat.ShowCategoryName = true;
                 series.Labels.DefaultDataLabelFormat.ShowValue = true;
 
-                // Save the presentation to the specified file
-                pres.Save(outputPath, SaveFormat.Pptx);
+                // Save the presentation
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                Console.WriteLine("Presentation saved successfully to: " + Path.GetFullPath(outputPath));
             }
-
-            Console.WriteLine("Presentation saved to " + outputPath);
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
         }
     }
 }
