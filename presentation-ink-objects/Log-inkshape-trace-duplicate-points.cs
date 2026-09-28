@@ -16,6 +16,7 @@
 // - Build validation tools for ink annotations in PPTX files.
 // - Automate cleanup or analysis of ink data in .NET applications.
 // - Integrate ink trace diagnostics into larger PowerPoint workflow pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

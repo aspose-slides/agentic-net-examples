@@ -15,6 +15,7 @@
 // - Build C# utilities for analyzing Ink annotations in presentations.
 // - Integrate trace counting into PowerPoint workflow automation.
 // - Validate Ink content before publishing or further processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

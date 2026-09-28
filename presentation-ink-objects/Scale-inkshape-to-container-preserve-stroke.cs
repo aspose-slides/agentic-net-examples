@@ -12,6 +12,7 @@
 // - Automate PowerPoint content adjustments in .NET applications.
 // - Build tools for batch processing of PPTX files containing Ink annotations.
 // - Ensure visual consistency of Ink strokes after scaling operations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

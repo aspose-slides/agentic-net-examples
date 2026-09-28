@@ -18,6 +18,7 @@
 // - Automate bulk modification of Ink objects across multiple slides.
 // - Build .NET utilities for PPTX content transformation.
 // - Integrate Ink shape replacement into larger presentation processing pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

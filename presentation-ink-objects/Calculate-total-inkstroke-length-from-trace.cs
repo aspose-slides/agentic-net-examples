@@ -17,6 +17,7 @@
 // - Build C# tools for analyzing handwritten annotations in PPTX files.
 // - Generate reports on ink usage within presentations.
 // - Validate ink content before publishing or further processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

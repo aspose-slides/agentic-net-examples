@@ -18,6 +18,7 @@
 // - Build tools that modify handwritten annotations programmatically.
 // - Automate preparation of PPTX files with updated ink data.
 // - Validate and test ink manipulation workflows in .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

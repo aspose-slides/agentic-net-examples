@@ -17,6 +17,7 @@
 // - Build C# tools for processing Ink objects in PowerPoint files.
 // - Automate removal or replacement of ink data before publishing.
 // - Validate and transform PPTX files containing handwritten annotations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

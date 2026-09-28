@@ -17,6 +17,7 @@
 // - Build C# tools for inspecting Ink annotations in presentations.
 // - Automate validation of Ink content in PowerPoint slides.
 // - Integrate Ink trace processing into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

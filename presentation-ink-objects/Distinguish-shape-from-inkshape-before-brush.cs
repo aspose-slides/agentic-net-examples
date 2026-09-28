@@ -17,6 +17,7 @@
 // - Apply visual changes to regular shapes while preserving Ink shape data.
 // - Automate PPTX workflows that require separate handling of Ink and non‑Ink objects.
 // - Build .NET tools for presentation analysis and transformation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

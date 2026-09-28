@@ -17,6 +17,7 @@
 // - Automate batch processing of PPTX files to adjust Ink object dimensions.
 // - Integrate Ink shape manipulation into .NET applications for custom PPTX workflows.
 // - Preserve visual consistency of handwritten annotations while resizing slides.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
