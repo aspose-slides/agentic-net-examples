@@ -1,45 +1,72 @@
 // -----------------------------------------------------------------------------
-// Example: Unlink data label number format from source using C#
+// Example: Unlink Data Label Number Format from Source in Pie Chart
 //
 // Description:
-// Demonstrates how to unlink a data label's number format from its source data
-// and apply a custom number format to a pie chart using Aspose.Slides for .NET.
-// The example creates a presentation, adds a pie chart, modifies the data label
-// formatting, and saves the result as a PPTX file.
+// This console application creates a PowerPoint presentation, adds a pie chart,
+// unlinks the data label number format from its source data, applies a custom
+// number format, and saves the file as PPTX. It demonstrates using Aspose.Slides
+// for .NET to control chart data label formatting.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Unlink, Data Label, Number Format,
-// Chart, Pie Chart, Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, chart data label, number format, unlink
 //
 // Use Cases:
-// - Automate the removal of linked number formatting for chart data labels.
-// - Build C# utilities that customize chart appearance in PowerPoint files.
-// - Generate or modify PPTX presentations with specific data label formats.
-// - Validate and preprocess presentation content before distribution.
+// - Generate automated reports with customized chart label formats.
+// - Prepare presentation slides where data label formatting must differ from source.
+// - Create templates that enforce specific number formatting on charts.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
-using Aspose.Slides;
-using Aspose.Slides.Export;
+using System;
 
-class Program
+namespace AsposeSlidesExample
 {
-    static void Main()
+    class Program
     {
-        // Create a new presentation
-        Presentation presentation = new Presentation();
+        static void Main(string[] args)
+        {
+            try
+            {
+                // Output file path
+                string outputPath = "UnlinkedDataLabelNumberFormat.pptx";
 
-        // Get the first slide (created by default)
-        ISlide slide = presentation.Slides[0];
+                // Create a new presentation
+                Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-        // Add a pie chart to the slide
-        Charts.IChart chart = slide.Shapes.AddChart(Charts.ChartType.Pie, 50, 50, 400, 400);
+                // Get the first slide
+                Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-        // Unlink data label number format from source data
-        chart.ChartData.Series[0].Labels.DefaultDataLabelFormat.IsNumberFormatLinkedToSource = false;
+                // Add a pie chart to the slide
+                Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(
+                    Aspose.Slides.Charts.ChartType.Pie,
+                    50f, 50f, 500f, 400f);
 
-        // Optionally set a custom number format for the data labels
-        chart.ChartData.Series[0].Labels.DefaultDataLabelFormat.NumberFormat = "0.0%";
+                // Access the chart's workbook to add custom data
+                Aspose.Slides.Charts.IChartDataWorkbook workbook = chart.ChartData.ChartDataWorkbook;
 
-        // Save the presentation
-        presentation.Save("UnlinkedDataLabel.pptx", SaveFormat.Pptx);
+                // Clear any default series
+                chart.ChartData.Series.Clear();
+
+                // Add a new series with sample data
+                Aspose.Slides.Charts.IChartSeries series = chart.ChartData.Series.Add(
+                    workbook.GetCell(0, 0, 1, 30),
+                    chart.Type);
+
+                // Add data points to the series
+                series.DataPoints.AddDataPointForPieSeries(workbook.GetCell(0, 0, 2, 20));
+                series.DataPoints.AddDataPointForPieSeries(workbook.GetCell(0, 0, 3, 50));
+
+                // Unlink the number format from the source and apply a custom format
+                series.Labels.DefaultDataLabelFormat.IsNumberFormatLinkedToSource = false;
+                series.Labels.DefaultDataLabelFormat.NumberFormat = "0.00%";
+                series.Labels.DefaultDataLabelFormat.ShowValue = true;
+
+                // Save the presentation
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+        }
     }
 }
