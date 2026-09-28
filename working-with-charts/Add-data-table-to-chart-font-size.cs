@@ -1,61 +1,66 @@
 // -----------------------------------------------------------------------------
-// Example: Add data table to chart font size using C#
+// Example: Add Data Table to Chart and Set Font Size using Aspose.Slides for .NET
 //
 // Description:
-// Demonstrates how to enable a data table for a chart and set its font size
-// using C# and Aspose.Slides for .NET. The example creates a presentation,
-// adds a clustered column chart, shows the data table, customizes the table
-// font height for readability, and saves the result as a PPTX file.
-// This pattern can be used to automate chart formatting in PowerPoint files.
+// This console application creates a new PowerPoint presentation, adds a
+// clustered column chart, enables its data table, customizes the data table
+// font height for better readability, and saves the file as PPTX. It uses
+// Aspose.Slides for .NET to automate chart formatting in PowerPoint files.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Data Table, Font Size,
-// Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, chart data table, font size, clustered column chart
 //
 // Use Cases:
-// - Automate adding a data table to a chart and adjusting its font size.
-// - Build C# utilities for PowerPoint chart styling.
-// - Generate or modify PPTX files with customized chart data tables.
-// - Validate chart appearance in automated presentation workflows.
+// - Automatically generate reports with charts that include data tables.
+// - Standardize chart appearance across multiple presentations.
+// - Enhance readability of chart data tables in automated slide decks.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
-
 using System;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-class Program
+namespace AsposeSlidesChartDataTableExample
 {
-    static void Main()
+    class Program
     {
-        try
+        static void Main(string[] args)
         {
-            // Create a new presentation
-            Presentation presentation = new Presentation();
+            string outputPath = "ChartWithDataTable.pptx";
 
-            // Access the first slide
-            ISlide slide = presentation.Slides[0];
+            try
+            {
+                // Create a new presentation
+                Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-            // Add a clustered column chart to the slide
-            Charts.IChart chart = slide.Shapes.AddChart(
-                Charts.ChartType.ClusteredColumn,
-                50f, 50f, 500f, 400f);
+                // Get the first slide
+                Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-            // Enable the data table for the chart
-            chart.HasDataTable = true;
+                // Add a clustered column chart
+                Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(
+                    Aspose.Slides.Charts.ChartType.ClusteredColumn,
+                    50, 50, 500, 400);
 
-            // Customize the font size of the data table for better readability
-            chart.ChartDataTable.TextFormat.PortionFormat.FontHeight = 14f;
+                // Enable the data table for the chart
+                chart.HasDataTable = true;
 
-            // Save the presentation
-            presentation.Save("ChartWithDataTable.pptx", SaveFormat.Pptx);
+                // Set the font height of the data table for readability
+                chart.ChartDataTable.TextFormat.PortionFormat.FontHeight = 12f;
 
-            // Dispose the presentation object
-            presentation.Dispose();
-        }
-        catch (Exception ex)
-        {
-            // Handle any unexpected errors (e.g., unsupported format)
-            Console.WriteLine("An error occurred: " + ex.Message);
+                // Save the presentation
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+
+                // Clean up
+                presentation.Dispose();
+
+                Console.WriteLine("Presentation saved successfully to: " + outputPath);
+            }
+            catch (System.IO.IOException ioEx)
+            {
+                Console.WriteLine("IO error: " + ioEx.Message);
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
         }
     }
 }
