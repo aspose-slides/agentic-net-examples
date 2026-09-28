@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint chart extraction and archiving.
 // - Integrate chart image generation into .NET applications.
 // - Validate and process presentation content before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
