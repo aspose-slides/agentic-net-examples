@@ -17,6 +17,7 @@
 // - Automate preparation of PPTX files for publishing or sharing as PNGs.
 // - Integrate chart cleanup steps into .NET applications that generate or modify slides.
 // - Ensure visual consistency of exported slide images by eliminating unwanted error bars.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
