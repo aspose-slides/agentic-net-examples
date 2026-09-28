@@ -17,6 +17,7 @@
 // - Adjust chart plot area programmatically in bulk or automated workflows.
 // - Save modified presentations back to byte arrays for further transmission or storage.
 // - Integrate PPTX chart adjustments into .NET tools or services.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
