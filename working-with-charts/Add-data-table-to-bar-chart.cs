@@ -16,6 +16,7 @@
 // - Build .NET tools for enhancing PowerPoint presentations.
 // - Generate or modify PPTX files with chart data tables.
 // - Validate chart rendering in automated workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
