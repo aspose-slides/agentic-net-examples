@@ -19,6 +19,7 @@
 // - Build C# tools for PowerPoint chart animation extraction.
 // - Generate GIF animations from PPTX charts for web or documentation.
 // - Validate and preview chart animations in .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
