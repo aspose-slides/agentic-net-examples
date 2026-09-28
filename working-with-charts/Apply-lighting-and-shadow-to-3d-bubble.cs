@@ -17,6 +17,7 @@
 // - Build C# tools for PowerPoint chart processing.
 // - Generate or transform PPTX files with 3D bubble charts in .NET applications.
 // - Validate chart rendering before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.Drawing;
