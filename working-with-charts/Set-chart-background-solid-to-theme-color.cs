@@ -1,54 +1,63 @@
 // -----------------------------------------------------------------------------
-// Example: Set chart background solid to theme color using C#
+// Example: Set Chart Background to Theme Accent Color using Aspose.Slides
 //
 // Description:
-// Demonstrates how to create a presentation, add a clustered column chart,
-// set the chart background to a solid fill using a theme accent color, and
-// save the result as a PPTX file using Aspose.Slides for .NET. This example
-// illustrates the essential steps for chart manipulation and background styling
-// in PowerPoint automation.
+// This console application creates a new PowerPoint presentation, adds a
+// clustered column chart, applies a solid fill background using a theme
+// accent color, and saves the file as PPTX. It demonstrates chart creation
+// and background styling with Aspose.Slides for .NET.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Background, Solid,
-// Theme, Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, chart background, theme color, solid fill
 //
 // Use Cases:
-// - Automate setting chart background to a theme color.
-// - Build C# tools for PowerPoint chart styling.
-// - Generate or modify PPTX files with customized chart appearances.
-// - Validate presentation workflows involving chart formatting.
+// - Automating report generation with styled charts.
+// - Applying corporate theme colors to chart backgrounds programmatically.
+// - Generating presentations without manual PowerPoint editing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
+using System;
 
-using Aspose.Slides;
-using Aspose.Slides.Export;
-
-class Program
+namespace ChartBackgroundExample
 {
-    static void Main()
+    class Program
     {
-        try
+        static void Main(string[] args)
         {
-            Presentation presentation = new Presentation();
-            ISlide slide = presentation.Slides[0];
+            string outputPath = "ChartBackgroundThemeColor.pptx";
 
-            // Add a clustered column chart to the slide
-            Charts.IChart chart = slide.Shapes.AddChart(Charts.ChartType.ClusteredColumn, 50, 50, 400, 300);
+            try
+            {
+                // Create a new presentation
+                Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-            // Set the chart background to a solid fill using a theme accent color
-            chart.FillFormat.FillType = FillType.Solid;
-            chart.FillFormat.SolidFillColor.SchemeColor = SchemeColor.Accent1;
+                // Define chart position and size (float literals)
+                float chartX = 50f;
+                float chartY = 50f;
+                float chartWidth = 500f;
+                float chartHeight = 400f;
 
-            // Save the presentation
-            presentation.Save("ChartBackgroundTheme.pptx", SaveFormat.Pptx);
-            presentation.Dispose();
-        }
-        catch (System.NotSupportedException)
-        {
-            // Format not supported
-        }
-        catch (System.Exception)
-        {
-            // Handle other exceptions
+                // Add a clustered column chart to the first slide
+                Aspose.Slides.Charts.IChart chart = presentation.Slides[0].Shapes.AddChart(
+                    Aspose.Slides.Charts.ChartType.ClusteredColumn,
+                    chartX, chartY, chartWidth, chartHeight);
+
+                // Set chart background to a solid fill using a theme accent color
+                chart.FillFormat.FillType = Aspose.Slides.FillType.Solid;
+                chart.FillFormat.SolidFillColor.SchemeColor = Aspose.Slides.SchemeColor.Accent2;
+
+                // Save the presentation
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+
+                // Clean up
+                presentation.Dispose();
+
+                Console.WriteLine("Presentation saved to " + outputPath);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
         }
     }
 }
