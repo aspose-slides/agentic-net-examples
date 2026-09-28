@@ -18,6 +18,7 @@
 // - Build C# utilities for managing presentation metadata.
 // - Integrate tag synchronization into .NET PowerPoint workflows.
 // - Ensure consistent custom data across distributed PPTX files.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
