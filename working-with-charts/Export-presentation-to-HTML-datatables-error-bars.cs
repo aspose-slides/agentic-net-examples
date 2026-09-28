@@ -16,6 +16,7 @@
 // - Convert PPTX files to HTML for web viewing with datatable support.
 // - Automate chart creation and export workflows in .NET applications.
 // - Validate error bar rendering before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
