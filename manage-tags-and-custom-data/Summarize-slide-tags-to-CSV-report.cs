@@ -17,6 +17,7 @@
 // - Build C# utilities that extract metadata from PowerPoint files.
 // - Integrate slide‑tag extraction into automated .NET workflows.
 // - Validate or transform presentation data before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
