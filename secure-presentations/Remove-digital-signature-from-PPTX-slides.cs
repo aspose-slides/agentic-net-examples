@@ -16,6 +16,7 @@
 // - Build .NET tools for cleaning PPTX presentations before distribution.
 // - Integrate signature removal into larger presentation processing pipelines.
 // - Ensure PPTX files are free of digital signatures for compliance or editing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
