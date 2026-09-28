@@ -16,6 +16,7 @@
 // - Automate PowerPoint reports that require custom error bar data.
 // - Build .NET tools for scientific or financial presentations.
 // - Validate and export presentations with custom chart error configurations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
