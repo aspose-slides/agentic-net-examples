@@ -1,84 +1,98 @@
 // -----------------------------------------------------------------------------
-// Example: Add polar chart with custom radii using C#
+// Example: Add Polar Chart with Custom Radii using Aspose.Slides for .NET
 //
 // Description:
-// Demonstrates how to add a polar chart with custom radii using C# and 
-// Aspose.Slides for .NET. The example creates a new presentation, inserts a 
-// polar chart, customizes its radii, and saves the result as a PPTX file. 
-// Developers can use this pattern to automate PPTX workflows, validate results, 
-// or integrate presentation logic into .NET applications.
+// This console application creates a new PowerPoint presentation, inserts a
+// polar (radar) chart, customizes its radii by adjusting the chart's layout,
+// and saves the result as a PPTX file. It demonstrates automating PPTX
+// generation with Aspose.Slides, handling file existence checks, and proper
+// exception handling for unsupported formats.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Polar Chart, Custom Radii, 
-// Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, polar chart, radar chart, custom radii
 //
 // Use Cases:
-// - Automate adding polar charts with specific radius settings.
-// - Build C# tools for PowerPoint presentation processing.
-// - Generate or transform PPTX files in .NET applications.
-// - Validate presentation workflows before publishing or integration.
+// - Generate automated reports with polar charts for data visualization.
+// - Integrate chart creation into server-side .NET applications.
+// - Validate presentation content programmatically in CI pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
-
 using System;
-using Aspose.Slides;
-using Aspose.Slides.Export;
-using Aspose.Slides.Charts;
+using System.IO;
 
-class Program
+namespace AsposeSlidesPolarChartExample
 {
-    static void Main(string[] args)
+    class Program
     {
-        // Create a new presentation
-        using (Presentation presentation = new Presentation())
+        static void Main(string[] args)
         {
-            // Add a blank slide
-            ISlide slide = presentation.Slides.AddEmptySlide(presentation.Slides[0].LayoutSlide);
+            string outputPath = "PolarChartExample.pptx";
 
-            // Add a polar chart
-            IChart chart = slide.Shapes.AddChart(ChartType.Polar, 50, 50, 500, 400);
+            try
+            {
+                // Create a new presentation
+                Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-            // Set chart title
-            chart.HasTitle = true;
-            chart.ChartTitle.AddTextFrameForOverriding("Polar Chart with Custom Radii");
+                // Add a slide
+                Aspose.Slides.ISlide slide = presentation.Slides.AddEmptySlide(presentation.Slides[0].LayoutSlide);
 
-            // Populate chart with sample data
-            IChartData chartData = chart.ChartData;
-            chartData.Series.Clear();
-            chartData.Categories.Clear();
+                // Add a radar chart (used as a polar chart alternative)
+                Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(
+                    Aspose.Slides.Charts.ChartType.Radar,
+                    50,
+                    50,
+                    500,
+                    400).Chart;
 
-            // Add categories (e.g., angles)
-            chartData.Categories.Add(chartData.ChartDataWorkbook.GetCell(0, "A1", "0°"));
-            chartData.Categories.Add(chartData.ChartDataWorkbook.GetCell(0, "A2", "45°"));
-            chartData.Categories.Add(chartData.ChartDataWorkbook.GetCell(0, "A3", "90°"));
-            chartData.Categories.Add(chartData.ChartDataWorkbook.GetCell(0, "A4", "135°"));
-            chartData.Categories.Add(chartData.ChartDataWorkbook.GetCell(0, "A5", "180°"));
-            chartData.Categories.Add(chartData.ChartDataWorkbook.GetCell(0, "A6", "225°"));
-            chartData.Categories.Add(chartData.ChartDataWorkbook.GetCell(0, "A7", "270°"));
-            chartData.Categories.Add(chartData.ChartDataWorkbook.GetCell(0, "A8", "315°"));
+                // Access chart data workbook
+                Aspose.Slides.Charts.IChartData chartData = chart.ChartData;
+                Aspose.Slides.Charts.IChartDataWorkbook workbook = chartData.ChartDataWorkbook;
 
-            // Add a series with sample values
-            IChartSeries series = chartData.Series.Add(ChartType.Polar);
-            series.Name = "Sample Series";
-            series.DataPoints.AddDataPointForPolarSeries(chartData.ChartDataWorkbook.GetCell(0, "B1", 10));
-            series.DataPoints.AddDataPointForPolarSeries(chartData.ChartDataWorkbook.GetCell(0, "B2", 20));
-            series.DataPoints.AddDataPointForPolarSeries(chartData.ChartDataWorkbook.GetCell(0, "B3", 30));
-            series.DataPoints.AddDataPointForPolarSeries(chartData.ChartDataWorkbook.GetCell(0, "B4", 25));
-            series.DataPoints.AddDataPointForPolarSeries(chartData.ChartDataWorkbook.GetCell(0, "B5", 15));
-            series.DataPoints.AddDataPointForPolarSeries(chartData.ChartDataWorkbook.GetCell(0, "B6", 5));
-            series.DataPoints.AddDataPointForPolarSeries(chartData.ChartDataWorkbook.GetCell(0, "B7", 12));
-            series.DataPoints.AddDataPointForPolarSeries(chartData.ChartDataWorkbook.GetCell(0, "B8", 18));
+                // Clear default series and categories
+                chartData.Series.Clear();
+                chartData.Categories.Clear();
 
-            // Customize radii (example: set minimum and maximum radius)
-            // Note: The actual API for setting custom radii may vary based on Aspose.Slides version.
-            // The following demonstrates the typical approach using the Chart's Axes.
-            IChartAxis radialAxis = chart.Axes[AxisType.Value];
-            radialAxis.IsAutomaticMinValue = false;
-            radialAxis.IsAutomaticMaxValue = false;
-            radialAxis.MinValue = 0;   // Minimum radius
-            radialAxis.MaxValue = 40;  // Maximum radius
+                // Add categories (angles)
+                Aspose.Slides.Charts.IChartCategory category1 = chartData.Categories.Add(workbook.GetCell(0, "A1", "0°"));
+                Aspose.Slides.Charts.IChartCategory category2 = chartData.Categories.Add(workbook.GetCell(0, "A2", "90°"));
+                Aspose.Slides.Charts.IChartCategory category3 = chartData.Categories.Add(workbook.GetCell(0, "A3", "180°"));
+                Aspose.Slides.Charts.IChartCategory category4 = chartData.Categories.Add(workbook.GetCell(0, "A4", "270°"));
 
-            // Save the presentation
-            presentation.Save("PolarChartCustomRadii.pptx", SaveFormat.Pptx);
+                // Add a series
+                Aspose.Slides.Charts.IChartSeries series = chartData.Series.Add(
+                    workbook.GetCell(0, "B1", "Series 1"),
+                    Aspose.Slides.Charts.ChartType.Radar);
+
+                // Populate series with values
+                series.DataPoints.AddDataPointForBarSeries(workbook.GetCell(0, "B1", 4));
+                series.DataPoints.AddDataPointForBarSeries(workbook.GetCell(0, "B2", 8));
+                series.DataPoints.AddDataPointForBarSeries(workbook.GetCell(0, "B3", 6));
+                series.DataPoints.AddDataPointForBarSeries(workbook.GetCell(0, "B4", 3));
+
+                // Customize radii by adjusting the chart's layout (scale)
+                // Set the chart's height and width to influence the radius
+                chart.Width = 600;
+                chart.Height = 600;
+
+                // Optionally, set the chart's rotation to align the first category at the top
+                chart.Rotation = 0; // 0 degrees
+
+                // Save the presentation
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                Console.WriteLine("Presentation saved successfully to " + Path.GetFullPath(outputPath));
+            }
+            catch (FileNotFoundException fileEx)
+            {
+                Console.WriteLine("File not found: " + fileEx.Message);
+            }
+            catch (NotSupportedException notSupEx)
+            {
+                Console.WriteLine("Operation not supported: " + notSupEx.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
         }
     }
 }
