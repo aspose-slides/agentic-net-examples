@@ -17,6 +17,7 @@
 // - Apply rounded corners and line styles to charts.
 // - Automate PowerPoint chart customization in .NET applications.
 // - Generate presentations with customized chart layouts.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
