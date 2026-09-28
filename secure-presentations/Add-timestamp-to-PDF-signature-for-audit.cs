@@ -18,6 +18,7 @@
 // - Build C# tools for PowerPoint presentation signing and verification.
 // - Integrate presentation signing into .NET applications with external time sources.
 // - Ensure compliance by embedding server‑derived timestamps in signed PPTX files.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
