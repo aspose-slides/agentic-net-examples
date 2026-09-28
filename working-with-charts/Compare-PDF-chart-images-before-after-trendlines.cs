@@ -18,6 +18,7 @@
 // - Build C# tools for PowerPoint presentation processing and visual regression testing.
 // - Generate or transform PPTX files and export them to PDF in .NET applications.
 // - Validate chart rendering changes in automated CI pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
