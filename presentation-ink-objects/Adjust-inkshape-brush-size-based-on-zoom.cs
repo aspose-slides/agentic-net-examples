@@ -17,6 +17,7 @@
 // - Build utilities that normalize Ink brush sizes in PowerPoint files.
 // - Automate PPTX modifications involving Ink objects.
 // - Integrate Ink size adjustments into .NET presentation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
