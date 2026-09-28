@@ -16,6 +16,7 @@
 // - Build C# utilities for PowerPoint macro handling.
 // - Integrate VBA project unlocking into .NET presentation workflows.
 // - Validate and preprocess PPTM files before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
