@@ -1,56 +1,66 @@
 // -----------------------------------------------------------------------------
-// Example: Hide chart title keep axis labels using C#
-//
+// Example: Hide Chart Title While Keeping Axis Labels in PowerPoint using C#
+// 
 // Description:
-// Demonstrates how to hide a chart title while preserving axis labels in a
-// PowerPoint presentation using Aspose.Slides for .NET. The example creates a
-// new presentation, adds a clustered column chart, disables the chart title,
-// and saves the result as a PPTX file. This pattern can be used to customize
-// chart appearance programmatically.
-//
+// This console application creates a new PowerPoint presentation, adds a
+// clustered column chart, disables the chart title, and saves the file as a
+// PPTX. It demonstrates how to customize chart appearance with Aspose.Slides
+// for .NET while preserving axis labels.
+// 
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Hide Chart Title, Keep Axis Labels,
-// Presentation Processing, Office Automation
-//
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, hide chart title, axis labels
+// 
 // Use Cases:
-// - Programmatically remove chart titles without affecting axis labels.
-// - Build .NET tools for customizing chart visuals in PowerPoint files.
-// - Automate PPTX generation with specific chart formatting requirements.
-// - Validate chart appearance before publishing presentations.
+// - Generate reports where chart titles are redundant or handled elsewhere.
+// - Programmatically format charts for corporate branding guidelines.
+// - Automate slide creation with customized chart visuals.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
-
 using System;
-using Aspose.Slides;
-using Aspose.Slides.Export;
+using System.IO;
 
-class Program
+namespace AsposeSlidesChartExample
 {
-    static void Main()
+    class Program
     {
-        string outputPath = "HideChartTitle.pptx";
-
-        try
+        static void Main(string[] args)
         {
-            // Create a new presentation
-            Presentation pres = new Presentation();
+            try
+            {
+                // Define output file path
+                string outputPath = "ChartWithoutTitle.pptx";
 
-            // Get the first slide
-            ISlide slide = pres.Slides[0];
+                // Create a new presentation
+                Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-            // Add a clustered column chart with sample data
-            var chart = slide.Shapes.AddChart(Charts.ChartType.ClusteredColumn, 50f, 50f, 500f, 400f);
+                // Access the first slide
+                Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-            // Hide the chart title while keeping axis labels visible
-            chart.HasTitle = false;
+                // Add a clustered column chart (float parameters required)
+                Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(
+                    Aspose.Slides.Charts.ChartType.ClusteredColumn,
+                    50f,   // X position
+                    50f,   // Y position
+                    500f,  // Width
+                    400f   // Height
+                );
 
-            // Save the presentation
-            pres.Save(outputPath, SaveFormat.Pptx);
-        }
-        catch (Exception ex)
-        {
-            // Handle unsupported format or other errors
-            // Format not supported: comment placeholder
-            // Console.WriteLine($"Error: {ex.Message}");
+                // Hide the chart title while keeping axis labels intact
+                chart.HasTitle = false;
+
+                // Save the presentation
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+
+                Console.WriteLine($"Presentation saved successfully to '{Path.GetFullPath(outputPath)}'.");
+            }
+            catch (NotSupportedException nsEx)
+            {
+                Console.WriteLine("The specified file format is not supported: " + nsEx.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
         }
     }
 }
