@@ -18,6 +18,7 @@
 // - Validate that tables and error bars render correctly after processing.
 // - Build .NET tools that generate image assets from PowerPoint files.
 // - Integrate slide‑to‑image conversion into larger presentation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
