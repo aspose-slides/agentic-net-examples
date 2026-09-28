@@ -1,56 +1,62 @@
 // -----------------------------------------------------------------------------
-// Example: Add custom line annotation to chart using C#
+// Example: Add Custom Line Annotation to Chart in PowerPoint using Aspose.Slides
 //
 // Description:
-// Demonstrates how to add a custom straight line annotation to a chart in a
-// PowerPoint presentation using C# and Aspose.Slides for .NET. The example
-// creates a new presentation, inserts a clustered column chart, adds a red
-// line shape as an annotation to the chart, and saves the result as a PPTX file.
-// This pattern can be used to programmatically annotate charts in PPTX files.
-//
+// This console application creates a new PowerPoint presentation, inserts a
+// clustered column chart, adds a red straight line as an annotation positioned
+// over the chart's plot area, and saves the result as a PPTX file. It demonstrates
+// how to programmatically annotate charts using Aspose.Slides for .NET.
+// 
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Custom Line, Annotation, Chart,
-// Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, chart annotation, custom line, AddChart, AutoShape line
 //
 // Use Cases:
-// - Programmatically add line annotations to charts in PowerPoint files.
-// - Automate chart labeling or highlighting in .NET applications.
-// - Generate or modify PPTX presentations with custom visual cues.
-// - Integrate chart annotation logic into presentation processing workflows.
+// - Highlight a specific value range within a chart.
+// - Provide visual guidance or reference lines on a chart.
+// - Automate the creation of annotated presentations for reporting.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
+using System;
 
-using Aspose.Slides;
-using Aspose.Slides.Export;
-using System.Drawing;
-
-class Program
+namespace ChartAnnotationExample
 {
-    static void Main()
+    class Program
     {
-        // Create a new presentation
-        Presentation presentation = new Presentation();
-
-        // Add a clustered column chart to the first slide
-        IChart chart = presentation.Slides[0].Shapes.AddChart(
-            Aspose.Slides.Charts.ChartType.ClusteredColumn,
-            0f, 0f, 500f, 400f);
-
-        // Add a custom straight line annotation to the chart at (100,200)
-        // The line is added to the chart's UserShapes collection
-        IAutoShape lineShape = chart.UserShapes.Shapes.AddAutoShape(
-            ShapeType.Line,
-            100f, 200f, 200f, 0f);
-        lineShape.LineFormat.FillFormat.FillType = FillType.Solid;
-        lineShape.LineFormat.FillFormat.SolidFillColor.Color = Color.Red;
-
-        // Save the presentation
-        try
+        static void Main(string[] args)
         {
-            presentation.Save("CustomLineChart.pptx", SaveFormat.Pptx);
-        }
-        catch (System.Exception)
-        {
-            // Format not supported or other save error
+            string outputPath = "ChartWithAnnotation.pptx";
+
+            try
+            {
+                Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+
+                // Add a clustered column chart to the first slide
+                Aspose.Slides.Charts.IChart chart = presentation.Slides[0].Shapes.AddChart(
+                    Aspose.Slides.Charts.ChartType.ClusteredColumn,
+                    100f, 100f, 500f, 350f);
+
+                // Calculate line position to place it vertically through the middle of the plot area
+                float lineX = chart.PlotArea.ActualX + chart.PlotArea.ActualWidth / 2f - 1f; // slight offset for line thickness
+                float lineY = chart.PlotArea.ActualY;
+                float lineWidth = 2f; // line thickness
+                float lineHeight = chart.PlotArea.ActualHeight;
+
+                // Add a red line shape as an annotation
+                Aspose.Slides.IAutoShape lineShape = presentation.Slides[0].Shapes.AddAutoShape(
+                    Aspose.Slides.ShapeType.Line,
+                    lineX, lineY, lineWidth, lineHeight);
+
+                lineShape.LineFormat.FillFormat.FillType = Aspose.Slides.FillType.Solid;
+                lineShape.LineFormat.FillFormat.SolidFillColor.Color = System.Drawing.Color.Red;
+
+                // Save the presentation
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                Console.WriteLine("Presentation saved to " + outputPath);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
         }
     }
 }
