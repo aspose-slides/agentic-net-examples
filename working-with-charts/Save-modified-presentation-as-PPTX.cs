@@ -17,6 +17,7 @@
 // - Configure error bars for bubble charts programmatically.
 // - Automate saving of updated presentations in PPTX format.
 // - Integrate chart manipulation into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
