@@ -17,6 +17,7 @@
 // - Build C# tools for PowerPoint presentation analysis.
 // - Integrate chart validation into .NET workflows.
 // - Ensure presentation quality before publishing or further processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
