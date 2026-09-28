@@ -17,6 +17,7 @@
 // - Generate PowerPoint reports with detailed chart error visualizations.
 // - Integrate chart error bar configuration into .NET applications.
 // - Automate presentation creation and modification workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
