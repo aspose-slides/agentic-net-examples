@@ -17,6 +17,7 @@
 // - Build C# tools for PowerPoint presentation security.
 // - Generate or transform PPTX files with encryption in .NET applications.
 // - Validate presentation workflows before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
