@@ -18,6 +18,7 @@
 // - Build C# tools for enhancing chart data visualizations.
 // - Generate or modify PPTX files with custom trendline settings.
 // - Validate chart processing workflows before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
