@@ -17,6 +17,7 @@
 // - Automate PowerPoint chart formatting in .NET applications.
 // - Create tools that fine‑tune visual presentation of data.
 // - Validate and modify PPTX files before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
