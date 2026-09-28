@@ -17,6 +17,7 @@
 // - Generate PowerPoint reports with annotated charts.
 // - Integrate chart labeling into .NET applications.
 // - Automate presentation creation workflows involving charts.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides.Export;
