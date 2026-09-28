@@ -19,6 +19,7 @@
 // - Automate PowerPoint report creation with custom chart styling.
 // - Integrate Sunburst visualizations into C# tools or services.
 // - Validate chart data and appearance programmatically before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
