@@ -18,6 +18,7 @@
 // - Build C# utilities for generating or enhancing PPTX charts.
 // - Automate chart styling, such as bubble size representation and scaling.
 // - Validate and test PowerPoint chart features in .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
