@@ -18,6 +18,7 @@
 //   encountering unsupported math content.
 // - Automate creation and export of presentations with mathematical equations.
 // - Integrate MathML export with error handling into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
