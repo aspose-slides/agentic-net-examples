@@ -17,6 +17,7 @@
 // - Build C# tools for processing and validating mathematical content in PPTX files.
 // - Automate creation of presentations with custom math elements.
 // - Verify MathML serialization before integrating with other systems.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
