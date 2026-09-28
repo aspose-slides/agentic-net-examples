@@ -17,6 +17,7 @@
 // - Build C# tools for processing InkShape objects in PowerPoint files.
 // - Generate or transform PPTX files with custom ink modifications.
 // - Validate and test ink-related presentation workflows before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
