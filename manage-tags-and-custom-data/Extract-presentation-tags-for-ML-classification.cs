@@ -18,6 +18,7 @@
 // - Build C# tools that preprocess PowerPoint metadata for AI models.
 // - Integrate tag extraction into .NET applications handling PPTX files.
 // - Validate and log custom data before further processing or publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
