@@ -18,6 +18,7 @@
 // - Build C# tools for linking charts to external Excel data.
 // - Generate or modify PPTX presentations with dynamic chart data in .NET.
 // - Validate chart data bindings before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
