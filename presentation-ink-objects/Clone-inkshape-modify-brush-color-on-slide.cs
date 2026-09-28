@@ -18,6 +18,7 @@
 // - Programmatically change Ink shape brush colors after duplication.
 // - Build C# tools for PowerPoint presentation processing and styling.
 // - Generate or transform PPTX files with customized Ink annotations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
