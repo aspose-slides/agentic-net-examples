@@ -17,6 +17,7 @@
 // - Build tools that conditionally extract macros only when allowed.
 // - Integrate VBA protection checks into PowerPoint workflow automation.
 // - Safely process and convert presentations while respecting security settings.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
