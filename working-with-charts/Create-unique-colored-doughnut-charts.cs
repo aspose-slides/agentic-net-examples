@@ -18,6 +18,7 @@
 // - Build .NET tools for batch generation of chart‑based reports.
 // - Integrate dynamic chart creation into enterprise applications.
 // - Validate and preview presentation content before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
