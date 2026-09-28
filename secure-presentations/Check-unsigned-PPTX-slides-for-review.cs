@@ -17,6 +17,7 @@
 // - Build C# tools for PowerPoint presentation validation.
 // - Integrate presentation verification into .NET applications.
 // - Ensure presentations meet signing requirements before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
