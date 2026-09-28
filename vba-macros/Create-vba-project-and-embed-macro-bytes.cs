@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint presentation processing with macros.
 // - Generate or transform macro‑enabled presentations in .NET applications.
 // - Validate VBA macro integration before publishing or deployment.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

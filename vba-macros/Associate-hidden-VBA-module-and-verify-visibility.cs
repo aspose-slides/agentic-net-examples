@@ -17,6 +17,7 @@
 // - Generate presentations with embedded macros.
 // - Check VBA project visibility or password protection status.
 // - Integrate VBA handling into .NET PowerPoint automation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

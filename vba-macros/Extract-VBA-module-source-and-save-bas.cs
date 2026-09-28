@@ -16,6 +16,7 @@
 // - Build tools that archive or analyze VBA macros in presentations.
 // - Integrate VBA handling into .NET applications for compliance or migration.
 // - Generate .bas files for further editing or version control.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

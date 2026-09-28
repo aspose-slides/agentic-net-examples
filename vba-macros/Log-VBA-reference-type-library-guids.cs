@@ -17,6 +17,7 @@
 // - Build diagnostic tools for PowerPoint VBA projects.
 // - Verify VBA dependencies before deployment or migration.
 // - Automate presentation analysis in .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -17,6 +17,7 @@
 // - Automate macro addition for corporate PowerPoint templates.
 // - Build .NET tools that embed VBA code into PPTX/PPT/PPTM/ODP files.
 // - Prepare presentations with common functionality before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

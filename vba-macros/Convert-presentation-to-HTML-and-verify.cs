@@ -16,6 +16,7 @@
 // - Convert PowerPoint presentations to HTML for web display.
 // - Validate that presentations are free of embedded code.
 // - Build .NET tools for automated PowerPoint content transformation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

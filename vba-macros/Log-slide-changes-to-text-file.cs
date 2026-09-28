@@ -17,6 +17,7 @@
 // - Build utilities that extract slide metadata and text.
 // - Automate documentation of presentation structure in .NET projects.
 // - Validate or debug slide contents during PPTX processing workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

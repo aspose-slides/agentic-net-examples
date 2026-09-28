@@ -15,6 +15,7 @@
 // - Generate line‑count statistics for VBA code embedded in PPTM files.
 // - Convert macro-enabled presentations to standard PPTX after analysis.
 // - Integrate VBA inspection into automated .NET PowerPoint workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

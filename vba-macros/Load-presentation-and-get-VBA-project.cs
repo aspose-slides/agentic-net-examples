@@ -17,6 +17,7 @@
 // - Detect if a VBA project is password protected.
 // - Convert macro-enabled presentations to standard PPTX after analysis.
 // - Integrate VBA project handling into .NET automation tools.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

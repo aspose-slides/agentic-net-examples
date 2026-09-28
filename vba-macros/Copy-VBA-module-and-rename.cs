@@ -16,6 +16,7 @@
 // - Automate VBA code migration between PowerPoint files.
 // - Build tools that modify or extend VBA macros programmatically.
 // - Validate and test VBA module handling in .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

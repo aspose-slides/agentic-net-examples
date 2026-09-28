@@ -17,6 +17,7 @@
 // - Build C# tools for adding custom functions and procedures to presentations.
 // - Generate or modify PPTX files with VBA support in .NET applications.
 // - Prepare presentations with predefined automation scripts before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;

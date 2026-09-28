@@ -17,6 +17,7 @@
 // - Add or modify VBA modules programmatically.
 // - Build .NET tools for PowerPoint VBA automation.
 // - Ensure presentation integrity in CI pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
