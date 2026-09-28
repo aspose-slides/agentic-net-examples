@@ -17,6 +17,7 @@
 // - Build C# utilities for chart formatting in presentations.
 // - Generate or modify PPTX files with customized axis settings.
 // - Validate chart appearance before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
