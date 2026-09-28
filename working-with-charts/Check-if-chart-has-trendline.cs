@@ -16,6 +16,7 @@
 // - Automate quality checks for PowerPoint reports.
 // - Integrate chart analysis into .NET applications.
 // - Build tools that process PPTX files for data validation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
