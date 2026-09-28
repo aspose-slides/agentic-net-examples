@@ -18,6 +18,7 @@
 // - Modify the background color of the first slide in an existing PPTX file.
 // - Automate PowerPoint slide styling in batch processing scripts.
 // - Integrate simple presentation manipulation into larger .NET solutions.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
