@@ -19,6 +19,7 @@
 // - Build C# tools for annotating charts in PowerPoint presentations.
 // - Generate or modify PPTX files with custom chart data and labels.
 // - Automate presentation workflows that require detailed bubble annotations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
