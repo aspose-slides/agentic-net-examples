@@ -18,6 +18,7 @@
 // - Build tools that validate Ink object sizing in presentations.
 // - Automate reporting of Ink shape metrics in batch PPTX processing.
 // - Integrate Ink shape dimension retrieval into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
