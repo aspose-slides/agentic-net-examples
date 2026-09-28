@@ -17,6 +17,7 @@
 //   visualizations.
 // - Integrate 3D chart generation into .NET applications or reporting tools.
 // - Validate chart rendering and layout before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
