@@ -17,6 +17,7 @@
 // - Validate that VBA macros have been stripped before distribution.
 // - Integrate VBA cleanup into .NET based document processing pipelines.
 // - Ensure compliance with security policies by verifying macro removal.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
