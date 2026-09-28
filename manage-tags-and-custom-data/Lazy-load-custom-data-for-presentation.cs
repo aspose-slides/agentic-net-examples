@@ -17,6 +17,7 @@
 // - Retrieve and process custom data tags on presentations and slides on demand.
 // - Build .NET tools that manipulate PowerPoint custom data efficiently.
 // - Automate validation or transformation of PPTX files while minimizing memory usage.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
