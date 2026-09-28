@@ -18,6 +18,7 @@
 // - Build C# tools for analyzing or documenting PowerPoint macros.
 // - Integrate VBA inspection into .NET-based PowerPoint workflow pipelines.
 // - Validate presence and names of VBA modules before publishing or further processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
