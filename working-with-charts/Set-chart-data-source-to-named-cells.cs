@@ -16,6 +16,7 @@
 // - Build C# tools for PowerPoint chart data binding.
 // - Generate presentations that reference external data sources.
 // - Validate chart data integration before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
