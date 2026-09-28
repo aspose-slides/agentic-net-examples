@@ -18,6 +18,7 @@
 // - Generate PDFs from updated PowerPoint files in bulk.
 // - Build C# tools for batch PowerPoint presentation processing.
 // - Validate and transform PPTX files before distribution or archiving.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
