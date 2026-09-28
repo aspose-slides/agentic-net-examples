@@ -17,6 +17,7 @@
 // - Generate PowerPoint charts with customized label styling in .NET apps.
 // - Automate PPTX creation for reporting or dashboards with visual emphasis.
 // - Validate chart appearance before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
