@@ -17,6 +17,7 @@
 // - Build .NET tools for generating or modifying PowerPoint presentations.
 // - Produce reports that require time-series data visualisation.
 // - Validate chart configurations programmatically before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides.Export;
