@@ -18,6 +18,7 @@
 // - Build .NET tools that process PowerPoint presentations with embedded VBA.
 // - Prevent runtime errors when accessing protected VBA projects.
 // - Automate safe transformation or analysis of macro-enabled presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
