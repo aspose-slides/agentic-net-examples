@@ -18,6 +18,7 @@
 // - Build tools that generate image collections from presentations.
 // - Automate reporting workflows that require chart images.
 // - Integrate chart image extraction into larger .NET solutions.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -18,6 +18,7 @@
 // - Automate chart layout validation in PowerPoint processing tools.
 // - Build .NET utilities that adjust chart positioning based on actual size.
 // - Prevent errors when applying manual layout changes to charts.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

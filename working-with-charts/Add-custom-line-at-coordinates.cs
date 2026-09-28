@@ -19,6 +19,7 @@
 // - Build tools that modify chart visuals in existing presentations.
 // - Generate PowerPoint reports with enhanced chart graphics.
 // - Automate visual enhancements for data-driven presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.Drawing;

@@ -16,6 +16,7 @@
 // - Build C# utilities for PowerPoint chart analysis.
 // - Integrate chart dimension validation into .NET applications.
 // - Verify chart layout before further processing or publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

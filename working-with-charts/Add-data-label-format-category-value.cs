@@ -18,6 +18,7 @@
 // - Set custom separators for chart data labels.
 // - Build .NET tools for PowerPoint chart formatting.
 // - Automate PPTX generation with specific chart label requirements.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

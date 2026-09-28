@@ -17,6 +17,7 @@
 // - Adjust Bar of Pie chart split parameters programmatically.
 // - Reorder chart series to control visual layout.
 // - Build .NET tools for PowerPoint chart customization and automation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

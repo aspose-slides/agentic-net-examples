@@ -18,6 +18,7 @@
 // - Build C# tools for generating sample PowerPoint files with diverse charts.
 // - Validate chart rendering and formatting across different chart types.
 // - Integrate chart generation into .NET applications for reporting or analytics.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;

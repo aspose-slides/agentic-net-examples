@@ -18,6 +18,7 @@
 // - Build C# utilities for customizing chart appearance in PPTX files.
 // - Generate or modify presentations with specific bubble chart styling.
 // - Validate chart formatting in automated PowerPoint workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using Aspose.Slides;
 using Aspose.Slides.Export;

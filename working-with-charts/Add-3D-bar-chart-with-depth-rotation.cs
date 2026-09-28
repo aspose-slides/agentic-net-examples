@@ -17,6 +17,7 @@
 // - Automate creation of PowerPoint slides containing 3D visualizations.
 // - Integrate chart generation into .NET applications or CI pipelines.
 // - Produce PPTX files with specific 3D chart styling for presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;

@@ -17,6 +17,7 @@
 // - Build C# tools for chart layout customization in presentations.
 // - Generate or modify PPTX files with specific chart configurations.
 // - Validate chart layout behavior before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;

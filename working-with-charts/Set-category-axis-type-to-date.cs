@@ -19,6 +19,7 @@
 // - Build .NET tools that generate charts with time‑based data.
 // - Create or modify PPTX files programmatically with date axes.
 // - Validate chart configurations before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -17,6 +17,7 @@
 // - Build C# utilities that automatically adjust chart layouts in PowerPoint files.
 // - Generate or modify PPTX presentations with reliable chart positioning.
 // - Validate and correct chart layout configurations before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;

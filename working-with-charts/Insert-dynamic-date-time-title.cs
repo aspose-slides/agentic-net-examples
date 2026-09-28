@@ -19,6 +19,7 @@
 // - Generate or transform PPTX files with up-to-date chart titles in .NET
 //   applications.
 // - Validate chart title automation before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;

@@ -16,6 +16,7 @@
 // - Generate PowerPoint reports with consistent chart intervals.
 // - Automate presentation creation with custom chart settings.
 // - Ensure uniform tick spacing across multiple generated charts.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -16,6 +16,7 @@
 // - Build tools that need to process or validate chart presence.
 // - Integrate chart discovery into .NET automation workflows.
 // - Prepare presentations for further chart manipulation or reporting.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

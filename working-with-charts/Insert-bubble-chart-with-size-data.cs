@@ -17,6 +17,7 @@
 // - Build .NET tools for generating or modifying PPTX files.
 // - Create data‑driven presentations with bubble visualizations.
 // - Validate chart data and formatting in automated workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -17,6 +17,7 @@
 // - Build C# tools for creating and customizing PowerPoint presentations.
 // - Produce reports or dashboards that require visual data representation with error metrics.
 // - Validate presentation creation workflows before deployment.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -20,6 +20,7 @@
 // - Generate or transform PPTX files containing error‑bar charts in .NET
 //   applications.
 // - Validate presentation workflows before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

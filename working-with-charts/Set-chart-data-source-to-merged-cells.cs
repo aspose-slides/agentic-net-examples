@@ -17,6 +17,7 @@
 // - Build .NET tools that generate or modify PPTX files with external data.
 // - Validate chart data bindings before publishing presentations.
 // - Integrate Excel‑driven chart creation into server‑side or desktop apps.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

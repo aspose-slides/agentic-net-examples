@@ -18,6 +18,7 @@
 //   processing.
 // - Integrate chart data export into .NET applications handling PPTX files.
 // - Validate and document chart contents before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

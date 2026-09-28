@@ -18,6 +18,7 @@
 // - Build tools that extract high‑resolution chart images from presentations.
 // - Integrate chart export functionality into .NET applications.
 // - Generate vector assets for documentation or publishing workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

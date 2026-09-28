@@ -19,6 +19,7 @@
 // - Build C# tools for generating and customizing chart data in presentations.
 // - Generate visual reports that include bubble charts with precise data labels.
 // - Validate and test chart data within PPTX files before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;

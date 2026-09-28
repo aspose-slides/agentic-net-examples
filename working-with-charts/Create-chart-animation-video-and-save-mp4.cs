@@ -18,6 +18,7 @@
 // - Build tools to convert PowerPoint chart animations into video files.
 // - Integrate Aspose.Slides animation processing into .NET automation pipelines.
 // - Prepare assets for further video encoding with external tools like FFmpeg.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

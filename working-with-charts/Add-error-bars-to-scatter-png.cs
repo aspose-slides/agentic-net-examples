@@ -18,6 +18,7 @@
 // - Batch convert PPTX slides to PNG images after chart modifications.
 // - Build .NET tools for PowerPoint chart enhancement and image export.
 // - Validate and preview presentation changes in automated workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

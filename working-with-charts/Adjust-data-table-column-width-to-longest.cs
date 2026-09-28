@@ -17,6 +17,7 @@
 // - Build .NET tools that ensure tables are readable without manual adjustment.
 // - Integrate table formatting into PowerPoint automation workflows.
 // - Validate and standardize table layouts before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -17,6 +17,7 @@
 // - Build .NET utilities that programmatically style chart data points.
 // - Automate creation of presentation assets with specific visual requirements.
 // - Validate and test chart rendering logic in PowerPoint automation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

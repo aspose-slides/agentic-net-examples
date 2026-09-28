@@ -16,6 +16,7 @@
 // - Automate synchronization of chart animations with slide transitions.
 // - Build .NET tools that create or modify PPTX files with advanced animation.
 // - Validate chart animation workflows before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

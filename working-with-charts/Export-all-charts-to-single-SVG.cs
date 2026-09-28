@@ -18,6 +18,7 @@
 // - Automate extraction of chart graphics from presentations in .NET tools.
 // - Generate vector‑based assets from PowerPoint files for further processing.
 // - Validate chart rendering in automated CI pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

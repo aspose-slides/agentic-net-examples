@@ -18,6 +18,7 @@
 // - Build .NET tools for PowerPoint presentation generation and data visualization.
 // - Integrate JSON-driven charting into reporting or analytics pipelines.
 // - Validate and preview presentation content programmatically before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -17,6 +17,7 @@
 // - Generate PowerPoint presentations with customized chart markers.
 // - Automate chart styling for data analysis reports.
 // - Integrate chart customization into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;

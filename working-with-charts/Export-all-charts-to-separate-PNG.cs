@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint chart extraction.
 // - Integrate chart export functionality into .NET applications.
 // - Validate and process PPTX files before publishing or further automation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

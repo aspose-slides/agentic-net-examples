@@ -16,6 +16,7 @@
 // - Build C# utilities for PowerPoint chart formatting.
 // - Generate or modify PPTX files with customized chart appearance.
 // - Validate chart styling in automated presentation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.Drawing;

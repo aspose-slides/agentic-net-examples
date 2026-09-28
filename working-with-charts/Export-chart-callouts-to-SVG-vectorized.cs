@@ -17,6 +17,7 @@
 // - Automate conversion of chart visuals to scalable vector graphics.
 // - Integrate chart export functionality into .NET applications.
 // - Validate and process PPTX files programmatically.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

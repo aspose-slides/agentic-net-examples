@@ -17,6 +17,7 @@
 // - Build C# tools for PowerPoint chart customization.
 // - Generate or modify PPTX files with specific chart scaling in .NET.
 // - Ensure consistent chart appearance across generated presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;

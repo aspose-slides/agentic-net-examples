@@ -18,6 +18,7 @@
 // - Build C# utilities that add or modify slide animations in PPTX files.
 // - Automate PPTX creation or modification while preventing memory leaks.
 // - Validate and test animation workflows in .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -17,6 +17,7 @@
 // - Build tools that modify chart visual styles in PowerPoint files.
 // - Generate or transform PPTX presentations with customized chart markers.
 // - Validate and standardize chart formatting before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

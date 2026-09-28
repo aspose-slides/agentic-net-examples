@@ -18,6 +18,7 @@
 // - Build .NET utilities for PowerPoint chart manipulation.
 // - Automate PPTX generation or modification with precise chart layout control.
 // - Validate and fine‑tune chart appearance in automated workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -17,6 +17,7 @@
 // - Build C# utilities for customizing chart appearance in presentations.
 // - Generate or modify PowerPoint reports with detailed chart labeling.
 // - Validate chart data representation before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;

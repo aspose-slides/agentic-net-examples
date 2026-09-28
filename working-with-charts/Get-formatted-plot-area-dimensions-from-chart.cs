@@ -17,6 +17,7 @@
 // - Build tools that need precise chart positioning information.
 // - Automate validation of chart dimensions in generated presentations.
 // - Integrate chart size retrieval into .NET applications handling PPTX files.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;

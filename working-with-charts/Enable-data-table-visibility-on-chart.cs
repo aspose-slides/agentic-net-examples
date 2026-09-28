@@ -17,6 +17,7 @@
 // - Build C# utilities for enhancing PowerPoint presentations.
 // - Generate or modify chart data tables programmatically.
 // - Validate chart formatting before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -16,6 +16,7 @@
 // - Build C# tools for enhancing slide animations programmatically.
 // - Generate or modify PPTX files with custom animation sequences in .NET applications.
 // - Validate and preview animation workflows before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -18,6 +18,7 @@
 // - Automate generation of PowerPoint files with specific chart layout
 //   configurations.
 // - Integrate chart layout adjustments into larger .NET presentation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

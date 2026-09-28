@@ -17,6 +17,7 @@
 // - Export a slide containing a chart to SVG format.
 // - Programmatically verify that trendline elements are present in the SVG.
 // - Automate PowerPoint chart processing and SVG validation in .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -17,6 +17,7 @@
 // - Automate PowerPoint chart processing in C# applications.
 // - Build tools that create visual previews of slides or charts.
 // - Integrate chart thumbnail generation into reporting or publishing pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

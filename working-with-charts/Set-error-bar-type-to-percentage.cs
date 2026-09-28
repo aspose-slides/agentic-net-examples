@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint chart customization.
 // - Generate or modify PPTX files with specific error bar configurations.
 // - Validate chart error bar settings before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

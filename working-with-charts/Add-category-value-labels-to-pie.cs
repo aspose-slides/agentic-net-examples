@@ -18,6 +18,7 @@
 // - Build C# tools for PowerPoint chart processing and customization.
 // - Generate or transform PPTX files with customized chart data labels.
 // - Validate chart label configurations before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using Aspose.Slides;

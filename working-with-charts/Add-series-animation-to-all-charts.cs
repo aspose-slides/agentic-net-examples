@@ -18,6 +18,7 @@
 // - Build command‑line tools for bulk PowerPoint enhancement.
 // - Integrate chart animation steps into .NET based document workflows.
 // - Prepare presentations with consistent animation effects before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

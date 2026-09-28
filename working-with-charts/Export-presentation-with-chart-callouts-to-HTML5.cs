@@ -19,6 +19,7 @@
 //   consumption.
 // - Automate PPTX creation with chart callouts for reporting or dashboards.
 // - Validate chart rendering and export capabilities in CI pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

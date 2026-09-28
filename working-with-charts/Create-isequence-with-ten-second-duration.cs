@@ -18,6 +18,7 @@
 // - Build C# tools for timed PowerPoint chart presentations.
 // - Generate or modify PPTX files with custom animation timing in .NET applications.
 // - Validate and preview chart animations before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

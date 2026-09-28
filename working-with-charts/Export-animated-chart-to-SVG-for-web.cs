@@ -17,6 +17,7 @@
 // - Generate SVG representations of animated slides for web integration.
 // - Build .NET tools for PowerPoint presentation manipulation and export.
 // - Validate and preview animated chart workflows before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

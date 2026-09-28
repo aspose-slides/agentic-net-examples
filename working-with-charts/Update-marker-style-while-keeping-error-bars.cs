@@ -16,6 +16,7 @@
 // - Change marker appearance without losing existing error bar settings.
 // - Build .NET utilities for PowerPoint chart customization.
 // - Validate and transform PPTX files in automated workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

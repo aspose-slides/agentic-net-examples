@@ -18,6 +18,7 @@
 // - Build C# tools for PowerPoint presentation analysis and validation.
 // - Generate or modify PPTX files with precise chart layout handling.
 // - Integrate chart dimension retrieval into .NET applications for reporting.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides.Export;

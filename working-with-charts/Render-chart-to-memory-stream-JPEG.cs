@@ -17,6 +17,7 @@
 // - Build .NET tools that need in‑memory image processing of PowerPoint slides.
 // - Automate creation and rendering of chart visuals for web or API services.
 // - Validate chart rendering as part of a presentation workflow.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -17,6 +17,7 @@
 // - Build tools that programmatically clean or modify chart data.
 // - Integrate chart series management into .NET applications.
 // - Prepare PPTX files for publishing by eliminating specific series.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

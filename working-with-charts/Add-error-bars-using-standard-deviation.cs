@@ -16,6 +16,7 @@
 // - Build .NET tools for enhancing chart visualizations with error metrics.
 // - Generate or modify PPTX files with custom chart error representations.
 // - Validate chart data analysis workflows before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;

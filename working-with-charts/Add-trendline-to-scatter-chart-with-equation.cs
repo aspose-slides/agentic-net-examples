@@ -16,6 +16,7 @@
 // - Build C# utilities for adding statistical insights to presentations.
 // - Automate creation of PPTX reports with chart annotations and equations.
 // - Integrate chart trendline features into .NET applications for data visualization.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

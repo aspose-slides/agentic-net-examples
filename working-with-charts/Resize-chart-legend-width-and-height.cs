@@ -16,6 +16,7 @@
 // - Build .NET tools for customizing PowerPoint chart appearance.
 // - Automate PPTX creation with specific legend sizing requirements.
 // - Validate and test chart formatting before deployment.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;

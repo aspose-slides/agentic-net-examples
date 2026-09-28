@@ -17,6 +17,7 @@
 // - Manage and clear animation sequences (ISequence) in PPTX files.
 // - Build .NET tools for PowerPoint animation handling.
 // - Ensure proper resource cleanup in server-side PPTX processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

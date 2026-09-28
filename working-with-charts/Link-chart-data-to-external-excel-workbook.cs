@@ -16,6 +16,7 @@
 // - Build C# tools for PowerPoint presentation processing with external data sources.
 // - Generate or transform PPTX files that reference external Excel data in .NET applications.
 // - Validate and maintain chart data synchronization before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

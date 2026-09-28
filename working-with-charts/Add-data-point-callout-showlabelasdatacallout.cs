@@ -16,6 +16,7 @@
 // - Build C# utilities for PowerPoint chart customization.
 // - Generate or modify PPTX files with customized chart callouts in .NET.
 // - Validate chart presentation workflows before deployment.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.Drawing;

@@ -17,6 +17,7 @@
 // - Automate validation of chart axis settings.
 // - Build tools that analyze or modify PowerPoint chart data.
 // - Integrate chart property retrieval into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;

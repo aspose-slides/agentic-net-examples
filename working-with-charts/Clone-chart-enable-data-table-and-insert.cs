@@ -16,6 +16,7 @@
 // - Build C# utilities for slide duplication and chart customization.
 // - Generate or modify PPTX presentations programmatically.
 // - Validate chart data table settings before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

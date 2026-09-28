@@ -17,6 +17,7 @@
 // - Build C# tools for PowerPoint chart animation processing.
 // - Generate or modify PPTX files with custom chart animations in .NET applications.
 // - Validate presentation animation workflows before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

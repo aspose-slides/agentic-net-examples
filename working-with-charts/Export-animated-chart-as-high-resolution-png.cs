@@ -17,6 +17,7 @@
 // - Build C# tools for exporting animated chart visuals as high‑resolution images.
 // - Integrate chart animation export into .NET presentation processing pipelines.
 // - Validate and preview animated chart outputs before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

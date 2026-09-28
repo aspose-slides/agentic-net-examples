@@ -17,6 +17,7 @@
 // - Build .NET tools for enhancing PowerPoint presentations with custom animations.
 // - Generate or transform PPTX files programmatically with animated chart series.
 // - Validate and preview presentation workflows before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

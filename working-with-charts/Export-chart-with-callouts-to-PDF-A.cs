@@ -16,6 +16,7 @@
 // - Build C# utilities for PowerPoint chart manipulation and PDF/A conversion.
 // - Integrate chart export functionality into .NET applications.
 // - Ensure compliance with PDF/A-2a standards when generating PDFs from PPTX.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;

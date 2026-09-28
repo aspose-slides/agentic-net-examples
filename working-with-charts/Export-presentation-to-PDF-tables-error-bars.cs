@@ -18,6 +18,7 @@
 // - Preserve embedded tables when converting PPTX to PDF.
 // - Build .NET tools for PowerPoint processing that include chart formatting.
 // - Validate presentation content before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

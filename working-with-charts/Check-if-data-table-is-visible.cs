@@ -18,6 +18,7 @@
 // - Build tools that audit PowerPoint files for chart data table presence.
 // - Integrate chart visibility checks into .NET automation workflows.
 // - Ensure consistency of chart data tables across multiple presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

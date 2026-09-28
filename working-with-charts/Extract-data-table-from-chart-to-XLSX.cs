@@ -17,6 +17,7 @@
 // - Build tools that convert PowerPoint chart data into spreadsheet format.
 // - Integrate chart data retrieval into .NET workflows.
 // - Validate and process presentation content programmatically.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

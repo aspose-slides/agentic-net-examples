@@ -17,6 +17,7 @@
 // - Build tools that generate PNG assets from PPTX charts for reporting or web use.
 // - Automate batch processing of presentations to create chart thumbnails.
 // - Validate chart rendering quality before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

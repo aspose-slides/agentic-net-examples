@@ -17,6 +17,7 @@
 // - Build .NET tools that modify chart appearance for reporting or analytics.
 // - Integrate bubble chart scaling into presentation workflows.
 // - Ensure consistent visual scaling across multiple presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

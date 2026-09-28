@@ -18,6 +18,7 @@
 // - Build C# tools for customizing PowerPoint chart legends.
 // - Generate or modify PPTX files with precise formatting requirements.
 // - Validate chart appearance programmatically before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

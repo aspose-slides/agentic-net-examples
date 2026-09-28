@@ -16,6 +16,7 @@
 // - Automate extraction of chart data tables from PowerPoint presentations.
 // - Build .NET tools that integrate PowerPoint chart data with other systems.
 // - Incorporate chart data export functionality into larger .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

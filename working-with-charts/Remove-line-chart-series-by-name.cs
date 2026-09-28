@@ -18,6 +18,7 @@
 // - Build C# utilities for PowerPoint chart manipulation.
 // - Update or clean up PPTX files in .NET applications.
 // - Integrate chart series management into presentation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

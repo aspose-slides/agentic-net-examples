@@ -18,6 +18,7 @@
 // - Automate visual emphasis in PowerPoint presentations using .NET.
 // - Generate or modify PPTX files with conditional styling for data-driven reports.
 // - Integrate chart callout customization into enterprise reporting tools.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

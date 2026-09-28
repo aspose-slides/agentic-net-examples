@@ -17,6 +17,7 @@
 // - Generate PowerPoint reports with clean chart layouts.
 // - Integrate chart customization into .NET applications.
 // - Ensure readability of charts by suppressing data tables when not needed.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
