@@ -18,6 +18,7 @@
 // - Build .NET utilities that sign PowerPoint presentations programmatically.
 // - Ensure compliance and authenticity of distributed PPTX documents.
 // - Integrate digital signing into PowerPoint workflow automation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
