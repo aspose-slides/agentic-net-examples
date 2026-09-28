@@ -18,6 +18,7 @@
 // - Build C# utilities for PowerPoint chart formatting.
 // - Generate or modify presentations with specific legend layouts.
 // - Validate chart appearance programmatically before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
