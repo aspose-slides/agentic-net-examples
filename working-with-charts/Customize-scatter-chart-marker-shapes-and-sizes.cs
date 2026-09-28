@@ -16,6 +16,7 @@
 // - Automate the creation of presentations that require custom chart markers.
 // - Build .NET tools for customizing chart appearance programmatically.
 // - Integrate chart styling logic into larger Office automation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
