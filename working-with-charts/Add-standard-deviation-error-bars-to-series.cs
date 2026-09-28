@@ -18,6 +18,7 @@
 // - Generate PowerPoint presentations with enhanced data visualizations.
 // - Integrate chart error bar configuration into .NET reporting tools.
 // - Automate preparation of presentation assets for data analysis.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
