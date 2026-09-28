@@ -17,6 +17,7 @@
 // - Automate validation of Ink objects before publishing presentations.
 // - Build .NET tools that enforce presentation standards for Ink strokes.
 // - Detect and correct invalid brush sizes in existing PPTX files.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
