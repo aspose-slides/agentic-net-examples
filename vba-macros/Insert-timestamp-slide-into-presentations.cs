@@ -16,6 +16,7 @@
 // - Build C# tools for PowerPoint presentation processing with VBA support.
 // - Generate or transform PPTX files that include a timestamp slide macro.
 // - Validate VBA macro insertion before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
