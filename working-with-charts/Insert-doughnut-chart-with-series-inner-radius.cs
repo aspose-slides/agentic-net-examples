@@ -19,6 +19,7 @@
 //   chart styling.
 // - Generate or transform PPTX files with doughnut charts in .NET applications.
 // - Validate chart appearance and layout before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
