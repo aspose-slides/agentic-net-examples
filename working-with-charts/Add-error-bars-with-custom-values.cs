@@ -17,6 +17,7 @@
 // - Automate addition of custom X/Y error bars in PowerPoint presentations.
 // - Build .NET utilities for scientific or financial chart reporting.
 // - Validate chart data visualizations before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
