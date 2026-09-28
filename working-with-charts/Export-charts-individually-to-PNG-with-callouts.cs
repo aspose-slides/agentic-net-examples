@@ -16,6 +16,7 @@
 // - Build C# utilities for PowerPoint content analysis.
 // - Generate image assets from presentations for web or documentation.
 // - Validate chart rendering in automated workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
