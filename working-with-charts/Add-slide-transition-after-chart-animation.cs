@@ -18,6 +18,7 @@
 // - Build C# tools for advanced PowerPoint presentation sequencing.
 // - Generate or transform PPTX files with coordinated animation and transition logic.
 // - Validate presentation workflows before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
