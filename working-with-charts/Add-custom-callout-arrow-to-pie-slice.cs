@@ -18,6 +18,7 @@
 // - Generate or modify PPTX files with custom chart annotations in .NET
 //   applications.
 // - Validate chart presentation workflows before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
