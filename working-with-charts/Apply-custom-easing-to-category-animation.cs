@@ -18,6 +18,7 @@
 // - Apply custom easing to chart animations for smoother transitions.
 // - Generate or modify PPTX presentations programmatically in C#.
 // - Validate and test chart animation settings in automated workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
