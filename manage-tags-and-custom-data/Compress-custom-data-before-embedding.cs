@@ -19,6 +19,7 @@
 // - Build C# tools for PowerPoint presentation processing with embedded resources.
 // - Generate or transform PPTX files in .NET applications while reducing payload size.
 // - Validate presentation workflows that involve custom data integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
