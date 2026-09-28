@@ -17,6 +17,7 @@
 // - Build C# tools for analyzing or transforming equations in PowerPoint files.
 // - Generate reports of LaTeX strings from PPTX presentations.
 // - Validate or modify presentations that include math equations before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
