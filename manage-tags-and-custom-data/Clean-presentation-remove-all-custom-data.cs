@@ -18,6 +18,7 @@
 // - Build C# tools for sanitizing PowerPoint files before publishing.
 // - Integrate presentation cleanup into document processing pipelines.
 // - Ensure compliance by stripping embedded custom data from PPTX files.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
