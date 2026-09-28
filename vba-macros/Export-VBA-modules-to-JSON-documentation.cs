@@ -17,6 +17,7 @@
 // - Build tools that extract and analyze VBA code from PowerPoint files.
 // - Integrate VBA extraction into .NET applications or CI pipelines.
 // - Facilitate migration of VBA macros to other platforms or languages.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
