@@ -16,6 +16,7 @@
 // - Build .NET utilities that customize chart appearance.
 // - Automate PPTX creation with specific visual styling requirements.
 // - Validate chart layout adjustments before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
