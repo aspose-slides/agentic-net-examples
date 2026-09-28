@@ -17,6 +17,7 @@
 // - Automate documentation of presentation chart settings.
 // - Integrate chart metadata extraction into .NET applications.
 // - Validate or compare error bar parameters across multiple presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
