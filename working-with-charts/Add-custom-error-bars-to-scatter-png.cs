@@ -17,6 +17,7 @@
 // - Generate PNG images of slides after chart modifications.
 // - Build .NET tools for batch processing and visualizing PowerPoint content.
 // - Validate and transform presentations before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
