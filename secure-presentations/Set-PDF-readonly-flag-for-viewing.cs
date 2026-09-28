@@ -1,71 +1,69 @@
 // -----------------------------------------------------------------------------
-// Example: Set PDF readonly flag for viewing using C#
+// Example: Set PDF Read‑Only Permission for Viewing Using Aspose.Slides
 //
 // Description:
-// Demonstrates how to set the PDF read‑only (viewing) flag using C# and 
-// Aspose.Slides for .NET. The example creates a simple PowerPoint presentation,
-// applies the read‑only recommendation, and then saves the file as a PDF with
-// the read‑only permission enabled. This pattern can be used in console
-// applications, automation scripts, or any .NET solution that needs to produce
-// PDF files that are restricted to view‑only mode.
-//
+// This console application creates a simple PowerPoint presentation, configures
+// PDF export options to enforce view‑only permissions, and saves the result as a
+// password‑protected PDF. It demonstrates using Aspose.Slides for .NET to set
+// PDF access permissions, a common requirement for secure document distribution.
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Readonly, Flag, Viewing, 
-// PDF Permissions, Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF read‑only, access permissions
 //
 // Use Cases:
-// - Generate PDF presentations that cannot be edited or modified.
-// - Build C# tools for secure PDF export from PowerPoint files.
-// - Automate PDF permission settings in batch processing pipelines.
-// - Validate presentation export workflows before publishing.
+// - Generate corporate slide decks that must be shared as non‑editable PDFs.
+// - Automate creation of view‑only PDFs for compliance or archival purposes.
+// - Integrate PDF permission settings into CI/CD pipelines for documentation releases.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
-
 using System;
-using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-namespace ReadOnlyPresentationDemo
+namespace AsposeSlidesPdfReadOnlyExample
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Define output folder and file name
-            var outFolder = Path.Combine(Directory.GetCurrentDirectory(), "Output");
-            var outPdfFile = Path.Combine(outFolder, "ReadOnlyPresentation.pdf");
+            string outputPdfPath = "ReadOnlyPresentation.pdf";
 
-            // Ensure output directory exists
-            if (!Directory.Exists(outFolder))
-                Directory.CreateDirectory(outFolder);
-
-            // Create a new presentation
-            using (var presentation = new Presentation())
+            try
             {
-                // Set the read‑only recommendation flag for the presentation
-                presentation.ProtectionManager.ReadOnlyRecommended = true;
+                // Create a new presentation instance.
+                using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation())
+                {
+                    // Add a blank slide based on the default layout.
+                    Aspose.Slides.ISlide slide = presentation.Slides.AddEmptySlide(presentation.Slides[0].LayoutSlide);
 
-                // Configure PDF export options to set the read‑only (viewing) flag
-                var pdfOptions = new PdfOptions
-                {
-                    // The AccessPermissions enum includes a ReadOnly flag that restricts
-                    // editing, copying, and other modifications while allowing viewing.
-                    AccessPermissions = PdfAccessPermissions.ReadOnly
-                };
+                    // Insert a rectangle shape with a text frame.
+                    Aspose.Slides.IShape shape = slide.Shapes.AddAutoShape(
+                        Aspose.Slides.ShapeType.Rectangle,
+                        50,
+                        50,
+                        400,
+                        100);
+                    Aspose.Slides.IAutoShape autoShape = (Aspose.Slides.IAutoShape)shape;
+                    autoShape.AddTextFrame("This PDF is view‑only.");
 
-                try
-                {
-                    // Save the presentation as a PDF with the read‑only flag applied
-                    presentation.Save(outPdfFile, SaveFormat.Pdf, pdfOptions);
+                    // Configure PDF export options to enforce view‑only permissions.
+                    Aspose.Slides.Export.PdfOptions pdfOptions = new Aspose.Slides.Export.PdfOptions();
+                    // No permissions are granted; the document can only be viewed.
+                    pdfOptions.AccessPermissions = Aspose.Slides.Export.PdfAccessPermissions.None;
+                    // Set an owner password to protect the permission settings.
+                    pdfOptions.Password = "ownerPassword";
+
+                    // Save the presentation as a PDF with the specified options.
+                    presentation.Save(outputPdfPath, Aspose.Slides.Export.SaveFormat.Pdf, pdfOptions);
                 }
-                catch (Exception ex)
-                {
-                    // Handle any exceptions (e.g., unsupported format or permission issues)
-                    Console.WriteLine("Error saving PDF presentation: " + ex.Message);
-                }
+
+                Console.WriteLine("PDF saved with view‑only permissions to: " + outputPdfPath);
             }
-
-            Console.WriteLine("PDF presentation saved to: " + outPdfFile);
+            catch (System.IO.FileNotFoundException fileNotFoundEx)
+            {
+                Console.WriteLine("File not found: " + fileNotFoundEx.Message);
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
         }
     }
 }
