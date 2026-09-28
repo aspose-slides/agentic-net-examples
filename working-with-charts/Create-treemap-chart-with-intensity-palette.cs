@@ -18,6 +18,7 @@
 // - Automate creation of hierarchical visualizations in PowerPoint via .NET.
 // - Build C# utilities that process and enrich PPTX files with custom chart data.
 // - Validate chart rendering and color mapping before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
