@@ -16,6 +16,7 @@
 // - Build C# utilities that convert Excel worksheets into slide decks.
 // - Integrate chart extraction into .NET reporting pipelines.
 // - Validate and preview Excel chart content in presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
