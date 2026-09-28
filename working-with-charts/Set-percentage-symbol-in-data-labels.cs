@@ -16,6 +16,7 @@
 // - Automate chart creation and formatting in .NET applications.
 // - Produce presentations where data labels require non‑standard symbols.
 // - Integrate custom chart labeling into reporting tools.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
