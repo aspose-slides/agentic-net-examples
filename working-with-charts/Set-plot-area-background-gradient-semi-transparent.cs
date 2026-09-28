@@ -17,6 +17,7 @@
 // - Build C# utilities for customizing chart aesthetics in PowerPoint presentations.
 // - Generate or modify PPTX files with advanced chart styling in .NET applications.
 // - Automate visual consistency checks for chart designs before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
