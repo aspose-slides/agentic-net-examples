@@ -19,6 +19,7 @@
 // - Integrate presentation logic into applications that need dynamic chart
 //   configurations.
 // - Validate chart settings before publishing or further processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
