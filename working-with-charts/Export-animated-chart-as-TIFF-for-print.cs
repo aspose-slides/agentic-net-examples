@@ -17,6 +17,7 @@
 // - Generate print‑ready TIFF files from animated slides.
 // - Integrate chart animation and export functionality into .NET applications.
 // - Validate animated chart rendering before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
