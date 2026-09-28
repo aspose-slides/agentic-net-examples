@@ -17,6 +17,7 @@
 // - Build tools that set or update chart data ranges dynamically.
 // - Generate PowerPoint presentations with charts driven by external data.
 // - Validate chart data bindings in .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
