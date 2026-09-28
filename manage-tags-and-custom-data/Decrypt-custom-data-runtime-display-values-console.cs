@@ -17,6 +17,7 @@
 // - Inspect or extract custom data embedded in presentations at runtime.
 // - Build .NET tools for PowerPoint security management.
 // - Integrate presentation decryption into larger automation pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
