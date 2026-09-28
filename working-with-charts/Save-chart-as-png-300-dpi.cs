@@ -18,6 +18,7 @@
 // - Build tools that generate image assets from PowerPoint presentations.
 // - Integrate chart image extraction into .NET workflows or reporting systems.
 // - Validate and automate presentation content processing before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
