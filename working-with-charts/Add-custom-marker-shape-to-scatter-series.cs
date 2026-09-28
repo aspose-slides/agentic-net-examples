@@ -17,6 +17,7 @@
 // - Build .NET tools that emphasize specific data points (e.g., outliers) in presentations.
 // - Generate or modify PPTX files programmatically for reporting or analytics.
 // - Validate chart rendering and marker customization before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
