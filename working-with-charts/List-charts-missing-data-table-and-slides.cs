@@ -17,6 +17,7 @@
 // - Automate validation of chart completeness before publishing.
 // - Build tools that report or fix missing chart data tables in bulk.
 // - Integrate chart analysis into .NET PowerPoint processing pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
