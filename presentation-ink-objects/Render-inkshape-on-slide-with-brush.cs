@@ -17,6 +17,7 @@
 // - Build C# tools for customizing ink annotations in PowerPoint files.
 // - Generate or transform PPTX files with specific ink styling in .NET applications.
 // - Validate and automate presentation workflows involving ink objects.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
