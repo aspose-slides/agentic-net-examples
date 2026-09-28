@@ -17,6 +17,7 @@
 // - Build C# utilities for managing VBA code in PowerPoint presentations.
 // - Integrate VBA module manipulation into .NET applications.
 // - Validate and transform PPTX files containing VBA projects.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
