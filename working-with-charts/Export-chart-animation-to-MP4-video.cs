@@ -18,6 +18,7 @@
 // - Build automated tools that process slide animations and generate video output.
 // - Validate MP4 export capability and gracefully handle unsupported formats.
 // - Integrate slide animation rendering into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
