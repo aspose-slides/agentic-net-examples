@@ -19,6 +19,7 @@
 // - Generate or transform PPTX files with customized chart elements in .NET
 //   applications.
 // - Validate chart rendering and trendline calculations before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
