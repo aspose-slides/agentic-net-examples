@@ -16,6 +16,7 @@
 // - Build C# utilities for handling mathematical content in presentations.
 // - Integrate MathML generation into .NET applications that require shared storage.
 // - Validate and store equation data before publishing or further processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
