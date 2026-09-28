@@ -17,6 +17,7 @@
 // - Apply custom lighting and shadow effects to charts programmatically.
 // - Automate chart styling in .NET applications.
 // - Create reusable code for presentation processing and visual enhancements.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.Drawing;
