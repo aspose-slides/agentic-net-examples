@@ -12,6 +12,7 @@
 // - Build C# utilities for cleaning or standardizing PowerPoint content.
 // - Convert hand-drawn ink objects to editable shapes for further editing.
 // - Integrate Ink shape handling into .NET presentation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
