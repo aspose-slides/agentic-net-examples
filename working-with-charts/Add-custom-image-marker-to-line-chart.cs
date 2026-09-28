@@ -18,6 +18,7 @@
 // - Generate or transform PPTX files with customized chart markers in .NET
 //   applications.
 // - Validate and preview chart customizations before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
