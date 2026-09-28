@@ -18,6 +18,7 @@
 // - Build tools that audit or migrate PowerPoint chart settings.
 // - Integrate chart analysis into .NET applications.
 // - Validate presentation data before publishing or further processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
