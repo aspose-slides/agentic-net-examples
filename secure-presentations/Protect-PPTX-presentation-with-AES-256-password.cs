@@ -16,6 +16,7 @@
 // - Build C# utilities for securing PowerPoint files.
 // - Integrate password protection into .NET PowerPoint workflows.
 // - Ensure confidential presentations are encrypted before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
