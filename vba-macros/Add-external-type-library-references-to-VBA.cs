@@ -15,6 +15,7 @@
 // - Automate creation of VBA-enabled presentations from .NET applications.
 // - Generate PPTX files that require interaction with other Office applications.
 // - Validate VBA project configuration before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
