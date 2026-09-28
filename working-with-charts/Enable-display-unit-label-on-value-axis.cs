@@ -17,6 +17,7 @@
 // - Build tools that standardize chart formatting across presentations.
 // - Generate PowerPoint reports with correctly labeled value axes.
 // - Integrate chart customization into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
