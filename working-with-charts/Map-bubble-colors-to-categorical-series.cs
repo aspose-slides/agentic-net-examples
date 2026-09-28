@@ -18,6 +18,7 @@
 // - Build C# tools for PowerPoint chart customization and processing.
 // - Generate or transform PPTX files with colored bubble charts in .NET apps.
 // - Validate chart visualizations before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
