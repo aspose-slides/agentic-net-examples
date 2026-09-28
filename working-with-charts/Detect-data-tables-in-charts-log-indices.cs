@@ -15,6 +15,7 @@
 // - Build tools to audit or modify PPTX files based on chart data table presence.
 // - Integrate chart analysis into .NET applications for reporting or validation.
 // - Automate preprocessing steps before publishing or further processing of presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
