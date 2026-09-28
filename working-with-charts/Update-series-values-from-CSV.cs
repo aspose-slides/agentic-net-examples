@@ -16,6 +16,7 @@
 // - Automate PowerPoint report creation with dynamic data.
 // - Build .NET tools for chart data updates in PPTX files.
 // - Integrate CSV-driven chart generation into business workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
