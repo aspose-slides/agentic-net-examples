@@ -17,6 +17,7 @@
 // - Build .NET tools that enforce corporate branding in PowerPoint files.
 // - Generate or modify PPTX presentations with styled charts in automated workflows.
 // - Validate chart appearance before publishing or integrating into larger solutions.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.Drawing;
