@@ -16,6 +16,7 @@
 // - Build .NET tools for PowerPoint chart customization.
 // - Generate or modify PPTX files with multiple axes.
 // - Automate chart data handling in presentation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
