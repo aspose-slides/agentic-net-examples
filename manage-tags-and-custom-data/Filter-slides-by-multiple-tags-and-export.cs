@@ -18,6 +18,7 @@
 // - Build .NET utilities that process presentations based on metadata.
 // - Integrate tag‑based slide filtering into larger automation pipelines.
 // - Preserve the original presentation while generating a filtered copy.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
