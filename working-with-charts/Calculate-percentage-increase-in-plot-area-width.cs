@@ -17,6 +17,7 @@
 // - Automate analysis of chart layout effects in PowerPoint files.
 // - Build tools that validate or adjust chart sizing in .NET applications.
 // - Integrate chart layout calculations into reporting or presentation pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
