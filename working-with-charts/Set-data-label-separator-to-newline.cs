@@ -18,6 +18,7 @@
 // - Build .NET tools that generate or modify PowerPoint charts.
 // - Automate PPTX creation with specific label layouts.
 // - Validate chart label configurations in presentation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using Aspose.Slides;
