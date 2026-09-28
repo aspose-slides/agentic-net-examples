@@ -18,6 +18,7 @@
 // - Build C# utilities for PowerPoint content updates.
 // - Generate or modify presentations programmatically.
 // - Validate and preprocess slides before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
