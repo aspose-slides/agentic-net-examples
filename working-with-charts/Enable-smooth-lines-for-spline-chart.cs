@@ -1,66 +1,93 @@
 // -----------------------------------------------------------------------------
-// Example: Enable smooth lines for spline chart using C#
+// Example: Enable Smooth Lines for Spline Chart Using Aspose.Slides
 //
 // Description:
-// Demonstrates how to enable smooth lines for a spline (smooth line) chart 
-// using C# and Aspose.Slides for .NET. The example creates a new presentation, 
-// adds a scatter chart with smooth lines (functionally a spline chart), sets 
-// the series smoothing property, and saves the result as a PPTX file. This 
-// pattern can be used to automate chart styling in PowerPoint files.
-//
+// This console application creates a new PowerPoint presentation, adds a
+// scatter chart configured with smooth lines (spline chart), populates it
+// with sample data, and saves the result as a PPTX file. It demonstrates how
+// to use Aspose.Slides for .NET to style charts with smooth line rendering.
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Enable, Smooth, Lines, Spline, 
-// Chart, Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, spline chart, smooth lines, scatter chart
 //
 // Use Cases:
-// - Automate enabling smooth lines for spline charts in presentations.
-// - Build C# tools for PowerPoint chart customization.
-// - Generate or modify PPTX files with styled charts in .NET applications.
-// - Validate chart rendering before publishing or integration.
+// - Automating the creation of presentations with professionally styled spline charts.
+// - Generating reports that require smooth line visualizations in PowerPoint.
+// - Integrating chart styling into a larger document generation workflow.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
-
 using System;
-using Aspose.Slides;
-using Aspose.Slides.Export;
+using System.IO;
 
-class Program
+namespace AsposeSlidesSmoothSplineExample
 {
-    static void Main()
+    class Program
     {
-        try
+        static void Main(string[] args)
         {
-            // Create a new presentation
-            Presentation presentation = new Presentation();
+            string outputPath = "SmoothSplineChart.pptx";
 
-            // Get the first slide
-            ISlide slide = presentation.Slides[0];
+            try
+            {
+                // Create a new presentation
+                Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-            // Add a scatter chart with smooth lines (acts as a spline chart)
-            IChart chart = slide.Shapes.AddChart(
-                Charts.ChartType.ScatterWithSmoothLines,
-                50f, 50f, 500f, 400f);
+                // Get the first slide
+                Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-            // Enable curve smoothing for the first series
-            Charts.IChartSeries series = chart.ChartData.Series[0];
-            series.Smooth = true;
+                // Add a scatter chart with smooth lines (spline chart)
+                Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(
+                    Aspose.Slides.Charts.ChartType.ScatterWithSmoothLines,
+                    50,   // X position
+                    50,   // Y position
+                    500,  // Width
+                    400   // Height
+                );
 
-            // Adjust tension for curve refinement
-            // Note: Aspose.Slides does not expose a direct tension property.
-            // This comment indicates where such adjustment would be made if available.
+                // Access the chart's workbook to add data
+                Aspose.Slides.Charts.IChartDataWorkbook workbook = chart.ChartData.ChartDataWorkbook;
 
-            // Save the presentation
-            presentation.Save("SplineSmoothChart.pptx", SaveFormat.Pptx);
-        }
-        catch (System.IO.FileNotFoundException ex)
-        {
-            // Handle missing input files if any are used
-            Console.WriteLine("File not found: " + ex.Message);
-        }
-        catch (Exception ex)
-        {
-            // Handle other exceptions (e.g., unsupported format)
-            // Format not supported
-            Console.WriteLine("Error: " + ex.Message);
+                // Clear any default series or categories
+                chart.ChartData.Series.Clear();
+                chart.ChartData.Categories.Clear();
+
+                // Add a series
+                chart.ChartData.Series.Add(
+                    workbook.GetCell(0, 1, 1, "Series 1"),
+                    chart.Type
+                );
+
+                // Retrieve the newly added series
+                Aspose.Slides.Charts.IChartSeries series = chart.ChartData.Series[0];
+
+                // Ensure the series type is set to smooth lines (optional, reinforces chart type)
+                series.Type = Aspose.Slides.Charts.ChartType.ScatterWithSmoothLines;
+
+                // Add data points for the scatter series (X, Y)
+                series.DataPoints.AddDataPointForScatterSeries(
+                    workbook.GetCell(0, 2, 1, 1),   // X = 1
+                    workbook.GetCell(0, 2, 2, 2)    // Y = 2
+                );
+                series.DataPoints.AddDataPointForScatterSeries(
+                    workbook.GetCell(0, 3, 1, 2),   // X = 2
+                    workbook.GetCell(0, 3, 2, 3)    // Y = 3
+                );
+                series.DataPoints.AddDataPointForScatterSeries(
+                    workbook.GetCell(0, 4, 1, 3),   // X = 3
+                    workbook.GetCell(0, 4, 2, 5)    // Y = 5
+                );
+                series.DataPoints.AddDataPointForScatterSeries(
+                    workbook.GetCell(0, 5, 1, 4),   // X = 4
+                    workbook.GetCell(0, 5, 2, 4)    // Y = 4
+                );
+
+                // Save the presentation
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                Console.WriteLine("Presentation saved successfully to " + Path.GetFullPath(outputPath));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
         }
     }
 }
