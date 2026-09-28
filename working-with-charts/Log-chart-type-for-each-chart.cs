@@ -15,6 +15,7 @@
 // - Build tools that validate or document slide content.
 // - Automate extraction of chart metadata for further analysis.
 // - Integrate chart‑type logging into larger .NET PowerPoint automation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
