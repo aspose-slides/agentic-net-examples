@@ -17,6 +17,7 @@
 // - Automate PowerPoint chart enhancements in .NET applications.
 // - Validate and preprocess PPTX files before publishing or further analysis.
 // - Integrate chart trend line logic into custom presentation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
