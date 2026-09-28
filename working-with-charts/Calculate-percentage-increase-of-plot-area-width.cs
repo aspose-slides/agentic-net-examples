@@ -18,6 +18,7 @@
 // - Build utilities that need to compare chart layout measurements.
 // - Automate reporting of chart size adjustments in PowerPoint files.
 // - Validate visual layout changes during PPTX generation or modification.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
