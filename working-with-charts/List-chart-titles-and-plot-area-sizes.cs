@@ -18,6 +18,7 @@
 // - Validate chart layout information in automated quality checks.
 // - Build tools that extract chart metadata for further processing or migration.
 // - Integrate chart inspection into .NET applications handling PPTX files.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
