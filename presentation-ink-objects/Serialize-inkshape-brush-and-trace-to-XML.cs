@@ -16,6 +16,7 @@
 // - Build tools that process or archive Ink annotations in presentations.
 // - Integrate Ink shape serialization into .NET automation workflows.
 // - Preserve original presentation while extracting Ink metadata.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
