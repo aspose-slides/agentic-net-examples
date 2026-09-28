@@ -19,6 +19,7 @@
 // - Build C# tools that adjust chart sizing based on layout targets.
 // - Automate validation of chart layout behavior in PPTX files.
 // - Integrate chart layout analysis into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
