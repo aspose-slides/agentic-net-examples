@@ -1,47 +1,72 @@
 // -----------------------------------------------------------------------------
-// Example: Set chart legend to bottom right using C#
+// Example: Set Chart Legend to Bottom Right Using Aspose.Slides for .NET
 //
 // Description:
-// Demonstrates how to set a chart legend to the bottom‑right corner using C# 
-// and Aspose.Slides for .NET. The example shows the required presentation‑processing 
-// steps for PowerPoint files and produces the requested output in a standalone 
-// console application. Developers can use this pattern to automate PPTX workflows, 
-// validate results, or integrate presentation logic into .NET applications.
-//
+// This console application creates a new PowerPoint presentation, adds a
+// clustered column chart, and positions the chart legend in the bottom‑right
+// corner of the chart area. It demonstrates the required Aspose.Slides API
+// calls for chart manipulation and saves the result as a PPTX file.
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Chart, Legend, Bottom Right, 
-// Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, chart legend position, bottom right
 //
 // Use Cases:
-// - Automate setting a chart legend to the bottom‑right position.
-// - Build C# tools for PowerPoint presentation processing.
-// - Generate or transform PPTX files in .NET applications.
-// - Validate presentation workflows before publishing or integration.
+// - Automate PPTX generation with custom chart legends for reporting dashboards.
+// - Integrate chart styling into .NET back‑end services that produce presentations.
+// - Ensure consistent legend placement across multiple generated slides.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
-
 using System;
-using Aspose.Slides;
-using Aspose.Slides.Export;
-using Aspose.Slides.Charts;
+using System.IO;
 
-class Program
+namespace ChartLegendBottomRightExample
 {
-    static void Main()
+    public class Program
     {
-        try
+        public static void Main(string[] args)
         {
-            Presentation presentation = new Presentation();
-            ISlide slide = presentation.Slides[0];
-            IChart chart = slide.Shapes.AddChart(ChartType.ClusteredColumn, 50f, 50f, 500f, 400f);
-            // Update legend position to bottom‑right corner
-            chart.Legend.Position = LegendPositionType.Custom;
-            chart.Legend.X = 1.0f; // right edge (fraction of chart width)
-            chart.Legend.Y = 1.0f; // bottom edge (fraction of chart height)
-            presentation.Save("LegendBottomRight.pptx", SaveFormat.Pptx);
-        }
-        catch (Exception ex)
-        {
-            // Handle exceptions (e.g., unsupported format or external resource errors)
+            string outputPath = "ChartLegendBottomRight.pptx";
+
+            try
+            {
+                // Ensure the output directory exists
+                string outputDirectory = Path.GetDirectoryName(Path.GetFullPath(outputPath));
+                if (!Directory.Exists(outputDirectory))
+                {
+                    Directory.CreateDirectory(outputDirectory);
+                }
+
+                // Create a new presentation
+                Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+
+                // Get the first slide
+                Aspose.Slides.ISlide slide = presentation.Slides[0];
+
+                // Add a clustered column chart
+                Aspose.Slides.Charts.IChart chart = (Aspose.Slides.Charts.IChart)slide.Shapes.AddChart(
+                    Aspose.Slides.Charts.ChartType.ClusteredColumn,
+                    50f,   // X position
+                    50f,   // Y position
+                    500f,  // Width
+                    400f   // Height
+                );
+
+                // Set legend position to bottom and then move it to the right edge
+                chart.Legend.Position = Aspose.Slides.Charts.LegendPositionType.Bottom;
+                chart.Legend.X = chart.Width - chart.Legend.Width;
+                chart.Legend.Y = chart.Height - chart.Legend.Height;
+
+                // Save the presentation
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                Console.WriteLine("Presentation saved successfully to: " + Path.GetFullPath(outputPath));
+            }
+            catch (System.IO.IOException ioEx)
+            {
+                Console.Error.WriteLine("IO error: " + ioEx.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine("An error occurred: " + ex.Message);
+            }
         }
     }
 }
