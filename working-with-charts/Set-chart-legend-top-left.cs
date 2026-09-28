@@ -1,50 +1,56 @@
 // -----------------------------------------------------------------------------
-// Example: Set chart legend top left using C#
+// Example: Set Chart Legend Position to Top-Left Using Aspose.Slides for .NET
 //
 // Description:
-// Demonstrates how to position a chart legend at the top‑left corner of a
-// chart using Aspose.Slides for .NET. The example creates a presentation,
-// adds a clustered column chart, moves the legend to coordinates (0,0) within
-// the chart area, sets its size, and saves the result as a PPTX file.
-// This pattern can be used to customize chart legends in automated PPTX
-// generation or processing scenarios.
+// This console application creates a new PowerPoint presentation, adds a
+// clustered column chart, moves the chart legend to the top‑left corner of the
+// chart area (coordinates 0,0), sets its size, and saves the file as a PPTX.
+// It demonstrates how to customize chart legend positioning with Aspose.Slides.
 //
 // Keywords:
-// C#, Aspose.Slides, PowerPoint, PPTX, Chart, Legend, Position, TopLeft,
-// Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, chart legend positioning, clustered column chart
 //
 // Use Cases:
-// - Programmatically set chart legend position to top‑left.
-// - Customize legend size and placement in generated presentations.
-// - Build .NET tools for PowerPoint chart formatting.
-// - Automate PPTX creation with specific chart layout requirements.
+// - Automating PPTX generation with custom chart legends.
+// - Adjusting legend layout for branding or design requirements.
+// - Processing existing presentations to reposition chart legends.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
-
 using System;
-using Aspose.Slides;
-using Aspose.Slides.Charts;
-using AspNet.Slides.Export;
 
-class Program
+namespace ChartLegendExample
 {
-    static void Main()
+    class Program
     {
-        // Create a new presentation
-        Presentation presentation = new Presentation();
+        static void Main(string[] args)
+        {
+            try
+            {
+                Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-        // Access the first slide
-        ISlide slide = presentation.Slides[0];
+                Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-        // Add a clustered column chart to the slide
-        IChart chart = slide.Shapes.AddChart(ChartType.ClusteredColumn, 50f, 150f, 500f, 400f);
+                // Add a clustered column chart at position (50,50) with size 500x400 points
+                Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(
+                    Aspose.Slides.Charts.ChartType.ClusteredColumn,
+                    50f, 50f, 500f, 400f);
 
-        // Move the legend to the top‑left corner of the chart
-        chart.Legend.X = 0f;
-        chart.Legend.Y = 0f;
-        chart.Legend.Width = 100f;   // set desired width
-        chart.Legend.Height = 50f;   // set desired height
+                // Position the legend at the top‑left corner of the chart area
+                chart.Legend.X = 0f;
+                chart.Legend.Y = 0f;
+                chart.Legend.Width = 200f;
+                chart.Legend.Height = 50f;
 
-        // Save the presentation
-        presentation.Save("LegendTopLeft.pptx", SaveFormat.Pptx);
+                string outputPath = "ChartLegendTopLeft.pptx";
+
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+
+                Console.WriteLine("Presentation saved successfully to: " + outputPath);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
+        }
     }
 }
