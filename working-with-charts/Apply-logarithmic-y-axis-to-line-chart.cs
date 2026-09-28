@@ -19,6 +19,7 @@
 // - Generate or transform PPTX files with custom chart scaling in .NET
 //   applications.
 // - Validate chart rendering before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
