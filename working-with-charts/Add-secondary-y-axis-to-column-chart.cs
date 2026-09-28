@@ -18,6 +18,7 @@
 // - Build C# tools for PowerPoint presentation processing.
 // - Generate or transform PPTX files with advanced chart configurations.
 // - Validate presentation workflows before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using Aspose.Slides.Export;
