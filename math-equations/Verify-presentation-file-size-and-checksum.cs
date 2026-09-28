@@ -18,6 +18,7 @@
 // - Build automated tests for PowerPoint file integrity after processing.
 // - Create tools that compare original and exported presentations for compliance.
 // - Ensure reliable PPTX workflows in .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
