@@ -17,6 +17,7 @@
 // - Automate the adjustment of legend position, size, and style in PPTX files.
 // - Build .NET tools for consistent chart appearance in PowerPoint reports.
 // - Validate and enforce legend formatting before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
