@@ -18,6 +18,7 @@
 // - Build C# utilities for PowerPoint chart image generation.
 // - Integrate chart export functionality into .NET services or desktop tools.
 // - Validate and process PPTX files before publishing or further transformation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
