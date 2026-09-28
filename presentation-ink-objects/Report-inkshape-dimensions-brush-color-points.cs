@@ -17,6 +17,7 @@
 // - Build diagnostic tools for Ink annotations in presentations.
 // - Automate validation of Ink objects before publishing.
 // - Integrate Ink shape analysis into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
