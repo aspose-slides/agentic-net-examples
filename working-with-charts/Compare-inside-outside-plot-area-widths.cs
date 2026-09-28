@@ -18,6 +18,7 @@
 // - Validate chart layout settings in automated PPTX generation.
 // - Build tools that adjust chart layouts based on size constraints.
 // - Ensure consistent visual appearance across generated presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
