@@ -17,6 +17,7 @@
 // - Automate PowerPoint presentation modifications in .NET applications.
 // - Prepare PPTX files for publishing without assistant flags.
 // - Integrate SmartArt manipulation into custom tools or services.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
