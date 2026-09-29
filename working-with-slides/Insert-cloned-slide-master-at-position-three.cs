@@ -16,6 +16,7 @@
 // - Build .NET tools for PowerPoint presentation manipulation.
 // - Generate or modify PPTX files programmatically.
 // - Validate slide master workflows before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
