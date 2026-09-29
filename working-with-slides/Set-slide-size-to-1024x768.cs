@@ -16,6 +16,7 @@
 // - Build .NET tools that adjust slide dimensions for consistency across decks.
 // - Automate PPTX preprocessing before publishing or further manipulation.
 // - Validate slide size settings in CI pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
