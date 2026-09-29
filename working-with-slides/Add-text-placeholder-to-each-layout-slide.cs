@@ -18,6 +18,7 @@
 // - Prepare slide masters for dynamic content generation in .NET applications.
 // - Enhance existing presentations with editable text areas across layouts.
 // - Streamline PPTX preprocessing before distribution or further editing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
