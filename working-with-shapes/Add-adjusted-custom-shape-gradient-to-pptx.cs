@@ -17,6 +17,7 @@
 // - Build C# tools for PowerPoint shape manipulation and styling.
 // - Generate or transform PPTX files with custom gradient effects in .NET.
 // - Validate shape adjustment and gradient rendering before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
