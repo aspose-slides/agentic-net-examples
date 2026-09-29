@@ -18,6 +18,7 @@
 // - Build C# utilities that analyze or validate PowerPoint structure.
 // - Integrate section metadata extraction into automated build or publishing pipelines.
 // - Support custom reporting or migration tools that require section details.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
