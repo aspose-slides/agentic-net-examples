@@ -18,6 +18,7 @@
 // - Build .NET tools for PowerPoint presentation processing and formatting.
 // - Generate or transform PPTX files with dynamic table layouts.
 // - Validate and preview presentation layouts before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
