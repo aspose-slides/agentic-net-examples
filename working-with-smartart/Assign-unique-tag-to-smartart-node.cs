@@ -19,6 +19,7 @@
 // - Automate tagging of SmartArt elements in bulk PowerPoint files.
 // - Generate JSON mappings for integration with external systems.
 // - Validate and track SmartArt node identities during presentation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
