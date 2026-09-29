@@ -19,6 +19,7 @@
 // - Build tools that modify PPTX files programmatically.
 // - Generate or update presentations with dynamic connectors.
 // - Validate and enhance slide layouts before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
