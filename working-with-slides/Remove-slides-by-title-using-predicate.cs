@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint presentation cleanup.
 // - Integrate slide filtering logic into .NET applications.
 // - Validate and preprocess PPTX files before distribution or further processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
