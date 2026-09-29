@@ -16,6 +16,7 @@
 // - Generate logs for presentation quality checks.
 // - Build tools that validate or refactor PowerPoint content programmatically.
 // - Automate reporting of group shape statistics in .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
