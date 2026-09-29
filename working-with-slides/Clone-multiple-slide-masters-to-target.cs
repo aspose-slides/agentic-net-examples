@@ -17,6 +17,7 @@
 // - Build tools that combine slide master libraries for template creation.
 // - Automate preparation of presentations that require multiple master slides.
 // - Enable downstream editing of cloned masters in .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
