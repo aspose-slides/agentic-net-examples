@@ -1,63 +1,70 @@
 // -----------------------------------------------------------------------------
-// Example: Add cloned slide and set fade transition using C#
+// Example: Clone Slide and Apply Fade Transition using Aspose.Slides for .NET
 //
 // Description:
-// Demonstrates how to add a cloned slide to a presentation and set a fade
-// transition on the cloned slide using C# and Aspose.Slides for .NET. The
-// example loads an existing PPTX file, clones the first slide, applies a fade
-// transition, and saves the result as a new PPTX file. This pattern can be used
-// to automate slide duplication and transition configuration in PowerPoint
-// files.
+// This console application loads an existing PPTX file, clones the first slide,
+// sets a fade transition on the cloned slide, and saves the modified presentation
+// as a new PPTX file. It demonstrates slide duplication and transition configuration
+// using Aspose.Slides for .NET.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone Slide, Fade Transition,
-// SlideShowTransition, Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, clone slide, fade transition, slide duplication
 //
 // Use Cases:
-// - Automate cloning of slides and applying fade transitions.
-// - Build C# utilities for PowerPoint slide manipulation.
-// - Generate or modify PPTX files programmatically in .NET applications.
-// - Validate and test presentation workflows before deployment.
+// - Automating the creation of repeated slide layouts with consistent transitions.
+// - Preparing presentations where certain slides need to be duplicated with effects.
+// - Batch processing PowerPoint files to add transitions programmatically.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
-
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-class Program
+namespace AsposeSlidesCloneTransitionExample
 {
-    static void Main()
+    class Program
     {
-        string inputPath = "input.pptx";
-        string outputPath = "output.pptx";
-
-        if (!File.Exists(inputPath))
+        static void Main(string[] args)
         {
-            Console.WriteLine("Input file does not exist.");
-            return;
-        }
+            // Define input and output file paths
+            string inputPath = "input.pptx";
+            string outputPath = "output_cloned_fade.pptx";
 
-        try
-        {
-            // Load the source presentation
-            Presentation pres = new Presentation(inputPath);
+            // Verify that the input file exists
+            if (!File.Exists(inputPath))
+            {
+                Console.WriteLine("Error: Input file \"{0}\" does not exist.", inputPath);
+                return;
+            }
 
-            // Clone the first slide and add it to the end of the collection
-            ISlide sourceSlide = pres.Slides[0];
-            ISlide clonedSlide = pres.Slides.AddClone(sourceSlide);
+            try
+            {
+                // Load the existing presentation
+                Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
 
-            // Change the transition effect of the cloned slide to Fade
-            clonedSlide.SlideShowTransition.Type = SlideShow.TransitionType.Fade;
-            clonedSlide.SlideShowTransition.AdvanceOnClick = true;
+                // Ensure there is at least one slide to clone
+                if (presentation.Slides.Count == 0)
+                {
+                    Console.WriteLine("Error: The presentation does not contain any slides to clone.");
+                    return;
+                }
 
-            // Save the modified presentation
-            pres.Save(outputPath, SaveFormat.Pptx);
-        }
-        catch (Exception ex)
-        {
-            // Handle unsupported format or other errors
-            Console.WriteLine("Error: " + ex.Message);
+                // Clone the first slide and add it to the end of the slide collection
+                Aspose.Slides.ISlide sourceSlide = presentation.Slides[0];
+                Aspose.Slides.ISlide clonedSlide = presentation.Slides.AddClone(sourceSlide);
+
+                // Apply a fade transition to the cloned slide
+                clonedSlide.SlideShowTransition.Type = Aspose.Slides.SlideShow.TransitionType.Fade;
+
+                // Save the modified presentation
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+
+                Console.WriteLine("Presentation saved successfully to \"{0}\".", outputPath);
+            }
+            catch (Exception ex)
+            {
+                // Handle any unexpected errors (e.g., file format not supported, I/O issues)
+                Console.WriteLine("An error occurred: {0}", ex.Message);
+            }
         }
     }
 }
