@@ -18,6 +18,7 @@
 // - Build tools that consolidate slides from multiple sources while preserving design.
 // - Automate PPTX transformations that require master slide duplication.
 // - Validate and test slide cloning workflows in .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
