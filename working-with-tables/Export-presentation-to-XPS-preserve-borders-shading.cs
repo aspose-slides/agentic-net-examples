@@ -18,6 +18,7 @@
 // - Build .NET tools that generate XPS documents from PPTX with custom table designs.
 // - Integrate table border and shading preservation into document processing pipelines.
 // - Validate visual consistency of exported XPS files before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.Drawing;
