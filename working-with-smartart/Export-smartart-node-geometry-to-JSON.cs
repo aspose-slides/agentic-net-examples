@@ -17,6 +17,7 @@
 // - Build tools that need to inspect or validate SmartArt layouts.
 // - Integrate SmartArt geometry data into downstream .NET applications.
 // - Generate JSON reports of PPTX content for documentation or testing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
