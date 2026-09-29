@@ -18,6 +18,7 @@
 // - Build tools for PowerPoint content analysis or preview generation.
 // - Integrate shape thumbnail creation into .NET workflows.
 // - Prepare assets for documentation, reporting, or web publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
