@@ -16,6 +16,7 @@
 // - Build tools that need to re‑size slides and automatically scale content.
 // - Automate batch processing of PPTX files to a uniform slide size.
 // - Validate that scaling behaves as expected before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
