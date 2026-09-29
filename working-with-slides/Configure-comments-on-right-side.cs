@@ -17,6 +17,7 @@
 // - Build C# tools for customizing comment layout during export.
 // - Automate batch processing of presentations for web or e‑learning platforms.
 // - Validate comment positioning before publishing converted files.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
