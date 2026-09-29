@@ -18,6 +18,7 @@
 // - Build C# tools for PowerPoint presentation processing that manage header/footer settings.
 // - Generate or transform PPTX files with customized footer behavior in .NET applications.
 // - Validate presentation workflows involving layout inheritance before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
