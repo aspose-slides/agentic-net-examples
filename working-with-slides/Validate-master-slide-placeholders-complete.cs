@@ -17,6 +17,7 @@
 // - Build C# tools for PowerPoint presentation quality assurance.
 // - Ensure consistent placeholder availability before publishing presentations.
 // - Integrate placeholder validation into .NET-based PPTX workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
