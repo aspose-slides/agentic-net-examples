@@ -16,6 +16,7 @@
 // - Tag placeholders for later content updates.
 // - Generate PPTX files with custom slide structures in .NET applications.
 // - Automate PowerPoint presentation creation and modification.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
