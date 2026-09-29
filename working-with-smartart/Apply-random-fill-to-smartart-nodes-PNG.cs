@@ -1,83 +1,89 @@
 // -----------------------------------------------------------------------------
-// Example: Apply random fill to smartart nodes PNG using C#
+// Example: Apply Random Solid Fill Colors to SmartArt Nodes and Export Slide as PNG
 //
 // Description:
-// Demonstrates how to create a SmartArt diagram, apply random solid fill colors
-// to each SmartArt node shape, export the slide as a PNG image, and save the
-// presentation as a PPTX file using Aspose.Slides for .NET. The example shows
-// the required presentation-processing steps for PowerPoint files and produces
-// the requested output in a standalone console application. Developers can use
-// this pattern to automate PPTX workflows, validate results, or integrate
-// presentation logic into .NET applications.
+// This console application creates a PowerPoint presentation using Aspose.Slides for .NET,
+// adds a SmartArt diagram, assigns random solid fill colors to each SmartArt node shape,
+// saves the presentation as a PPTX file, and exports the first slide as a PNG image.
+// It demonstrates automated PPTX manipulation, random color styling, and slide image export.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, PNG, Aspose.Slides for .NET, SmartArt, Random Fill,
-// Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SmartArt, random fill, PNG export
 //
 // Use Cases:
-// - Automate applying random fill colors to SmartArt nodes and exporting as PNG.
-// - Build C# tools for PowerPoint presentation processing.
-// - Generate or transform PPTX files with customized SmartArt in .NET applications.
-// - Validate presentation workflows before publishing or integration.
+// - Generate branded presentations with varied SmartArt colors automatically.
+// - Create visual assets from slides for web or documentation.
+// - Integrate PowerPoint styling into .NET backend services.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
-
 using System;
 using System.IO;
 using System.Drawing;
-using Aspose.Slides;
-using Aspose.Slides.Export;
-using Aspose.Slides.SmartArt;
 
-namespace SmartArtRandomFill
+namespace AsposeSlidesRandomSmartArtFill
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            // Create a new presentation
-            using (Presentation pres = new Presentation())
+            string outputPptxPath = "SmartArtRandomFill.pptx";
+            string outputPngPath = "SmartArtRandomFill.png";
+
+            // Ensure output directory exists
+            string outputDirectory = Path.GetDirectoryName(Path.GetFullPath(outputPptxPath));
+            if (!String.IsNullOrEmpty(outputDirectory) && !Directory.Exists(outputDirectory))
             {
-                // Get the first slide
-                ISlide slide = pres.Slides[0];
+                Directory.CreateDirectory(outputDirectory);
+            }
+
+            Aspose.Slides.Presentation presentation = null;
+            try
+            {
+                presentation = new Aspose.Slides.Presentation();
+                Aspose.Slides.ISlide slide = presentation.Slides[0];
 
                 // Add a SmartArt diagram to the slide
-                ISmartArt smartArt = slide.Shapes.AddSmartArt(0, 0, 400, 400, SmartArtLayoutType.BasicBlockList);
+                Aspose.Slides.SmartArt.ISmartArt smartArt = slide.Shapes.AddSmartArt(
+                    10, 10, 800, 400,
+                    Aspose.Slides.SmartArt.SmartArtLayoutType.BasicBlockList);
 
-                // Initialize random number generator for colors
-                Random rnd = new Random();
+                // Prepare random color generator
+                Random random = new Random();
 
-                // Iterate through all nodes in the SmartArt diagram
-                ISmartArtNodeCollection allNodes = smartArt.AllNodes;
-                for (int i = 0; i < allNodes.Count; i++)
+                // Apply random solid fill colors to each shape in every SmartArt node
+                foreach (Aspose.Slides.SmartArt.ISmartArtNode node in smartArt.AllNodes)
                 {
-                    ISmartArtNode node = allNodes[i];
-
-                    // Each node can contain multiple shapes; apply color to each shape
-                    ISmartArtShapeCollection shapes = node.Shapes;
-                    for (int j = 0; j < shapes.Count; j++)
+                    foreach (Aspose.Slides.SmartArt.ISmartArtShape shape in node.Shapes)
                     {
-                        ISmartArtShape shape = shapes[j];
-                        // Set solid fill type
-                        shape.FillFormat.FillType = FillType.Solid;
-                        // Assign a random color
-                        shape.FillFormat.SolidFillColor.Color = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
+                        shape.FillFormat.FillType = Aspose.Slides.FillType.Solid;
+                        int red = random.Next(256);
+                        int green = random.Next(256);
+                        int blue = random.Next(256);
+                        shape.FillFormat.SolidFillColor.Color = Color.FromArgb(red, green, blue);
                     }
                 }
 
-                // Export the slide containing the SmartArt as a PNG image
-                using (IImage image = slide.GetImage())
+                // Save the presentation as PPTX
+                presentation.Save(outputPptxPath, Aspose.Slides.Export.SaveFormat.Pptx);
+
+                // Export the first slide as a PNG image
+                using (Aspose.Slides.IImage slideImage = slide.GetImage())
                 {
-                    image.Save("SmartArt.png", ImageFormat.Png);
+                    slideImage.Save(outputPngPath, Aspose.Slides.ImageFormat.Png);
                 }
 
-                // Save the presentation to a PPTX file
-                try
+                Console.WriteLine("Presentation saved to: " + Path.GetFullPath(outputPptxPath));
+                Console.WriteLine("Slide image saved to: " + Path.GetFullPath(outputPngPath));
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                if (presentation != null)
                 {
-                    pres.Save("SmartArtPresentation.pptx", SaveFormat.Pptx);
-                }
-                catch (NotSupportedException)
-                {
-                    // Format not supported
+                    presentation.Dispose();
                 }
             }
         }
