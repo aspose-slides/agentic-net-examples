@@ -18,6 +18,7 @@
 // - Build C# tools for PowerPoint presentation analysis and reporting.
 // - Create visual overviews of SmartArt content in .NET applications.
 // - Validate and transform PPTX files with embedded graphics.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
