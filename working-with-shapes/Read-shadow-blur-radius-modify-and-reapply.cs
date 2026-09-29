@@ -18,6 +18,7 @@
 // - Build C# tools for PowerPoint visual effect customization.
 // - Generate or transform PPTX files with updated shadow properties.
 // - Validate and fine‑tune presentation aesthetics before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
