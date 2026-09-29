@@ -17,6 +17,7 @@
 // - Prepare presentations for platforms that do not support transitions.
 // - Integrate transition management into C# PowerPoint processing tools.
 // - Ensure consistent slide behavior across a section in automated workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
