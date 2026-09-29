@@ -1,90 +1,117 @@
 // -----------------------------------------------------------------------------
-// Example: Generate SmartArt child node thumbnails and embed summary slide using C#
+// Example: Generate SmartArt Child Node Thumbnails and Summary Slide
 //
 // Description:
-// Demonstrates how to iterate through SmartArt child nodes, create 100x100
-// thumbnail images for each node's primary shape, and place those thumbnails
-// on a separate summary slide. The example uses Aspose.Slides for .NET to
-// create a presentation, add SmartArt, generate shape thumbnails, and save the
-// result as a PPTX file.
+// This console application creates a PowerPoint presentation using Aspose.Slides for .NET,
+// adds a SmartArt diagram, extracts thumbnails of each SmartArt child node's primary shape,
+// and places those 100x100 thumbnails on a separate summary slide. The resulting PPTX file
+// is saved to disk. The example demonstrates shape thumbnail generation, image handling,
+// and dynamic slide composition.
 //
 // Keywords:
-// C#, Aspose.Slides, SmartArt, Thumbnail, Summary Slide, Presentation Automation,
-// PowerPoint, PPTX, Image Generation, .NET
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SmartArt, shape thumbnail, summary slide
 //
 // Use Cases:
-// - Automate creation of summary slides with visual thumbnails of SmartArt nodes.
-// - Build tools that extract and display SmartArt content as images.
-// - Generate compact visual overviews of complex SmartArt diagrams.
-// - Integrate SmartArt thumbnail generation into .NET PowerPoint processing pipelines.
+// - Automatically generate overview slides with visual thumbnails of diagram elements.
+// - Create presentation assets for reporting tools that need compact visual summaries.
+// - Build custom PowerPoint reports that include extracted SmartArt node images.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
-
 using System;
 using System.IO;
-using Aspose.Slides.Export;
 
-class Program
+namespace AsposeSlidesSmartArtThumbnailExample
 {
-    static void Main()
+    class Program
     {
-        try
+        static void Main(string[] args)
         {
-            // Create a new presentation
-            Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation();
+            string outputPath = "SmartArtSummary.pptx";
 
-            // Add SmartArt to the first slide
-            Aspose.Slides.ISlide slide0 = pres.Slides[0];
-            Aspose.Slides.SmartArt.ISmartArt smartArt = slide0.Shapes.AddSmartArt(
-                20f, 20f, 400f, 300f, Aspose.Slides.SmartArt.SmartArtLayoutType.BasicBlockList);
-
-            // Ensure there is a second (summary) slide
-            if (pres.Slides.Count == 1)
+            try
             {
-                pres.Slides.AddEmptySlide(pres.LayoutSlides.GetByType(Aspose.Slides.SlideLayoutType.Blank));
-            }
-            Aspose.Slides.ISlide summarySlide = pres.Slides[1];
-
-            int nodeIndex = 0;
-            int cols = 5;
-            int spacing = 10;
-
-            // Iterate through SmartArt child nodes
-            foreach (Aspose.Slides.SmartArt.ISmartArtNode node in smartArt.AllNodes)
-            {
-                if (node.Shapes.Count > 0)
+                // Ensure the output directory exists
+                string outputDirectory = Path.GetDirectoryName(Path.GetFullPath(outputPath));
+                if (!Directory.Exists(outputDirectory))
                 {
-                    // Get the first shape of the node
-                    Aspose.Slides.IShape shape = node.Shapes[0];
-
-                    // Calculate scaling factors to obtain a 100x100 thumbnail
-                    float scaleX = 100f / shape.Width;
-                    float scaleY = 100f / shape.Height;
-
-                    // Generate thumbnail image for the shape
-                    Aspose.Slides.IImage shapeImage = shape.GetImage(
-                        Aspose.Slides.ShapeThumbnailBounds.Shape, scaleX, scaleY);
-
-                    // Add the thumbnail image to the presentation's image collection
-                    Aspose.Slides.IPPImage ppImg = pres.Images.AddImage(shapeImage);
-
-                    // Position the thumbnail on the summary slide
-                    int x = (nodeIndex % cols) * (100 + spacing);
-                    int y = (nodeIndex / cols) * (100 + spacing);
-                    summarySlide.Shapes.AddPictureFrame(
-                        Aspose.Slides.ShapeType.Rectangle, x, y, 100f, 100f, ppImg);
-
-                    nodeIndex++;
+                    Directory.CreateDirectory(outputDirectory);
                 }
-            }
 
-            // Save the presentation
-            string outputPath = "SmartArtThumbnails.pptx";
-            pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
-        }
-        catch (Exception ex)
-        {
-            // Handle any errors (e.g., unsupported format)
-            Console.WriteLine("Error: " + ex.Message);
+                // Create a new presentation
+                Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation();
+
+                // Add SmartArt to the first slide
+                Aspose.Slides.ISlide smartArtSlide = pres.Slides[0];
+                Aspose.Slides.SmartArt.ISmartArt smartArt = smartArtSlide.Shapes.AddSmartArt(
+                    20, 20, 600, 400,
+                    Aspose.Slides.SmartArt.SmartArtLayoutType.OrganizationChart);
+
+                // Add a summary slide
+                Aspose.Slides.ISlide summarySlide = pres.Slides.AddEmptySlide(pres.Slides[0].LayoutSlide);
+
+                // Layout variables for thumbnails
+                int columns = 5;
+                int currentColumn = 0;
+                int currentRow = 0;
+                float thumbnailWidth = 100f;
+                float thumbnailHeight = 100f;
+                float startX = 20f;
+                float startY = 20f;
+                float spacingX = 110f; // width + 10px gap
+                float spacingY = 110f; // height + 10px gap
+
+                // Iterate through all SmartArt nodes
+                foreach (Aspose.Slides.SmartArt.ISmartArtNode node in smartArt.AllNodes)
+                {
+                    // Get the primary shape of the node (first shape)
+                    if (node.Shapes.Count == 0)
+                    {
+                        continue; // Skip nodes without shapes
+                    }
+
+                    Aspose.Slides.SmartArt.ISmartArtShape nodeShape = node.Shapes[0];
+
+                    // Generate a thumbnail image of the shape
+                    Aspose.Slides.IImage shapeImage = nodeShape.GetImage(
+                        Aspose.Slides.ShapeThumbnailBounds.Shape,
+                        1f, // scaleX
+                        1f  // scaleY
+                    );
+
+                    // Add the image to the presentation's image collection
+                    Aspose.Slides.IPPImage ippImage = pres.Images.AddImage(shapeImage);
+
+                    // Calculate position for the thumbnail on the summary slide
+                    float posX = startX + currentColumn * spacingX;
+                    float posY = startY + currentRow * spacingY;
+
+                    // Add the thumbnail as a picture frame
+                    Aspose.Slides.IPictureFrame pictureFrame = summarySlide.Shapes.AddPictureFrame(
+                        Aspose.Slides.ShapeType.Rectangle,
+                        posX,
+                        posY,
+                        thumbnailWidth,
+                        thumbnailHeight,
+                        ippImage
+                    );
+
+                    // Update column/row counters
+                    currentColumn++;
+                    if (currentColumn >= columns)
+                    {
+                        currentColumn = 0;
+                        currentRow++;
+                    }
+                }
+
+                // Save the presentation
+                pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                Console.WriteLine("Presentation saved to: " + Path.GetFullPath(outputPath));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
         }
     }
 }
