@@ -16,6 +16,7 @@
 // - Build .NET tools for customizing slide graphics.
 // - Generate presentations with tiled image backgrounds.
 // - Validate fill settings before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
