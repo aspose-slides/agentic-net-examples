@@ -18,6 +18,7 @@
 // - Generate PNG previews of slides for validation or documentation.
 // - Compare slide renderings pixel by pixel to verify that cloning and theming
 //   produce identical visual results.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
