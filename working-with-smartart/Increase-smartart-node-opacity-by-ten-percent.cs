@@ -19,6 +19,7 @@
 // - Build .NET tools that modify SmartArt styling in bulk.
 // - Integrate SmartArt opacity adjustments into automated PPTX workflows.
 // - Validate and transform presentation content before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
