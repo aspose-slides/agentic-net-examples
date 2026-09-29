@@ -19,6 +19,7 @@
 // - Automate correction of missing line formatting in PPTX files.
 // - Build C# tools for PowerPoint presentation processing and validation.
 // - Integrate shape formatting logic into .NET applications handling PPTX content.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
