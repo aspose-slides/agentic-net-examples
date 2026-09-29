@@ -17,6 +17,7 @@
 // - Generate PowerPoint slides programmatically with image‑based styling.
 // - Automate creation of presentations where images are sourced from streams.
 // - Demonstrate picture fill properties like tiling, alignment, and flipping.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
