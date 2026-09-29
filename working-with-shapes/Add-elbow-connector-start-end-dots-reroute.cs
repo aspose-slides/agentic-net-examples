@@ -19,6 +19,7 @@
 // - Build C# tools for PowerPoint shape linking and routing.
 // - Generate or transform PPTX files with custom connectors in .NET applications.
 // - Validate connector routing before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
