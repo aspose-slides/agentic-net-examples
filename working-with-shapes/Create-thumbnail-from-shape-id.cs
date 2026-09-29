@@ -16,6 +16,7 @@
 // - Build utilities that extract visual representations of shapes from PPTX files.
 // - Automate batch processing of presentations to create shape previews.
 // - Integrate shape thumbnail generation into .NET applications or services.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
