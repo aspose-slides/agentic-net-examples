@@ -17,6 +17,7 @@
 // - Build C# utilities for inspecting PowerPoint shape formatting.
 // - Generate or modify PPTX files with gradient line styles.
 // - Validate gradient fill settings in presentation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
