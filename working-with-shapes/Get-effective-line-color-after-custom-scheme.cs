@@ -17,6 +17,7 @@
 // - Build C# utilities for analyzing shape formatting in PowerPoint files.
 // - Automate validation of line colors in presentation workflows.
 // - Integrate line‑format extraction into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
