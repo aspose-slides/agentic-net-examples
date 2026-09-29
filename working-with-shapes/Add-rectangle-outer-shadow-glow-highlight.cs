@@ -17,6 +17,7 @@
 // - Build C# tools for enhancing PowerPoint visual elements.
 // - Generate or modify PPTX files with styled shapes in .NET applications.
 // - Automate design consistency checks for presentation assets.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
