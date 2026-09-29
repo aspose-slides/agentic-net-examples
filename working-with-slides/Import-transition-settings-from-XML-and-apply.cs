@@ -19,6 +19,7 @@
 // - Build tools that synchronize slide animations with external data sources.
 // - Automate preparation of presentations for webinars or e‑learning.
 // - Integrate transition configuration into CI/CD pipelines for slide decks.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
