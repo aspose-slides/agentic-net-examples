@@ -18,6 +18,7 @@
 // - Build C# utilities for PowerPoint content verification.
 // - Ensure consistent table formatting in generated or transformed PPTX files.
 // - Integrate table validation into .NET presentation processing pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
