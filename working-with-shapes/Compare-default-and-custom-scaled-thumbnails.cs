@@ -18,6 +18,7 @@
 // - Produce high‑resolution thumbnails with custom dimensions.
 // - Compare visual differences between default and custom thumbnail sizes.
 // - Integrate thumbnail generation into automated PPTX workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
