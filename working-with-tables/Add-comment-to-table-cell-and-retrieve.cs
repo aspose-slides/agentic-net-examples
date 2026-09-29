@@ -19,6 +19,7 @@
 // - Build C# tools for extracting and processing comments from presentations.
 // - Generate or modify PPTX files with table annotations in .NET applications.
 // - Validate comment placement and content before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
