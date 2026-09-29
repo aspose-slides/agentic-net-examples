@@ -19,6 +19,7 @@
 // - Integrate shape thumbnail generation into CI pipelines or content management
 //   systems.
 // - Automate visual validation of slide content across multiple files.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
