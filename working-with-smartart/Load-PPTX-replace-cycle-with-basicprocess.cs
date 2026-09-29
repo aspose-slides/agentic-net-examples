@@ -17,6 +17,7 @@
 // - Build tools to standardize SmartArt diagrams across multiple PPTX files.
 // - Integrate SmartArt processing into .NET workflows or CI pipelines.
 // - Update legacy presentations to newer SmartArt styles programmatically.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
