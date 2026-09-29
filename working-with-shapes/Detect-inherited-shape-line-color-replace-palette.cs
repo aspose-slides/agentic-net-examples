@@ -18,6 +18,7 @@
 // - Automate line style standardization in PowerPoint files.
 // - Build .NET tools for batch processing of PPTX presentations.
 // - Ensure visual consistency before publishing or integrating presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
