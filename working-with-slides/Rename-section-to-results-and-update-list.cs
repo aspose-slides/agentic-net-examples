@@ -18,6 +18,7 @@
 // - Retrieve and display all section names after modifications.
 // - Build C# utilities for managing PPTX sections programmatically.
 // - Integrate section renaming into larger PowerPoint automation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
