@@ -17,6 +17,7 @@
 // - Build C# tools for PowerPoint presentation processing.
 // - Generate or transform PPTX files with grouped content in .NET applications.
 // - Ensure accessibility by providing alternative text for grouped shapes.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
