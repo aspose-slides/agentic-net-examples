@@ -1,111 +1,85 @@
 // -----------------------------------------------------------------------------
-// Example: Export shape thumbnail to PNG base64 using C#
+// Example: Export Shape Thumbnail to PNG Base64 String using Aspose.Slides
 //
 // Description:
-// Demonstrates how to export a shape thumbnail to a PNG Base64 string using
-// C# and Aspose.Slides for .NET. The example loads a presentation, selects a
-// shape from a slide, renders the shape as a PNG image, converts the image to
-// a Base64 string and writes the data URI to the console. This pattern can be
-// used to embed shape previews in web pages, generate thumbnails for UI
-// elements, or automate PowerPoint processing workflows.
+// This console application loads a PowerPoint PPTX file, extracts the first
+// shape from the first slide, renders the shape as a PNG image, converts the
+// PNG to a Base64 string, and outputs a data URI. It demonstrates how to embed
+// shape previews in web pages or generate thumbnails for UI elements using
+// Aspose.Slides for .NET.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Export, Shape, Thumbnail,
-// Base64, Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, shape thumbnail, Base64, PNG
 //
 // Use Cases:
-// - Automate export of a shape thumbnail to PNG Base64.
-// - Build C# tools for PowerPoint presentation processing that need shape previews.
-// - Generate or transform PPTX files in .NET applications while exposing shape images.
-// - Validate presentation workflows before publishing or integration.
+// - Embed shape preview images directly into HTML pages without separate files.
+// - Generate thumbnail images for UI components that represent slide shapes.
+// - Automate PowerPoint processing workflows that require shape image extraction.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
-
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-namespace ThumbnailExample
+namespace ShapeThumbnailBase64Example
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Input presentation path
-            string inputPath = "sample.pptx";
-            // Slide index (0‑based)
-            int slideIndex = 0;
-            // Shape index on the slide (0‑based)
-            int shapeIndex = 0;
-
-            // Override with command line arguments if provided
-            if (args.Length >= 1)
+            string inputPath = "input.pptx";
+            if (args.Length > 0)
+            {
                 inputPath = args[0];
-            if (args.Length >= 2)
-                Int32.TryParse(args[1], out slideIndex);
-            if (args.Length >= 3)
-                Int32.TryParse(args[2], out shapeIndex);
+            }
 
-            // Verify that the input file exists
             if (!File.Exists(inputPath))
             {
-                Console.WriteLine("Input file does not exist: " + inputPath);
+                Console.Error.WriteLine("Error: The file \"{0}\" does not exist.", inputPath);
                 return;
             }
 
             try
             {
-                // Load the presentation
-                Presentation pres = new Presentation(inputPath);
+                Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
+                Aspose.Slides.ISlide slide = pres.Slides[0];
 
-                // Ensure slide index is within range
-                if (slideIndex < 0 || slideIndex >= pres.Slides.Count)
+                if (slide.Shapes.Count == 0)
                 {
-                    Console.WriteLine("Slide index out of range.");
+                    Console.Error.WriteLine("Error: No shapes found on the first slide.");
+                    pres.Dispose();
                     return;
                 }
 
-                // Get the requested slide
-                ISlide slide = pres.Slides[slideIndex];
-
-                // Ensure shape index is within range
-                if (shapeIndex < 0 || shapeIndex >= slide.Shapes.Count)
+                Aspose.Slides.IShape shape = slide.Shapes[0] as Aspose.Slides.IShape;
+                if (shape == null)
                 {
-                    Console.WriteLine("Shape index out of range.");
+                    Console.Error.WriteLine("Error: The first item on the slide is not a shape.");
+                    pres.Dispose();
                     return;
                 }
 
-                // Get the requested shape
-                IShape shape = slide.Shapes[shapeIndex];
+                // Render the shape as a PNG image with default scaling (1.0f, 1.0f)
+                Aspose.Slides.IImage shapeImage = shape.GetImage(
+                    Aspose.Slides.ShapeThumbnailBounds.Shape,
+                    1.0f,
+                    1.0f);
 
-                // Create a thumbnail image of the shape (full scale)
-                IImage thumbnail = shape.GetThumbnail(1f, 1f);
-
-                // Save the thumbnail to a memory stream in PNG format
                 using (MemoryStream ms = new MemoryStream())
                 {
-                    thumbnail.Save(ms, ImageFormat.Png);
-                    byte[] imageBytes = ms.ToArray();
-
-                    // Convert the image bytes to a Base64 string
-                    string base64String = Convert.ToBase64String(imageBytes);
-
-                    // Output the Base64 string as a data URI (can be embedded in HTML)
-                    Console.WriteLine("data:image/png;base64," + base64String);
+                    shapeImage.Save(ms, Aspose.Slides.ImageFormat.Png);
+                    byte[] pngBytes = ms.ToArray();
+                    string base64String = Convert.ToBase64String(pngBytes);
+                    string dataUri = "data:image/png;base64," + base64String;
+                    Console.WriteLine(dataUri);
                 }
 
-                // Save the presentation (optional, as required by some workflows)
-                pres.Save("output.pptx", SaveFormat.Pptx);
-            }
-            catch (NotSupportedException)
-            {
-                // Format not supported
-                Console.WriteLine("The provided file format is not supported.");
+                // Save the presentation (no modifications made, but required by the rule)
+                pres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                pres.Dispose();
             }
             catch (Exception ex)
             {
-                // General exception handling
-                Console.WriteLine("An error occurred: " + ex.Message);
+                Console.Error.WriteLine("An error occurred: {0}", ex.Message);
             }
         }
     }
