@@ -1,77 +1,108 @@
 // -----------------------------------------------------------------------------
-// Example: Assign URL pictures to org chart nodes using C#
-//
+// Example: Assign URL Images to Picture Organization Chart SmartArt Nodes using C#
+// 
 // Description:
-// Demonstrates how to assign external image URLs to nodes of a Picture
-// Organization Chart SmartArt using C# and Aspose.Slides for .NET. The example
-// creates a new presentation, adds a Picture Organization Chart SmartArt, and
-// sets each node's picture shape to reference an online image via its URL.
-// The resulting PPTX file can be opened in PowerPoint where the images are
-// loaded from the specified URLs.
-//
+// This console application creates a new PowerPoint presentation, adds a
+// Picture Organization Chart SmartArt, downloads images from external URLs,
+// and assigns each image to the corresponding SmartArt node's picture shape.
+// The resulting PPTX can be opened in PowerPoint where the nodes display the
+// downloaded images.
+// 
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Assign, Pictures, SmartArt, 
-// Organization Chart, URL, Presentation Processing, Office Automation
-//
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Picture Organization Chart, SmartArt, URL images
+// 
 // Use Cases:
-// - Automate assigning URL pictures to organization chart nodes.
-// - Build C# utilities for PowerPoint presentation processing.
-// - Generate or transform PPTX files with dynamic image content in .NET.
-// - Validate presentation workflows that rely on external image resources.
+// - Automatically generate org charts with employee photos sourced from a web service.
+// - Populate presentation templates with dynamic images retrieved from online sources.
+// - Build marketing decks where product images are fetched from CDN URLs.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
-
 using System;
-using System.Collections.Generic;
-using Aspose.Slides;
-using Aspose.Slides.Export;
-using Aspose.Slides.SmartArt;
+using System.IO;
+using System.Net.Http;
+using System.Threading.Tasks;
 
-namespace PictureOrganizationChartExample
+namespace AsposeSlidesOrgChartUrlImages
 {
     class Program
     {
-        static void Main()
+        static async Task Main(string[] args)
         {
-            // Create a new presentation
-            Presentation presentation = new Presentation();
-
-            // Get the first slide
-            ISlide slide = presentation.Slides[0];
-
-            // Add a Picture Organization Chart SmartArt
-            ISmartArt smartArt = slide.Shapes.AddSmartArt(
-                50, 50, 600, 400,
-                SmartArtLayoutType.PictureOrganizationChart);
-
-            // List of image URLs to assign to nodes
-            List<string> imageUrls = new List<string>
+            // Define output directory and file
+            string outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "Output");
+            if (!Directory.Exists(outputDirectory))
             {
-                "https://example.com/image1.png",
-                "https://example.com/image2.png",
-                "https://example.com/image3.png",
-                "https://example.com/image4.png"
+                Directory.CreateDirectory(outputDirectory);
+            }
+            string outputPath = Path.Combine(outputDirectory, "OrgChartWithUrlImages.pptx");
+
+            // URLs of images to assign to nodes (replace with real URLs)
+            string[] imageUrls = new string[]
+            {
+                "https://example.com/images/person1.jpg",
+                "https://example.com/images/person2.jpg",
+                "https://example.com/images/person3.jpg",
+                "https://example.com/images/person4.jpg"
             };
 
-            // Assign each URL to the corresponding node's picture shape
-            for (int i = 0; i < smartArt.Nodes.Count && i < imageUrls.Count; i++)
+            // Create a new presentation
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+
+            // Add Picture Organization Chart SmartArt
+            Aspose.Slides.SmartArt.ISmartArt smartArt = presentation.Slides[0].Shapes.AddSmartArt(
+                20, 20, 600, 500,
+                Aspose.Slides.SmartArt.SmartArtLayoutType.PictureOrganizationChart);
+
+            // HttpClient for downloading images
+            HttpClient httpClient = new HttpClient();
+
+            // Assign images to each node
+            int nodeCount = smartArt.AllNodes.Count;
+            int assignCount = Math.Min(nodeCount, imageUrls.Length);
+
+            for (int i = 0; i < assignCount; i++)
             {
+                string url = imageUrls[i];
                 try
                 {
-                    ISmartArtNode node = smartArt.Nodes[i];
-                    // The picture shape is typically the first shape in the node
-                    IPictureFrame pictureShape = (IPictureFrame)node.Shapes[0];
-                    pictureShape.LinkPathLong = imageUrls[i];
+                    byte[] imageData = await httpClient.GetByteArrayAsync(url);
+                    using (MemoryStream memoryStream = new MemoryStream(imageData))
+                    {
+                        Aspose.Slides.IImage slideImage = Aspose.Slides.Images.FromStream(memoryStream);
+                        Aspose.Slides.IPPImage ippImage = presentation.Images.AddImage(slideImage);
+
+                        Aspose.Slides.SmartArt.ISmartArtNode node = smartArt.AllNodes[i];
+                        // Each node contains at least one shape; the first shape holds the picture
+                        Aspose.Slides.SmartArt.ISmartArtShape shape = node.Shapes[0];
+                        shape.FillFormat.FillType = Aspose.Slides.FillType.Picture;
+                        shape.FillFormat.PictureFillFormat.Picture.Image = ippImage;
+                    }
+                }
+                catch (HttpRequestException ex)
+                {
+                    Console.WriteLine($"Failed to download image from URL '{url}': {ex.Message}");
                 }
                 catch (Exception ex)
                 {
-                    // Handle any errors related to setting the online image
-                    Console.WriteLine($"Failed to assign image to node {i}: {ex.Message}");
+                    Console.WriteLine($"Error processing node {i}: {ex.Message}");
                 }
             }
 
             // Save the presentation
-            string outputPath = "PictureOrganizationChart.pptx";
-            presentation.Save(outputPath, SaveFormat.Pptx);
+            try
+            {
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                Console.WriteLine($"Presentation saved to: {outputPath}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Failed to save presentation: {ex.Message}");
+            }
+            finally
+            {
+                presentation.Dispose();
+                httpClient.Dispose();
+            }
         }
     }
 }
