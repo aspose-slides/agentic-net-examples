@@ -18,6 +18,7 @@
 // - Build C# tools for PowerPoint presentation processing and asset generation.
 // - Generate image assets from PPTX files for web or documentation purposes.
 // - Validate and preview SmartArt content before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
