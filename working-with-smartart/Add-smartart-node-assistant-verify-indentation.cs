@@ -18,6 +18,7 @@
 // - Build C# tools for PowerPoint presentation processing involving SmartArt.
 // - Generate or modify PPTX files with specific SmartArt structures in .NET.
 // - Verify SmartArt node properties for correct visual layout before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
