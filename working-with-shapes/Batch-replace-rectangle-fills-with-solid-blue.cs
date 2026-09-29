@@ -15,6 +15,7 @@
 // - Create automated tools for bulk styling of PowerPoint files.
 // - Integrate shape fill updates into CI pipelines or document generation workflows.
 // - Ensure visual consistency across multiple presentations programmatically.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
