@@ -18,6 +18,7 @@
 // - Build tools that convert PowerPoint annotations to JSON for further analysis.
 // - Integrate comment data into web services or databases.
 // - Validate comment presence before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
