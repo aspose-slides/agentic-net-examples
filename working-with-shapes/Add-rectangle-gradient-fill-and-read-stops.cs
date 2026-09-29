@@ -16,6 +16,7 @@
 // - Retrieve and inspect gradient fill properties programmatically.
 // - Build .NET tools for PPTX generation and validation.
 // - Integrate gradient fill handling into presentation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
