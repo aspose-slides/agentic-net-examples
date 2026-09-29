@@ -18,6 +18,7 @@
 // - Build tools that need visual previews of SmartArt nodes.
 // - Integrate SmartArt thumbnail generation into .NET workflows.
 // - Validate or document SmartArt content in PowerPoint files.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
