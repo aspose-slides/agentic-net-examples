@@ -16,6 +16,7 @@
 // - Build .NET tools for editing and saving PPTX presentations.
 // - Generate modified presentations programmatically.
 // - Validate shape manipulation workflows before deployment.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
