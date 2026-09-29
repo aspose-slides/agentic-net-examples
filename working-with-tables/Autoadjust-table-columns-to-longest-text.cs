@@ -18,6 +18,7 @@
 // - Build .NET tools for dynamic PowerPoint table generation.
 // - Ensure consistent layout when exporting data to PPTX.
 // - Integrate table auto‑sizing into presentation automation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
