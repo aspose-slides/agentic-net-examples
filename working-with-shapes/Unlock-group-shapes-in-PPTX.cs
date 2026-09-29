@@ -17,6 +17,7 @@
 // - Prepare PPTX files for batch processing where locked shapes cause issues.
 // - Integrate shape unlocking into custom PowerPoint manipulation tools.
 // - Ensure group shapes are editable in downstream applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
