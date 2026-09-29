@@ -17,6 +17,7 @@
 // - Automate cleanup of PowerPoint reports by inserting default values.
 // - Build .NET tools that validate and enrich PPTX content.
 // - Integrate placeholder insertion into larger presentation generation pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
