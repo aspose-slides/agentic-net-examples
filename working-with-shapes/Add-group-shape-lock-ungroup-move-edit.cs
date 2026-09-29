@@ -16,6 +16,7 @@
 // - Automate creation of read‑only slide elements in .NET applications.
 // - Ensure presentation content cannot be altered unintentionally.
 // - Build tools for preparing secure PPTX templates.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

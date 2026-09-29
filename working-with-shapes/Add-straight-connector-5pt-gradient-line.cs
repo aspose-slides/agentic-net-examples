@@ -17,6 +17,7 @@
 // - Build .NET tools that generate or modify PPTX diagrams and flowcharts.
 // - Automate visual enhancements for presentations, such as colored connectors.
 // - Validate and test presentation rendering before deployment.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -17,6 +17,7 @@
 // - Automate image extraction from PowerPoint slides in .NET.
 // - Create utilities that integrate with legacy Office automation.
 // - Save modified presentations after processing shapes.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

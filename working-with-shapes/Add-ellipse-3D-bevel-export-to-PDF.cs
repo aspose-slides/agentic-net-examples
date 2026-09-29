@@ -16,6 +16,7 @@
 // - Automate creation of presentation assets with advanced visual effects.
 // - Integrate shape styling and PDF export into .NET applications.
 // - Validate 3‑D bevel rendering before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

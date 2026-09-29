@@ -18,6 +18,7 @@
 // - Build C# tools for automated slide layout adjustments.
 // - Generate or modify PPTX files with custom line graphics in .NET.
 // - Automate visual formatting tasks before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

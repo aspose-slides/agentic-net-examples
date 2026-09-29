@@ -18,6 +18,7 @@
 // - Build .NET utilities for batch updating presentation styling.
 // - Integrate shape formatting changes into CI pipelines for slide decks.
 // - Ensure consistent visual appearance of grouped header elements.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

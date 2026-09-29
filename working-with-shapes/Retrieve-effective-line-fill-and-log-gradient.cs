@@ -16,6 +16,7 @@
 // - Log gradient fill details for debugging or analysis.
 // - Automate PowerPoint shape formatting validation.
 // - Build .NET tools that generate or modify PPTX files with gradient lines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

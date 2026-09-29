@@ -18,6 +18,7 @@
 // - Build C# utilities for extracting and processing chart images from PPTX files.
 // - Integrate chart thumbnail creation into .NET applications or CI pipelines.
 // - Validate and preview chart visuals before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

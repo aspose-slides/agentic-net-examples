@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint shape formatting.
 // - Generate or modify PPTX presentations programmatically.
 // - Validate line cap styling in presentation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

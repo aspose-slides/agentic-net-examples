@@ -18,6 +18,7 @@
 // - Build C# utilities for PowerPoint shape styling and formatting.
 // - Generate or modify presentations with custom pattern fills in .NET apps.
 // - Validate visual styling workflows before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.Drawing;

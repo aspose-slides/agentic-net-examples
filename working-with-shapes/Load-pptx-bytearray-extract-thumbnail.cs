@@ -16,6 +16,7 @@
 // - Build C# utilities for PowerPoint shape image extraction.
 // - Integrate slide and shape processing into .NET applications.
 // - Validate and preview shape visuals before publishing or further processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

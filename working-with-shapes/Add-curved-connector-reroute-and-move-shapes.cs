@@ -17,6 +17,7 @@
 // - Build tools that adjust shape positions and update connector paths.
 // - Generate or modify PPTX files programmatically in .NET applications.
 // - Validate connector routing logic in presentation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

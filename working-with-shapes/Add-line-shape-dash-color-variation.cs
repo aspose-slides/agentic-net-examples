@@ -17,6 +17,7 @@
 // - Automate creation of diagrammatic slides with custom dash patterns.
 // - Build .NET utilities for batch processing of PPTX files.
 // - Test and validate line formatting features in Aspose.Slides.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;

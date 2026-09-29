@@ -19,6 +19,7 @@
 // - Integrate line‑formatting logic into .NET applications that generate or
 //   modify PowerPoint content.
 // - Ensure consistent visual styling of ellipse shapes across slides.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

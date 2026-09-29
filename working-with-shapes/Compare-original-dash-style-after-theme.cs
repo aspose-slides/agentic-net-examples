@@ -17,6 +17,7 @@
 // - Build tools to audit or validate line formatting in PowerPoint files.
 // - Automate comparison of original and effective visual properties in .NET.
 // - Generate reports on shape formatting for presentation quality checks.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

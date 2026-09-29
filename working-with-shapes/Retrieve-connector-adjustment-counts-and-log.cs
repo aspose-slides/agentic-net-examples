@@ -16,6 +16,7 @@
 // - Build C# utilities that analyze or modify connector shapes in PPTX files.
 // - Generate sample presentations with connectors for testing or demos.
 // - Integrate connector inspection into larger .NET PowerPoint workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;

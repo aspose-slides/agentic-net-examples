@@ -18,6 +18,7 @@
 // - Build C# utilities for PowerPoint diagram creation.
 // - Generate or modify PPTX files with custom shapes in .NET applications.
 // - Automate visual annotations in presentation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.Drawing;

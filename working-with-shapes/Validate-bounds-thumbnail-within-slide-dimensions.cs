@@ -18,6 +18,7 @@
 // - Build validation tools for PowerPoint content before publishing.
 // - Integrate thumbnail size checks into .NET applications that process PPTX files.
 // - Detect oversized shape renderings during batch processing of presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

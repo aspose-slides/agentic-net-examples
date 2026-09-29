@@ -19,6 +19,7 @@
 // - Optimize PowerPoint automation tools that need fast thumbnail previews.
 // - Compare rendering performance for different thumbnail bounds.
 // - Integrate performance measurements into .NET presentation processing pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

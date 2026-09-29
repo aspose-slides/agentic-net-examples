@@ -16,6 +16,7 @@
 // - Build C# utilities for PowerPoint presentation metadata management.
 // - Generate or transform PPTX files programmatically in .NET applications.
 // - Validate and standardize group shape identifiers before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

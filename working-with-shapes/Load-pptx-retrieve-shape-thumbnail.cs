@@ -17,6 +17,7 @@
 // - Build C# utilities for extracting shape images from presentations.
 // - Generate visual previews of specific shapes in PowerPoint files.
 // - Validate shape existence and extract graphics for documentation or reporting.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

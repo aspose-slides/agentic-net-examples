@@ -17,6 +17,7 @@
 // - Build C# utilities for securing PowerPoint content against editing.
 // - Generate or modify PPTX files with locked group shapes in .NET applications.
 // - Ensure presentation integrity before distribution or publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -17,6 +17,7 @@
 // - Apply solid color fills to shapes in generated presentations.
 // - Build .NET utilities that modify or enrich PPTX files.
 // - Automate slide layout adjustments for reporting or templating.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;

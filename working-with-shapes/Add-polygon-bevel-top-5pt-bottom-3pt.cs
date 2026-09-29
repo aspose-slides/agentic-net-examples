@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint 3‑D formatting.
 // - Generate or modify PPTX files with specific shape styling in .NET apps.
 // - Validate bevel configurations before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;

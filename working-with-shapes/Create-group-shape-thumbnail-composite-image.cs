@@ -16,6 +16,7 @@
 // - Automate creation of composite shape images in PowerPoint files.
 // - Build .NET tools that need visual representations of grouped slide elements.
 // - Validate and export group shape content as raster images.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

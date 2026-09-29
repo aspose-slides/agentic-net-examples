@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint content enrichment.
 // - Generate or modify PPTX files programmatically in .NET applications.
 // - Validate hyperlink functionality before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -18,6 +18,7 @@
 // - Add or modify visual effects such as shadows to shapes after clearing prior formatting.
 // - Build .NET tools for consistent presentation styling and effect application.
 // - Validate and transform PowerPoint files programmatically before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -18,6 +18,7 @@
 // - Build C# tools for PowerPoint 3‑D shape manipulation.
 // - Generate or transform PPTX files with specific camera configurations.
 // - Validate presentation workflows before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

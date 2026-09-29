@@ -21,6 +21,7 @@
 // - Generate or transform PPTX files with customized shape styling in .NET
 //   applications.
 // - Validate picture‑fill workflows before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

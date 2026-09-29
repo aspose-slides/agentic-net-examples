@@ -17,6 +17,7 @@
 // - Build utilities that track presentation modifications over time.
 // - Integrate shape image extraction into .NET applications with detailed logs.
 // - Validate and document presentation processing steps in CI pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

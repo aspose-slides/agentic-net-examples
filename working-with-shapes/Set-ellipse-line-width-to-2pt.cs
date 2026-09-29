@@ -17,6 +17,7 @@
 // - Build C# tools for bulk shape formatting in PowerPoint files.
 // - Generate or transform PPTX files with specific shape styling in .NET.
 // - Validate and enforce presentation design standards before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

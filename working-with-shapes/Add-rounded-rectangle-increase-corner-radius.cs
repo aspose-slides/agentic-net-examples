@@ -17,6 +17,7 @@
 // - Automate shape styling in PowerPoint presentations.
 // - Build .NET tools for adjusting visual properties of PPTX files.
 // - Validate shape adjustments before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

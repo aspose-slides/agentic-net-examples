@@ -12,6 +12,7 @@
 // - Build .NET tools for customizing shape appearance in PowerPoint presentations.
 // - Generate or modify presentations with precise line styling for reports or diagrams.
 // - Validate line formatting logic in automated slide generation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

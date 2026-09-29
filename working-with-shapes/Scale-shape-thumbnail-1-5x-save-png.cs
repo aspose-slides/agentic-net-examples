@@ -17,6 +17,7 @@
 // - Build C# tools that extract and resize shape images from PowerPoint files.
 // - Automate PNG export of specific shapes with custom scaling.
 // - Validate shape rendering and scaling in .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

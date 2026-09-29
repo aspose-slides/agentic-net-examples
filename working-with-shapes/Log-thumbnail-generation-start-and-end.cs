@@ -16,6 +16,7 @@
 // - Automate creation of slide preview images in .NET applications.
 // - Integrate timing diagnostics into PowerPoint processing workflows.
 // - Validate and benchmark presentation processing before deployment.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

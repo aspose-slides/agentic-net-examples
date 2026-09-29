@@ -17,6 +17,7 @@
 // - Implement robust error handling for unsupported shape types.
 // - Build .NET tools that process and export slide content as images.
 // - Integrate thumbnail generation into larger presentation processing pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

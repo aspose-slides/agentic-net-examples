@@ -18,6 +18,7 @@
 // - Build C# tools for bulk visual styling of PowerPoint presentations.
 // - Generate or transform PPTX files with custom gradient shapes in .NET.
 // - Validate and preview presentation aesthetics before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

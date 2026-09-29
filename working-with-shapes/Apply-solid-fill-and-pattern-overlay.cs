@@ -18,6 +18,7 @@
 // - Build C# tools for advanced shape styling in PowerPoint presentations.
 // - Generate or transform PPTX files with custom visual effects in .NET applications.
 // - Validate presentation workflows involving layered shape fills before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

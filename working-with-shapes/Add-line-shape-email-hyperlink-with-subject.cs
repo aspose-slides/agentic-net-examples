@@ -17,6 +17,7 @@
 // - Build C# utilities for enhancing PowerPoint presentations with interactive email links.
 // - Generate or modify PPTX files programmatically in .NET applications.
 // - Validate hyperlink functionality within presentation automation pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

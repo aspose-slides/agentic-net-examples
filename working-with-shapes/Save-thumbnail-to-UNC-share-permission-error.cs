@@ -18,6 +18,7 @@
 // - Build C# utilities for PowerPoint presentation processing on shared storage.
 // - Generate or transform PPTX files and store results on network locations.
 // - Validate and troubleshoot permission-related issues in presentation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

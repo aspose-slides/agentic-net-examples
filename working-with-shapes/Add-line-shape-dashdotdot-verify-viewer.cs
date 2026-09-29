@@ -18,6 +18,7 @@
 // - Generate PPTX files programmatically for reporting or documentation.
 // - Verify that styled shapes render correctly in PowerPoint viewers.
 // - Integrate shape styling into .NET automation tools.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -18,6 +18,7 @@
 // - Build C# tools for PowerPoint presentation styling.
 // - Generate or transform PPTX files in .NET applications.
 // - Apply consistent branding colors across presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

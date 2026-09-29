@@ -18,6 +18,7 @@
 // - Build C# tools for PowerPoint automation and hyperlink management.
 // - Generate or modify PPTX files programmatically in .NET applications.
 // - Validate presentation hyperlink functionality before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
