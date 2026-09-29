@@ -19,6 +19,7 @@
 // - Build .NET tools for reusing animated content across multiple PPTX files.
 // - Generate or transform PPTX files while preserving animation timelines.
 // - Validate and test slide cloning workflows before deployment.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
