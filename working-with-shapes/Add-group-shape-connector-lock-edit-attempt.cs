@@ -19,6 +19,7 @@
 // - Build C# tools for PowerPoint presentation processing and lock testing.
 // - Generate or transform PPTX files in .NET applications.
 // - Validate group lock behavior before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
