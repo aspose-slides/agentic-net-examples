@@ -16,6 +16,7 @@
 // - Build C# utilities for PowerPoint presentation processing that support mixed-language content.
 // - Generate or transform PPTX files in .NET applications with right-to-left language support.
 // - Validate presentation workflows involving SmartArt and multilingual text before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
