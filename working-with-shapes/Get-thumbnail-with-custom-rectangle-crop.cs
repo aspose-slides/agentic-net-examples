@@ -18,6 +18,7 @@
 // - Build C# tools for PowerPoint shape processing and image generation.
 // - Integrate shape thumbnail creation into .NET applications.
 // - Validate and preview shape rendering before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
