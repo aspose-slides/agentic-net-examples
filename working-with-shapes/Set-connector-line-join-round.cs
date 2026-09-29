@@ -18,6 +18,7 @@
 // - Build C# tools for customizing PowerPoint connector visuals.
 // - Generate or transform PPTX files with specific connector formatting.
 // - Validate presentation workflows before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
