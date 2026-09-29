@@ -17,6 +17,7 @@
 // - Generate shape thumbnails for documentation or preview purposes.
 // - Build .NET tools that modify and refresh PowerPoint presentations.
 // - Validate and process PPTX workflows before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
