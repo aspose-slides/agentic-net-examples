@@ -17,6 +17,7 @@
 // - Automate batch thumbnail creation in CI/CD pipelines.
 // - Build .NET utilities that need preview images of presentations.
 // - Prepare assets for documentation or e‑learning platforms.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
