@@ -17,6 +17,7 @@
 // - Validate SmartArt hierarchy levels in .NET applications.
 // - Generate or transform PPTX files with custom SmartArt structures.
 // - Provide console‑based diagnostics for SmartArt content before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
