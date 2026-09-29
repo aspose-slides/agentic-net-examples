@@ -16,6 +16,7 @@
 // - Build tools to fine‑tune SmartArt node appearance in PPTX files.
 // - Automate presentation styling tasks in .NET applications.
 // - Validate and test SmartArt modifications before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
