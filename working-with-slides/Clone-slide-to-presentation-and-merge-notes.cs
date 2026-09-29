@@ -17,6 +17,7 @@
 // - Build .NET utilities for PowerPoint content reuse and note consolidation.
 // - Generate new presentations programmatically based on existing slide templates.
 // - Validate and transform PPTX files in batch processing scenarios.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
