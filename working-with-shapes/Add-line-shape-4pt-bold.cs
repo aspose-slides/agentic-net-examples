@@ -18,6 +18,7 @@
 //   formatting.
 // - Integrate line‑drawing logic into larger .NET applications.
 // - Validate line‑style settings in automated PowerPoint workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
