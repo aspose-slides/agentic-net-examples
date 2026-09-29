@@ -18,6 +18,7 @@
 // - Build C# utilities for SmartArt manipulation in PowerPoint presentations.
 // - Integrate org chart layout adjustments into .NET applications or CI pipelines.
 // - Automate preparation of PPTX files with specific SmartArt configurations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
