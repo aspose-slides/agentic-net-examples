@@ -18,6 +18,7 @@
 // - Build C# utilities for PowerPoint presentation styling.
 // - Generate or transform PPTX files with specific visual effects in .NET.
 // - Validate presentation appearance before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
