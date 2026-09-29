@@ -16,6 +16,7 @@
 // - Automate presentation processing in .NET applications.
 // - Ensure large presentations are saved with ZIP64 when necessary.
 // - Integrate PPTX cleanup steps into build or deployment pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
