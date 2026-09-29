@@ -17,6 +17,7 @@
 // - Build .NET tools for generating styled shapes in PowerPoint presentations.
 // - Create templates or batch-process slides with specific shape formatting.
 // - Validate shape rendering and styling in automated PPTX workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
