@@ -17,6 +17,7 @@
 // - Automate validation of presentation design standards.
 // - Prepare PPTX files for publishing where zero-width lines are not allowed.
 // - Integrate shape validation into .NET PowerPoint processing tools.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
