@@ -16,6 +16,7 @@
 // - Adjust slide numbering after inserting or removing slides.
 // - Automate slide numbering in batch processing of PPTX files.
 // - Ensure correct slide numbers when combining multiple presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
