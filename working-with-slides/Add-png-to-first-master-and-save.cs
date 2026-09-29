@@ -17,6 +17,7 @@
 // - Build .NET tools for PowerPoint master slide customization.
 // - Generate or modify PPTX files programmatically in C# applications.
 // - Prepare presentation templates with predefined images before content creation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
