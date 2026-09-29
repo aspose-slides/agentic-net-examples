@@ -16,6 +16,7 @@
 // - Build C# tools for batch updating SmartArt layouts in PPTX files.
 // - Integrate SmartArt processing into .NET applications.
 // - Ensure consistent visual styles across presentations before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
