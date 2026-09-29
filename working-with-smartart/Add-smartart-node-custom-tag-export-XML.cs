@@ -17,6 +17,7 @@
 // - Export SmartArt node metadata to XML for downstream processing.
 // - Build .NET tools for PowerPoint presentation manipulation and analysis.
 // - Integrate SmartArt tagging and export functionality into larger applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
