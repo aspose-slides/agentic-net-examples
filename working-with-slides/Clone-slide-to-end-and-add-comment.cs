@@ -17,6 +17,7 @@
 // - Build C# utilities for annotating PowerPoint presentations.
 // - Generate or modify PPTX files in .NET applications.
 // - Validate presentation content before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
