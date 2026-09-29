@@ -1,60 +1,64 @@
 // -----------------------------------------------------------------------------
-// Example: Insert clone into middle and set transition using C#
+// Example: Clone Slide into Middle and Apply Fade Transition with 4-Second Advance
 //
 // Description:
-// Demonstrates how to insert a cloned slide into the middle of a presentation
-// and configure its slide show transition using Aspose.Slides for .NET. The
-// example loads an existing PPTX file, clones a slide, sets a fade transition
-// with a 4‑second advance time, and saves the result as a new PPTX file.
-// This pattern can be used to automate slide duplication and transition
-// customization in PowerPoint automation scenarios.
+// This console application loads an existing PPTX file, clones the first slide,
+// inserts the cloned slide into the middle of the presentation, and configures
+// a fade transition that advances automatically after 4 seconds. The modified
+// presentation is saved as a new PPTX file. Useful for automating slide
+// duplication and transition customization in PowerPoint workflows.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Insert Clone, Middle Slide,
-// Transition, SlideShowTransition, Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, clone slide, slide transition, fade, advance time
 //
 // Use Cases:
-// - Automate cloning a slide into a specific position and applying a transition.
-// - Build .NET tools for PowerPoint slide manipulation and presentation flow control.
-// - Generate or modify PPTX files with custom slide timings in batch processes.
-// - Validate and preview presentation changes before publishing.
+// - Duplicate a slide to maintain consistent layout while adding custom transitions.
+// - Insert a cloned slide at a specific position for dynamic presentation generation.
+// - Automate transition settings for timed slide shows in corporate presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
-
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        var inputPath = "input.pptx";
-        var outputPath = "output.pptx";
+        string inputPath = "input.pptx";
+        string outputPath = "output.pptx";
 
         if (!File.Exists(inputPath))
         {
-            Console.WriteLine("Input file does not exist.");
+            Console.WriteLine("Input file not found: " + inputPath);
             return;
         }
 
         try
         {
-            var pres = new Presentation(inputPath);
-            // Clone slide at index 1 to position 2 (middle of deck)
-            var sourceSlide = pres.Slides[1];
-            var clonedSlide = pres.Slides.InsertClone(2, sourceSlide);
-            // Adjust transition timing for the cloned slide
-            clonedSlide.SlideShowTransition.Type = SlideShow.TransitionType.Fade;
+            Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
+
+            // Clone the first slide
+            Aspose.Slides.ISlide sourceSlide = pres.Slides[0];
+
+            // Calculate middle index
+            int middleIndex = pres.Slides.Count / 2;
+
+            // Insert the cloned slide at the middle position
+            Aspose.Slides.ISlide clonedSlide = pres.Slides.InsertClone(middleIndex, sourceSlide);
+
+            // Configure fade transition with a 4‑second automatic advance
+            clonedSlide.SlideShowTransition.Type = Aspose.Slides.SlideShow.TransitionType.Fade;
             clonedSlide.SlideShowTransition.AdvanceOnClick = true;
-            clonedSlide.SlideShowTransition.AdvanceAfterTime = 4000; // 4 seconds
+            clonedSlide.SlideShowTransition.AdvanceAfterTime = 4000U; // time in milliseconds
+
             // Save the modified presentation
-            pres.Save(outputPath, SaveFormat.Pptx);
+            pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
             pres.Dispose();
+
+            Console.WriteLine("Presentation saved to: " + outputPath);
         }
         catch (Exception ex)
         {
-            // Handle unsupported format or other errors
             Console.WriteLine("Error: " + ex.Message);
         }
     }
