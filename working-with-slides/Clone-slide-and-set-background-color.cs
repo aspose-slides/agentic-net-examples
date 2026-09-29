@@ -18,6 +18,7 @@
 // - Build .NET tools for customizing slide appearance in bulk.
 // - Generate or transform PPTX files with consistent styling.
 // - Validate slide duplication and background settings in CI pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
