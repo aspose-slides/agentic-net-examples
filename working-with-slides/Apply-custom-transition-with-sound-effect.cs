@@ -17,6 +17,7 @@
 // - Build C# utilities for enhancing presentations with audio effects.
 // - Generate or modify PPTX files programmatically in .NET applications.
 // - Validate and preview slide transitions before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
