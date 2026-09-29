@@ -1,68 +1,73 @@
 // -----------------------------------------------------------------------------
-// Example: Clone smartart shape set horizontal compare nodes using C#
+// Example: Clone SmartArt Shape and Compare Layouts in C# with Aspose.Slides
 //
 // Description:
-// Demonstrates how to clone a SmartArt shape, modify the cloned shape's root
-// node layout to a standard horizontal arrangement, and compare the node
-// layouts of the original and cloned SmartArt objects using C# and
-// Aspose.Slides for .NET. The example creates a presentation, adds an
-// Organization Chart SmartArt, clones it, changes the layout of the cloned
-// SmartArt, outputs the layout values to the console, and saves the result as
-// a PPTX file.
+// This console application creates a new PowerPoint presentation, adds an
+// Organization Chart SmartArt shape, clones the SmartArt using the Aspose.Slides
+// API, changes the cloned shape's layout to a horizontal process layout, prints
+// the layout types of both original and cloned SmartArt objects to the console,
+// and saves the resulting presentation as a PPTX file. The example demonstrates
+// shape cloning, layout modification, and simple comparison of SmartArt properties.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone, SmartArt, Shape,
-// Horizontal, Organization Chart, Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SmartArt, clone, layout comparison
 //
 // Use Cases:
-// - Automate cloning of SmartArt shapes with modified node layouts.
-// - Build C# tools for PowerPoint presentation processing and layout comparison.
-// - Generate or transform PPTX files in .NET applications with custom SmartArt.
-// - Validate SmartArt layout changes before publishing or integration.
+// - Generate duplicate SmartArt diagrams with different visual arrangements.
+// - Programmatically adjust SmartArt layouts for dynamic report generation.
+// - Compare SmartArt configurations during automated presentation testing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
-
 using System;
-using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-class Program
+namespace AsposeSlidesSmartArtCloneDemo
 {
-    static void Main()
+    class Program
     {
-        string outputPath = "output.pptx";
-        try
+        static void Main(string[] args)
         {
-            Presentation presentation = new Presentation();
-            ISlide slide = presentation.Slides[0];
+            try
+            {
+                // Create a new presentation.
+                Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-            // Add original SmartArt (Organization Chart)
-            Aspose.Slides.SmartArt.ISmartArt originalSmartArt = slide.Shapes.AddSmartArt(
-                50, 50, 400, 300,
-                Aspose.Slides.SmartArt.SmartArtLayoutType.OrganizationChart);
+                // Get the first slide.
+                Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-            // Set original root node layout to Left Hanging
-            originalSmartArt.Nodes[0].OrganizationChartLayout = Aspose.Slides.SmartArt.OrganizationChartLayoutType.LeftHanging;
+                // Add an Organization Chart SmartArt shape.
+                Aspose.Slides.SmartArt.ISmartArt originalSmartArt = slide.Shapes.AddSmartArt(
+                    50,               // X position
+                    50,               // Y position
+                    600,              // Width
+                    400,              // Height
+                    Aspose.Slides.SmartArt.SmartArtLayoutType.OrganizationChart);
 
-            // Clone the SmartArt shape
-            IShapeCollection shapes = slide.Shapes;
-            IShape clonedShape = shapes.AddClone(originalSmartArt, 500, 50);
-            Aspose.Slides.SmartArt.ISmartArt clonedSmartArt = (Aspose.Slides.SmartArt.ISmartArt)clonedShape;
+                // Clone the SmartArt shape using the shape collection's AddClone method.
+                Aspose.Slides.IShape clonedShape = slide.Shapes.AddClone(originalSmartArt);
 
-            // Change cloned SmartArt node layout to Standard (horizontal)
-            clonedSmartArt.Nodes[0].OrganizationChartLayout = Aspose.Slides.SmartArt.OrganizationChartLayoutType.Standard;
+                // Cast the cloned shape back to ISmartArt.
+                Aspose.Slides.SmartArt.ISmartArt clonedSmartArt = (Aspose.Slides.SmartArt.ISmartArt)clonedShape;
 
-            // Compare node arrangements
-            Console.WriteLine("Original node layout: " + originalSmartArt.Nodes[0].OrganizationChartLayout);
-            Console.WriteLine("Cloned node layout: " + clonedSmartArt.Nodes[0].OrganizationChartLayout);
+                // Change the layout of the cloned SmartArt to a horizontal process layout.
+                clonedSmartArt.Layout = Aspose.Slides.SmartArt.SmartArtLayoutType.BasicProcess;
 
-            // Save presentation
-            presentation.Save(outputPath, SaveFormat.Pptx);
-            presentation.Dispose();
-        }
-        catch (Exception ex)
-        {
-            // Handle exceptions (e.g., format not supported)
+                // Output the layout types of the original and cloned SmartArt objects.
+                Console.WriteLine("Original SmartArt layout: " + originalSmartArt.Layout);
+                Console.WriteLine("Cloned SmartArt layout: " + clonedSmartArt.Layout);
+
+                // Save the presentation to a PPTX file.
+                string outputPath = "CloneSmartArtDemo.pptx";
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+
+                // Clean up.
+                presentation.Dispose();
+
+                Console.WriteLine("Presentation saved to: " + outputPath);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
         }
     }
 }
