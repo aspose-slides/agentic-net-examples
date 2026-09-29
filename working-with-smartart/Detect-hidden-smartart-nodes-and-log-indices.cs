@@ -16,6 +16,7 @@
 // - Build C# utilities for PowerPoint presentation analysis.
 // - Validate SmartArt content before publishing or further processing.
 // - Integrate SmartArt inspection into .NET applications handling PPTX files.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
