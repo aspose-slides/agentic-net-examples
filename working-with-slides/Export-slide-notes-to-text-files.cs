@@ -18,6 +18,7 @@
 // - Build C# utilities for processing PowerPoint presentations.
 // - Generate separate note files for review, translation, or archiving.
 // - Integrate slide notes handling into larger .NET workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
