@@ -17,6 +17,7 @@
 // - Build .NET tools for dynamic slide generation with image content.
 // - Integrate picture-filled shapes into presentation workflows.
 // - Validate shape fill operations in automated tests.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
