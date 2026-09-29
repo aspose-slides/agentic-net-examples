@@ -17,6 +17,7 @@
 // - Build C# utilities that log shape metadata from PPTX files.
 // - Integrate shape‑text validation into .NET applications handling presentations.
 // - Generate reports of alt text content before publishing or converting slides.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
