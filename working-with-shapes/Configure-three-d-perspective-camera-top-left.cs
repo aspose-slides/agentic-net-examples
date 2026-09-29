@@ -18,6 +18,7 @@
 // - Build C# tools for enhancing PowerPoint presentations with 3D effects.
 // - Generate or transform PPTX files with custom camera and lighting settings.
 // - Validate 3D presentation workflows before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
