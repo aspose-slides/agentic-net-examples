@@ -17,6 +17,7 @@
 // - Build C# utilities for styling shapes in PowerPoint files.
 // - Generate or modify PPTX presentations programmatically.
 // - Validate gradient fill configurations before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.Drawing;
