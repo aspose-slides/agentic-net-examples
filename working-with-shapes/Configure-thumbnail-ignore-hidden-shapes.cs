@@ -19,6 +19,7 @@
 // - Integrate thumbnail creation into .NET applications while preserving
 //   presentation integrity.
 // - Automate batch processing of PPTX files for preview generation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
