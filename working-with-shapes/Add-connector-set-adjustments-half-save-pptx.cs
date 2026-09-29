@@ -16,6 +16,7 @@
 // - Create or modify PPTX files with customized connector geometry.
 // - Automate presentation generation or transformation in .NET applications.
 // - Validate connector adjustments before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
