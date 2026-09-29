@@ -17,6 +17,7 @@
 // - Replace dynamic text placeholders (e.g., {{Name}}, {{Date}}) with runtime data.
 // - Automate generation of personalized PowerPoint files in .NET applications.
 // - Validate and transform PPTX content before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
