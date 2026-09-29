@@ -17,6 +17,7 @@
 // - Build .NET tools for analyzing or reporting on PPTX shape properties.
 // - Integrate shape property data into downstream processing pipelines.
 // - Validate presentation content before publishing or further manipulation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
