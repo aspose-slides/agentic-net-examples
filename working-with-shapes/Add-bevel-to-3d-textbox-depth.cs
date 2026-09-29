@@ -18,6 +18,7 @@
 // - Programmatically control 3‑D depth and bevel properties of shapes.
 // - Build .NET tools that create or modify PPTX files with enhanced visual styles.
 // - Automate styling of shapes for consistent branding across slides.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
