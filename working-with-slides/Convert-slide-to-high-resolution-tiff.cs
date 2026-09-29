@@ -19,6 +19,7 @@
 // - Build C# utilities for PowerPoint slide export and archiving.
 // - Generate or transform PPTX files into printable image formats in .NET.
 // - Validate slide rendering quality before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
