@@ -1,53 +1,79 @@
 // -----------------------------------------------------------------------------
-// Example: Add curved connector line angle to variable using C#
+// Example: Add Curved Connector and Retrieve Its Angle in Degrees Using Aspose.Slides
 //
 // Description:
-// Demonstrates how to add a curved connector shape to a slide, calculate its
-// line angle in degrees, and store the result in a variable using C# and
-// Aspose.Slides for .NET. The example shows the required presentation-processing
-// steps for PowerPoint files and produces the output presentation in a
-// standalone console application. Developers can use this pattern to automate
-// PPTX workflows, retrieve connector geometry, or integrate presentation logic
-// into .NET applications.
+// This console application creates or loads a PowerPoint presentation, adds a
+// curved connector shape to the first slide, calculates the connector's line
+// angle in degrees based on its geometry, stores the result in a variable, and
+// saves the modified presentation as a PPTX file. It demonstrates how to work
+// with Aspose.Slides for .NET to automate connector handling and geometry
+// extraction.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Curved Connector, Line Angle,
-// Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, curved connector, line angle, geometry
 //
 // Use Cases:
-// - Automate calculation of curved connector line angle.
-// - Build C# tools for PowerPoint presentation processing.
-// - Generate or transform PPTX files with connector geometry in .NET applications.
-// - Validate presentation workflows before publishing or integration.
+// - Automate diagram creation with connectors in presentation generation pipelines.
+// - Analyze connector orientation for layout validation or reporting.
+// - Generate presentations with custom connector styling and geometry metadata.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
-
 using System;
-using Aspose.Slides;
-using Aspose.Slides.Export;
+using System.IO;
 
-class Program
+namespace AsposeSlidesConnectorAngleExample
 {
-    static void Main()
+    class Program
     {
-        // Create a new presentation
-        Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
+        static void Main(string[] args)
+        {
+            const string inputPath = "input.pptx";
+            const string outputPath = "output.pptx";
 
-        // Access the first slide
-        Aspose.Slides.ISlide slide = presentation.Slides[0];
+            try
+            {
+                Aspose.Slides.Presentation presentation;
 
-        // Add a curved connector to the slide
-        Aspose.Slides.IConnector connector = slide.Shapes.AddConnector(Aspose.Slides.ShapeType.CurvedConnector2, 100, 100, 200, 0);
+                if (File.Exists(inputPath))
+                {
+                    presentation = new Aspose.Slides.Presentation(inputPath);
+                }
+                else
+                {
+                    presentation = new Aspose.Slides.Presentation();
+                }
 
-        // Set a simple line width
-        connector.LineFormat.Width = 5;
+                Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-        // Calculate the line angle (in degrees) based on connector dimensions
-        double angleRadians = Math.Atan2(connector.Height, connector.Width);
-        double angleDegrees = angleRadians * (180.0 / Math.PI);
-        double connectorLineAngle = angleDegrees; // Store the angle
+                // Add a curved connector to the slide
+                Aspose.Slides.IConnector connector = (Aspose.Slides.IConnector)slide.Shapes.AddConnector(
+                    Aspose.Slides.ShapeType.CurvedConnector2,
+                    100,   // X position
+                    100,   // Y position
+                    300,   // Width
+                    200    // Height
+                );
 
-        // Save the presentation
-        string outputPath = "CurvedConnectorAngle.pptx";
-        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                // Calculate the angle of the connector line in degrees
+                double angleRadians = Math.Atan2(connector.Height, connector.Width);
+                double connectorAngleDegrees = angleRadians * (180.0 / Math.PI);
+
+                Console.WriteLine("Connector angle (degrees): " + connectorAngleDegrees);
+
+                // Save the presentation
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                Console.WriteLine("Presentation saved to: " + outputPath);
+            }
+            catch (NotSupportedException nsEx)
+            {
+                // Handle unsupported file format scenarios
+                Console.WriteLine("Format not supported: " + nsEx.Message);
+            }
+            catch (Exception ex)
+            {
+                // General exception handling for I/O, Aspose errors, etc.
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
+        }
     }
 }
