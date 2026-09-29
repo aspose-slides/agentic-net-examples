@@ -16,6 +16,7 @@
 // - Build .NET utilities for batch processing and layout adjustments of PPTX content.
 // - Generate modified presentations programmatically for reporting or design workflows.
 // - Validate shape positioning logic before manual editing or publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
