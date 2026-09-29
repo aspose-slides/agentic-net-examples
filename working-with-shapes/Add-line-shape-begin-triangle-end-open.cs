@@ -18,6 +18,7 @@
 // - Build C# utilities for PowerPoint diagram generation.
 // - Generate or modify PPTX files with custom line annotations.
 // - Validate arrowhead configurations in presentation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
