@@ -17,6 +17,7 @@
 // - Build validation tools to ensure master slide integrity after cloning.
 // - Generate or transform PPTX files programmatically in .NET applications.
 // - Verify presentation workflows before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
