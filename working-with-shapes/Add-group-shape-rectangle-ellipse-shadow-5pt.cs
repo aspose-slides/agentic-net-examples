@@ -19,6 +19,7 @@
 // - Build C# tools for PowerPoint presentation processing that involve grouped shapes.
 // - Generate or transform PPTX files with custom shape effects in .NET applications.
 // - Validate presentation workflows that require grouped shapes and shadow styling.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
