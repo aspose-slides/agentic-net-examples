@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint table manipulation.
 // - Generate or modify PPTX files while maintaining table proportions.
 // - Validate presentation layouts programmatically.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
