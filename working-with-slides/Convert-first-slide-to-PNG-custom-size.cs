@@ -18,6 +18,7 @@
 // - Build C# utilities for extracting and resizing slide images.
 // - Integrate custom-sized slide rendering into .NET applications.
 // - Prepare slide assets for web or mobile platforms with predefined sizes.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
