@@ -19,6 +19,7 @@
 // - Build C# utilities for reliable PowerPoint slide management.
 // - Ensure data integrity when programmatically editing PPTX files.
 // - Integrate slide ID verification into larger .NET presentation processing pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
