@@ -17,6 +17,7 @@
 // - Build C# tools for PowerPoint slide validation and quality checks.
 // - Generate reports on presentation changes in .NET applications.
 // - Ensure consistency between versioned PPTX files before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
