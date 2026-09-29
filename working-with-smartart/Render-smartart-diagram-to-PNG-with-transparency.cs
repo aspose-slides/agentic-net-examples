@@ -17,6 +17,7 @@
 // - Generate image assets from PowerPoint presentations for web or UI integration.
 // - Build .NET tools that extract visual elements from PPTX files.
 // - Validate and process SmartArt content programmatically before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
