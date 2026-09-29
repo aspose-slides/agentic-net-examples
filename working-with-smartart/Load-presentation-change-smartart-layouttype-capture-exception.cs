@@ -16,6 +16,7 @@
 // - Build robust C# tools that handle errors when processing SmartArt in presentations.
 // - Automate PPTX transformations while ensuring graceful failure handling.
 // - Validate and update SmartArt structures in batch processing scenarios.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
