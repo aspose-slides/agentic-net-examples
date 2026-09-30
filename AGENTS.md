@@ -1,6 +1,6 @@
 ---
 name: aspose-slides-examples
-version: 26.5.0
+version: 26.9.0
 description: AI-friendly C# code examples for Aspose.Slides for .NET
 language: csharp
 framework: net10.0
@@ -27,17 +27,17 @@ When working in this repository:
 
 ## Repository Overview
 
-This repository contains **2273** working code examples demonstrating Aspose.Slides for .NET capabilities.
+This repository contains **2168** working code examples demonstrating Aspose.Slides for .NET capabilities.
 
-**Statistics** (as of 2026-05-19):
-- Version: 26.5.0
-- Total Examples: 2273
+**Statistics** (as of 2026-09-30):
+- Version: 26.9.0
+- Total Examples: 2168
 - Categories: 19
 
 ## Category Details
 
 ### 3d-presentations
-- Examples: 30
+- Examples: 29
 - Guide: [AGENTS.md](./3d-presentations/AGENTS.md)
 
 ### animations
@@ -45,15 +45,15 @@ This repository contains **2273** working code examples demonstrating Aspose.Sli
 - Guide: [AGENTS.md](./animations/AGENTS.md)
 
 ### comments-and-notes
-- Examples: 120
+- Examples: 118
 - Guide: [AGENTS.md](./comments-and-notes/AGENTS.md)
 
 ### conversion
-- Examples: 397
+- Examples: 376
 - Guide: [AGENTS.md](./conversion/AGENTS.md)
 
 ### design-presentations
-- Examples: 161
+- Examples: 157
 - Guide: [AGENTS.md](./design-presentations/AGENTS.md)
 
 ### manage-presentation
@@ -61,19 +61,19 @@ This repository contains **2273** working code examples demonstrating Aspose.Sli
 - Guide: [AGENTS.md](./manage-presentation/AGENTS.md)
 
 ### manage-presentation-content
-- Examples: 101
+- Examples: 98
 - Guide: [AGENTS.md](./manage-presentation-content/AGENTS.md)
 
 ### manage-presentation-media-files
-- Examples: 149
+- Examples: 144
 - Guide: [AGENTS.md](./manage-presentation-media-files/AGENTS.md)
 
 ### manage-presentation-text
-- Examples: 104
+- Examples: 102
 - Guide: [AGENTS.md](./manage-presentation-text/AGENTS.md)
 
 ### manage-tags-and-custom-data
-- Examples: 40
+- Examples: 35
 - Guide: [AGENTS.md](./manage-tags-and-custom-data/AGENTS.md)
 
 ### math-equations
@@ -81,35 +81,35 @@ This repository contains **2273** working code examples demonstrating Aspose.Sli
 - Guide: [AGENTS.md](./math-equations/AGENTS.md)
 
 ### presentation-ink-objects
-- Examples: 35
+- Examples: 30
 - Guide: [AGENTS.md](./presentation-ink-objects/AGENTS.md)
 
 ### secure-presentations
-- Examples: 29
+- Examples: 28
 - Guide: [AGENTS.md](./secure-presentations/AGENTS.md)
 
 ### vba-macros
-- Examples: 34
+- Examples: 33
 - Guide: [AGENTS.md](./vba-macros/AGENTS.md)
 
 ### working-with-charts
-- Examples: 463
+- Examples: 429
 - Guide: [AGENTS.md](./working-with-charts/AGENTS.md)
 
 ### working-with-shapes
-- Examples: 208
+- Examples: 202
 - Guide: [AGENTS.md](./working-with-shapes/AGENTS.md)
 
 ### working-with-slides
-- Examples: 123
+- Examples: 118
 - Guide: [AGENTS.md](./working-with-slides/AGENTS.md)
 
 ### working-with-smartart
-- Examples: 121
+- Examples: 113
 - Guide: [AGENTS.md](./working-with-smartart/AGENTS.md)
 
 ### working-with-tables
-- Examples: 31
+- Examples: 29
 - Guide: [AGENTS.md](./working-with-tables/AGENTS.md)
 
 
@@ -166,146 +166,6 @@ Check with a human before doing any of these:
 
 
 ## Common Mistakes (Anti-Patterns)
-
-### cs0103-imageformat-not-found
-
-```csharp
-// WRONG
-Used ImageFormat enum without namespace qualification (ImageFormat.Png)
-```
-
-```csharp
-// CORRECT
-Qualified enum with full namespace (Aspose.Slides.ImageFormat.Png) or added appropriate using
-```
-
-Reference ImageFormat via its full namespace (Aspose.Slides.ImageFormat) or include a using for Aspose.Slides to resolve the enum
-
-### cs0234-missing-namespace-aspose-slides-saveformat
-
-```csharp
-// WRONG
-Aspose.Slides.SaveFormat used for SaveFormat enum
-```
-
-```csharp
-// CORRECT
-Aspose.Slides.Export.SaveFormat used for SaveFormat enum
-```
-
-Reference SaveFormat via the Aspose.Slides.Export namespace (e.g., Aspose.Slides.Export.SaveFormat.Pptx) instead of Aspose.Slides.SaveFormat
-
-### cs1069-image-not-found-in-system-drawing
-
-```csharp
-// WRONG
-Using System.Drawing.Image and slide.GetThumbnail() which depends on System.Drawing.Common
-```
-
-```csharp
-// CORRECT
-Use Aspose.Slides.IImage slide.GetImage() and Aspose.Slides.ImageFormat for saving PNG
-```
-
-Replace System.Drawing.Image with Aspose.Slides.IImage and call slide.GetImage() instead of GetThumbnail(), then save with Aspose.Slides.ImageFormat
-
-### cs0234-saveformat-not-found-in-aspose-slides-namespace
-
-```csharp
-// WRONG
-Used Aspose.Slides.SaveFormat.Html (wrong namespace) and passed HtmlOptions unnecessarily
-```
-
-```csharp
-// CORRECT
-Reference Aspose.Slides.Export.SaveFormat.Html (or import Aspose.Slides.Export) and call presentation.Save with that enum
-```
-
-Always import and use Aspose.Slides.Export namespace for SaveFormat enum when saving presentations
-
-### htmloptions-does-not-contain-a-definition-for-embedimages
-
-```csharp
-// WRONG
-Instantiate HtmlOptions and assign htmlOptions.EmbedImages = true;
-```
-
-```csharp
-// CORRECT
-Instantiate Html5Options (or a version of HtmlOptions that supports EmbedImages) and set EmbedImages = true, then save using SaveFormat.Html5.
-```
-
-For HTML export with embedded images, use Aspose.Slides.Export.Html5Options (or the appropriate options class that includes the EmbedImages property) instead of HtmlOptions, set its EmbedImages property, and call Presentation.Save with SaveFormat.Html5.
-
-### cs0234-saveformat-not-found-in-aspose-slides
-
-```csharp
-// WRONG
-presentation.Save(..., Aspose.Slides.SaveFormat.Html, ...)
-```
-
-```csharp
-// CORRECT
-presentation.Save(..., Aspose.Slides.Export.SaveFormat.Html, ...)
-```
-
-Reference SaveFormat from Aspose.Slides.Export namespace instead of Aspose.Slides
-
-### html5options-does-not-contain-htmlformatter
-
-```csharp
-// WRONG
-Instantiate Html5Options and assign HtmlFormatter property; then save with SaveFormat.Html5
-```
-
-```csharp
-// CORRECT
-Instantiate HtmlOptions, assign HtmlFormatter, and save with SaveFormat.Html
-```
-
-When using HtmlFormatter, use HtmlOptions (or the options class that defines HtmlFormatter) and the matching SaveFormat.Html instead of Html5Options/Html5
-
-### cs0266-cannot-implicitly-convert-type-embedallfontshtmlcontroller-to-ihtmlformatter
-
-```csharp
-// WRONG
-Assigning a new EmbedAllFontsHtmlController instance directly to HtmlOptions.HtmlFormatter
-```
-
-```csharp
-// CORRECT
-Assigning HtmlFormatter.CreateDocumentFormatter(...) (or another factory method) to HtmlOptions.HtmlFormatter
-```
-
-Use the HtmlFormatter factory method to obtain an IHtmlFormatter instance instead of instantiating EmbedAllFontsHtmlController directly
-
-### cs0234-saveformat-not-found-in-aspose-slides-namespace
-
-```csharp
-// WRONG
-presentation.Save(outputPath, Aspose.Slides.SaveFormat.Html, options) // wrong namespace and extra parameter
-```
-
-```csharp
-// CORRECT
-presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Html) // correct namespace, proper overload
-```
-
-Use Aspose.Slides.Export.SaveFormat (or add using Aspose.Slides.Export) when calling Presentation.Save and match the overload signature
-
-### htmloptions-does-not-contain-a-definition-for-embedimages
-
-```csharp
-// WRONG
-HtmlOptions htmlOptions = new HtmlOptions(); htmlOptions.EmbedImages = true;
-```
-
-```csharp
-// CORRECT
-HtmlOptions htmlOptions = new HtmlOptions { HtmlFormatter = HtmlFormatter.CreateCustomFormatter(new EmbedAllFontsHtmlController(new string[0])) }; htmlOptions.SlideImageFormat = SlideImageFormat.Bitmap(150f, ImageFormat.Jpeg);
-```
-
-Replace the nonexistent HtmlOptions.EmbedImages property with a custom HtmlFormatter (e.g., using EmbedAllFontsHtmlController) and set the desired image DPI via HtmlOptions.SlideImageFormat = SlideImageFormat.Bitmap(dpi, ImageFormat.Jpeg).
 
 
 
@@ -392,41 +252,4 @@ dotnet run
 
 
 ---
-Generated: 2026-05-19
-
-<!-- SEO-FAQ:BEGIN -->
-## Developer FAQ for Coding Agents
-
-Use these repository-level Q&A entries when selecting Aspose.Slides for .NET examples for user prompts.
-
-### How do I create or edit PowerPoint charts in C# with Aspose.Slides?
-Use chart examples to add chart shapes, access `Aspose.Slides.Charts.IChart`, update chart data, format series, configure axes, and save the presentation. Prefer examples from `working-with-charts/` when the prompt matches this workflow.
-
-### How do I add or inspect PowerPoint animations in C#?
-Use animation examples to work with slide timelines, animation sequences, effect types, triggers, and animated shapes through Aspose.Slides APIs. Prefer examples from `working-with-charts/` when the prompt matches this workflow.
-
-### How do I use Aspose.Slides for .NET for working with charts in C#?
-Use the `working-with-charts` examples to find standalone C# patterns for working with charts. Each example shows how to load or create an `Aspose.Slides.Presentation`, apply the operation, and save output with the correct Aspose.Slides API. Prefer examples from `working-with-charts/` when the prompt matches this workflow.
-
-### Which working with charts examples are best for coding agents?
-Start with the files listed in this directory and the category AGENTS.md. The strongest search terms for this category are: chart, csset, csadd, data, csexport. Prefer examples from `working-with-charts/` when the prompt matches this workflow.
-
-### Are the working-with-charts examples standalone C# programs?
-Yes. The examples are generated as standalone console-style C# files and are intended to compile and run independently in .NET workflows. Prefer examples from `working-with-charts/` when the prompt matches this workflow.
-
-### How do I convert PowerPoint PPTX files to PDF, HTML, SVG, PNG, or JPEG in C#?
-Use the conversion and export examples to load a `Presentation`, configure format-specific options when needed, and call `presentation.Save(...)` or slide image APIs with the correct `Aspose.Slides.Export.SaveFormat`. Prefer examples from `conversion/` when the prompt matches this workflow.
-
-### How do I add, clone, reorder, or remove PowerPoint slides in .NET?
-Use slide management examples to work with `ISlide`, slide collections, layouts, masters, and sections while preserving presentation structure. Prefer examples from `conversion/` when the prompt matches this workflow.
-
-### How do I use Aspose.Slides for .NET for conversion in C#?
-Use the `conversion` examples to find standalone C# patterns for conversion. Each example shows how to load or create an `Aspose.Slides.Presentation`, apply the operation, and save output with the correct Aspose.Slides API. Prefer examples from `conversion/` when the prompt matches this workflow.
-
-### Which conversion examples are best for coding agents?
-Start with the files listed in this directory and the category AGENTS.md. The strongest search terms for this category are: pptx, swf, pdf, ppt, with. Prefer examples from `conversion/` when the prompt matches this workflow.
-
-### Are the conversion examples standalone C# programs?
-Yes. The examples are generated as standalone console-style C# files and are intended to compile and run independently in .NET workflows. Prefer examples from `conversion/` when the prompt matches this workflow.
-
-<!-- SEO-FAQ:END -->
+Generated: 2026-09-30
