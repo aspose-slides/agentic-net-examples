@@ -17,6 +17,7 @@
 // - Automate generation of PDF reports from PPTX presentations containing tables.
 // - Build .NET tools that preserve table appearance during format conversion.
 // - Validate table rendering in PDF outputs for presentation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

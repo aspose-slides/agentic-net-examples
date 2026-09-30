@@ -17,6 +17,7 @@
 // - Build .NET tools for enriching PowerPoint slides with visual data.
 // - Generate or transform PPTX files that combine charts and tables.
 // - Validate presentation workflows that require chart-to-image conversion.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;

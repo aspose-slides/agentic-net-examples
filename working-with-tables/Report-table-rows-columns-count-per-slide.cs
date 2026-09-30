@@ -18,6 +18,7 @@
 // - Build C# utilities for PowerPoint content inspection and validation.
 // - Automate extraction of table metadata for downstream processing.
 // - Integrate table analysis into larger .NET-based Office automation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

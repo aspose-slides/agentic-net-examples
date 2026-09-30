@@ -17,6 +17,7 @@
 // - Automate formatting of table content in bulk PPTX files.
 // - Build .NET utilities for consistent presentation styling.
 // - Prepare presentations for publishing with standardized table layouts.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

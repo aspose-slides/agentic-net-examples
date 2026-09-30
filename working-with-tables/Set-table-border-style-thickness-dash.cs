@@ -17,6 +17,7 @@
 // - Build C# utilities for styling PowerPoint tables programmatically.
 // - Generate or transform PPTX files with custom table formatting.
 // - Validate table border configurations before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

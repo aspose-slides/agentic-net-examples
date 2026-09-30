@@ -19,6 +19,7 @@
 // - Build C# utilities for dynamic PowerPoint content generation.
 // - Integrate table scaling logic into .NET applications that manipulate PPTX files.
 // - Ensure consistent table appearance across different slide layouts.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

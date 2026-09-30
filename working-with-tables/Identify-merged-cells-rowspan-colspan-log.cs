@@ -19,6 +19,7 @@
 // - Build C# tools for analyzing table structures within PPTX presentations.
 // - Generate or modify PPTX files with merged cells in .NET applications.
 // - Validate table layouts before publishing or integrating presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
