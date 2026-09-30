@@ -17,6 +17,7 @@
 //   extracts.
 // - Integrate SmartArt analysis into document management or analytics pipelines.
 // - Validate SmartArt content programmatically before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

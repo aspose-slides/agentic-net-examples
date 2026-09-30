@@ -17,6 +17,7 @@
 // - Build .NET tools for customizing PowerPoint presentations.
 // - Generate or modify PPTX files with styled SmartArt.
 // - Automate visual consistency checks in presentation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -15,6 +15,7 @@
 // - Automate validation of SmartArt hierarchy in PowerPoint files.
 // - Build .NET tools for analyzing and transforming PPTX presentations.
 // - Integrate SmartArt inspection into larger presentation processing pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

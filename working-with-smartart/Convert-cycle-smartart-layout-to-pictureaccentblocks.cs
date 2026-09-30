@@ -17,6 +17,7 @@
 // - Build tools for bulk updating SmartArt layouts in existing presentations.
 // - Integrate SmartArt layout transformations into .NET applications.
 // - Prepare presentations for consistent visual styling before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

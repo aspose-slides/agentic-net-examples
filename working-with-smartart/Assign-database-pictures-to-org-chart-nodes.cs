@@ -18,6 +18,7 @@
 // - Build .NET tools for generating PowerPoint presentations with SmartArt.
 // - Integrate image assignment logic into enterprise applications.
 // - Validate SmartArt node image handling before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

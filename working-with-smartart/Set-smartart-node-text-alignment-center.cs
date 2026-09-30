@@ -18,6 +18,7 @@
 // - Build C# utilities for consistent SmartArt formatting in PPTX files.
 // - Integrate SmartArt text alignment adjustments into .NET applications.
 // - Validate and enforce presentation style guidelines before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

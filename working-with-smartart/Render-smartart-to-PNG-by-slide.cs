@@ -18,6 +18,7 @@
 // - Automate generation of image assets from PowerPoint presentations.
 // - Build C# utilities for PowerPoint content analysis or migration.
 // - Integrate SmartArt rendering into .NET applications or services.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -20,6 +20,7 @@
 // - Build C# tools for PowerPoint presentation processing and validation.
 // - Ensure presentation styling changes do not unintentionally hide SmartArt.
 // - Integrate SmartArt property checks into CI pipelines or automated workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

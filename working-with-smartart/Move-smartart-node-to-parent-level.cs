@@ -19,6 +19,7 @@
 // - Build C# tools for PowerPoint presentation processing.
 // - Generate or transform PPTX files in .NET applications.
 // - Remove assistant nodes and reassign subordinates before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

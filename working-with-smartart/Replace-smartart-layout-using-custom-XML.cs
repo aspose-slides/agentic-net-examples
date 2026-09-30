@@ -19,6 +19,7 @@
 // - Build .NET tools for PowerPoint presentation customization.
 // - Integrate SmartArt layout manipulation into document generation pipelines.
 // - Validate and test SmartArt transformations before deployment.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

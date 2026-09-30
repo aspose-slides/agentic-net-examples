@@ -17,6 +17,7 @@
 // - Search for a specific SmartArt node by its text.
 // - Build C# tools for PowerPoint presentation analysis.
 // - Automate PPTX workflows that involve SmartArt content.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;

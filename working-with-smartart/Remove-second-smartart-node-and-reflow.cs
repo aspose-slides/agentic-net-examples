@@ -16,6 +16,7 @@
 // - Build .NET tools that modify SmartArt structures programmatically.
 // - Ensure consistent layout after node removal by leveraging Aspose.Slides automatic reflow.
 // - Validate and transform PPTX files as part of a CI/CD pipeline.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

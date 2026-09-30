@@ -18,6 +18,7 @@
 // - Build C# tools for analyzing or reporting on PowerPoint presentations.
 // - Integrate SmartArt content extraction into larger .NET workflows.
 // - Validate SmartArt data before publishing or further processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -16,6 +16,7 @@
 // - Generate visual previews of slides after SmartArt modifications.
 // - Build .NET tools for PowerPoint content styling and image extraction.
 // - Validate SmartArt appearance programmatically before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

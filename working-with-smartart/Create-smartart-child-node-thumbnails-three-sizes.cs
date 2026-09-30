@@ -17,6 +17,7 @@
 // - Automate PowerPoint presentation processing and image extraction.
 // - Build C# utilities for extracting visual assets from SmartArt diagrams.
 // - Integrate SmartArt thumbnail generation into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

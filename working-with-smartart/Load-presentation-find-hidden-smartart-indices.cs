@@ -16,6 +16,7 @@
 // - Build C# tools for validating presentation content before publishing.
 // - Integrate hidden SmartArt detection into .NET applications that process PPTX.
 // - Generate reports of hidden elements for quality assurance.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint cleanup tasks.
 // - Integrate presentation validation and transformation into .NET applications.
 // - Ensure published PPTX files do not contain unintended hidden content.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

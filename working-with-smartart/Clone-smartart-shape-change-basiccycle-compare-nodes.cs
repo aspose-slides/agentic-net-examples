@@ -17,6 +17,7 @@
 // - Generate or transform PPTX files with SmartArt modifications in .NET
 //   applications.
 // - Compare SmartArt node structures before and after layout changes.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

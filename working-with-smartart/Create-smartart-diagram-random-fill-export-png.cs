@@ -16,6 +16,7 @@
 // - Generate PNG previews of slides containing SmartArt.
 // - Build .NET tools for PowerPoint presentation processing and visualization.
 // - Validate SmartArt styling workflows before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -19,6 +19,7 @@
 // - Generate or transform PPTX files containing mixed‑language content in .NET
 //   applications.
 // - Validate presentation workflows that involve right‑to‑left rendering.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

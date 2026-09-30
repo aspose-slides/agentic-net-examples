@@ -18,6 +18,7 @@
 // - Build C# utilities for PowerPoint presentation generation and editing.
 // - Generate or transform PPTX files that include complex SmartArt layouts.
 // - Validate SmartArt text formatting before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;

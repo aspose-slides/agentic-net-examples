@@ -18,6 +18,7 @@
 // - Build C# utilities for PowerPoint content analysis.
 // - Integrate SmartArt text retrieval into .NET applications.
 // - Validate and process presentation data before further automation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -19,6 +19,7 @@
 //   JSON output.
 // - Integrate SmartArt information into downstream applications or services.
 // - Validate and document presentation content before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
