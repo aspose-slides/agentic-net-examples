@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint presentation processing and image export.
 // - Generate visual assets that include slide content and speaker notes.
 // - Validate presentation layouts before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

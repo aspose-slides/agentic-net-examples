@@ -16,6 +16,7 @@
 // - Build .NET utilities for PowerPoint slide duplication and annotation.
 // - Automate presentation preparation tasks that require tagged slide handling.
 // - Integrate slide cloning and notes updating into larger document processing pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

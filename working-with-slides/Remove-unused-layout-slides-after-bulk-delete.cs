@@ -16,6 +16,7 @@
 // - Build tools that maintain slide layout integrity in .NET applications.
 // - Optimize PPTX files by eliminating orphaned layout slides.
 // - Integrate presentation processing into CI/CD pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

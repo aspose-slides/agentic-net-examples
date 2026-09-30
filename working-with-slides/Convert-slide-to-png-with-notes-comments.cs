@@ -17,6 +17,7 @@
 // - Automate creation of visual assets from PowerPoint files for documentation.
 // - Build .NET tools that need to export presentations with annotations.
 // - Validate and transform PPTX files while preserving notes and comments.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

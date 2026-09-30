@@ -18,6 +18,7 @@
 // - Build C# utilities for batch processing of PowerPoint files.
 // - Generate image assets from slides for web publishing or documentation.
 // - Integrate slide rendering into .NET applications with quality control.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

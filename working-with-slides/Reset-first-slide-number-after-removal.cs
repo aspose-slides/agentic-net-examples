@@ -16,6 +16,7 @@
 // - Build C# utilities for PowerPoint slide management.
 // - Automate PPTX transformations that require renumbering after deletions.
 // - Ensure correct slide numbers in generated presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

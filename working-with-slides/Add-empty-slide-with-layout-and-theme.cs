@@ -18,6 +18,7 @@
 // - Build .NET tools for PowerPoint presentation processing with custom themes.
 // - Generate or transform PPTX files with specific layouts and background colors.
 // - Validate and enforce corporate branding in slide decks before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

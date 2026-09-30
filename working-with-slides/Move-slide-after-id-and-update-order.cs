@@ -16,6 +16,7 @@
 // - Build .NET utilities for PowerPoint slide management.
 // - Automate slide rearrangement in batch processing scenarios.
 // - Validate and adjust presentation structure before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

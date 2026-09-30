@@ -17,6 +17,7 @@
 // - Create backup ZIP archives of generated PPTX files.
 // - Build .NET tools for batch processing and distribution of PowerPoint content.
 // - Integrate slide cloning and compression into larger document workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -17,6 +17,7 @@
 // - Automate batch export of slides for archival or printing.
 // - Integrate slide‑to‑image conversion into .NET tools or services.
 // - Validate presentation rendering before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

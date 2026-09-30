@@ -17,6 +17,7 @@
 // - Prepare timed slide decks for kiosks, webinars, or self‑running presentations.
 // - Automate PowerPoint slide timing adjustments in batch processing tools.
 // - Integrate slide timing configuration into .NET applications that generate or modify PPTX files.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

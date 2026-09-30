@@ -18,6 +18,7 @@
 // - Build C# tools for consistent slide master styling in PowerPoint files.
 // - Generate or transform PPTX presentations with custom master designs.
 // - Validate and apply branding guidelines programmatically.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

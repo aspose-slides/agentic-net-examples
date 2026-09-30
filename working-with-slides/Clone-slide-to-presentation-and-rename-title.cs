@@ -18,6 +18,7 @@
 // - Programmatically update slide titles during batch processing.
 // - Build .NET tools for PowerPoint content reuse and customization.
 // - Validate and transform PPTX files before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

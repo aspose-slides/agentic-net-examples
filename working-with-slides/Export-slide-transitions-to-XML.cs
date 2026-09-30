@@ -19,6 +19,7 @@
 // - Build C# tools that analyze or audit PowerPoint presentation animations.
 // - Integrate slide transition data into custom .NET applications or services.
 // - Validate and document presentation workflows before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

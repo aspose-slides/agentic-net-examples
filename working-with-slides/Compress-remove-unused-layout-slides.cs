@@ -17,6 +17,7 @@
 // - Build C# utilities for PowerPoint file optimization.
 // - Integrate presentation cleanup into .NET applications.
 // - Validate and streamline PPTX workflows before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

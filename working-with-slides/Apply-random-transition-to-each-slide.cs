@@ -15,6 +15,7 @@
 // - Automate slide transition assignment in bulk PowerPoint files.
 // - Build .NET tools that customize slide show behavior programmatically.
 // - Ensure visual variety by avoiding repeated transition types.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

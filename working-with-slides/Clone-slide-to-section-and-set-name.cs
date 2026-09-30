@@ -18,6 +18,7 @@
 // - Build tools that reorganize PPTX content for review or publishing.
 // - Generate presentations with dynamically created sections.
 // - Validate slide organization workflows in .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

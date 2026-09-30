@@ -17,6 +17,7 @@
 // - Update slide counts after section modifications.
 // - Integrate section management into .NET PowerPoint processing tools.
 // - Validate presentation structure before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

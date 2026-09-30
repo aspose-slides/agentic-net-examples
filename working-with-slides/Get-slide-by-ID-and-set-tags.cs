@@ -17,6 +17,7 @@
 // - Add or modify custom tags on a slide for metadata tracking.
 // - Automate PPTX metadata updates in batch processing tools.
 // - Integrate slide tag management into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -16,6 +16,7 @@
 // - Build C# utilities for batch processing of PPTX files to replace template text.
 // - Integrate slide‑level editing into .NET applications that generate or modify presentations.
 // - Validate and test placeholder replacement logic before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

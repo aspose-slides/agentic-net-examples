@@ -18,6 +18,7 @@
 // - Build C# tools for PowerPoint presentation preview extraction.
 // - Integrate slide thumbnail creation into .NET applications or CI pipelines.
 // - Validate and visualize presentation content before publishing or further processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

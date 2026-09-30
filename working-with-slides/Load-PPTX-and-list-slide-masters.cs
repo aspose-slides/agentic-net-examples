@@ -17,6 +17,7 @@
 // - Build tools that analyze or validate slide master structures.
 // - Integrate slide master enumeration into .NET applications.
 // - Automate reporting on presentation templates before further processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

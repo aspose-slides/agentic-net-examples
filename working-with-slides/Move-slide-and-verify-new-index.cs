@@ -17,6 +17,7 @@
 // - Validate slide positions after manipulation.
 // - Build .NET tools for automated PPTX editing and quality checks.
 // - Integrate slide management into larger presentation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

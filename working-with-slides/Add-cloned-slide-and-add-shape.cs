@@ -16,6 +16,7 @@
 // - Build tools that programmatically modify presentations by cloning slides.
 // - Generate or transform PPTX files with custom shapes in .NET.
 // - Validate and test slide cloning workflows before deployment.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

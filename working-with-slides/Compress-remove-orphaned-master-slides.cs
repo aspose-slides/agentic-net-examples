@@ -17,6 +17,7 @@
 // - Prepare clean presentations for distribution or archiving.
 // - Automate PPTX cleanup in batch processing pipelines.
 // - Integrate presentation optimization into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

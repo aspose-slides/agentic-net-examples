@@ -17,6 +17,7 @@
 // - Build C# utilities for batch processing of PowerPoint files.
 // - Integrate slide size adjustments into .NET applications.
 // - Validate and transform PPTX presentations before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

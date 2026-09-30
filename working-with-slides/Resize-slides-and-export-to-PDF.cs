@@ -18,6 +18,7 @@
 // - Convert resized PowerPoint decks to PDF for distribution.
 // - Integrate slide resizing and PDF export into CI/CD pipelines.
 // - Build command‑line tools for batch processing of presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

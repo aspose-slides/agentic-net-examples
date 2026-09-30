@@ -18,6 +18,7 @@
 // - Preserve slide master relationships during cloning.
 // - Keep slide numbering consistent across source and destination.
 // - Build .NET tools for PowerPoint slide manipulation and transformation.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

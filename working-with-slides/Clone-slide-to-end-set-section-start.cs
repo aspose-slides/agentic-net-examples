@@ -16,6 +16,7 @@
 // - Manage sections and slide numbering in PowerPoint files.
 // - Build .NET tools for presentation manipulation and automation.
 // - Validate and transform PPTX content programmatically.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

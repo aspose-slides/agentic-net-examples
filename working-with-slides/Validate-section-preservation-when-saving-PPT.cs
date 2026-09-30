@@ -16,6 +16,7 @@
 // - Automate testing of presentation format compatibility.
 // - Build utilities that process and validate PowerPoint files in .NET.
 // - Ensure section integrity before publishing or further processing.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

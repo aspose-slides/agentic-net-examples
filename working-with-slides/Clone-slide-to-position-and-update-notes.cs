@@ -20,6 +20,7 @@
 // - Add or modify notes on cloned slides programmatically.
 // - Translate presentations (including notes) to another language using AI.
 // - Build C# tools for PowerPoint presentation processing and localization.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

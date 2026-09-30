@@ -18,6 +18,7 @@
 // - Build C# utilities for PowerPoint slide management.
 // - Pre‑process PPTX files before publishing or further editing.
 // - Integrate slide filtering logic into larger .NET workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -17,6 +17,7 @@
 // - Ensure the target presentation adopts the same slide dimensions as the source.
 // - Automate PPTX merging and size normalization in .NET applications.
 // - Prepare presentations for consistent rendering across different devices.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

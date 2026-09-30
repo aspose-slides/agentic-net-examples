@@ -20,6 +20,7 @@
 // - Build C# utilities that generate high‑resolution slide images from PPTX files.
 // - Integrate slide rendering into .NET applications that require bitmap output.
 // - Validate and test presentation processing pipelines before deployment.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;

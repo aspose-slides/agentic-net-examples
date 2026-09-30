@@ -18,6 +18,7 @@
 // - Build .NET tools for cleaning up PPTX files before publishing.
 // - Integrate slide manipulation logic into larger document processing pipelines.
 // - Validate slide order and content programmatically.
+// Tested and Verified with Aspose.Slides for .NET v26.9.0.
 // -----------------------------------------------------------------------------
 
 using System;
