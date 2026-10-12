@@ -17,7 +17,7 @@
 // - Build C# utilities for PowerPoint presentation processing.
 // - Generate PDF versions of presentations in .NET applications.
 // - Validate and transform presentation files before publishing.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
