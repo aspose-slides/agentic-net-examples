@@ -16,7 +16,7 @@
 // - Build .NET utilities for converting presentation notes to editable RTF.
 // - Integrate slide‑notes export into larger document‑generation workflows.
 // - Validate and archive slide notes in a portable text format.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
