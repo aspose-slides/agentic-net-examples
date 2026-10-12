@@ -18,7 +18,7 @@
 // - Build C# utilities for extracting and converting 3‑D slide content.
 // - Integrate PPTX 3‑D processing into .NET applications.
 // - Validate and preview 3‑D slide rendering before publishing.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
