@@ -15,7 +15,7 @@
 // - Build C# utilities for precise 3‑D shape creation in PPTX files.
 // - Generate or modify PPTX content programmatically in .NET applications.
 // - Validate 3‑D formatting and dimensions before publishing.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
