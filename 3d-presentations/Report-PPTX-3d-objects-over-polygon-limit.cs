@@ -18,7 +18,7 @@
 // - Integrate polygon‑count validation into CI/CD pipelines for presentations.
 // - Build tools that enforce rendering performance constraints for 3‑D content.
 // - Automate quality checks for PowerPoint files before distribution.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
