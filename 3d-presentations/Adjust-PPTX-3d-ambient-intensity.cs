@@ -18,7 +18,7 @@
 // - Build C# utilities for PowerPoint visual enhancements.
 // - Automate PPTX transformations that involve 3‑D formatting.
 // - Validate and adjust 3‑D lighting before publishing presentations.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
