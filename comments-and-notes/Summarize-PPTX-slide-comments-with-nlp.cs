@@ -17,7 +17,7 @@
 // - Build C# tools that incorporate basic NLP summarization for presentations.
 // - Integrate comment analysis into .NET PowerPoint workflows.
 // - Store generated summaries within presentation metadata for later review.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
