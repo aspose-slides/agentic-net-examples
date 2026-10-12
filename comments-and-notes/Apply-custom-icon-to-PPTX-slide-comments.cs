@@ -1,44 +1,36 @@
 // -----------------------------------------------------------------------------
-// Example: Apply custom icon to PPTX slide comments using C#
+// Example: Apply Custom Icon to PPTX Slide Comments Using Aspose.Slides
 //
 // Description:
-// Demonstrates how to add a comment with priority metadata to a PPTX slide,
-// determine its priority, and apply a custom colored icon shape near the comment
-// using Aspose.Slides for .NET. The example loads an existing presentation or
-// creates a new one, adds a modern comment, selects an icon color based on the
-// priority (High, Medium, Low), inserts a rectangle shape as the icon, and saves
-// the result. This pattern can be used to automate comment visualization in
-// PowerPoint files.
+// This console application loads an existing PowerPoint PPTX file or creates a new one,
+// adds a modern comment with a priority tag, determines the priority level, and inserts
+// a colored rectangle shape as a custom icon near the comment. The result is saved as a
+// PPTX file, demonstrating automated comment visualization with Aspose.Slides for .NET.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Apply, Custom, Icon, Pptx,
-// Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, slide comments, custom icon, comment priority
 //
 // Use Cases:
-// - Automate adding visual priority indicators to PPTX slide comments.
-// - Build C# tools for PowerPoint presentation processing with custom icons.
-// - Generate or transform PPTX files in .NET applications with comment metadata.
-// - Validate and enhance presentation workflows before publishing or integration.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// - Visualize comment importance in generated presentations.
+// - Automate annotation of slides with priority-based icons.
+// - Integrate comment handling into PowerPoint report generation pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Drawing;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-namespace CommentIconDemo
+namespace AsposeSlidesCommentIconExample
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            // Define input and output file paths
             string inputPath = "input.pptx";
             string outputPath = "output.pptx";
 
-            // Load existing presentation if it exists, otherwise create a new one
-            Aspose.Slides.Presentation presentation;
+            Aspose.Slides.Presentation presentation = null;
+
             try
             {
                 if (File.Exists(inputPath))
@@ -48,74 +40,82 @@ namespace CommentIconDemo
                 else
                 {
                     presentation = new Aspose.Slides.Presentation();
-                    // Add an empty slide to the new presentation
+                }
+
+                // Ensure at least one slide exists
+                if (presentation.Slides.Count == 0)
+                {
                     presentation.Slides.AddEmptySlide(presentation.LayoutSlides[0]);
                 }
-            }
-            catch (Exception ex)
-            {
-                // Handle unsupported format exception
-                Console.WriteLine("Failed to load presentation: " + ex.Message);
-                // Create a new presentation as fallback
-                presentation = new Aspose.Slides.Presentation();
-                presentation.Slides.AddEmptySlide(presentation.LayoutSlides[0]);
-            }
 
-            // Ensure there is at least one slide
-            Aspose.Slides.ISlide slide = presentation.Slides[0];
+                Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-            // Add a comment author
-            Aspose.Slides.ICommentAuthor author = presentation.CommentAuthors.AddAuthor("John Doe", "JD");
+                // Add a comment author
+                Aspose.Slides.ICommentAuthor author = presentation.CommentAuthors.AddAuthor("John Doe", "JD");
 
-            // Define comment text with priority metadata (e.g., "[High]")
-            string commentText = "[High] Review the financial figures.";
-            System.Drawing.PointF commentPosition = new System.Drawing.PointF(100, 100);
-            Aspose.Slides.IModernComment modernComment = author.Comments.AddModernComment(
-                commentText,
-                slide,
-                null,
-                commentPosition,
-                DateTime.Now);
+                // Define comment priority (could be parameterized)
+                string priority = "High"; // Options: High, Medium, Low
 
-            // Determine priority from comment text
-            string priority = "Low";
-            if (commentText.StartsWith("[High]"))
-                priority = "High";
-            else if (commentText.StartsWith("[Medium]"))
-                priority = "Medium";
+                // Add a modern comment with priority information
+                string commentText = $"Priority: {priority} - Review required.";
+                Aspose.Slides.IModernComment comment = author.Comments.AddModernComment(
+                    commentText,
+                    slide,
+                    null,
+                    new System.Drawing.PointF(200f, 150f),
+                    System.DateTime.Now);
 
-            // Choose icon color based on priority
-            System.Drawing.Color iconColor = System.Drawing.Color.Green;
-            if (priority == "High")
-                iconColor = System.Drawing.Color.Red;
-            else if (priority == "Medium")
-                iconColor = System.Drawing.Color.Orange;
+                // Determine icon color based on priority
+                System.Drawing.Color iconColor;
+                if (priority.Equals("High", StringComparison.OrdinalIgnoreCase))
+                {
+                    iconColor = System.Drawing.Color.Red;
+                }
+                else if (priority.Equals("Medium", StringComparison.OrdinalIgnoreCase))
+                {
+                    iconColor = System.Drawing.Color.Orange;
+                }
+                else if (priority.Equals("Low", StringComparison.OrdinalIgnoreCase))
+                {
+                    iconColor = System.Drawing.Color.Green;
+                }
+                else
+                {
+                    iconColor = System.Drawing.Color.Gray;
+                }
 
-            // Add an icon shape near the comment position
-            float iconSize = 20f;
-            Aspose.Slides.IAutoShape iconShape = slide.Shapes.AddAutoShape(
-                Aspose.Slides.ShapeType.Rectangle,
-                commentPosition.X - iconSize - 5,
-                commentPosition.Y,
-                iconSize,
-                iconSize);
-            iconShape.FillFormat.FillType = Aspose.Slides.FillType.Solid;
-            iconShape.FillFormat.SolidFillColor.Color = iconColor;
-            iconShape.LineFormat.FillFormat.FillType = Aspose.Slides.FillType.NoFill;
+                // Insert a rectangle shape as a custom icon near the comment
+                float iconX = comment.Position.X - 20f;
+                float iconY = comment.Position.Y - 20f;
+                Aspose.Slides.IShape iconShape = slide.Shapes.AddAutoShape(
+                    Aspose.Slides.ShapeType.Rectangle,
+                    iconX,
+                    iconY,
+                    15f,
+                    15f);
 
-            // Save the presentation
-            try
-            {
+                iconShape.FillFormat.FillType = Aspose.Slides.FillType.Solid;
+                iconShape.FillFormat.SolidFillColor.Color = iconColor;
+
+                // Optionally remove the shape border
+                iconShape.LineFormat.FillFormat.FillType = Aspose.Slides.FillType.Solid;
+                iconShape.LineFormat.FillFormat.SolidFillColor.Color = System.Drawing.Color.Transparent;
+
+                // Save the presentation
                 presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                Console.WriteLine($"Presentation saved to '{outputPath}'.");
             }
             catch (Exception ex)
             {
-                // Handle save exceptions (e.g., unsupported format)
-                Console.WriteLine("Failed to save presentation: " + ex.Message);
+                Console.WriteLine("An error occurred: " + ex.Message);
             }
-
-            // Dispose the presentation
-            presentation.Dispose();
+            finally
+            {
+                if (presentation != null)
+                {
+                    presentation.Dispose();
+                }
+            }
         }
     }
 }
