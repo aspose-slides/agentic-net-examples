@@ -17,7 +17,7 @@
 // - Generate reports of animation sequences for review or documentation.
 // - Integrate animation data extraction into .NET tools or CI pipelines.
 // - Convert animation metadata into CSV for further processing or visualization.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
