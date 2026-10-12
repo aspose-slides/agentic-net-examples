@@ -17,7 +17,7 @@
 // - Build C# utilities for PowerPoint presentation processing and styling.
 // - Generate or transform PPTX files with customized 3D lighting in .NET applications.
 // - Validate and standardize presentation lighting before publishing or integration.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
