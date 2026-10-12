@@ -6,7 +6,24 @@
 
 
 
+
+
+
+
+
+
+
+
 This category contains 118 standalone C# examples for Aspose.Slides for .NET. These examples help developers automate PowerPoint presentation workflows related to comments and notes.
+These files are tested and verified with Aspose.Slides for .NET v26.10.0.
+
+
+
+
+
+
+
+
 
 
 
@@ -22,11 +39,27 @@ This category contains 118 standalone C# examples for Aspose.Slides for .NET. Th
 
 
 
+
+
+
+
+
+
+
+
 - Automate repetitive presentation-processing tasks in .NET applications.
 
 
 
+
+
+
+
 - Generate, inspect, transform, or validate PPTX files in server-side workflows.
+
+
+
+
 
 
 
@@ -38,7 +71,23 @@ This category contains 118 standalone C# examples for Aspose.Slides for .NET. Th
 
 
 
+
+
+
+
+
+
+
+
 ## Example Files
+
+
+
+
+
+
+
+
 
 
 
@@ -175,7 +224,19 @@ Total examples: 118
 
 
 
+
+
+
+
+
+
+
+
 - [Category instructions](./AGENTS.md)
+
+
+
+
 
 
 
@@ -183,13 +244,27 @@ Total examples: 118
 
 
 
+
+
+
+
 - [Structured index](../index.json)
+
+
+
+
 
 
 
 <!-- SEO-FAQ:BEGIN -->
 
+
+
 ## Developer FAQ
+
+
+
+
 
 
 
@@ -197,41 +272,83 @@ These questions target common developer searches for Aspose.Slides for .NET `com
 
 
 
+
+
+
+
 ### How do I convert PowerPoint PPTX files to PDF, HTML, SVG, PNG, or JPEG in C#?
+
+
 
 Use the conversion and export examples to load a `Presentation`, configure format-specific options when needed, and call `presentation.Save(...)` or slide image APIs with the correct `Aspose.Slides.Export.SaveFormat`.
 
 
 
+
+
+
+
 ### How do I add, clone, reorder, or remove PowerPoint slides in .NET?
+
+
 
 Use slide management examples to work with `ISlide`, slide collections, layouts, masters, and sections while preserving presentation structure.
 
 
 
+
+
+
+
 ### How do I extract presentation metadata, comments, notes, tags, VBA, or security information?
+
+
 
 Use the inspection and management examples to access document properties, comments, notes slides, custom tags, VBA projects, signatures, protection settings, and related metadata.
 
 
 
+
+
+
+
 ### How do I use Aspose.Slides for .NET for comments and notes in C#?
+
+
 
 Use the `comments-and-notes` examples to find standalone C# patterns for comments and notes. Each example shows how to load or create an `Aspose.Slides.Presentation`, apply the operation, and save output with the correct Aspose.Slides API.
 
 
 
+
+
+
+
 ### Which comments and notes examples are best for coding agents?
+
+
 
 Start with the files listed in this directory and the category AGENTS.md. The strongest search terms for this category are: pptx, slide, notes, comments, comment.
 
 
 
+
+
+
+
 ### Are the comments-and-notes examples standalone C# programs?
+
+
 
 Yes. The examples are generated as standalone console-style C# files and are intended to compile and run independently in .NET workflows.
 
 
 
+
+
+
+
 <!-- SEO-FAQ:END -->
+
+
 
