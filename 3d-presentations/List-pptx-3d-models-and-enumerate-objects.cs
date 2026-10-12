@@ -17,7 +17,7 @@
 // - Build tools that validate or transform PPTX presentations containing 3‑D shapes.
 // - Integrate 3‑D shape analysis into .NET applications or CI pipelines.
 // - Generate processed copies of presentations after extracting 3‑D metadata.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

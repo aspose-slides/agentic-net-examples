@@ -17,7 +17,7 @@
 // - Prepare presentations for environments that do not support 3‑D objects.
 // - Automate preprocessing of PowerPoint files before publishing.
 // - Integrate 3‑D object removal into .NET based document workflows.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

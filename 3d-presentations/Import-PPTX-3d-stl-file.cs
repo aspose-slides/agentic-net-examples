@@ -18,7 +18,7 @@
 // - Build C# tools for creating or enhancing PPTX files with 3D content.
 // - Integrate 3D model visualization into .NET presentation workflows.
 // - Validate and process STL files for inclusion in Office documents.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

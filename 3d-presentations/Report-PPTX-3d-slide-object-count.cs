@@ -17,7 +17,7 @@
 // - Validate that slides contain the expected number of 3D elements.
 // - Build automation tools for PPTX content analysis in .NET applications.
 // - Integrate 3D object counting into larger presentation processing workflows.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
