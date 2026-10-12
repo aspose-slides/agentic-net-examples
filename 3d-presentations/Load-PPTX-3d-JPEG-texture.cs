@@ -17,7 +17,7 @@
 // - Automate texture mapping for 3‑D objects in presentations.
 // - Build .NET tools that modify PPTX files with custom 3‑D visual effects.
 // - Validate and preview 3‑D texture integration before publishing.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
