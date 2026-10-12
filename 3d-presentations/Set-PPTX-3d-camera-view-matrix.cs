@@ -18,7 +18,7 @@
 // - Build C# tools that modify 3D camera properties in PowerPoint presentations.
 // - Generate or transform PPTX files with custom 3D camera angles in .NET applications.
 // - Validate and preview 3D camera settings before publishing presentations.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
