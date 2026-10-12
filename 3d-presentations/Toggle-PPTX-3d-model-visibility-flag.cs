@@ -17,7 +17,7 @@
 // - Build .NET utilities for batch processing of PPTX files.
 // - Validate 3‑D model settings before publishing presentations.
 // - Integrate 3‑D visibility control into larger document‑generation workflows.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
