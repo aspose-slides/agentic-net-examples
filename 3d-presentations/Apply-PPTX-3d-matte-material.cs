@@ -18,7 +18,7 @@
 // - Generate sample PPTX files with 3‑D shapes for testing.
 // - Integrate PPTX material adjustments into .NET automation pipelines.
 // - Validate and transform existing presentations before publishing.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
