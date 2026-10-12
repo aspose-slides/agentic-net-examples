@@ -17,7 +17,7 @@
 // - Build C# utilities for PowerPoint 3D content processing.
 // - Integrate 3D model handling into .NET applications.
 // - Validate and transform PPTX presentations containing 3D shapes.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
