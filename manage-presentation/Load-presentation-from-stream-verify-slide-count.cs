@@ -18,6 +18,7 @@
 // - Automate validation of presentation content before further processing.
 // - Ensure proper resource management when handling file streams in 
 //   presentation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
