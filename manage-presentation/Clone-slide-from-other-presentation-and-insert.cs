@@ -17,6 +17,7 @@
 // - Build C# tools for consolidating or reusing slides across presentations.
 // - Generate customized PPTX files by inserting external slides at runtime.
 // - Validate slide insertion workflows before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
