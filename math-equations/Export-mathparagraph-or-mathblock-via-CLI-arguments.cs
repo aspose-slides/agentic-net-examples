@@ -1,109 +1,103 @@
 // -----------------------------------------------------------------------------
-// Example: Export MathParagraph or MathBlock via CLI arguments using C#
+// Example: Export Math Equation to LaTeX or MathML using Aspose.Slides
 //
 // Description:
-// This console application demonstrates how to create a PowerPoint presentation
-// with a mathematical shape, build a simple equation, and export the equation
-// either as LaTeX or as MathML based on a command‑line argument. It uses
-// Aspose.Slides for .NET to manipulate the presentation and to perform the
-// export operations.
+// This console application creates a PowerPoint presentation containing a
+// simple mathematical equation (a + b = c) using Aspose.Slides for .NET. Based on
+// a command‑line argument it exports the equation either as a LaTeX string or
+// as MathML and writes the result to a file. The generated presentation is saved
+// as a PPTX file for verification.
 //
 // Keywords:
-// C#, Aspose.Slides for .NET, PowerPoint, PPTX, MathParagraph, MathBlock,
-// LaTeX, MathML, CLI, Export, Presentation Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, MathML, LaTeX, export, math paragraph
 //
 // Use Cases:
-// - Generate a PPTX containing a math equation and export the equation in
-//   LaTeX or MathML format via command line.
-// - Build automated tools that process PowerPoint files and extract mathematical
-//   content for documentation or web publishing.
-// - Integrate math export functionality into .NET applications or CI pipelines.
-// - Validate and test math equation rendering and export in PowerPoint files.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// - Generate LaTeX representations of equations embedded in PPTX files.
+// - Convert PowerPoint math objects to MathML for web publishing.
+// - Automate documentation pipelines that require both PPTX and markup formats.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.MathText;
-using Aspose.Slides.Export;
+using System.Text;
+using System.Collections.Generic;
 
-namespace MathExportExample
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        try
         {
-            // Determine export mode from command‑line arguments
-            // "latex" – export whole MathParagraph to LaTeX
-            // "mathml" – export each MathBlock as MathML
-            string exportMode = (args.Length > 0) ? args[0].ToLowerInvariant() : "latex";
+            if (args == null || args.Length == 0)
+            {
+                Console.WriteLine("Usage: ExportMath <latex|mathml> [outputFilePath]");
+                return;
+            }
+
+            string exportMode = args[0].Trim().ToLowerInvariant();
+            string outputPath = (args.Length > 1) ? args[1] : "ExportResult.txt";
+            string presentationPath = "MathPresentation.pptx";
 
             // Create a new presentation
-            Presentation presentation = new Presentation();
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
             // Add a mathematical shape to the first slide
-            IAutoShape mathShape = presentation.Slides[0].Shapes.AddMathShape(0, 0, 500, 50);
+            Aspose.Slides.IAutoShape mathShape = presentation.Slides[0].Shapes.AddMathShape(0, 0, 500, 50);
 
             // Retrieve the MathParagraph from the shape
-            IMathParagraph mathParagraph = ((MathPortion)mathShape.TextFrame.Paragraphs[0].Portions[0]).MathParagraph;
+            Aspose.Slides.MathText.IMathParagraph mathParagraph = ((Aspose.Slides.MathText.MathPortion)mathShape.TextFrame.Paragraphs[0].Portions[0]).MathParagraph;
 
             // Build the equation a + b = c
-            mathParagraph.Add(
-                new MathematicalText("a")
-                .Join(new MathematicalText("+"))
-                .Join(new MathematicalText("b"))
-                .Join(new MathematicalText("="))
-                .Join(new MathematicalText("c"))
-            );
+            Aspose.Slides.MathText.MathematicalText a = new Aspose.Slides.MathText.MathematicalText("a");
+            Aspose.Slides.MathText.MathematicalText plus = new Aspose.Slides.MathText.MathematicalText("+");
+            Aspose.Slides.MathText.MathematicalText b = new Aspose.Slides.MathText.MathematicalText("b");
+            Aspose.Slides.MathText.MathematicalText equals = new Aspose.Slides.MathText.MathematicalText("=");
+            Aspose.Slides.MathText.MathematicalText c = new Aspose.Slides.MathText.MathematicalText("c");
 
-            // Export based on selected mode
+            mathParagraph.Add(a.Join(plus).Join(b).Join(equals).Join(c));
+
+            // Export based on the requested mode
             if (exportMode == "latex")
             {
-                // Export the whole MathParagraph to LaTeX
-                string latexString = mathParagraph.ToLatex();
-                Console.WriteLine("LaTeX output:");
-                Console.WriteLine(latexString);
+                string latex = mathParagraph.ToLatex();
+                File.WriteAllText(outputPath, latex, Encoding.UTF8);
+                Console.WriteLine($"LaTeX exported to '{outputPath}'.");
             }
             else if (exportMode == "mathml")
             {
-                // Export each MathBlock as MathML into a file
-                string mathMlPath = Path.Combine(Directory.GetCurrentDirectory(), "mathml_output.xml");
-                try
+                using (MemoryStream ms = new MemoryStream())
                 {
-                    using (FileStream stream = new FileStream(mathMlPath, FileMode.Create, FileAccess.Write))
+                    mathParagraph.WriteAsMathMl(ms);
+                    ms.Position = 0;
+                    using (StreamReader reader = new StreamReader(ms, Encoding.UTF8))
                     {
-                        // Write the entire paragraph as MathML
-                        mathParagraph.WriteAsMathMl(stream);
+                        string mathMl = reader.ReadToEnd();
+                        File.WriteAllText(outputPath, mathMl, Encoding.UTF8);
+                        Console.WriteLine($"MathML exported to '{outputPath}'.");
                     }
-                    Console.WriteLine($"MathML written to {mathMlPath}");
-                }
-                catch (Exception ex)
-                {
-                    // Handle any I/O or format exceptions
-                    Console.WriteLine($"Error writing MathML: {ex.Message}");
                 }
             }
             else
             {
-                Console.WriteLine("Invalid export mode. Use \"latex\" or \"mathml\".");
+                Console.WriteLine("Invalid export mode. Use 'latex' or 'mathml'.");
+                return;
             }
 
-            // Save the presentation before exiting
-            string outputPath = Path.Combine(Directory.GetCurrentDirectory(), "MathExportPresentation.pptx");
-            try
-            {
-                presentation.Save(outputPath, SaveFormat.Pptx);
-                Console.WriteLine($"Presentation saved to {outputPath}");
-            }
-            catch (Exception ex)
-            {
-                // Handle format not supported or other save errors
-                // Format not supported
-                Console.WriteLine($"Error saving presentation: {ex.Message}");
-            }
-
-            // Dispose the presentation
-            presentation.Dispose();
+            // Save the presentation for verification
+            presentation.Save(presentationPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            Console.WriteLine($"Presentation saved to '{presentationPath}'.");
+        }
+        catch (FileNotFoundException fnfEx)
+        {
+            Console.WriteLine($"File not found: {fnfEx.Message}");
+        }
+        catch (DirectoryNotFoundException dnfEx)
+        {
+            Console.WriteLine($"Directory not found: {dnfEx.Message}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred: {ex.Message}");
         }
     }
 }
