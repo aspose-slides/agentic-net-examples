@@ -17,7 +17,7 @@
 // - Create C# utilities for PowerPoint content sanitization before publishing.
 // - Integrate SWF export into .NET applications that require audio‑free output.
 // - Validate and preprocess presentations in batch processing pipelines.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
