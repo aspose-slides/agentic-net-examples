@@ -1,45 +1,40 @@
 // -----------------------------------------------------------------------------
-// Example: Reorder slides using external configuration using C#
+// Example: Reorder PowerPoint Slides Using External Configuration with Aspose.Slides
 //
 // Description:
-// Demonstrates how to reorder slides in a PowerPoint presentation based on an
-// external configuration file using C# and Aspose.Slides for .NET. The example
-// reads a list of slide indices from a text file, applies the new ordering to
-// the presentation, and saves the result as a new PPTX file. This pattern can
-// be used to automate slide sequencing, integrate custom ordering logic, or
-// support dynamic presentation generation.
+// This console application reads a list of slide indices from a text file and
+// reorders the slides of an existing PPTX presentation accordingly. It uses
+// Aspose.Slides for .NET to load, clone, and save the presentation, producing a
+// new PPTX file with the desired slide sequence.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Reorder, Slides, External,
-// Configuration, Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, slide reordering, external configuration, presentation automation
 //
 // Use Cases:
-// - Automate reordering of slides according to a user‑defined sequence.
-// - Build .NET tools that adjust PPTX slide order based on external data.
-// - Integrate slide sequencing into larger presentation workflow pipelines.
-// - Validate and transform presentations before distribution or publishing.
+// - Automate custom slide sequencing based on user‑defined order files.
+// - Integrate slide ordering into build pipelines for dynamic presentations.
+// - Support localization or version‑specific slide arrangements without manual editing.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-namespace SlideReorderApp
+namespace SlideReorderExample
 {
     class Program
     {
         static void Main(string[] args)
         {
             // Define file paths
-            string inputPath = "input.pptx";
-            string configPath = "order.txt";
-            string outputPath = "output.pptx";
+            string inputPath = Path.Combine(Environment.CurrentDirectory, "input.pptx");
+            string configPath = Path.Combine(Environment.CurrentDirectory, "order.txt");
+            string outputPath = Path.Combine(Environment.CurrentDirectory, "output_reordered.pptx");
 
             // Verify input presentation exists
             if (!File.Exists(inputPath))
             {
-                Console.WriteLine("Input presentation file not found: " + inputPath);
+                Console.WriteLine("Input presentation not found: " + inputPath);
                 return;
             }
 
@@ -50,46 +45,79 @@ namespace SlideReorderApp
                 return;
             }
 
+            // Load source presentation
+            Aspose.Slides.Presentation sourcePresentation = null;
             try
             {
-                // Read custom slide order from configuration file (comma or whitespace separated indices)
-                string configContent = File.ReadAllText(configPath);
-                string[] tokens = configContent.Split(new char[] { ',', ';', ' ', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
-                List<int> newOrder = new List<int>();
-                foreach (string token in tokens)
+                sourcePresentation = new Aspose.Slides.Presentation(inputPath);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to load presentation: " + ex.Message);
+                return;
+            }
+
+            // Read ordering from configuration file
+            List<int> newOrder = new List<int>();
+            try
+            {
+                string[] lines = File.ReadAllLines(configPath);
+                foreach (string line in lines)
                 {
-                    if (int.TryParse(token, out int index))
+                    if (int.TryParse(line.Trim(), out int index))
                     {
                         newOrder.Add(index);
                     }
                 }
-
-                // Load the presentation
-                Presentation pres = new Presentation(inputPath);
-                ISlideCollection slides = pres.Slides;
-
-                // Reorder slides according to the custom sequence
-                for (int targetIndex = 0; targetIndex < newOrder.Count && targetIndex < slides.Count; targetIndex++)
-                {
-                    int originalIndex = newOrder[targetIndex];
-                    if (originalIndex < 0 || originalIndex >= slides.Count)
-                    {
-                        // Skip invalid indices
-                        continue;
-                    }
-
-                    // Move the slide from originalIndex to targetIndex
-                    slides.Reorder(originalIndex, targetIndex);
-                }
-
-                // Save the modified presentation
-                pres.Save(outputPath, SaveFormat.Pptx);
-                pres.Dispose();
             }
             catch (Exception ex)
             {
-                // Handle unsupported format or other errors
-                Console.WriteLine("An error occurred: " + ex.Message);
+                Console.WriteLine("Failed to read configuration: " + ex.Message);
+                sourcePresentation.Dispose();
+                return;
+            }
+
+            // Validate indices
+            int slideCount = sourcePresentation.Slides.Count;
+            foreach (int idx in newOrder)
+            {
+                if (idx < 0 || idx >= slideCount)
+                {
+                    Console.WriteLine("Invalid slide index in configuration: " + idx);
+                    sourcePresentation.Dispose();
+                    return;
+                }
+            }
+
+            // Create new presentation for reordered slides
+            Aspose.Slides.Presentation reorderedPresentation = new Aspose.Slides.Presentation();
+            // Remove default empty slide if present
+            if (reorderedPresentation.Slides.Count > 0)
+            {
+                reorderedPresentation.Slides.RemoveAt(0);
+            }
+
+            // Clone slides in the new order
+            foreach (int idx in newOrder)
+            {
+                Aspose.Slides.ISlide sourceSlide = sourcePresentation.Slides[idx];
+                reorderedPresentation.Slides.AddClone(sourceSlide);
+            }
+
+            // Save reordered presentation
+            try
+            {
+                reorderedPresentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                Console.WriteLine("Reordered presentation saved to: " + outputPath);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to save reordered presentation: " + ex.Message);
+            }
+            finally
+            {
+                sourcePresentation.Dispose();
+                reorderedPresentation.Dispose();
             }
         }
     }
