@@ -17,6 +17,7 @@
 // - Build C# tools for PowerPoint content quality assurance.
 // - Integrate hyperlink reachability checks into .NET applications.
 // - Ensure presentation links are functional before publishing or distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
