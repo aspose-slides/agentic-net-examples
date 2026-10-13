@@ -16,6 +16,7 @@
 // - Build .NET tools that need specific slide dimensions and orientation.
 // - Automate creation of PPTX files for webinars, videos, or displays.
 // - Ensure consistent slide layout across generated presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
