@@ -16,7 +16,7 @@
 // - Programmatically change text colors in slides.
 // - Save modified presentations to disk or other streams.
 // - Build .NET tools that process PPTX files without intermediate files.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
