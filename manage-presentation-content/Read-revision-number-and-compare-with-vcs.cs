@@ -19,7 +19,7 @@
 // - Build command‑line tools that enforce revision consistency across files.
 // - Automate validation steps in CI/CD pipelines for PowerPoint assets.
 // - Generate reports on revision discrepancies for documentation teams.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
