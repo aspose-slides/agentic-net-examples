@@ -18,7 +18,7 @@
 // - Build command‑line tools for PPTX compression management.
 // - Integrate compression control into .NET applications handling PowerPoint.
 // - Ensure PPTX files meet specific storage or compliance requirements.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

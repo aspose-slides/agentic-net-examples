@@ -17,7 +17,7 @@
 // - Build .NET tools for generating documentation from presentations.
 // - Integrate PowerPoint content into static site generators or wikis.
 // - Preserve hidden slides and ordering when exporting to Markdown.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

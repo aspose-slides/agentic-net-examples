@@ -16,7 +16,7 @@
 // - Generate CSV reports for auditing conversion outcomes.
 // - Build .NET tools for PowerPoint file processing and validation.
 // - Integrate presentation conversion workflows into larger applications.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

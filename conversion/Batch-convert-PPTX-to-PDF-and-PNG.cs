@@ -19,7 +19,7 @@
 // - Build command‑line tools for PowerPoint content preparation.
 // - Integrate presentation conversion into CI/CD pipelines or document
 //   management systems.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

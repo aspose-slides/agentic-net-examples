@@ -15,7 +15,7 @@
 // - Automate batch export of slide images in .NET tools.
 // - Integrate slide-to-image conversion into reporting or publishing pipelines.
 // - Validate slide rendering with alpha channel support.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -18,7 +18,7 @@
 // - Build C# utilities for secure PowerPoint presentation handling.
 // - Integrate macro‑removal steps into .NET document processing pipelines.
 // - Prepare presentations for environments that require macro‑free files.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

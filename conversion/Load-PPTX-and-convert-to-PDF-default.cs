@@ -16,7 +16,7 @@
 // - Build command‑line tools for batch PPTX‑to‑PDF conversion.
 // - Integrate simple presentation conversion into .NET applications.
 // - Validate PPTX files before publishing by generating PDF previews.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

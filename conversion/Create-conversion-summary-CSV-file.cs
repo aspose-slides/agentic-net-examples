@@ -15,7 +15,7 @@
 // - Build C# utilities for PowerPoint presentation processing and reporting.
 // - Generate conversion logs for validation or auditing purposes.
 // - Integrate presentation conversion into .NET automation pipelines.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

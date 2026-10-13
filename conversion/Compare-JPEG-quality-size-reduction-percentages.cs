@@ -19,7 +19,7 @@
 // - Build tools to automate PDF generation with configurable image quality.
 // - Optimize presentation workflows by selecting appropriate JPEG quality.
 // - Validate size reduction trade‑offs before publishing or distribution.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

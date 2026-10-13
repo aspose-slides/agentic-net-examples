@@ -18,7 +18,7 @@
 // - Build .NET tools that robustly handle missing fonts in PPTX files.
 // - Automate PPTX processing with reliable font substitution.
 // - Validate and transform presentations before distribution.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

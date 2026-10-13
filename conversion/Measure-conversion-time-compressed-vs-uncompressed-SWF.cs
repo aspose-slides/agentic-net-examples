@@ -16,7 +16,7 @@
 // - Benchmark Aspose.Slides conversion speeds.
 // - Build tools to evaluate trade‑offs between file size and conversion time.
 // - Automate generation of SWF files with desired compression settings.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

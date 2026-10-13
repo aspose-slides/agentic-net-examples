@@ -18,7 +18,7 @@
 // - Build C# utilities for PowerPoint validation before publishing.
 // - Integrate slide‑count checks into larger .NET workflows.
 // - Save or transform presentations after performing validation steps.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -16,7 +16,7 @@
 // - Build C# utilities for PowerPoint to SWF conversion.
 // - Automate generation of SWF files for web presentation viewers.
 // - Validate and test SWF export settings in .NET applications.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

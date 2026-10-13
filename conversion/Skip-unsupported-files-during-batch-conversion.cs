@@ -18,7 +18,7 @@
 // - Skip unsupported file types and formats during large‑scale conversion jobs.
 // - Build command‑line tools for presentation processing in .NET applications.
 // - Ensure robust handling of format exceptions in automated workflows.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

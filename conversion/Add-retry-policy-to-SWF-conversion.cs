@@ -16,7 +16,7 @@
 // - Build .NET utilities that transform PPTX files to SWF for web publishing.
 // - Ensure reliable batch processing of presentations in automated workflows.
 // - Diagnose and handle unsupported formats during conversion.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

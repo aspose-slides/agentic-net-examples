@@ -2,7 +2,15 @@
 
 
 
+
+
+
+
 name: conversion
+
+
+
+
 
 
 
@@ -10,7 +18,15 @@ description: C# examples for conversion using Aspose.Slides for .NET
 
 
 
+
+
+
+
 language: csharp
+
+
+
+
 
 
 
@@ -18,11 +34,27 @@ framework: net10.0
 
 
 
+
+
+
+
 parent: ../agents.md
 
 
 
+
+
+
+
 ---
+
+
+
+
+
+
+
+
 
 
 
@@ -38,7 +70,23 @@ parent: ../agents.md
 
 
 
+
+
+
+
+
+
+
+
 ## Persona
+
+
+
+
+
+
+
+
 
 
 
@@ -50,7 +98,19 @@ You are a C# developer specializing in PowerPoint processing using Aspose.Slides
 
 
 
+
+
+
+
 working within the **conversion** category.
+
+
+
+
+
+
+
+
 
 
 
@@ -66,11 +126,31 @@ working within the **conversion** category.
 
 
 
+
+
+
+
+
+
+
+
 - This folder contains examples for **conversion**
 
 
 
+
+
+
+
 - Files are standalone `.cs` examples stored directly in this folder.
+
+
+
+
+
+
+
+
 
 
 
@@ -86,33 +166,48 @@ working within the **conversion** category.
 
 
 
-Verified with version: 26.9.0
-Total files: 389
 
-- `using System;` (389/389 files)
-- `using System.IO;` (383/389 files)
-- `using Aspose.Slides.Export;` (376/389 files)
-- `using Aspose.Slides;` (335/389 files)
-- `using System.Drawing;` (17/389 files)
-- `using System.Diagnostics;` (11/389 files)
-- `using System.IO.Compression;` (7/389 files)
-- `using System.Collections.Generic;` (5/389 files)
-- `using System.Text;` (5/389 files)
-- `using System.Threading;` (4/389 files)
-- `using System.Threading.Tasks;` (4/389 files)
-- `using Aspose.Slides.Export.Xaml;` (3/389 files)
-- `using Aspose.Slides.Effects;` (2/389 files)
-- `using System.Reflection;` (2/389 files)
-- `using Aspose.Slides.Util;` (2/389 files)
-- `using System.Net;` (2/389 files)
-- `using System.Text.Json;` (2/389 files)
-- `using System.Drawing.Imaging;` (2/389 files)
-- `using Aspose.Slides.SlideShow;` (1/389 files)
-- `using System.Linq;` (1/389 files)
-- `using System.Xml.Linq;` (1/389 files)
-- `using System.Net.Http;` (1/389 files)
+
+
+
+
+
+
+
+Verified with version: 26.10.0
+Total files: 376
+
+- `using System;` (376/376 files)
+- `using Aspose.Slides.Export;` (376/376 files)
+- `using System.IO;` (373/376 files)
+- `using Aspose.Slides;` (335/376 files)
+- `using System.Drawing;` (15/376 files)
+- `using System.Diagnostics;` (11/376 files)
+- `using System.IO.Compression;` (5/376 files)
+- `using System.Collections.Generic;` (5/376 files)
+- `using System.Threading;` (4/376 files)
+- `using System.Threading.Tasks;` (4/376 files)
+- `using System.Text;` (4/376 files)
+- `using Aspose.Slides.Export.Xaml;` (3/376 files)
+- `using Aspose.Slides.Effects;` (2/376 files)
+- `using Aspose.Slides.Util;` (2/376 files)
+- `using System.Net;` (2/376 files)
+- `using System.Text.Json;` (2/376 files)
+- `using System.Drawing.Imaging;` (2/376 files)
+- `using Aspose.Slides.SlideShow;` (1/376 files)
+- `using System.Linq;` (1/376 files)
+- `using System.Xml.Linq;` (1/376 files)
+- `using System.Net.Http;` (1/376 files)
 
 ## Files in this folder
+
+
+
+
+
+
+
+
 
 
 
@@ -134,7 +229,6 @@ Total files: 389
 | [Add-retry-logic-to-batch-presentation-conversion.cs](./Add-retry-logic-to-batch-presentation-conversion.cs) |  | Add retry logic to batch presentation conversion |
 | [Add-retry-logic-to-swf-saving.cs](./Add-retry-logic-to-swf-saving.cs) |  | Add retry logic to swf saving |
 | [Add-retry-policy-to-SWF-conversion.cs](./Add-retry-policy-to-SWF-conversion.cs) |  | Add retry policy to SWF conversion |
-| [Add-semi-transparent-watermark-to-master-slide-GIF.cs](./Add-semi-transparent-watermark-to-master-slide-GIF.cs) |  | Add semi transparent watermark to master slide GIF |
 | [Add-slide-number-to-master-export-SVG.cs](./Add-slide-number-to-master-export-SVG.cs) |  | Add slide number to master export SVG |
 | [Add-text-watermark-to-TIFF-during-conversion.cs](./Add-text-watermark-to-TIFF-during-conversion.cs) |  | Add text watermark to TIFF during conversion |
 | [Add-timestamp-watermark-to-PPTX-GIF.cs](./Add-timestamp-watermark-to-PPTX-GIF.cs) |  | Add timestamp watermark to PPTX GIF |
@@ -200,7 +294,6 @@ Total files: 389
 | [Convert-ODP-to-SWF-and-verify-integrity.cs](./Convert-ODP-to-SWF-and-verify-integrity.cs) |  | Convert ODP to SWF and verify integrity |
 | [Convert-ODP-to-SWF-default-settings.cs](./Convert-ODP-to-SWF-default-settings.cs) |  | Convert ODP to SWF default settings |
 | [Convert-odp-to-tiff-300dpi.cs](./Convert-odp-to-tiff-300dpi.cs) |  | Convert odp to tiff 300dpi |
-| [Convert-PPT-to-DOCX-preserve-layouts.cs](./Convert-PPT-to-DOCX-preserve-layouts.cs) |  | Convert PPT to DOCX preserve layouts |
 | [Convert-PPT-to-markdown-preserve-titles.cs](./Convert-PPT-to-markdown-preserve-titles.cs) |  | Convert PPT to markdown preserve titles |
 | [Convert-PPT-to-ODP-verify-hyperlinks.cs](./Convert-PPT-to-ODP-verify-hyperlinks.cs) |  | Convert PPT to ODP verify hyperlinks |
 | [Convert-PPT-to-ODP-verify-manifest.cs](./Convert-PPT-to-ODP-verify-manifest.cs) |  | Convert PPT to ODP verify manifest |
@@ -213,14 +306,11 @@ Total files: 389
 | [Convert-PPT-to-PDF-letter-size-hidden.cs](./Convert-PPT-to-PDF-letter-size-hidden.cs) |  | Convert PPT to PDF letter size hidden |
 | [Convert-PPT-to-PPTX-with-new-password.cs](./Convert-PPT-to-PPTX-with-new-password.cs) |  | Convert PPT to PPTX with new password |
 | [Convert-PPT-to-TIFF-and-compress-LZW.cs](./Convert-PPT-to-TIFF-and-compress-LZW.cs) |  | Convert PPT to TIFF and compress LZW |
-| [Convert-PPT-to-TIFF-and-DOCX.cs](./Convert-PPT-to-TIFF-and-DOCX.cs) |  | Convert PPT to TIFF and DOCX |
 | [Convert-PPT-to-XPS-preserve-layout-fonts.cs](./Convert-PPT-to-XPS-preserve-layout-fonts.cs) |  | Convert PPT to XPS preserve layout fonts |
 | [Convert-PPT-with-fallback-font-to-SWF.cs](./Convert-PPT-with-fallback-font-to-SWF.cs) |  | Convert PPT with fallback font to SWF |
 | [Convert-PPTX-files-to-individual-PDFs.cs](./Convert-PPTX-files-to-individual-PDFs.cs) |  | Convert PPTX files to individual PDFs |
 | [Convert-PPTX-selected-slides-to-PDF-a1b.cs](./Convert-PPTX-selected-slides-to-PDF-a1b.cs) |  | Convert PPTX selected slides to PDF a1b |
 | [Convert-PPTX-to-animated-GIF-loop.cs](./Convert-PPTX-to-animated-GIF-loop.cs) |  | Convert PPTX to animated GIF loop |
-| [Convert-PPTX-to-DOCX-and-extract-text.cs](./Convert-PPTX-to-DOCX-and-extract-text.cs) |  | Convert PPTX to DOCX and extract text |
-| [Convert-PPTX-to-DOCX-and-zip.cs](./Convert-PPTX-to-DOCX-and-zip.cs) |  | Convert PPTX to DOCX and zip |
 | [Convert-PPTX-to-HTML5-embed-resources.cs](./Convert-PPTX-to-HTML5-embed-resources.cs) |  | Convert PPTX to HTML5 embed resources |
 | [Convert-PPTX-to-HTML5-with-brand-CSS.cs](./Convert-PPTX-to-HTML5-with-brand-CSS.cs) |  | Convert PPTX to HTML5 with brand CSS |
 | [Convert-PPTX-to-MP4-30fps-720p.cs](./Convert-PPTX-to-MP4-30fps-720p.cs) |  | Convert PPTX to MP4 30fps 720p |
@@ -285,7 +375,6 @@ Total files: 389
 | [Create-TIFF-from-PPT-with-CMYK-conversion.cs](./Create-TIFF-from-PPT-with-CMYK-conversion.cs) |  | Create TIFF from PPT with CMYK conversion |
 | [Create-unsupported-features-report-for-PPTX-conversion.cs](./Create-unsupported-features-report-for-PPTX-conversion.cs) |  | Create unsupported features report for PPTX conversion |
 | [Create-XAML-for-slide-transitions.cs](./Create-XAML-for-slide-transitions.cs) |  | Create XAML for slide transitions |
-| [Create-XAML-with-embedded-fonts.cs](./Create-XAML-with-embedded-fonts.cs) |  | Create XAML with embedded fonts |
 | [Delete-unwanted-slides-before-batch-SVG.cs](./Delete-unwanted-slides-before-batch-SVG.cs) |  | Delete unwanted slides before batch SVG |
 | [Detect-missing-fonts-during-conversion-and-substitute.cs](./Detect-missing-fonts-during-conversion-and-substitute.cs) |  | Detect missing fonts during conversion and substitute |
 | [Detect-PPT-password-protection-and-log-status.cs](./Detect-PPT-password-protection-and-log-status.cs) |  | Detect PPT password protection and log status |
@@ -298,7 +387,6 @@ Total files: 389
 | [Disable-viewer-ui-in-SWF-embed-html5.cs](./Disable-viewer-ui-in-SWF-embed-html5.cs) |  | Disable viewer ui in SWF embed html5 |
 | [Disable-viewer-UI-in-SWF-for-thirdparty.cs](./Disable-viewer-UI-in-SWF-for-thirdparty.cs) |  | Disable viewer UI in SWF for thirdparty |
 | [Disable-XPS-compression-for-debugging.cs](./Disable-XPS-compression-for-debugging.cs) |  | Disable XPS compression for debugging |
-| [Embed-presentation-metadata-into-DOCX.cs](./Embed-presentation-metadata-into-DOCX.cs) |  | Embed presentation metadata into DOCX |
 | [Embed-source-filename-into-PDF-from-PPT.cs](./Embed-source-filename-into-PDF-from-PPT.cs) |  | Embed source filename into PDF from PPT |
 | [Embed-speaker-notes-into-SWF-output.cs](./Embed-speaker-notes-into-SWF-output.cs) |  | Embed speaker notes into SWF output |
 | [Enable-comment-rendering-in-JPG-with-notes.cs](./Enable-comment-rendering-in-JPG-with-notes.cs) |  | Enable comment rendering in JPG with notes |
@@ -328,12 +416,10 @@ Total files: 389
 | [Export-PPTX-to-HTML-with-notes.cs](./Export-PPTX-to-HTML-with-notes.cs) |  | Export PPTX to HTML with notes |
 | [Export-PPTX-to-HTML-with-semantic-sections.cs](./Export-PPTX-to-HTML-with-semantic-sections.cs) |  | Export PPTX to HTML with semantic sections |
 | [Export-PPTX-to-HTML-with-separate-css.cs](./Export-PPTX-to-HTML-with-separate-css.cs) |  | Export PPTX to HTML with separate css |
-| [Export-PPTX-to-HTML-zip-archive.cs](./Export-PPTX-to-HTML-zip-archive.cs) |  | Export PPTX to HTML zip archive |
 | [Export-PPTX-to-HTML5-responsive-navigation.cs](./Export-PPTX-to-HTML5-responsive-navigation.cs) |  | Export PPTX to HTML5 responsive navigation |
 | [Export-PPTX-to-HTML5-with-react-component.cs](./Export-PPTX-to-HTML5-with-react-component.cs) |  | Export PPTX to HTML5 with react component |
 | [Export-PPTX-to-JPEG-default-quality.cs](./Export-PPTX-to-JPEG-default-quality.cs) |  | Export PPTX to JPEG default quality |
 | [Export-PPTX-to-JPEG-with-orientation.cs](./Export-PPTX-to-JPEG-with-orientation.cs) |  | Export PPTX to JPEG with orientation |
-| [Export-PPTX-to-ODP-preserve-charts.cs](./Export-PPTX-to-ODP-preserve-charts.cs) |  | Export PPTX to ODP preserve charts |
 | [Export-PPTX-to-PDF-a1b-archival.cs](./Export-PPTX-to-PDF-a1b-archival.cs) |  | Export PPTX to PDF a1b archival |
 | [Export-PPTX-to-PDF-archival-a1b.cs](./Export-PPTX-to-PDF-archival-a1b.cs) |  | Export PPTX to PDF archival a1b |
 | [Export-PPTX-to-PDF-CMYK-color.cs](./Export-PPTX-to-PDF-CMYK-color.cs) |  | Export PPTX to PDF CMYK color |
@@ -437,21 +523,17 @@ Total files: 389
 | [Save-PPTX-as-PDF-90percent-quality.cs](./Save-PPTX-as-PDF-90percent-quality.cs) |  | Save PPTX as PDF 90percent quality |
 | [Save-PPTX-as-PNG-lossless.cs](./Save-PPTX-as-PNG-lossless.cs) |  | Save PPTX as PNG lossless |
 | [Save-PPTX-as-PNG-thumbnail-200px.cs](./Save-PPTX-as-PNG-thumbnail-200px.cs) |  | Save PPTX as PNG thumbnail 200px |
-| [Save-PPTX-slides-as-PNG-16bit-hdr.cs](./Save-PPTX-slides-as-PNG-16bit-hdr.cs) |  | Save PPTX slides as PNG 16bit hdr |
 | [Save-PPTX-slides-as-PNG-300DPI-print.cs](./Save-PPTX-slides-as-PNG-300DPI-print.cs) |  | Save PPTX slides as PNG 300DPI print |
 | [Save-PPTX-slides-as-PNG-zero-padded.cs](./Save-PPTX-slides-as-PNG-zero-padded.cs) |  | Save PPTX slides as PNG zero padded |
 | [Save-PPTX-to-XPS-embed-metadata.cs](./Save-PPTX-to-XPS-embed-metadata.cs) |  | Save PPTX to XPS embed metadata |
 | [Save-presentation-as-GIF-default-options.cs](./Save-presentation-as-GIF-default-options.cs) |  | Save presentation as GIF default options |
-| [Save-presentation-to-XPS-with-iso29500-compliance.cs](./Save-presentation-to-XPS-with-iso29500-compliance.cs) |  | Save presentation to XPS with iso29500 compliance |
 | [Set-bw-conversion-mode-to-dithering.cs](./Set-bw-conversion-mode-to-dithering.cs) |  | Set bw conversion mode to dithering |
 | [Set-CCITT4-compression-and-bw-mode.cs](./Set-CCITT4-compression-and-bw-mode.cs) |  | Set CCITT4 compression and bw mode |
 | [Set-custom-slide-size-and-export-JPG.cs](./Set-custom-slide-size-and-export-JPG.cs) |  | Set custom slide size and export JPG |
 | [Set-default-font-to-arial-before-swf.cs](./Set-default-font-to-arial-before-swf.cs) |  | Set default font to arial before swf |
 | [Set-GIF-frame-delay-to-50ms.cs](./Set-GIF-frame-delay-to-50ms.cs) |  | Set GIF frame delay to 50ms |
-| [Set-GIF-loop-count-to-1.cs](./Set-GIF-loop-count-to-1.cs) |  | Set GIF loop count to 1 |
 | [Set-GIF-loop-count-to-infinite.cs](./Set-GIF-loop-count-to-infinite.cs) |  | Set GIF loop count to infinite |
 | [Set-GIF-loop-infinite-high-quality.cs](./Set-GIF-loop-infinite-high-quality.cs) |  | Set GIF loop infinite high quality |
-| [Set-GIF-quality-to-90percent.cs](./Set-GIF-quality-to-90percent.cs) |  | Set GIF quality to 90percent |
 | [Set-JPEG-quality-based-on-slide-resolution.cs](./Set-JPEG-quality-based-on-slide-resolution.cs) |  | Set JPEG quality based on slide resolution |
 | [Set-notes-position-bottomfull-and-export-TIFF.cs](./Set-notes-position-bottomfull-and-export-TIFF.cs) |  | Set notes position bottomfull and export TIFF |
 | [Set-slide-size-to-1024x768-before-PDF.cs](./Set-slide-size-to-1024x768-before-PDF.cs) |  | Set slide size to 1024x768 before PDF |
@@ -520,9 +602,25 @@ Total files: 389
 
 
 
-- Total examples: 389
+
+
+
+
+
+
+
+
+- Total examples: 376
 
 ## Key API Surface
+
+
+
+
+
+
+
+
 
 
 
@@ -534,7 +632,15 @@ Total files: 389
 
 
 
+
+
+
+
 - `Aspose.Slides`
+
+
+
+
 
 
 
@@ -542,7 +648,15 @@ Total files: 389
 
 
 
+
+
+
+
 - `Aspose.Slides.Export.SwfOptions`
+
+
+
+
 
 
 
@@ -550,7 +664,15 @@ Total files: 389
 
 
 
+
+
+
+
 - `Aspose.Slides.Export.SaveFormat.Swf`
+
+
+
+
 
 
 
@@ -558,7 +680,15 @@ Total files: 389
 
 
 
+
+
+
+
 - `Aspose.Slides.Export.SaveFormat.Pdf`
+
+
+
+
 
 
 
@@ -566,7 +696,15 @@ Total files: 389
 
 
 
+
+
+
+
 - `Aspose.Slides.ISlide`
+
+
+
+
 
 
 
@@ -574,7 +712,15 @@ Total files: 389
 
 
 
+
+
+
+
 - `Aspose.Slides.Export.GifOptions`
+
+
+
+
 
 
 
@@ -582,11 +728,27 @@ Total files: 389
 
 
 
+
+
+
+
 - `Aspose.Slides.ImageFormat.Png`
 
 
 
+
+
+
+
 - `Aspose.Slides.Export.SaveFormat.Tiff`
+
+
+
+
+
+
+
+
 
 
 
@@ -602,7 +764,23 @@ Total files: 389
 
 
 
+
+
+
+
+
+
+
+
 Most examples follow a pattern similar to:
+
+
+
+
+
+
+
+
 
 
 
@@ -614,7 +792,15 @@ Most examples follow a pattern similar to:
 
 
 
+
+
+
+
 using (Presentation pres = new Presentation("input.pptx"))
+
+
+
+
 
 
 
@@ -622,7 +808,15 @@ using (Presentation pres = new Presentation("input.pptx"))
 
 
 
+
+
+
+
     // operations
+
+
+
+
 
 
 
@@ -630,11 +824,27 @@ using (Presentation pres = new Presentation("input.pptx"))
 
 
 
+
+
+
+
 }
 
 
 
+
+
+
+
 ```
+
+
+
+
+
+
+
+
 
 
 
@@ -650,11 +860,27 @@ using (Presentation pres = new Presentation("input.pptx"))
 
 
 
+
+
+
+
+
+
+
+
 - Load presentations using `new Presentation("file.pptx")`.
 
 
 
+
+
+
+
 - Modify slides through the `Slides` collection.
+
+
+
+
 
 
 
@@ -666,7 +892,19 @@ using (Presentation pres = new Presentation("input.pptx"))
 
 
 
+
+
+
+
+
+
+
+
 <!-- AUTOGENERATED:START -->
+
+
+
+
 
 
 
@@ -674,13 +912,27 @@ Updated: 2026-05-07
 
 
 
+
+
+
+
 <!-- AUTOGENERATED:END -->
+
+
+
+
 
 
 
 <!-- SEO-FAQ:BEGIN -->
 
+
+
 ## Developer FAQ for Coding Agents
+
+
+
+
 
 
 
@@ -688,35 +940,71 @@ Use these Q&A entries when selecting examples from `conversion` for user prompts
 
 
 
+
+
+
+
 ### How do I convert PowerPoint PPTX files to PDF, HTML, SVG, PNG, or JPEG in C#?
+
+
 
 Use the conversion and export examples to load a `Presentation`, configure format-specific options when needed, and call `presentation.Save(...)` or slide image APIs with the correct `Aspose.Slides.Export.SaveFormat`.
 
 
 
+
+
+
+
 ### How do I add, clone, reorder, or remove PowerPoint slides in .NET?
+
+
 
 Use slide management examples to work with `ISlide`, slide collections, layouts, masters, and sections while preserving presentation structure.
 
 
 
+
+
+
+
 ### How do I use Aspose.Slides for .NET for conversion in C#?
+
+
 
 Use the `conversion` examples to find standalone C# patterns for conversion. Each example shows how to load or create an `Aspose.Slides.Presentation`, apply the operation, and save output with the correct Aspose.Slides API.
 
 
 
+
+
+
+
 ### Which conversion examples are best for coding agents?
+
+
 
 Start with the files listed in this directory and the category AGENTS.md. The strongest search terms for this category are: pptx, swf, pdf, ppt, with.
 
 
 
+
+
+
+
 ### Are the conversion examples standalone C# programs?
+
+
 
 Yes. The examples are generated as standalone console-style C# files and are intended to compile and run independently in .NET workflows.
 
 
 
+
+
+
+
 <!-- SEO-FAQ:END -->
+
+
 

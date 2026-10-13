@@ -16,7 +16,7 @@
 // - Build .NET utilities that gracefully handle video conversion errors.
 // - Automate batch processing of presentations with robust error handling.
 // - Integrate presentation conversion into larger .NET workflows.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

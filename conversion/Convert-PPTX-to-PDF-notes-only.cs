@@ -18,7 +18,7 @@
 // - Automate generation of notes-only PDFs for review or distribution.
 // - Integrate notes extraction into .NET applications or CI pipelines.
 // - Validate and process PowerPoint presentations programmatically.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

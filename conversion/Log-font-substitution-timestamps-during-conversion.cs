@@ -17,7 +17,7 @@
 // - Create audit logs for font usage in automated document pipelines.
 // - Build .NET tools that validate font availability before publishing.
 // - Diagnose rendering issues caused by missing fonts in presentations.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

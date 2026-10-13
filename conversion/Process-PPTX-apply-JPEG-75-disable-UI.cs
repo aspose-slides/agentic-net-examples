@@ -16,7 +16,7 @@
 // - Generate SWF files without embedding the viewer for custom UI.
 // - Automate batch conversion of PowerPoint files in .NET applications.
 // - Integrate presentation export into server‑side workflows.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -16,7 +16,7 @@
 // - Build C# utilities for PowerPoint content extraction and transformation.
 // - Integrate XAML export into .NET applications for further processing.
 // - Validate and preview presentation layouts in XAML format.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
