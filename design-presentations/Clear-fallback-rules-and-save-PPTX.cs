@@ -16,7 +16,7 @@
 // - Prepare presentations for distribution without fallback rules.
 // - Automate PPTX cleanup in .NET applications.
 // - Integrate font fallback management into PowerPoint processing pipelines.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
