@@ -17,6 +17,7 @@
 // - Build .NET tools that bundle slide images into downloadable archives.
 // - Integrate slide thumbnail generation into CI pipelines or reporting systems.
 // - Validate and transform PPTX files while producing visual summaries.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
