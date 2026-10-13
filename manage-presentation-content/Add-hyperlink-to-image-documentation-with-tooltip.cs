@@ -17,7 +17,7 @@
 // - Build C# utilities for enhancing presentation interactivity.
 // - Generate or modify PPTX files programmatically in .NET applications.
 // - Validate and test presentation content before distribution.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
