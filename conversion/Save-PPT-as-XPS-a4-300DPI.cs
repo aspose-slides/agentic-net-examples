@@ -17,7 +17,7 @@
 // - Build C# utilities that automate PowerPoint to XPS transformations.
 // - Integrate XPS export functionality into .NET applications.
 // - Validate presentation conversion workflows before deployment.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
