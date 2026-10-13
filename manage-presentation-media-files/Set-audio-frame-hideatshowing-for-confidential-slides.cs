@@ -16,7 +16,7 @@
 // - Build C# utilities for PowerPoint content sanitization.
 // - Integrate audio frame visibility control into .NET presentation workflows.
 // - Ensure compliance with content policies in generated PPTX files.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
