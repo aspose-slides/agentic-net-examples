@@ -16,7 +16,7 @@
 // - Generate per‑thread logs for monitoring and debugging parallel presentation processing.
 // - Automate saving processed copies of presentations after applying transformations.
 // - Integrate high‑throughput PowerPoint workflows into .NET applications.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
