@@ -6,8 +6,26 @@
 
 
 
-This category contains 148 standalone C# examples for Aspose.Slides for .NET. These examples help developers automate PowerPoint presentation workflows related to manage presentation media files.
+
+
+
+
+
+
+
+
+This category contains 144 standalone C# examples for Aspose.Slides for .NET. These examples help developers automate PowerPoint presentation workflows related to manage presentation media files.
+These files are tested and verified with Aspose.Slides for .NET v26.10.0.
+
 These files are tested and verified with Aspose.Slides for .NET v26.9.0.
+
+
+
+
+
+
+
+
 
 
 
@@ -23,7 +41,19 @@ These files are tested and verified with Aspose.Slides for .NET v26.9.0.
 
 
 
+
+
+
+
+
+
+
+
 - Automate repetitive presentation-processing tasks in .NET applications.
+
+
+
+
 
 
 
@@ -31,7 +61,19 @@ These files are tested and verified with Aspose.Slides for .NET v26.9.0.
 
 
 
+
+
+
+
 - Provide coding agents with direct, category-specific examples and API usage patterns.
+
+
+
+
+
+
+
+
 
 
 
@@ -47,7 +89,15 @@ These files are tested and verified with Aspose.Slides for .NET v26.9.0.
 
 
 
-Total examples: 148
+
+
+
+
+
+
+
+
+Total examples: 144
 
 - [Add-audio-frame-pause-on-shape-click.cs](./Add-audio-frame-pause-on-shape-click.cs)
 - [Add-audio-frame-with-custom-fadein.cs](./Add-audio-frame-with-custom-fadein.cs)
@@ -59,7 +109,6 @@ Total examples: 148
 - [Add-mp3-audio-frames-to-slides-loop.cs](./Add-mp3-audio-frames-to-slides-loop.cs)
 - [Add-mp3-audio-to-slide-three-loop.cs](./Add-mp3-audio-to-slide-three-loop.cs)
 - [Add-picture-frame-from-embedded-resource.cs](./Add-picture-frame-from-embedded-resource.cs)
-- [Add-picture-frame-with-rotation-verify-boundingbox.cs](./Add-picture-frame-with-rotation-verify-boundingbox.cs)
 - [Add-picture-frame-with-size-and-position.cs](./Add-picture-frame-with-size-and-position.cs)
 - [Add-proportional-scaling-to-picture-frame.cs](./Add-proportional-scaling-to-picture-frame.cs)
 - [Add-transparent-picture-frame-overlay.cs](./Add-transparent-picture-frame-overlay.cs)
@@ -69,7 +118,6 @@ Total examples: 148
 - [Apply-blur-effect-to-picture-frame.cs](./Apply-blur-effect-to-picture-frame.cs)
 - [Apply-custom-color-overlay-to-picture-frame.cs](./Apply-custom-color-overlay-to-picture-frame.cs)
 - [Apply-drop-shadow-to-picture-frame.cs](./Apply-drop-shadow-to-picture-frame.cs)
-- [Apply-fadein-to-video-frames-and-save.cs](./Apply-fadein-to-video-frames-and-save.cs)
 - [Apply-grayscale-filter-to-all-images.cs](./Apply-grayscale-filter-to-all-images.cs)
 - [Apply-grayscale-filter-to-picture-frame.cs](./Apply-grayscale-filter-to-picture-frame.cs)
 - [Apply-inversion-filter-to-title-slide-frame.cs](./Apply-inversion-filter-to-title-slide-frame.cs)
@@ -118,7 +166,6 @@ Total examples: 148
 - [Extract-audio-frames-convert-to-wav.cs](./Extract-audio-frames-convert-to-wav.cs)
 - [Extract-flash-object-by-name-and-save.cs](./Extract-flash-object-by-name-and-save.cs)
 - [Extract-flash-objects-and-archive-zip.cs](./Extract-flash-objects-and-archive-zip.cs)
-- [Extract-picture-frame-image-and-save-png.cs](./Extract-picture-frame-image-and-save-png.cs)
 - [Extract-SVG-markup-from-picture-frame.cs](./Extract-SVG-markup-from-picture-frame.cs)
 - [Extract-video-frame-metadata-duration-resolution.cs](./Extract-video-frame-metadata-duration-resolution.cs)
 - [Extract-video-streams-from-presentation.cs](./Extract-video-streams-from-presentation.cs)
@@ -178,7 +225,6 @@ Total examples: 148
 - [Set-audio-frame-loop-on-even-slides.cs](./Set-audio-frame-loop-on-even-slides.cs)
 - [Set-audio-frame-start-relative-to-transition.cs](./Set-audio-frame-start-relative-to-transition.cs)
 - [Set-audio-frame-volume-and-autoplay.cs](./Set-audio-frame-volume-and-autoplay.cs)
-- [Set-common-logo-as-slide-background.cs](./Set-common-logo-as-slide-background.cs)
 - [Set-custom-poster-image-for-video-frames.cs](./Set-custom-poster-image-for-video-frames.cs)
 - [Set-picture-frame-border-color-and-thickness.cs](./Set-picture-frame-border-color-and-thickness.cs)
 - [Set-picture-frame-fill-to-tile-mode.cs](./Set-picture-frame-fill-to-tile-mode.cs)
@@ -206,7 +252,19 @@ Total examples: 148
 
 
 
+
+
+
+
+
+
+
+
 - [Category instructions](./AGENTS.md)
+
+
+
+
 
 
 
@@ -214,13 +272,27 @@ Total examples: 148
 
 
 
+
+
+
+
 - [Structured index](../index.json)
+
+
+
+
 
 
 
 <!-- SEO-FAQ:BEGIN -->
 
+
+
 ## Developer FAQ
+
+
+
+
 
 
 
@@ -228,35 +300,71 @@ These questions target common developer searches for Aspose.Slides for .NET `man
 
 
 
+
+
+
+
 ### How do I convert PowerPoint PPTX files to PDF, HTML, SVG, PNG, or JPEG in C#?
+
+
 
 Use the conversion and export examples to load a `Presentation`, configure format-specific options when needed, and call `presentation.Save(...)` or slide image APIs with the correct `Aspose.Slides.Export.SaveFormat`.
 
 
 
+
+
+
+
 ### How do I add, clone, reorder, or remove PowerPoint slides in .NET?
+
+
 
 Use slide management examples to work with `ISlide`, slide collections, layouts, masters, and sections while preserving presentation structure.
 
 
 
+
+
+
+
 ### How do I use Aspose.Slides for .NET for manage presentation media files in C#?
+
+
 
 Use the `manage-presentation-media-files` examples to find standalone C# patterns for manage presentation media files. Each example shows how to load or create an `Aspose.Slides.Presentation`, apply the operation, and save output with the correct Aspose.Slides API.
 
 
 
+
+
+
+
 ### Which manage presentation media files examples are best for coding agents?
+
+
 
 Start with the files listed in this directory and the category AGENTS.md. The strongest search terms for this category are: frame, picture, slide, image, audio.
 
 
 
+
+
+
+
 ### Are the manage-presentation-media-files examples standalone C# programs?
+
+
 
 Yes. The examples are generated as standalone console-style C# files and are intended to compile and run independently in .NET workflows.
 
 
 
+
+
+
+
 <!-- SEO-FAQ:END -->
+
+
 
