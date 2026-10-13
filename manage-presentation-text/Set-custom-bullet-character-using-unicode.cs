@@ -18,7 +18,7 @@
 // - Build .NET tools for presentation content styling and processing.
 // - Generate or modify PPTX files with specific bullet formatting.
 // - Validate bullet character rendering before publishing presentations.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
