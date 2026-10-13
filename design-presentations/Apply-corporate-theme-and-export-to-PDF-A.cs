@@ -17,7 +17,7 @@
 // - Generate PDF/A compliant documents for archiving or legal purposes.
 // - Automate PowerPoint to PDF/A conversion in .NET applications.
 // - Integrate theme application and PDF/A export into CI/CD pipelines.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
