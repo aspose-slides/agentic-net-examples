@@ -18,6 +18,7 @@
 // - Build C# utilities for PowerPoint slide rendering and image generation.
 // - Integrate slide‑to‑image conversion into .NET workflows.
 // - Validate and process PPTX files before publishing or further integration.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
