@@ -18,7 +18,7 @@
 // - Automate metadata standardization for corporate PowerPoint assets.
 // - Integrate presentation property updates into build or deployment pipelines.
 // - Ensure consistent author information before publishing or sharing files.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
