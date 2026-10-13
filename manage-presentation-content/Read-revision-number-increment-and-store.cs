@@ -17,7 +17,7 @@
 // - Build C# tools that manage presentation versioning.
 // - Integrate revision tracking into .NET applications handling PPTX files.
 // - Ensure consistent document metadata before publishing or archiving.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
