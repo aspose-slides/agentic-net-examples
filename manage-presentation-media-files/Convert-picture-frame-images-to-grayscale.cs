@@ -17,7 +17,7 @@
 // - Build C# utilities for batch image processing within PPTX files.
 // - Integrate grayscale transformation into .NET PowerPoint workflows.
 // - Prepare presentations for printing or visual consistency.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
