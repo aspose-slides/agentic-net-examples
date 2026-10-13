@@ -16,7 +16,7 @@
 // - Build tools that adjust media playback settings based on slide animations.
 // - Process and transform PPTX files programmatically in .NET applications.
 // - Validate and enforce presentation consistency before distribution.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
