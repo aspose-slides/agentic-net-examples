@@ -19,7 +19,7 @@
 // - Measure storage savings when using 8bpp indexed TIFF.
 // - Build .NET tools for batch conversion and size analysis of presentations.
 // - Integrate TIFF conversion into document processing pipelines.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
