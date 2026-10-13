@@ -18,7 +18,7 @@
 // - Automate validation of PowerPoint metadata in .NET applications.
 // - Integrate property checks into PPTX processing pipelines.
 // - Prevent publishing of presentations missing essential metadata.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
