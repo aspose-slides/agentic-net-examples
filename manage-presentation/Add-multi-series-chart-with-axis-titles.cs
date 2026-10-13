@@ -16,6 +16,7 @@
 // - Automate addition of axis titles to charts in .NET applications.
 // - Build tools for reporting or data visualization in PPTX format.
 // - Validate chart creation workflows before deployment.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
