@@ -17,7 +17,7 @@
 // - Build batch conversion tools for archival or printing purposes.
 // - Integrate PPTX‑to‑TIFF conversion into .NET applications or services.
 // - Validate presentation rendering at a specific DPI before publishing.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
