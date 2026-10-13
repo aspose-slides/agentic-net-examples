@@ -17,7 +17,7 @@
 // - Build C# utilities for cleaning up PPTX files before distribution.
 // - Integrate hyperlink management into .NET applications handling PowerPoint.
 // - Validate and preprocess presentation content in automated workflows.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
