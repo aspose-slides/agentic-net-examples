@@ -17,6 +17,7 @@
 // - Automate batch export of slides at 300 DPI in C# tools.
 // - Integrate slide rendering into .NET applications or services.
 // - Validate slide appearance after programmatic modifications.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
