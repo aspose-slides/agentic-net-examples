@@ -19,6 +19,7 @@
 // - Build C# utilities for PowerPoint content analysis.
 // - Generate plain‑text reports from presentations in .NET applications.
 // - Validate presentation content before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
