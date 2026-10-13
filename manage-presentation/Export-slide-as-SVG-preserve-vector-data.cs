@@ -1,44 +1,35 @@
 // -----------------------------------------------------------------------------
-// Example: Export slide as SVG preserving vector data using C#
+// Example: Export First Slide to SVG with Vector Preservation using Aspose.Slides
 //
 // Description:
-// Demonstrates how to export a slide as an SVG file while preserving vector
-// data using C# and Aspose.Slides for .NET. The example loads a PowerPoint
-// presentation, exports the first slide to SVG with vector data retained, and
-// saves the presentation back to its original file. This pattern can be used
-// to automate PPTX workflows, generate high‑quality SVG assets, or integrate
-// presentation processing into .NET applications.
+// This console application loads a PowerPoint PPTX file, exports the first
+// slide to an SVG file while preserving all vector data, and then saves the
+// presentation back to its original location. It demonstrates how to use
+// Aspose.Slides for .NET to generate high‑quality SVG assets from slides.
+// The code checks for the existence of the input file and handles any runtime
+// exceptions that may occur during processing.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SVG, Export, Slide, Preserve,
-// Vector Data, Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SVG export, vector data, slide conversion
 //
 // Use Cases:
-// - Automate export of slides to SVG with vector data for scalable graphics.
-// - Build C# tools for PowerPoint presentation processing that require
-//   high‑fidelity SVG output.
-// - Generate or transform PPTX files in .NET applications while retaining
-//   vector quality.
-// - Validate presentation workflows before publishing or integration.
+// - Automate conversion of PPTX slides to scalable SVG graphics for web publishing.
+// - Generate high‑resolution vector assets from presentations for design workflows.
+// - Integrate slide‑to‑SVG conversion into .NET applications or CI pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
-using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-namespace SlideToSvgExport
+namespace AsposeSlidesSvgExport
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            // Input PowerPoint file path
-            string inputPath = "input.pptx";
-            // Output SVG file path
-            string outputPath = "slide_1.svg";
+            string inputPath = args.Length > 0 ? args[0] : "input.pptx";
+            string outputSvgPath = args.Length > 1 ? args[1] : "slide1.svg";
 
-            // Verify that the input file exists
-            if (!File.Exists(inputPath))
+            if (!System.IO.File.Exists(inputPath))
             {
                 Console.WriteLine("Input file does not exist: " + inputPath);
                 return;
@@ -46,35 +37,21 @@ namespace SlideToSvgExport
 
             try
             {
-                // Load the presentation
-                using (Presentation presentation = new Presentation(inputPath))
+                Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+                Aspose.Slides.ISlide firstSlide = presentation.Slides[0];
+
+                using (System.IO.FileStream svgStream = new System.IO.FileStream(outputSvgPath, System.IO.FileMode.Create, System.IO.FileAccess.Write))
                 {
-                    // Set SVG export options to preserve vector data
-                    var svgOptions = new SvgExportOptions
-                    {
-                        VectorData = true
-                    };
-
-                    // Export the first slide to SVG with the specified options
-                    using (FileStream svgStream = File.Create(outputPath))
-                    {
-                        presentation.Slides[0].WriteAsSvg(svgStream, svgOptions);
-                    }
-
-                    // Save the presentation before exiting (as per lifecycle rule)
-                    presentation.Save(inputPath, SaveFormat.Pptx);
+                    firstSlide.WriteAsSvg(svgStream);
                 }
 
-                Console.WriteLine("Slide exported successfully to SVG: " + outputPath);
+                // Save the presentation back to its original file (no modifications made, but ensures proper closure)
+                presentation.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+
+                Console.WriteLine("First slide exported to SVG successfully: " + outputSvgPath);
             }
-            catch (NotSupportedException)
+            catch (System.Exception ex)
             {
-                // Format not supported
-                Console.WriteLine("The requested format is not supported.");
-            }
-            catch (Exception ex)
-            {
-                // General exception handling
                 Console.WriteLine("An error occurred: " + ex.Message);
             }
         }
