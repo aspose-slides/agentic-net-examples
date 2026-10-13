@@ -16,7 +16,7 @@
 // - Build C# tools for bulk PowerPoint metadata management.
 // - Preserve folder structure while processing and exporting presentations.
 // - Validate and prepare PPTX files for publishing or integration workflows.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
