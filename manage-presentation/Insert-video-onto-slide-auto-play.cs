@@ -1,84 +1,114 @@
 // -----------------------------------------------------------------------------
-// Example: Insert video onto slide auto play using C#
+// Example: Insert Video onto Slide with Auto Play using Aspose.Slides for .NET
 //
 // Description:
-// Demonstrates how to insert a video onto a slide with automatic playback using
-// C# and Aspose.Slides for .NET. The example shows the required presentation‑
-// processing steps for PowerPoint files and produces the requested output in a
-// standalone console application. Developers can use this pattern to automate
-// PPTX workflows, validate results, or integrate presentation logic into .NET
-// applications.
-//
+// This console application demonstrates how to insert a video file onto a
+// PowerPoint slide and configure it for automatic playback using C# and
+// Aspose.Slides for .NET. It loads an existing PPTX if present, adds a video
+// frame, sets the play mode to auto, and saves the modified presentation.
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Insert, Video, AutoPlay, Slide,
-// Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, insert video, auto play, video frame
 //
 // Use Cases:
-// - Automate insertion of video onto a slide with auto‑play behavior.
-// - Build C# tools for PowerPoint presentation processing that include media.
-// - Generate or transform PPTX files with embedded videos in .NET applications.
-// - Validate presentation workflows involving video playback before publishing.
+// - Automate adding instructional videos to corporate slide decks.
+// - Generate presentation assets with embedded media for e‑learning platforms.
+// - Batch‑process PPTX files to ensure videos start automatically during slide shows.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-namespace VideoOnClickExample
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main()
+        string inputPath = "input.pptx";
+        string outputPath = "output.pptx";
+        string videoPath = "sample.mp4";
+
+        // Verify that the video file exists.
+        if (!File.Exists(videoPath))
         {
-            // Input video file path
-            string videoPath = "sample.mp4";
-            // Output presentation file path
-            string outputPath = "VideoOnClick_out.pptx";
+            Console.WriteLine("Video file not found: " + videoPath);
+            return;
+        }
 
-            // Verify that the video file exists
-            if (!File.Exists(videoPath))
+        // Load an existing presentation or create a new one.
+        Aspose.Slides.Presentation presentation = null;
+        try
+        {
+            if (File.Exists(inputPath))
             {
-                Console.WriteLine("Video file not found: " + videoPath);
-                return;
+                presentation = new Aspose.Slides.Presentation(inputPath);
             }
-
-            try
+            else
             {
-                // Create a new presentation
-                Presentation pres = new Presentation();
+                presentation = new Aspose.Slides.Presentation();
+            }
+        }
+        catch (Aspose.Slides.PptxUnsupportedFormatException)
+        {
+            Console.WriteLine("Unsupported PPTX format.");
+            return;
+        }
+        catch (Aspose.Slides.PptUnsupportedFormatException)
+        {
+            Console.WriteLine("Unsupported PPT format.");
+            return;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error loading presentation: " + ex.Message);
+            return;
+        }
 
-                // Add the video to the presentation's video collection
-                FileStream videoStream = new FileStream(videoPath, FileMode.Open, FileAccess.Read, FileShare.Read);
-                IVideo video = pres.Videos.AddVideo(videoStream, LoadingStreamBehavior.ReadStreamAndRelease);
+        // Ensure there is at least one slide to work with.
+        Aspose.Slides.ISlide slide;
+        if (presentation.Slides.Count > 0)
+        {
+            slide = presentation.Slides[0];
+        }
+        else
+        {
+            slide = presentation.Slides.AddEmptySlide(presentation.LayoutSlides[0]);
+        }
+
+        // Add the video to the presentation and place it on the slide.
+        FileStream videoStream = null;
+        try
+        {
+            videoStream = new FileStream(videoPath, FileMode.Open, FileAccess.Read);
+            Aspose.Slides.IVideo video = presentation.Videos.AddVideo(videoStream, Aspose.Slides.LoadingStreamBehavior.ReadStreamAndRelease);
+
+            int x = 100;
+            int y = 100;
+            int width = 320;
+            int height = 240;
+
+            Aspose.Slides.IVideoFrame videoFrame = slide.Shapes.AddVideoFrame(x, y, width, height, video);
+            videoFrame.PlayMode = Aspose.Slides.VideoPlayModePreset.Auto;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error adding video: " + ex.Message);
+        }
+        finally
+        {
+            if (videoStream != null)
+            {
                 videoStream.Close();
-
-                // Get the first slide
-                ISlide slide = pres.Slides[0];
-
-                // Insert a video frame onto the slide
-                IVideoFrame videoFrame = slide.Shapes.AddVideoFrame(50, 150, 300, 250, video);
-
-                // Configure the video to play automatically when the slide is shown
-                videoFrame.PlayMode = VideoPlayModePreset.AutoPlay;
-
-                // Save the presentation
-                pres.Save(outputPath, SaveFormat.Pptx);
-
-                // Dispose the presentation
-                pres.Dispose();
-
-                Console.WriteLine("Presentation saved to: " + outputPath);
             }
-            catch (PptxUnsupportedFormatException)
-            {
-                // Format not supported
-                Console.WriteLine("The provided file format is not supported.");
-            }
-            catch (Exception ex)
-            {
-                // General exception handling
-                Console.WriteLine("An error occurred: " + ex.Message);
-            }
+        }
+
+        // Save the modified presentation.
+        try
+        {
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            Console.WriteLine("Presentation saved to " + outputPath);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error saving presentation: " + ex.Message);
         }
     }
 }
