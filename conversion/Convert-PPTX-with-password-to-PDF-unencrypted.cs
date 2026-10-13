@@ -17,7 +17,7 @@
 // - Build command‑line tools for batch conversion of secured presentations.
 // - Integrate PPTX de‑protection into .NET applications or CI pipelines.
 // - Generate PDF reports from protected PowerPoint decks.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
