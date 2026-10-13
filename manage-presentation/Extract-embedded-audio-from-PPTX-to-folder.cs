@@ -18,6 +18,7 @@
 // - Build C# utilities for PowerPoint presentation processing.
 // - Integrate audio extraction into .NET applications.
 // - Validate presentation assets before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
