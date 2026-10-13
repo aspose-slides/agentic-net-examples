@@ -18,6 +18,7 @@
 // - Ensure brand compliance by updating legacy slide decks.
 // - Integrate font migration into .NET based document processing pipelines.
 // - Prepare presentations for publishing with up‑to‑date typography.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
