@@ -18,7 +18,7 @@
 // - Automate hyperlink insertion during presentation generation or editing.
 // - Build .NET tools for bulk updating of PowerPoint content.
 // - Ensure consistent hyperlink application across multiple slides.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
