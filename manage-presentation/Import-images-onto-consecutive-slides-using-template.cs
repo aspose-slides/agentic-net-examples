@@ -17,6 +17,7 @@
 // - Build tools that generate PowerPoint presentations from photo galleries.
 // - Integrate image-to-PPT conversion into .NET applications.
 // - Validate image import workflows before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
