@@ -18,7 +18,7 @@
 // - Optimize PowerPoint automation workflows that involve MathML.
 // - Validate performance of Aspose.Slides Math APIs in .NET applications.
 // - Build tools that need to monitor or log MathML generation times.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
