@@ -17,6 +17,7 @@
 // - Build .NET utilities for preparing slide decks with full‑size graphics.
 // - Integrate image scaling logic into PowerPoint automation workflows.
 // - Validate that images correctly fill slide placeholders before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -18,6 +18,7 @@
 // - Build C# utilities for PowerPoint presentation enrichment.
 // - Generate or modify PPTX files programmatically in .NET.
 // - Validate and preview speaker notes before publishing a presentation.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

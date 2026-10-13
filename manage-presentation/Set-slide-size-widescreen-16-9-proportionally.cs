@@ -17,6 +17,7 @@
 // - Build .NET tools that modify existing presentations for modern display formats.
 // - Automate batch processing of PPTX files to standardize slide sizes.
 // - Integrate slide size configuration into larger presentation generation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

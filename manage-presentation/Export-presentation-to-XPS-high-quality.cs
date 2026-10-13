@@ -17,6 +17,7 @@
 // - Build command‑line tools for batch conversion of PowerPoint files to XPS.
 // - Integrate XPS export into .NET applications that process presentation content.
 // - Ensure metafile graphics are rendered as PNG for better visual fidelity.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

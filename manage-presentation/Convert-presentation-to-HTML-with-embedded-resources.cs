@@ -17,6 +17,7 @@
 // - Embed fonts to ensure visual fidelity across browsers without external files.
 // - Automate batch conversion of PPTX files to self‑contained HTML in CI pipelines.
 // - Integrate PowerPoint to HTML conversion into .NET services or tools.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

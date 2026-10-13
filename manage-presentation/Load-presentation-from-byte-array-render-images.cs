@@ -19,6 +19,7 @@
 // - Generate JPEG thumbnails for each slide in a presentation.
 // - Save processed presentations after manipulation.
 // - Build .NET tools for automated PowerPoint processing and image extraction.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

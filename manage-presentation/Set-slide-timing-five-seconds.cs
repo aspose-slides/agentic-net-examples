@@ -17,6 +17,7 @@
 // - Add slides dynamically based on existing layouts.
 // - Apply consistent transition effects across all slides.
 // - Generate or modify PPTX files in .NET applications with automated timings.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -18,6 +18,7 @@
 // - Build C# utilities for batch processing and distribution of PowerPoint content.
 // - Integrate slide splitting functionality into .NET applications or CI pipelines.
 // - Prepare slide subsets for targeted audiences or modular publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

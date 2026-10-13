@@ -18,6 +18,7 @@
 // - Build .NET tools for batch updating PowerPoint presentations.
 // - Integrate CSV‑driven content into PPTX generation workflows.
 // - Validate and preview presentation changes before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

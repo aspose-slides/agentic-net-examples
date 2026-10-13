@@ -21,6 +21,7 @@
 // - Generate or modify PPTX files with specific transition effects in .NET
 //   applications.
 // - Validate presentation workflows before publishing or integration.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;

@@ -18,6 +18,7 @@
 // - Programmatically update slide layouts during batch processing.
 // - Prepare presentations for corporate branding by applying a standard layout.
 // - Integrate layout management into .NET applications that manipulate PPTX files.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

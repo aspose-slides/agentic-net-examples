@@ -18,6 +18,7 @@
 // - Detect and validate password protection on a presentation.
 // - Apply read‑only recommendation to a PPTX file.
 // - Automate PPTX validation and protection adjustments in .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

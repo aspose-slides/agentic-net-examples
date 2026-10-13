@@ -19,6 +19,7 @@
 // - Build C# tools for PowerPoint presentation processing that include media.
 // - Generate or transform PPTX files with embedded audio in .NET applications.
 // - Validate presentation workflows involving audio playback before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

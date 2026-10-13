@@ -17,6 +17,7 @@
 // - Build C# tools for generating or modifying PPTX files with styled graphics.
 // - Integrate gradient shape creation into .NET reporting or content pipelines.
 // - Validate gradient fill settings before publishing presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;

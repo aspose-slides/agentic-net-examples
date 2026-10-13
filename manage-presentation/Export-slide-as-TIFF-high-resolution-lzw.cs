@@ -18,6 +18,7 @@
 // - Build C# utilities for batch slide image extraction.
 // - Integrate slide‑to‑image conversion into document management workflows.
 // - Validate and process PPTX files before publishing or distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

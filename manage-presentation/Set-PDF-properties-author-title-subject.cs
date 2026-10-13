@@ -18,6 +18,7 @@
 // - Build C# tools that convert PPTX files to PDF with custom document properties.
 // - Integrate PDF generation with specific metadata into .NET applications.
 // - Ensure generated PDFs contain required metadata for publishing or archiving.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

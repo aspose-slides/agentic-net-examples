@@ -16,6 +16,7 @@
 // - Build tools that archive or analyze PPTX embedded media.
 // - Integrate image extraction into .NET workflows or services.
 // - Validate and preprocess presentation assets before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -17,6 +17,7 @@
 // - Customize SmartArt color styles programmatically.
 // - Build C# tools for PowerPoint presentation generation or modification.
 // - Integrate SmartArt customization into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

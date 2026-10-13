@@ -16,6 +16,7 @@
 // - Automate batch processing of presentations to ensure consistent properties.
 // - Generate new presentations with predefined metadata when source files are absent.
 // - Integrate property setting into .NET applications that manipulate PowerPoint content.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
