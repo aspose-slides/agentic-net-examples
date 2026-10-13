@@ -16,7 +16,7 @@
 // - Build .NET tools for cleaning or updating PPTX metadata.
 // - Integrate property management into PowerPoint workflow automation.
 // - Ensure presentations meet compliance by stripping unwanted metadata.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
