@@ -17,7 +17,7 @@
 // - Build .NET utilities that enrich presentations with navigation.
 // - Automate preparation of slide decks for publishing or sharing.
 // - Integrate TOC creation into larger presentation processing pipelines.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

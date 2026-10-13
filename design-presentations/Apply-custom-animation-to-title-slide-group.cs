@@ -18,7 +18,7 @@
 // - Generate a new presentation with animated title elements.
 // - Enhance existing presentations by inserting animated graphics.
 // - Automate PPTX creation and animation for reporting or marketing tools.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

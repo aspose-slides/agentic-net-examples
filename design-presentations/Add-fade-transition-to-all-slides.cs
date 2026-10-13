@@ -17,7 +17,7 @@
 // - Build .NET tools for enhancing PowerPoint slide shows.
 // - Integrate slide transition automation into document generation pipelines.
 // - Validate and preview presentation effects before distribution.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

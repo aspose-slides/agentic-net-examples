@@ -16,7 +16,7 @@
 // - Define and apply font fallback rules for specific Unicode ranges.
 // - Export slides as images after font handling.
 // - Save updated presentations with applied font settings.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -19,7 +19,7 @@
 // - Build command‑line tools that prepare XPS files for printing or archiving.
 // - Integrate font‑preserving export functionality into .NET applications.
 // - Automate batch processing of PPTX files to XPS while ensuring font fidelity.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

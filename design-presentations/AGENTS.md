@@ -2,7 +2,15 @@
 
 
 
+
+
+
+
 name: design-presentations
+
+
+
+
 
 
 
@@ -10,7 +18,15 @@ description: C# examples for design-presentations using Aspose.Slides for .NET
 
 
 
+
+
+
+
 language: csharp
+
+
+
+
 
 
 
@@ -18,11 +34,27 @@ framework: net10.0
 
 
 
+
+
+
+
 parent: ../agents.md
 
 
 
+
+
+
+
 ---
+
+
+
+
+
+
+
+
 
 
 
@@ -38,7 +70,23 @@ parent: ../agents.md
 
 
 
+
+
+
+
+
+
+
+
 ## Persona
+
+
+
+
+
+
+
+
 
 
 
@@ -50,7 +98,19 @@ You are a C# developer specializing in PowerPoint processing using Aspose.Slides
 
 
 
+
+
+
+
 working within the **design-presentations** category.
+
+
+
+
+
+
+
+
 
 
 
@@ -66,11 +126,31 @@ working within the **design-presentations** category.
 
 
 
+
+
+
+
+
+
+
+
 - This folder contains examples for **design-presentations**
 
 
 
+
+
+
+
 - Files are standalone `.cs` examples stored directly in this folder.
+
+
+
+
+
+
+
+
 
 
 
@@ -86,31 +166,47 @@ working within the **design-presentations** category.
 
 
 
-Verified with version: 26.9.0
-Total files: 157
 
-- `using Aspose.Slides.Export;` (157/157 files)
-- `using System;` (156/157 files)
-- `using System.IO;` (149/157 files)
-- `using Aspose.Slides;` (149/157 files)
-- `using System.Drawing;` (15/157 files)
-- `using System.Collections.Generic;` (6/157 files)
-- `using System.Text.Json;` (3/157 files)
-- `using System.Linq;` (2/157 files)
-- `using System.Diagnostics;` (2/157 files)
-- `using Aspose.Slides.LowCode;` (2/157 files)
-- `using Aspose.Slides.Charts;` (2/157 files)
-- `using Aspose.Slides.Util;` (2/157 files)
-- `using System.Text;` (1/157 files)
-- `using Aspose.Slides.SmartArt;` (1/157 files)
-- `using System.Net;` (1/157 files)
-- `using System.IO.Compression;` (1/157 files)
-- `using Aspose.Slides.Theme;` (1/157 files)
-- `using System.Threading.Tasks;` (1/157 files)
-- `using Aspose.Slides.Effects;` (1/157 files)
-- `using System.Net.Http;` (1/157 files)
+
+
+
+
+
+
+
+Verified with version: 26.10.0
+Total files: 156
+
+- `using Aspose.Slides.Export;` (156/156 files)
+- `using System;` (155/156 files)
+- `using System.IO;` (149/156 files)
+- `using Aspose.Slides;` (148/156 files)
+- `using System.Drawing;` (15/156 files)
+- `using System.Collections.Generic;` (6/156 files)
+- `using System.Text.Json;` (3/156 files)
+- `using System.Linq;` (2/156 files)
+- `using System.Diagnostics;` (2/156 files)
+- `using Aspose.Slides.LowCode;` (2/156 files)
+- `using Aspose.Slides.Charts;` (2/156 files)
+- `using Aspose.Slides.Util;` (2/156 files)
+- `using System.Text;` (1/156 files)
+- `using Aspose.Slides.SmartArt;` (1/156 files)
+- `using System.Net;` (1/156 files)
+- `using System.IO.Compression;` (1/156 files)
+- `using Aspose.Slides.Theme;` (1/156 files)
+- `using System.Threading.Tasks;` (1/156 files)
+- `using Aspose.Slides.Effects;` (1/156 files)
+- `using System.Net.Http;` (1/156 files)
 
 ## Files in this folder
+
+
+
+
+
+
+
+
 
 
 
@@ -128,7 +224,6 @@ Total files: 157
 | [Add-fade-transition-to-all-slides.cs](./Add-fade-transition-to-all-slides.cs) |  | Add fade transition to all slides |
 | [Add-font-fallback-rules-and-save-presentation.cs](./Add-font-fallback-rules-and-save-presentation.cs) |  | Add font fallback rules and save presentation |
 | [Add-header-footer-with-slide-number-date.cs](./Add-header-footer-with-slide-number-date.cs) |  | Add header footer with slide number date |
-| [Add-hyperlink-to-shape-and-open-website.cs](./Add-hyperlink-to-shape-and-open-website.cs) |  | Add hyperlink to shape and open website |
 | [Add-network-share-fallback-fonts-and-render.cs](./Add-network-share-fallback-fonts-and-render.cs) |  | Add network share fallback fonts and render |
 | [Add-speaker-notes-from-external-data.cs](./Add-speaker-notes-from-external-data.cs) |  | Add speaker notes from external data |
 | [Add-watermark-to-presentation-and-export-pdf.cs](./Add-watermark-to-presentation-and-export-pdf.cs) |  | Add watermark to presentation and export pdf |
@@ -286,9 +381,25 @@ Total files: 157
 
 
 
-- Total examples: 157
+
+
+
+
+
+
+
+
+- Total examples: 156
 
 ## Key API Surface
+
+
+
+
+
+
+
+
 
 
 
@@ -300,7 +411,15 @@ Total files: 157
 
 
 
+
+
+
+
 - `Aspose.Slides.Export`
+
+
+
+
 
 
 
@@ -308,7 +427,15 @@ Total files: 157
 
 
 
+
+
+
+
 - `Aspose.Slides.Export.SaveFormat.Pptx`
+
+
+
+
 
 
 
@@ -316,7 +443,15 @@ Total files: 157
 
 
 
+
+
+
+
 - `Aspose.Slides.IAutoShape`
+
+
+
+
 
 
 
@@ -324,7 +459,15 @@ Total files: 157
 
 
 
+
+
+
+
 - `Aspose.Slides.FontFallBackRule`
+
+
+
+
 
 
 
@@ -332,7 +475,15 @@ Total files: 157
 
 
 
+
+
+
+
 - `Aspose.Slides.ISlide`
+
+
+
+
 
 
 
@@ -340,7 +491,15 @@ Total files: 157
 
 
 
+
+
+
+
 - `Aspose.Slides.FontFallBackRulesCollection`
+
+
+
+
 
 
 
@@ -348,11 +507,27 @@ Total files: 157
 
 
 
+
+
+
+
 - `Aspose.Slides.LoadOptions`
 
 
 
+
+
+
+
 - `Aspose.Slides.IImage`
+
+
+
+
+
+
+
+
 
 
 
@@ -368,7 +543,23 @@ Total files: 157
 
 
 
+
+
+
+
+
+
+
+
 Most examples follow a pattern similar to:
+
+
+
+
+
+
+
+
 
 
 
@@ -380,7 +571,15 @@ Most examples follow a pattern similar to:
 
 
 
+
+
+
+
 using (Presentation pres = new Presentation("input.pptx"))
+
+
+
+
 
 
 
@@ -388,7 +587,15 @@ using (Presentation pres = new Presentation("input.pptx"))
 
 
 
+
+
+
+
     // operations
+
+
+
+
 
 
 
@@ -396,11 +603,27 @@ using (Presentation pres = new Presentation("input.pptx"))
 
 
 
+
+
+
+
 }
 
 
 
+
+
+
+
 ```
+
+
+
+
+
+
+
+
 
 
 
@@ -416,11 +639,27 @@ using (Presentation pres = new Presentation("input.pptx"))
 
 
 
+
+
+
+
+
+
+
+
 - Load presentations using `new Presentation("file.pptx")`.
 
 
 
+
+
+
+
 - Modify slides through the `Slides` collection.
+
+
+
+
 
 
 
@@ -432,7 +671,19 @@ using (Presentation pres = new Presentation("input.pptx"))
 
 
 
+
+
+
+
+
+
+
+
 <!-- AUTOGENERATED:START -->
+
+
+
+
 
 
 
@@ -440,13 +691,27 @@ Updated: 2026-05-12
 
 
 
+
+
+
+
 <!-- AUTOGENERATED:END -->
+
+
+
+
 
 
 
 <!-- SEO-FAQ:BEGIN -->
 
+
+
 ## Developer FAQ for Coding Agents
+
+
+
+
 
 
 
@@ -454,41 +719,83 @@ Use these Q&A entries when selecting examples from `design-presentations` for us
 
 
 
+
+
+
+
 ### How do I convert PowerPoint PPTX files to PDF, HTML, SVG, PNG, or JPEG in C#?
+
+
 
 Use the conversion and export examples to load a `Presentation`, configure format-specific options when needed, and call `presentation.Save(...)` or slide image APIs with the correct `Aspose.Slides.Export.SaveFormat`.
 
 
 
+
+
+
+
 ### How do I add, clone, reorder, or remove PowerPoint slides in .NET?
+
+
 
 Use slide management examples to work with `ISlide`, slide collections, layouts, masters, and sections while preserving presentation structure.
 
 
 
+
+
+
+
 ### How do I edit PowerPoint shapes, text, tables, or SmartArt in C#?
+
+
 
 Use the shape, text, table, and SmartArt examples to locate shapes on a slide, cast to the appropriate Aspose.Slides interfaces, update content or formatting, and save the modified PPTX.
 
 
 
+
+
+
+
 ### How do I use Aspose.Slides for .NET for design presentations in C#?
+
+
 
 Use the `design-presentations` examples to find standalone C# patterns for design presentations. Each example shows how to load or create an `Aspose.Slides.Presentation`, apply the operation, and save output with the correct Aspose.Slides API.
 
 
 
+
+
+
+
 ### Which design presentations examples are best for coding agents?
+
+
 
 Start with the files listed in this directory and the category AGENTS.md. The strongest search terms for this category are: and, font, fallback, fonts, slide.
 
 
 
+
+
+
+
 ### Are the design-presentations examples standalone C# programs?
+
+
 
 Yes. The examples are generated as standalone console-style C# files and are intended to compile and run independently in .NET workflows.
 
 
 
+
+
+
+
 <!-- SEO-FAQ:END -->
+
+
 

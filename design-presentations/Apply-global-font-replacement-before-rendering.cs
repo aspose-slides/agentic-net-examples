@@ -16,7 +16,7 @@
 // - Prepare presentations for environments lacking certain fonts.
 // - Automate font standardization in batch processing of PPTX files.
 // - Ensure visual consistency when converting presentations to other formats.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

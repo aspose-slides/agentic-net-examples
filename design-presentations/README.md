@@ -6,8 +6,26 @@
 
 
 
-This category contains 157 standalone C# examples for Aspose.Slides for .NET. These examples help developers automate PowerPoint presentation workflows related to design presentations.
+
+
+
+
+
+
+
+
+This category contains 156 standalone C# examples for Aspose.Slides for .NET. These examples help developers automate PowerPoint presentation workflows related to design presentations.
+These files are tested and verified with Aspose.Slides for .NET v26.10.0.
+
 These files are tested and verified with Aspose.Slides for .NET v26.9.0.
+
+
+
+
+
+
+
+
 
 
 
@@ -23,7 +41,19 @@ These files are tested and verified with Aspose.Slides for .NET v26.9.0.
 
 
 
+
+
+
+
+
+
+
+
 - Automate repetitive presentation-processing tasks in .NET applications.
+
+
+
+
 
 
 
@@ -31,7 +61,19 @@ These files are tested and verified with Aspose.Slides for .NET v26.9.0.
 
 
 
+
+
+
+
 - Provide coding agents with direct, category-specific examples and API usage patterns.
+
+
+
+
+
+
+
+
 
 
 
@@ -47,7 +89,15 @@ These files are tested and verified with Aspose.Slides for .NET v26.9.0.
 
 
 
-Total examples: 157
+
+
+
+
+
+
+
+
+Total examples: 156
 
 - [Add-bold-fonts-and-export-to-XPS.cs](./Add-bold-fonts-and-export-to-XPS.cs)
 - [Add-branding-metadata-XML-part-to-presentation.cs](./Add-branding-metadata-XML-part-to-presentation.cs)
@@ -57,7 +107,6 @@ Total examples: 157
 - [Add-fade-transition-to-all-slides.cs](./Add-fade-transition-to-all-slides.cs)
 - [Add-font-fallback-rules-and-save-presentation.cs](./Add-font-fallback-rules-and-save-presentation.cs)
 - [Add-header-footer-with-slide-number-date.cs](./Add-header-footer-with-slide-number-date.cs)
-- [Add-hyperlink-to-shape-and-open-website.cs](./Add-hyperlink-to-shape-and-open-website.cs)
 - [Add-network-share-fallback-fonts-and-render.cs](./Add-network-share-fallback-fonts-and-render.cs)
 - [Add-speaker-notes-from-external-data.cs](./Add-speaker-notes-from-external-data.cs)
 - [Add-watermark-to-presentation-and-export-pdf.cs](./Add-watermark-to-presentation-and-export-pdf.cs)
@@ -215,7 +264,19 @@ Total examples: 157
 
 
 
+
+
+
+
+
+
+
+
 - [Category instructions](./AGENTS.md)
+
+
+
+
 
 
 
@@ -223,13 +284,27 @@ Total examples: 157
 
 
 
+
+
+
+
 - [Structured index](../index.json)
+
+
+
+
 
 
 
 <!-- SEO-FAQ:BEGIN -->
 
+
+
 ## Developer FAQ
+
+
+
+
 
 
 
@@ -237,41 +312,83 @@ These questions target common developer searches for Aspose.Slides for .NET `des
 
 
 
+
+
+
+
 ### How do I convert PowerPoint PPTX files to PDF, HTML, SVG, PNG, or JPEG in C#?
+
+
 
 Use the conversion and export examples to load a `Presentation`, configure format-specific options when needed, and call `presentation.Save(...)` or slide image APIs with the correct `Aspose.Slides.Export.SaveFormat`.
 
 
 
+
+
+
+
 ### How do I add, clone, reorder, or remove PowerPoint slides in .NET?
+
+
 
 Use slide management examples to work with `ISlide`, slide collections, layouts, masters, and sections while preserving presentation structure.
 
 
 
+
+
+
+
 ### How do I edit PowerPoint shapes, text, tables, or SmartArt in C#?
+
+
 
 Use the shape, text, table, and SmartArt examples to locate shapes on a slide, cast to the appropriate Aspose.Slides interfaces, update content or formatting, and save the modified PPTX.
 
 
 
+
+
+
+
 ### How do I use Aspose.Slides for .NET for design presentations in C#?
+
+
 
 Use the `design-presentations` examples to find standalone C# patterns for design presentations. Each example shows how to load or create an `Aspose.Slides.Presentation`, apply the operation, and save output with the correct Aspose.Slides API.
 
 
 
+
+
+
+
 ### Which design presentations examples are best for coding agents?
+
+
 
 Start with the files listed in this directory and the category AGENTS.md. The strongest search terms for this category are: and, font, fallback, fonts, slide.
 
 
 
+
+
+
+
 ### Are the design-presentations examples standalone C# programs?
+
+
 
 Yes. The examples are generated as standalone console-style C# files and are intended to compile and run independently in .NET workflows.
 
 
 
+
+
+
+
 <!-- SEO-FAQ:END -->
+
+
 

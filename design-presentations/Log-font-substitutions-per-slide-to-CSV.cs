@@ -16,7 +16,7 @@
 // - Automate validation of font usage in PowerPoint files.
 // - Integrate font substitution logging into .NET PowerPoint processing tools.
 // - Ensure consistent typography across presentations before publishing.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
