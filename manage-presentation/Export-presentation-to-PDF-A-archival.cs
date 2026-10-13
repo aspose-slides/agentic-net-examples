@@ -17,6 +17,7 @@
 // - Build C# utilities for automated presentation compliance.
 // - Integrate PDF/A export into .NET workflows or CI pipelines.
 // - Validate and process PPTX files before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
