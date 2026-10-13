@@ -17,7 +17,7 @@
 // - Generate slide thumbnails for preview or indexing purposes.
 // - Save processed presentations after applying load options.
 // - Integrate thumbnail generation into .NET tools for PowerPoint automation.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
