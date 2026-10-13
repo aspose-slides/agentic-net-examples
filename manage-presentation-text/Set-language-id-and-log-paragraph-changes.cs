@@ -17,7 +17,7 @@
 // - Log language assignment operations for auditing or debugging.
 // - Build .NET tools that preprocess PPTX files before publishing or translation.
 // - Integrate language detection logic into PowerPoint automation workflows.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
