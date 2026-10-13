@@ -17,7 +17,7 @@
 // - Automate batch processing of SVG assets for presentations.
 // - Integrate SVG-to-PPTX conversion into .NET applications.
 // - Validate and transform vector graphics before publishing slides.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
