@@ -17,6 +17,7 @@
 // - Add or edit slides in a presentation after removing encryption.
 // - Build tools that convert protected PPTX files to unprotected versions.
 // - Integrate presentation modification workflows into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
