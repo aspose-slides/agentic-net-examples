@@ -17,7 +17,7 @@
 // - Build C# utilities for PowerPoint presentation media management.
 // - Preserve original image quality when exporting slide assets.
 // - Integrate background image extraction into .NET applications or workflows.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
