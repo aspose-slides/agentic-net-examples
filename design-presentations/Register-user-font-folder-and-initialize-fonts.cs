@@ -16,7 +16,7 @@
 // - Build C# tools that ensure all used fonts are embedded in PPTX files.
 // - Generate or transform PPTX files with guaranteed font consistency.
 // - Validate and prepare presentations for distribution or publishing.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
