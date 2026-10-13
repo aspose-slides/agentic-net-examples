@@ -16,7 +16,7 @@
 // - Restore comment hierarchy (replies) when migrating presentations.
 // - Automate comment insertion for reporting or documentation workflows.
 // - Integrate comment reconstruction into .NET applications.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

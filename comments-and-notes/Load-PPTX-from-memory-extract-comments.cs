@@ -17,7 +17,7 @@
 // - Build tools that analyze or report on PowerPoint comments.
 // - Perform in‑memory transformations of presentations without disk I/O.
 // - Integrate comment extraction into automated .NET workflows.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -16,7 +16,7 @@
 // - Automate comment analysis for review or quality‑control processes.
 // - Build C# tools that process PPTX files and extract specific annotation data.
 // - Integrate comment filtering into .NET applications that manage presentations.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -17,7 +17,7 @@
 // - Extract and display comment authors and texts from a secured presentation.
 // - Save a decrypted version of the presentation for further processing.
 // - Integrate comment handling into .NET tools for PowerPoint automation.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
