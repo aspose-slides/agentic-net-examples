@@ -16,7 +16,7 @@
 // - Build .NET tools for PowerPoint presentation processing.
 // - Generate HTML previews of presentations for web publishing.
 // - Validate and transform PPTX files in automated workflows.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
