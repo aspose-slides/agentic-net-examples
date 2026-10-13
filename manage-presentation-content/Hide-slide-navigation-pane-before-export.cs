@@ -18,7 +18,7 @@
 // - Create C# tools for preparing PDF versions of PowerPoint files without UI elements.
 // - Integrate presentation processing into .NET applications with controlled export settings.
 // - Ensure consistent presentation output for publishing or sharing.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
