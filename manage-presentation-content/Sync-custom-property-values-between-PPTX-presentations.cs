@@ -16,7 +16,7 @@
 // - Automate property propagation in batch processing of PPTX files.
 // - Ensure consistent custom properties across presentation assets.
 // - Integrate property sync into .NET based document management workflows.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
