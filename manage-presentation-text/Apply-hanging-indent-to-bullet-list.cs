@@ -16,7 +16,7 @@
 // - Generate PowerPoint slides with custom formatted bullet points.
 // - Automate creation of PPTX files with specific text layout requirements.
 // - Integrate bullet list formatting into .NET applications.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
