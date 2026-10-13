@@ -17,6 +17,7 @@
 // - Build .NET tools for PowerPoint slide image generation.
 // - Integrate custom‑DPI image rendering into document workflows.
 // - Validate and transform PPTX content before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
