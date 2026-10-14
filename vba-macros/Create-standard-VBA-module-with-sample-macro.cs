@@ -15,7 +15,7 @@
 // - Build .NET tools for adding VBA automation to presentations.
 // - Generate or modify PPTX files programmatically with embedded macros.
 // - Validate VBA integration before distributing presentations.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
