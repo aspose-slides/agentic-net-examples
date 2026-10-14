@@ -1,16 +1,32 @@
 ---
 
+
+
 name: manage-presentation-media-files
+
+
 
 description: C# examples for manage-presentation-media-files using Aspose.Slides for .NET
 
+
+
 language: csharp
+
+
 
 framework: net10.0
 
+
+
 parent: ../agents.md
 
+
+
 ---
+
+
+
+
 
 
 
@@ -18,13 +34,27 @@ parent: ../agents.md
 
 
 
+
+
+
+
 ## Persona
+
+
+
+
 
 
 
 You are a C# developer specializing in PowerPoint processing using Aspose.Slides for .NET,
 
+
+
 working within the **manage-presentation-media-files** category.
+
+
+
+
 
 
 
@@ -32,9 +62,19 @@ working within the **manage-presentation-media-files** category.
 
 
 
+
+
+
+
 - This folder contains examples for **manage-presentation-media-files**
 
+
+
 - Files are standalone `.cs` examples stored directly in this folder.
+
+
+
+
 
 
 
@@ -42,28 +82,36 @@ working within the **manage-presentation-media-files** category.
 
 
 
-Verified with version: 26.9.0
-Total files: 148
 
-- `using System;` (148/148 files)
-- `using System.IO;` (147/148 files)
-- `using Aspose.Slides.Export;` (144/148 files)
-- `using Aspose.Slides;` (130/148 files)
-- `using System.Collections.Generic;` (10/148 files)
-- `using Aspose.Slides.Effects;` (4/148 files)
-- `using System.Drawing;` (4/148 files)
-- `using System.Net;` (3/148 files)
-- `using Aspose.Slides.Animation;` (2/148 files)
-- `using System.Text;` (2/148 files)
-- `using System.Security.Cryptography;` (2/148 files)
-- `using System.IO.Compression;` (2/148 files)
-- `using System.Reflection;` (1/148 files)
-- `using Aspose.Slides.Util;` (1/148 files)
-- `using System.Net.Http;` (1/148 files)
-- `using Aspose.Slides.DOM.Ole;` (1/148 files)
-- `using System.Text.Json;` (1/148 files)
+
+
+
+Verified with version: 26.10.0
+Total files: 144
+
+- `using System;` (144/144 files)
+- `using Aspose.Slides.Export;` (144/144 files)
+- `using System.IO;` (143/144 files)
+- `using Aspose.Slides;` (130/144 files)
+- `using System.Collections.Generic;` (10/144 files)
+- `using Aspose.Slides.Effects;` (4/144 files)
+- `using System.Drawing;` (4/144 files)
+- `using System.Net;` (3/144 files)
+- `using Aspose.Slides.Animation;` (2/144 files)
+- `using System.Text;` (2/144 files)
+- `using System.Security.Cryptography;` (2/144 files)
+- `using System.IO.Compression;` (2/144 files)
+- `using System.Reflection;` (1/144 files)
+- `using Aspose.Slides.Util;` (1/144 files)
+- `using System.Net.Http;` (1/144 files)
+- `using Aspose.Slides.DOM.Ole;` (1/144 files)
+- `using System.Text.Json;` (1/144 files)
 
 ## Files in this folder
+
+
+
+
 
 
 
@@ -79,7 +127,6 @@ Total files: 148
 | [Add-mp3-audio-frames-to-slides-loop.cs](./Add-mp3-audio-frames-to-slides-loop.cs) |  | Add mp3 audio frames to slides loop |
 | [Add-mp3-audio-to-slide-three-loop.cs](./Add-mp3-audio-to-slide-three-loop.cs) |  | Add mp3 audio to slide three loop |
 | [Add-picture-frame-from-embedded-resource.cs](./Add-picture-frame-from-embedded-resource.cs) |  | Add picture frame from embedded resource |
-| [Add-picture-frame-with-rotation-verify-boundingbox.cs](./Add-picture-frame-with-rotation-verify-boundingbox.cs) |  | Add picture frame with rotation verify boundingbox |
 | [Add-picture-frame-with-size-and-position.cs](./Add-picture-frame-with-size-and-position.cs) |  | Add picture frame with size and position |
 | [Add-proportional-scaling-to-picture-frame.cs](./Add-proportional-scaling-to-picture-frame.cs) |  | Add proportional scaling to picture frame |
 | [Add-transparent-picture-frame-overlay.cs](./Add-transparent-picture-frame-overlay.cs) |  | Add transparent picture frame overlay |
@@ -89,7 +136,6 @@ Total files: 148
 | [Apply-blur-effect-to-picture-frame.cs](./Apply-blur-effect-to-picture-frame.cs) |  | Apply blur effect to picture frame |
 | [Apply-custom-color-overlay-to-picture-frame.cs](./Apply-custom-color-overlay-to-picture-frame.cs) |  | Apply custom color overlay to picture frame |
 | [Apply-drop-shadow-to-picture-frame.cs](./Apply-drop-shadow-to-picture-frame.cs) |  | Apply drop shadow to picture frame |
-| [Apply-fadein-to-video-frames-and-save.cs](./Apply-fadein-to-video-frames-and-save.cs) |  | Apply fadein to video frames and save |
 | [Apply-grayscale-filter-to-all-images.cs](./Apply-grayscale-filter-to-all-images.cs) |  | Apply grayscale filter to all images |
 | [Apply-grayscale-filter-to-picture-frame.cs](./Apply-grayscale-filter-to-picture-frame.cs) |  | Apply grayscale filter to picture frame |
 | [Apply-inversion-filter-to-title-slide-frame.cs](./Apply-inversion-filter-to-title-slide-frame.cs) |  | Apply inversion filter to title slide frame |
@@ -138,7 +184,6 @@ Total files: 148
 | [Extract-audio-frames-convert-to-wav.cs](./Extract-audio-frames-convert-to-wav.cs) |  | Extract audio frames convert to wav |
 | [Extract-flash-object-by-name-and-save.cs](./Extract-flash-object-by-name-and-save.cs) |  | Extract flash object by name and save |
 | [Extract-flash-objects-and-archive-zip.cs](./Extract-flash-objects-and-archive-zip.cs) |  | Extract flash objects and archive zip |
-| [Extract-picture-frame-image-and-save-png.cs](./Extract-picture-frame-image-and-save-png.cs) |  | Extract picture frame image and save png |
 | [Extract-SVG-markup-from-picture-frame.cs](./Extract-SVG-markup-from-picture-frame.cs) |  | Extract SVG markup from picture frame |
 | [Extract-video-frame-metadata-duration-resolution.cs](./Extract-video-frame-metadata-duration-resolution.cs) |  | Extract video frame metadata duration resolution |
 | [Extract-video-streams-from-presentation.cs](./Extract-video-streams-from-presentation.cs) |  | Extract video streams from presentation |
@@ -198,7 +243,6 @@ Total files: 148
 | [Set-audio-frame-loop-on-even-slides.cs](./Set-audio-frame-loop-on-even-slides.cs) |  | Set audio frame loop on even slides |
 | [Set-audio-frame-start-relative-to-transition.cs](./Set-audio-frame-start-relative-to-transition.cs) |  | Set audio frame start relative to transition |
 | [Set-audio-frame-volume-and-autoplay.cs](./Set-audio-frame-volume-and-autoplay.cs) |  | Set audio frame volume and autoplay |
-| [Set-common-logo-as-slide-background.cs](./Set-common-logo-as-slide-background.cs) |  | Set common logo as slide background |
 | [Set-custom-poster-image-for-video-frames.cs](./Set-custom-poster-image-for-video-frames.cs) |  | Set custom poster image for video frames |
 | [Set-picture-frame-border-color-and-thickness.cs](./Set-picture-frame-border-color-and-thickness.cs) |  | Set picture frame border color and thickness |
 | [Set-picture-frame-fill-to-tile-mode.cs](./Set-picture-frame-fill-to-tile-mode.cs) |  | Set picture frame fill to tile mode |
@@ -222,41 +266,81 @@ Total files: 148
 
 
 
-- Total examples: 148
+
+
+
+
+- Total examples: 144
 
 ## Key API Surface
 
 
 
+
+
+
+
 - `Aspose.Slides.Export`
+
+
 
 - `Aspose.Slides`
 
+
+
 - `Aspose.Slides.Presentation`
+
+
 
 - `Aspose.Slides.Export.SaveFormat.Pptx`
 
+
+
 - `Aspose.Slides.IPictureFrame`
+
+
 
 - `Aspose.Slides.ISlide`
 
+
+
 - `Aspose.Slides.IPPImage`
+
+
 
 - `Aspose.Slides.IShape`
 
+
+
 - `Aspose.Slides.ShapeType.Rectangle`
+
+
 
 - `Aspose.Slides.IAudioFrame`
 
+
+
 - `Aspose.Slides.IImage`
+
+
 
 - `Aspose.Slides.Images.FromFile`
 
+
+
 - `Aspose.Slides.IVideoFrame`
+
+
 
 - `Aspose.Slides.`
 
+
+
 - `Aspose.Slides.PptxUnsupportedFormatException`
+
+
+
+
 
 
 
@@ -264,23 +348,47 @@ Total files: 148
 
 
 
+
+
+
+
 Most examples follow a pattern similar to:
+
+
+
+
 
 
 
 ```csharp
 
+
+
 using (Presentation pres = new Presentation("input.pptx"))
+
+
 
 {
 
+
+
     // operations
+
+
 
     pres.Save("output.pptx", SaveFormat.Pptx);
 
+
+
 }
 
+
+
 ```
+
+
+
+
 
 
 
@@ -288,25 +396,51 @@ using (Presentation pres = new Presentation("input.pptx"))
 
 
 
+
+
+
+
 - Load presentations using `new Presentation("file.pptx")`.
 
+
+
 - Modify slides through the `Slides` collection.
+
+
 
 - Save the presentation using `Presentation.Save(...)`.
 
 
 
+
+
+
+
 <!-- AUTOGENERATED:START -->
 
+
+
 Updated: 2026-04-09
+
+
 
 <!-- AUTOGENERATED:END -->
 
 
 
+
+
+
+
 <!-- SEO-FAQ:BEGIN -->
 
+
+
 ## Developer FAQ for Coding Agents
+
+
+
+
 
 
 
@@ -314,35 +448,71 @@ Use these Q&A entries when selecting examples from `manage-presentation-media-fi
 
 
 
+
+
+
+
 ### How do I convert PowerPoint PPTX files to PDF, HTML, SVG, PNG, or JPEG in C#?
+
+
 
 Use the conversion and export examples to load a `Presentation`, configure format-specific options when needed, and call `presentation.Save(...)` or slide image APIs with the correct `Aspose.Slides.Export.SaveFormat`.
 
 
 
+
+
+
+
 ### How do I add, clone, reorder, or remove PowerPoint slides in .NET?
+
+
 
 Use slide management examples to work with `ISlide`, slide collections, layouts, masters, and sections while preserving presentation structure.
 
 
 
+
+
+
+
 ### How do I use Aspose.Slides for .NET for manage presentation media files in C#?
+
+
 
 Use the `manage-presentation-media-files` examples to find standalone C# patterns for manage presentation media files. Each example shows how to load or create an `Aspose.Slides.Presentation`, apply the operation, and save output with the correct Aspose.Slides API.
 
 
 
+
+
+
+
 ### Which manage presentation media files examples are best for coding agents?
+
+
 
 Start with the files listed in this directory and the category AGENTS.md. The strongest search terms for this category are: frame, picture, slide, image, audio.
 
 
 
+
+
+
+
 ### Are the manage-presentation-media-files examples standalone C# programs?
+
+
 
 Yes. The examples are generated as standalone console-style C# files and are intended to compile and run independently in .NET workflows.
 
 
 
+
+
+
+
 <!-- SEO-FAQ:END -->
+
+
 

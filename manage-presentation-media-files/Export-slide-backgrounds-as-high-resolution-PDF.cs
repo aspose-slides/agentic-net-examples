@@ -16,7 +16,7 @@
 // - Build .NET tools for extracting and preserving slide visual assets.
 // - Generate printable PDFs from presentations with optimal quality.
 // - Integrate slide background export into larger PowerPoint processing pipelines.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

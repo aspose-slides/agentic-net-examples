@@ -17,7 +17,7 @@
 // - Build .NET tools that improve visual quality of PPTX files before distribution.
 // - Integrate image‑replacement logic into larger PowerPoint processing pipelines.
 // - Validate and enhance presentation assets in batch workflows.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

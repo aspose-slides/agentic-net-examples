@@ -16,7 +16,7 @@
 // - Automate batch image updates in PPTX files.
 // - Build .NET tools for PPTX image management.
 // - Validate image replacement workflows before publishing or integration.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

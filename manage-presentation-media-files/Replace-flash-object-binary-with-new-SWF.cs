@@ -17,7 +17,7 @@
 // - Build C# utilities for managing embedded media in PowerPoint presentations.
 // - Integrate Flash content updates into .NET-based document processing pipelines.
 // - Validate and transform PPTX files before distribution or further automation.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
