@@ -17,7 +17,7 @@
 // - Prepare PPTX files for redistribution without ink traces.
 // - Automate cleanup of ink objects in batch processing pipelines.
 // - Integrate ink reset functionality into .NET applications handling PPTX files.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
