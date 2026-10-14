@@ -17,7 +17,7 @@
 // - Build tools for updating presentation data from spreadsheets.
 // - Generate or modify PPTX files programmatically in .NET applications.
 // - Integrate chart data updates into CI pipelines.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
