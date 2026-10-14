@@ -18,7 +18,7 @@
 // - Build C# tools for secure PowerPoint document handling.
 // - Generate PDF outputs from PPTM files in .NET applications.
 // - Remove macros before publishing or sharing presentation content.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
