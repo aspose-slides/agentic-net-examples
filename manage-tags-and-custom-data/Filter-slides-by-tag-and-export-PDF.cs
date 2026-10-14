@@ -16,7 +16,7 @@
 // - Understand limitations of tag-based slide filtering with Aspose.Slides.
 // - Automate PDF generation from PPTX files.
 // - Integrate presentation export functionality into custom tools.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
