@@ -16,7 +16,7 @@
 // - Automate password rotation for secured presentations.
 // - Integrate password management into .NET document processing pipelines.
 // - Ensure PPTX files remain unchanged except for protection settings.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

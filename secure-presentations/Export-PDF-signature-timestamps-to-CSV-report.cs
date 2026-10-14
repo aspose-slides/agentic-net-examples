@@ -18,7 +18,7 @@
 // - Automate validation of signed PowerPoint files in .NET applications.
 // - Integrate signature extraction into document management workflows.
 // - Ensure compliance by auditing signer information and timestamps.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
