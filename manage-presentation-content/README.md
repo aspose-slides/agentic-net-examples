@@ -6,8 +6,26 @@
 
 
 
-This category contains 98 standalone C# examples for Aspose.Slides for .NET. These examples help developers automate PowerPoint presentation workflows related to manage presentation content.
+
+
+
+
+
+
+
+
+This category contains 97 standalone C# examples for Aspose.Slides for .NET. These examples help developers automate PowerPoint presentation workflows related to manage presentation content.
+These files are tested and verified with Aspose.Slides for .NET v26.10.0.
+
 These files are tested and verified with Aspose.Slides for .NET v26.9.0.
+
+
+
+
+
+
+
+
 
 
 
@@ -23,7 +41,19 @@ These files are tested and verified with Aspose.Slides for .NET v26.9.0.
 
 
 
+
+
+
+
+
+
+
+
 - Automate repetitive presentation-processing tasks in .NET applications.
+
+
+
+
 
 
 
@@ -31,7 +61,19 @@ These files are tested and verified with Aspose.Slides for .NET v26.9.0.
 
 
 
+
+
+
+
 - Provide coding agents with direct, category-specific examples and API usage patterns.
+
+
+
+
+
+
+
+
 
 
 
@@ -47,7 +89,15 @@ These files are tested and verified with Aspose.Slides for .NET v26.9.0.
 
 
 
-Total examples: 98
+
+
+
+
+
+
+
+
+Total examples: 97
 
 - [Add-creation-date-footer-to-PPTX.cs](./Add-creation-date-footer-to-PPTX.cs)
 - [Add-encryption-status-custom-property.cs](./Add-encryption-status-custom-property.cs)
@@ -136,7 +186,6 @@ Total examples: 98
 - [Set-slideshowtransition-fade-and-smooth-duration.cs](./Set-slideshowtransition-fade-and-smooth-duration.cs)
 - [Set-subject-and-keywords-and-export-PPTX.cs](./Set-subject-and-keywords-and-export-PPTX.cs)
 - [Set-widescreen-slide-size-preserve-properties.cs](./Set-widescreen-slide-size-preserve-properties.cs)
-- [Set-zoom-to-150-percent-verify-view.cs](./Set-zoom-to-150-percent-verify-view.cs)
 - [Stream-large-media-BLOB-data.cs](./Stream-large-media-BLOB-data.cs)
 - [Sync-custom-property-values-between-PPTX-presentations.cs](./Sync-custom-property-values-between-PPTX-presentations.cs)
 - [Update-author-property-from-windows-user.cs](./Update-author-property-from-windows-user.cs)
@@ -156,7 +205,19 @@ Total examples: 98
 
 
 
+
+
+
+
+
+
+
+
 - [Category instructions](./AGENTS.md)
+
+
+
+
 
 
 
@@ -164,13 +225,27 @@ Total examples: 98
 
 
 
+
+
+
+
 - [Structured index](../index.json)
+
+
+
+
 
 
 
 <!-- SEO-FAQ:BEGIN -->
 
+
+
 ## Developer FAQ
+
+
+
+
 
 
 
@@ -178,41 +253,83 @@ These questions target common developer searches for Aspose.Slides for .NET `man
 
 
 
+
+
+
+
 ### How do I add, clone, reorder, or remove PowerPoint slides in .NET?
+
+
 
 Use slide management examples to work with `ISlide`, slide collections, layouts, masters, and sections while preserving presentation structure.
 
 
 
+
+
+
+
 ### How do I edit PowerPoint shapes, text, tables, or SmartArt in C#?
+
+
 
 Use the shape, text, table, and SmartArt examples to locate shapes on a slide, cast to the appropriate Aspose.Slides interfaces, update content or formatting, and save the modified PPTX.
 
 
 
+
+
+
+
 ### How do I extract presentation metadata, comments, notes, tags, VBA, or security information?
+
+
 
 Use the inspection and management examples to access document properties, comments, notes slides, custom tags, VBA projects, signatures, protection settings, and related metadata.
 
 
 
+
+
+
+
 ### How do I use Aspose.Slides for .NET for manage presentation content in C#?
+
+
 
 Use the `manage-presentation-content` examples to find standalone C# patterns for manage presentation content. Each example shows how to load or create an `Aspose.Slides.Presentation`, apply the operation, and save output with the correct Aspose.Slides API.
 
 
 
+
+
+
+
 ### Which manage presentation content examples are best for coding agents?
+
+
 
 Start with the files listed in this directory and the category AGENTS.md. The strongest search terms for this category are: hyperlink, pptx, and, csadd, custom.
 
 
 
+
+
+
+
 ### Are the manage-presentation-content examples standalone C# programs?
+
+
 
 Yes. The examples are generated as standalone console-style C# files and are intended to compile and run independently in .NET workflows.
 
 
 
+
+
+
+
 <!-- SEO-FAQ:END -->
+
+
 

@@ -17,7 +17,7 @@
 // - Create automated pipelines that reorganize presentation assets.
 // - Generate consistent naming conventions for archived or published decks.
 // - Integrate document‑property‑driven logic into .NET PowerPoint tools.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

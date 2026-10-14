@@ -16,7 +16,7 @@
 // - Build C# utilities for PowerPoint slide numbering.
 // - Integrate slide number configuration into .NET document workflows.
 // - Prepare PPTX files with consistent slide numbering before distribution.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;

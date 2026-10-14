@@ -16,7 +16,7 @@
 // - Prepare presentations for compliance with accessibility guidelines.
 // - Build .NET tools that preprocess PPTX files before publishing or distribution.
 // - Integrate shape‑decorative marking into larger PowerPoint automation workflows.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

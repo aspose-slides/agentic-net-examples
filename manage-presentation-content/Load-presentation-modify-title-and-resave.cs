@@ -16,7 +16,7 @@
 // - Ensure large presentations are saved with Zip64 support.
 // - Build .NET utilities for batch processing of PPTX files.
 // - Integrate presentation metadata updates into automated workflows.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

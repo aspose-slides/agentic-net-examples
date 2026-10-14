@@ -18,7 +18,7 @@
 // - Embed video frames and external hyperlinks into PowerPoint presentations.
 // - Build C# tools for automated PPTX generation with media and links.
 // - Validate presentation workflows before publishing or integration.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
