@@ -17,7 +17,7 @@
 // - Build .NET utilities for secure presentation handling and image extraction.
 // - Integrate slide‑to‑image conversion into document management workflows.
 // - Verify visual output of signed presentations before distribution.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
