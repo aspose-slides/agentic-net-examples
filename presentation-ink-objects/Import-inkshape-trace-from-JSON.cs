@@ -16,7 +16,7 @@
 // - Build C# tools for processing ink annotations in presentations.
 // - Generate or modify PPTX files with custom ink-like shapes.
 // - Validate and visualize ink trace data before publishing.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
