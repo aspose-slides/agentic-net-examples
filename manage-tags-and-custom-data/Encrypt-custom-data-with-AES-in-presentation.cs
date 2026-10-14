@@ -16,7 +16,7 @@
 // - Generate password‑protected PPTX files programmatically.
 // - Build C# tools for secure PowerPoint content creation and distribution.
 // - Automate PPTX workflows that require data confidentiality.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
