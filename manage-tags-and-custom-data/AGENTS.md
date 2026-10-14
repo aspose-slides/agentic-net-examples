@@ -1,16 +1,32 @@
 ---
 
+
+
 name: manage-tags-and-custom-data
+
+
 
 description: C# examples for manage-tags-and-custom-data using Aspose.Slides for .NET
 
+
+
 language: csharp
+
+
 
 framework: net10.0
 
+
+
 parent: ../agents.md
 
+
+
 ---
+
+
+
+
 
 
 
@@ -18,13 +34,27 @@ parent: ../agents.md
 
 
 
+
+
+
+
 ## Persona
+
+
+
+
 
 
 
 You are a C# developer specializing in PowerPoint processing using Aspose.Slides for .NET,
 
+
+
 working within the **manage-tags-and-custom-data** category.
+
+
+
+
 
 
 
@@ -32,9 +62,19 @@ working within the **manage-tags-and-custom-data** category.
 
 
 
+
+
+
+
 - This folder contains examples for **manage-tags-and-custom-data**
 
+
+
 - Files are standalone `.cs` examples stored directly in this folder.
+
+
+
+
 
 
 
@@ -42,24 +82,31 @@ working within the **manage-tags-and-custom-data** category.
 
 
 
-Verified with version: 26.9.0
-Total files: 37
 
-- `using System;` (37/37 files)
-- `using System.IO;` (36/37 files)
-- `using Aspose.Slides;` (35/37 files)
-- `using Aspose.Slides.Export;` (35/37 files)
-- `using System.Collections.Generic;` (9/37 files)
-- `using System.Text.Json;` (3/37 files)
-- `using System.Text;` (2/37 files)
-- `using Aspose.Slides.Charts;` (2/37 files)
-- `using System.IO.Compression;` (1/37 files)
-- `using System.Reflection;` (1/37 files)
-- `using System.Security.Cryptography;` (1/37 files)
-- `using System.Xml;` (1/37 files)
-- `using System.Text.RegularExpressions;` (1/37 files)
+
+
+
+Verified with version: 26.10.0
+Total files: 35
+
+- `using System;` (35/35 files)
+- `using Aspose.Slides;` (35/35 files)
+- `using Aspose.Slides.Export;` (35/35 files)
+- `using System.IO;` (34/35 files)
+- `using System.Collections.Generic;` (8/35 files)
+- `using System.Text.Json;` (3/35 files)
+- `using System.Text;` (2/35 files)
+- `using Aspose.Slides.Charts;` (2/35 files)
+- `using System.IO.Compression;` (1/35 files)
+- `using System.Security.Cryptography;` (1/35 files)
+- `using System.Xml;` (1/35 files)
+- `using System.Text.RegularExpressions;` (1/35 files)
 
 ## Files in this folder
+
+
+
+
 
 
 
@@ -73,7 +120,6 @@ Total files: 37
 | [Clone-slide-tags-to-another-slide.cs](./Clone-slide-tags-to-another-slide.cs) |  | Clone slide tags to another slide |
 | [Compress-custom-data-before-embedding.cs](./Compress-custom-data-before-embedding.cs) |  | Compress custom data before embedding |
 | [Control-slide-transition-effects-runtime-tag.cs](./Control-slide-transition-effects-runtime-tag.cs) |  | Control slide transition effects runtime tag |
-| [Copy-custom-data-to-target-presentation.cs](./Copy-custom-data-to-target-presentation.cs) |  | Copy custom data to target presentation |
 | [Create-tag-relationship-diagram-and-export-SVG.cs](./Create-tag-relationship-diagram-and-export-SVG.cs) |  | Create tag relationship diagram and export SVG |
 | [Decrypt-custom-data-runtime-display-values-console.cs](./Decrypt-custom-data-runtime-display-values-console.cs) |  | Decrypt custom data runtime display values console |
 | [Encrypt-custom-data-with-AES-in-presentation.cs](./Encrypt-custom-data-with-AES-in-presentation.cs) |  | Encrypt custom data with AES in presentation |
@@ -92,7 +138,6 @@ Total files: 37
 | [Merge-presentation-tag-collections-into-master.cs](./Merge-presentation-tag-collections-into-master.cs) |  | Merge presentation tag collections into master |
 | [Prefix-tag-names-with-project-id.cs](./Prefix-tag-names-with-project-id.cs) |  | Prefix tag names with project id |
 | [Remove-tag-by-name-from-all-slides.cs](./Remove-tag-by-name-from-all-slides.cs) |  | Remove tag by name from all slides |
-| [Resolve-tag-collisions-when-merging-presentations.cs](./Resolve-tag-collisions-when-merging-presentations.cs) |  | Resolve tag collisions when merging presentations |
 | [Search-slide-tags-extract-indices-array.cs](./Search-slide-tags-extract-indices-array.cs) |  | Search slide tags extract indices array |
 | [Serialize-shape-data-to-XML-and-embed.cs](./Serialize-shape-data-to-XML-and-embed.cs) |  | Serialize shape data to XML and embed |
 | [Set-default-tag-for-new-slides.cs](./Set-default-tag-for-new-slides.cs) |  | Set default tag for new slides |
@@ -107,41 +152,81 @@ Total files: 37
 
 
 
-- Total examples: 37
+
+
+
+
+- Total examples: 35
 
 ## Key API Surface
 
 
 
+
+
+
+
 - `Aspose.Slides`
+
+
 
 - `Aspose.Slides.Export`
 
+
+
 - `Aspose.Slides.Presentation`
+
+
 
 - `Aspose.Slides.Export.SaveFormat.Pptx`
 
+
+
 - `Aspose.Slides.IAutoShape`
+
+
 
 - `Aspose.Slides.ISlide`
 
+
+
 - `Aspose.Slides.ITagCollection`
+
+
 
 - `Aspose.Slides.ShapeType.Rectangle`
 
+
+
 - `Aspose.Slides.PptxUnsupportedFormatException`
+
+
 
 - `Aspose.Slides.PptUnsupportedFormatException`
 
+
+
 - `Aspose.Slides.SlideShow.TransitionType`
+
+
 
 - `Aspose.Slides.ShapeType.Line`
 
+
+
 - `Aspose.Slides.Charts`
+
+
 
 - `Aspose.Slides.IShape`
 
+
+
 - `Aspose.Slides.Charts.IChart`
+
+
+
+
 
 
 
@@ -149,23 +234,47 @@ Total files: 37
 
 
 
+
+
+
+
 Most examples follow a pattern similar to:
+
+
+
+
 
 
 
 ```csharp
 
+
+
 using (Presentation pres = new Presentation("input.pptx"))
+
+
 
 {
 
+
+
     // operations
+
+
 
     pres.Save("output.pptx", SaveFormat.Pptx);
 
+
+
 }
 
+
+
 ```
+
+
+
+
 
 
 
@@ -173,25 +282,51 @@ using (Presentation pres = new Presentation("input.pptx"))
 
 
 
+
+
+
+
 - Load presentations using `new Presentation("file.pptx")`.
 
+
+
 - Modify slides through the `Slides` collection.
+
+
 
 - Save the presentation using `Presentation.Save(...)`.
 
 
 
+
+
+
+
 <!-- AUTOGENERATED:START -->
 
+
+
 Updated: 2026-04-13
+
+
 
 <!-- AUTOGENERATED:END -->
 
 
 
+
+
+
+
 <!-- SEO-FAQ:BEGIN -->
 
+
+
 ## Developer FAQ for Coding Agents
+
+
+
+
 
 
 
@@ -199,41 +334,83 @@ Use these Q&A entries when selecting examples from `manage-tags-and-custom-data`
 
 
 
+
+
+
+
 ### How do I convert PowerPoint PPTX files to PDF, HTML, SVG, PNG, or JPEG in C#?
+
+
 
 Use the conversion and export examples to load a `Presentation`, configure format-specific options when needed, and call `presentation.Save(...)` or slide image APIs with the correct `Aspose.Slides.Export.SaveFormat`.
 
 
 
+
+
+
+
 ### How do I create or edit PowerPoint charts in C# with Aspose.Slides?
+
+
 
 Use chart examples to add chart shapes, access `Aspose.Slides.Charts.IChart`, update chart data, format series, configure axes, and save the presentation.
 
 
 
+
+
+
+
 ### How do I add, clone, reorder, or remove PowerPoint slides in .NET?
+
+
 
 Use slide management examples to work with `ISlide`, slide collections, layouts, masters, and sections while preserving presentation structure.
 
 
 
+
+
+
+
 ### How do I edit PowerPoint shapes, text, tables, or SmartArt in C#?
+
+
 
 Use the shape, text, table, and SmartArt examples to locate shapes on a slide, cast to the appropriate Aspose.Slides interfaces, update content or formatting, and save the modified PPTX.
 
 
 
+
+
+
+
 ### How do I extract presentation metadata, comments, notes, tags, VBA, or security information?
+
+
 
 Use the inspection and management examples to access document properties, comments, notes slides, custom tags, VBA projects, signatures, protection settings, and related metadata.
 
 
 
+
+
+
+
 ### How do I use Aspose.Slides for .NET for manage tags and custom data in C#?
+
+
 
 Use the `manage-tags-and-custom-data` examples to find standalone C# patterns for manage tags and custom data. Each example shows how to load or create an `Aspose.Slides.Presentation`, apply the operation, and save output with the correct Aspose.Slides API.
 
 
 
+
+
+
+
 <!-- SEO-FAQ:END -->
+
+
 
