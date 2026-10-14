@@ -6,8 +6,26 @@
 
 
 
+
+
+
+
+
+
+
+
 This category contains 29 standalone C# examples for Aspose.Slides for .NET. These examples help developers automate PowerPoint presentation workflows related to math equations.
+These files are tested and verified with Aspose.Slides for .NET v26.10.0.
+
 These files are tested and verified with Aspose.Slides for .NET v26.9.0.
+
+
+
+
+
+
+
+
 
 
 
@@ -23,11 +41,27 @@ These files are tested and verified with Aspose.Slides for .NET v26.9.0.
 
 
 
+
+
+
+
+
+
+
+
 - Automate repetitive presentation-processing tasks in .NET applications.
 
 
 
+
+
+
+
 - Generate, inspect, transform, or validate PPTX files in server-side workflows.
+
+
+
+
 
 
 
@@ -39,7 +73,23 @@ These files are tested and verified with Aspose.Slides for .NET v26.9.0.
 
 
 
+
+
+
+
+
+
+
+
 ## Example Files
+
+
+
+
+
+
+
+
 
 
 
@@ -87,7 +137,19 @@ Total examples: 29
 
 
 
+
+
+
+
+
+
+
+
 - [Category instructions](./AGENTS.md)
+
+
+
+
 
 
 
@@ -95,13 +157,27 @@ Total examples: 29
 
 
 
+
+
+
+
 - [Structured index](../index.json)
+
+
+
+
 
 
 
 <!-- SEO-FAQ:BEGIN -->
 
+
+
 ## Developer FAQ
+
+
+
+
 
 
 
@@ -109,41 +185,83 @@ These questions target common developer searches for Aspose.Slides for .NET `mat
 
 
 
+
+
+
+
 ### How do I add, clone, reorder, or remove PowerPoint slides in .NET?
+
+
 
 Use slide management examples to work with `ISlide`, slide collections, layouts, masters, and sections while preserving presentation structure.
 
 
 
+
+
+
+
 ### How do I edit PowerPoint shapes, text, tables, or SmartArt in C#?
+
+
 
 Use the shape, text, table, and SmartArt examples to locate shapes on a slide, cast to the appropriate Aspose.Slides interfaces, update content or formatting, and save the modified PPTX.
 
 
 
+
+
+
+
 ### How do I extract presentation metadata, comments, notes, tags, VBA, or security information?
+
+
 
 Use the inspection and management examples to access document properties, comments, notes slides, custom tags, VBA projects, signatures, protection settings, and related metadata.
 
 
 
+
+
+
+
 ### How do I use Aspose.Slides for .NET for math equations in C#?
+
+
 
 Use the `math-equations` examples to find standalone C# patterns for math equations. Each example shows how to load or create an `Aspose.Slides.Presentation`, apply the operation, and save output with the correct Aspose.Slides API.
 
 
 
+
+
+
+
 ### Which math equations examples are best for coding agents?
+
+
 
 Start with the files listed in this directory and the category AGENTS.md. The strongest search terms for this category are: pptx, export, mathml, slide, slides.
 
 
 
+
+
+
+
 ### Are the math-equations examples standalone C# programs?
+
+
 
 Yes. The examples are generated as standalone console-style C# files and are intended to compile and run independently in .NET workflows.
 
 
 
+
+
+
+
 <!-- SEO-FAQ:END -->
+
+
 

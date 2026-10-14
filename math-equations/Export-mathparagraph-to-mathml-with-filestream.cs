@@ -16,7 +16,7 @@
 // - Automate generation of MathML from PowerPoint presentations.
 // - Build .NET tools that process mathematical equations in slides.
 // - Save presentations after modifying mathematical shapes.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -16,7 +16,7 @@
 // - Build C# utilities for PowerPoint math content extraction.
 // - Integrate MathML generation into .NET applications without affecting original files.
 // - Validate that MathML export does not modify presentation data.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
