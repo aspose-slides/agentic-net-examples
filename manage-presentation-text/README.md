@@ -6,8 +6,26 @@
 
 
 
-This category contains 103 standalone C# examples for Aspose.Slides for .NET. These examples help developers automate PowerPoint presentation workflows related to manage presentation text.
+
+
+
+
+
+
+
+
+This category contains 102 standalone C# examples for Aspose.Slides for .NET. These examples help developers automate PowerPoint presentation workflows related to manage presentation text.
+These files are tested and verified with Aspose.Slides for .NET v26.10.0.
+
 These files are tested and verified with Aspose.Slides for .NET v26.9.0.
+
+
+
+
+
+
+
+
 
 
 
@@ -23,7 +41,19 @@ These files are tested and verified with Aspose.Slides for .NET v26.9.0.
 
 
 
+
+
+
+
+
+
+
+
 - Automate repetitive presentation-processing tasks in .NET applications.
+
+
+
+
 
 
 
@@ -31,7 +61,19 @@ These files are tested and verified with Aspose.Slides for .NET v26.9.0.
 
 
 
+
+
+
+
 - Provide coding agents with direct, category-specific examples and API usage patterns.
+
+
+
+
+
+
+
+
 
 
 
@@ -47,9 +89,16 @@ These files are tested and verified with Aspose.Slides for .NET v26.9.0.
 
 
 
-Total examples: 103
 
-- [Activate-shrink-on-overflow-autofit.cs](./Activate-shrink-on-overflow-autofit.cs)
+
+
+
+
+
+
+
+Total examples: 102
+
 - [Add-fade-in-animation-to-paragraphs.cs](./Add-fade-in-animation-to-paragraphs.cs)
 - [Add-hyperlink-to-paragraph-portion.cs](./Add-hyperlink-to-paragraph-portion.cs)
 - [Add-multilingual-text-to-autoshape-save-pptx.cs](./Add-multilingual-text-to-autoshape-save-pptx.cs)
@@ -161,7 +210,19 @@ Total examples: 103
 
 
 
+
+
+
+
+
+
+
+
 - [Category instructions](./AGENTS.md)
+
+
+
+
 
 
 
@@ -169,13 +230,27 @@ Total examples: 103
 
 
 
+
+
+
+
 - [Structured index](../index.json)
+
+
+
+
 
 
 
 <!-- SEO-FAQ:BEGIN -->
 
+
+
 ## Developer FAQ
+
+
+
+
 
 
 
@@ -183,41 +258,83 @@ These questions target common developer searches for Aspose.Slides for .NET `man
 
 
 
+
+
+
+
 ### How do I convert PowerPoint PPTX files to PDF, HTML, SVG, PNG, or JPEG in C#?
+
+
 
 Use the conversion and export examples to load a `Presentation`, configure format-specific options when needed, and call `presentation.Save(...)` or slide image APIs with the correct `Aspose.Slides.Export.SaveFormat`.
 
 
 
+
+
+
+
 ### How do I add, clone, reorder, or remove PowerPoint slides in .NET?
+
+
 
 Use slide management examples to work with `ISlide`, slide collections, layouts, masters, and sections while preserving presentation structure.
 
 
 
+
+
+
+
 ### How do I edit PowerPoint shapes, text, tables, or SmartArt in C#?
+
+
 
 Use the shape, text, table, and SmartArt examples to locate shapes on a slide, cast to the appropriate Aspose.Slides interfaces, update content or formatting, and save the modified PPTX.
 
 
 
+
+
+
+
 ### How do I use Aspose.Slides for .NET for manage presentation text in C#?
+
+
 
 Use the `manage-presentation-text` examples to find standalone C# patterns for manage presentation text. Each example shows how to load or create an `Aspose.Slides.Presentation`, apply the operation, and save output with the correct Aspose.Slides API.
 
 
 
+
+
+
+
 ### Which manage presentation text examples are best for coding agents?
+
+
 
 Start with the files listed in this directory and the category AGENTS.md. The strongest search terms for this category are: text, slide, csextract, and, csset.
 
 
 
+
+
+
+
 ### Are the manage-presentation-text examples standalone C# programs?
+
+
 
 Yes. The examples are generated as standalone console-style C# files and are intended to compile and run independently in .NET workflows.
 
 
 
+
+
+
+
 <!-- SEO-FAQ:END -->
+
+
 

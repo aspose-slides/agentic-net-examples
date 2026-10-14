@@ -17,7 +17,7 @@
 // - Build C# utilities for consistent text formatting in PPTX files.
 // - Automate presentation styling tasks in .NET applications.
 // - Ensure uniform line spacing before publishing or further processing.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

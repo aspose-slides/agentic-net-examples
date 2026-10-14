@@ -18,7 +18,7 @@
 // - Automate layout adjustments for text frames in presentations.
 // - Build .NET tools that generate or modify PPTX files with columnar text.
 // - Ensure consistent text formatting across slides in batch processing.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
