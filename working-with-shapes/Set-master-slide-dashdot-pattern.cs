@@ -17,7 +17,7 @@
 // - Prepare presentations with consistent styling before distribution.
 // - Automate styling updates in batch processing of PPTX files.
 // - Integrate line style adjustments into .NET-based PowerPoint tooling.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
