@@ -2,7 +2,15 @@
 
 
 
+
+
+
+
 name: working-with-charts
+
+
+
+
 
 
 
@@ -10,7 +18,15 @@ description: C# examples for working-with-charts using Aspose.Slides for .NET
 
 
 
+
+
+
+
 language: csharp
+
+
+
+
 
 
 
@@ -18,11 +34,27 @@ framework: net10.0
 
 
 
+
+
+
+
 parent: ../agents.md
 
 
 
+
+
+
+
 ---
+
+
+
+
+
+
+
+
 
 
 
@@ -38,7 +70,23 @@ parent: ../agents.md
 
 
 
+
+
+
+
+
+
+
+
 ## Persona
+
+
+
+
+
+
+
+
 
 
 
@@ -50,7 +98,19 @@ You are a C# developer specializing in PowerPoint processing using Aspose.Slides
 
 
 
+
+
+
+
 working within the **working-with-charts** category.
+
+
+
+
+
+
+
+
 
 
 
@@ -66,11 +126,31 @@ working within the **working-with-charts** category.
 
 
 
+
+
+
+
+
+
+
+
 - This folder contains examples for **working-with-charts**
 
 
 
+
+
+
+
 - Files are standalone `.cs` examples stored directly in this folder.
+
+
+
+
+
+
+
+
 
 
 
@@ -86,25 +166,41 @@ working within the **working-with-charts** category.
 
 
 
-Verified with version: 26.9.0
-Total files: 449
 
-- `using System;` (438/449 files)
-- `using Aspose.Slides.Export;` (428/449 files)
-- `using Aspose.Slides;` (390/449 files)
-- `using Aspose.Slides.Charts;` (325/449 files)
-- `using System.IO;` (210/449 files)
-- `using System.Drawing;` (38/449 files)
-- `using Aspose.Slides.Animation;` (35/449 files)
-- `using System.Text.Json;` (8/449 files)
-- `using System.Collections.Generic;` (7/449 files)
-- `using System.IO.Compression;` (2/449 files)
-- `using System.Text;` (1/449 files)
-- `using System.Xml;` (1/449 files)
-- `using System.Threading.Tasks;` (1/449 files)
-- `using Aspose.Slides.SlideShow;` (1/449 files)
+
+
+
+
+
+
+
+Verified with version: 26.10.0
+Total files: 429
+
+- `using Aspose.Slides.Export;` (428/429 files)
+- `using System;` (419/429 files)
+- `using Aspose.Slides;` (390/429 files)
+- `using Aspose.Slides.Charts;` (325/429 files)
+- `using System.IO;` (198/429 files)
+- `using System.Drawing;` (37/429 files)
+- `using Aspose.Slides.Animation;` (35/429 files)
+- `using System.Text.Json;` (8/429 files)
+- `using System.Collections.Generic;` (7/429 files)
+- `using System.IO.Compression;` (2/429 files)
+- `using System.Text;` (1/429 files)
+- `using System.Xml;` (1/429 files)
+- `using System.Threading.Tasks;` (1/429 files)
+- `using Aspose.Slides.SlideShow;` (1/429 files)
 
 ## Files in this folder
+
+
+
+
+
+
+
+
 
 
 
@@ -138,18 +234,15 @@ Total files: 449
 | [Add-custom-error-bars-to-scatter-png.cs](./Add-custom-error-bars-to-scatter-png.cs) |  | Add custom error bars to scatter png |
 | [Add-custom-image-marker-to-line-chart.cs](./Add-custom-image-marker-to-line-chart.cs) |  | Add custom image marker to line chart |
 | [Add-custom-labels-category-value-to-pie.cs](./Add-custom-labels-category-value-to-pie.cs) |  | Add custom labels category value to pie |
-| [Add-custom-line-annotation-to-chart.cs](./Add-custom-line-annotation-to-chart.cs) |  | Add custom line annotation to chart |
 | [Add-custom-line-at-coordinates.cs](./Add-custom-line-at-coordinates.cs) |  | Add custom line at coordinates |
 | [Add-custom-marker-shape-to-scatter-series.cs](./Add-custom-marker-shape-to-scatter-series.cs) |  | Add custom marker shape to scatter series |
 | [Add-custom-slide-transition-after-chart-animation.cs](./Add-custom-slide-transition-after-chart-animation.cs) |  | Add custom slide transition after chart animation |
 | [Add-data-label-format-category-value.cs](./Add-data-label-format-category-value.cs) |  | Add data label format category value |
 | [Add-data-labels-show-category-and-value.cs](./Add-data-labels-show-category-and-value.cs) |  | Add data labels show category and value |
-| [Add-data-labels-to-pie-chart.cs](./Add-data-labels-to-pie-chart.cs) |  | Add data labels to pie chart |
 | [Add-data-point-callout-showlabelasdatacallout.cs](./Add-data-point-callout-showlabelasdatacallout.cs) |  | Add data point callout showlabelasdatacallout |
 | [Add-data-point-callout-with-label.cs](./Add-data-point-callout-with-label.cs) |  | Add data point callout with label |
 | [Add-data-table-below-chart-font-size.cs](./Add-data-table-below-chart-font-size.cs) |  | Add data table below chart font size |
 | [Add-data-table-to-bar-chart.cs](./Add-data-table-to-bar-chart.cs) |  | Add data table to bar chart |
-| [Add-data-table-to-chart-font-size.cs](./Add-data-table-to-chart-font-size.cs) |  | Add data table to chart font size |
 | [Add-error-bars-to-line-series.cs](./Add-error-bars-to-line-series.cs) |  | Add error bars to line series |
 | [Add-error-bars-to-scatter-png.cs](./Add-error-bars-to-scatter-png.cs) |  | Add error bars to scatter png |
 | [Add-error-bars-using-standard-deviation.cs](./Add-error-bars-using-standard-deviation.cs) |  | Add error bars using standard deviation |
@@ -165,12 +258,10 @@ Total files: 449
 | [Add-line-chart-with-custom-colors.cs](./Add-line-chart-with-custom-colors.cs) |  | Add line chart with custom colors |
 | [Add-linear-regression-trendline-to-bar-chart.cs](./Add-linear-regression-trendline-to-bar-chart.cs) |  | Add linear regression trendline to bar chart |
 | [Add-linear-trendline-to-first-series.cs](./Add-linear-trendline-to-first-series.cs) |  | Add linear trendline to first series |
-| [Add-moving-average-trendline-to-column-chart.cs](./Add-moving-average-trendline-to-column-chart.cs) |  | Add moving average trendline to column chart |
 | [Add-multi-level-category-axis-to-column-chart.cs](./Add-multi-level-category-axis-to-column-chart.cs) |  | Add multi level category axis to column chart |
 | [Add-multiline-callout-to-bubble-chart.cs](./Add-multiline-callout-to-bubble-chart.cs) |  | Add multiline callout to bubble chart |
 | [Add-outlier-marker-shape-to-scatter-series.cs](./Add-outlier-marker-shape-to-scatter-series.cs) |  | Add outlier marker shape to scatter series |
 | [Add-percentage-value-labels-to-doughnut-chart.cs](./Add-percentage-value-labels-to-doughnut-chart.cs) |  | Add percentage value labels to doughnut chart |
-| [Add-polar-chart-with-custom-radii.cs](./Add-polar-chart-with-custom-radii.cs) |  | Add polar chart with custom radii |
 | [Add-polynomial-trendline-order-three-to-scatter.cs](./Add-polynomial-trendline-order-three-to-scatter.cs) |  | Add polynomial trendline order three to scatter |
 | [Add-quadratic-trendline-to-scatter-forward-two.cs](./Add-quadratic-trendline-to-scatter-forward-two.cs) |  | Add quadratic trendline to scatter forward two |
 | [Add-secondary-axis-map-series-to-column.cs](./Add-secondary-axis-map-series-to-column.cs) |  | Add secondary axis map series to column |
@@ -200,7 +291,6 @@ Total files: 449
 | [Add-two-second-pause-to-category-animation.cs](./Add-two-second-pause-to-category-animation.cs) |  | Add two second pause to category animation |
 | [Add-value-percentage-labels-to-pie-chart.cs](./Add-value-percentage-labels-to-pie-chart.cs) |  | Add value percentage labels to pie chart |
 | [Adjust-bar-chart-gap-width.cs](./Adjust-bar-chart-gap-width.cs) |  | Adjust bar chart gap width |
-| [Adjust-bubble-chart-width-representation.cs](./Adjust-bubble-chart-width-representation.cs) |  | Adjust bubble chart width representation |
 | [Adjust-data-table-column-width-to-longest.cs](./Adjust-data-table-column-width-to-longest.cs) |  | Adjust data table column width to longest |
 | [Adjust-data-table-width-for-longest-series.cs](./Adjust-data-table-width-for-longest-series.cs) |  | Adjust data table width for longest series |
 | [Adjust-pie-chart-data-label-position.cs](./Adjust-pie-chart-data-label-position.cs) |  | Adjust pie chart data label position |
@@ -220,7 +310,6 @@ Total files: 449
 | [Apply-custom-marker-shape-to-scatter-series.cs](./Apply-custom-marker-shape-to-scatter-series.cs) |  | Apply custom marker shape to scatter series |
 | [Apply-data-label-format-3d-bubble-chart.cs](./Apply-data-label-format-3d-bubble-chart.cs) |  | Apply data label format 3d bubble chart |
 | [Apply-element-animation-to-series-point-two-second.cs](./Apply-element-animation-to-series-point-two-second.cs) |  | Apply element animation to series point two second |
-| [Apply-fade-in-animation-to-chart.cs](./Apply-fade-in-animation-to-chart.cs) |  | Apply fade in animation to chart |
 | [Apply-lighting-and-shadow-to-3d-bubble.cs](./Apply-lighting-and-shadow-to-3d-bubble.cs) |  | Apply lighting and shadow to 3d bubble |
 | [Apply-logarithmic-y-axis-to-line-chart.cs](./Apply-logarithmic-y-axis-to-line-chart.cs) |  | Apply logarithmic y axis to line chart |
 | [Apply-plot-area-border-color.cs](./Apply-plot-area-border-color.cs) |  | Apply plot area border color |
@@ -258,7 +347,6 @@ Total files: 449
 | [Configure-multi-chart-animation-from-config.cs](./Configure-multi-chart-animation-from-config.cs) |  | Configure multi chart animation from config |
 | [Configure-second-plot-options-pie-of-pie.cs](./Configure-second-plot-options-pie-of-pie.cs) |  | Configure second plot options pie of pie |
 | [Configure-trendline-lengths-five-categories-column-chart.cs](./Configure-trendline-lengths-five-categories-column-chart.cs) |  | Configure trendline lengths five categories column chart |
-| [Configure-trendline-lengths-to-five-categories.cs](./Configure-trendline-lengths-to-five-categories.cs) |  | Configure trendline lengths to five categories |
 | [Configure-x-axis-logarithmic-scale.cs](./Configure-x-axis-logarithmic-scale.cs) |  | Configure x axis logarithmic scale |
 | [Convert-presentation-to-PPTX-with-brand-legend.cs](./Convert-presentation-to-PPTX-with-brand-legend.cs) |  | Convert presentation to PPTX with brand legend |
 | [Convert-presentation-to-PPTX-with-branding-legend.cs](./Convert-presentation-to-PPTX-with-branding-legend.cs) |  | Convert presentation to PPTX with branding legend |
@@ -305,7 +393,6 @@ Total files: 449
 | [Enable-minor-gridlines-on-value-axis.cs](./Enable-minor-gridlines-on-value-axis.cs) |  | Enable minor gridlines on value axis |
 | [Enable-percentage-data-labels-on-chart.cs](./Enable-percentage-data-labels-on-chart.cs) |  | Enable percentage data labels on chart |
 | [Enable-percentage-labels-on-pie-chart.cs](./Enable-percentage-labels-on-pie-chart.cs) |  | Enable percentage labels on pie chart |
-| [Enable-smooth-lines-for-spline-chart.cs](./Enable-smooth-lines-for-spline-chart.cs) |  | Enable smooth lines for spline chart |
 | [Ensure-error-bars-render-correctly-in-highresolution-PNG.cs](./Ensure-error-bars-render-correctly-in-highresolution-PNG.cs) |  | Ensure error bars render correctly in highresolution PNG |
 | [Export-all-charts-to-separate-PNG.cs](./Export-all-charts-to-separate-PNG.cs) |  | Export all charts to separate PNG |
 | [Export-all-charts-to-single-PDF.cs](./Export-all-charts-to-single-PDF.cs) |  | Export all charts to single PDF |
@@ -338,7 +425,6 @@ Total files: 449
 | [Export-chart-to-SVG-with-vectorized-callouts.cs](./Export-chart-to-SVG-with-vectorized-callouts.cs) |  | Export chart to SVG with vectorized callouts |
 | [Export-chart-with-callouts-to-PDF-A.cs](./Export-chart-with-callouts-to-PDF-A.cs) |  | Export chart with callouts to PDF A |
 | [Export-charts-individually-to-PNG-with-callouts.cs](./Export-charts-individually-to-PNG-with-callouts.cs) |  | Export charts individually to PNG with callouts |
-| [Export-charts-to-SVG-by-slide-index.cs](./Export-charts-to-SVG-by-slide-index.cs) |  | Export charts to SVG by slide index |
 | [Export-charts-to-zip-archive-PNG.cs](./Export-charts-to-zip-archive-PNG.cs) |  | Export charts to zip archive PNG |
 | [Export-data-table-from-chart-to-xlsx.cs](./Export-data-table-from-chart-to-xlsx.cs) |  | Export data table from chart to xlsx |
 | [Export-each-chart-to-separate-PNG.cs](./Export-each-chart-to-separate-PNG.cs) |  | Export each chart to separate PNG |
@@ -374,7 +460,6 @@ Total files: 449
 | [Hide-axis-lines-keep-labels-visible.cs](./Hide-axis-lines-keep-labels-visible.cs) |  | Hide axis lines keep labels visible |
 | [Hide-axis-lines-keep-labels.cs](./Hide-axis-lines-keep-labels.cs) |  | Hide axis lines keep labels |
 | [Hide-chart-gridlines-on-both-axes.cs](./Hide-chart-gridlines-on-both-axes.cs) |  | Hide chart gridlines on both axes |
-| [Hide-chart-title-keep-axis-labels.cs](./Hide-chart-title-keep-axis-labels.cs) |  | Hide chart title keep axis labels |
 | [Hide-data-table-on-multi-series-charts.cs](./Hide-data-table-on-multi-series-charts.cs) |  | Hide data table on multi series charts |
 | [Hide-gridlines-on-both-axes.cs](./Hide-gridlines-on-both-axes.cs) |  | Hide gridlines on both axes |
 | [Hide-gridlines-on-secondary-axis.cs](./Hide-gridlines-on-secondary-axis.cs) |  | Hide gridlines on secondary axis |
@@ -413,7 +498,6 @@ Total files: 449
 | [Log-chart-type-for-each-chart.cs](./Log-chart-type-for-each-chart.cs) |  | Log chart type for each chart |
 | [Log-charts-with-visible-data-tables.cs](./Log-charts-with-visible-data-tables.cs) |  | Log charts with visible data tables |
 | [Map-bubble-colors-to-categorical-series.cs](./Map-bubble-colors-to-categorical-series.cs) |  | Map bubble colors to categorical series |
-| [Move-chart-legend-to-top-left.cs](./Move-chart-legend-to-top-left.cs) |  | Move chart legend to top left |
 | [Read-plot-area-dimensions-from-first-chart.cs](./Read-plot-area-dimensions-from-first-chart.cs) |  | Read plot area dimensions from first chart |
 | [Read-plot-area-dimensions-from-PPTX-chart.cs](./Read-plot-area-dimensions-from-PPTX-chart.cs) |  | Read plot area dimensions from PPTX chart |
 | [Remove-animations-from-chart-before-adding-new.cs](./Remove-animations-from-chart-before-adding-new.cs) |  | Remove animations from chart before adding new |
@@ -450,9 +534,7 @@ Total files: 449
 | [Set-bubble-chart-scaling-to-1-5.cs](./Set-bubble-chart-scaling-to-1-5.cs) |  | Set bubble chart scaling to 1 5 |
 | [Set-bubble-chart-size-range.cs](./Set-bubble-chart-size-range.cs) |  | Set bubble chart size range |
 | [Set-bubble-chart-size-to-width-scaling.cs](./Set-bubble-chart-size-to-width-scaling.cs) |  | Set bubble chart size to width scaling |
-| [Set-bubble-size-minimum-and-maximum.cs](./Set-bubble-size-minimum-and-maximum.cs) |  | Set bubble size minimum and maximum |
 | [Set-bubble-size-minimum-to-five-points.cs](./Set-bubble-size-minimum-to-five-points.cs) |  | Set bubble size minimum to five points |
-| [Set-bubble-size-representation-to-area.cs](./Set-bubble-size-representation-to-area.cs) |  | Set bubble size representation to area |
 | [Set-bubble-size-representation-to-width-proportional.cs](./Set-bubble-size-representation-to-width-proportional.cs) |  | Set bubble size representation to width proportional |
 | [Set-bubble-size-representation-to-width.cs](./Set-bubble-size-representation-to-width.cs) |  | Set bubble size representation to width |
 | [Set-category-axis-to-date.cs](./Set-category-axis-to-date.cs) |  | Set category axis to date |
@@ -460,10 +542,8 @@ Total files: 449
 | [Set-chart-background-color-to-light-gray.cs](./Set-chart-background-color-to-light-gray.cs) |  | Set chart background color to light gray |
 | [Set-chart-background-gradient-to-match-theme.cs](./Set-chart-background-gradient-to-match-theme.cs) |  | Set chart background gradient to match theme |
 | [Set-chart-background-gradient-to-theme-colors.cs](./Set-chart-background-gradient-to-theme-colors.cs) |  | Set chart background gradient to theme colors |
-| [Set-chart-background-gradient-with-custom-colors.cs](./Set-chart-background-gradient-with-custom-colors.cs) |  | Set chart background gradient with custom colors |
 | [Set-chart-background-light-gray.cs](./Set-chart-background-light-gray.cs) |  | Set chart background light gray |
 | [Set-chart-background-solid-color.cs](./Set-chart-background-solid-color.cs) |  | Set chart background solid color |
-| [Set-chart-background-solid-to-theme-color.cs](./Set-chart-background-solid-to-theme-color.cs) |  | Set chart background solid to theme color |
 | [Set-chart-data-label-background-semi-transparent.cs](./Set-chart-data-label-background-semi-transparent.cs) |  | Set chart data label background semi transparent |
 | [Set-chart-data-label-background-transparent.cs](./Set-chart-data-label-background-transparent.cs) |  | Set chart data label background transparent |
 | [Set-chart-data-label-font-bold-size.cs](./Set-chart-data-label-font-bold-size.cs) |  | Set chart data label font bold size |
@@ -475,11 +555,9 @@ Total files: 449
 | [Set-chart-legend-bottom-right.cs](./Set-chart-legend-bottom-right.cs) |  | Set chart legend bottom right |
 | [Set-chart-legend-size-width-height.cs](./Set-chart-legend-size-width-height.cs) |  | Set chart legend size width height |
 | [Set-chart-legend-to-bottom-horizontal.cs](./Set-chart-legend-to-bottom-horizontal.cs) |  | Set chart legend to bottom horizontal |
-| [Set-chart-legend-to-bottom-right.cs](./Set-chart-legend-to-bottom-right.cs) |  | Set chart legend to bottom right |
 | [Set-chart-legend-to-right-side.cs](./Set-chart-legend-to-right-side.cs) |  | Set chart legend to right side |
 | [Set-chart-legend-to-series-names-only.cs](./Set-chart-legend-to-series-names-only.cs) |  | Set chart legend to series names only |
 | [Set-chart-legend-to-series-only.cs](./Set-chart-legend-to-series-only.cs) |  | Set chart legend to series only |
-| [Set-chart-legend-top-left.cs](./Set-chart-legend-top-left.cs) |  | Set chart legend top left |
 | [Set-chart-legend-top-right.cs](./Set-chart-legend-top-right.cs) |  | Set chart legend top right |
 | [Set-custom-error-bars-using-offset-arrays.cs](./Set-custom-error-bars-using-offset-arrays.cs) |  | Set custom error bars using offset arrays |
 | [Set-custom-error-bars-with-offset-arrays.cs](./Set-custom-error-bars-with-offset-arrays.cs) |  | Set custom error bars with offset arrays |
@@ -487,7 +565,6 @@ Total files: 449
 | [Set-data-label-background-transparent.cs](./Set-data-label-background-transparent.cs) |  | Set data label background transparent |
 | [Set-data-label-font-bold-and-size.cs](./Set-data-label-font-bold-and-size.cs) |  | Set data label font bold and size |
 | [Set-data-label-number-format-precision.cs](./Set-data-label-number-format-precision.cs) |  | Set data label number format precision |
-| [Set-data-label-offset-from-axis.cs](./Set-data-label-offset-from-axis.cs) |  | Set data label offset from axis |
 | [Set-data-label-separator-to-newline.cs](./Set-data-label-separator-to-newline.cs) |  | Set data label separator to newline |
 | [Set-data-table-font-color-dark-gray.cs](./Set-data-table-font-color-dark-gray.cs) |  | Set data table font color dark gray |
 | [Set-data-table-font-to-arial-10.cs](./Set-data-table-font-to-arial-10.cs) |  | Set data table font to arial 10 |
@@ -546,7 +623,6 @@ Total files: 449
 | [Toggle-data-table-visibility-with-boolean.cs](./Toggle-data-table-visibility-with-boolean.cs) |  | Toggle data table visibility with boolean |
 | [Toggle-layout-target-type-based-on-preference.cs](./Toggle-layout-target-type-based-on-preference.cs) |  | Toggle layout target type based on preference |
 | [Toggle-plot-area-layouttargettype-based-on-preference.cs](./Toggle-plot-area-layouttargettype-based-on-preference.cs) |  | Toggle plot area layouttargettype based on preference |
-| [Unlink-data-label-number-format-from-source.cs](./Unlink-data-label-number-format-from-source.cs) |  | Unlink data label number format from source |
 | [Update-chart-series-values-from-CSV.cs](./Update-chart-series-values-from-CSV.cs) |  | Update chart series values from CSV |
 | [Update-chart-workbook-data-before-animations.cs](./Update-chart-workbook-data-before-animations.cs) |  | Update chart workbook data before animations |
 | [Update-marker-shape-per-series-error-bars.cs](./Update-marker-shape-per-series-error-bars.cs) |  | Update marker shape per series error bars |
@@ -572,9 +648,25 @@ Total files: 449
 
 
 
-- Total examples: 449
+
+
+
+
+
+
+
+
+- Total examples: 429
 
 ## Key API Surface
+
+
+
+
+
+
+
+
 
 
 
@@ -586,7 +678,15 @@ Total files: 449
 
 
 
+
+
+
+
 - `Aspose.Slides.Export`
+
+
+
+
 
 
 
@@ -594,7 +694,15 @@ Total files: 449
 
 
 
+
+
+
+
 - `Aspose.Slides.Charts`
+
+
+
+
 
 
 
@@ -602,7 +710,15 @@ Total files: 449
 
 
 
+
+
+
+
 - `Aspose.Slides.Export.SaveFormat.Pptx`
+
+
+
+
 
 
 
@@ -610,7 +726,15 @@ Total files: 449
 
 
 
+
+
+
+
 - `Aspose.Slides.Charts.ChartType.ClusteredColumn`
+
+
+
+
 
 
 
@@ -618,7 +742,15 @@ Total files: 449
 
 
 
+
+
+
+
 - `Aspose.Slides.Charts.IChartDataWorkbook`
+
+
+
+
 
 
 
@@ -626,7 +758,15 @@ Total files: 449
 
 
 
+
+
+
+
 - `Aspose.Slides.Animation`
+
+
+
+
 
 
 
@@ -634,11 +774,27 @@ Total files: 449
 
 
 
+
+
+
+
 - `Aspose.Slides.Charts.ChartType.Bubble`
 
 
 
+
+
+
+
 - `Aspose.Slides.Charts.DataSourceType.DoubleLiterals`
+
+
+
+
+
+
+
+
 
 
 
@@ -654,7 +810,23 @@ Total files: 449
 
 
 
+
+
+
+
+
+
+
+
 Most examples follow a pattern similar to:
+
+
+
+
+
+
+
+
 
 
 
@@ -666,7 +838,15 @@ Most examples follow a pattern similar to:
 
 
 
+
+
+
+
 using (Presentation pres = new Presentation("input.pptx"))
+
+
+
+
 
 
 
@@ -674,7 +854,15 @@ using (Presentation pres = new Presentation("input.pptx"))
 
 
 
+
+
+
+
     // operations
+
+
+
+
 
 
 
@@ -682,11 +870,27 @@ using (Presentation pres = new Presentation("input.pptx"))
 
 
 
+
+
+
+
 }
 
 
 
+
+
+
+
 ```
+
+
+
+
+
+
+
+
 
 
 
@@ -702,11 +906,27 @@ using (Presentation pres = new Presentation("input.pptx"))
 
 
 
+
+
+
+
+
+
+
+
 - Load presentations using `new Presentation("file.pptx")`.
 
 
 
+
+
+
+
 - Modify slides through the `Slides` collection.
+
+
+
+
 
 
 
@@ -718,7 +938,19 @@ using (Presentation pres = new Presentation("input.pptx"))
 
 
 
+
+
+
+
+
+
+
+
 <!-- AUTOGENERATED:START -->
+
+
+
+
 
 
 
@@ -726,13 +958,27 @@ Updated: 2026-05-08
 
 
 
+
+
+
+
 <!-- AUTOGENERATED:END -->
+
+
+
+
 
 
 
 <!-- SEO-FAQ:BEGIN -->
 
+
+
 ## Developer FAQ for Coding Agents
+
+
+
+
 
 
 
@@ -740,35 +986,71 @@ Use these Q&A entries when selecting examples from `working-with-charts` for use
 
 
 
+
+
+
+
 ### How do I create or edit PowerPoint charts in C# with Aspose.Slides?
+
+
 
 Use chart examples to add chart shapes, access `Aspose.Slides.Charts.IChart`, update chart data, format series, configure axes, and save the presentation.
 
 
 
+
+
+
+
 ### How do I add or inspect PowerPoint animations in C#?
+
+
 
 Use animation examples to work with slide timelines, animation sequences, effect types, triggers, and animated shapes through Aspose.Slides APIs.
 
 
 
+
+
+
+
 ### How do I use Aspose.Slides for .NET for working with charts in C#?
+
+
 
 Use the `working-with-charts` examples to find standalone C# patterns for working with charts. Each example shows how to load or create an `Aspose.Slides.Presentation`, apply the operation, and save output with the correct Aspose.Slides API.
 
 
 
+
+
+
+
 ### Which working with charts examples are best for coding agents?
+
+
 
 Start with the files listed in this directory and the category AGENTS.md. The strongest search terms for this category are: chart, csset, csadd, data, csexport.
 
 
 
+
+
+
+
 ### Are the working-with-charts examples standalone C# programs?
+
+
 
 Yes. The examples are generated as standalone console-style C# files and are intended to compile and run independently in .NET workflows.
 
 
 
+
+
+
+
 <!-- SEO-FAQ:END -->
+
+
 
