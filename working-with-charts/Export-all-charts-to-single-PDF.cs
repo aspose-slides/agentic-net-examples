@@ -17,7 +17,7 @@
 // - Automate reporting workflows that require chart extraction.
 // - Create lightweight PDF documents for review or distribution.
 // - Integrate chart-to-PDF conversion into .NET applications.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
