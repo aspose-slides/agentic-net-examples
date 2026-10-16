@@ -18,7 +18,7 @@
 // - Build C# utilities for PowerPoint chart layout inspection.
 // - Validate chart rendering before publishing or further processing.
 // - Integrate chart dimension data into reporting or analytics workflows.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
