@@ -18,7 +18,7 @@
 // - Build C# utilities for PowerPoint diagram creation and editing.
 // - Generate or transform PPTX presentations with connected shapes in .NET.
 // - Validate and test presentation workflows involving shape connections.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
