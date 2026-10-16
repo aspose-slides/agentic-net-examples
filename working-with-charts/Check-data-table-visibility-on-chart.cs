@@ -18,7 +18,7 @@
 // - Build tools that audit or modify chart settings in PPTX files.
 // - Integrate chart validation into .NET automation workflows.
 // - Ensure consistency of chart data tables across multiple presentations.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

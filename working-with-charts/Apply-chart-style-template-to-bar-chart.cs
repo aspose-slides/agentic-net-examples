@@ -17,7 +17,7 @@
 // - Build C# utilities for consistent chart styling in PowerPoint files.
 // - Generate styled PPTX presentations programmatically.
 // - Ensure visual consistency across multiple presentations.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

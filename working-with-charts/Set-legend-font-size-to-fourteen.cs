@@ -18,7 +18,7 @@
 // - Generate or modify PPTX files with specific legend styling in .NET 
 //   applications.
 // - Validate presentation formatting before publishing or integration.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -16,7 +16,7 @@
 // - Adjust chart plot area positioning and size programmatically.
 // - Automate PPTX modifications in .NET console applications.
 // - Validate and transform presentations before distribution.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -18,7 +18,7 @@
 // - Build .NET tools for visualizing structured data in PowerPoint.
 // - Integrate chart generation into reporting or analytics pipelines.
 // - Validate and preview presentation content programmatically.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

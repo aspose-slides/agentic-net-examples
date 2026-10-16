@@ -17,7 +17,7 @@
 // - Build .NET utilities for generating or updating PPTX reports with chart data.
 // - Automate presentation creation workflows that require custom chart data.
 // - Integrate chart generation into larger C# applications or services.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
