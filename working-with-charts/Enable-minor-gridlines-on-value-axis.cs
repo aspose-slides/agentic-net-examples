@@ -18,7 +18,7 @@
 // - Generate or modify PPTX files with specific chart formatting in .NET
 //   applications.
 // - Validate chart appearance programmatically before publishing or integration.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
