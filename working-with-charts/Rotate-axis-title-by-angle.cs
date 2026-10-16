@@ -17,7 +17,7 @@
 // - Build C# tools that customize chart formatting in PowerPoint files.
 // - Generate or modify PPTX presentations with specific axis title orientations.
 // - Automate presentation styling tasks before publishing.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
