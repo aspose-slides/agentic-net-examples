@@ -18,7 +18,7 @@
 // - Build C# tools for generating PDF reports from PowerPoint files.
 // - Preserve OLE objects (e.g., tables) when converting PPTX to PDF.
 // - Integrate chart creation with error bars into .NET applications.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
