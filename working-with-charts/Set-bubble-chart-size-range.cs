@@ -16,7 +16,7 @@
 // - Automate creation of bubble charts with custom scaling in .NET apps.
 // - Generate PPTX reports that require specific bubble size representation.
 // - Integrate bubble chart scaling into presentation processing pipelines.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
