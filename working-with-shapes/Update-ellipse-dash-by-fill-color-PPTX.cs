@@ -16,7 +16,7 @@
 // - Build tools for batch updating PPTX presentations.
 // - Integrate shape property changes into .NET applications.
 // - Validate and enforce visual standards in PowerPoint files.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
