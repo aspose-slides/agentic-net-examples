@@ -18,7 +18,7 @@
 // - Build C# tools for PowerPoint presentation processing with shape constraints.
 // - Generate or transform PPTX files in .NET applications while preserving group integrity.
 // - Validate presentation workflows before publishing or integration.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
