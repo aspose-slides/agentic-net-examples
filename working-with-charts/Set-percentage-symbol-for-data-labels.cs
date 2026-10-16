@@ -18,7 +18,7 @@
 // - Automate chart formatting in PowerPoint presentations.
 // - Build .NET tools for generating or modifying PPTX charts.
 // - Apply custom number formats to data labels for branding or localization.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
