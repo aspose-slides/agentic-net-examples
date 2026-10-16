@@ -16,7 +16,7 @@
 // - Build .NET tools that automate visual styling of charts.
 // - Generate or modify PPTX presentations with specific chart aesthetics.
 // - Validate and standardize chart formatting before distribution.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
