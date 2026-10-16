@@ -16,7 +16,7 @@
 // - Build diagnostics tools for PPTX validation.
 // - Automate extraction of connector metadata in .NET applications.
 // - Integrate connector analysis into larger presentation processing workflows.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
