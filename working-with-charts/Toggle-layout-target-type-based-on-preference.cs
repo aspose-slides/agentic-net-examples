@@ -17,7 +17,7 @@
 // - Build command‑line tools that adjust chart formatting in PowerPoint files.
 // - Automate PPTX generation or modification with specific chart layout settings.
 // - Validate chart layout behavior before publishing presentations.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
