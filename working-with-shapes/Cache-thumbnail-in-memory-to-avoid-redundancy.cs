@@ -19,7 +19,7 @@
 // - Build .NET tools that generate or manipulate shape images from PPTX files.
 // - Automate thumbnail extraction and reuse in presentation workflows.
 // - Optimize memory and CPU usage when handling large presentations.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

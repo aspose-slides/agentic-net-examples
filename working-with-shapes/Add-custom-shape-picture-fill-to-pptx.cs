@@ -19,7 +19,7 @@
 // - Build C# utilities for advanced shape styling in PPTX files.
 // - Generate or transform PPTX files with custom graphics in .NET applications.
 // - Validate and test presentation workflows involving custom geometry and fills.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

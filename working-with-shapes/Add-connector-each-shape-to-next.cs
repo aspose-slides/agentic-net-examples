@@ -17,7 +17,7 @@
 // - Build C# utilities for generating connected shape layouts.
 // - Integrate shape-connection logic into .NET PowerPoint automation tools.
 // - Prepare PPTX files with predefined connectors for reporting or presentations.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

@@ -17,7 +17,7 @@
 // - Build C# utilities for PowerPoint shape extraction and image generation.
 // - Integrate shape thumbnail generation into .NET applications.
 // - Validate and preview shape content before publishing or further processing.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

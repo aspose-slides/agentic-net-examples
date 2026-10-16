@@ -18,7 +18,7 @@
 // - Build C# tools for PowerPoint presentation processing and diagram enrichment.
 // - Generate or transform PPTX files with automated connector logic in .NET applications.
 // - Validate shape relationships and connectivity before publishing or integration.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
