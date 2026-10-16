@@ -17,7 +17,7 @@
 // - Build tools that apply complex chart animation from external config files.
 // - Integrate chart animation workflows into .NET applications.
 // - Validate and preview presentation animations before deployment.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
