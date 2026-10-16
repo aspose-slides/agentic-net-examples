@@ -20,7 +20,7 @@
 // - Automate PowerPoint creation that requires grouped categories.
 // - Build C# utilities for customizing chart appearance in PPTX files.
 // - Validate and test presentation workflows involving Treemap charts.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
