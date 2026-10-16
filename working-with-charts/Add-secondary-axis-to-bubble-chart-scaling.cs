@@ -19,7 +19,7 @@
 // - Customize bubble size scaling for secondary data series.
 // - Generate or modify PPTX files programmatically in .NET applications.
 // - Integrate chart axis manipulation into reporting or analytics tools.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
