@@ -19,7 +19,7 @@
 // - Automate reporting scenarios where animated charts need precise timing.
 // - Validate and test presentation workflows involving chart animations and
 //   slide transitions before publishing.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
