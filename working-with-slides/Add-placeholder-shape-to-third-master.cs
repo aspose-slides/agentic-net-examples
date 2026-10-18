@@ -18,7 +18,7 @@
 // - Prepare master slide templates for automated slide generation.
 // - Automate PowerPoint presentation setup in .NET applications.
 // - Ensure consistent placeholder positioning across multiple master slides.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
