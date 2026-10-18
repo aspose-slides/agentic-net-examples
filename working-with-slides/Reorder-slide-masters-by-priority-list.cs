@@ -17,7 +17,7 @@
 // - Build tools that standardize master slide ordering across multiple PPTX files.
 // - Generate or transform PPTX files while preserving a specific master hierarchy.
 // - Validate and enforce presentation templates before distribution.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
