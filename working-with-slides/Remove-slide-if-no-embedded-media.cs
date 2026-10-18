@@ -16,7 +16,7 @@
 // - Build .NET utilities for PowerPoint content validation and transformation.
 // - Integrate slide‑removal logic into larger document‑processing pipelines.
 // - Ensure presentations meet media requirements before distribution.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
