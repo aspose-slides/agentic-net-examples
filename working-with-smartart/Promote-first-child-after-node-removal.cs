@@ -18,7 +18,7 @@
 // - Build C# utilities for manipulating SmartArt structures in PowerPoint files.
 // - Generate or transform PPTX presentations with dynamic hierarchy changes.
 // - Validate SmartArt hierarchy workflows before publishing or integration.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
