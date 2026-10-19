@@ -17,7 +17,7 @@
 // - Build C# utilities for batch processing of PPTX files.
 // - Integrate table content manipulation into .NET applications.
 // - Validate and transform presentation data before distribution.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
