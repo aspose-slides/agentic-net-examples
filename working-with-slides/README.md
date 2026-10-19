@@ -6,8 +6,26 @@
 
 
 
-This category contains 122 standalone C# examples for Aspose.Slides for .NET. These examples help developers automate PowerPoint presentation workflows related to working with slides.
+
+
+
+
+
+
+
+
+This category contains 115 standalone C# examples for Aspose.Slides for .NET. These examples help developers automate PowerPoint presentation workflows related to working with slides.
+These files are tested and verified with Aspose.Slides for .NET v26.10.0.
+
 These files are tested and verified with Aspose.Slides for .NET v26.9.0.
+
+
+
+
+
+
+
+
 
 
 
@@ -23,7 +41,19 @@ These files are tested and verified with Aspose.Slides for .NET v26.9.0.
 
 
 
+
+
+
+
+
+
+
+
 - Automate repetitive presentation-processing tasks in .NET applications.
+
+
+
+
 
 
 
@@ -31,7 +61,19 @@ These files are tested and verified with Aspose.Slides for .NET v26.9.0.
 
 
 
+
+
+
+
 - Provide coding agents with direct, category-specific examples and API usage patterns.
+
+
+
+
+
+
+
+
 
 
 
@@ -47,11 +89,18 @@ These files are tested and verified with Aspose.Slides for .NET v26.9.0.
 
 
 
-Total examples: 122
+
+
+
+
+
+
+
+
+Total examples: 115
 
 - [Add-appendix-section-and-move-slides.cs](./Add-appendix-section-and-move-slides.cs)
 - [Add-cloned-slide-and-add-shape.cs](./Add-cloned-slide-and-add-shape.cs)
-- [Add-cloned-slide-and-set-fade-transition.cs](./Add-cloned-slide-and-set-fade-transition.cs)
 - [Add-empty-layout-slide-to-first-master.cs](./Add-empty-layout-slide-to-first-master.cs)
 - [Add-empty-slide-and-set-background.cs](./Add-empty-slide-and-set-background.cs)
 - [Add-empty-slide-with-layout-and-theme.cs](./Add-empty-slide-with-layout-and-theme.cs)
@@ -63,10 +112,8 @@ Total examples: 122
 - [Add-slide-with-layout-and-title.cs](./Add-slide-with-layout-and-title.cs)
 - [Add-text-placeholder-to-each-layout-slide.cs](./Add-text-placeholder-to-each-layout-slide.cs)
 - [Add-title-slide-and-set-placeholder.cs](./Add-title-slide-and-set-placeholder.cs)
-- [Add-video-placeholder-to-master-auto-play.cs](./Add-video-placeholder-to-master-auto-play.cs)
 - [Adjust-slide-margins-after-size-change.cs](./Adjust-slide-margins-after-size-change.cs)
 - [Adjust-slide-size-and-save-as-PPTX.cs](./Adjust-slide-size-and-save-as-PPTX.cs)
-- [Apply-color-fade-transition-to-slide.cs](./Apply-color-fade-transition-to-slide.cs)
 - [Apply-custom-transition-with-sound-effect.cs](./Apply-custom-transition-with-sound-effect.cs)
 - [Apply-fade-and-zoom-transition-to-slide.cs](./Apply-fade-and-zoom-transition-to-slide.cs)
 - [Apply-random-transition-to-each-slide.cs](./Apply-random-transition-to-each-slide.cs)
@@ -104,7 +151,6 @@ Total examples: 122
 - [Convert-slide-to-high-resolution-tiff.cs](./Convert-slide-to-high-resolution-tiff.cs)
 - [Convert-slide-to-png-with-notes-comments.cs](./Convert-slide-to-png-with-notes-comments.cs)
 - [Create-preview-png-of-first-slide.cs](./Create-preview-png-of-first-slide.cs)
-- [Create-thumbnail-png-for-each-slide-master.cs](./Create-thumbnail-png-for-each-slide-master.cs)
 - [Delete-duplicate-masters-and-clean-unused.cs](./Delete-duplicate-masters-and-clean-unused.cs)
 - [Delete-orphaned-layouts-after-slide-removal.cs](./Delete-orphaned-layouts-after-slide-removal.cs)
 - [Disable-slide-transitions-in-section.cs](./Disable-slide-transitions-in-section.cs)
@@ -126,7 +172,6 @@ Total examples: 122
 - [Insert-clone-after-chart-slide.cs](./Insert-clone-after-chart-slide.cs)
 - [Insert-clone-after-tagged-slide-update-notes.cs](./Insert-clone-after-tagged-slide-update-notes.cs)
 - [Insert-clone-before-chart-slide-update-data.cs](./Insert-clone-before-chart-slide-update-data.cs)
-- [Insert-clone-into-middle-and-set-transition.cs](./Insert-clone-into-middle-and-set-transition.cs)
 - [Insert-cloned-slide-and-set-data-tag.cs](./Insert-cloned-slide-and-set-data-tag.cs)
 - [Insert-cloned-slide-master-at-position-three.cs](./Insert-cloned-slide-master-at-position-three.cs)
 - [Insert-image-into-picture-placeholder-from-path.cs](./Insert-image-into-picture-placeholder-from-path.cs)
@@ -144,7 +189,6 @@ Total examples: 122
 - [Remove-slides-by-title-using-predicate.cs](./Remove-slides-by-title-using-predicate.cs)
 - [Remove-unused-layout-slides-after-bulk-delete.cs](./Remove-unused-layout-slides-after-bulk-delete.cs)
 - [Remove-unused-master-slides-after-cloning.cs](./Remove-unused-master-slides-after-cloning.cs)
-- [Rename-section-to-results-and-update-list.cs](./Rename-section-to-results-and-update-list.cs)
 - [Render-notes-at-bottom-of-slide-image.cs](./Render-notes-at-bottom-of-slide-image.cs)
 - [Reorder-slide-masters-by-priority-list.cs](./Reorder-slide-masters-by-priority-list.cs)
 - [Reorder-slides-by-alphabetical-title.cs](./Reorder-slides-by-alphabetical-title.cs)
@@ -169,10 +213,17 @@ Total examples: 122
 - [Validate-section-preservation-when-saving-PPT.cs](./Validate-section-preservation-when-saving-PPT.cs)
 - [Validate-slide-count-after-add-remove-and-clone.cs](./Validate-slide-count-after-add-remove-and-clone.cs)
 - [Validate-slide-dimensions-against-template.cs](./Validate-slide-dimensions-against-template.cs)
-- [Validate-slide-masters-have-layout-before-save.cs](./Validate-slide-masters-have-layout-before-save.cs)
 - [Verify-persistent-slide-ids-after-removal.cs](./Verify-persistent-slide-ids-after-removal.cs)
 
 ## Related Files
+
+
+
+
+
+
+
+
 
 
 
@@ -184,7 +235,15 @@ Total examples: 122
 
 
 
+
+
+
+
 - [Repository agent guide](../AGENTS.md)
+
+
+
+
 
 
 
@@ -192,9 +251,19 @@ Total examples: 122
 
 
 
+
+
+
+
 <!-- SEO-FAQ:BEGIN -->
 
+
+
 ## Developer FAQ
+
+
+
+
 
 
 
@@ -202,35 +271,71 @@ These questions target common developer searches for Aspose.Slides for .NET `wor
 
 
 
+
+
+
+
 ### How do I convert PowerPoint PPTX files to PDF, HTML, SVG, PNG, or JPEG in C#?
+
+
 
 Use the conversion and export examples to load a `Presentation`, configure format-specific options when needed, and call `presentation.Save(...)` or slide image APIs with the correct `Aspose.Slides.Export.SaveFormat`.
 
 
 
+
+
+
+
 ### How do I add, clone, reorder, or remove PowerPoint slides in .NET?
+
+
 
 Use slide management examples to work with `ISlide`, slide collections, layouts, masters, and sections while preserving presentation structure.
 
 
 
+
+
+
+
 ### How do I use Aspose.Slides for .NET for working with slides in C#?
+
+
 
 Use the `working-with-slides` examples to find standalone C# patterns for working with slides. Each example shows how to load or create an `Aspose.Slides.Presentation`, apply the operation, and save output with the correct Aspose.Slides API.
 
 
 
+
+
+
+
 ### Which working with slides examples are best for coding agents?
+
+
 
 Start with the files listed in this directory and the category AGENTS.md. The strongest search terms for this category are: slide, and, slides, csclone, csadd.
 
 
 
+
+
+
+
 ### Are the working-with-slides examples standalone C# programs?
+
+
 
 Yes. The examples are generated as standalone console-style C# files and are intended to compile and run independently in .NET workflows.
 
 
 
+
+
+
+
 <!-- SEO-FAQ:END -->
+
+
 

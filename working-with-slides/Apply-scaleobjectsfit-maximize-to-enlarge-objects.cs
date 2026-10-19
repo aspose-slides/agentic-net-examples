@@ -16,7 +16,7 @@
 // - Build C# utilities for scaling objects in PowerPoint presentations.
 // - Integrate slide size adjustments into .NET automation workflows.
 // - Validate visual layout after resizing slides in batch processing.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

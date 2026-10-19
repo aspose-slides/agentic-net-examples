@@ -17,7 +17,7 @@
 // - Secure slide content by locking shape properties programmatically.
 // - Build .NET tools for PowerPoint presentation manipulation and validation.
 // - Integrate slide cloning and locking into larger document processing pipelines.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

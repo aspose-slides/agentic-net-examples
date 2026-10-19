@@ -2,7 +2,15 @@
 
 
 
+
+
+
+
 name: working-with-slides
+
+
+
+
 
 
 
@@ -10,7 +18,15 @@ description: C# examples for working-with-slides using Aspose.Slides for .NET
 
 
 
+
+
+
+
 language: csharp
+
+
+
+
 
 
 
@@ -18,11 +34,27 @@ framework: net10.0
 
 
 
+
+
+
+
 parent: ../agents.md
 
 
 
+
+
+
+
 ---
+
+
+
+
+
+
+
+
 
 
 
@@ -38,7 +70,23 @@ parent: ../agents.md
 
 
 
+
+
+
+
+
+
+
+
 ## Persona
+
+
+
+
+
+
+
+
 
 
 
@@ -50,7 +98,19 @@ You are a C# developer specializing in PowerPoint processing using Aspose.Slides
 
 
 
+
+
+
+
 working within the **working-with-slides** category.
+
+
+
+
+
+
+
+
 
 
 
@@ -66,11 +126,31 @@ working within the **working-with-slides** category.
 
 
 
+
+
+
+
+
+
+
+
 - This folder contains examples for **working-with-slides**
 
 
 
+
+
+
+
 - Files are standalone `.cs` examples stored directly in this folder.
+
+
+
+
+
+
+
+
 
 
 
@@ -86,27 +166,42 @@ working within the **working-with-slides** category.
 
 
 
-Verified with version: 26.9.0
-Total files: 122
 
-- `using System;` (122/122 files)
-- `using Aspose.Slides.Export;` (118/122 files)
-- `using Aspose.Slides;` (110/122 files)
-- `using System.IO;` (108/122 files)
-- `using System.Drawing;` (8/122 files)
-- `using System.Collections.Generic;` (8/122 files)
-- `using System.Text.Json;` (5/122 files)
-- `using Aspose.Slides.SlideShow;` (2/122 files)
-- `using Aspose.Slides.LowCode;` (2/122 files)
-- `using Aspose.Slides.Util;` (2/122 files)
-- `using System.IO.Compression;` (1/122 files)
-- `using Aspose.Slides.AI;` (1/122 files)
-- `using System.Reflection;` (1/122 files)
-- `using System.Xml.Linq;` (1/122 files)
-- `using System.Xml;` (1/122 files)
-- `using Aspose.Slides.Charts;` (1/122 files)
+
+
+
+
+
+
+
+Verified with version: 26.10.0
+Total files: 115
+
+- `using System;` (115/115 files)
+- `using Aspose.Slides.Export;` (115/115 files)
+- `using Aspose.Slides;` (107/115 files)
+- `using System.IO;` (103/115 files)
+- `using System.Drawing;` (8/115 files)
+- `using System.Collections.Generic;` (8/115 files)
+- `using System.Text.Json;` (5/115 files)
+- `using Aspose.Slides.SlideShow;` (2/115 files)
+- `using Aspose.Slides.LowCode;` (2/115 files)
+- `using Aspose.Slides.Util;` (2/115 files)
+- `using System.IO.Compression;` (1/115 files)
+- `using Aspose.Slides.AI;` (1/115 files)
+- `using System.Xml.Linq;` (1/115 files)
+- `using System.Xml;` (1/115 files)
+- `using Aspose.Slides.Charts;` (1/115 files)
 
 ## Files in this folder
+
+
+
+
+
+
+
+
 
 
 
@@ -118,7 +213,6 @@ Total files: 122
 |------|----------|-------------|
 | [Add-appendix-section-and-move-slides.cs](./Add-appendix-section-and-move-slides.cs) |  | Add appendix section and move slides |
 | [Add-cloned-slide-and-add-shape.cs](./Add-cloned-slide-and-add-shape.cs) |  | Add cloned slide and add shape |
-| [Add-cloned-slide-and-set-fade-transition.cs](./Add-cloned-slide-and-set-fade-transition.cs) |  | Add cloned slide and set fade transition |
 | [Add-empty-layout-slide-to-first-master.cs](./Add-empty-layout-slide-to-first-master.cs) |  | Add empty layout slide to first master |
 | [Add-empty-slide-and-set-background.cs](./Add-empty-slide-and-set-background.cs) |  | Add empty slide and set background |
 | [Add-empty-slide-with-layout-and-theme.cs](./Add-empty-slide-with-layout-and-theme.cs) |  | Add empty slide with layout and theme |
@@ -130,10 +224,8 @@ Total files: 122
 | [Add-slide-with-layout-and-title.cs](./Add-slide-with-layout-and-title.cs) |  | Add slide with layout and title |
 | [Add-text-placeholder-to-each-layout-slide.cs](./Add-text-placeholder-to-each-layout-slide.cs) |  | Add text placeholder to each layout slide |
 | [Add-title-slide-and-set-placeholder.cs](./Add-title-slide-and-set-placeholder.cs) |  | Add title slide and set placeholder |
-| [Add-video-placeholder-to-master-auto-play.cs](./Add-video-placeholder-to-master-auto-play.cs) |  | Add video placeholder to master auto play |
 | [Adjust-slide-margins-after-size-change.cs](./Adjust-slide-margins-after-size-change.cs) |  | Adjust slide margins after size change |
 | [Adjust-slide-size-and-save-as-PPTX.cs](./Adjust-slide-size-and-save-as-PPTX.cs) |  | Adjust slide size and save as PPTX |
-| [Apply-color-fade-transition-to-slide.cs](./Apply-color-fade-transition-to-slide.cs) |  | Apply color fade transition to slide |
 | [Apply-custom-transition-with-sound-effect.cs](./Apply-custom-transition-with-sound-effect.cs) |  | Apply custom transition with sound effect |
 | [Apply-fade-and-zoom-transition-to-slide.cs](./Apply-fade-and-zoom-transition-to-slide.cs) |  | Apply fade and zoom transition to slide |
 | [Apply-random-transition-to-each-slide.cs](./Apply-random-transition-to-each-slide.cs) |  | Apply random transition to each slide |
@@ -171,7 +263,6 @@ Total files: 122
 | [Convert-slide-to-high-resolution-tiff.cs](./Convert-slide-to-high-resolution-tiff.cs) |  | Convert slide to high resolution tiff |
 | [Convert-slide-to-png-with-notes-comments.cs](./Convert-slide-to-png-with-notes-comments.cs) |  | Convert slide to png with notes comments |
 | [Create-preview-png-of-first-slide.cs](./Create-preview-png-of-first-slide.cs) |  | Create preview png of first slide |
-| [Create-thumbnail-png-for-each-slide-master.cs](./Create-thumbnail-png-for-each-slide-master.cs) |  | Create thumbnail png for each slide master |
 | [Delete-duplicate-masters-and-clean-unused.cs](./Delete-duplicate-masters-and-clean-unused.cs) |  | Delete duplicate masters and clean unused |
 | [Delete-orphaned-layouts-after-slide-removal.cs](./Delete-orphaned-layouts-after-slide-removal.cs) |  | Delete orphaned layouts after slide removal |
 | [Disable-slide-transitions-in-section.cs](./Disable-slide-transitions-in-section.cs) |  | Disable slide transitions in section |
@@ -193,7 +284,6 @@ Total files: 122
 | [Insert-clone-after-chart-slide.cs](./Insert-clone-after-chart-slide.cs) |  | Insert clone after chart slide |
 | [Insert-clone-after-tagged-slide-update-notes.cs](./Insert-clone-after-tagged-slide-update-notes.cs) |  | Insert clone after tagged slide update notes |
 | [Insert-clone-before-chart-slide-update-data.cs](./Insert-clone-before-chart-slide-update-data.cs) |  | Insert clone before chart slide update data |
-| [Insert-clone-into-middle-and-set-transition.cs](./Insert-clone-into-middle-and-set-transition.cs) |  | Insert clone into middle and set transition |
 | [Insert-cloned-slide-and-set-data-tag.cs](./Insert-cloned-slide-and-set-data-tag.cs) |  | Insert cloned slide and set data tag |
 | [Insert-cloned-slide-master-at-position-three.cs](./Insert-cloned-slide-master-at-position-three.cs) |  | Insert cloned slide master at position three |
 | [Insert-image-into-picture-placeholder-from-path.cs](./Insert-image-into-picture-placeholder-from-path.cs) |  | Insert image into picture placeholder from path |
@@ -211,7 +301,6 @@ Total files: 122
 | [Remove-slides-by-title-using-predicate.cs](./Remove-slides-by-title-using-predicate.cs) |  | Remove slides by title using predicate |
 | [Remove-unused-layout-slides-after-bulk-delete.cs](./Remove-unused-layout-slides-after-bulk-delete.cs) |  | Remove unused layout slides after bulk delete |
 | [Remove-unused-master-slides-after-cloning.cs](./Remove-unused-master-slides-after-cloning.cs) |  | Remove unused master slides after cloning |
-| [Rename-section-to-results-and-update-list.cs](./Rename-section-to-results-and-update-list.cs) |  | Rename section to results and update list |
 | [Render-notes-at-bottom-of-slide-image.cs](./Render-notes-at-bottom-of-slide-image.cs) |  | Render notes at bottom of slide image |
 | [Reorder-slide-masters-by-priority-list.cs](./Reorder-slide-masters-by-priority-list.cs) |  | Reorder slide masters by priority list |
 | [Reorder-slides-by-alphabetical-title.cs](./Reorder-slides-by-alphabetical-title.cs) |  | Reorder slides by alphabetical title |
@@ -236,7 +325,6 @@ Total files: 122
 | [Validate-section-preservation-when-saving-PPT.cs](./Validate-section-preservation-when-saving-PPT.cs) |  | Validate section preservation when saving PPT |
 | [Validate-slide-count-after-add-remove-and-clone.cs](./Validate-slide-count-after-add-remove-and-clone.cs) |  | Validate slide count after add remove and clone |
 | [Validate-slide-dimensions-against-template.cs](./Validate-slide-dimensions-against-template.cs) |  | Validate slide dimensions against template |
-| [Validate-slide-masters-have-layout-before-save.cs](./Validate-slide-masters-have-layout-before-save.cs) |  | Validate slide masters have layout before save |
 | [Verify-persistent-slide-ids-after-removal.cs](./Verify-persistent-slide-ids-after-removal.cs) |  | Verify persistent slide ids after removal |
 
 ## Category Statistics
@@ -247,9 +335,25 @@ Total files: 122
 
 
 
-- Total examples: 122
+
+
+
+
+
+
+
+
+- Total examples: 115
 
 ## Key API Surface
+
+
+
+
+
+
+
+
 
 
 
@@ -261,7 +365,15 @@ Total files: 122
 
 
 
+
+
+
+
 - `Aspose.Slides`
+
+
+
+
 
 
 
@@ -269,7 +381,15 @@ Total files: 122
 
 
 
+
+
+
+
 - `Aspose.Slides.Export.SaveFormat.Pptx`
+
+
+
+
 
 
 
@@ -277,7 +397,15 @@ Total files: 122
 
 
 
+
+
+
+
 - `Aspose.Slides.PptxUnsupportedFormatException`
+
+
+
+
 
 
 
@@ -285,7 +413,15 @@ Total files: 122
 
 
 
+
+
+
+
 - `Aspose.Slides.SlideShow.TransitionType.Fade`
+
+
+
+
 
 
 
@@ -293,7 +429,15 @@ Total files: 122
 
 
 
+
+
+
+
 - `Aspose.Slides.ILayoutSlide`
+
+
+
+
 
 
 
@@ -301,7 +445,15 @@ Total files: 122
 
 
 
+
+
+
+
 - `Aspose.Slides.SlideShow.TransitionType`
+
+
+
+
 
 
 
@@ -309,11 +461,27 @@ Total files: 122
 
 
 
+
+
+
+
 - `Aspose.Slides.IShape`
 
 
 
+
+
+
+
 - `Aspose.Slides.ISlideCollection`
+
+
+
+
+
+
+
+
 
 
 
@@ -329,7 +497,23 @@ Total files: 122
 
 
 
+
+
+
+
+
+
+
+
 Most examples follow a pattern similar to:
+
+
+
+
+
+
+
+
 
 
 
@@ -341,7 +525,15 @@ Most examples follow a pattern similar to:
 
 
 
+
+
+
+
 using (Presentation pres = new Presentation("input.pptx"))
+
+
+
+
 
 
 
@@ -349,7 +541,15 @@ using (Presentation pres = new Presentation("input.pptx"))
 
 
 
+
+
+
+
     // operations
+
+
+
+
 
 
 
@@ -357,11 +557,27 @@ using (Presentation pres = new Presentation("input.pptx"))
 
 
 
+
+
+
+
 }
 
 
 
+
+
+
+
 ```
+
+
+
+
+
+
+
+
 
 
 
@@ -377,11 +593,27 @@ using (Presentation pres = new Presentation("input.pptx"))
 
 
 
+
+
+
+
+
+
+
+
 - Load presentations using `new Presentation("file.pptx")`.
 
 
 
+
+
+
+
 - Modify slides through the `Slides` collection.
+
+
+
+
 
 
 
@@ -393,7 +625,19 @@ using (Presentation pres = new Presentation("input.pptx"))
 
 
 
+
+
+
+
+
+
+
+
 <!-- AUTOGENERATED:START -->
+
+
+
+
 
 
 
@@ -401,13 +645,27 @@ Updated: 2026-05-14
 
 
 
+
+
+
+
 <!-- AUTOGENERATED:END -->
+
+
+
+
 
 
 
 <!-- SEO-FAQ:BEGIN -->
 
+
+
 ## Developer FAQ for Coding Agents
+
+
+
+
 
 
 
@@ -415,35 +673,71 @@ Use these Q&A entries when selecting examples from `working-with-slides` for use
 
 
 
+
+
+
+
 ### How do I convert PowerPoint PPTX files to PDF, HTML, SVG, PNG, or JPEG in C#?
+
+
 
 Use the conversion and export examples to load a `Presentation`, configure format-specific options when needed, and call `presentation.Save(...)` or slide image APIs with the correct `Aspose.Slides.Export.SaveFormat`.
 
 
 
+
+
+
+
 ### How do I add, clone, reorder, or remove PowerPoint slides in .NET?
+
+
 
 Use slide management examples to work with `ISlide`, slide collections, layouts, masters, and sections while preserving presentation structure.
 
 
 
+
+
+
+
 ### How do I use Aspose.Slides for .NET for working with slides in C#?
+
+
 
 Use the `working-with-slides` examples to find standalone C# patterns for working with slides. Each example shows how to load or create an `Aspose.Slides.Presentation`, apply the operation, and save output with the correct Aspose.Slides API.
 
 
 
+
+
+
+
 ### Which working with slides examples are best for coding agents?
+
+
 
 Start with the files listed in this directory and the category AGENTS.md. The strongest search terms for this category are: slide, and, slides, csclone, csadd.
 
 
 
+
+
+
+
 ### Are the working-with-slides examples standalone C# programs?
+
+
 
 Yes. The examples are generated as standalone console-style C# files and are intended to compile and run independently in .NET workflows.
 
 
 
+
+
+
+
 <!-- SEO-FAQ:END -->
+
+
 

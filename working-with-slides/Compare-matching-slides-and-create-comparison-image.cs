@@ -18,7 +18,7 @@
 // - Produce visual comparison reports for review or QA.
 // - Build tools that highlight differences between presentation files.
 // - Automate creation of comparison decks for stakeholder presentations.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
