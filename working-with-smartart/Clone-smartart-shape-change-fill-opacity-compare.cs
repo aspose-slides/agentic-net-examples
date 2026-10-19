@@ -17,7 +17,7 @@
 // - Generate before/after screenshots of slide modifications.
 // - Build tools for PowerPoint presentation processing and validation.
 // - Integrate SmartArt manipulation into .NET applications.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
