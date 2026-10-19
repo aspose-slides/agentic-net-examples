@@ -16,7 +16,7 @@
 // - Build C# utilities for PPTX style normalization.
 // - Integrate color‑based shape modifications into .NET applications.
 // - Prepare presentations for branding or accessibility compliance.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

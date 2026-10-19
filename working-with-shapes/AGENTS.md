@@ -2,7 +2,15 @@
 
 
 
+
+
+
+
 name: working-with-shapes
+
+
+
+
 
 
 
@@ -10,7 +18,15 @@ description: C# examples for working-with-shapes using Aspose.Slides for .NET
 
 
 
+
+
+
+
 language: csharp
+
+
+
+
 
 
 
@@ -18,11 +34,27 @@ framework: net10.0
 
 
 
+
+
+
+
 parent: ../agents.md
 
 
 
+
+
+
+
 ---
+
+
+
+
+
+
+
+
 
 
 
@@ -38,7 +70,23 @@ parent: ../agents.md
 
 
 
+
+
+
+
+
+
+
+
 ## Persona
+
+
+
+
+
+
+
+
 
 
 
@@ -50,7 +98,19 @@ You are a C# developer specializing in PowerPoint processing using Aspose.Slides
 
 
 
+
+
+
+
 working within the **working-with-shapes** category.
+
+
+
+
+
+
+
+
 
 
 
@@ -66,11 +126,31 @@ working within the **working-with-shapes** category.
 
 
 
+
+
+
+
+
+
+
+
 - This folder contains examples for **working-with-shapes**
 
 
 
+
+
+
+
 - Files are standalone `.cs` examples stored directly in this folder.
+
+
+
+
+
+
+
+
 
 
 
@@ -86,25 +166,41 @@ working within the **working-with-shapes** category.
 
 
 
-Verified with version: 26.9.0
-Total files: 206
 
-- `using System;` (206/206 files)
-- `using Aspose.Slides.Export;` (202/206 files)
-- `using Aspose.Slides;` (182/206 files)
-- `using System.IO;` (127/206 files)
-- `using System.Drawing;` (41/206 files)
-- `using System.Collections.Generic;` (3/206 files)
-- `using Aspose.Slides.Effects;` (2/206 files)
-- `using System.Diagnostics;` (2/206 files)
-- `using Aspose.Slides.Animation;` (2/206 files)
-- `using Aspose.Slides.Util;` (1/206 files)
-- `using RawValue;` (1/206 files)
-- `using System.Net.Http;` (1/206 files)
-- `using System.IO.Compression;` (1/206 files)
-- `using System.Text.Json;` (1/206 files)
+
+
+
+
+
+
+
+Verified with version: 26.10.0
+Total files: 202
+
+- `using System;` (202/202 files)
+- `using Aspose.Slides.Export;` (202/202 files)
+- `using Aspose.Slides;` (182/202 files)
+- `using System.IO;` (123/202 files)
+- `using System.Drawing;` (39/202 files)
+- `using System.Collections.Generic;` (3/202 files)
+- `using Aspose.Slides.Effects;` (2/202 files)
+- `using System.Diagnostics;` (2/202 files)
+- `using Aspose.Slides.Animation;` (2/202 files)
+- `using Aspose.Slides.Util;` (1/202 files)
+- `using RawValue;` (1/202 files)
+- `using System.Net.Http;` (1/202 files)
+- `using System.IO.Compression;` (1/202 files)
+- `using System.Text.Json;` (1/202 files)
 
 ## Files in this folder
+
+
+
+
+
+
+
+
 
 
 
@@ -130,7 +226,6 @@ Total files: 206
 | [Add-connector-start-second-site-disable-reroute.cs](./Add-connector-start-second-site-disable-reroute.cs) |  | Add connector start second site disable reroute |
 | [Add-curved-connector-3pt-line-thickness.cs](./Add-curved-connector-3pt-line-thickness.cs) |  | Add curved connector 3pt line thickness |
 | [Add-curved-connector-end-dot-fifth-site.cs](./Add-curved-connector-end-dot-fifth-site.cs) |  | Add curved connector end dot fifth site |
-| [Add-curved-connector-line-angle-to-variable.cs](./Add-curved-connector-line-angle-to-variable.cs) |  | Add curved connector line angle to variable |
 | [Add-curved-connector-reroute-and-move-shapes.cs](./Add-curved-connector-reroute-and-move-shapes.cs) |  | Add curved connector reroute and move shapes |
 | [Add-curved-connector-start-dot-third-angle.cs](./Add-curved-connector-start-dot-third-angle.cs) |  | Add curved connector start dot third angle |
 | [Add-custom-shape-picture-fill-to-pptx.cs](./Add-custom-shape-picture-fill-to-pptx.cs) |  | Add custom shape picture fill to pptx |
@@ -175,7 +270,6 @@ Total files: 206
 | [Add-line-shape-cap-round-verify.cs](./Add-line-shape-cap-round-verify.cs) |  | Add line shape cap round verify |
 | [Add-line-shape-custom-cap-both-ends.cs](./Add-line-shape-custom-cap-both-ends.cs) |  | Add line shape custom cap both ends |
 | [Add-line-shape-custom-dash-pattern.cs](./Add-line-shape-custom-dash-pattern.cs) |  | Add line shape custom dash pattern |
-| [Add-line-shape-custom-dash-visual-verify.cs](./Add-line-shape-custom-dash-visual-verify.cs) |  | Add line shape custom dash visual verify |
 | [Add-line-shape-dash-color-variation.cs](./Add-line-shape-dash-color-variation.cs) |  | Add line shape dash color variation |
 | [Add-line-shape-dashdotdot-verify-viewer.cs](./Add-line-shape-dashdotdot-verify-viewer.cs) |  | Add line shape dashdotdot verify viewer |
 | [Add-line-shape-email-hyperlink-with-subject.cs](./Add-line-shape-email-hyperlink-with-subject.cs) |  | Add line shape email hyperlink with subject |
@@ -243,7 +337,6 @@ Total files: 206
 | [Duplicate-group-shape-move-and-save-pptx.cs](./Duplicate-group-shape-move-and-save-pptx.cs) |  | Duplicate group shape move and save pptx |
 | [Export-group-alttext-to-csv-from-PPTX.cs](./Export-group-alttext-to-csv-from-PPTX.cs) |  | Export group alttext to csv from PPTX |
 | [Export-shape-fill-and-line-to-JSON.cs](./Export-shape-fill-and-line-to-JSON.cs) |  | Export shape fill and line to JSON |
-| [Export-shape-thumbnail-to-PNG-base64.cs](./Export-shape-thumbnail-to-PNG-base64.cs) |  | Export shape thumbnail to PNG base64 |
 | [Export-shape-thumbnails-to-BMP-legacy.cs](./Export-shape-thumbnails-to-BMP-legacy.cs) |  | Export shape thumbnails to BMP legacy |
 | [Export-shape-thumbnails-to-JPEG-preserve-aspect.cs](./Export-shape-thumbnails-to-JPEG-preserve-aspect.cs) |  | Export shape thumbnails to JPEG preserve aspect |
 | [Generate-chart-shape-thumbnail-scale-08.cs](./Generate-chart-shape-thumbnail-scale-08.cs) |  | Generate chart shape thumbnail scale 08 |
@@ -303,7 +396,6 @@ Total files: 206
 | [Set-line-shape-green-color-verify-effective-data.cs](./Set-line-shape-green-color-verify-effective-data.cs) |  | Set line shape green color verify effective data |
 | [Set-master-slide-dashdot-pattern.cs](./Set-master-slide-dashdot-pattern.cs) |  | Set master slide dashdot pattern |
 | [Set-orthographic-camera-on-slide-five.cs](./Set-orthographic-camera-on-slide-five.cs) |  | Set orthographic camera on slide five |
-| [Set-polyline-line-join-round.cs](./Set-polyline-line-join-round.cs) |  | Set polyline line join round |
 | [Set-rectangle-dash-solid-then-dashdot-verify.cs](./Set-rectangle-dash-solid-then-dashdot-verify.cs) |  | Set rectangle dash solid then dashdot verify |
 | [Set-rectangle-line-width-to-2pt.cs](./Set-rectangle-line-width-to-2pt.cs) |  | Set rectangle line width to 2pt |
 | [Set-rectangle-picture-fill-uniform-verify.cs](./Set-rectangle-picture-fill-uniform-verify.cs) |  | Set rectangle picture fill uniform verify |
@@ -329,9 +421,25 @@ Total files: 206
 
 
 
-- Total examples: 206
+
+
+
+
+
+
+
+
+- Total examples: 202
 
 ## Key API Surface
+
+
+
+
+
+
+
+
 
 
 
@@ -343,7 +451,15 @@ Total files: 206
 
 
 
+
+
+
+
 - `Aspose.Slides`
+
+
+
+
 
 
 
@@ -351,7 +467,15 @@ Total files: 206
 
 
 
+
+
+
+
 - `Aspose.Slides.Export.SaveFormat.Pptx`
+
+
+
+
 
 
 
@@ -359,7 +483,15 @@ Total files: 206
 
 
 
+
+
+
+
 - `Aspose.Slides.ISlide`
+
+
+
+
 
 
 
@@ -367,7 +499,15 @@ Total files: 206
 
 
 
+
+
+
+
 - `Aspose.Slides.IShape`
+
+
+
+
 
 
 
@@ -375,7 +515,15 @@ Total files: 206
 
 
 
+
+
+
+
 - `Aspose.Slides.FillType.Solid`
+
+
+
+
 
 
 
@@ -383,7 +531,15 @@ Total files: 206
 
 
 
+
+
+
+
 - `Aspose.Slides.ShapeType.Line`
+
+
+
+
 
 
 
@@ -391,11 +547,27 @@ Total files: 206
 
 
 
+
+
+
+
 - `Aspose.Slides.IShapeCollection`
 
 
 
+
+
+
+
 - `Aspose.Slides.IConnector`
+
+
+
+
+
+
+
+
 
 
 
@@ -411,7 +583,23 @@ Total files: 206
 
 
 
+
+
+
+
+
+
+
+
 Most examples follow a pattern similar to:
+
+
+
+
+
+
+
+
 
 
 
@@ -423,7 +611,15 @@ Most examples follow a pattern similar to:
 
 
 
+
+
+
+
 using (Presentation pres = new Presentation("input.pptx"))
+
+
+
+
 
 
 
@@ -431,7 +627,15 @@ using (Presentation pres = new Presentation("input.pptx"))
 
 
 
+
+
+
+
     // operations
+
+
+
+
 
 
 
@@ -439,11 +643,27 @@ using (Presentation pres = new Presentation("input.pptx"))
 
 
 
+
+
+
+
 }
 
 
 
+
+
+
+
 ```
+
+
+
+
+
+
+
+
 
 
 
@@ -459,11 +679,27 @@ using (Presentation pres = new Presentation("input.pptx"))
 
 
 
+
+
+
+
+
+
+
+
 - Load presentations using `new Presentation("file.pptx")`.
 
 
 
+
+
+
+
 - Modify slides through the `Slides` collection.
+
+
+
+
 
 
 
@@ -475,7 +711,19 @@ using (Presentation pres = new Presentation("input.pptx"))
 
 
 
+
+
+
+
+
+
+
+
 <!-- AUTOGENERATED:START -->
+
+
+
+
 
 
 
@@ -483,13 +731,27 @@ Updated: 2026-05-13
 
 
 
+
+
+
+
 <!-- AUTOGENERATED:END -->
+
+
+
+
 
 
 
 <!-- SEO-FAQ:BEGIN -->
 
+
+
 ## Developer FAQ for Coding Agents
+
+
+
+
 
 
 
@@ -497,35 +759,71 @@ Use these Q&A entries when selecting examples from `working-with-shapes` for use
 
 
 
+
+
+
+
 ### How do I add, clone, reorder, or remove PowerPoint slides in .NET?
+
+
 
 Use slide management examples to work with `ISlide`, slide collections, layouts, masters, and sections while preserving presentation structure.
 
 
 
+
+
+
+
 ### How do I edit PowerPoint shapes, text, tables, or SmartArt in C#?
+
+
 
 Use the shape, text, table, and SmartArt examples to locate shapes on a slide, cast to the appropriate Aspose.Slides interfaces, update content or formatting, and save the modified PPTX.
 
 
 
+
+
+
+
 ### How do I use Aspose.Slides for .NET for working with shapes in C#?
+
+
 
 Use the `working-with-shapes` examples to find standalone C# patterns for working with shapes. Each example shows how to load or create an `Aspose.Slides.Presentation`, apply the operation, and save output with the correct Aspose.Slides API.
 
 
 
+
+
+
+
 ### Which working with shapes examples are best for coding agents?
+
+
 
 Start with the files listed in this directory and the category AGENTS.md. The strongest search terms for this category are: csadd, shape, line, pptx, connector.
 
 
 
+
+
+
+
 ### Are the working-with-shapes examples standalone C# programs?
+
+
 
 Yes. The examples are generated as standalone console-style C# files and are intended to compile and run independently in .NET workflows.
 
 
 
+
+
+
+
 <!-- SEO-FAQ:END -->
+
+
 

@@ -6,8 +6,26 @@
 
 
 
-This category contains 206 standalone C# examples for Aspose.Slides for .NET. These examples help developers automate PowerPoint presentation workflows related to working with shapes.
+
+
+
+
+
+
+
+
+This category contains 202 standalone C# examples for Aspose.Slides for .NET. These examples help developers automate PowerPoint presentation workflows related to working with shapes.
+These files are tested and verified with Aspose.Slides for .NET v26.10.0.
+
 These files are tested and verified with Aspose.Slides for .NET v26.9.0.
+
+
+
+
+
+
+
+
 
 
 
@@ -23,7 +41,19 @@ These files are tested and verified with Aspose.Slides for .NET v26.9.0.
 
 
 
+
+
+
+
+
+
+
+
 - Automate repetitive presentation-processing tasks in .NET applications.
+
+
+
+
 
 
 
@@ -31,7 +61,19 @@ These files are tested and verified with Aspose.Slides for .NET v26.9.0.
 
 
 
+
+
+
+
 - Provide coding agents with direct, category-specific examples and API usage patterns.
+
+
+
+
+
+
+
+
 
 
 
@@ -47,7 +89,15 @@ These files are tested and verified with Aspose.Slides for .NET v26.9.0.
 
 
 
-Total examples: 206
+
+
+
+
+
+
+
+
+Total examples: 202
 
 - [Add-adjusted-custom-shape-gradient-to-pptx.cs](./Add-adjusted-custom-shape-gradient-to-pptx.cs)
 - [Add-arrow-line-to-slide-two.cs](./Add-arrow-line-to-slide-two.cs)
@@ -65,7 +115,6 @@ Total examples: 206
 - [Add-connector-start-second-site-disable-reroute.cs](./Add-connector-start-second-site-disable-reroute.cs)
 - [Add-curved-connector-3pt-line-thickness.cs](./Add-curved-connector-3pt-line-thickness.cs)
 - [Add-curved-connector-end-dot-fifth-site.cs](./Add-curved-connector-end-dot-fifth-site.cs)
-- [Add-curved-connector-line-angle-to-variable.cs](./Add-curved-connector-line-angle-to-variable.cs)
 - [Add-curved-connector-reroute-and-move-shapes.cs](./Add-curved-connector-reroute-and-move-shapes.cs)
 - [Add-curved-connector-start-dot-third-angle.cs](./Add-curved-connector-start-dot-third-angle.cs)
 - [Add-custom-shape-picture-fill-to-pptx.cs](./Add-custom-shape-picture-fill-to-pptx.cs)
@@ -110,7 +159,6 @@ Total examples: 206
 - [Add-line-shape-cap-round-verify.cs](./Add-line-shape-cap-round-verify.cs)
 - [Add-line-shape-custom-cap-both-ends.cs](./Add-line-shape-custom-cap-both-ends.cs)
 - [Add-line-shape-custom-dash-pattern.cs](./Add-line-shape-custom-dash-pattern.cs)
-- [Add-line-shape-custom-dash-visual-verify.cs](./Add-line-shape-custom-dash-visual-verify.cs)
 - [Add-line-shape-dash-color-variation.cs](./Add-line-shape-dash-color-variation.cs)
 - [Add-line-shape-dashdotdot-verify-viewer.cs](./Add-line-shape-dashdotdot-verify-viewer.cs)
 - [Add-line-shape-email-hyperlink-with-subject.cs](./Add-line-shape-email-hyperlink-with-subject.cs)
@@ -178,7 +226,6 @@ Total examples: 206
 - [Duplicate-group-shape-move-and-save-pptx.cs](./Duplicate-group-shape-move-and-save-pptx.cs)
 - [Export-group-alttext-to-csv-from-PPTX.cs](./Export-group-alttext-to-csv-from-PPTX.cs)
 - [Export-shape-fill-and-line-to-JSON.cs](./Export-shape-fill-and-line-to-JSON.cs)
-- [Export-shape-thumbnail-to-PNG-base64.cs](./Export-shape-thumbnail-to-PNG-base64.cs)
 - [Export-shape-thumbnails-to-BMP-legacy.cs](./Export-shape-thumbnails-to-BMP-legacy.cs)
 - [Export-shape-thumbnails-to-JPEG-preserve-aspect.cs](./Export-shape-thumbnails-to-JPEG-preserve-aspect.cs)
 - [Generate-chart-shape-thumbnail-scale-08.cs](./Generate-chart-shape-thumbnail-scale-08.cs)
@@ -238,7 +285,6 @@ Total examples: 206
 - [Set-line-shape-green-color-verify-effective-data.cs](./Set-line-shape-green-color-verify-effective-data.cs)
 - [Set-master-slide-dashdot-pattern.cs](./Set-master-slide-dashdot-pattern.cs)
 - [Set-orthographic-camera-on-slide-five.cs](./Set-orthographic-camera-on-slide-five.cs)
-- [Set-polyline-line-join-round.cs](./Set-polyline-line-join-round.cs)
 - [Set-rectangle-dash-solid-then-dashdot-verify.cs](./Set-rectangle-dash-solid-then-dashdot-verify.cs)
 - [Set-rectangle-line-width-to-2pt.cs](./Set-rectangle-line-width-to-2pt.cs)
 - [Set-rectangle-picture-fill-uniform-verify.cs](./Set-rectangle-picture-fill-uniform-verify.cs)
@@ -264,7 +310,19 @@ Total examples: 206
 
 
 
+
+
+
+
+
+
+
+
 - [Category instructions](./AGENTS.md)
+
+
+
+
 
 
 
@@ -272,13 +330,27 @@ Total examples: 206
 
 
 
+
+
+
+
 - [Structured index](../index.json)
+
+
+
+
 
 
 
 <!-- SEO-FAQ:BEGIN -->
 
+
+
 ## Developer FAQ
+
+
+
+
 
 
 
@@ -286,35 +358,71 @@ These questions target common developer searches for Aspose.Slides for .NET `wor
 
 
 
+
+
+
+
 ### How do I add, clone, reorder, or remove PowerPoint slides in .NET?
+
+
 
 Use slide management examples to work with `ISlide`, slide collections, layouts, masters, and sections while preserving presentation structure.
 
 
 
+
+
+
+
 ### How do I edit PowerPoint shapes, text, tables, or SmartArt in C#?
+
+
 
 Use the shape, text, table, and SmartArt examples to locate shapes on a slide, cast to the appropriate Aspose.Slides interfaces, update content or formatting, and save the modified PPTX.
 
 
 
+
+
+
+
 ### How do I use Aspose.Slides for .NET for working with shapes in C#?
+
+
 
 Use the `working-with-shapes` examples to find standalone C# patterns for working with shapes. Each example shows how to load or create an `Aspose.Slides.Presentation`, apply the operation, and save output with the correct Aspose.Slides API.
 
 
 
+
+
+
+
 ### Which working with shapes examples are best for coding agents?
+
+
 
 Start with the files listed in this directory and the category AGENTS.md. The strongest search terms for this category are: csadd, shape, line, pptx, connector.
 
 
 
+
+
+
+
 ### Are the working-with-shapes examples standalone C# programs?
+
+
 
 Yes. The examples are generated as standalone console-style C# files and are intended to compile and run independently in .NET workflows.
 
 
 
+
+
+
+
 <!-- SEO-FAQ:END -->
+
+
 

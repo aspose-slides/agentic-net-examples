@@ -12,7 +12,7 @@
 // - Build C# utilities that extract slide images at enhanced quality.
 // - Integrate slide thumbnail generation into .NET applications or CI pipelines.
 // - Prepare assets for responsive web or mobile display where higher DPI is required.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

@@ -16,7 +16,7 @@
 // - Build C# utilities for batch processing of PowerPoint presentations.
 // - Integrate shape formatting logic into .NET applications.
 // - Prepare presentations with consistent styling before distribution.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

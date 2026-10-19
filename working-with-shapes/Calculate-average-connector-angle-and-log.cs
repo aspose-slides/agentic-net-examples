@@ -18,7 +18,7 @@
 // - Build C# utilities for analyzing slide geometry.
 // - Generate reports or logs for PowerPoint content validation.
 // - Integrate connector angle analysis into .NET automation workflows.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
