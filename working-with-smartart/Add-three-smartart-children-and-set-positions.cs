@@ -16,7 +16,7 @@
 // - Automate creation of hierarchical diagrams in PowerPoint files.
 // - Build .NET tools for generating or modifying SmartArt structures.
 // - Validate SmartArt layout modifications before deployment.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides;
