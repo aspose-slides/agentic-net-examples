@@ -2,7 +2,15 @@
 
 
 
+
+
+
+
 name: working-with-smartart
+
+
+
+
 
 
 
@@ -10,7 +18,15 @@ description: C# examples for working-with-smartart using Aspose.Slides for .NET
 
 
 
+
+
+
+
 language: csharp
+
+
+
+
 
 
 
@@ -18,11 +34,27 @@ framework: net10.0
 
 
 
+
+
+
+
 parent: ../agents.md
 
 
 
+
+
+
+
 ---
+
+
+
+
+
+
+
+
 
 
 
@@ -38,7 +70,23 @@ parent: ../agents.md
 
 
 
+
+
+
+
+
+
+
+
 ## Persona
+
+
+
+
+
+
+
+
 
 
 
@@ -50,7 +98,19 @@ You are a C# developer specializing in PowerPoint processing using Aspose.Slides
 
 
 
+
+
+
+
 working within the **working-with-smartart** category.
+
+
+
+
+
+
+
+
 
 
 
@@ -66,11 +126,31 @@ working within the **working-with-smartart** category.
 
 
 
+
+
+
+
+
+
+
+
 - This folder contains examples for **working-with-smartart**
 
 
 
+
+
+
+
 - Files are standalone `.cs` examples stored directly in this folder.
+
+
+
+
+
+
+
+
 
 
 
@@ -86,24 +166,39 @@ working within the **working-with-smartart** category.
 
 
 
-Verified with version: 26.9.0
-Total files: 119
 
-- `using System;` (119/119 files)
-- `using Aspose.Slides.Export;` (113/119 files)
-- `using Aspose.Slides;` (106/119 files)
-- `using System.IO;` (93/119 files)
-- `using Aspose.Slides.SmartArt;` (73/119 files)
-- `using System.Collections.Generic;` (12/119 files)
-- `using System.Drawing;` (8/119 files)
-- `using System.Text.Json;` (3/119 files)
-- `using System.Net.Http;` (2/119 files)
-- `using System.Xml;` (1/119 files)
-- `using System.Threading.Tasks;` (1/119 files)
-- `using System.IO.Compression;` (1/119 files)
-- `using System.Net;` (1/119 files)
+
+
+
+
+
+
+
+Verified with version: 26.10.0
+Total files: 113
+
+- `using System;` (113/113 files)
+- `using Aspose.Slides.Export;` (113/113 files)
+- `using Aspose.Slides;` (106/113 files)
+- `using System.IO;` (89/113 files)
+- `using Aspose.Slides.SmartArt;` (73/113 files)
+- `using System.Collections.Generic;` (12/113 files)
+- `using System.Drawing;` (7/113 files)
+- `using System.Text.Json;` (3/113 files)
+- `using System.Xml;` (1/113 files)
+- `using System.Net.Http;` (1/113 files)
+- `using System.IO.Compression;` (1/113 files)
+- `using System.Net;` (1/113 files)
 
 ## Files in this folder
+
+
+
+
+
+
+
+
 
 
 
@@ -117,7 +212,6 @@ Total files: 119
 | [Add-smartart-node-assistant-verify-indentation.cs](./Add-smartart-node-assistant-verify-indentation.cs) |  | Add smartart node assistant verify indentation |
 | [Add-smartart-node-custom-tag-export-XML.cs](./Add-smartart-node-custom-tag-export-XML.cs) |  | Add smartart node custom tag export XML |
 | [Add-smartart-node-custom-text-solid-accent.cs](./Add-smartart-node-custom-text-solid-accent.cs) |  | Add smartart node custom text solid accent |
-| [Add-smartart-node-gradient-three-stops-verify.cs](./Add-smartart-node-gradient-three-stops-verify.cs) |  | Add smartart node gradient three stops verify |
 | [Add-smartart-node-long-text-wrap.cs](./Add-smartart-node-long-text-wrap.cs) |  | Add smartart node long text wrap |
 | [Add-smartart-node-multilingual-RTL-render.cs](./Add-smartart-node-multilingual-RTL-render.cs) |  | Add smartart node multilingual RTL render |
 | [Add-smartart-node-multilingual-rtl-text.cs](./Add-smartart-node-multilingual-rtl-text.cs) |  | Add smartart node multilingual rtl text |
@@ -125,7 +219,6 @@ Total files: 119
 | [Add-smartart-node-pattern-fill-verify.cs](./Add-smartart-node-pattern-fill-verify.cs) |  | Add smartart node pattern fill verify |
 | [Add-smartart-node-position-two-tag-log.cs](./Add-smartart-node-position-two-tag-log.cs) |  | Add smartart node position two tag log |
 | [Add-smartart-node-setposition-verify.cs](./Add-smartart-node-setposition-verify.cs) |  | Add smartart node setposition verify |
-| [Add-smartart-node-to-end-with-text.cs](./Add-smartart-node-to-end-with-text.cs) |  | Add smartart node to end with text |
 | [Add-smartart-node-with-unique-id.cs](./Add-smartart-node-with-unique-id.cs) |  | Add smartart node with unique id |
 | [Add-three-smartart-children-and-set-positions.cs](./Add-three-smartart-children-and-set-positions.cs) |  | Add three smartart children and set positions |
 | [Apply-assistant-flag-from-hierarchy-and-save.cs](./Apply-assistant-flag-from-hierarchy-and-save.cs) |  | Apply assistant flag from hierarchy and save |
@@ -133,12 +226,10 @@ Total files: 119
 | [Apply-gradient-three-stops-orientation-verify.cs](./Apply-gradient-three-stops-orientation-verify.cs) |  | Apply gradient three stops orientation verify |
 | [Apply-picture-fill-to-smartart-node.cs](./Apply-picture-fill-to-smartart-node.cs) |  | Apply picture fill to smartart node |
 | [Apply-pictureaccentblocks-layout-fill-nodes-from-folder.cs](./Apply-pictureaccentblocks-layout-fill-nodes-from-folder.cs) |  | Apply pictureaccentblocks layout fill nodes from folder |
-| [Apply-random-fill-to-smartart-nodes-PNG.cs](./Apply-random-fill-to-smartart-nodes-PNG.cs) |  | Apply random fill to smartart nodes PNG |
 | [Assign-database-pictures-to-org-chart-nodes.cs](./Assign-database-pictures-to-org-chart-nodes.cs) |  | Assign database pictures to org chart nodes |
 | [Assign-random-fill-to-smartart-nodes-png.cs](./Assign-random-fill-to-smartart-nodes-png.cs) |  | Assign random fill to smartart nodes png |
 | [Assign-unique-identifiers-to-smartart-nodes.cs](./Assign-unique-identifiers-to-smartart-nodes.cs) |  | Assign unique identifiers to smartart nodes |
 | [Assign-unique-tag-to-smartart-node.cs](./Assign-unique-tag-to-smartart-node.cs) |  | Assign unique tag to smartart node |
-| [Assign-URL-pictures-to-org-chart-nodes.cs](./Assign-URL-pictures-to-org-chart-nodes.cs) |  | Assign URL pictures to org chart nodes |
 | [Batch-convert-smartart-pptx-folder-to-png.cs](./Batch-convert-smartart-pptx-folder-to-png.cs) |  | Batch convert smartart pptx folder to png |
 | [Change-org-chart-type-to-vertical.cs](./Change-org-chart-type-to-vertical.cs) |  | Change org chart type to vertical |
 | [Change-smartart-node-font-family-to-arial.cs](./Change-smartart-node-font-family-to-arial.cs) |  | Change smartart node font family to arial |
@@ -153,7 +244,6 @@ Total files: 119
 | [Clone-smartart-shape-move-to-250-150-ensure-no-intersection.cs](./Clone-smartart-shape-move-to-250-150-ensure-no-intersection.cs) |  | Clone smartart shape move to 250 150 ensure no intersection |
 | [Clone-smartart-shape-move-verify-no-overlap.cs](./Clone-smartart-shape-move-verify-no-overlap.cs) |  | Clone smartart shape move verify no overlap |
 | [Clone-smartart-shape-rotate-90-ensure-integrity.cs](./Clone-smartart-shape-rotate-90-ensure-integrity.cs) |  | Clone smartart shape rotate 90 ensure integrity |
-| [Clone-smartart-shape-set-horizontal-compare-nodes.cs](./Clone-smartart-shape-set-horizontal-compare-nodes.cs) |  | Clone smartart shape set horizontal compare nodes |
 | [Clone-smartart-shape-set-opacity-compare-diff.cs](./Clone-smartart-shape-set-opacity-compare-diff.cs) |  | Clone smartart shape set opacity compare diff |
 | [Clone-smartart-shape-set-radial-compare-nodes.cs](./Clone-smartart-shape-set-radial-compare-nodes.cs) |  | Clone smartart shape set radial compare nodes |
 | [Clone-smartart-shape-to-other-slide.cs](./Clone-smartart-shape-to-other-slide.cs) |  | Clone smartart shape to other slide |
@@ -182,7 +272,6 @@ Total files: 119
 | [Find-smartart-node-by-text.cs](./Find-smartart-node-by-text.cs) |  | Find smartart node by text |
 | [Flag-smartart-node-long-text-truncate.cs](./Flag-smartart-node-long-text-truncate.cs) |  | Flag smartart node long text truncate |
 | [Generate-smartart-child-node-thumbnails-100x100-embed.cs](./Generate-smartart-child-node-thumbnails-100x100-embed.cs) |  | Generate smartart child node thumbnails 100x100 embed |
-| [Generate-smartart-child-node-thumbnails-embed-summary.cs](./Generate-smartart-child-node-thumbnails-embed-summary.cs) |  | Generate smartart child node thumbnails embed summary |
 | [Generate-smartart-node-CSV-report.cs](./Generate-smartart-node-CSV-report.cs) |  | Generate smartart node CSV report |
 | [Get-smartart-third-child-node-coordinates.cs](./Get-smartart-third-child-node-coordinates.cs) |  | Get smartart third child node coordinates |
 | [Identify-assistant-nodes-and-clear-flags.cs](./Identify-assistant-nodes-and-clear-flags.cs) |  | Identify assistant nodes and clear flags |
@@ -241,9 +330,25 @@ Total files: 119
 
 
 
-- Total examples: 119
+
+
+
+
+
+
+
+
+- Total examples: 113
 
 ## Key API Surface
+
+
+
+
+
+
+
+
 
 
 
@@ -255,7 +360,15 @@ Total files: 119
 
 
 
+
+
+
+
 - `Aspose.Slides.Presentation`
+
+
+
+
 
 
 
@@ -263,7 +376,15 @@ Total files: 119
 
 
 
+
+
+
+
 - `Aspose.Slides.SmartArt.ISmartArt`
+
+
+
+
 
 
 
@@ -271,7 +392,15 @@ Total files: 119
 
 
 
+
+
+
+
 - `Aspose.Slides.Export.SaveFormat.Pptx`
+
+
+
+
 
 
 
@@ -279,7 +408,15 @@ Total files: 119
 
 
 
+
+
+
+
 - `Aspose.Slides.SmartArt.ISmartArtNode`
+
+
+
+
 
 
 
@@ -287,7 +424,15 @@ Total files: 119
 
 
 
+
+
+
+
 - `Aspose.Slides.SmartArt.SmartArt`
+
+
+
+
 
 
 
@@ -295,7 +440,15 @@ Total files: 119
 
 
 
+
+
+
+
 - `Aspose.Slides.SmartArt.SmartArtLayoutType.BasicBlockList`
+
+
+
+
 
 
 
@@ -303,11 +456,27 @@ Total files: 119
 
 
 
+
+
+
+
 - `Aspose.Slides.SmartArt.ISmartArtShape`
 
 
 
+
+
+
+
 - `Aspose.Slides.SmartArt.SmartArtNode`
+
+
+
+
+
+
+
+
 
 
 
@@ -323,7 +492,23 @@ Total files: 119
 
 
 
+
+
+
+
+
+
+
+
 Most examples follow a pattern similar to:
+
+
+
+
+
+
+
+
 
 
 
@@ -335,7 +520,15 @@ Most examples follow a pattern similar to:
 
 
 
+
+
+
+
 using (Presentation pres = new Presentation("input.pptx"))
+
+
+
+
 
 
 
@@ -343,7 +536,15 @@ using (Presentation pres = new Presentation("input.pptx"))
 
 
 
+
+
+
+
     // operations
+
+
+
+
 
 
 
@@ -351,11 +552,27 @@ using (Presentation pres = new Presentation("input.pptx"))
 
 
 
+
+
+
+
 }
 
 
 
+
+
+
+
 ```
+
+
+
+
+
+
+
+
 
 
 
@@ -371,11 +588,27 @@ using (Presentation pres = new Presentation("input.pptx"))
 
 
 
+
+
+
+
+
+
+
+
 - Load presentations using `new Presentation("file.pptx")`.
 
 
 
+
+
+
+
 - Modify slides through the `Slides` collection.
+
+
+
+
 
 
 
@@ -387,7 +620,19 @@ using (Presentation pres = new Presentation("input.pptx"))
 
 
 
+
+
+
+
+
+
+
+
 <!-- AUTOGENERATED:START -->
+
+
+
+
 
 
 
@@ -395,13 +640,27 @@ Updated: 2026-05-19
 
 
 
+
+
+
+
 <!-- AUTOGENERATED:END -->
+
+
+
+
 
 
 
 <!-- SEO-FAQ:BEGIN -->
 
+
+
 ## Developer FAQ for Coding Agents
+
+
+
+
 
 
 
@@ -409,41 +668,83 @@ Use these Q&A entries when selecting examples from `working-with-smartart` for u
 
 
 
+
+
+
+
 ### How do I convert PowerPoint PPTX files to PDF, HTML, SVG, PNG, or JPEG in C#?
+
+
 
 Use the conversion and export examples to load a `Presentation`, configure format-specific options when needed, and call `presentation.Save(...)` or slide image APIs with the correct `Aspose.Slides.Export.SaveFormat`.
 
 
 
+
+
+
+
 ### How do I create or edit PowerPoint charts in C# with Aspose.Slides?
+
+
 
 Use chart examples to add chart shapes, access `Aspose.Slides.Charts.IChart`, update chart data, format series, configure axes, and save the presentation.
 
 
 
+
+
+
+
 ### How do I edit PowerPoint shapes, text, tables, or SmartArt in C#?
+
+
 
 Use the shape, text, table, and SmartArt examples to locate shapes on a slide, cast to the appropriate Aspose.Slides interfaces, update content or formatting, and save the modified PPTX.
 
 
 
+
+
+
+
 ### How do I use Aspose.Slides for .NET for working with smartart in C#?
+
+
 
 Use the `working-with-smartart` examples to find standalone C# patterns for working with smartart. Each example shows how to load or create an `Aspose.Slides.Presentation`, apply the operation, and save output with the correct Aspose.Slides API.
 
 
 
+
+
+
+
 ### Which working with smartart examples are best for coding agents?
+
+
 
 Start with the files listed in this directory and the category AGENTS.md. The strongest search terms for this category are: smartart, node, shape, png, nodes.
 
 
 
+
+
+
+
 ### Are the working-with-smartart examples standalone C# programs?
+
+
 
 Yes. The examples are generated as standalone console-style C# files and are intended to compile and run independently in .NET workflows.
 
 
 
+
+
+
+
 <!-- SEO-FAQ:END -->
+
+
 
