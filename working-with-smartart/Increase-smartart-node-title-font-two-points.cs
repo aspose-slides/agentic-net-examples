@@ -17,7 +17,7 @@
 // - Create C# utilities for bulk font size adjustments in PowerPoint files.
 // - Integrate SmartArt text formatting into .NET automation workflows.
 // - Validate and modify PPTX content before distribution.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
