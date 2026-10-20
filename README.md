@@ -1,4 +1,4 @@
-# Aspose.Slides for .NET Examples (V26.9.0)
+# Aspose.Slides for .NET Examples (V26.10.0)
        
 
 AI-friendly repository containing validated C# examples for Aspose.Slides for .NET API.
@@ -12,23 +12,23 @@ This repository provides working code examples demonstrating Aspose.Slides for .
 Examples are organized by feature category:
 - `3d-presentations/` - 29 example(s)
 - `animations/` - 34 example(s)
-- `comments-and-notes/` - 118 example(s)
+- `comments-and-notes/` - 116 example(s)
 - `conversion/` - 376 example(s)
-- `design-presentations/` - 157 example(s)
-- `manage-presentation/` - 64 example(s)
-- `manage-presentation-content/` - 98 example(s)
+- `design-presentations/` - 156 example(s)
+- `manage-presentation/` - 59 example(s)
+- `manage-presentation-content/` - 97 example(s)
 - `manage-presentation-media-files/` - 144 example(s)
 - `manage-presentation-text/` - 102 example(s)
 - `manage-tags-and-custom-data/` - 35 example(s)
-- `math-equations/` - 29 example(s)
+- `math-equations/` - 28 example(s)
 - `presentation-ink-objects/` - 30 example(s)
 - `secure-presentations/` - 28 example(s)
 - `vba-macros/` - 33 example(s)
 - `working-with-charts/` - 429 example(s)
 - `working-with-shapes/` - 202 example(s)
-- `working-with-slides/` - 118 example(s)
+- `working-with-slides/` - 115 example(s)
 - `working-with-smartart/` - 113 example(s)
-- `working-with-tables/` - 29 example(s)
+- `working-with-tables/` - 28 example(s)
 
 Each category contains standalone `.cs` files that can be compiled and run independently.
 
