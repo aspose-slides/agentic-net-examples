@@ -16,7 +16,7 @@
 // - Build C# utilities for keyword‑driven PowerPoint content transformation.
 // - Integrate SmartArt layout updates into .NET applications or CI pipelines.
 // - Validate and modify PPTX files before distribution.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

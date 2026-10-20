@@ -18,7 +18,7 @@
 // - Validate SmartArt hierarchy after modifications.
 // - Build .NET tools for PowerPoint SmartArt manipulation.
 // - Integrate SmartArt processing into presentation workflows.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

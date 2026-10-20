@@ -15,7 +15,7 @@
 // - Apply custom themes to presentations.
 // - Generate before/after PNG snapshots for visual comparison.
 // - Automate PowerPoint manipulation in .NET applications.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

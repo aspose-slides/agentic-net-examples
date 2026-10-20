@@ -17,7 +17,7 @@
 // - Build C# tools for PowerPoint content analysis and reporting.
 // - Generate or transform PPTX files while preserving existing content.
 // - Validate SmartArt structures before publishing or further processing.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;

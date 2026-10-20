@@ -6,8 +6,26 @@
 
 
 
-This category contains 119 standalone C# examples for Aspose.Slides for .NET. These examples help developers automate PowerPoint presentation workflows related to working with smartart.
+
+
+
+
+
+
+
+
+This category contains 113 standalone C# examples for Aspose.Slides for .NET. These examples help developers automate PowerPoint presentation workflows related to working with smartart.
+These files are tested and verified with Aspose.Slides for .NET v26.10.0.
+
 These files are tested and verified with Aspose.Slides for .NET v26.9.0.
+
+
+
+
+
+
+
+
 
 
 
@@ -23,7 +41,19 @@ These files are tested and verified with Aspose.Slides for .NET v26.9.0.
 
 
 
+
+
+
+
+
+
+
+
 - Automate repetitive presentation-processing tasks in .NET applications.
+
+
+
+
 
 
 
@@ -31,7 +61,19 @@ These files are tested and verified with Aspose.Slides for .NET v26.9.0.
 
 
 
+
+
+
+
 - Provide coding agents with direct, category-specific examples and API usage patterns.
+
+
+
+
+
+
+
+
 
 
 
@@ -47,13 +89,20 @@ These files are tested and verified with Aspose.Slides for .NET v26.9.0.
 
 
 
-Total examples: 119
+
+
+
+
+
+
+
+
+Total examples: 113
 
 - [Add-multiple-smartart-nodes-validate-count.cs](./Add-multiple-smartart-nodes-validate-count.cs)
 - [Add-smartart-node-assistant-verify-indentation.cs](./Add-smartart-node-assistant-verify-indentation.cs)
 - [Add-smartart-node-custom-tag-export-XML.cs](./Add-smartart-node-custom-tag-export-XML.cs)
 - [Add-smartart-node-custom-text-solid-accent.cs](./Add-smartart-node-custom-text-solid-accent.cs)
-- [Add-smartart-node-gradient-three-stops-verify.cs](./Add-smartart-node-gradient-three-stops-verify.cs)
 - [Add-smartart-node-long-text-wrap.cs](./Add-smartart-node-long-text-wrap.cs)
 - [Add-smartart-node-multilingual-RTL-render.cs](./Add-smartart-node-multilingual-RTL-render.cs)
 - [Add-smartart-node-multilingual-rtl-text.cs](./Add-smartart-node-multilingual-rtl-text.cs)
@@ -61,7 +110,6 @@ Total examples: 119
 - [Add-smartart-node-pattern-fill-verify.cs](./Add-smartart-node-pattern-fill-verify.cs)
 - [Add-smartart-node-position-two-tag-log.cs](./Add-smartart-node-position-two-tag-log.cs)
 - [Add-smartart-node-setposition-verify.cs](./Add-smartart-node-setposition-verify.cs)
-- [Add-smartart-node-to-end-with-text.cs](./Add-smartart-node-to-end-with-text.cs)
 - [Add-smartart-node-with-unique-id.cs](./Add-smartart-node-with-unique-id.cs)
 - [Add-three-smartart-children-and-set-positions.cs](./Add-three-smartart-children-and-set-positions.cs)
 - [Apply-assistant-flag-from-hierarchy-and-save.cs](./Apply-assistant-flag-from-hierarchy-and-save.cs)
@@ -69,12 +117,10 @@ Total examples: 119
 - [Apply-gradient-three-stops-orientation-verify.cs](./Apply-gradient-three-stops-orientation-verify.cs)
 - [Apply-picture-fill-to-smartart-node.cs](./Apply-picture-fill-to-smartart-node.cs)
 - [Apply-pictureaccentblocks-layout-fill-nodes-from-folder.cs](./Apply-pictureaccentblocks-layout-fill-nodes-from-folder.cs)
-- [Apply-random-fill-to-smartart-nodes-PNG.cs](./Apply-random-fill-to-smartart-nodes-PNG.cs)
 - [Assign-database-pictures-to-org-chart-nodes.cs](./Assign-database-pictures-to-org-chart-nodes.cs)
 - [Assign-random-fill-to-smartart-nodes-png.cs](./Assign-random-fill-to-smartart-nodes-png.cs)
 - [Assign-unique-identifiers-to-smartart-nodes.cs](./Assign-unique-identifiers-to-smartart-nodes.cs)
 - [Assign-unique-tag-to-smartart-node.cs](./Assign-unique-tag-to-smartart-node.cs)
-- [Assign-URL-pictures-to-org-chart-nodes.cs](./Assign-URL-pictures-to-org-chart-nodes.cs)
 - [Batch-convert-smartart-pptx-folder-to-png.cs](./Batch-convert-smartart-pptx-folder-to-png.cs)
 - [Change-org-chart-type-to-vertical.cs](./Change-org-chart-type-to-vertical.cs)
 - [Change-smartart-node-font-family-to-arial.cs](./Change-smartart-node-font-family-to-arial.cs)
@@ -89,7 +135,6 @@ Total examples: 119
 - [Clone-smartart-shape-move-to-250-150-ensure-no-intersection.cs](./Clone-smartart-shape-move-to-250-150-ensure-no-intersection.cs)
 - [Clone-smartart-shape-move-verify-no-overlap.cs](./Clone-smartart-shape-move-verify-no-overlap.cs)
 - [Clone-smartart-shape-rotate-90-ensure-integrity.cs](./Clone-smartart-shape-rotate-90-ensure-integrity.cs)
-- [Clone-smartart-shape-set-horizontal-compare-nodes.cs](./Clone-smartart-shape-set-horizontal-compare-nodes.cs)
 - [Clone-smartart-shape-set-opacity-compare-diff.cs](./Clone-smartart-shape-set-opacity-compare-diff.cs)
 - [Clone-smartart-shape-set-radial-compare-nodes.cs](./Clone-smartart-shape-set-radial-compare-nodes.cs)
 - [Clone-smartart-shape-to-other-slide.cs](./Clone-smartart-shape-to-other-slide.cs)
@@ -118,7 +163,6 @@ Total examples: 119
 - [Find-smartart-node-by-text.cs](./Find-smartart-node-by-text.cs)
 - [Flag-smartart-node-long-text-truncate.cs](./Flag-smartart-node-long-text-truncate.cs)
 - [Generate-smartart-child-node-thumbnails-100x100-embed.cs](./Generate-smartart-child-node-thumbnails-100x100-embed.cs)
-- [Generate-smartart-child-node-thumbnails-embed-summary.cs](./Generate-smartart-child-node-thumbnails-embed-summary.cs)
 - [Generate-smartart-node-CSV-report.cs](./Generate-smartart-node-CSV-report.cs)
 - [Get-smartart-third-child-node-coordinates.cs](./Get-smartart-third-child-node-coordinates.cs)
 - [Identify-assistant-nodes-and-clear-flags.cs](./Identify-assistant-nodes-and-clear-flags.cs)
@@ -177,7 +221,19 @@ Total examples: 119
 
 
 
+
+
+
+
+
+
+
+
 - [Category instructions](./AGENTS.md)
+
+
+
+
 
 
 
@@ -185,13 +241,27 @@ Total examples: 119
 
 
 
+
+
+
+
 - [Structured index](../index.json)
+
+
+
+
 
 
 
 <!-- SEO-FAQ:BEGIN -->
 
+
+
 ## Developer FAQ
+
+
+
+
 
 
 
@@ -199,41 +269,83 @@ These questions target common developer searches for Aspose.Slides for .NET `wor
 
 
 
+
+
+
+
 ### How do I convert PowerPoint PPTX files to PDF, HTML, SVG, PNG, or JPEG in C#?
+
+
 
 Use the conversion and export examples to load a `Presentation`, configure format-specific options when needed, and call `presentation.Save(...)` or slide image APIs with the correct `Aspose.Slides.Export.SaveFormat`.
 
 
 
+
+
+
+
 ### How do I create or edit PowerPoint charts in C# with Aspose.Slides?
+
+
 
 Use chart examples to add chart shapes, access `Aspose.Slides.Charts.IChart`, update chart data, format series, configure axes, and save the presentation.
 
 
 
+
+
+
+
 ### How do I edit PowerPoint shapes, text, tables, or SmartArt in C#?
+
+
 
 Use the shape, text, table, and SmartArt examples to locate shapes on a slide, cast to the appropriate Aspose.Slides interfaces, update content or formatting, and save the modified PPTX.
 
 
 
+
+
+
+
 ### How do I use Aspose.Slides for .NET for working with smartart in C#?
+
+
 
 Use the `working-with-smartart` examples to find standalone C# patterns for working with smartart. Each example shows how to load or create an `Aspose.Slides.Presentation`, apply the operation, and save output with the correct Aspose.Slides API.
 
 
 
+
+
+
+
 ### Which working with smartart examples are best for coding agents?
+
+
 
 Start with the files listed in this directory and the category AGENTS.md. The strongest search terms for this category are: smartart, node, shape, png, nodes.
 
 
 
+
+
+
+
 ### Are the working-with-smartart examples standalone C# programs?
+
+
 
 Yes. The examples are generated as standalone console-style C# files and are intended to compile and run independently in .NET workflows.
 
 
 
+
+
+
+
 <!-- SEO-FAQ:END -->
+
+
 

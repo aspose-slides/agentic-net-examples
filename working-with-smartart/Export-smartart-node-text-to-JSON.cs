@@ -17,7 +17,7 @@
 // - Integrate PowerPoint SmartArt data extraction into .NET applications.
 // - Automate conversion of presentation content to machine‑readable formats.
 // - Validate or transform SmartArt structures during PPTX workflow automation.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
