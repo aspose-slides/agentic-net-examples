@@ -16,7 +16,7 @@
 // - Rebalance column widths after column deletion in PowerPoint presentations.
 // - Build .NET tools for table manipulation within PPTX files.
 // - Validate and transform presentation layouts programmatically.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
