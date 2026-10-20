@@ -1,6 +1,6 @@
 ---
 name: aspose-slides-examples
-version: 26.9.0
+version: 26.10.0
 description: AI-friendly C# code examples for Aspose.Slides for .NET
 language: csharp
 framework: net10.0
@@ -27,11 +27,11 @@ When working in this repository:
 
 ## Repository Overview
 
-This repository contains **2168** working code examples demonstrating Aspose.Slides for .NET capabilities.
+This repository contains **2154** working code examples demonstrating Aspose.Slides for .NET capabilities.
 
-**Statistics** (as of 2026-09-30):
-- Version: 26.9.0
-- Total Examples: 2168
+**Statistics** (as of 2026-10-20):
+- Version: 26.10.0
+- Total Examples: 2154
 - Categories: 19
 
 ## Category Details
@@ -45,7 +45,7 @@ This repository contains **2168** working code examples demonstrating Aspose.Sli
 - Guide: [AGENTS.md](./animations/AGENTS.md)
 
 ### comments-and-notes
-- Examples: 118
+- Examples: 116
 - Guide: [AGENTS.md](./comments-and-notes/AGENTS.md)
 
 ### conversion
@@ -53,15 +53,15 @@ This repository contains **2168** working code examples demonstrating Aspose.Sli
 - Guide: [AGENTS.md](./conversion/AGENTS.md)
 
 ### design-presentations
-- Examples: 157
+- Examples: 156
 - Guide: [AGENTS.md](./design-presentations/AGENTS.md)
 
 ### manage-presentation
-- Examples: 64
+- Examples: 59
 - Guide: [AGENTS.md](./manage-presentation/AGENTS.md)
 
 ### manage-presentation-content
-- Examples: 98
+- Examples: 97
 - Guide: [AGENTS.md](./manage-presentation-content/AGENTS.md)
 
 ### manage-presentation-media-files
@@ -77,7 +77,7 @@ This repository contains **2168** working code examples demonstrating Aspose.Sli
 - Guide: [AGENTS.md](./manage-tags-and-custom-data/AGENTS.md)
 
 ### math-equations
-- Examples: 29
+- Examples: 28
 - Guide: [AGENTS.md](./math-equations/AGENTS.md)
 
 ### presentation-ink-objects
@@ -101,7 +101,7 @@ This repository contains **2168** working code examples demonstrating Aspose.Sli
 - Guide: [AGENTS.md](./working-with-shapes/AGENTS.md)
 
 ### working-with-slides
-- Examples: 118
+- Examples: 115
 - Guide: [AGENTS.md](./working-with-slides/AGENTS.md)
 
 ### working-with-smartart
@@ -109,7 +109,7 @@ This repository contains **2168** working code examples demonstrating Aspose.Sli
 - Guide: [AGENTS.md](./working-with-smartart/AGENTS.md)
 
 ### working-with-tables
-- Examples: 29
+- Examples: 28
 - Guide: [AGENTS.md](./working-with-tables/AGENTS.md)
 
 
@@ -252,4 +252,4 @@ dotnet run
 
 
 ---
-Generated: 2026-09-30
+Generated: 2026-10-20
