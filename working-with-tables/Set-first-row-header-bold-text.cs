@@ -18,7 +18,7 @@
 // - Build C# tools for PowerPoint presentation processing and styling.
 // - Generate or transform PPTX files with consistent table header formatting.
 // - Validate and enforce presentation design guidelines programmatically.
-// Tested and Verified with Aspose.Slides for .NET v26.9.0.
+// Tested and Verified with Aspose.Slides for .NET v26.10.0.
 // -----------------------------------------------------------------------------
 
 using System;
