@@ -14,8 +14,42 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This category contains 376 standalone C# examples for Aspose.Slides for .NET. These examples help developers automate PowerPoint presentation workflows related to conversion.
+These files are tested and verified with Aspose.Slides for .NET v26.11.0.
+
 These files are tested and verified with Aspose.Slides for .NET v26.10.0.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -47,6 +81,22 @@ These files are tested and verified with Aspose.Slides for .NET v26.10.0.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - Automate repetitive presentation-processing tasks in .NET applications.
 
 
@@ -55,7 +105,23 @@ These files are tested and verified with Aspose.Slides for .NET v26.10.0.
 
 
 
+
+
+
+
+
+
+
+
 - Generate, inspect, transform, or validate PPTX files in server-side workflows.
+
+
+
+
+
+
+
+
 
 
 
@@ -79,7 +145,39 @@ These files are tested and verified with Aspose.Slides for .NET v26.10.0.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Example Files
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -490,7 +588,31 @@ Total examples: 376
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - [Category instructions](./AGENTS.md)
+
+
+
+
+
+
+
+
 
 
 
@@ -506,7 +628,23 @@ Total examples: 376
 
 
 
+
+
+
+
+
+
+
+
 - [Structured index](../index.json)
+
+
+
+
+
+
+
+
 
 
 
@@ -518,7 +656,19 @@ Total examples: 376
 
 
 
+
+
+
+
 ## Developer FAQ
+
+
+
+
+
+
+
+
 
 
 
@@ -534,7 +684,19 @@ These questions target common developer searches for Aspose.Slides for .NET `con
 
 
 
+
+
+
+
+
+
+
+
 ### How do I convert PowerPoint PPTX files to PDF, HTML, SVG, PNG, or JPEG in C#?
+
+
+
+
 
 
 
@@ -546,7 +708,19 @@ Use the conversion and export examples to load a `Presentation`, configure forma
 
 
 
+
+
+
+
+
+
+
+
 ### How do I add, clone, reorder, or remove PowerPoint slides in .NET?
+
+
+
+
 
 
 
@@ -558,7 +732,19 @@ Use slide management examples to work with `ISlide`, slide collections, layouts,
 
 
 
+
+
+
+
+
+
+
+
 ### How do I use Aspose.Slides for .NET for conversion in C#?
+
+
+
+
 
 
 
@@ -570,7 +756,19 @@ Use the `conversion` examples to find standalone C# patterns for conversion. Eac
 
 
 
+
+
+
+
+
+
+
+
 ### Which conversion examples are best for coding agents?
+
+
+
+
 
 
 
@@ -582,7 +780,19 @@ Start with the files listed in this directory and the category AGENTS.md. The st
 
 
 
+
+
+
+
+
+
+
+
 ### Are the conversion examples standalone C# programs?
+
+
+
+
 
 
 
@@ -594,7 +804,19 @@ Yes. The examples are generated as standalone console-style C# files and are int
 
 
 
+
+
+
+
+
+
+
+
 <!-- SEO-FAQ:END -->
+
+
+
+
 
 
 
