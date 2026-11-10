@@ -14,8 +14,42 @@
 
 
 
-This category contains 118 standalone C# examples for Aspose.Slides for .NET. These examples help developers automate PowerPoint presentation workflows related to comments and notes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+This category contains 116 standalone C# examples for Aspose.Slides for .NET. These examples help developers automate PowerPoint presentation workflows related to comments and notes.
+These files are tested and verified with Aspose.Slides for .NET v26.11.0.
+
 These files are tested and verified with Aspose.Slides for .NET v26.10.0.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -47,7 +81,31 @@ These files are tested and verified with Aspose.Slides for .NET v26.10.0.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - Automate repetitive presentation-processing tasks in .NET applications.
+
+
+
+
+
+
+
+
 
 
 
@@ -63,7 +121,31 @@ These files are tested and verified with Aspose.Slides for .NET v26.10.0.
 
 
 
+
+
+
+
+
+
+
+
 - Provide coding agents with direct, category-specific examples and API usage patterns.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -95,7 +177,23 @@ These files are tested and verified with Aspose.Slides for .NET v26.10.0.
 
 
 
-Total examples: 118
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Total examples: 116
 
 - [Add-page-numbers-to-PDF-note-pages.cs](./Add-page-numbers-to-PDF-note-pages.cs)
 - [Add-PPTX-slide-comment-with-metadata.cs](./Add-PPTX-slide-comment-with-metadata.cs)
@@ -109,7 +207,6 @@ Total examples: 118
 - [Apply-conditional-formatting-to-PPTX-notes.cs](./Apply-conditional-formatting-to-PPTX-notes.cs)
 - [Apply-custom-font-family-to-PPTX-notes.cs](./Apply-custom-font-family-to-PPTX-notes.cs)
 - [Apply-custom-font-to-PPTX-slide-comment.cs](./Apply-custom-font-to-PPTX-slide-comment.cs)
-- [Apply-custom-icon-to-PPTX-slide-comments.cs](./Apply-custom-icon-to-PPTX-slide-comments.cs)
 - [Apply-drop-shadow-to-PPTX-comment-callouts.cs](./Apply-drop-shadow-to-PPTX-comment-callouts.cs)
 - [Apply-grayscale-filter-to-PDF-note-images.cs](./Apply-grayscale-filter-to-PDF-note-images.cs)
 - [Apply-text-wrapping-to-PPTX-slide-comments.cs](./Apply-text-wrapping-to-PPTX-slide-comments.cs)
@@ -203,7 +300,6 @@ Total examples: 118
 - [Sync-comment-edits-in-real-time-websocket.cs](./Sync-comment-edits-in-real-time-websocket.cs)
 - [Sync-PPTX-comment-timestamps-with-server.cs](./Sync-PPTX-comment-timestamps-with-server.cs)
 - [Sync-PPTX-slide-notes-with-cloud-storage.cs](./Sync-PPTX-slide-notes-with-cloud-storage.cs)
-- [Throttle-PPTX-comment-processing-to-prevent-freezes.cs](./Throttle-PPTX-comment-processing-to-prevent-freezes.cs)
 - [Track-PPTX-slide-comment-processing-progress.cs](./Track-PPTX-slide-comment-processing-progress.cs)
 - [Translate-PPTX-slide-comments-to-target-language.cs](./Translate-PPTX-slide-comments-to-target-language.cs)
 - [Translate-PPTX-slide-notes-to-french.cs](./Translate-PPTX-slide-notes-to-french.cs)
@@ -232,7 +328,31 @@ Total examples: 118
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - [Category instructions](./AGENTS.md)
+
+
+
+
+
+
+
+
 
 
 
@@ -248,7 +368,23 @@ Total examples: 118
 
 
 
+
+
+
+
+
+
+
+
 - [Structured index](../index.json)
+
+
+
+
+
+
+
+
 
 
 
@@ -260,7 +396,19 @@ Total examples: 118
 
 
 
+
+
+
+
 ## Developer FAQ
+
+
+
+
+
+
+
+
 
 
 
@@ -276,7 +424,19 @@ These questions target common developer searches for Aspose.Slides for .NET `com
 
 
 
+
+
+
+
+
+
+
+
 ### How do I convert PowerPoint PPTX files to PDF, HTML, SVG, PNG, or JPEG in C#?
+
+
+
+
 
 
 
@@ -288,7 +448,19 @@ Use the conversion and export examples to load a `Presentation`, configure forma
 
 
 
+
+
+
+
+
+
+
+
 ### How do I add, clone, reorder, or remove PowerPoint slides in .NET?
+
+
+
+
 
 
 
@@ -300,7 +472,19 @@ Use slide management examples to work with `ISlide`, slide collections, layouts,
 
 
 
+
+
+
+
+
+
+
+
 ### How do I extract presentation metadata, comments, notes, tags, VBA, or security information?
+
+
+
+
 
 
 
@@ -312,7 +496,19 @@ Use the inspection and management examples to access document properties, commen
 
 
 
+
+
+
+
+
+
+
+
 ### How do I use Aspose.Slides for .NET for comments and notes in C#?
+
+
+
+
 
 
 
@@ -324,7 +520,19 @@ Use the `comments-and-notes` examples to find standalone C# patterns for comment
 
 
 
+
+
+
+
+
+
+
+
 ### Which comments and notes examples are best for coding agents?
+
+
+
+
 
 
 
@@ -336,7 +544,19 @@ Start with the files listed in this directory and the category AGENTS.md. The st
 
 
 
+
+
+
+
+
+
+
+
 ### Are the comments-and-notes examples standalone C# programs?
+
+
+
+
 
 
 
@@ -348,7 +568,19 @@ Yes. The examples are generated as standalone console-style C# files and are int
 
 
 
+
+
+
+
+
+
+
+
 <!-- SEO-FAQ:END -->
+
+
+
+
 
 
 
