@@ -2,7 +2,15 @@
 
 
 
+
+
+
+
 name: comments-and-notes
+
+
+
+
 
 
 
@@ -10,7 +18,15 @@ description: C# examples for comments-and-notes using Aspose.Slides for .NET
 
 
 
+
+
+
+
 language: csharp
+
+
+
+
 
 
 
@@ -18,11 +34,27 @@ framework: net10.0
 
 
 
+
+
+
+
 parent: ../agents.md
 
 
 
+
+
+
+
 ---
+
+
+
+
+
+
+
+
 
 
 
@@ -38,7 +70,23 @@ parent: ../agents.md
 
 
 
+
+
+
+
+
+
+
+
 ## Persona
+
+
+
+
+
+
+
+
 
 
 
@@ -50,7 +98,19 @@ You are a C# developer specializing in PowerPoint processing using Aspose.Slides
 
 
 
+
+
+
+
 working within the **comments-and-notes** category.
+
+
+
+
+
+
+
+
 
 
 
@@ -66,11 +126,31 @@ working within the **comments-and-notes** category.
 
 
 
+
+
+
+
+
+
+
+
 - This folder contains examples for **comments-and-notes**
 
 
 
+
+
+
+
 - Files are standalone `.cs` examples stored directly in this folder.
+
+
+
+
+
+
+
+
 
 
 
@@ -86,29 +166,45 @@ working within the **comments-and-notes** category.
 
 
 
-Verified with version: 26.10.0
-Total files: 118
 
-- `using System;` (118/118 files)
-- `using Aspose.Slides.Export;` (115/118 files)
-- `using System.IO;` (108/118 files)
-- `using Aspose.Slides;` (106/118 files)
-- `using System.Drawing;` (29/118 files)
-- `using System.Collections.Generic;` (16/118 files)
-- `using System.Text.Json;` (5/118 files)
-- `using System.Text;` (5/118 files)
-- `using System.Threading.Tasks;` (4/118 files)
-- `using System.Net.Http;` (3/118 files)
-- `using System.Threading;` (3/118 files)
-- `using System.Text.RegularExpressions;` (2/118 files)
-- `using System.Xml.Linq;` (2/118 files)
-- `using System.Net;` (2/118 files)
-- `using Aspose.Slides.AI;` (2/118 files)
-- `using Aspose.Slides.Util;` (1/118 files)
-- `using System.Diagnostics;` (1/118 files)
-- `using System.Net.WebSockets;` (1/118 files)
+
+
+
+
+
+
+
+Verified with version: 26.11.0
+Total files: 116
+
+- `using System;` (116/116 files)
+- `using Aspose.Slides.Export;` (115/116 files)
+- `using System.IO;` (106/116 files)
+- `using Aspose.Slides;` (106/116 files)
+- `using System.Drawing;` (27/116 files)
+- `using System.Collections.Generic;` (16/116 files)
+- `using System.Text.Json;` (5/116 files)
+- `using System.Text;` (5/116 files)
+- `using System.Threading.Tasks;` (4/116 files)
+- `using System.Net.Http;` (3/116 files)
+- `using System.Text.RegularExpressions;` (2/116 files)
+- `using System.Xml.Linq;` (2/116 files)
+- `using System.Net;` (2/116 files)
+- `using System.Threading;` (2/116 files)
+- `using Aspose.Slides.AI;` (2/116 files)
+- `using Aspose.Slides.Util;` (1/116 files)
+- `using System.Diagnostics;` (1/116 files)
+- `using System.Net.WebSockets;` (1/116 files)
 
 ## Files in this folder
+
+
+
+
+
+
+
+
 
 
 
@@ -130,7 +226,6 @@ Total files: 118
 | [Apply-conditional-formatting-to-PPTX-notes.cs](./Apply-conditional-formatting-to-PPTX-notes.cs) |  | Apply conditional formatting to PPTX notes |
 | [Apply-custom-font-family-to-PPTX-notes.cs](./Apply-custom-font-family-to-PPTX-notes.cs) |  | Apply custom font family to PPTX notes |
 | [Apply-custom-font-to-PPTX-slide-comment.cs](./Apply-custom-font-to-PPTX-slide-comment.cs) |  | Apply custom font to PPTX slide comment |
-| [Apply-custom-icon-to-PPTX-slide-comments.cs](./Apply-custom-icon-to-PPTX-slide-comments.cs) |  | Apply custom icon to PPTX slide comments |
 | [Apply-drop-shadow-to-PPTX-comment-callouts.cs](./Apply-drop-shadow-to-PPTX-comment-callouts.cs) |  | Apply drop shadow to PPTX comment callouts |
 | [Apply-grayscale-filter-to-PDF-note-images.cs](./Apply-grayscale-filter-to-PDF-note-images.cs) |  | Apply grayscale filter to PDF note images |
 | [Apply-text-wrapping-to-PPTX-slide-comments.cs](./Apply-text-wrapping-to-PPTX-slide-comments.cs) |  | Apply text wrapping to PPTX slide comments |
@@ -224,7 +319,6 @@ Total files: 118
 | [Sync-comment-edits-in-real-time-websocket.cs](./Sync-comment-edits-in-real-time-websocket.cs) |  | Sync comment edits in real time websocket |
 | [Sync-PPTX-comment-timestamps-with-server.cs](./Sync-PPTX-comment-timestamps-with-server.cs) |  | Sync PPTX comment timestamps with server |
 | [Sync-PPTX-slide-notes-with-cloud-storage.cs](./Sync-PPTX-slide-notes-with-cloud-storage.cs) |  | Sync PPTX slide notes with cloud storage |
-| [Throttle-PPTX-comment-processing-to-prevent-freezes.cs](./Throttle-PPTX-comment-processing-to-prevent-freezes.cs) |  | Throttle PPTX comment processing to prevent freezes |
 | [Track-PPTX-slide-comment-processing-progress.cs](./Track-PPTX-slide-comment-processing-progress.cs) |  | Track PPTX slide comment processing progress |
 | [Translate-PPTX-slide-comments-to-target-language.cs](./Translate-PPTX-slide-comments-to-target-language.cs) |  | Translate PPTX slide comments to target language |
 | [Translate-PPTX-slide-notes-to-french.cs](./Translate-PPTX-slide-notes-to-french.cs) |  | Translate PPTX slide notes to french |
@@ -245,9 +339,25 @@ Total files: 118
 
 
 
-- Total examples: 118
+
+
+
+
+
+
+
+
+- Total examples: 116
 
 ## Key API Surface
+
+
+
+
+
+
+
+
 
 
 
@@ -259,7 +369,15 @@ Total files: 118
 
 
 
+
+
+
+
 - `Aspose.Slides.Export`
+
+
+
+
 
 
 
@@ -267,7 +385,15 @@ Total files: 118
 
 
 
+
+
+
+
 - `Aspose.Slides.Export.SaveFormat.Pptx`
+
+
+
+
 
 
 
@@ -275,7 +401,15 @@ Total files: 118
 
 
 
+
+
+
+
 - `Aspose.Slides.ISlide`
+
+
+
+
 
 
 
@@ -283,7 +417,15 @@ Total files: 118
 
 
 
+
+
+
+
 - `Aspose.Slides.CommentAuthor`
+
+
+
+
 
 
 
@@ -291,7 +433,15 @@ Total files: 118
 
 
 
+
+
+
+
 - `Aspose.Slides.INotesSlide`
+
+
+
+
 
 
 
@@ -299,7 +449,15 @@ Total files: 118
 
 
 
+
+
+
+
 - `Aspose.Slides.INotesSlideManager`
+
+
+
+
 
 
 
@@ -307,11 +465,27 @@ Total files: 118
 
 
 
+
+
+
+
 - `Aspose.Slides.Export.PdfOptions`
 
 
 
+
+
+
+
 - `Aspose.Slides.IModernComment`
+
+
+
+
+
+
+
+
 
 
 
@@ -327,7 +501,23 @@ Total files: 118
 
 
 
+
+
+
+
+
+
+
+
 Most examples follow a pattern similar to:
+
+
+
+
+
+
+
+
 
 
 
@@ -339,7 +529,15 @@ Most examples follow a pattern similar to:
 
 
 
+
+
+
+
 using (Presentation pres = new Presentation("input.pptx"))
+
+
+
+
 
 
 
@@ -347,7 +545,15 @@ using (Presentation pres = new Presentation("input.pptx"))
 
 
 
+
+
+
+
     // operations
+
+
+
+
 
 
 
@@ -355,11 +561,27 @@ using (Presentation pres = new Presentation("input.pptx"))
 
 
 
+
+
+
+
 }
 
 
 
+
+
+
+
 ```
+
+
+
+
+
+
+
+
 
 
 
@@ -375,11 +597,27 @@ using (Presentation pres = new Presentation("input.pptx"))
 
 
 
+
+
+
+
+
+
+
+
 - Load presentations using `new Presentation("file.pptx")`.
 
 
 
+
+
+
+
 - Modify slides through the `Slides` collection.
+
+
+
+
 
 
 
@@ -391,11 +629,27 @@ using (Presentation pres = new Presentation("input.pptx"))
 
 
 
+
+
+
+
+
+
+
+
 <!-- AUTOGENERATED:START -->
 
 
 
+
+
+
+
 Updated: 2026-04-06
+
+
+
+
 
 
 
@@ -407,11 +661,31 @@ Updated: 2026-04-06
 
 
 
+
+
+
+
+
+
+
+
 <!-- SEO-FAQ:BEGIN -->
 
 
 
+
+
+
+
 ## Developer FAQ for Coding Agents
+
+
+
+
+
+
+
+
 
 
 
@@ -427,7 +701,19 @@ Use these Q&A entries when selecting examples from `comments-and-notes` for user
 
 
 
+
+
+
+
+
+
+
+
 ### How do I convert PowerPoint PPTX files to PDF, HTML, SVG, PNG, or JPEG in C#?
+
+
+
+
 
 
 
@@ -439,7 +725,19 @@ Use the conversion and export examples to load a `Presentation`, configure forma
 
 
 
+
+
+
+
+
+
+
+
 ### How do I add, clone, reorder, or remove PowerPoint slides in .NET?
+
+
+
+
 
 
 
@@ -451,7 +749,19 @@ Use slide management examples to work with `ISlide`, slide collections, layouts,
 
 
 
+
+
+
+
+
+
+
+
 ### How do I extract presentation metadata, comments, notes, tags, VBA, or security information?
+
+
+
+
 
 
 
@@ -463,7 +773,19 @@ Use the inspection and management examples to access document properties, commen
 
 
 
+
+
+
+
+
+
+
+
 ### How do I use Aspose.Slides for .NET for comments and notes in C#?
+
+
+
+
 
 
 
@@ -475,7 +797,19 @@ Use the `comments-and-notes` examples to find standalone C# patterns for comment
 
 
 
+
+
+
+
+
+
+
+
 ### Which comments and notes examples are best for coding agents?
+
+
+
+
 
 
 
@@ -487,7 +821,19 @@ Start with the files listed in this directory and the category AGENTS.md. The st
 
 
 
+
+
+
+
+
+
+
+
 ### Are the comments-and-notes examples standalone C# programs?
+
+
+
+
 
 
 
@@ -499,7 +845,19 @@ Yes. The examples are generated as standalone console-style C# files and are int
 
 
 
+
+
+
+
+
+
+
+
 <!-- SEO-FAQ:END -->
+
+
+
+
 
 
 
