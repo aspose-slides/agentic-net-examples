@@ -18,7 +18,7 @@
 // - Build C# utilities for PowerPoint presentation analysis.
 // - Validate slide visibility settings before publishing.
 // - Integrate presentation diagnostics into larger .NET workflows.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 
 using System;
