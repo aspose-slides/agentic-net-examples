@@ -19,7 +19,7 @@
 // - Generate or transform PPTX files with custom background colors in .NET
 //   applications.
 // - Apply consistent visual themes to existing slide decks programmatically.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
