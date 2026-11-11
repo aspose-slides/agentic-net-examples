@@ -18,7 +18,7 @@
 // - Build .NET tools that need precise shape geometry control.
 // - Automate PPTX creation with non‑standard shapes for reports or graphics.
 // - Integrate custom shape generation into larger presentation workflows.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using Aspose.Slides.Export;
