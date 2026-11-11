@@ -17,7 +17,7 @@
 // - Integrate slide‑merge functionality into .NET applications.
 // - Prepare combined presentations for publishing or distribution while retaining
 //   original animation and transition settings.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 
 using System;
