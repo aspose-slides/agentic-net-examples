@@ -17,7 +17,7 @@
 // - Automate batch theming of PPTX files in .NET applications.
 // - Ensure consistent slide appearance across a deck after theme changes.
 // - Integrate theme application into PowerPoint processing pipelines.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
