@@ -16,7 +16,7 @@
 // - Apply slide transitions while building or modifying presentations.
 // - Automate PPTX enhancements in .NET applications.
 // - Validate and test animation workflows before publishing.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
