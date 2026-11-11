@@ -19,7 +19,7 @@
 //   custom chart data.
 // - Integrate chart creation into .NET applications for reporting or analytics.
 // - Validate chart data binding workflows before publishing.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 
 using System;
