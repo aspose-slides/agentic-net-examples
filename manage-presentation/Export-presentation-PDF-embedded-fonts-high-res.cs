@@ -16,7 +16,7 @@
 // - Generate high‑quality PDF documents from presentations for printing.
 // - Automate batch conversion of presentations to PDF with custom export settings.
 // - Integrate PDF export functionality into .NET applications or services.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;

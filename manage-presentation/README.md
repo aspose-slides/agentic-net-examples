@@ -6,8 +6,26 @@
 
 
 
-This category contains 62 standalone C# examples for Aspose.Slides for .NET. These examples help developers automate PowerPoint presentation workflows related to manage presentation.
+
+
+
+
+
+
+
+
+This category contains 59 standalone C# examples for Aspose.Slides for .NET. These examples help developers automate PowerPoint presentation workflows related to manage presentation.
+These files are tested and verified with Aspose.Slides for .NET v26.11.0.
+
 These files are tested and verified with Aspose.Slides for .NET v26.10.0.
+
+
+
+
+
+
+
+
 
 
 
@@ -23,7 +41,19 @@ These files are tested and verified with Aspose.Slides for .NET v26.10.0.
 
 
 
+
+
+
+
+
+
+
+
 - Automate repetitive presentation-processing tasks in .NET applications.
+
+
+
+
 
 
 
@@ -31,7 +61,19 @@ These files are tested and verified with Aspose.Slides for .NET v26.10.0.
 
 
 
+
+
+
+
 - Provide coding agents with direct, category-specific examples and API usage patterns.
+
+
+
+
+
+
+
+
 
 
 
@@ -47,7 +89,15 @@ These files are tested and verified with Aspose.Slides for .NET v26.10.0.
 
 
 
-Total examples: 62
+
+
+
+
+
+
+
+
+Total examples: 59
 
 - [Add-audio-to-slide-after-previous.cs](./Add-audio-to-slide-after-previous.cs)
 - [Add-footer-text-to-slide.cs](./Add-footer-text-to-slide.cs)
@@ -81,7 +131,6 @@ Total examples: 62
 - [Export-slide-as-JPEG-80-percent-compression.cs](./Export-slide-as-JPEG-80-percent-compression.cs)
 - [Export-slide-as-PNG-300-dpi.cs](./Export-slide-as-PNG-300-dpi.cs)
 - [Export-slide-as-PNG-custom-dpi.cs](./Export-slide-as-PNG-custom-dpi.cs)
-- [Export-slide-as-SVG-preserve-vector-data.cs](./Export-slide-as-SVG-preserve-vector-data.cs)
 - [Export-slide-as-TIFF-high-resolution-lzw.cs](./Export-slide-as-TIFF-high-resolution-lzw.cs)
 - [Export-slide-titles-to-CSV-file.cs](./Export-slide-titles-to-CSV-file.cs)
 - [Extract-embedded-audio-from-PPTX-to-folder.cs](./Extract-embedded-audio-from-PPTX-to-folder.cs)
@@ -92,14 +141,12 @@ Total examples: 62
 - [Insert-chart-bind-data-series-set-type.cs](./Insert-chart-bind-data-series-set-type.cs)
 - [Insert-image-onto-slide-fit-placeholder.cs](./Insert-image-onto-slide-fit-placeholder.cs)
 - [Insert-table-with-cell-background-colors.cs](./Insert-table-with-cell-background-colors.cs)
-- [Insert-video-onto-slide-auto-play.cs](./Insert-video-onto-slide-auto-play.cs)
 - [Load-presentation-from-byte-array-render-images.cs](./Load-presentation-from-byte-array-render-images.cs)
 - [Load-presentation-from-stream-verify-slide-count.cs](./Load-presentation-from-stream-verify-slide-count.cs)
 - [Merge-two-PPTX-presentations-preserve-slide-transitions.cs](./Merge-two-PPTX-presentations-preserve-slide-transitions.cs)
 - [Open-PPTX-presentation-verify-integrity.cs](./Open-PPTX-presentation-verify-integrity.cs)
 - [Remove-hidden-slides-from-presentation.cs](./Remove-hidden-slides-from-presentation.cs)
 - [Reorder-slides-according-to-JSON-config.cs](./Reorder-slides-according-to-JSON-config.cs)
-- [Reorder-slides-using-external-configuration.cs](./Reorder-slides-using-external-configuration.cs)
 - [Replace-deprecated-font-with-modern-alternative.cs](./Replace-deprecated-font-with-modern-alternative.cs)
 - [Replace-slide-placeholders-from-CSV.cs](./Replace-slide-placeholders-from-CSV.cs)
 - [Set-connector-line-style-thickness-dash-color.cs](./Set-connector-line-style-thickness-dash-color.cs)
@@ -120,7 +167,19 @@ Total examples: 62
 
 
 
+
+
+
+
+
+
+
+
 - [Category instructions](./AGENTS.md)
+
+
+
+
 
 
 
@@ -128,13 +187,27 @@ Total examples: 62
 
 
 
+
+
+
+
 - [Structured index](../index.json)
+
+
+
+
 
 
 
 <!-- SEO-FAQ:BEGIN -->
 
+
+
 ## Developer FAQ
+
+
+
+
 
 
 
@@ -142,41 +215,83 @@ These questions target common developer searches for Aspose.Slides for .NET `man
 
 
 
+
+
+
+
 ### How do I convert PowerPoint PPTX files to PDF, HTML, SVG, PNG, or JPEG in C#?
+
+
 
 Use the conversion and export examples to load a `Presentation`, configure format-specific options when needed, and call `presentation.Save(...)` or slide image APIs with the correct `Aspose.Slides.Export.SaveFormat`.
 
 
 
+
+
+
+
 ### How do I create or edit PowerPoint charts in C# with Aspose.Slides?
+
+
 
 Use chart examples to add chart shapes, access `Aspose.Slides.Charts.IChart`, update chart data, format series, configure axes, and save the presentation.
 
 
 
+
+
+
+
 ### How do I add, clone, reorder, or remove PowerPoint slides in .NET?
+
+
 
 Use slide management examples to work with `ISlide`, slide collections, layouts, masters, and sections while preserving presentation structure.
 
 
 
+
+
+
+
 ### How do I edit PowerPoint shapes, text, tables, or SmartArt in C#?
+
+
 
 Use the shape, text, table, and SmartArt examples to locate shapes on a slide, cast to the appropriate Aspose.Slides interfaces, update content or formatting, and save the modified PPTX.
 
 
 
+
+
+
+
 ### How do I use Aspose.Slides for .NET for manage presentation in C#?
+
+
 
 Use the `manage-presentation` examples to find standalone C# patterns for manage presentation. Each example shows how to load or create an `Aspose.Slides.Presentation`, apply the operation, and save output with the correct Aspose.Slides API.
 
 
 
+
+
+
+
 ### Which manage presentation examples are best for coding agents?
+
+
 
 Start with the files listed in this directory and the category AGENTS.md. The strongest search terms for this category are: slide, pptx, presentation, slides, pdf.
 
 
 
+
+
+
+
 <!-- SEO-FAQ:END -->
+
+
 

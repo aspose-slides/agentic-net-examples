@@ -17,7 +17,7 @@
 // - Build .NET tools that adjust slide sequences before distribution.
 // - Integrate custom slide ordering into larger PowerPoint automation workflows.
 // - Validate and transform PPTX files programmatically.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 
 using System;

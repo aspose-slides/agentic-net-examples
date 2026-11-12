@@ -17,7 +17,7 @@
 // - Build .NET utilities for automated slide creation and styling.
 // - Integrate table formatting logic into larger presentation workflows.
 // - Produce styled PPTX files for reporting or documentation purposes.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 
 using System;

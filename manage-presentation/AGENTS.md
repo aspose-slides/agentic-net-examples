@@ -1,16 +1,32 @@
 ---
 
+
+
 name: manage-presentation
+
+
 
 description: C# examples for manage-presentation using Aspose.Slides for .NET
 
+
+
 language: csharp
+
+
 
 framework: net10.0
 
+
+
 parent: ../agents.md
 
+
+
 ---
+
+
+
+
 
 
 
@@ -18,13 +34,27 @@ parent: ../agents.md
 
 
 
+
+
+
+
 ## Persona
+
+
+
+
 
 
 
 You are a C# developer specializing in PowerPoint processing using Aspose.Slides for .NET,
 
+
+
 working within the **manage-presentation** category.
+
+
+
+
 
 
 
@@ -32,9 +62,19 @@ working within the **manage-presentation** category.
 
 
 
+
+
+
+
 - This folder contains examples for **manage-presentation**
 
+
+
 - Files are standalone `.cs` examples stored directly in this folder.
+
+
+
+
 
 
 
@@ -42,25 +82,33 @@ working within the **manage-presentation** category.
 
 
 
-Verified with version: 26.10.0
-Total files: 62
 
-- `using System;` (61/62 files)
-- `using Aspose.Slides.Export;` (59/62 files)
-- `using Aspose.Slides;` (55/62 files)
-- `using System.IO;` (52/62 files)
-- `using System.Drawing;` (7/62 files)
-- `using System.Collections.Generic;` (3/62 files)
-- `using Aspose.Slides.Charts;` (1/62 files)
-- `using Aspose.Slides.Animation;` (1/62 files)
-- `using System.IO.Compression;` (1/62 files)
-- `using System.Text;` (1/62 files)
-- `using System.Linq;` (1/62 files)
-- `using System.Text.Json;` (1/62 files)
-- `using System.Net.Http;` (1/62 files)
-- `using System.Threading.Tasks;` (1/62 files)
+
+
+
+Verified with version: 26.11.0
+Total files: 59
+
+- `using Aspose.Slides.Export;` (59/59 files)
+- `using System;` (58/59 files)
+- `using Aspose.Slides;` (55/59 files)
+- `using System.IO;` (50/59 files)
+- `using System.Drawing;` (7/59 files)
+- `using System.Collections.Generic;` (2/59 files)
+- `using Aspose.Slides.Charts;` (1/59 files)
+- `using Aspose.Slides.Animation;` (1/59 files)
+- `using System.IO.Compression;` (1/59 files)
+- `using System.Text;` (1/59 files)
+- `using System.Linq;` (1/59 files)
+- `using System.Text.Json;` (1/59 files)
+- `using System.Net.Http;` (1/59 files)
+- `using System.Threading.Tasks;` (1/59 files)
 
 ## Files in this folder
+
+
+
+
 
 
 
@@ -98,7 +146,6 @@ Total files: 62
 | [Export-slide-as-JPEG-80-percent-compression.cs](./Export-slide-as-JPEG-80-percent-compression.cs) |  | Export slide as JPEG 80 percent compression |
 | [Export-slide-as-PNG-300-dpi.cs](./Export-slide-as-PNG-300-dpi.cs) |  | Export slide as PNG 300 dpi |
 | [Export-slide-as-PNG-custom-dpi.cs](./Export-slide-as-PNG-custom-dpi.cs) |  | Export slide as PNG custom dpi |
-| [Export-slide-as-SVG-preserve-vector-data.cs](./Export-slide-as-SVG-preserve-vector-data.cs) |  | Export slide as SVG preserve vector data |
 | [Export-slide-as-TIFF-high-resolution-lzw.cs](./Export-slide-as-TIFF-high-resolution-lzw.cs) |  | Export slide as TIFF high resolution lzw |
 | [Export-slide-titles-to-CSV-file.cs](./Export-slide-titles-to-CSV-file.cs) |  | Export slide titles to CSV file |
 | [Extract-embedded-audio-from-PPTX-to-folder.cs](./Extract-embedded-audio-from-PPTX-to-folder.cs) |  | Extract embedded audio from PPTX to folder |
@@ -109,14 +156,12 @@ Total files: 62
 | [Insert-chart-bind-data-series-set-type.cs](./Insert-chart-bind-data-series-set-type.cs) |  | Insert chart bind data series set type |
 | [Insert-image-onto-slide-fit-placeholder.cs](./Insert-image-onto-slide-fit-placeholder.cs) |  | Insert image onto slide fit placeholder |
 | [Insert-table-with-cell-background-colors.cs](./Insert-table-with-cell-background-colors.cs) |  | Insert table with cell background colors |
-| [Insert-video-onto-slide-auto-play.cs](./Insert-video-onto-slide-auto-play.cs) |  | Insert video onto slide auto play |
 | [Load-presentation-from-byte-array-render-images.cs](./Load-presentation-from-byte-array-render-images.cs) |  | Load presentation from byte array render images |
 | [Load-presentation-from-stream-verify-slide-count.cs](./Load-presentation-from-stream-verify-slide-count.cs) |  | Load presentation from stream verify slide count |
 | [Merge-two-PPTX-presentations-preserve-slide-transitions.cs](./Merge-two-PPTX-presentations-preserve-slide-transitions.cs) |  | Merge two PPTX presentations preserve slide transitions |
 | [Open-PPTX-presentation-verify-integrity.cs](./Open-PPTX-presentation-verify-integrity.cs) |  | Open PPTX presentation verify integrity |
 | [Remove-hidden-slides-from-presentation.cs](./Remove-hidden-slides-from-presentation.cs) |  | Remove hidden slides from presentation |
 | [Reorder-slides-according-to-JSON-config.cs](./Reorder-slides-according-to-JSON-config.cs) |  | Reorder slides according to JSON config |
-| [Reorder-slides-using-external-configuration.cs](./Reorder-slides-using-external-configuration.cs) |  | Reorder slides using external configuration |
 | [Replace-deprecated-font-with-modern-alternative.cs](./Replace-deprecated-font-with-modern-alternative.cs) |  | Replace deprecated font with modern alternative |
 | [Replace-slide-placeholders-from-CSV.cs](./Replace-slide-placeholders-from-CSV.cs) |  | Replace slide placeholders from CSV |
 | [Set-connector-line-style-thickness-dash-color.cs](./Set-connector-line-style-thickness-dash-color.cs) |  | Set connector line style thickness dash color |
@@ -133,41 +178,81 @@ Total files: 62
 
 
 
-- Total examples: 62
+
+
+
+
+- Total examples: 59
 
 ## Key API Surface
 
 
 
+
+
+
+
 - `Aspose.Slides`
+
+
 
 - `Aspose.Slides.Export`
 
+
+
 - `Aspose.Slides.Presentation`
+
+
 
 - `Aspose.Slides.Export.SaveFormat.Pptx`
 
+
+
 - `Aspose.Slides.ISlide`
+
+
 
 - `Aspose.Slides.SmartArt.ISmartArt`
 
+
+
 - `Aspose.Slides.IShape`
+
+
 
 - `Aspose.Slides.SlideShow.TransitionType.Fade`
 
+
+
 - `Aspose.Slides.Charts.IChartSeries`
+
+
 
 - `Aspose.Slides.IAutoShape`
 
+
+
 - `Aspose.Slides.FillType.Solid`
+
+
 
 - `Aspose.Slides.GeometryPath`
 
+
+
 - `Aspose.Slides.Export.PdfOptions`
+
+
 
 - `Aspose.Slides.PptxUnsupportedFormatException`
 
+
+
 - `Aspose.Slides.PptUnsupportedFormatException`
+
+
+
+
 
 
 
@@ -175,23 +260,47 @@ Total files: 62
 
 
 
+
+
+
+
 Most examples follow a pattern similar to:
+
+
+
+
 
 
 
 ```csharp
 
+
+
 using (Presentation pres = new Presentation("input.pptx"))
+
+
 
 {
 
+
+
     // operations
+
+
 
     pres.Save("output.pptx", SaveFormat.Pptx);
 
+
+
 }
 
+
+
 ```
+
+
+
+
 
 
 
@@ -199,25 +308,51 @@ using (Presentation pres = new Presentation("input.pptx"))
 
 
 
+
+
+
+
 - Load presentations using `new Presentation("file.pptx")`.
 
+
+
 - Modify slides through the `Slides` collection.
+
+
 
 - Save the presentation using `Presentation.Save(...)`.
 
 
 
+
+
+
+
 <!-- AUTOGENERATED:START -->
 
+
+
 Updated: 2026-04-08
+
+
 
 <!-- AUTOGENERATED:END -->
 
 
 
+
+
+
+
 <!-- SEO-FAQ:BEGIN -->
 
+
+
 ## Developer FAQ for Coding Agents
+
+
+
+
 
 
 
@@ -225,41 +360,83 @@ Use these Q&A entries when selecting examples from `manage-presentation` for use
 
 
 
+
+
+
+
 ### How do I convert PowerPoint PPTX files to PDF, HTML, SVG, PNG, or JPEG in C#?
+
+
 
 Use the conversion and export examples to load a `Presentation`, configure format-specific options when needed, and call `presentation.Save(...)` or slide image APIs with the correct `Aspose.Slides.Export.SaveFormat`.
 
 
 
+
+
+
+
 ### How do I create or edit PowerPoint charts in C# with Aspose.Slides?
+
+
 
 Use chart examples to add chart shapes, access `Aspose.Slides.Charts.IChart`, update chart data, format series, configure axes, and save the presentation.
 
 
 
+
+
+
+
 ### How do I add, clone, reorder, or remove PowerPoint slides in .NET?
+
+
 
 Use slide management examples to work with `ISlide`, slide collections, layouts, masters, and sections while preserving presentation structure.
 
 
 
+
+
+
+
 ### How do I edit PowerPoint shapes, text, tables, or SmartArt in C#?
+
+
 
 Use the shape, text, table, and SmartArt examples to locate shapes on a slide, cast to the appropriate Aspose.Slides interfaces, update content or formatting, and save the modified PPTX.
 
 
 
+
+
+
+
 ### How do I use Aspose.Slides for .NET for manage presentation in C#?
+
+
 
 Use the `manage-presentation` examples to find standalone C# patterns for manage presentation. Each example shows how to load or create an `Aspose.Slides.Presentation`, apply the operation, and save output with the correct Aspose.Slides API.
 
 
 
+
+
+
+
 ### Which manage presentation examples are best for coding agents?
+
+
 
 Start with the files listed in this directory and the category AGENTS.md. The strongest search terms for this category are: slide, pptx, presentation, slides, pdf.
 
 
 
+
+
+
+
 <!-- SEO-FAQ:END -->
+
+
 

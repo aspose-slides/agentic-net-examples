@@ -17,7 +17,7 @@
 // - Apply write protection to prevent unauthorized editing.
 // - Build .NET tools for securing PowerPoint files.
 // - Integrate presentation protection into document management workflows.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
