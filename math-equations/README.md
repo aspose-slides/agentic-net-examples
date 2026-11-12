@@ -14,10 +14,46 @@
 
 
 
-This category contains 29 standalone C# examples for Aspose.Slides for .NET. These examples help developers automate PowerPoint presentation workflows related to math equations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+This category contains 28 standalone C# examples for Aspose.Slides for .NET. These examples help developers automate PowerPoint presentation workflows related to math equations.
+These files are tested and verified with Aspose.Slides for .NET v26.11.0.
+
 These files are tested and verified with Aspose.Slides for .NET v26.10.0.
 
+
+
 These files are tested and verified with Aspose.Slides for .NET v26.9.0.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -49,7 +85,31 @@ These files are tested and verified with Aspose.Slides for .NET v26.9.0.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - Automate repetitive presentation-processing tasks in .NET applications.
+
+
+
+
+
+
+
+
 
 
 
@@ -65,7 +125,31 @@ These files are tested and verified with Aspose.Slides for .NET v26.9.0.
 
 
 
+
+
+
+
+
+
+
+
 - Provide coding agents with direct, category-specific examples and API usage patterns.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -97,7 +181,23 @@ These files are tested and verified with Aspose.Slides for .NET v26.9.0.
 
 
 
-Total examples: 29
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Total examples: 28
 
 - [Apply-superscript-to-mathportion-before-export.cs](./Apply-superscript-to-mathportion-before-export.cs)
 - [Capture-mathml-from-memorystream-as-bytearray.cs](./Capture-mathml-from-memorystream-as-bytearray.cs)
@@ -110,7 +210,6 @@ Total examples: 29
 - [Export-mathblock-to-mathml-using-memorystream.cs](./Export-mathblock-to-mathml-using-memorystream.cs)
 - [Export-mathml-from-shapes-with-alttext.cs](./Export-mathml-from-shapes-with-alttext.cs)
 - [Export-mathml-to-UNC-share.cs](./Export-mathml-to-UNC-share.cs)
-- [Export-mathparagraph-or-mathblock-via-CLI-arguments.cs](./Export-mathparagraph-or-mathblock-via-CLI-arguments.cs)
 - [Export-mathparagraph-to-mathml-with-filestream.cs](./Export-mathparagraph-to-mathml-with-filestream.cs)
 - [Find-mathportions-in-PPTX-slides.cs](./Find-mathportions-in-PPTX-slides.cs)
 - [Generate-mathml-from-slide-notes.cs](./Generate-mathml-from-slide-notes.cs)
@@ -145,7 +244,31 @@ Total examples: 29
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - [Category instructions](./AGENTS.md)
+
+
+
+
+
+
+
+
 
 
 
@@ -161,7 +284,23 @@ Total examples: 29
 
 
 
+
+
+
+
+
+
+
+
 - [Structured index](../index.json)
+
+
+
+
+
+
+
+
 
 
 
@@ -173,7 +312,19 @@ Total examples: 29
 
 
 
+
+
+
+
 ## Developer FAQ
+
+
+
+
+
+
+
+
 
 
 
@@ -189,7 +340,19 @@ These questions target common developer searches for Aspose.Slides for .NET `mat
 
 
 
+
+
+
+
+
+
+
+
 ### How do I add, clone, reorder, or remove PowerPoint slides in .NET?
+
+
+
+
 
 
 
@@ -201,7 +364,19 @@ Use slide management examples to work with `ISlide`, slide collections, layouts,
 
 
 
+
+
+
+
+
+
+
+
 ### How do I edit PowerPoint shapes, text, tables, or SmartArt in C#?
+
+
+
+
 
 
 
@@ -213,7 +388,19 @@ Use the shape, text, table, and SmartArt examples to locate shapes on a slide, c
 
 
 
+
+
+
+
+
+
+
+
 ### How do I extract presentation metadata, comments, notes, tags, VBA, or security information?
+
+
+
+
 
 
 
@@ -225,7 +412,19 @@ Use the inspection and management examples to access document properties, commen
 
 
 
+
+
+
+
+
+
+
+
 ### How do I use Aspose.Slides for .NET for math equations in C#?
+
+
+
+
 
 
 
@@ -237,7 +436,19 @@ Use the `math-equations` examples to find standalone C# patterns for math equati
 
 
 
+
+
+
+
+
+
+
+
 ### Which math equations examples are best for coding agents?
+
+
+
+
 
 
 
@@ -249,7 +460,19 @@ Start with the files listed in this directory and the category AGENTS.md. The st
 
 
 
+
+
+
+
+
+
+
+
 ### Are the math-equations examples standalone C# programs?
+
+
+
+
 
 
 
@@ -261,7 +484,19 @@ Yes. The examples are generated as standalone console-style C# files and are int
 
 
 
+
+
+
+
+
+
+
+
 <!-- SEO-FAQ:END -->
+
+
+
+
 
 
 
