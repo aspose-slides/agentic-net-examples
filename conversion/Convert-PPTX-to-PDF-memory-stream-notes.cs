@@ -18,7 +18,7 @@
 // - Generate PDF output in memory for further processing or transmission.
 // - Build automation tools that handle PPTX files without temporary files.
 // - Integrate presentation conversion into .NET backend services.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 
 using System;
