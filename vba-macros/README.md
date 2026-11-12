@@ -14,10 +14,46 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This category contains 33 standalone C# examples for Aspose.Slides for .NET. These examples help developers automate PowerPoint presentation workflows related to vba macros.
+These files are tested and verified with Aspose.Slides for .NET v26.11.0.
+
 These files are tested and verified with Aspose.Slides for .NET v26.10.0.
 
+
+
 These files are tested and verified with Aspose.Slides for .NET v26.9.0.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -49,6 +85,22 @@ These files are tested and verified with Aspose.Slides for .NET v26.9.0.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - Automate repetitive presentation-processing tasks in .NET applications.
 
 
@@ -57,7 +109,23 @@ These files are tested and verified with Aspose.Slides for .NET v26.9.0.
 
 
 
+
+
+
+
+
+
+
+
 - Generate, inspect, transform, or validate PPTX files in server-side workflows.
+
+
+
+
+
+
+
+
 
 
 
@@ -81,7 +149,39 @@ These files are tested and verified with Aspose.Slides for .NET v26.9.0.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Example Files
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -149,7 +249,31 @@ Total examples: 33
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - [Category instructions](./AGENTS.md)
+
+
+
+
+
+
+
+
 
 
 
@@ -165,7 +289,23 @@ Total examples: 33
 
 
 
+
+
+
+
+
+
+
+
 - [Structured index](../index.json)
+
+
+
+
+
+
+
+
 
 
 
@@ -177,7 +317,19 @@ Total examples: 33
 
 
 
+
+
+
+
 ## Developer FAQ
+
+
+
+
+
+
+
+
 
 
 
@@ -193,7 +345,19 @@ These questions target common developer searches for Aspose.Slides for .NET `vba
 
 
 
+
+
+
+
+
+
+
+
 ### How do I convert PowerPoint PPTX files to PDF, HTML, SVG, PNG, or JPEG in C#?
+
+
+
+
 
 
 
@@ -205,7 +369,19 @@ Use the conversion and export examples to load a `Presentation`, configure forma
 
 
 
+
+
+
+
+
+
+
+
 ### How do I create or edit PowerPoint charts in C# with Aspose.Slides?
+
+
+
+
 
 
 
@@ -217,7 +393,19 @@ Use chart examples to add chart shapes, access `Aspose.Slides.Charts.IChart`, up
 
 
 
+
+
+
+
+
+
+
+
 ### How do I add, clone, reorder, or remove PowerPoint slides in .NET?
+
+
+
+
 
 
 
@@ -229,7 +417,19 @@ Use slide management examples to work with `ISlide`, slide collections, layouts,
 
 
 
+
+
+
+
+
+
+
+
 ### How do I edit PowerPoint shapes, text, tables, or SmartArt in C#?
+
+
+
+
 
 
 
@@ -241,7 +441,19 @@ Use the shape, text, table, and SmartArt examples to locate shapes on a slide, c
 
 
 
+
+
+
+
+
+
+
+
 ### How do I extract presentation metadata, comments, notes, tags, VBA, or security information?
+
+
+
+
 
 
 
@@ -253,7 +465,19 @@ Use the inspection and management examples to access document properties, commen
 
 
 
+
+
+
+
+
+
+
+
 ### How do I use Aspose.Slides for .NET for vba macros in C#?
+
+
+
+
 
 
 
@@ -265,7 +489,19 @@ Use the `vba-macros` examples to find standalone C# patterns for vba macros. Eac
 
 
 
+
+
+
+
+
+
+
+
 <!-- SEO-FAQ:END -->
+
+
+
+
 
 
 
