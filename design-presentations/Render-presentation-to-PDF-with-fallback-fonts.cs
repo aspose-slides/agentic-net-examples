@@ -20,7 +20,7 @@
 // - Generate or transform PPTX files in .NET applications while handling
 //   missing glyphs.
 // - Validate presentation workflows before publishing or integration.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 
 using System;
