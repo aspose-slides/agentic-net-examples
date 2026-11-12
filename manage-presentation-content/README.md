@@ -14,10 +14,46 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This category contains 97 standalone C# examples for Aspose.Slides for .NET. These examples help developers automate PowerPoint presentation workflows related to manage presentation content.
+These files are tested and verified with Aspose.Slides for .NET v26.11.0.
+
 These files are tested and verified with Aspose.Slides for .NET v26.10.0.
 
+
+
 These files are tested and verified with Aspose.Slides for .NET v26.9.0.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -49,6 +85,22 @@ These files are tested and verified with Aspose.Slides for .NET v26.9.0.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - Automate repetitive presentation-processing tasks in .NET applications.
 
 
@@ -57,7 +109,23 @@ These files are tested and verified with Aspose.Slides for .NET v26.9.0.
 
 
 
+
+
+
+
+
+
+
+
 - Generate, inspect, transform, or validate PPTX files in server-side workflows.
+
+
+
+
+
+
+
+
 
 
 
@@ -81,7 +149,39 @@ These files are tested and verified with Aspose.Slides for .NET v26.9.0.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Example Files
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -213,7 +313,31 @@ Total examples: 97
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - [Category instructions](./AGENTS.md)
+
+
+
+
+
+
+
+
 
 
 
@@ -229,7 +353,23 @@ Total examples: 97
 
 
 
+
+
+
+
+
+
+
+
 - [Structured index](../index.json)
+
+
+
+
+
+
+
+
 
 
 
@@ -241,7 +381,19 @@ Total examples: 97
 
 
 
+
+
+
+
 ## Developer FAQ
+
+
+
+
+
+
+
+
 
 
 
@@ -257,7 +409,19 @@ These questions target common developer searches for Aspose.Slides for .NET `man
 
 
 
+
+
+
+
+
+
+
+
 ### How do I add, clone, reorder, or remove PowerPoint slides in .NET?
+
+
+
+
 
 
 
@@ -269,7 +433,19 @@ Use slide management examples to work with `ISlide`, slide collections, layouts,
 
 
 
+
+
+
+
+
+
+
+
 ### How do I edit PowerPoint shapes, text, tables, or SmartArt in C#?
+
+
+
+
 
 
 
@@ -281,7 +457,19 @@ Use the shape, text, table, and SmartArt examples to locate shapes on a slide, c
 
 
 
+
+
+
+
+
+
+
+
 ### How do I extract presentation metadata, comments, notes, tags, VBA, or security information?
+
+
+
+
 
 
 
@@ -293,7 +481,19 @@ Use the inspection and management examples to access document properties, commen
 
 
 
+
+
+
+
+
+
+
+
 ### How do I use Aspose.Slides for .NET for manage presentation content in C#?
+
+
+
+
 
 
 
@@ -305,7 +505,19 @@ Use the `manage-presentation-content` examples to find standalone C# patterns fo
 
 
 
+
+
+
+
+
+
+
+
 ### Which manage presentation content examples are best for coding agents?
+
+
+
+
 
 
 
@@ -317,7 +529,19 @@ Start with the files listed in this directory and the category AGENTS.md. The st
 
 
 
+
+
+
+
+
+
+
+
 ### Are the manage-presentation-content examples standalone C# programs?
+
+
+
+
 
 
 
@@ -329,7 +553,19 @@ Yes. The examples are generated as standalone console-style C# files and are int
 
 
 
+
+
+
+
+
+
+
+
 <!-- SEO-FAQ:END -->
+
+
+
+
 
 
 
