@@ -1,29 +1,23 @@
 // -----------------------------------------------------------------------------
-// Example: Compare original dash style after theme using C#
-//
+// Example: Compare original dash style after theme inheritance using C#
+// 
 // Description:
-// Demonstrates how to retrieve the original dash style set on a shape's line
-// format and compare it with the effective dash style after theme inheritance
-// using Aspose.Slides for .NET. The example loads a PPTX file, accesses the
-// first shape on the first slide, prints both dash styles, and saves the
-// presentation.
-//
+// Demonstrates how to retrieve the original dash style set on a shape's line format
+// and compare it with the effective dash style after theme inheritance using
+// Aspose.Slides for .NET. The program creates a sample PPTX if none exists,
+// prints both dash styles, and saves the presentation.
+// 
 // Keywords:
-// C#, Aspose.Slides, PowerPoint, PPTX, Dash Style, Line Format, Theme Inheritance,
-// Presentation Processing, Office Automation
-//
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Dash Style, Line Format, Theme
+// 
 // Use Cases:
-// - Determine how a shape's line dash style changes after applying a theme.
-// - Build tools to audit or validate line formatting in PowerPoint files.
-// - Automate comparison of original and effective visual properties in .NET.
-// - Generate reports on shape formatting for presentation quality checks.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Verify how line dash styles are affected by theme changes.
+// - Build validation tools for PowerPoint formatting.
+// - Automate reporting of shape visual properties.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
-
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 namespace CompareDashStyle
 {
@@ -34,49 +28,69 @@ namespace CompareDashStyle
             string inputPath = "input.pptx";
             string outputPath = "output.pptx";
 
-            // Verify input file exists
-            if (!File.Exists(inputPath))
-            {
-                Console.WriteLine("Input file does not exist: " + inputPath);
-                return;
-            }
-
             try
             {
-                // Load presentation
-                using (Presentation pres = new Presentation(inputPath))
+                // Create a sample presentation if the input file does not exist
+                if (!File.Exists(inputPath))
                 {
-                    // Get first slide
-                    ISlide slide = pres.Slides[0];
-
-                    // Get first shape that has a line format (e.g., AutoShape)
-                    IShape shape = slide.Shapes[0];
-
-                    // Original dash style set on the shape
-                    ILineFormat lineFormat = shape.LineFormat;
-                    LineDashStyle originalDash = lineFormat.DashStyle;
-
-                    // Effective dash style after theme inheritance
-                    ILineFormatEffectiveData effectiveLine = lineFormat.GetEffective();
-                    LineDashStyle effectiveDash = effectiveLine.DashStyle;
-
-                    // Output comparison
-                    Console.WriteLine("Original Dash Style: " + originalDash);
-                    Console.WriteLine("Effective Dash Style after Theme: " + effectiveDash);
-
-                    // Save presentation before exit
-                    pres.Save(outputPath, SaveFormat.Pptx);
+                    Aspose.Slides.Presentation samplePres = new Aspose.Slides.Presentation();
+                    Aspose.Slides.ISlide sampleSlide = samplePres.Slides[0];
+                    Aspose.Slides.IShape sampleShape = sampleSlide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 100, 100, 200, 100);
+                    sampleShape.LineFormat.DashStyle = Aspose.Slides.LineDashStyle.Dash;
+                    samplePres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    samplePres.Dispose();
                 }
+
+                // Load the presentation
+                Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
+
+                // Access the first slide
+                Aspose.Slides.ISlide slide = pres.Slides[0];
+
+                // Ensure there is at least one shape
+                if (slide.Shapes.Count == 0)
+                {
+                    Console.WriteLine("No shapes found on the first slide.");
+                    pres.Dispose();
+                    Environment.Exit(1);
+                }
+
+                // Get the first shape
+                Aspose.Slides.IShape shape = slide.Shapes[0];
+
+                // Ensure the shape has a line format
+                if (shape.LineFormat == null)
+                {
+                    Console.WriteLine("The first shape does not have a line format.");
+                    pres.Dispose();
+                    Environment.Exit(1);
+                }
+
+                // Original dash style set on the shape
+                Aspose.Slides.ILineFormat lineFormat = shape.LineFormat;
+                Aspose.Slides.LineDashStyle originalDash = lineFormat.DashStyle;
+
+                // Effective dash style after theme inheritance
+                Aspose.Slides.ILineFormatEffectiveData effectiveLine = lineFormat.GetEffective();
+                Aspose.Slides.LineDashStyle effectiveDash = effectiveLine.DashStyle;
+
+                // Output the dash styles
+                Console.WriteLine("Original Dash Style: " + originalDash);
+                Console.WriteLine("Effective Dash Style after Theme: " + effectiveDash);
+
+                // Save the presentation
+                pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                pres.Dispose();
             }
             catch (NotSupportedException)
             {
-                // Format not supported
                 Console.WriteLine("The provided file format is not supported.");
+                Environment.Exit(1);
             }
             catch (Exception ex)
             {
-                // General exception handling (e.g., file read errors, Aspose.Slides exceptions)
                 Console.WriteLine("An error occurred: " + ex.Message);
+                Environment.Exit(1);
             }
         }
     }
