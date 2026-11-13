@@ -1,66 +1,62 @@
 // -----------------------------------------------------------------------------
-// Example: Batch update line widths 1 5pt preserve dash using C#
+// Example: Batch Update Line Widths to 1.5pt While Preserving Dash Styles
 //
 // Description:
-// Demonstrates how to batch update line widths to 1.5 points while preserving
-// dash styles using C# and Aspose.Slides for .NET. The example iterates through
-// all shapes in a presentation, modifies the line width where defined, and
-// saves the result as a new PPTX file. This pattern can be used to automate
-// presentation styling tasks.
-//
+// This console program loads a PPTX file, iterates through all shapes, updates each defined line width to 1.5 points, and keeps any existing dash style unchanged. If the input file is missing, a simple sample presentation is created automatically. The modified presentation is saved as a new PPTX file.
+// 
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Batch, Update, Line, Width, 
-// Preserve Dash, Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, line width, dash style
 //
 // Use Cases:
-// - Automate batch updating of line widths to 1.5 pt while keeping dash styles.
-// - Build C# utilities for PowerPoint presentation styling.
-// - Generate or transform PPTX files in .NET applications.
-// - Ensure consistent line formatting across slides before publishing.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Standardize line thickness across an entire presentation.
+// - Maintain visual consistency while preserving custom dash patterns.
+// - Automate styling adjustments in bulk for corporate slide decks.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
-
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 class Program
 {
     static void Main()
     {
-        var inputPath = "input.pptx";
-        var outputPath = "output.pptx";
-
-        if (!File.Exists(inputPath))
-        {
-            Console.WriteLine("Input file does not exist.");
-            return;
-        }
+        string inputPath = "input.pptx";
+        string outputPath = "output.pptx";
 
         try
         {
-            using (var presentation = new Aspose.Slides.Presentation(inputPath))
+            if (!File.Exists(inputPath))
             {
-                foreach (var slide in presentation.Slides)
+                Aspose.Slides.Presentation samplePresentation = new Aspose.Slides.Presentation();
+                Aspose.Slides.ISlide sampleSlide = samplePresentation.Slides[0];
+                Aspose.Slides.IAutoShape sampleShape = (Aspose.Slides.IAutoShape)sampleSlide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 100, 100, 300, 150);
+                sampleShape.LineFormat.Width = 2.0f;
+                samplePresentation.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                samplePresentation.Dispose();
+            }
+
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+            foreach (Aspose.Slides.ISlide slide in presentation.Slides)
+            {
+                foreach (Aspose.Slides.IShape shape in slide.Shapes)
                 {
-                    foreach (var shape in slide.Shapes)
+                    Aspose.Slides.ILineFormat lineFormat = shape.LineFormat;
+                    if (lineFormat != null && !lineFormat.IsFormatNotDefined)
                     {
-                        var lineFormat = shape.LineFormat;
-                        if (lineFormat != null && !lineFormat.IsFormatNotDefined)
-                        {
-                            lineFormat.Width = 1.5; // set width to 1.5 points, dash style preserved
-                        }
+                        lineFormat.Width = 1.5f;
                     }
                 }
-
-                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
             }
+
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            presentation.Dispose();
+
+            Console.WriteLine("Line widths updated successfully. Output saved to: " + outputPath);
         }
         catch (Exception ex)
         {
-            // Handle format not supported or other errors
             Console.WriteLine("Error: " + ex.Message);
+            Environment.Exit(1);
         }
     }
 }
