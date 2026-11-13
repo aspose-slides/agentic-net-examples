@@ -1,82 +1,70 @@
 // -----------------------------------------------------------------------------
 // Example: Add rectangle picture fill with SVG using C#
-//
+// 
 // Description:
-// Demonstrates how to add a rectangle shape and apply a picture fill using an
-// SVG image with C# and Aspose.Slides for .NET. The example creates a new
-// presentation, loads an SVG file, adds it as an image to the presentation,
-// and sets the rectangle's fill to that SVG picture, then saves the PPTX.
-//
+// Demonstrates how to create a new PowerPoint presentation, add a rectangle
+// shape, and apply an SVG image as a picture fill using Aspose.Slides for .NET.
+// The program generates a simple SVG file if missing, embeds it into the
+// presentation, and saves the result as a PPTX file.
+// 
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SVG, Rectangle, Picture Fill,
-// Presentation Processing, Office Automation
-//
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, SVG, rectangle, picture fill
+// 
 // Use Cases:
-// - Automate adding rectangle picture fill with SVG.
-// - Build C# tools for PowerPoint presentation processing.
-// - Generate or transform PPTX files with SVG graphics in .NET applications.
-// - Validate presentation workflows before publishing or integration.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Automate insertion of SVG graphics as shape fills in presentations.
+// - Build .NET tools for batch processing of PPTX files with vector images.
+// - Generate marketing decks with scalable SVG artwork programmatically.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 class Program
 {
     static void Main(string[] args)
     {
-        // Define input SVG and output PPTX paths
         string dataDir = Path.Combine(Directory.GetCurrentDirectory(), "Data");
-        string svgPath = Path.Combine(dataDir, "image.svg");
-        string outputPath = Path.Combine(dataDir, "output.pptx");
-
-        // Ensure data directory exists
         if (!Directory.Exists(dataDir))
         {
             Directory.CreateDirectory(dataDir);
         }
 
-        // Verify SVG file exists
+        string svgPath = Path.Combine(dataDir, "image.svg");
         if (!File.Exists(svgPath))
         {
-            Console.WriteLine("SVG file not found: " + svgPath);
-            return;
+            try
+            {
+                string sampleSvg = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"200\"><rect width=\"200\" height=\"200\" fill=\"green\"/></svg>";
+                File.WriteAllText(svgPath, sampleSvg);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to create sample SVG file: " + ex.Message);
+                Environment.Exit(1);
+            }
         }
+
+        string outputPath = Path.Combine(dataDir, "output.pptx");
 
         try
         {
-            // Create a new presentation
-            Presentation pres = new Presentation();
+            Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation();
+            Aspose.Slides.ISlide slide = pres.Slides[0];
+            Aspose.Slides.IAutoShape rectShape = slide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 100, 100, 400, 300);
+            rectShape.FillFormat.FillType = Aspose.Slides.FillType.Picture;
 
-            // Get the first slide
-            ISlide slide = pres.Slides[0];
-
-            // Add a rectangle shape
-            IAutoShape shape = slide.Shapes.AddAutoShape(ShapeType.Rectangle, 100, 100, 400, 300);
-
-            // Set fill type to picture
-            shape.FillFormat.FillType = FillType.Picture;
-
-            // Load SVG content and create SVG image object
             string svgContent = File.ReadAllText(svgPath);
-            ISvgImage svgImage = new SvgImage(svgContent);
+            Aspose.Slides.ISvgImage svgImage = new Aspose.Slides.SvgImage(svgContent);
+            Aspose.Slides.IPPImage ppImage = pres.Images.AddImage(svgImage);
+            rectShape.FillFormat.PictureFillFormat.Picture.Image = ppImage;
 
-            // Add SVG image to the presentation's image collection
-            IPPImage ppImg = pres.Images.AddImage(svgImage);
-
-            // Use the SVG image as the picture fill source
-            shape.FillFormat.PictureFillFormat.Picture.Image = ppImg;
-
-            // Save the presentation
-            pres.Save(outputPath, SaveFormat.Pptx);
+            pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
         }
         catch (Exception ex)
         {
-            // Handle unsupported format or other errors
             Console.WriteLine("An error occurred: " + ex.Message);
+            Environment.Exit(1);
         }
     }
 }
