@@ -23,7 +23,7 @@
 // - Generate or transform PPTX files with specific connector configurations in
 //   .NET applications.
 // - Validate connector geometry and angles before publishing or integration.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 
 using System;
