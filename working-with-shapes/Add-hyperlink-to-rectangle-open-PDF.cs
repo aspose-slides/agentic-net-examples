@@ -1,73 +1,103 @@
 // -----------------------------------------------------------------------------
-// Example: Add hyperlink to rectangle open PDF using C#
+// Example: Add hyperlink to rectangle shape to open PDF
 //
 // Description:
-// Demonstrates how to add a hyperlink to a rectangle shape that opens a local
-// PDF file using C# and Aspose.Slides for .NET. The example creates a new
-// presentation, inserts a rectangle on the first slide, assigns a hyperlink
-// pointing to the specified PDF, and saves the result as a PPTX file. This
-// pattern can be used to automate PowerPoint workflows that require linking
-// to external documents.
+// Demonstrates how to create a new PowerPoint presentation, insert a rectangle
+// shape on the first slide, assign a hyperlink that opens a local PDF file, and
+// save the result as a PPTX file using Aspose.Slides for .NET. The program also
+// creates a placeholder PDF if it does not exist.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Hyperlink, Rectangle,
-// Open, Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PDF, Hyperlink, Rectangle
 //
 // Use Cases:
-// - Automate adding hyperlinks to shapes that open PDF files.
-// - Build C# tools for PowerPoint presentation processing with external links.
-// - Generate or transform PPTX files that reference local documents.
-// - Validate presentation workflows before publishing or integration.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Automate adding hyperlinks to shapes that open PDF documents.
+// - Build tools for generating presentations with external document references.
+// - Validate presentation workflows that include links to local files.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
-
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 namespace HyperlinkExample
 {
     class Program
     {
-        static void Main(string[] args)
+        static int Main(string[] args)
         {
-            // Path to the local PDF file
-            string pdfPath = @"C:\Documents\sample.pdf";
+            string pdfPath = "sample.pdf";
 
-            // Verify that the PDF file exists
+            // Ensure the PDF file exists; create a minimal placeholder if missing.
             if (!File.Exists(pdfPath))
             {
-                Console.WriteLine("The specified PDF file does not exist: " + pdfPath);
-                return;
+                try
+                {
+                    // Minimal PDF header to make the file recognizable.
+                    File.WriteAllBytes(pdfPath, new byte[] { 0x25, 0x50, 0x44, 0x46, 0x2D });
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Failed to create placeholder PDF: " + ex.Message);
+                    return 1;
+                }
             }
 
-            // Create a new presentation
-            Presentation presentation = new Presentation();
-
-            // Add a rectangle shape to the first slide
-            IAutoShape rectangle = presentation.Slides[0].Shapes.AddAutoShape(
-                ShapeType.Rectangle, 100, 100, 200, 50);
-
-            // Add an empty text frame (required for hyperlink)
-            rectangle.AddTextFrame("");
-
-            // Set the hyperlink on the first portion of the first paragraph
-            rectangle.TextFrame.Paragraphs[0].Portions[0].PortionFormat.HyperlinkClick = new Hyperlink(pdfPath);
-
-            // Optionally set a tooltip
-            rectangle.TextFrame.Paragraphs[0].Portions[0].PortionFormat.HyperlinkClick.Tooltip = "Open PDF";
-
-            // Save the presentation
+            Aspose.Slides.Presentation presentation;
             try
             {
-                presentation.Save("HyperlinkedRectangle.pptx", SaveFormat.Pptx);
+                presentation = new Aspose.Slides.Presentation();
             }
             catch (Exception ex)
             {
-                // Handle format not supported or other save errors
-                Console.WriteLine("Error saving presentation: " + ex.Message);
+                Console.WriteLine("Failed to create presentation: " + ex.Message);
+                return 1;
             }
+
+            Aspose.Slides.IAutoShape rectangle;
+            try
+            {
+                rectangle = presentation.Slides[0].Shapes.AddAutoShape(
+                    Aspose.Slides.ShapeType.Rectangle, 100, 100, 200, 50);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to add rectangle shape: " + ex.Message);
+                return 1;
+            }
+
+            try
+            {
+                rectangle.AddTextFrame("");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to add text frame: " + ex.Message);
+                return 1;
+            }
+
+            try
+            {
+                Aspose.Slides.Hyperlink hyperlink = new Aspose.Slides.Hyperlink(pdfPath);
+                rectangle.TextFrame.Paragraphs[0].Portions[0].PortionFormat.HyperlinkClick = hyperlink;
+                rectangle.TextFrame.Paragraphs[0].Portions[0].PortionFormat.HyperlinkClick.Tooltip = "Open PDF";
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to set hyperlink: " + ex.Message);
+                return 1;
+            }
+
+            try
+            {
+                presentation.Save("HyperlinkedRectangle.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error saving presentation: " + ex.Message);
+                return 1;
+            }
+
+            return 0;
         }
     }
 }
