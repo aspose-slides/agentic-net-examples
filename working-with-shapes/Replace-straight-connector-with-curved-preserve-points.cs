@@ -1,29 +1,23 @@
 // -----------------------------------------------------------------------------
-// Example: Replace straight connector with curved preserve points using C#
+// Example: Replace Straight Connectors with Curved Connectors Preserving Points
 //
 // Description:
-// Demonstrates how to replace straight connector with curved preserve points 
-// using C# and Aspose.Slides for .NET. The example shows the required 
-// presentation-processing steps for PowerPoint files and produces the 
-// requested output in a standalone console application. Developers can use 
-// this pattern to automate PPTX workflows, validate results, or integrate 
-// presentation logic into .NET applications.
+// Demonstrates how to replace straight line connectors with bent (curved) connectors
+// in a PowerPoint presentation using C# and Aspose.Slides for .NET while preserving
+// their start and end connection points. The program creates a sample PPTX if none
+// exists, performs the conversion, and saves the result.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Replace, Straight, Connector, 
-// Curved, Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Replace Straight Connector, Curved Connector, Preserve Points
 //
 // Use Cases:
-// - Automate replace straight connector with curved preserve points.
-// - Build C# tools for PowerPoint presentation processing.
-// - Generate or transform PPTX files in .NET applications.
-// - Validate presentation workflows before publishing or integration.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Automate conversion of straight connectors to curved ones in existing presentations.
+// - Build tools that adjust diagram aesthetics programmatically.
+// - Validate connector transformations during PPTX generation pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 namespace ConnectorsExample
 {
@@ -31,59 +25,58 @@ namespace ConnectorsExample
     {
         static void Main(string[] args)
         {
-            // Input and output file paths
             string inputPath = "input.pptx";
             string outputPath = "output.pptx";
 
-            // Verify that the input file exists
-            if (!File.Exists(inputPath))
-            {
-                Console.WriteLine("Input file does not exist: " + inputPath);
-                return;
-            }
-
             try
             {
-                // Load the presentation
-                using (Presentation presentation = new Presentation(inputPath))
+                // Create a sample presentation if the input file does not exist
+                if (!File.Exists(inputPath))
                 {
-                    // Iterate over all slides
-                    for (int slideIndex = 0; slideIndex < presentation.Slides.Count; slideIndex++)
+                    Aspose.Slides.Presentation samplePres = new Aspose.Slides.Presentation();
+                    Aspose.Slides.ISlide sampleSlide = samplePres.Slides[0];
+                    Aspose.Slides.IConnector straightConnector = (Aspose.Slides.IConnector)sampleSlide.Shapes.AddConnector(
+                        Aspose.Slides.ShapeType.Line,
+                        100, 100, 300, 100);
+                    straightConnector.LineFormat.Width = 2;
+                    straightConnector.LineFormat.FillFormat.FillType = Aspose.Slides.FillType.Solid;
+                    straightConnector.LineFormat.FillFormat.SolidFillColor.Color = System.Drawing.Color.Black;
+                    samplePres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    samplePres.Dispose();
+                }
+
+                // Load the presentation for processing
+                Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+                for (int slideIndex = 0; slideIndex < presentation.Slides.Count; slideIndex++)
+                {
+                    Aspose.Slides.ISlide slide = presentation.Slides[slideIndex];
+                    Aspose.Slides.IShapeCollection shapes = slide.Shapes;
+                    for (int shapeIndex = 0; shapeIndex < shapes.Count; shapeIndex++)
                     {
-                        ISlide slide = presentation.Slides[slideIndex];
-                        IShapeCollection shapes = slide.Shapes;
-
-                        // Iterate over all shapes in the slide
-                        for (int shapeIndex = 0; shapeIndex < shapes.Count; shapeIndex++)
+                        Aspose.Slides.IShape shape = shapes[shapeIndex];
+                        if (shape is Aspose.Slides.IConnector)
                         {
-                            IShape shape = shapes[shapeIndex];
-
-                            // Process only connector shapes
-                            if (shape is IConnector)
+                            Aspose.Slides.IConnector connector = (Aspose.Slides.IConnector)shape;
+                            if (connector.ShapeType == Aspose.Slides.ShapeType.Line)
                             {
-                                IConnector connector = (IConnector)shape;
-
-                                // Identify straight connectors (using Line shape type)
-                                if (connector.ShapeType == ShapeType.Line)
-                                {
-                                    // Change the connector to a bent (curved) type while preserving connections
-                                    connector.ShapeType = ShapeType.BentConnector2;
-                                    connector.Reroute();
-                                }
+                                // Replace straight connector with a bent (curved) connector while preserving connection points
+                                connector.ShapeType = Aspose.Slides.ShapeType.BentConnector2;
                             }
                         }
                     }
-
-                    // Save the modified presentation
-                    presentation.Save(outputPath, SaveFormat.Pptx);
                 }
+
+                // Save the modified presentation
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                presentation.Dispose();
+
+                Console.WriteLine("Connector conversion completed successfully.");
             }
             catch (Exception ex)
             {
-                // Handle unsupported format or other errors
                 Console.WriteLine("An error occurred: " + ex.Message);
-                // Format not supported comment
                 // The provided file format may not be supported by Aspose.Slides.
+                Environment.Exit(1);
             }
         }
     }
