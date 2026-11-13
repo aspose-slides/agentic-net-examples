@@ -1,77 +1,73 @@
 // -----------------------------------------------------------------------------
 // Example: Set master slide dashdot pattern using C#
-//
+// 
 // Description:
-// Demonstrates how to set the line dash style to DashDot for all shapes on
-// each master slide in a PowerPoint presentation using Aspose.Slides for .NET.
-// The example loads an existing PPTX file, updates the line formatting of
-// shapes on master slides, and saves the result as a new PPTX file.
-// This is useful for ensuring consistent line styling across master slides.
-//
+// Demonstrates how to set the line dash style to DashDot for all shapes on each
+// master slide in a PowerPoint presentation using Aspose.Slides for .NET. The
+// program creates a sample PPTX file if none exists, updates the line formatting
+// of shapes on master slides, and saves the result as a new PPTX file.
+// 
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Master Slide, Shape, Line,
-// DashDot, LineDashStyle, Presentation Processing, Office Automation
-//
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Master Slide, LineDashStyle, DashDot
+// 
 // Use Cases:
 // - Apply a uniform DashDot line style to all shapes on master slides.
 // - Prepare presentations with consistent styling before distribution.
 // - Automate styling updates in batch processing of PPTX files.
-// - Integrate line style adjustments into .NET-based PowerPoint tooling.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-namespace ReplaceLineDashOnMaster
+namespace SetMasterSlideDashDot
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Define input and output file paths
             string inputPath = "input.pptx";
             string outputPath = "output.pptx";
 
-            // Verify that the input file exists
-            if (!File.Exists(inputPath))
-            {
-                Console.WriteLine("Input file does not exist: " + inputPath);
-                return;
-            }
-
             try
             {
-                // Load the presentation
-                Presentation pres = new Presentation(inputPath);
-
-                // Iterate through all master slides
-                foreach (IMasterSlide masterSlide in pres.Masters)
+                if (!File.Exists(inputPath))
                 {
-                    // Iterate through all shapes on the master slide
-                    foreach (IShape shape in masterSlide.Shapes)
+                    Aspose.Slides.Presentation samplePresentation = new Aspose.Slides.Presentation();
+                    Aspose.Slides.IMasterSlide masterSlide = samplePresentation.Masters[0];
+                    Aspose.Slides.IShape rectangle = masterSlide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 50, 50, 200, 100);
+                    rectangle.LineFormat.Width = 2;
+                    samplePresentation.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    samplePresentation.Dispose();
+                }
+
+                Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+
+                foreach (Aspose.Slides.IMasterSlide master in presentation.Masters)
+                {
+                    foreach (Aspose.Slides.IShape shape in master.Shapes)
                     {
-                        // Set the line dash style to DashDot for consistency
-                        shape.LineFormat.DashStyle = LineDashStyle.DashDot;
+                        if (shape.LineFormat != null)
+                        {
+                            shape.LineFormat.DashStyle = Aspose.Slides.LineDashStyle.DashDot;
+                        }
                     }
                 }
 
-                // Save the modified presentation
-                pres.Save(outputPath, SaveFormat.Pptx);
-                pres.Dispose();
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                presentation.Dispose();
+
                 Console.WriteLine("Presentation saved successfully to: " + outputPath);
             }
             catch (NotSupportedException)
             {
-                // Format not supported
                 Console.WriteLine("The file format is not supported.");
+                Environment.Exit(1);
             }
             catch (Exception ex)
             {
-                // General exception handling
                 Console.WriteLine("An error occurred: " + ex.Message);
+                Environment.Exit(1);
             }
         }
     }
