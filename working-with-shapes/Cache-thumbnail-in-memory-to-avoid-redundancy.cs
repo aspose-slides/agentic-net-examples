@@ -1,32 +1,25 @@
 // -----------------------------------------------------------------------------
-// Example: Cache thumbnail in memory to avoid redundancy using C#
+// Example: Cache shape thumbnails in memory to avoid redundant generation
 //
 // Description:
-// Demonstrates how to cache shape thumbnails in memory to avoid redundant
-// generation when processing a PowerPoint presentation with Aspose.Slides for .NET.
-// The example loads a PPTX file, generates thumbnails for each shape on the first
-// slide, stores them in a dictionary, saves the thumbnails as PNG files, and
-// saves the presentation without refreshing its thumbnail using the cached images.
-// This pattern helps improve performance in automation scenarios that require
-// repeated access to shape images.
+// Demonstrates how to cache shape thumbnails while processing a PowerPoint
+// presentation using Aspose.Slides for .NET. The program creates a sample PPTX
+// if none exists, generates thumbnails for each shape on the first slide,
+// stores them in a dictionary, saves the thumbnails as PNG files, and saves
+// the presentation without refreshing its thumbnail using the cached images.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Cache, Thumbnail, Memory, Avoid,
-// Presentation Processing, Office Automation, Shape, Image, PNG
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Cache, Thumbnail, Memory, Shape
 //
 // Use Cases:
 // - Reduce processing time by caching shape thumbnails during batch operations.
 // - Build .NET tools that generate or manipulate shape images from PPTX files.
 // - Automate thumbnail extraction and reuse in presentation workflows.
-// - Optimize memory and CPU usage when handling large presentations.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
-
 using System;
 using System.IO;
 using System.Collections.Generic;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 namespace ThumbnailCacheExample
 {
@@ -34,81 +27,113 @@ namespace ThumbnailCacheExample
     {
         static void Main(string[] args)
         {
-            // Define input and output file paths
             string inputFileName = "input.pptx";
             string outputFileName = "output.pptx";
             string inputPath = Path.Combine(Directory.GetCurrentDirectory(), inputFileName);
             string outputPath = Path.Combine(Directory.GetCurrentDirectory(), outputFileName);
 
+            // Create a sample presentation if the input file does not exist
+            if (!File.Exists(inputPath))
+            {
+                try
+                {
+                    Aspose.Slides.Presentation samplePresentation = new Aspose.Slides.Presentation();
+                    Aspose.Slides.ISlide sampleSlide = samplePresentation.Slides[0];
+                    Aspose.Slides.IAutoShape sampleShape = (Aspose.Slides.IAutoShape)sampleSlide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 50, 50, 200, 100);
+                    sampleShape.TextFrame.Text = "Sample Shape";
+                    samplePresentation.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    samplePresentation.Dispose();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error creating sample presentation: " + ex.Message);
+                    Environment.Exit(1);
+                }
+            }
+
             // Verify input file exists
             if (!File.Exists(inputPath))
             {
                 Console.WriteLine("Input file not found: " + inputPath);
-                return;
+                Environment.Exit(1);
             }
 
             Aspose.Slides.Presentation presentation = null;
             try
             {
-                // Load presentation
                 presentation = new Aspose.Slides.Presentation(inputPath);
             }
             catch (NotSupportedException)
             {
-                // Format not supported
-                // TODO: handle unsupported format
                 Console.WriteLine("The file format is not supported.");
-                return;
+                Environment.Exit(1);
             }
             catch (Exception ex)
             {
-                // General exception handling for loading
                 Console.WriteLine("Error loading presentation: " + ex.Message);
-                return;
+                Environment.Exit(1);
             }
 
-            // Cache for shape thumbnails (keyed by OfficeInteropShapeId)
-            Dictionary<ulong, Aspose.Slides.IImage> thumbnailCache = new Dictionary<ulong, Aspose.Slides.IImage>();
+            Dictionary<int, Aspose.Slides.IImage> thumbnailCache = new Dictionary<int, Aspose.Slides.IImage>();
 
-            // Process shapes on the first slide as an example
-            Aspose.Slides.ISlide slide = presentation.Slides[0];
-            for (int shapeIndex = 0; shapeIndex < slide.Shapes.Count; shapeIndex++)
-            {
-                Aspose.Slides.IShape shape = slide.Shapes[shapeIndex];
-                ulong shapeId = shape.OfficeInteropShapeId;
-
-                Aspose.Slides.IImage thumbnailImage;
-                if (!thumbnailCache.TryGetValue(shapeId, out thumbnailImage))
-                {
-                    // Thumbnail not cached, generate and store it
-                    thumbnailImage = shape.GetImage(Aspose.Slides.ShapeThumbnailBounds.Shape, 1f, 1f);
-                    thumbnailCache[shapeId] = thumbnailImage;
-                }
-
-                // Save thumbnail to PNG file
-                string pngFileName = $"shape_{shapeId}.png";
-                string pngPath = Path.Combine(Directory.GetCurrentDirectory(), pngFileName);
-                thumbnailImage.Save(pngPath, Aspose.Slides.ImageFormat.Png);
-            }
-
-            // Save presentation without refreshing the thumbnail (uses cached thumbnails)
             try
             {
-                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx, new Aspose.Slides.Export.PptxOptions
+                Aspose.Slides.ISlide slide = presentation.Slides[0];
+                for (int shapeIndex = 0; shapeIndex < slide.Shapes.Count; shapeIndex++)
                 {
-                    RefreshThumbnail = false
-                });
+                    Aspose.Slides.IShape shape = slide.Shapes[shapeIndex];
+                    int shapeKey = shape.GetHashCode();
+
+                    Aspose.Slides.IImage thumbnailImage;
+                    if (!thumbnailCache.TryGetValue(shapeKey, out thumbnailImage))
+                    {
+                        thumbnailImage = shape.GetImage(Aspose.Slides.ShapeThumbnailBounds.Shape, 1.0f, 1.0f);
+                        thumbnailCache[shapeKey] = thumbnailImage;
+                    }
+
+                    string pngFileName = $"shape_{shapeKey}.png";
+                    string pngPath = Path.Combine(Directory.GetCurrentDirectory(), pngFileName);
+                    thumbnailImage.Save(pngPath, Aspose.Slides.ImageFormat.Png);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error processing shapes: " + ex.Message);
+                if (presentation != null)
+                {
+                    presentation.Dispose();
+                }
+                Environment.Exit(1);
+            }
+
+            try
+            {
+                Aspose.Slides.Export.PptxOptions saveOptions = new Aspose.Slides.Export.PptxOptions();
+                saveOptions.RefreshThumbnail = false;
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx, saveOptions);
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Error saving presentation: " + ex.Message);
+                if (presentation != null)
+                {
+                    presentation.Dispose();
+                }
+                Environment.Exit(1);
             }
 
-            // Dispose resources
+            // Dispose cached images
+            foreach (Aspose.Slides.IImage img in thumbnailCache.Values)
+            {
+                img.Dispose();
+            }
+
             if (presentation != null)
             {
                 presentation.Dispose();
             }
+
+            Environment.Exit(0);
         }
     }
 }

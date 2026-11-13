@@ -1,78 +1,93 @@
 // -----------------------------------------------------------------------------
-// Example: Validate shape line width greater zero using C#
+// Example: Validate and Correct Shape Line Width Greater Than Zero in PPTX
 //
 // Description:
-// Demonstrates how to validate that each shape's line width is greater than zero
-// using C# and Aspose.Slides for .NET. The example loads a presentation, checks
-// all shapes on all slides, and sets a minimal positive line width where needed.
-// It then saves the modified presentation. This pattern can be used to ensure
-// visual consistency and compliance with design guidelines in PowerPoint files.
-//
+// This console program loads a PowerPoint presentation, checks every shape on
+// each slide to ensure its outline line width is greater than zero, and sets a
+// minimal positive width where needed. It creates a sample presentation if the
+// input file is missing, then saves the corrected file.
+// 
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Validate, Shape, Line, Width,
-// Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, shape line width validation
 //
 // Use Cases:
-// - Ensure all shape outlines have a visible line width.
-// - Automate validation of presentation design standards.
-// - Prepare PPTX files for publishing where zero-width lines are not allowed.
-// - Integrate shape validation into .NET PowerPoint processing tools.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Enforce visual consistency by preventing invisible shape outlines.
+// - Automate design guideline compliance checks in PPTX files.
+// - Prepare presentations for publishing where zero-width lines are disallowed.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 class Program
 {
     static void Main()
     {
-        // Paths for input and output files
         string inputPath = "input.pptx";
         string outputPath = "output.pptx";
 
-        // Verify that the input file exists
+        // Create a sample presentation if the input file does not exist
+        if (!File.Exists(inputPath))
+        {
+            try
+            {
+                Aspose.Slides.Presentation samplePres = new Aspose.Slides.Presentation();
+                Aspose.Slides.ISlide firstSlide = samplePres.Slides[0];
+                Aspose.Slides.IShape rectShape = firstSlide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 50, 50, 200, 100);
+                // Set line width to zero to simulate the issue
+                rectShape.LineFormat.Width = 0.0f;
+                samplePres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                samplePres.Dispose();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to create sample input file: " + ex.Message);
+                Environment.Exit(1);
+            }
+        }
+
+        // Verify that the input file now exists
         if (!File.Exists(inputPath))
         {
             Console.WriteLine("Input file does not exist.");
-            return;
+            Environment.Exit(1);
         }
 
         try
         {
-            // Load the presentation
             Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
 
-            // Iterate through all slides and shapes to ensure line width > 0
-            for (int slideIndex = 0; slideIndex < pres.Slides.Count; slideIndex++)
+            for (int slideIdx = 0; slideIdx < pres.Slides.Count; slideIdx++)
             {
-                Aspose.Slides.ISlide slide = pres.Slides[slideIndex];
-                for (int shapeIndex = 0; shapeIndex < slide.Shapes.Count; shapeIndex++)
+                Aspose.Slides.ISlide slide = pres.Slides[slideIdx];
+                for (int shapeIdx = 0; shapeIdx < slide.Shapes.Count; shapeIdx++)
                 {
-                    Aspose.Slides.IShape shape = slide.Shapes[shapeIndex];
-                    if (shape.LineFormat != null)
+                    Aspose.Slides.IShape shape = slide.Shapes[shapeIdx];
+                    Aspose.Slides.ILineFormat lineFmt = shape.LineFormat;
+                    if (lineFmt != null && lineFmt.Width <= 0)
                     {
-                        if (shape.LineFormat.Width <= 0)
-                        {
-                            // Set a minimal positive line width
-                            shape.LineFormat.Width = 0.5f;
-                        }
+                        lineFmt.Width = 0.5f; // Set minimal positive line width
                     }
                 }
             }
 
-            // Save the presentation
             pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            pres.Dispose();
         }
         catch (NotSupportedException)
         {
             // Format not supported
+            Console.WriteLine("The presentation format is not supported.");
+            Environment.Exit(1);
         }
         catch (Exception ex)
         {
             Console.WriteLine("Error: " + ex.Message);
+            Environment.Exit(1);
         }
+
+        Console.WriteLine("Shape line widths validated and corrected. Output saved to " + outputPath);
+        Environment.Exit(0);
     }
 }

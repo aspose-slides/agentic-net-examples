@@ -1,29 +1,24 @@
 // -----------------------------------------------------------------------------
-// Example: Export group alttext to csv from PPTX using C#
+// Example: Export Group Alternative Text to CSV from PPTX using C#
 //
 // Description:
-// Demonstrates how to export group alttext to csv from PPTX using C# and 
-// Aspose.Slides for .NET. The example shows the required 
-// presentation-processing steps for PowerPoint files and produces the 
-// requested output in a standalone console application. Developers can use 
-// this pattern to automate PPTX workflows, validate results, or integrate 
-// presentation logic into .NET applications.
+// This console application loads a PowerPoint PPTX file, extracts the
+// AlternativeText of each group shape on every slide, and writes the data to
+// a CSV file. If the input PPTX does not exist, a sample presentation with a
+// group shape and alt text is created automatically. The resulting CSV can be
+// used for accessibility audits or metadata reporting.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Group, Alttext, CSV, 
-// Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export Group AltText CSV
 //
 // Use Cases:
-// - Automate export of group alttext to CSV from PPTX.
-// - Build C# tools for PowerPoint presentation processing.
-// - Generate or transform PPTX files in .NET applications.
-// - Validate presentation workflows before publishing or integration.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Automate extraction of group alt text for accessibility compliance.
+// - Generate CSV reports of presentation metadata for content management.
+// - Integrate PowerPoint analysis into .NET batch processing pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 namespace AsposeSlidesExample
 {
@@ -31,38 +26,43 @@ namespace AsposeSlidesExample
     {
         static void Main(string[] args)
         {
-            // Input and output file paths
             string inputPath = "input.pptx";
             string outputCsv = "groups_alttext.csv";
 
-            // Verify that the input file exists
-            if (!File.Exists(inputPath))
-            {
-                Console.WriteLine("Input file does not exist.");
-                return;
-            }
-
             try
             {
-                // Load the presentation
-                using (Presentation pres = new Presentation(inputPath))
+                if (!File.Exists(inputPath))
                 {
-                    // Create CSV file and write header
+                    // Create a sample presentation with a group shape containing alt text
+                    Aspose.Slides.Presentation samplePres = new Aspose.Slides.Presentation();
+                    Aspose.Slides.ISlide sampleSlide = samplePres.Slides[0];
+                    Aspose.Slides.IGroupShape sampleGroup = sampleSlide.Shapes.AddGroupShape((Aspose.Slides.ISvgImage) null, 50, 50, 400, 300);
+                    sampleGroup.AlternativeText = "Sample group alt text";
+
+                    // Add a rectangle inside the group (optional visual content)
+                    Aspose.Slides.IAutoShape rect = (Aspose.Slides.IAutoShape) sampleGroup.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 0, 0, 200, 100);
+                    rect.AlternativeText = "Rectangle inside group";
+
+                    samplePres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    samplePres.Dispose();
+                }
+
+                // Load the presentation for processing
+                using (Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath))
+                {
                     using (StreamWriter sw = new StreamWriter(outputCsv))
                     {
                         sw.WriteLine("SlideIndex,GroupIndex,AltText");
-
                         int slideIndex = 0;
-                        foreach (ISlide slide in pres.Slides)
+                        foreach (Aspose.Slides.ISlide slide in pres.Slides)
                         {
                             int groupIndex = 0;
-                            foreach (IShape shape in slide.Shapes)
+                            foreach (Aspose.Slides.IShape shape in slide.Shapes)
                             {
-                                IGroupShape groupShape = shape as IGroupShape;
-                                if (groupShape != null)
+                                Aspose.Slides.IGroupShape group = shape as Aspose.Slides.IGroupShape;
+                                if (group != null)
                                 {
-                                    string altText = groupShape.AlternativeText ?? string.Empty;
-                                    // Escape double quotes in AltText
+                                    string altText = group.AlternativeText ?? string.Empty;
                                     string escapedAltText = altText.Replace("\"", "\"\"");
                                     sw.WriteLine(string.Format("{0},{1},\"{2}\"", slideIndex, groupIndex, escapedAltText));
                                     groupIndex++;
@@ -72,17 +72,19 @@ namespace AsposeSlidesExample
                         }
                     }
 
-                    // Save the presentation before exiting (no modifications made)
-                    pres.Save("output.pptx", SaveFormat.Pptx);
+                    // Save the presentation (no modifications made, but required by spec)
+                    pres.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
                 }
             }
-            catch (NotSupportedException)
+            catch (System.NotSupportedException)
             {
-                // Format not supported
+                Console.WriteLine("The file format is not supported.");
+                Environment.Exit(1);
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Error: " + ex.Message);
+                Environment.Exit(1);
             }
         }
     }

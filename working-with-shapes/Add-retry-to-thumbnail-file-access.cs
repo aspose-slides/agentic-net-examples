@@ -1,32 +1,25 @@
 // -----------------------------------------------------------------------------
 // Example: Add retry to thumbnail file access using C#
-//
+// 
 // Description:
-// Demonstrates how to generate a slide thumbnail with a retry mechanism for
-// file access issues using C# and Aspose.Slides for .NET. The example loads a
-// PowerPoint presentation, creates a JPEG thumbnail of the first slide, saves
-// it with retry handling, and then saves the presentation without refreshing
-// its thumbnail. This pattern helps automate PPTX workflows where temporary
-// file locks may occur during image generation.
-//
+// Demonstrates generating a JPEG thumbnail of the first slide in a PowerPoint
+// presentation with a retry mechanism for temporary file access issues. The
+// program creates a sample presentation if none exists, saves the thumbnail,
+// and then saves the presentation without refreshing its thumbnail.
+// 
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Retry, Thumbnail, File Access,
-// Presentation Processing, Office Automation, JPEG, Image Generation
-//
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Retry, Thumbnail, File Access
+// 
 // Use Cases:
 // - Automate thumbnail generation with resilience to file access conflicts.
-// - Build C# tools for PowerPoint presentation processing that require
-//   reliable image extraction.
-// - Generate or transform PPTX files in .NET applications while preserving
-//   existing thumbnails.
-// - Validate presentation workflows before publishing or integration.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Build C# tools for PowerPoint processing that require reliable image extraction.
+// - Preserve existing presentation thumbnails while performing other modifications.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
+using System.Threading;
 
 namespace ThumbnailGenerator
 {
@@ -34,43 +27,52 @@ namespace ThumbnailGenerator
     {
         static void Main(string[] args)
         {
-            // Define input and output file names
             string inputFileName = "input.pptx";
-            string outputImagePath = "slide_thumbnail.jpg";
-            string outputPresentationPath = "output.pptx";
+            string outputImageFileName = "slide_thumbnail.jpg";
+            string outputPresentationFileName = "output.pptx";
 
-            // Build full paths
-            string inputPath = Path.Combine(Directory.GetCurrentDirectory(), inputFileName);
-            string imagePath = Path.Combine(Directory.GetCurrentDirectory(), outputImagePath);
-            string presentationPath = Path.Combine(Directory.GetCurrentDirectory(), outputPresentationPath);
+            string currentDirectory = Directory.GetCurrentDirectory();
+            string inputFilePath = Path.Combine(currentDirectory, inputFileName);
+            string imageFilePath = Path.Combine(currentDirectory, outputImageFileName);
+            string outputPresentationPath = Path.Combine(currentDirectory, outputPresentationFileName);
 
-            // Verify that the input file exists
-            if (!File.Exists(inputPath))
+            // Ensure input presentation exists; create a simple one if missing
+            if (!File.Exists(inputFilePath))
             {
-                Console.WriteLine("Input file does not exist: " + inputPath);
-                return;
+                try
+                {
+                    Aspose.Slides.Presentation createPres = new Aspose.Slides.Presentation();
+                    // The default presentation already contains one slide
+                    createPres.Save(inputFilePath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    createPres.Dispose();
+                    Console.WriteLine("Created sample presentation: " + inputFilePath);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Failed to create sample presentation: " + ex.Message);
+                    Environment.Exit(1);
+                }
             }
 
             // Load the presentation
-            Presentation presentation = null;
+            Aspose.Slides.Presentation presentation = null;
             try
             {
-                presentation = new Presentation(inputPath);
+                presentation = new Aspose.Slides.Presentation(inputFilePath);
             }
             catch (NotSupportedException)
             {
-                // Format not supported
                 Console.WriteLine("The file format is not supported.");
-                return;
+                Environment.Exit(1);
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Failed to load presentation: " + ex.Message);
-                return;
+                Environment.Exit(1);
             }
 
             // Get the first slide
-            ISlide slide = presentation.Slides[0];
+            Aspose.Slides.ISlide slide = presentation.Slides[0];
 
             // Retry mechanism for thumbnail generation
             int maxAttempts = 3;
@@ -80,19 +82,16 @@ namespace ThumbnailGenerator
             {
                 try
                 {
-                    // Generate thumbnail with full scale (1f, 1f)
-                    IImage thumbnail = slide.GetImage(1f, 1f);
-                    // Save the thumbnail as JPEG
-                    thumbnail.Save(imagePath, Aspose.Slides.ImageFormat.Jpeg);
+                    Aspose.Slides.IImage thumbnail = slide.GetImage(1f, 1f);
+                    thumbnail.Save(imageFilePath, Aspose.Slides.ImageFormat.Jpeg);
                     thumbnail.Dispose();
                     success = true;
                 }
                 catch (IOException ioEx)
                 {
-                    // Temporary file access issue, wait and retry
                     attempt++;
                     Console.WriteLine("Attempt " + attempt + " failed due to file access issue: " + ioEx.Message);
-                    System.Threading.Thread.Sleep(500);
+                    Thread.Sleep(500);
                 }
                 catch (Exception ex)
                 {
@@ -104,23 +103,29 @@ namespace ThumbnailGenerator
             if (!success)
             {
                 Console.WriteLine("Failed to generate thumbnail after multiple attempts.");
+                presentation.Dispose();
+                Environment.Exit(1);
             }
 
-            // Save the presentation (ensuring thumbnail refresh is disabled to keep original thumbnail)
+            // Save the presentation without refreshing its thumbnail
             try
             {
-                presentation.Save(presentationPath, SaveFormat.Pptx, new PptxOptions
-                {
-                    RefreshThumbnail = false
-                });
+                Aspose.Slides.Export.PptxOptions saveOptions = new Aspose.Slides.Export.PptxOptions();
+                saveOptions.RefreshThumbnail = false;
+                presentation.Save(outputPresentationPath, Aspose.Slides.Export.SaveFormat.Pptx, saveOptions);
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Failed to save presentation: " + ex.Message);
+                presentation.Dispose();
+                Environment.Exit(1);
             }
 
             // Clean up
             presentation.Dispose();
+            Console.WriteLine("Thumbnail saved to: " + imageFilePath);
+            Console.WriteLine("Presentation saved to: " + outputPresentationPath);
+            Environment.Exit(0);
         }
     }
 }

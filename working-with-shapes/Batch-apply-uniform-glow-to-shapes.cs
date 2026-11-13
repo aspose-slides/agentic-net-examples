@@ -1,29 +1,23 @@
 // -----------------------------------------------------------------------------
-// Example: Batch apply uniform glow to shapes using C#
+// Example: Batch Apply Uniform Glow Effect to Shapes in Multiple PowerPoint Presentations
 //
 // Description:
-// Demonstrates how to batch apply a uniform glow effect to all shapes across
-// multiple PowerPoint presentations using C# and Aspose.Slides for .NET.
-// The example loads each presentation, iterates through its slides and shapes,
-// enables the glow effect with a consistent radius, and saves the modified
-// file with a new name. This pattern helps automate PPTX workflows, validate
-// visual consistency, or integrate presentation processing into .NET apps.
+// Demonstrates how to create sample PPTX files if they are missing, then load each
+// presentation, iterate through all slides and shapes, enable a uniform glow effect
+// with a consistent radius, and save the modified file with a new name. This helps
+// automate visual styling across many presentations using C# and Aspose.Slides for .NET.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Batch, Apply, Uniform, Glow,
-// Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, batch processing, glow effect, shape styling
 //
 // Use Cases:
-// - Automate batch application of uniform glow to shapes in multiple presentations.
-// - Build C# tools for PowerPoint presentation processing and visual styling.
-// - Generate or transform PPTX files with consistent visual effects in .NET.
-// - Validate presentation workflows before publishing or integration.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Ensure visual consistency by applying the same glow effect to all shapes in a set of presentations.
+// - Integrate automated PPTX styling into a .NET build or CI pipeline.
+// - Prepare presentations for branding guidelines before distribution.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 namespace BatchGlowEffect
 {
@@ -31,7 +25,6 @@ namespace BatchGlowEffect
     {
         static void Main(string[] args)
         {
-            // List of presentation files to process
             string[] presentationFiles = new string[]
             {
                 "Presentation1.pptx",
@@ -39,52 +32,75 @@ namespace BatchGlowEffect
                 "Presentation3.pptx"
             };
 
+            bool errorOccurred = false;
+
+            // Ensure sample presentations exist
             foreach (string filePath in presentationFiles)
             {
-                // Verify that the file exists before attempting to load
+                if (!File.Exists(filePath))
+                {
+                    try
+                    {
+                        Aspose.Slides.Presentation samplePres = new Aspose.Slides.Presentation();
+                        Aspose.Slides.ISlide sampleSlide = samplePres.Slides[0];
+                        Aspose.Slides.IAutoShape sampleShape = sampleSlide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 50, 50, 200, 100);
+                        sampleShape.TextFrame.Text = "Sample Shape";
+                        samplePres.Save(filePath, Aspose.Slides.Export.SaveFormat.Pptx);
+                        samplePres.Dispose();
+                        Console.WriteLine($"Created sample presentation: {filePath}");
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Failed to create sample file {filePath}: {ex.Message}");
+                        errorOccurred = true;
+                    }
+                }
+            }
+
+            // Process each presentation
+            foreach (string filePath in presentationFiles)
+            {
                 if (!File.Exists(filePath))
                 {
                     Console.WriteLine($"File not found: {filePath}");
+                    errorOccurred = true;
                     continue;
                 }
 
                 try
                 {
-                    // Load the presentation
-                    using (Presentation presentation = new Presentation(filePath))
+                    using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(filePath))
                     {
-                        // Iterate through all slides
-                        foreach (ISlide slide in presentation.Slides)
+                        foreach (Aspose.Slides.ISlide slide in presentation.Slides)
                         {
-                            // Iterate through all shapes on the slide
-                            foreach (IShape shape in slide.Shapes)
+                            foreach (Aspose.Slides.IShape shape in slide.Shapes)
                             {
-                                // Enable glow effect and set a uniform radius
                                 shape.EffectFormat.EnableGlowEffect();
                                 shape.EffectFormat.GlowEffect.Radius = 5.0;
                             }
                         }
 
-                        // Save the modified presentation with a new name
                         string outputPath = Path.Combine(
                             Path.GetDirectoryName(filePath),
                             Path.GetFileNameWithoutExtension(filePath) + "_glow.pptx");
 
-                        presentation.Save(outputPath, SaveFormat.Pptx);
+                        presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
                         Console.WriteLine($"Processed and saved: {outputPath}");
                     }
                 }
                 catch (NotSupportedException)
                 {
-                    // Format not supported
                     Console.WriteLine($"Unsupported format for file: {filePath}");
+                    errorOccurred = true;
                 }
                 catch (Exception ex)
                 {
-                    // Handle any other exceptions (e.g., I/O errors, Aspose-specific errors)
                     Console.WriteLine($"Error processing file {filePath}: {ex.Message}");
+                    errorOccurred = true;
                 }
             }
+
+            Environment.Exit(errorOccurred ? 1 : 0);
         }
     }
 }

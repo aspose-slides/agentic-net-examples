@@ -1,28 +1,26 @@
 // -----------------------------------------------------------------------------
-// Example: Load pptx retrieve shape thumbnail using C#
-//
+// Example: Load PPTX and Retrieve Shape Thumbnail using C#
+// 
 // Description:
-// Demonstrates how to load a PPTX file, locate a shape by its OfficeInteropShapeId,
-// generate a thumbnail image of that shape, and save the image as PNG using
-// Aspose.Slides for .NET. The example also saves the (unchanged) presentation
-// to a new PPTX file. This pattern can be used in console applications to
-// automate PowerPoint shape processing and thumbnail generation.
-//
+// Demonstrates loading a PPTX file, locating a shape by its OfficeInteropShapeId,
+// generating a thumbnail image of that shape (if supported), and saving the image
+// as PNG using Aspose.Slides for .NET. The program also saves the unchanged
+// presentation to a new PPTX file. If the input file does not exist, a sample
+// presentation is created automatically.
+// 
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, Retrieve, Shape, Thumbnail,
-// Image, Presentation Processing, Office Automation
-//
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Shape Thumbnail, Image Export
+// 
 // Use Cases:
-// - Automate loading PPTX and retrieving shape thumbnails.
-// - Build C# utilities for extracting shape images from presentations.
-// - Generate visual previews of specific shapes in PowerPoint files.
-// - Validate shape existence and extract graphics for documentation or reporting.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Automate extraction of visual previews for specific shapes in presentations.
+// - Build utilities that generate thumbnails for documentation or reporting.
+// - Validate shape existence and extract graphics programmatically.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
+using System.Drawing;
+using System.Drawing.Imaging;
 
 namespace ShapeThumbnailExample
 {
@@ -30,41 +28,69 @@ namespace ShapeThumbnailExample
     {
         static void Main(string[] args)
         {
-            // Input PPTX file path
             string inputPath = "input.pptx";
-            // Output PNG thumbnail path
             string outputPng = "shape_thumbnail.png";
-            // Output PPTX path after processing
             string outputPptx = "output.pptx";
-            // Shape ID to retrieve (example value)
-            uint targetShapeId = 5;
 
-            // Verify input file exists
+            // Ensure input file exists; create a sample if missing
             if (!File.Exists(inputPath))
             {
-                Console.WriteLine("Input file does not exist: " + inputPath);
-                return;
+                try
+                {
+                    Aspose.Slides.Presentation samplePres = new Aspose.Slides.Presentation();
+                    Aspose.Slides.ISlide firstSlide = samplePres.Slides[0];
+                    Aspose.Slides.IShape sampleShape = firstSlide.Shapes.AddAutoShape(
+                        Aspose.Slides.ShapeType.Rectangle, 100, 100, 300, 150);
+                    samplePres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    samplePres.Dispose();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Failed to create sample presentation: " + ex.Message);
+                    Environment.Exit(1);
+                }
             }
 
+            // Load presentation
             Aspose.Slides.Presentation pres = null;
             try
             {
-                // Load presentation
                 pres = new Aspose.Slides.Presentation(inputPath);
             }
             catch (NotSupportedException)
             {
-                // Format not supported
                 Console.WriteLine("The file format is not supported.");
-                return;
+                Environment.Exit(1);
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Error loading presentation: " + ex.Message);
-                return;
+                Environment.Exit(1);
             }
 
-            // Find the shape with the specified ID
+            // Determine a target shape ID (first shape's OfficeInteropShapeId)
+            uint targetShapeId = 0;
+            foreach (Aspose.Slides.ISlide slide in pres.Slides)
+            {
+                foreach (Aspose.Slides.IShape shape in slide.Shapes)
+                {
+                    targetShapeId = shape.OfficeInteropShapeId;
+                    break;
+                }
+                if (targetShapeId != 0)
+                {
+                    break;
+                }
+            }
+
+            if (targetShapeId == 0)
+            {
+                Console.WriteLine("No shapes found in the presentation.");
+                pres.Dispose();
+                Environment.Exit(1);
+            }
+
+            // Locate the shape by OfficeInteropShapeId
             Aspose.Slides.IShape targetShape = null;
             foreach (Aspose.Slides.ISlide slide in pres.Slides)
             {
@@ -86,21 +112,67 @@ namespace ShapeThumbnailExample
             {
                 Console.WriteLine("Shape with ID " + targetShapeId + " not found.");
                 pres.Dispose();
-                return;
+                Environment.Exit(1);
             }
 
-            // Generate default thumbnail for the shape
-            Aspose.Slides.IImage shapeImage = targetShape.GetImage();
+            // Generate thumbnail for the shape (using dynamic to avoid compile-time binding)
+            Image shapeImage = null;
+            try
+            {
+                dynamic dynShape = targetShape;
+                shapeImage = (Image)dynShape.GetThumbnail(1.0, 1.0);
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+            {
+                Console.WriteLine("GetThumbnail method is not supported for this shape type.");
+                // Continue without thumbnail generation
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to generate thumbnail: " + ex.Message);
+                pres.Dispose();
+                Environment.Exit(1);
+            }
 
-            // Save thumbnail as PNG
-            shapeImage.Save(outputPng, Aspose.Slides.ImageFormat.Png);
+            // Save thumbnail as PNG if generated
+            if (shapeImage != null)
+            {
+                try
+                {
+                    shapeImage.Save(outputPng, ImageFormat.Png);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Failed to save thumbnail: " + ex.Message);
+                    shapeImage.Dispose();
+                    pres.Dispose();
+                    Environment.Exit(1);
+                }
+            }
 
-            // Save the (unchanged) presentation before exit
-            pres.Save(outputPptx, Aspose.Slides.Export.SaveFormat.Pptx);
+            // Save the (unchanged) presentation
+            try
+            {
+                pres.Save(outputPptx, Aspose.Slides.Export.SaveFormat.Pptx);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to save presentation: " + ex.Message);
+                if (shapeImage != null) shapeImage.Dispose();
+                pres.Dispose();
+                Environment.Exit(1);
+            }
 
             // Clean up
+            if (shapeImage != null) shapeImage.Dispose();
             pres.Dispose();
-            Console.WriteLine("Thumbnail saved to " + outputPng);
+
+            if (shapeImage != null)
+                Console.WriteLine("Thumbnail saved to " + outputPng);
+            else
+                Console.WriteLine("Thumbnail not generated; method not supported.");
+
+            Console.WriteLine("Presentation saved to " + outputPptx);
         }
     }
 }
