@@ -1,33 +1,26 @@
 // -----------------------------------------------------------------------------
-// Example: Export slide master collection to JSON schema using C#
-//
+// Example: Export Slide Master Collection to JSON Schema using C#
+// 
 // Description:
-// Demonstrates how to export a slide master collection to a JSON schema using
-// C# and Aspose.Slides for .NET. The example loads a PowerPoint presentation,
-// extracts master slide information (including layout details and placeholder
-// counts), serializes the data to a formatted JSON file, and saves a copy of the
-// original presentation. This pattern can be used to automate PPTX workflows,
-// validate slide master structures, or integrate presentation metadata handling
-// into .NET applications.
-//
+// Demonstrates how to load a PowerPoint presentation, extract slide master
+// metadata including layout names, types, and placeholder counts, serialize the
+// information to a formatted JSON file, and save a copy of the original PPTX.
+// This assists in automating PPTX analysis, documentation, and validation.
+// 
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Slide, Master,
-// Collection, JSON, Presentation Processing, Office Automation
-//
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Slide Master, JSON
+// 
 // Use Cases:
-// - Automate export of slide master collection to JSON for documentation or analysis.
-// - Build C# tools that process PowerPoint presentation metadata.
-// - Generate or transform PPTX files while preserving original content.
-// - Validate slide master configurations before publishing or integration.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Generate documentation of slide master structures for presentation standards.
+// - Build validation tools that check for required placeholders in master layouts.
+// - Integrate slide metadata extraction into CI pipelines for PPTX assets.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 
 using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Text.Json;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 class LayoutInfo
 {
@@ -50,68 +43,71 @@ class Program
         string outputJson = "masters.json";
         string outputPres = "output.pptx";
 
-        if (!File.Exists(inputPath))
-        {
-            Console.WriteLine("Input file does not exist.");
-            return;
-        }
-
         try
         {
-            using (Presentation pres = new Presentation(inputPath))
+            if (!File.Exists(inputPath))
+            {
+                // Create a simple presentation as sample input
+                using (Aspose.Slides.Presentation samplePres = new Aspose.Slides.Presentation())
+                {
+                    // The default presentation already contains a master slide and layout.
+                    samplePres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                }
+            }
+
+            using (Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath))
             {
                 List<MasterInfo> mastersList = new List<MasterInfo>();
 
                 for (int m = 0; m < pres.Masters.Count; m++)
                 {
-                    IMasterSlide master = pres.Masters[m];
+                    Aspose.Slides.IMasterSlide master = pres.Masters[m];
                     List<LayoutInfo> layoutsList = new List<LayoutInfo>();
 
-                    IMasterLayoutSlideCollection layoutSlides = master.LayoutSlides;
+                    Aspose.Slides.ILayoutSlideCollection layoutSlides = master.LayoutSlides;
                     for (int l = 0; l < layoutSlides.Count; l++)
                     {
-                        ILayoutSlide layout = layoutSlides[l];
+                        Aspose.Slides.ILayoutSlide layout = layoutSlides[l];
                         int placeholderCount = 0;
 
-                        foreach (IShape shape in layout.Shapes)
+                        for (int s = 0; s < layout.Shapes.Count; s++)
                         {
+                            Aspose.Slides.IShape shape = layout.Shapes[s];
                             if (shape.Placeholder != null)
                             {
                                 placeholderCount++;
                             }
                         }
 
-                        LayoutInfo layoutInfo = new LayoutInfo
-                        {
-                            Name = layout.Name,
-                            LayoutType = layout.LayoutType.ToString(),
-                            PlaceholderCount = placeholderCount
-                        };
+                        LayoutInfo layoutInfo = new LayoutInfo();
+                        layoutInfo.Name = layout.Name;
+                        layoutInfo.LayoutType = layout.LayoutType.ToString();
+                        layoutInfo.PlaceholderCount = placeholderCount;
                         layoutsList.Add(layoutInfo);
                     }
 
-                    MasterInfo masterInfo = new MasterInfo
-                    {
-                        Name = master.Name,
-                        Layouts = layoutsList
-                    };
+                    MasterInfo masterInfo = new MasterInfo();
+                    masterInfo.Name = master.Name;
+                    masterInfo.Layouts = layoutsList;
                     mastersList.Add(masterInfo);
                 }
 
                 string json = JsonSerializer.Serialize(mastersList, new JsonSerializerOptions { WriteIndented = true });
                 File.WriteAllText(outputJson, json);
 
-                // Save presentation before exit (no modifications made)
-                pres.Save(outputPres, SaveFormat.Pptx);
+                // Save a copy of the original presentation
+                pres.Save(outputPres, Aspose.Slides.Export.SaveFormat.Pptx);
             }
         }
         catch (NotSupportedException)
         {
-            // Format not supported
+            Console.WriteLine("The file format is not supported.");
+            Environment.Exit(1);
         }
         catch (Exception ex)
         {
             Console.WriteLine("Error: " + ex.Message);
+            Environment.Exit(1);
         }
     }
 }
