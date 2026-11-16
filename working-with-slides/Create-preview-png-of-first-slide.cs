@@ -1,80 +1,73 @@
 // -----------------------------------------------------------------------------
-// Example: Create preview png of first slide using C#
+// Example: Create Preview PNG of First Slide Using Aspose.Slides
 //
 // Description:
-// Demonstrates how to create preview png of first slide using C# and 
-// Aspose.Slides for .NET. The example shows the required 
-// presentation-processing steps for PowerPoint files and produces the 
-// requested output in a standalone console application. Developers can use 
-// this pattern to automate PPTX workflows, validate results, or integrate 
-// presentation logic into .NET applications.
+// This console application loads a PowerPoint presentation, generates a PNG
+// preview image of the first slide, and saves it to disk. It demonstrates the
+// use of Aspose.Slides for .NET to export slide thumbnails, handling missing
+// input files by creating a sample presentation.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Preview, First, Slide, 
-// Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, slide preview, PNG export
 //
 // Use Cases:
-// - Automate create preview png of first slide.
-// - Build C# tools for PowerPoint presentation processing.
-// - Generate or transform PPTX files in .NET applications.
-// - Validate presentation workflows before publishing or integration.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Automate generation of slide thumbnails for documentation.
+// - Validate presentation content by visual inspection of first slide.
+// - Integrate slide preview generation into a larger .NET workflow.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-namespace PreviewGenerator
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
+        try
         {
-            // Input presentation path
-            string inputPath = "input.pptx";
-            // Output PNG preview path
-            string previewPath = "slide1.png";
-            // Output presentation path (saved before exit)
-            string outputPresPath = "output.pptx";
+            // Prepare directories and file paths
+            string dataDir = Path.Combine(Directory.GetCurrentDirectory(), "Data");
+            if (!Directory.Exists(dataDir))
+            {
+                Directory.CreateDirectory(dataDir);
+            }
 
-            // Verify that the input file exists
+            string inputPath = Path.Combine(dataDir, "input.pptx");
+            string outputPath = Path.Combine(dataDir, "first_slide.png");
+
+            // Ensure input presentation exists; create a sample if missing
             if (!File.Exists(inputPath))
             {
-                // Input file not found; exit the program
-                Console.WriteLine("Input file does not exist: " + inputPath);
-                return;
+                Aspose.Slides.Presentation samplePres = new Aspose.Slides.Presentation();
+                // Add a rectangle shape to make the slide visible
+                Aspose.Slides.IAutoShape rect = samplePres.Slides[0].Shapes.AddAutoShape(
+                    Aspose.Slides.ShapeType.Rectangle, 50, 50, 300, 150);
+                rect.TextFrame.Text = "Sample Slide";
+                samplePres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                samplePres.Dispose();
             }
 
-            try
-            {
-                // Load the presentation
-                using (Presentation pres = new Presentation(inputPath))
-                {
-                    // Access the first slide
-                    ISlide firstSlide = pres.Slides[0];
+            // Load the presentation
+            Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
 
-                    // Generate a thumbnail image of the first slide
-                    using (IImage thumbnail = firstSlide.GetImage())
-                    {
-                        // Save the thumbnail as PNG
-                        thumbnail.Save(previewPath, Aspose.Slides.ImageFormat.Png);
-                    }
+            // Get the first slide
+            Aspose.Slides.ISlide firstSlide = pres.Slides[0];
 
-                    // Save the presentation before exiting
-                    pres.Save(outputPresPath, SaveFormat.Pptx);
-                }
-            }
-            catch (NotSupportedException)
+            // Export the slide as PNG image
+            using (Aspose.Slides.IImage slideImage = firstSlide.GetImage())
             {
-                // The file format is not supported
-                Console.WriteLine("The presentation format is not supported for conversion.");
+                slideImage.Save(outputPath, Aspose.Slides.ImageFormat.Png);
             }
-            catch (Exception ex)
-            {
-                // General exception handling
-                Console.WriteLine("An error occurred: " + ex.Message);
-            }
+
+            // Clean up
+            pres.Dispose();
+
+            Console.WriteLine("Preview PNG of the first slide saved to: " + outputPath);
+        }
+        catch (Exception ex)
+        {
+            Console.Error.WriteLine("Error: " + ex.Message);
+            Environment.Exit(1);
         }
     }
 }
