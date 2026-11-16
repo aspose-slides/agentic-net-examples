@@ -1,87 +1,57 @@
 // -----------------------------------------------------------------------------
-// Example: Clone slide with animations to other presentation using C#
+// Example: Clone Slide with Animations and Master to New Presentation
 //
 // Description:
-// Demonstrates how to clone a slide, including its animations and master,
-// from a source PowerPoint presentation to a new destination presentation
-// using Aspose.Slides for .NET. The example loads the source file, copies the
-// first slide with all associated animation sequences, removes the default
-// empty slide created by the destination presentation, and saves the result
-// as a new PPTX file. This pattern is useful for automating slide reuse and
-// preserving animation effects across presentations.
+// This console program loads a source PPTX file, clones its first slide together
+// with the associated master and any animations, removes the default empty slide
+// from the new presentation, and saves the result as a new PPTX file. It creates
+// a sample source file if none exists and demonstrates slide reuse across
+// presentations using Aspose.Slides for .NET.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone Slide, Animations, 
-// Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, clone slide, animations, master slide
 //
 // Use Cases:
-// - Automate cloning of slides with animations to other presentations.
-// - Build .NET tools for reusing animated content across multiple PPTX files.
-// - Generate or transform PPTX files while preserving animation timelines.
-// - Validate and test slide cloning workflows before deployment.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Reusing a slide with its animation effects in multiple presentations.
+// - Automating slide duplication while preserving design templates.
+// - Building a library of animated slides for dynamic content generation.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
-
-using System;
-using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
-
-namespace CloneSlideWithAnimations
+public class Program
 {
-    class Program
+    public static void Main()
     {
-        static void Main(string[] args)
+        string sourcePath = "source.pptx";
+        string destPath = "cloned.pptx";
+
+        try
         {
-            // Paths for source and destination presentations
-            string sourcePath = "SourcePresentation.pptx";
-            string destinationPath = "ClonedPresentation.pptx";
-
-            // Verify that the source file exists
-            if (!File.Exists(sourcePath))
+            if (!System.IO.File.Exists(sourcePath))
             {
-                Console.WriteLine("Source file not found: " + sourcePath);
-                return;
+                Aspose.Slides.Presentation sourcePresCreate = new Aspose.Slides.Presentation();
+                sourcePresCreate.Slides[0].Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 50, 50, 200, 100);
+                sourcePresCreate.Save(sourcePath, Aspose.Slides.Export.SaveFormat.Pptx);
+                sourcePresCreate.Dispose();
             }
 
-            try
-            {
-                // Load the source presentation
-                using (Presentation sourcePres = new Presentation(sourcePath))
-                {
-                    // Create a new destination presentation (contains one empty slide by default)
-                    using (Presentation destPres = new Presentation())
-                    {
-                        // Get the first slide from the source presentation
-                        ISlide sourceSlide = sourcePres.Slides[0];
+            Aspose.Slides.Presentation sourcePres = new Aspose.Slides.Presentation(sourcePath);
+            Aspose.Slides.Presentation destPres = new Aspose.Slides.Presentation();
 
-                        // Clone the source slide into the destination presentation.
-                        // AddClone copies the slide together with its animations and master.
-                        ISlide clonedSlide = destPres.Slides.AddClone(sourceSlide);
+            Aspose.Slides.ISlide sourceSlide = sourcePres.Slides[0];
+            Aspose.Slides.IMasterSlide sourceMaster = sourceSlide.LayoutSlide.MasterSlide;
+            Aspose.Slides.IMasterSlide destMaster = destPres.Masters.AddClone(sourceMaster);
+            destPres.Slides.AddClone(sourceSlide, destMaster, true);
+            destPres.Slides.RemoveAt(0);
 
-                        // Optionally, remove the initially created empty slide if it exists
-                        if (destPres.Slides.Count > 1 && destPres.Slides[0] != clonedSlide)
-                        {
-                            destPres.Slides.RemoveAt(0);
-                        }
+            destPres.Save(destPath, Aspose.Slides.Export.SaveFormat.Pptx);
 
-                        // Save the destination presentation
-                        destPres.Save(destinationPath, SaveFormat.Pptx);
-                    }
-                }
-
-                Console.WriteLine("Slide cloned successfully to: " + destinationPath);
-            }
-            catch (NotSupportedException ex)
-            {
-                // Handle unsupported format exceptions
-                Console.WriteLine("The file format is not supported: " + ex.Message);
-            }
-            catch (Exception ex)
-            {
-                // General exception handling
-                Console.WriteLine("An error occurred: " + ex.Message);
-            }
+            sourcePres.Dispose();
+            destPres.Dispose();
+        }
+        catch (System.Exception ex)
+        {
+            System.Console.WriteLine("Error: " + ex.Message);
+            System.Environment.ExitCode = 1;
         }
     }
 }
