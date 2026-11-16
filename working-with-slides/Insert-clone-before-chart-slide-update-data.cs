@@ -1,99 +1,116 @@
 // -----------------------------------------------------------------------------
-// Example: Insert clone before chart slide update data using C#
+// Example: Clone Chart Slide and Link to External Workbook
 //
 // Description:
-// Demonstrates how to insert a clone of a slide containing a chart before the
-// original slide and update the chart's data source to an external workbook
-// using Aspose.Slides for .NET. The example shows the required presentation-
-// processing steps for PowerPoint files and produces the requested output in a
-// standalone console application. Developers can use this pattern to automate
-// PPTX workflows, validate results, or integrate presentation logic into .NET
-// applications.
-//
+// Demonstrates cloning a slide that contains a chart, inserting the clone before
+// the original slide, and linking the chart's data to an external Excel workbook
+// using Aspose.Slides for .NET. The program creates sample files if they are
+// missing, processes the presentation, and saves the result.
+// 
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Insert, Clone, Before, Chart,
-// External Workbook, Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone Slide, Chart, External Workbook
 //
 // Use Cases:
-// - Automate cloning a slide before a chart slide and updating its data source.
-// - Build C# tools for PowerPoint presentation processing with external data.
-// - Generate or transform PPTX files in .NET applications using external Excel
-//   workbooks.
-// - Validate presentation workflows before publishing or integration.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Automate cloning a chart slide and linking it to external data.
+// - Build tools for batch updating PowerPoint presentations with Excel sources.
+// - Validate presentation workflows that involve chart data externalization.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
-
 using System;
 using System.IO;
-using Aspose.Slides.Export;
 
 class Program
 {
     static void Main()
     {
-        string dataDir = "Data/";
+        string dataDir = "Data";
         string inputPath = Path.Combine(dataDir, "input.pptx");
         string outputPath = Path.Combine(dataDir, "output.pptx");
         string workbookPath = Path.Combine(dataDir, "data.xlsx");
 
-        if (!File.Exists(inputPath))
-        {
-            Console.WriteLine("Input file does not exist.");
-            return;
-        }
-
         try
         {
-            var pres = new Aspose.Slides.Presentation(inputPath);
-            var slides = pres.Slides;
+            if (!Directory.Exists(dataDir))
+            {
+                Directory.CreateDirectory(dataDir);
+            }
+
+            if (!File.Exists(workbookPath))
+            {
+                File.WriteAllBytes(workbookPath, new byte[0]);
+            }
+
+            if (!File.Exists(inputPath))
+            {
+                Aspose.Slides.Presentation samplePres = new Aspose.Slides.Presentation();
+                Aspose.Slides.ISlide slide = samplePres.Slides[0];
+                Aspose.Slides.Charts.IChart chart = slide.Shapes.AddChart(
+                    Aspose.Slides.Charts.ChartType.ClusteredColumn,
+                    50, 50, 500, 400);
+                samplePres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                samplePres.Dispose();
+            }
+
+            Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
+            Aspose.Slides.ISlideCollection slides = pres.Slides;
+
             int chartSlideIndex = -1;
-            Aspose.Slides.Charts.IChart chart = null;
+            Aspose.Slides.Charts.IChart originalChart = null;
 
             for (int i = 0; i < slides.Count; i++)
             {
-                var slide = slides[i];
-                foreach (var shape in slide.Shapes)
+                Aspose.Slides.ISlide s = slides[i];
+                foreach (Aspose.Slides.IShape shape in s.Shapes)
                 {
-                    chart = shape as Aspose.Slides.Charts.IChart;
-                    if (chart != null)
+                    originalChart = shape as Aspose.Slides.Charts.IChart;
+                    if (originalChart != null)
                     {
                         chartSlideIndex = i;
                         break;
                     }
                 }
-                if (chartSlideIndex != -1) break;
+                if (chartSlideIndex != -1)
+                {
+                    break;
+                }
             }
 
             if (chartSlideIndex == -1)
             {
-                Console.WriteLine("No chart found in presentation.");
+                Console.WriteLine("No chart found in the presentation.");
                 pres.Dispose();
-                return;
+                Environment.Exit(1);
             }
 
-            // Clone the slide containing the chart and insert before it
             slides.InsertClone(chartSlideIndex, slides[chartSlideIndex]);
 
-            // The cloned slide is now at chartSlideIndex
-            var clonedSlide = slides[chartSlideIndex];
+            Aspose.Slides.ISlide clonedSlide = slides[chartSlideIndex];
             Aspose.Slides.Charts.IChart clonedChart = null;
-            foreach (var shape in clonedSlide.Shapes)
+            foreach (Aspose.Slides.IShape shape in clonedSlide.Shapes)
             {
                 clonedChart = shape as Aspose.Slides.Charts.IChart;
-                if (clonedChart != null) break;
+                if (clonedChart != null)
+                {
+                    break;
+                }
             }
 
             if (clonedChart != null)
             {
                 try
                 {
-                    // Replace chart data source with external workbook
-                    ((Aspose.Slides.Charts.ChartData)clonedChart.ChartData).SetExternalWorkbook(workbookPath, true);
+                    clonedChart.ChartData.SetExternalWorkbook(workbookPath, true);
                 }
-                catch (InvalidOperationException)
+                catch (InvalidOperationException ex)
                 {
-                    // External workbook not available or cannot be loaded
+                    Console.WriteLine("Failed to set external workbook: " + ex.Message);
                 }
+            }
+            else
+            {
+                Console.WriteLine("Cloned chart not found.");
+                pres.Dispose();
+                Environment.Exit(1);
             }
 
             pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
@@ -101,11 +118,13 @@ class Program
         }
         catch (NotSupportedException)
         {
-            // Format not supported
+            Console.WriteLine("The file format is not supported.");
+            Environment.Exit(1);
         }
         catch (Exception ex)
         {
             Console.WriteLine("Error: " + ex.Message);
+            Environment.Exit(1);
         }
     }
 }
