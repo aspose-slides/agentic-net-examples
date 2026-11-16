@@ -1,60 +1,59 @@
 // -----------------------------------------------------------------------------
-// Example: Set slide size to custom aspect 16 9 using C#
+// Example: Set Slide Size to Custom 16:9 Aspect Ratio
 //
 // Description:
-// Demonstrates how to set a PowerPoint presentation's slide size to a custom
-// 16:9 aspect ratio using C# and Aspose.Slides for .NET. The example loads an
-// existing PPTX file, applies a 960x540 point slide size without scaling the
-// existing content, and saves the result. This pattern can be used to automate
-// slide‑size adjustments in .NET applications.
+// This console application loads an existing PPTX file, sets the presentation's
+// slide size to a custom 960x540 point dimension (16:9 aspect ratio) without
+// scaling the existing content, and saves the modified file. It demonstrates
+// using Aspose.Slides for .NET to automate slide‑size adjustments.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Slide, Size, Custom, Aspect,
-// Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, slide size, custom aspect ratio
 //
 // Use Cases:
-// - Automate setting slide size to a custom 16:9 aspect ratio.
-// - Build C# tools for PowerPoint presentation processing.
-// - Generate or transform PPTX files with specific slide dimensions.
-// - Validate presentation workflows before publishing or integration.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Adjust slide dimensions for widescreen presentations
+// - Prepare slides for video export
+// - Standardize slide size across multiple decks
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        // Define input and output file paths
         string inputPath = "input.pptx";
         string outputPath = "output.pptx";
 
-        // Verify that the input file exists
-        if (!File.Exists(inputPath))
-        {
-            Console.WriteLine("Input file does not exist.");
-            return;
-        }
-
         try
         {
-            // Load the presentation
-            using (Presentation presentation = new Presentation(inputPath))
+            // Ensure input file exists; create a sample if missing
+            if (!File.Exists(inputPath))
             {
-                // Set custom slide size with a 16:9 aspect ratio (e.g., 960x540 points)
-                presentation.SlideSize.SetSize(960f, 540f, SlideSizeScaleType.DoNotScale);
-
-                // Save the modified presentation
-                presentation.Save(outputPath, SaveFormat.Pptx);
+                Aspose.Slides.Presentation samplePres = new Aspose.Slides.Presentation();
+                samplePres.Slides.AddEmptySlide(samplePres.Slides[0].LayoutSlide);
+                samplePres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                samplePres.Dispose();
             }
+
+            // Load the presentation
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+
+            // Set custom slide size to 960x540 points (16:9) without scaling content
+            presentation.SlideSize.SetSize(960, 540, Aspose.Slides.SlideSizeScaleType.DoNotScale);
+
+            // Save the modified presentation
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            presentation.Dispose();
+
+            Console.WriteLine("Slide size updated successfully. Saved to " + outputPath);
+            Environment.Exit(0);
         }
         catch (Exception ex)
         {
-            // Handle errors such as unsupported file format
             Console.WriteLine("Error: " + ex.Message);
+            Environment.Exit(1);
         }
     }
 }
