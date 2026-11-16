@@ -1,74 +1,75 @@
 // -----------------------------------------------------------------------------
-// Example: Clone all slide masters and set background using C#
+// Example: Clone All Slide Masters and Apply LightGray Background
 //
 // Description:
-// Demonstrates how to clone all slide masters from a source presentation,
-// apply a uniform LightGray background to each cloned master, and save the
-// result as a new PPTX template using Aspose.Slides for .NET. The example
-// shows the required presentation-processing steps for PowerPoint files and
-// produces the requested output in a standalone console application. Developers
-// can use this pattern to automate PPTX workflows, validate results, or
-// integrate presentation logic into .NET applications.
+// This console application clones every slide master from a source PPTX file,
+// sets a uniform LightGray background on each cloned master, and saves the
+// result as a new PPTX template. It demonstrates using Aspose.Slides for .NET
+// to manipulate slide masters and backgrounds in PowerPoint presentations.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone, Slide Masters,
-// Background, Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, clone slide masters, set background
 //
 // Use Cases:
-// - Automate cloning of all slide masters and setting a uniform background.
-// - Build C# tools for PowerPoint presentation processing.
-// - Generate or transform PPTX files in .NET applications.
-// - Validate presentation workflows before publishing or integration.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Create a template PPTX with consistent master backgrounds.
+// - Automate master slide customization across multiple presentations.
+// - Prepare presentation assets for branding or corporate styling.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
+using System.Drawing;
 
 class Program
 {
-    static void Main()
+    static int Main(string[] args)
     {
         string sourcePath = "source.pptx";
-        string outputPath = "template.pptx";
-
-        if (!File.Exists(sourcePath))
-        {
-            Console.WriteLine("Source file does not exist: " + sourcePath);
-            return;
-        }
+        string outputPath = "cloned_template.pptx";
 
         try
         {
-            using (Presentation srcPres = new Presentation(sourcePath))
+            // Ensure source presentation exists; create a sample if missing
+            if (!File.Exists(sourcePath))
             {
-                using (Presentation destPres = new Presentation())
-                {
-                    // Clone each master slide from the source presentation
-                    for (int i = 0; i < srcPres.Masters.Count; i++)
-                    {
-                        IMasterSlide sourceMaster = srcPres.Masters[i];
-                        IMasterSlide clonedMaster = destPres.Masters.AddClone(sourceMaster);
-
-                        // Apply a uniform background to the cloned master slide
-                        clonedMaster.Background.Type = BackgroundType.OwnBackground;
-                        clonedMaster.Background.FillFormat.FillType = FillType.Solid;
-                        clonedMaster.Background.FillFormat.SolidFillColor.Color = System.Drawing.Color.LightGray;
-                    }
-
-                    // Save the new presentation as a template
-                    destPres.Save(outputPath, SaveFormat.Pptx);
-                }
+                Aspose.Slides.Presentation samplePres = new Aspose.Slides.Presentation();
+                // Add a sample slide to ensure there is at least one master layout
+                Aspose.Slides.ISlide sampleSlide = samplePres.Slides[0];
+                samplePres.Save(sourcePath, Aspose.Slides.Export.SaveFormat.Pptx);
+                samplePres.Dispose();
             }
-        }
-        catch (NotSupportedException)
-        {
-            // Format not supported
+
+            // Load source presentation
+            Aspose.Slides.Presentation srcPres = new Aspose.Slides.Presentation(sourcePath);
+
+            // Create destination presentation
+            Aspose.Slides.Presentation destPres = new Aspose.Slides.Presentation();
+
+            // Clone each master slide and set LightGray background
+            for (int i = 0; i < srcPres.Masters.Count; i++)
+            {
+                Aspose.Slides.IMasterSlide srcMaster = srcPres.Masters[i];
+                Aspose.Slides.IMasterSlide clonedMaster = destPres.Masters.AddClone(srcMaster);
+
+                clonedMaster.Background.Type = Aspose.Slides.BackgroundType.OwnBackground;
+                clonedMaster.Background.FillFormat.FillType = Aspose.Slides.FillType.Solid;
+                clonedMaster.Background.FillFormat.SolidFillColor.Color = Color.LightGray;
+            }
+
+            // Save the resulting presentation
+            destPres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+
+            // Clean up
+            srcPres.Dispose();
+            destPres.Dispose();
+
+            Console.WriteLine("Cloned masters saved to: " + outputPath);
+            return 0;
         }
         catch (Exception ex)
         {
-            Console.WriteLine("Error: " + ex.Message);
+            Console.Error.WriteLine("Error: " + ex.Message);
+            return 1;
         }
     }
 }
