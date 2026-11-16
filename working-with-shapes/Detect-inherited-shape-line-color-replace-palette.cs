@@ -1,45 +1,55 @@
 // -----------------------------------------------------------------------------
-// Example: Detect inherited shape line color replace palette using C#
+// Example: Detect and Replace Inherited Shape Line Color with Palette Accent2
 //
 // Description:
-// Demonstrates how to detect inherited line formatting of shapes on a slide,
-// and replace the line color with a specific palette entry (Accent2) using
-// Aspose.Slides for .NET. The example loads a PPTX file, processes the first
-// slide, updates line colors where a visible line exists, and saves the
-// result. This pattern can be used to standardize line colors across
-// presentations.
+// This console program loads a PPTX file, creates a sample presentation if the
+// input file is missing, iterates over shapes on the first slide, detects
+// inherited line formatting, and replaces visible line colors with the
+// Accent2 palette entry using Aspose.Slides for .NET. The modified presentation
+// is saved as a new file.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Detect, Inherited, Shape, Line,
-// Palette, Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Detect Inherited Line Color, Palette, Accent2
 //
 // Use Cases:
-// - Detect and replace inherited shape line colors with a chosen palette entry.
-// - Automate line style standardization in PowerPoint files.
-// - Build .NET tools for batch processing of PPTX presentations.
-// - Ensure visual consistency before publishing or integrating presentations.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Standardize line colors across existing presentations.
+// - Automate visual consistency checks in batch processing.
+// - Prepare presentations for corporate branding guidelines.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
-using Aspose.Slides.Export;
+using System.Drawing;
 
 class Program
 {
     static void Main()
     {
-        // Input and output file paths
         string inputPath = "input.pptx";
         string outputPath = "output.pptx";
 
-        // Verify input file exists
+        // Create a sample input file if it does not exist
         if (!File.Exists(inputPath))
         {
-            Console.WriteLine("Input file does not exist.");
-            return;
+            try
+            {
+                Aspose.Slides.Presentation samplePresentation = new Aspose.Slides.Presentation();
+                Aspose.Slides.ISlide sampleSlide = samplePresentation.Slides[0];
+                Aspose.Slides.IShape sampleShape = sampleSlide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 100, 100, 300, 150);
+                sampleShape.LineFormat.Width = 2;
+                sampleShape.LineFormat.FillFormat.FillType = Aspose.Slides.FillType.Solid;
+                sampleShape.LineFormat.FillFormat.SolidFillColor.Color = Color.Black;
+                samplePresentation.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                samplePresentation.Dispose();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to create sample input file: " + ex.Message);
+                Environment.Exit(1);
+            }
         }
 
-        // Load presentation with exception handling for unsupported formats
+        // Load the presentation
         Aspose.Slides.Presentation presentation = null;
         try
         {
@@ -47,24 +57,32 @@ class Program
         }
         catch (Exception ex)
         {
-            // Format not supported
             Console.WriteLine("Failed to load presentation: " + ex.Message);
-            return;
+            Environment.Exit(1);
         }
 
-        // Iterate through shapes on the first slide
-        foreach (Aspose.Slides.IShape shape in presentation.Slides[0].Shapes)
+        // Process shapes on the first slide
+        try
         {
-            // Get effective line formatting (includes inherited values)
-            Aspose.Slides.ILineFormatEffectiveData effectiveLine = shape.LineFormat.GetEffective();
-
-            // If the shape has a visible line (width > 0), replace its line color
-            if (effectiveLine.Width > 0)
+            Aspose.Slides.ISlide firstSlide = presentation.Slides[0];
+            foreach (Aspose.Slides.IShape shape in firstSlide.Shapes)
             {
-                // Set line fill to solid and apply a custom palette entry (Accent2)
-                shape.LineFormat.FillFormat.FillType = Aspose.Slides.FillType.Solid;
-                shape.LineFormat.FillFormat.SolidFillColor.SchemeColor = Aspose.Slides.SchemeColor.Accent2;
+                if (shape.LineFormat != null)
+                {
+                    Aspose.Slides.ILineFormatEffectiveData effectiveLine = shape.LineFormat.GetEffective();
+                    if (effectiveLine != null && effectiveLine.Width > 0)
+                    {
+                        shape.LineFormat.FillFormat.FillType = Aspose.Slides.FillType.Solid;
+                        shape.LineFormat.FillFormat.SolidFillColor.SchemeColor = Aspose.Slides.SchemeColor.Accent2;
+                    }
+                }
             }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error processing shapes: " + ex.Message);
+            presentation.Dispose();
+            Environment.Exit(1);
         }
 
         // Save the modified presentation
@@ -75,6 +93,11 @@ class Program
         catch (Exception ex)
         {
             Console.WriteLine("Failed to save presentation: " + ex.Message);
+            presentation.Dispose();
+            Environment.Exit(1);
         }
+
+        presentation.Dispose();
+        Console.WriteLine("Processing completed successfully. Output saved to " + outputPath);
     }
 }

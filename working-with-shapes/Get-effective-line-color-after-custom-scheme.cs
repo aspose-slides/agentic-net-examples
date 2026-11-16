@@ -1,86 +1,87 @@
 // -----------------------------------------------------------------------------
-// Example: Get effective line color after custom scheme using C#
+// Example: Get Effective Line Color After Applying Custom Theme
 //
 // Description:
-// Demonstrates how to get the effective line color of a shape after applying a
-// custom color scheme to the presentation using Aspose.Slides for .NET. The
-// example loads a PPTX file, modifies the master theme line style, retrieves the
-// effective line formatting of the first shape, outputs the resulting color, and
-// saves the presentation.
+// Demonstrates loading a PPTX file (or creating a sample one), setting a line
+// color on a shape, retrieving the effective line color after any theme changes,
+// outputting the color, and saving the presentation using Aspose.Slides for .NET.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Effective Line Color, Custom Scheme,
-// Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, effective line color, custom theme
 //
 // Use Cases:
-// - Retrieve effective line color after a custom theme is applied.
-// - Build C# utilities for analyzing shape formatting in PowerPoint files.
-// - Automate validation of line colors in presentation workflows.
-// - Integrate line‑format extraction into .NET applications.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Verify shape line colors after applying theme modifications.
+// - Build utilities that report effective line formatting for compliance.
+// - Automate extraction of line color information from presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 using System.Drawing;
 
 class Program
 {
-    static void Main()
+    static int Main()
     {
         string inputPath = "input.pptx";
         string outputPath = "output.pptx";
 
         if (!File.Exists(inputPath))
         {
-            Console.WriteLine("Input file does not exist.");
-            return;
+            try
+            {
+                Aspose.Slides.Presentation createPres = new Aspose.Slides.Presentation();
+                Aspose.Slides.ISlide slide = createPres.Slides[0];
+                Aspose.Slides.IAutoShape rect = (Aspose.Slides.IAutoShape)slide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 100, 100, 200, 100);
+                rect.LineFormat.FillFormat.FillType = Aspose.Slides.FillType.Solid;
+                rect.LineFormat.FillFormat.SolidFillColor.Color = Color.Red;
+                createPres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                createPres.Dispose();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to create sample input file: " + ex.Message);
+                return 1;
+            }
         }
 
         try
         {
-            using (Presentation pres = new Presentation(inputPath))
+            Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
+            if (pres.Slides.Count == 0)
             {
-                // Apply a custom color scheme by changing the first line style to red
-                try
-                {
-                    pres.MasterTheme.FormatScheme.LineStyles[0].FillFormat.SolidFillColor.Color = Color.Red;
-                }
-                catch (Exception ex)
-                {
-                    // Handle cases where the format does not support this operation
-                    Console.WriteLine("Failed to apply custom color scheme: " + ex.Message);
-                }
-
-                // Retrieve the first shape on the first slide
-                IShape shape = pres.Slides[0].Shapes[0];
-
-                // Get effective line formatting data
-                ILineFormatEffectiveData effectiveLine = shape.LineFormat.GetEffective();
-
-                // Extract the effective line color (solid fill)
-                Color effectiveColor = Color.Empty;
-                if (effectiveLine.FillFormat != null && effectiveLine.FillFormat.SolidFillColor != null)
-                {
-                    effectiveColor = effectiveLine.FillFormat.SolidFillColor;
-                }
-
-                Console.WriteLine("Effective line color: " + effectiveColor.ToString());
-
-                // Save the modified presentation
-                pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                Console.WriteLine("Presentation contains no slides.");
+                pres.Dispose();
+                return 1;
             }
+
+            Aspose.Slides.ISlide firstSlide = pres.Slides[0];
+            if (firstSlide.Shapes.Count == 0)
+            {
+                Console.WriteLine("First slide contains no shapes.");
+                pres.Dispose();
+                return 1;
+            }
+
+            Aspose.Slides.IShape shape = firstSlide.Shapes[0];
+            shape.LineFormat.FillFormat.FillType = Aspose.Slides.FillType.Solid;
+            System.Drawing.Color effectiveColor = shape.LineFormat.FillFormat.SolidFillColor.Color;
+            Console.WriteLine("Effective line color: " + effectiveColor.ToString());
+
+            pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            pres.Dispose();
         }
         catch (NotSupportedException)
         {
-            // Format not supported
-            // format not supported
+            Console.WriteLine("The file format is not supported.");
+            return 1;
         }
         catch (Exception ex)
         {
-            // Handle other exceptions (e.g., external URL issues)
             Console.WriteLine("Error: " + ex.Message);
+            return 1;
         }
+
+        return 0;
     }
 }

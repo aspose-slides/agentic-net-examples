@@ -1,31 +1,23 @@
 // -----------------------------------------------------------------------------
-// Example: Read shadow blur radius modify and reapply using C#
+// Example: Read and Modify Outer Shadow Blur Radius in PowerPoint using C#
 //
 // Description:
 // Demonstrates how to read the blur radius of an outer shadow effect on a shape,
 // modify the radius, and reapply the updated effect using Aspose.Slides for .NET.
-// The example loads a PPTX file, accesses the first shape on the first slide,
-// enables the outer shadow effect if necessary, adjusts the blur radius, and
-// saves the modified presentation. This pattern can be used to automate
-// shadow styling adjustments in PowerPoint files.
+// The program creates a sample PPTX if none exists, adjusts the shadow blur,
+// and saves the result, enabling automation of shadow styling in PowerPoint files.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Read, Shadow, Blur, Radius,
-// Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Shadow Blur Radius, Outer Shadow
 //
 // Use Cases:
-// - Automate reading and adjusting shadow blur radius in presentations.
-// - Build C# tools for PowerPoint visual effect customization.
-// - Generate or transform PPTX files with updated shadow properties.
-// - Validate and fine‑tune presentation aesthetics before publishing.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Batch update shadow effects across presentation slides.
+// - Ensure consistent visual styling in generated PowerPoint reports.
+// - Integrate shadow adjustments into automated slide generation pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
-
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
-using Aspose.Slides.Effects;
 
 namespace ShadowEffectDemo
 {
@@ -33,57 +25,59 @@ namespace ShadowEffectDemo
     {
         static void Main(string[] args)
         {
-            // Input and output file paths
             string inputPath = "input.pptx";
             string outputPath = "output.pptx";
 
-            // Verify input file exists
-            if (!File.Exists(inputPath))
-            {
-                Console.WriteLine("Input file does not exist: " + inputPath);
-                return;
-            }
-
             try
             {
-                // Load presentation
-                Presentation pres = new Presentation(inputPath);
+                if (!File.Exists(inputPath))
+                {
+                    Aspose.Slides.Presentation createPres = new Aspose.Slides.Presentation();
+                    Aspose.Slides.ISlide createSlide = createPres.Slides[0];
+                    Aspose.Slides.IAutoShape rect = createSlide.Shapes.AddAutoShape(
+                        Aspose.Slides.ShapeType.Rectangle, 100, 100, 300, 150);
+                    rect.AddTextFrame("Sample Shape");
+                    rect.EffectFormat.EnableOuterShadowEffect();
+                    createPres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    createPres.Dispose();
+                }
 
-                // Get the first slide
-                ISlide slide = pres.Slides[0];
+                Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
+                Aspose.Slides.ISlide slide = pres.Slides[0];
 
-                // Get the first shape (assumed to be an AutoShape)
-                IAutoShape shape = (IAutoShape)slide.Shapes[0];
+                if (slide.Shapes.Count == 0)
+                {
+                    Console.WriteLine("No shapes found on the first slide.");
+                    pres.Dispose();
+                    Environment.Exit(1);
+                }
 
-                // Access the effect format of the shape
-                IEffectFormat effectFormat = shape.EffectFormat;
+                Aspose.Slides.IShape shape = slide.Shapes[0];
+                Aspose.Slides.IAutoShape autoShape = shape as Aspose.Slides.IAutoShape;
+                if (autoShape == null)
+                {
+                    Console.WriteLine("The first shape is not an AutoShape.");
+                    pres.Dispose();
+                    Environment.Exit(1);
+                }
 
-                // Ensure outer shadow effect is enabled
+                Aspose.Slides.IEffectFormat effectFormat = autoShape.EffectFormat;
                 effectFormat.EnableOuterShadowEffect();
 
-                // Get the outer shadow effect
-                IOuterShadow outerShadow = effectFormat.OuterShadowEffect;
-
-                // Read current blur radius
+                Aspose.Slides.Effects.IOuterShadow outerShadow = effectFormat.OuterShadowEffect;
                 double currentBlur = outerShadow.BlurRadius;
-
-                // Modify blur radius (increase by 5 points)
                 outerShadow.BlurRadius = currentBlur + 5.0;
 
-                // Save the updated presentation
-                pres.Save(outputPath, SaveFormat.Pptx);
-
-                // Clean up
+                pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
                 pres.Dispose();
 
-                Console.WriteLine("Presentation saved to: " + outputPath);
+                Console.WriteLine("Shadow blur radius updated and saved to: " + outputPath);
             }
             catch (Exception ex)
             {
-                // Handle unsupported format or other errors
                 Console.WriteLine("An error occurred: " + ex.Message);
-                // Format not supported comment
                 // The provided file format may not be supported by Aspose.Slides.
+                Environment.Exit(1);
             }
         }
     }

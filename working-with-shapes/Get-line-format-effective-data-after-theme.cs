@@ -1,28 +1,24 @@
 // -----------------------------------------------------------------------------
 // Example: Get line format effective data after theme using C#
-//
+// 
 // Description:
-// Demonstrates how to get line format effective data after theme using C# and 
-// Aspose.Slides for .NET. The example shows the required 
-// presentation-processing steps for PowerPoint files and produces the 
-// requested output in a standalone console application. Developers can use 
-// this pattern to automate PPTX workflows, validate results, or integrate 
-// presentation logic into .NET applications.
-//
+// Demonstrates how to retrieve the effective line format of a shape after
+// applying a theme in a PowerPoint presentation using Aspose.Slides for .NET.
+// The program creates a sample PPTX if none exists, extracts effective line
+// properties, outputs them, and saves the presentation.
+// 
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Line, Format, Effective, Data, 
-// Presentation Processing, Office Automation
-//
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Line Format, Effective Data, Theme
+// 
 // Use Cases:
-// - Automate get line format effective data after theme.
-// - Build C# tools for PowerPoint presentation processing.
-// - Generate or transform PPTX files in .NET applications.
-// - Validate presentation workflows before publishing or integration.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Automate extraction of line formatting details after theme application.
+// - Validate visual consistency of shapes in generated presentations.
+// - Integrate line format analysis into .NET PowerPoint processing tools.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
-using Aspose.Slides.Export;
+using System.Drawing;
 
 namespace AsposeSlidesExample
 {
@@ -30,56 +26,84 @@ namespace AsposeSlidesExample
     {
         static void Main(string[] args)
         {
-            // Path to the input presentation
             string inputPath = "example.pptx";
+            string outputPath = "output.pptx";
 
-            // Verify that the file exists
+            // Create sample presentation if it does not exist
+            if (!File.Exists(inputPath))
+            {
+                try
+                {
+                    Aspose.Slides.Presentation samplePres = new Aspose.Slides.Presentation();
+                    Aspose.Slides.ISlide slide = samplePres.Slides[0];
+                    Aspose.Slides.IAutoShape autoShape = slide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 100, 100, 300, 150);
+                    autoShape.LineFormat.Width = 3;
+                    autoShape.LineFormat.FillFormat.FillType = Aspose.Slides.FillType.Solid;
+                    autoShape.LineFormat.FillFormat.SolidFillColor.Color = Color.Blue;
+                    samplePres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Failed to create sample presentation: " + ex.Message);
+                    Environment.Exit(1);
+                }
+            }
+
+            // Verify that the input file now exists
             if (!File.Exists(inputPath))
             {
                 Console.WriteLine("Input file not found: " + inputPath);
-                return;
+                Environment.Exit(1);
             }
 
             try
             {
-                // Load the presentation
                 using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
                 {
-                    // Ensure there is at least one slide and one shape
-                    if (presentation.Slides.Count == 0 || presentation.Slides[0].Shapes.Count == 0)
+                    if (presentation.Slides.Count == 0)
                     {
-                        Console.WriteLine("Presentation does not contain any slides or shapes.");
-                        return;
+                        Console.WriteLine("Presentation contains no slides.");
+                        Environment.Exit(1);
                     }
 
-                    // Get the first shape on the first slide
-                    Aspose.Slides.IShape shape = presentation.Slides[0].Shapes[0];
+                    Aspose.Slides.ISlide firstSlide = presentation.Slides[0];
+                    if (firstSlide.Shapes.Count == 0)
+                    {
+                        Console.WriteLine("First slide contains no shapes.");
+                        Environment.Exit(1);
+                    }
 
-                    // Retrieve effective line formatting after theme overrides
-                    Aspose.Slides.ILineFormatEffectiveData effectiveLineFormat = shape.LineFormat.GetEffective();
+                    Aspose.Slides.IShape shape = firstSlide.Shapes[0];
+                    Aspose.Slides.IAutoShape autoShape = shape as Aspose.Slides.IAutoShape;
+                    if (autoShape == null)
+                    {
+                        Console.WriteLine("First shape is not an AutoShape with line formatting.");
+                        Environment.Exit(1);
+                    }
 
-                    // Output some effective line format properties
-                    Console.WriteLine("Style: " + effectiveLineFormat.Style);
-                    Console.WriteLine("Width: " + effectiveLineFormat.Width);
-                    Console.WriteLine("Fill type: " + effectiveLineFormat.FillFormat.FillType);
+                    Aspose.Slides.ILineFormatEffectiveData effectiveLine = autoShape.LineFormat.GetEffective();
 
-                    // Save the presentation before exiting
-                    presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+                    Console.WriteLine("Effective Line Style: " + effectiveLine.Style);
+                    Console.WriteLine("Effective Line Width: " + effectiveLine.Width);
+                    Console.WriteLine("Effective Line Fill Type: " + effectiveLine.FillFormat.FillType);
+
+                    presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
                 }
             }
-            // Handle unsupported file format exceptions
             catch (Aspose.Slides.PptxUnsupportedFormatException)
             {
-                // Format not supported
+                Console.WriteLine("The file format is not supported (PPTX).");
+                Environment.Exit(1);
             }
             catch (Aspose.Slides.PptUnsupportedFormatException)
             {
-                // Format not supported
+                Console.WriteLine("The file format is not supported (PPT).");
+                Environment.Exit(1);
             }
-            // General exception handling
             catch (Exception ex)
             {
                 Console.WriteLine("Error: " + ex.Message);
+                Environment.Exit(1);
             }
         }
     }

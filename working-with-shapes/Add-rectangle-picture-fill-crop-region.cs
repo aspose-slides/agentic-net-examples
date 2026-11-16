@@ -1,28 +1,24 @@
 // -----------------------------------------------------------------------------
-// Example: Add rectangle picture fill crop region using C#
-//
+// Example: Add Rectangle Shape with Picture Fill and Crop Region using C#
+// 
 // Description:
-// Demonstrates how to add a rectangle shape with a picture fill and crop the
-// picture region using C# and Aspose.Slides for .NET. The example creates a new
-// presentation, inserts an image as a picture fill for a rectangle, applies
-// cropping to focus on a specific area, and saves the result as a PPTX file.
-// This pattern can be used to automate PowerPoint image manipulation tasks.
-//
+// Demonstrates how to create a new PowerPoint presentation, add a rectangle
+// shape filled with an image, apply cropping to the picture fill, and save the
+// result as a PPTX file using Aspose.Slides for .NET. The program creates a
+// placeholder image if none is found, making the example self‑contained.
+// 
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Rectangle, Picture, Fill, Crop,
-// Presentation Processing, Office Automation
-//
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, rectangle shape, picture fill, crop
+// 
 // Use Cases:
-// - Automate adding rectangle shapes with picture fills and custom crop regions.
-// - Build C# utilities for PowerPoint image processing and layout adjustments.
-// - Generate or modify PPTX files programmatically in .NET applications.
-// - Validate picture fill and cropping behavior before publishing presentations.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Automate insertion of images with custom crop areas into slides.
+// - Generate presentations with programmatically controlled picture fills.
+// - Prepare slide decks where image focus needs to be adjusted dynamically.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
+using System.Drawing;
 
 namespace AsposeSlidesExample
 {
@@ -41,46 +37,76 @@ namespace AsposeSlidesExample
                 Directory.CreateDirectory(dataDir);
             }
 
-            // Check if the input image exists
+            // Create a placeholder image if it does not exist
+            if (!File.Exists(imagePath))
+            {
+                try
+                {
+                    using (Bitmap bmp = new Bitmap(400, 300))
+                    {
+                        using (Graphics g = Graphics.FromImage(bmp))
+                        {
+                            g.Clear(Color.LightGray);
+                            using (Pen pen = new Pen(Color.DarkGray, 5))
+                            {
+                                g.DrawRectangle(pen, 10, 10, 380, 280);
+                            }
+                            using (Font font = new Font("Arial", 24))
+                            {
+                                g.DrawString("Sample Image", font, Brushes.Black, new PointF(80, 130));
+                            }
+                        }
+                        bmp.Save(imagePath, System.Drawing.Imaging.ImageFormat.Jpeg);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Failed to create placeholder image: " + ex.Message);
+                    Environment.Exit(1);
+                }
+            }
+
+            // Verify the image file exists
             if (!File.Exists(imagePath))
             {
                 Console.WriteLine("Input image file not found: " + imagePath);
-                return;
+                Environment.Exit(1);
             }
 
             try
             {
                 // Create a new presentation
-                Presentation presentation = new Presentation();
+                Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
                 // Get the first slide
-                ISlide slide = presentation.Slides[0];
+                Aspose.Slides.ISlide slide = presentation.Slides[0];
 
-                // Load the image
-                IImage img = Images.FromFile(imagePath);
-                IPPImage ppImg = presentation.Images.AddImage(img);
+                // Load image bytes
+                byte[] imageBytes = File.ReadAllBytes(imagePath);
+                Aspose.Slides.IPPImage ppImage = presentation.Images.AddImage(imageBytes);
 
                 // Add a rectangle shape
-                IAutoShape shape = slide.Shapes.AddAutoShape(ShapeType.Rectangle, 100, 100, 400, 300);
+                Aspose.Slides.IAutoShape rectangle = slide.Shapes.AddAutoShape(
+                    Aspose.Slides.ShapeType.Rectangle, 100, 100, 400, 300);
 
-                // Apply picture fill to the rectangle
-                shape.FillFormat.FillType = FillType.Picture;
-                IPictureFillFormat picFill = shape.FillFormat.PictureFillFormat;
-                picFill.Picture.Image = ppImg;
+                // Apply picture fill
+                rectangle.FillFormat.FillType = Aspose.Slides.FillType.Picture;
+                Aspose.Slides.IPictureFillFormat pictureFill = rectangle.FillFormat.PictureFillFormat;
+                pictureFill.Picture.Image = ppImage;
 
-                // Crop the picture within the shape to focus on a region
-                picFill.CropTop = 0.1f;    // Crop 10% from top
-                picFill.CropBottom = 0.1f; // Crop 10% from bottom
-                picFill.CropLeft = 0.2f;   // Crop 20% from left
-                picFill.CropRight = 0.2f;  // Crop 20% from right
+                // Set cropping percentages (values between 0 and 1)
+                pictureFill.CropTop = 0.1f;    // Crop 10% from top
+                pictureFill.CropBottom = 0.1f; // Crop 10% from bottom
+                pictureFill.CropLeft = 0.2f;   // Crop 20% from left
+                pictureFill.CropRight = 0.2f;  // Crop 20% from right
 
                 // Save the presentation
-                presentation.Save(outputPath, SaveFormat.Pptx);
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
             }
             catch (Exception ex)
             {
-                // Handle unsupported format or other errors
                 Console.WriteLine("An error occurred: " + ex.Message);
+                Environment.Exit(1);
             }
         }
     }

@@ -1,28 +1,25 @@
 // -----------------------------------------------------------------------------
 // Example: Log connector adjustment points from PPTX using C#
-//
+// 
 // Description:
-// Demonstrates how to enumerate connectors in a PPTX file and log the IDs of
-// connectors that have more than two adjustment points using Aspose.Slides for .NET.
-// The example loads a presentation, inspects each shape, and outputs relevant
-// connector information, then saves the presentation.
-//
+// Demonstrates how to enumerate connector shapes in a PPTX file and log the
+// identifiers of connectors that contain more than two adjustment points using
+// Aspose.Slides for .NET. The program creates a sample presentation if none is
+// found, processes the file, outputs relevant connector information, and saves
+// the result.
+// 
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Connector, Adjustment Points, 
-// Shape Inspection, Presentation Processing, Office Automation
-//
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Connector, Adjustment Points, Shape Inspection
+// 
 // Use Cases:
-// - Identify connectors with complex geometry in PowerPoint files.
-// - Build diagnostics tools for PPTX validation.
+// - Identify complex connectors in PowerPoint presentations.
+// - Build diagnostic tools for PPTX validation.
 // - Automate extraction of connector metadata in .NET applications.
-// - Integrate connector analysis into larger presentation processing workflows.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 namespace Example
 {
@@ -30,30 +27,35 @@ namespace Example
     {
         static void Main(string[] args)
         {
-            // Input presentation file
-            string inputFile = "input.pptx";
+            string inputPath = "input.pptx";
 
-            // Verify that the file exists
-            if (!File.Exists(inputFile))
+            if (!File.Exists(inputPath))
             {
-                Console.WriteLine("Input file does not exist.");
-                return;
+                try
+                {
+                    Aspose.Slides.Presentation samplePresentation = new Aspose.Slides.Presentation();
+                    // Create a blank slide (first slide already exists)
+                    samplePresentation.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    samplePresentation.Dispose();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Failed to create sample input file: " + ex.Message);
+                    Environment.Exit(1);
+                }
             }
 
-            // Load the presentation
             Aspose.Slides.Presentation presentation = null;
             try
             {
-                presentation = new Aspose.Slides.Presentation(inputFile);
+                presentation = new Aspose.Slides.Presentation(inputPath);
             }
             catch (Exception ex)
             {
-                // Handle unsupported format or other loading errors
                 Console.WriteLine("Failed to load presentation: " + ex.Message);
-                return;
+                Environment.Exit(1);
             }
 
-            // Iterate through slides and shapes to find connectors with more than two adjustment points
             for (int slideIndex = 0; slideIndex < presentation.Slides.Count; slideIndex++)
             {
                 Aspose.Slides.ISlide slide = presentation.Slides[slideIndex];
@@ -65,14 +67,23 @@ namespace Example
                         Aspose.Slides.Connector connector = (Aspose.Slides.Connector)shape;
                         if (connector.Adjustments.Count > 2)
                         {
-                            Console.WriteLine("Connector ID: " + connector.OfficeInteropShapeId);
+                            Console.WriteLine("Connector ID: " + shape.Name);
                         }
                     }
                 }
             }
 
-            // Save the presentation before exiting
-            presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            try
+            {
+                presentation.Save("output.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to save presentation: " + ex.Message);
+                presentation.Dispose();
+                Environment.Exit(1);
+            }
+
             presentation.Dispose();
         }
     }

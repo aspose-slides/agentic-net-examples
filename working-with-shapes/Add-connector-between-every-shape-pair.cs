@@ -1,30 +1,23 @@
 // -----------------------------------------------------------------------------
-// Example: Add connector between every shape pair using C#
+// Example: Add bent connectors between every shape pair in a PowerPoint presentation
 //
 // Description:
-// Demonstrates how to add a bent connector between every pair of shapes on each
-// slide of a presentation using C# and Aspose.Slides for .NET. The example loads an
-// existing PPTX file, iterates through all slides and shapes, creates connectors,
-// connects them to the shape pairs, reroutes the connectors, and saves the result.
-// This pattern can be used to automate diagram enhancements, validate shape
-// relationships, or integrate connector logic into .NET applications.
+// Demonstrates how to programmatically add a bent connector between each pair of
+// shapes on every slide of a PPTX file using Aspose.Slides for .NET. The code
+// creates a sample input file if none exists, connects shape pairs, reroutes
+// connectors, and saves the modified presentation.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Connector, Between, Every, 
-// Shape, Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, connector, shape pair, diagram automation
 //
 // Use Cases:
-// - Automate adding connectors between every shape pair in a presentation.
-// - Build C# tools for PowerPoint presentation processing and diagram enrichment.
-// - Generate or transform PPTX files with automated connector logic in .NET applications.
-// - Validate shape relationships and connectivity before publishing or integration.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Automate diagram enrichment by linking all shapes in a slide.
+// - Generate visual relationship maps in presentations programmatically.
+// - Validate and visualize shape connections before publishing.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
-
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 class Program
 {
@@ -33,32 +26,37 @@ class Program
         string inputPath = "input.pptx";
         string outputPath = "output.pptx";
 
-        if (!File.Exists(inputPath))
-        {
-            Console.WriteLine("Input file does not exist.");
-            return;
-        }
-
         try
         {
-            using (Presentation presentation = new Presentation(inputPath))
+            if (!File.Exists(inputPath))
             {
-                // Iterate through all slides
+                // Create a sample presentation with a few shapes
+                using (Aspose.Slides.Presentation samplePresentation = new Aspose.Slides.Presentation())
+                {
+                    Aspose.Slides.ISlide firstSlide = samplePresentation.Slides[0];
+                    firstSlide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 50, 50, 150, 80);
+                    firstSlide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Ellipse, 300, 150, 120, 120);
+                    firstSlide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Triangle, 200, 300, 100, 100);
+                    samplePresentation.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                }
+            }
+
+            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
+            {
                 for (int slideIndex = 0; slideIndex < presentation.Slides.Count; slideIndex++)
                 {
-                    IShapeCollection shapes = presentation.Slides[slideIndex].Shapes;
+                    Aspose.Slides.ISlide slide = presentation.Slides[slideIndex];
+                    Aspose.Slides.IShapeCollection shapes = slide.Shapes;
                     int shapeCount = shapes.Count;
 
-                    // Add a connector between every pair of shapes
                     for (int i = 0; i < shapeCount; i++)
                     {
                         for (int j = i + 1; j < shapeCount; j++)
                         {
-                            IShape shape1 = shapes[i];
-                            IShape shape2 = shapes[j];
+                            Aspose.Slides.IShape shape1 = shapes[i];
+                            Aspose.Slides.IShape shape2 = shapes[j];
 
-                            // Create a bent connector (default size, will be rerouted)
-                            IConnector connector = shapes.AddConnector(ShapeType.BentConnector2, 0, 0, 10, 10);
+                            Aspose.Slides.IConnector connector = shapes.AddConnector(Aspose.Slides.ShapeType.BentConnector2, 0, 0, 10, 10);
                             connector.StartShapeConnectedTo = shape1;
                             connector.EndShapeConnectedTo = shape2;
                             connector.Reroute();
@@ -66,18 +64,20 @@ class Program
                     }
                 }
 
-                // Save the modified presentation
-                presentation.Save(outputPath, SaveFormat.Pptx);
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
             }
+
+            Console.WriteLine("Presentation processed successfully. Output saved to " + outputPath);
         }
         catch (NotSupportedException)
         {
-            // Format not supported
             Console.WriteLine("The file format is not supported.");
+            Environment.Exit(1);
         }
         catch (Exception ex)
         {
             Console.WriteLine("Error: " + ex.Message);
+            Environment.Exit(1);
         }
     }
 }

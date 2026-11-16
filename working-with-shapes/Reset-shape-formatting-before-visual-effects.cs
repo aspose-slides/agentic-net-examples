@@ -1,41 +1,51 @@
 // -----------------------------------------------------------------------------
-// Example: Reset shape formatting before visual effects using C#
+// Example: Reset shape formatting before applying visual effects
 //
 // Description:
-// Demonstrates how to reset all shape formatting on a slide before applying
-// visual effects using Aspose.Slides for .NET. The example loads a PPTX file,
-// resets formatting of shapes on the first slide, applies an outer shadow
-// effect to the first shape, and saves the result. This pattern helps
-// developers ensure consistent formatting when programmatically adding
-// effects to PowerPoint presentations.
-//
+// Demonstrates how to reset all shape formatting on the first slide of a PPTX
+// file before applying an outer shadow effect to a shape using Aspose.Slides for .NET.
+// The program creates a sample presentation if none exists, resets formatting,
+// applies the effect, and saves the result.
+// 
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Reset, Shape, Formatting,
-// Visual Effects, Outer Shadow, Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Reset shape formatting, Outer shadow, Visual effects
 //
 // Use Cases:
-// - Reset shape formatting before applying visual effects in automated PPTX workflows.
-// - Add or modify visual effects such as shadows to shapes after clearing prior formatting.
-// - Build .NET tools for consistent presentation styling and effect application.
-// - Validate and transform PowerPoint files programmatically before publishing.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Ensure consistent shape styling before adding visual effects in automated PPTX workflows.
+// - Programmatically apply shadow effects after clearing previous formatting.
+// - Build .NET tools for presentation styling and effect management.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 
 using System;
 using System.IO;
-using Aspose.Slides.Export;
+using System.Drawing;
 
 class Program
 {
-    static void Main()
+    static int Main()
     {
         string inputPath = "input.pptx";
         string outputPath = "output.pptx";
 
         if (!File.Exists(inputPath))
         {
-            Console.WriteLine("Input file does not exist.");
-            return;
+            try
+            {
+                using (Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation())
+                {
+                    Aspose.Slides.ISlide slide = pres.Slides[0];
+                    Aspose.Slides.IShape shape = slide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 100, 100, 200, 100);
+                    shape.FillFormat.FillType = Aspose.Slides.FillType.Solid;
+                    shape.FillFormat.SolidFillColor.Color = Color.LightBlue;
+                    pres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to create sample input: " + ex.Message);
+                return 1;
+            }
         }
 
         try
@@ -43,31 +53,29 @@ class Program
             using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
             {
                 Aspose.Slides.ISlide slide = presentation.Slides[0];
-
-                // Reset formatting of all shapes on the slide (including the target shape)
                 slide.Reset();
 
-                // Example: work with the first shape on the slide
-                Aspose.Slides.IShape shape = slide.Shapes[0];
+                Aspose.Slides.IShape firstShape = slide.Shapes[0];
+                firstShape.EffectFormat.EnableOuterShadowEffect();
+                firstShape.EffectFormat.OuterShadowEffect.BlurRadius = 5.0;
+                firstShape.EffectFormat.OuterShadowEffect.Distance = 3.0;
+                firstShape.EffectFormat.OuterShadowEffect.Direction = 45;
+                firstShape.EffectFormat.OuterShadowEffect.ShadowColor.Color = Color.FromArgb(0, 0, 0);
 
-                // Apply a new visual effect: enable outer shadow
-                shape.EffectFormat.EnableOuterShadowEffect();
-                shape.EffectFormat.OuterShadowEffect.BlurRadius = 5.0;
-                shape.EffectFormat.OuterShadowEffect.Distance = 3.0;
-                shape.EffectFormat.OuterShadowEffect.Direction = 45;
-                shape.EffectFormat.OuterShadowEffect.ShadowColor.Color = System.Drawing.Color.FromArgb(0, 0, 0);
-
-                // Save the modified presentation
                 presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
             }
         }
         catch (NotSupportedException)
         {
-            // Format not supported.
+            Console.WriteLine("Format not supported.");
+            return 1;
         }
         catch (Exception ex)
         {
             Console.WriteLine("Error: " + ex.Message);
+            return 1;
         }
+
+        return 0;
     }
 }

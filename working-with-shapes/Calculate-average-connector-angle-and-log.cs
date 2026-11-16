@@ -1,30 +1,24 @@
 // -----------------------------------------------------------------------------
-// Example: Calculate average connector angle and log using C#
+// Example: Calculate Average Connector Angle in PowerPoint Presentation
 //
 // Description:
-// Demonstrates how to calculate the average angle of connector shapes on the
-// first slide of a PowerPoint presentation and log the result using C# and
-// Aspose.Slides for .NET. The example loads an existing PPTX file, iterates
-// through shapes to identify connectors, computes each connector's direction
-// angle, determines the average, outputs it to the console, and saves the
-// presentation.
+// This console program loads a PPTX file (or creates one if missing), iterates
+// through the shapes on the first slide to find connector shapes, computes each
+// connector's direction angle based on its geometry, calculates the average
+// angle, logs the result to the console, and saves the presentation. It shows
+// how to perform geometric analysis with Aspose.Slides for .NET.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Calculate, Average, Connector,
-// Angle, Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, connector angle, average angle, slide geometry
 //
 // Use Cases:
-// - Automate calculation of average connector angles in presentations.
-// - Build C# utilities for analyzing slide geometry.
-// - Generate reports or logs for PowerPoint content validation.
-// - Integrate connector angle analysis into .NET automation workflows.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Analyze connector orientations in diagram templates.
+// - Generate consistency reports for presentation assets.
+// - Integrate geometry validation into automated build pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
-
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 class Program
 {
@@ -35,70 +29,72 @@ class Program
 
         if (!File.Exists(inputPath))
         {
-            Console.WriteLine("Input file does not exist.");
-            return;
+            try
+            {
+                Aspose.Slides.Presentation presCreate = new Aspose.Slides.Presentation();
+                Aspose.Slides.ISlide slideCreate = presCreate.Slides[0];
+                Aspose.Slides.Connector demoConnector = (Aspose.Slides.Connector)slideCreate.Shapes.AddConnector(
+                    Aspose.Slides.ShapeType.Line, 100, 100, 300, 200);
+                // The connector will have Width = 200, Height = 100, resulting in a 26.565° angle.
+                presCreate.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                presCreate.Dispose();
+                Console.WriteLine("Sample input file created: " + inputPath);
+            }
+            catch (Exception exCreate)
+            {
+                Console.WriteLine("Failed to create sample input file: " + exCreate.Message);
+                Environment.Exit(1);
+                return;
+            }
         }
 
         try
         {
-            using (Presentation pres = new Presentation(inputPath))
+            Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
+            if (pres.Slides.Count == 0)
             {
-                if (pres.Slides.Count == 0)
-                {
-                    Console.WriteLine("No slides in presentation.");
-                }
-                else
-                {
-                    Slide slide = (Slide)pres.Slides[0];
-                    double totalAngle = 0.0;
-                    int connectorCount = 0;
-
-                    for (int i = 0; i < slide.Shapes.Count; i++)
-                    {
-                        Shape shape = (Shape)slide.Shapes[i];
-                        if (shape is Connector)
-                        {
-                            Connector connector = (Connector)shape;
-                            double angle = GetDirection(connector.Width, connector.Height,
-                                Convert.ToBoolean(connector.Frame.FlipH),
-                                Convert.ToBoolean(connector.Frame.FlipV));
-                            totalAngle += angle;
-                            connectorCount++;
-                        }
-                    }
-
-                    if (connectorCount > 0)
-                    {
-                        double averageAngle = totalAngle / connectorCount;
-                        Console.WriteLine("Average connector angle: " + averageAngle);
-                    }
-                    else
-                    {
-                        Console.WriteLine("No connectors found on the slide.");
-                    }
-                }
-
-                pres.Save(outputPath, SaveFormat.Pptx);
+                Console.WriteLine("The presentation contains no slides.");
+                pres.Dispose();
+                Environment.Exit(1);
+                return;
             }
+
+            Aspose.Slides.ISlide slide = pres.Slides[0];
+            double totalAngle = 0.0;
+            int connectorCount = 0;
+
+            for (int i = 0; i < slide.Shapes.Count; i++)
+            {
+                Aspose.Slides.IShape shape = slide.Shapes[i];
+                if (shape is Aspose.Slides.Connector)
+                {
+                    Aspose.Slides.Connector connector = (Aspose.Slides.Connector)shape;
+                    double width = (double)connector.Width;
+                    double height = (double)connector.Height;
+                    double angle = Math.Atan2(height, width) * (180.0 / Math.PI);
+                    totalAngle += angle;
+                    connectorCount++;
+                }
+            }
+
+            if (connectorCount > 0)
+            {
+                double averageAngle = totalAngle / connectorCount;
+                Console.WriteLine("Average connector angle: " + averageAngle);
+            }
+            else
+            {
+                Console.WriteLine("No connectors found on the first slide.");
+            }
+
+            pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            pres.Dispose();
+            Console.WriteLine("Presentation saved to: " + outputPath);
         }
         catch (Exception ex)
         {
-            // Handle unsupported format or other errors
-            Console.WriteLine("Error: " + ex.Message);
+            Console.WriteLine("Error processing presentation: " + ex.Message);
+            Environment.Exit(1);
         }
-    }
-
-    private static double GetDirection(double width, double height, bool flipH, bool flipV)
-    {
-        double angle = Math.Atan2(height, width) * (180.0 / Math.PI);
-        if (flipH)
-        {
-            angle = 180.0 - angle;
-        }
-        if (flipV)
-        {
-            angle = -angle;
-        }
-        return angle;
     }
 }

@@ -1,99 +1,96 @@
 // -----------------------------------------------------------------------------
-// Example: Set ellipse fill opacity 50pct to PPTX using C#
-//
+// Example: Set ellipse fill opacity to 50% in PPTX using C#
+// 
 // Description:
-// Demonstrates how to set ellipse fill opacity to 50% in a PPTX file using C#
-// and Aspose.Slides for .NET. The example loads an existing presentation,
-// iterates through all slides and shapes, identifies ellipse shapes, and
-// adjusts their solid fill opacity to 50% when the fill is currently
-// transparent. It then saves the modified presentation. Developers can use
-// this pattern to automate PPTX workflows, validate results, or integrate
-// presentation logic into .NET applications.
-//
+// This program creates a sample PPTX file with an ellipse if none exists,
+// then loads the presentation, finds all ellipse shapes, and sets their solid
+// fill opacity to 50% (alpha 128). The modified presentation is saved as a new
+// file. It demonstrates using Aspose.Slides for .NET to manipulate shape fill
+// transparency in PowerPoint files.
+// 
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Ellipse, Fill, Opacity, 50Pct,
-// Presentation Processing, Office Automation
-//
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Ellipse, Fill Opacity, 50%
+// 
 // Use Cases:
-// - Automate setting ellipse fill opacity to 50% in PPTX files.
-// - Build C# tools for PowerPoint presentation processing.
-// - Generate or transform PPTX files in .NET applications.
-// - Validate presentation workflows before publishing or integration.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Automate adjusting ellipse fill transparency in batch PPTX processing.
+// - Build .NET tools that modify presentation graphics programmatically.
+// - Validate and enforce design guidelines for corporate slide decks.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 
 using System;
 using System.IO;
 using System.Drawing;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 namespace SetEllipseFillOpacity
 {
     class Program
     {
-        static void Main(string[] args)
+        static int Main(string[] args)
         {
-            // Define input and output file paths
+            int exitCode = 0;
             string dataDir = Path.Combine(Directory.GetCurrentDirectory(), "Data");
             string inputPath = Path.Combine(dataDir, "input.pptx");
             string outputPath = Path.Combine(dataDir, "output.pptx");
 
-            // Ensure the data directory exists
-            if (!Directory.Exists(dataDir))
+            try
             {
-                Directory.CreateDirectory(dataDir);
-            }
-
-            // Check if the input file exists
-            if (!File.Exists(inputPath))
-            {
-                Console.WriteLine("Input file not found: " + inputPath);
-                return;
-            }
-
-            // Load the presentation
-            using (Presentation presentation = new Presentation(inputPath))
-            {
-                // Iterate over all slides
-                foreach (ISlide slide in presentation.Slides)
+                if (!Directory.Exists(dataDir))
                 {
-                    // Iterate over all shapes on the slide
-                    foreach (IShape shape in slide.Shapes)
-                    {
-                        // Cast to IAutoShape to access ShapeType
-                        IAutoShape autoShape = shape as IAutoShape;
-                        if (autoShape != null && autoShape.ShapeType == ShapeType.Ellipse)
-                        {
-                            // Get the fill format (read‑only property, but its members are writable)
-                            IFillFormat fillFormat = autoShape.FillFormat;
-                            if (fillFormat != null && fillFormat.FillType == FillType.Solid)
-                            {
-                                // Retrieve the current solid fill color
-                                Color currentColor = fillFormat.SolidFillColor.Color;
+                    Directory.CreateDirectory(dataDir);
+                }
 
-                                // Check if the fill is transparent (alpha less than 255)
-                                if (currentColor.A < 255)
+                // Create a sample presentation with an ellipse if the input file does not exist
+                if (!File.Exists(inputPath))
+                {
+                    Aspose.Slides.Presentation samplePres = new Aspose.Slides.Presentation();
+                    Aspose.Slides.ISlide sampleSlide = samplePres.Slides[0];
+                    Aspose.Slides.IAutoShape sampleEllipse = sampleSlide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Ellipse, 100, 100, 200, 100);
+                    sampleEllipse.FillFormat.FillType = Aspose.Slides.FillType.Solid;
+                    sampleEllipse.FillFormat.SolidFillColor.Color = Color.FromArgb(255, 255, 0, 0); // Opaque red
+                    samplePres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    samplePres.Dispose();
+                }
+
+                // Load the presentation
+                using (Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath))
+                {
+                    // Iterate through slides and shapes
+                    foreach (Aspose.Slides.ISlide slide in pres.Slides)
+                    {
+                        foreach (Aspose.Slides.IShape shape in slide.Shapes)
+                        {
+                            Aspose.Slides.IAutoShape autoShape = shape as Aspose.Slides.IAutoShape;
+                            if (autoShape != null && autoShape.ShapeType == Aspose.Slides.ShapeType.Ellipse)
+                            {
+                                Aspose.Slides.IFillFormat fill = autoShape.FillFormat;
+                                if (fill != null && fill.FillType == Aspose.Slides.FillType.Solid)
                                 {
+                                    Color currentColor = fill.SolidFillColor.Color;
                                     // Set opacity to 50% (alpha = 128)
                                     Color newColor = Color.FromArgb(128, currentColor.R, currentColor.G, currentColor.B);
-                                    fillFormat.SolidFillColor.Color = newColor;
+                                    fill.SolidFillColor.Color = newColor;
                                 }
                             }
                         }
                     }
-                }
 
-                // Save the modified presentation
-                try
-                {
-                    presentation.Save(outputPath, SaveFormat.Pptx);
-                }
-                catch (NotSupportedException)
-                {
-                    // Format not supported
+                    // Save the modified presentation
+                    pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
                 }
             }
+            catch (NotSupportedException)
+            {
+                Console.WriteLine("The specified file format is not supported.");
+                exitCode = 1;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
+                exitCode = 1;
+            }
+
+            return exitCode;
         }
     }
 }

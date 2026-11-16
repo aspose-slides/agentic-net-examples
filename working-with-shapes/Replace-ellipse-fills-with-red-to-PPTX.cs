@@ -1,28 +1,24 @@
 // -----------------------------------------------------------------------------
-// Example: Replace ellipse fills with red to PPTX using C#
-//
+// Example: Replace ellipse fills with red in PPTX using C#
+// 
 // Description:
-// Demonstrates how to replace the fill color of all ellipse shapes with red
-// in a PowerPoint presentation using C# and Aspose.Slides for .NET. The
-// example loads an existing PPTX file, iterates through its slides and shapes,
-// modifies ellipse fills, and saves the result as a new PPTX file.
-//
+// Demonstrates how to load a PowerPoint PPTX file, create a sample file if missing,
+// iterate through all slides and shapes, change the fill color of every ellipse
+// shape to solid red, and save the modified presentation as a new PPTX file.
+// This uses Aspose.Slides for .NET to manipulate shape formatting programmatically.
+// 
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Replace, Ellipse, Fill, Red,
-// Presentation Processing, Office Automation
-//
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Replace ellipse fill red
+// 
 // Use Cases:
-// - Automate changing ellipse fill colors to red in PPTX files.
-// - Build C# utilities for batch processing of PowerPoint presentations.
-// - Integrate shape formatting logic into .NET applications.
-// - Prepare presentations with consistent styling before distribution.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Automate standardizing ellipse colors across corporate presentations.
+// - Build a command‑line utility for batch processing of PPTX files.
+// - Integrate shape color adjustments into a larger .NET reporting workflow.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Drawing;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 namespace ReplaceEllipseFills
 {
@@ -30,54 +26,61 @@ namespace ReplaceEllipseFills
     {
         static void Main(string[] args)
         {
-            // Input and output file paths
             string inputPath = "input.pptx";
             string outputPath = "output.pptx";
 
-            // Verify that the input file exists
-            if (!File.Exists(inputPath))
-            {
-                Console.WriteLine("Input file does not exist: " + inputPath);
-                return;
-            }
-
             try
             {
+                // Create a sample presentation if the input file does not exist
+                if (!File.Exists(inputPath))
+                {
+                    Aspose.Slides.Presentation samplePresentation = new Aspose.Slides.Presentation();
+                    Aspose.Slides.ISlide sampleSlide = samplePresentation.Slides[0];
+                    Aspose.Slides.IShape sampleShape = sampleSlide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Ellipse, 100, 100, 200, 100);
+                    Aspose.Slides.AutoShape sampleAutoShape = sampleShape as Aspose.Slides.AutoShape;
+                    if (sampleAutoShape != null)
+                    {
+                        sampleAutoShape.FillFormat.FillType = Aspose.Slides.FillType.Solid;
+                        sampleAutoShape.FillFormat.SolidFillColor.Color = Color.Blue;
+                    }
+                    samplePresentation.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    samplePresentation.Dispose();
+                }
+
                 // Load the presentation
-                Presentation presentation = new Presentation(inputPath);
+                Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
 
                 // Iterate through all slides
                 for (int slideIndex = 0; slideIndex < presentation.Slides.Count; slideIndex++)
                 {
-                    ISlide slide = presentation.Slides[slideIndex];
+                    Aspose.Slides.ISlide slide = presentation.Slides[slideIndex];
 
                     // Iterate through all shapes on the slide
                     for (int shapeIndex = 0; shapeIndex < slide.Shapes.Count; shapeIndex++)
                     {
-                        IShape shape = slide.Shapes[shapeIndex];
+                        Aspose.Slides.IShape shape = slide.Shapes[shapeIndex];
 
-                        // Cast to AutoShape to access ShapeType property
-                        AutoShape autoShape = shape as AutoShape;
-                        if (autoShape != null && autoShape.ShapeType == ShapeType.Ellipse)
+                        // Process only AutoShape objects that are ellipses
+                        Aspose.Slides.AutoShape autoShape = shape as Aspose.Slides.AutoShape;
+                        if (autoShape != null && autoShape.ShapeType == Aspose.Slides.ShapeType.Ellipse)
                         {
-                            // Change fill to solid red
-                            autoShape.FillFormat.FillType = FillType.Solid;
+                            autoShape.FillFormat.FillType = Aspose.Slides.FillType.Solid;
                             autoShape.FillFormat.SolidFillColor.Color = Color.Red;
                         }
                     }
                 }
 
                 // Save the modified presentation
-                presentation.Save(outputPath, SaveFormat.Pptx);
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
                 presentation.Dispose();
 
                 Console.WriteLine("Presentation saved to: " + outputPath);
             }
             catch (Exception ex)
             {
-                // Handle unsupported format or other errors
                 Console.WriteLine("An error occurred: " + ex.Message);
                 // Comment: format not supported
+                Environment.Exit(1);
             }
         }
     }

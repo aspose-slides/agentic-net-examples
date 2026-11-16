@@ -1,86 +1,90 @@
 // -----------------------------------------------------------------------------
-// Example: Duplicate ellipses offset twenty points to pptx using C#
-//
+// Example: Duplicate Ellipses with Offset in PPTX using C#
+// 
 // Description:
-// Demonstrates how to duplicate all ellipse shapes on each slide of a PPTX
+// Demonstrates how to duplicate every ellipse shape on each slide of a PPTX
 // presentation, offsetting each duplicate by twenty points horizontally and
-// vertically, using Aspose.Slides for .NET. The example loads an existing PPTX,
-// processes each slide, creates copies of ellipses with the specified offset,
-// and saves the result as a new PPTX file.
-//
+// vertically. The program creates a sample PPTX if none exists, processes the
+// slides with Aspose.Slides for .NET, and saves the modified presentation.
+// 
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Duplicate, Ellipse, Offset, Twenty Points, Presentation Processing, Office Automation
-//
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Duplicate Ellipse, Offset, Shape Processing
+// 
 // Use Cases:
-// - Automate duplication of ellipse shapes with a fixed offset in PowerPoint files.
-// - Build .NET utilities for batch processing and layout adjustments of PPTX content.
-// - Generate modified presentations programmatically for reporting or design workflows.
-// - Validate shape positioning logic before manual editing or publishing.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Automate layout adjustments by duplicating shapes with a fixed offset.
+// - Generate modified presentations for reporting or design workflows.
+// - Validate shape positioning logic programmatically.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 namespace Example
 {
     class Program
     {
-        static void Main(string[] args)
+        static int Main(string[] args)
         {
             string inputPath = "input.pptx";
             string outputPath = "output.pptx";
 
+            // Create a sample presentation if the input file does not exist
             if (!File.Exists(inputPath))
             {
-                Console.WriteLine("Input file does not exist.");
-                return;
+                try
+                {
+                    using (Aspose.Slides.Presentation samplePresentation = new Aspose.Slides.Presentation())
+                    {
+                        Aspose.Slides.ISlide blankSlide = samplePresentation.Slides.AddEmptySlide(samplePresentation.Slides[0].LayoutSlide);
+                        blankSlide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Ellipse, 50f, 50f, 100f, 80f);
+                        samplePresentation.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Failed to create sample input file: " + ex.Message);
+                    return 1;
+                }
             }
 
             try
             {
-                using (Presentation presentation = new Presentation(inputPath))
+                using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
                 {
-                    foreach (ISlide slide in presentation.Slides)
+                    foreach (Aspose.Slides.ISlide slide in presentation.Slides)
                     {
-                        List<IShape> ellipses = new List<IShape>();
-                        foreach (IShape shape in slide.Shapes)
+                        List<Aspose.Slides.IAutoShape> ellipses = new List<Aspose.Slides.IAutoShape>();
+                        foreach (Aspose.Slides.IShape shape in slide.Shapes)
                         {
-                            if (shape is IAutoShape)
+                            Aspose.Slides.IAutoShape autoShape = shape as Aspose.Slides.IAutoShape;
+                            if (autoShape != null && autoShape.ShapeType == Aspose.Slides.ShapeType.Ellipse)
                             {
-                                IAutoShape autoShape = (IAutoShape)shape;
-                                if (autoShape.ShapeType == ShapeType.Ellipse)
-                                {
-                                    ellipses.Add(shape);
-                                }
+                                ellipses.Add(autoShape);
                             }
                         }
 
-                        foreach (IShape ellipse in ellipses)
+                        foreach (Aspose.Slides.IAutoShape originalEllipse in ellipses)
                         {
-                            IAutoShape original = (IAutoShape)ellipse;
-                            float newX = original.X + 20f;
-                            float newY = original.Y + 20f;
-                            float width = original.Width;
-                            float height = original.Height;
-                            slide.Shapes.AddAutoShape(ShapeType.Ellipse, newX, newY, width, height);
+                            float newX = originalEllipse.X + 20f;
+                            float newY = originalEllipse.Y + 20f;
+                            float width = originalEllipse.Width;
+                            float height = originalEllipse.Height;
+                            slide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Ellipse, newX, newY, width, height);
                         }
                     }
 
                     presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
                 }
             }
-            catch (Aspose.Slides.PptxUnsupportedFormatException)
-            {
-                // format not supported
-                Console.WriteLine("The presentation format is not supported.");
-            }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
+                Console.WriteLine("Error processing presentation: " + ex.Message);
+                return 1;
             }
+
+            Console.WriteLine("Processing completed successfully. Output saved to " + outputPath);
+            return 0;
         }
     }
 }

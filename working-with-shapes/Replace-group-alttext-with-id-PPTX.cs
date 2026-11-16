@@ -1,27 +1,23 @@
 // -----------------------------------------------------------------------------
-// Example: Replace group alttext with id PPTX using C#
+// Example: Replace Group Shape Alternative Text with Unique IDs in PPTX
 //
 // Description:
-// Demonstrates how to replace the AlternativeText of each group shape in a
-// PowerPoint presentation with a generated unique identifier using C# and
-// Aspose.Slides for .NET. The example loads an existing PPTX file, iterates
-// through all slides and shapes, assigns a new alt text to every group shape,
-// and saves the modified presentation.
+// This console program loads a PPTX file, iterates through all slides and
+// group shapes, and replaces each group's AlternativeText with a newly
+// generated GUID. It creates a sample presentation if the input file is missing
+// and saves the modified file as output.pptx.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Replace, Group, Alttext, Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Replace Group Shape Alt Text, Unique ID
 //
 // Use Cases:
-// - Automate replacement of group shape alt text with unique IDs in PPTX files.
-// - Build C# utilities for PowerPoint presentation metadata management.
-// - Generate or transform PPTX files programmatically in .NET applications.
-// - Validate and standardize group shape identifiers before publishing.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Standardize group shape metadata across presentation files.
+// - Prepare PPTX files for accessibility by assigning unique identifiers.
+// - Integrate into CI pipelines to enforce naming conventions on shapes.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 namespace ReplaceGroupShapeAltText
 {
@@ -29,55 +25,80 @@ namespace ReplaceGroupShapeAltText
     {
         static void Main(string[] args)
         {
-            // Define input and output file paths
             string inputPath = "input.pptx";
             string outputPath = "output.pptx";
 
-            // Verify that the input file exists
+            // Ensure input file exists; create a sample if missing
             if (!File.Exists(inputPath))
             {
-                Console.WriteLine("Input file not found: " + inputPath);
-                return;
+                try
+                {
+                    Aspose.Slides.Presentation samplePresentation = new Aspose.Slides.Presentation();
+                    Aspose.Slides.ISlide sampleSlide = samplePresentation.Slides[0];
+                    Aspose.Slides.IGroupShape sampleGroup = sampleSlide.Shapes.AddGroupShape(null, 50f, 50f, 400f, 300f);
+                    sampleGroup.AlternativeText = "OriginalAlt";
+                    sampleGroup.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 0f, 0f, 100f, 50f);
+                    samplePresentation.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    samplePresentation.Dispose();
+                    Console.WriteLine("Sample input file created: " + inputPath);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Failed to create sample input file: " + ex.Message);
+                    Environment.Exit(1);
+                }
             }
 
             Aspose.Slides.Presentation presentation = null;
             try
             {
-                // Load the presentation
                 presentation = new Aspose.Slides.Presentation(inputPath);
             }
             catch (Exception ex)
             {
-                // Handle unsupported format or loading errors
                 Console.WriteLine("Failed to load presentation: " + ex.Message);
-                // Format not supported
-                return;
+                Environment.Exit(1);
             }
 
-            // Iterate through all slides and shapes to replace group shape AlternativeText
-            for (int slideIndex = 0; slideIndex < presentation.Slides.Count; slideIndex++)
+            try
             {
-                ISlide slide = presentation.Slides[slideIndex];
-                for (int shapeIndex = 0; shapeIndex < slide.Shapes.Count; shapeIndex++)
+                for (int slideIndex = 0; slideIndex < presentation.Slides.Count; slideIndex++)
                 {
-                    IShape shape = slide.Shapes[shapeIndex];
-                    if (shape is IGroupShape)
-                    {
-                        IGroupShape groupShape = (IGroupShape)shape;
-                        // Generate a unique identifier for the group shape
-                        string newAltText = "GroupShape_" + slideIndex + "_" + shapeIndex;
-                        groupShape.AlternativeText = newAltText;
-                    }
+                    Aspose.Slides.ISlide slide = presentation.Slides[slideIndex];
+                    ProcessShapesInCollection(slide.Shapes);
+                }
+
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                Console.WriteLine("Presentation saved to: " + outputPath);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error processing presentation: " + ex.Message);
+                Environment.Exit(1);
+            }
+            finally
+            {
+                if (presentation != null)
+                {
+                    presentation.Dispose();
                 }
             }
+        }
 
-            // Save the modified presentation
-            presentation.Save(outputPath, SaveFormat.Pptx);
-
-            // Dispose the presentation object
-            presentation.Dispose();
-
-            Console.WriteLine("Presentation saved to: " + outputPath);
+        private static void ProcessShapesInCollection(Aspose.Slides.IShapeCollection shapes)
+        {
+            for (int i = 0; i < shapes.Count; i++)
+            {
+                Aspose.Slides.IShape shape = shapes[i];
+                if (shape is Aspose.Slides.IGroupShape)
+                {
+                    Aspose.Slides.IGroupShape groupShape = (Aspose.Slides.IGroupShape)shape;
+                    string newAltText = Guid.NewGuid().ToString();
+                    groupShape.AlternativeText = newAltText;
+                    // Recursively process nested shapes within the group
+                    ProcessShapesInCollection(groupShape.Shapes);
+                }
+            }
         }
     }
 }

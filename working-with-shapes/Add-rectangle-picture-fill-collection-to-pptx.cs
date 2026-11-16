@@ -1,62 +1,85 @@
 // -----------------------------------------------------------------------------
-// Example: Add rectangle picture fill collection to pptx using C#
-//
+// Example: Add Rectangle Picture Fill Collection to PPTX using C#
+// 
 // Description:
-// Demonstrates how to add rectangle picture fill collection to pptx using C# 
-// and Aspose.Slides for .NET. The example shows the required 
-// presentation-processing steps for PowerPoint files and produces the 
-// requested output in a standalone console application. Developers can use 
-// this pattern to automate PPTX workflows, validate results, or integrate 
-// presentation logic into .NET applications.
-//
+// Demonstrates how to create a PowerPoint presentation, add rectangle shapes,
+// and apply picture fill using images. Utilizes Aspose.Slides for .NET to
+// generate a PPTX file with rectangles filled by pictures, suitable for
+// automation or batch processing scenarios.
+// 
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Rectangle, Picture, Fill, 
-// Collection, Presentation Processing, Office Automation
-//
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Rectangle, Picture Fill, Automation
+// 
 // Use Cases:
-// - Automate add rectangle picture fill collection to pptx.
-// - Build C# tools for PowerPoint presentation processing.
-// - Generate or transform PPTX files in .NET applications.
-// - Validate presentation workflows before publishing or integration.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Automate adding picture-filled rectangles to presentations.
+// - Build .NET tools for batch PowerPoint image processing.
+// - Generate visual reports with image-filled shapes programmatically.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
-
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
+using System.Drawing;
+using System.Drawing.Imaging;
 
 class Program
 {
     static void Main()
     {
-        // Output directory and file
+        // Prepare output directory
         string outputDir = Path.Combine(Directory.GetCurrentDirectory(), "Output");
         if (!Directory.Exists(outputDir))
+        {
             Directory.CreateDirectory(outputDir);
+        }
         string outputPath = Path.Combine(outputDir, "RectanglesWithPictureFill.pptx");
 
-        // Image files to use
-        string[] imageFiles = new string[]
+        // Define image file names
+        string[] imageFiles = new string[] { "image1.jpg", "image2.jpg", "image3.jpg" };
+
+        // Ensure sample images exist
+        for (int i = 0; i < imageFiles.Length; i++)
         {
-            "image1.jpg",
-            "image2.jpg",
-            "image3.jpg"
-        };
+            string imgPath = Path.Combine(Directory.GetCurrentDirectory(), imageFiles[i]);
+            if (!File.Exists(imgPath))
+            {
+                try
+                {
+                    using (Bitmap bmp = new Bitmap(200, 200))
+                    {
+                        using (Graphics g = Graphics.FromImage(bmp))
+                        {
+                            g.Clear(Color.FromArgb(100 + i * 50, 150 + i * 30, 200 - i * 40));
+                            using (Font font = new Font("Arial", 24))
+                            {
+                                g.DrawString("Img " + (i + 1), font, Brushes.White, new PointF(20, 80));
+                            }
+                        }
+                        bmp.Save(imgPath, ImageFormat.Jpeg);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Failed to create sample image: " + imgPath);
+                    Console.WriteLine(ex.Message);
+                    Environment.Exit(1);
+                }
+            }
+        }
 
         // Create a new presentation
-        Presentation pres = new Presentation();
+        Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation();
 
         // Get the first slide
-        ISlide slide = pres.Slides[0];
+        Aspose.Slides.ISlide slide = pres.Slides[0];
 
         // Rectangle layout parameters
         int startX = 50;
         int startY = 50;
-        int rectWidth = 200;
-        int rectHeight = 150;
-        int verticalSpacing = 200;
+        int rectWidth = 300;
+        int rectHeight = 200;
+        int verticalSpacing = 250;
 
+        // Add rectangles with picture fill
         for (int i = 0; i < imageFiles.Length; i++)
         {
             string imagePath = Path.Combine(Directory.GetCurrentDirectory(), imageFiles[i]);
@@ -64,46 +87,62 @@ class Program
             if (!File.Exists(imagePath))
             {
                 Console.WriteLine("Image file not found: " + imagePath);
-                continue;
+                Environment.Exit(1);
             }
 
             try
             {
-                // Load image and add to presentation
-                IImage img = Images.FromFile(imagePath);
-                IPPImage ppImg = pres.Images.AddImage(img);
+                byte[] imageBytes = File.ReadAllBytes(imagePath);
+                Aspose.Slides.IPPImage ppImg = pres.Images.AddImage(imageBytes);
 
-                // Add rectangle shape
                 int posY = startY + i * verticalSpacing;
-                IAutoShape shape = slide.Shapes.AddAutoShape(ShapeType.Rectangle, startX, posY, rectWidth, rectHeight);
-                shape.FillFormat.FillType = FillType.Picture;
+                Aspose.Slides.IAutoShape shape = slide.Shapes.AddAutoShape(
+                    Aspose.Slides.ShapeType.Rectangle,
+                    startX,
+                    posY,
+                    rectWidth,
+                    rectHeight);
 
-                // Configure picture fill
-                IPictureFillFormat picFill = shape.FillFormat.PictureFillFormat;
+                shape.FillFormat.FillType = Aspose.Slides.FillType.Picture;
+
+                Aspose.Slides.IPictureFillFormat picFill = shape.FillFormat.PictureFillFormat;
                 picFill.Picture.Image = ppImg;
-                picFill.PictureFillMode = PictureFillMode.Tile;
+                picFill.PictureFillMode = Aspose.Slides.PictureFillMode.Tile;
                 picFill.TileOffsetX = 0f;
                 picFill.TileOffsetY = 0f;
                 picFill.TileScaleX = 1f;
                 picFill.TileScaleY = 1f;
-                picFill.TileAlignment = RectangleAlignment.BottomRight;
-                picFill.TileFlip = TileFlip.FlipBoth;
+                picFill.TileAlignment = Aspose.Slides.RectangleAlignment.BottomRight;
+                picFill.TileFlip = Aspose.Slides.TileFlip.FlipBoth;
             }
             catch (NotSupportedException)
             {
-                // Image format not supported
                 Console.WriteLine("Image format not supported for file: " + imagePath);
+                Environment.Exit(1);
             }
             catch (Exception ex)
             {
-                // General error handling
                 Console.WriteLine("Error processing image: " + imagePath);
                 Console.WriteLine(ex.Message);
+                Environment.Exit(1);
             }
         }
 
         // Save the presentation
-        pres.Save(outputPath, SaveFormat.Pptx);
-        pres.Dispose();
+        try
+        {
+            pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Failed to save presentation: " + ex.Message);
+            Environment.Exit(1);
+        }
+        finally
+        {
+            pres.Dispose();
+        }
+
+        Console.WriteLine("Presentation saved to: " + outputPath);
     }
 }

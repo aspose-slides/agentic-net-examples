@@ -1,29 +1,23 @@
 // -----------------------------------------------------------------------------
-// Example: Load pptx select rectangle solid red using C#
+// Example: Apply solid red fill to first rectangle shape in PPTX
 //
 // Description:
-// Demonstrates how to load a PPTX file, select the first rectangle shape on the
-// first slide, and apply a solid red fill using C# and Aspose.Slides for .NET.
-// The example includes file existence checks, error handling, and saves the
-// modified presentation as a new PPTX file.
+// Demonstrates loading a PPTX file, creating a sample file if missing, selecting
+// the first rectangle shape on the first slide, applying a solid red fill using
+// Aspose.Slides for .NET, and saving the result as a new PPTX file.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, Select, Rectangle, Solid Red,
-// Fill, Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, rectangle shape, solid red fill
 //
 // Use Cases:
-// - Automate loading a PPTX and applying a solid red fill to a rectangle shape.
-// - Build C# utilities for PowerPoint shape formatting.
-// - Generate or modify PPTX files programmatically in .NET applications.
-// - Validate and test presentation styling workflows before deployment.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Automate styling of specific shapes in presentations.
+// - Generate test PPTX files with predefined formatting.
+// - Integrate shape formatting into .NET batch processing utilities.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
-
 using System;
 using System.IO;
 using System.Drawing;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 namespace AsposeSlidesExample
 {
@@ -31,43 +25,59 @@ namespace AsposeSlidesExample
     {
         static void Main(string[] args)
         {
-            // Input PPTX file path
             string inputPath = "input.pptx";
-            // Output PPTX file path
             string outputPath = "output.pptx";
-
-            // Check if input file exists
-            if (!File.Exists(inputPath))
-            {
-                Console.WriteLine("Input file does not exist: " + inputPath);
-                return;
-            }
 
             try
             {
-                // Load the presentation
-                using (Presentation presentation = new Presentation(inputPath))
+                if (!File.Exists(inputPath))
                 {
-                    // Get the first slide
-                    ISlide slide = presentation.Slides[0];
-
-                    // Assume the first shape is a rectangle; cast to IShape
-                    IShape shape = slide.Shapes[0];
-
-                    // Apply solid red fill
-                    shape.FillFormat.FillType = FillType.Solid;
-                    shape.FillFormat.SolidFillColor.Color = Color.Red;
-
-                    // Save the modified presentation
-                    presentation.Save(outputPath, SaveFormat.Pptx);
+                    // Create a sample presentation with a rectangle shape
+                    using (Aspose.Slides.Presentation samplePresentation = new Aspose.Slides.Presentation())
+                    {
+                        Aspose.Slides.ISlide sampleSlide = samplePresentation.Slides[0];
+                        Aspose.Slides.IAutoShape rectangle = sampleSlide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 50, 50, 200, 100);
+                        samplePresentation.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    }
                 }
+
+                using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
+                {
+                    Aspose.Slides.ISlide slide = presentation.Slides[0];
+                    Aspose.Slides.IAutoShape targetShape = null;
+
+                    foreach (Aspose.Slides.IShape shape in slide.Shapes)
+                    {
+                        if (shape is Aspose.Slides.IAutoShape)
+                        {
+                            Aspose.Slides.IAutoShape autoShape = (Aspose.Slides.IAutoShape)shape;
+                            if (autoShape.ShapeType == Aspose.Slides.ShapeType.Rectangle)
+                            {
+                                targetShape = autoShape;
+                                break;
+                            }
+                        }
+                    }
+
+                    if (targetShape == null)
+                    {
+                        Console.WriteLine("No rectangle shape found on the first slide.");
+                        Environment.Exit(1);
+                    }
+
+                    targetShape.FillFormat.FillType = Aspose.Slides.FillType.Solid;
+                    targetShape.FillFormat.SolidFillColor.Color = Color.Red;
+
+                    presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                }
+
+                Console.WriteLine("Presentation processed successfully. Output saved to: " + outputPath);
             }
             catch (Exception ex)
             {
-                // Handle unsupported format or other errors
                 Console.WriteLine("An error occurred: " + ex.Message);
-                // Format not supported comment
                 // The provided file format may not be supported by Aspose.Slides.
+                Environment.Exit(1);
             }
         }
     }

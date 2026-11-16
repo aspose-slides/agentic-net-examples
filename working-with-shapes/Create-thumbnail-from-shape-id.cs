@@ -1,102 +1,125 @@
 // -----------------------------------------------------------------------------
-// Example: Create thumbnail from shape ID using C#
+// Example: Create shape thumbnail from OfficeInteropShapeId using Aspose.Slides
 //
 // Description:
-// Demonstrates how to locate a shape by its OfficeInteropShapeId in a PowerPoint
-// presentation, generate a thumbnail image for that shape with optional scaling,
-// and save the image to disk. The example also shows how to load and save a
-// presentation using Aspose.Slides for .NET in a console application.
+// Demonstrates how to locate a shape by its OfficeInteropShapeId in a PPTX file,
+// generate a thumbnail image for that shape with optional scaling, and save the
+// image to disk. The program also creates a sample presentation if none exists
+// and saves the modified presentation.
 //
 // Keywords:
-// C#, Aspose.Slides, PowerPoint, PPTX, Shape thumbnail, Shape ID, IImage, 
-// GetShapeThumbnail, Presentation processing, Office automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, shape thumbnail, OfficeInteropShapeId
 //
 // Use Cases:
-// - Generate a thumbnail for a specific shape identified by its ID.
-// - Build utilities that extract visual representations of shapes from PPTX files.
-// - Automate batch processing of presentations to create shape previews.
-// - Integrate shape thumbnail generation into .NET applications or services.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Generate visual previews of individual shapes for documentation.
+// - Extract shape images for reuse in other media.
+// - Automate batch processing of presentations to create shape thumbnails.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 namespace ShapeThumbnailExample
 {
     class Program
     {
-        // Reusable method to get a shape thumbnail by shape ID and scaling factors
-        public static IImage GetShapeThumbnail(Presentation presentation, uint shapeId, float scaleX, float scaleY)
+        private static Aspose.Slides.IImage GetShapeThumbnail(Aspose.Slides.Presentation presentation, uint shapeId, float scaleX, float scaleY)
         {
-            // Iterate through all slides and shapes to find the matching shape
-            foreach (ISlide slide in presentation.Slides)
+            foreach (Aspose.Slides.ISlide slide in presentation.Slides)
             {
-                foreach (IShape shape in slide.Shapes)
+                foreach (Aspose.Slides.IShape shape in slide.Shapes)
                 {
                     if (shape.OfficeInteropShapeId == shapeId)
                     {
-                        // Return the thumbnail image using the specified scale
-                        return shape.GetImage(ShapeThumbnailBounds.Shape, scaleX, scaleY);
+                        Aspose.Slides.IImage shapeImage = shape.GetImage(Aspose.Slides.ShapeThumbnailBounds.Shape, scaleX, scaleY);
+                        return shapeImage;
                     }
                 }
             }
-            // Return null if shape not found
             return null;
         }
 
         static void Main(string[] args)
         {
-            // Input presentation path
             string inputPath = "input.pptx";
-            // Output thumbnail image path
-            string outputImagePath = "shape_thumbnail.jpg";
-            // Output presentation path (saved after processing)
+            string outputImagePath = "shape_thumbnail.png";
             string outputPresentationPath = "output.pptx";
-            // Shape identifier to locate (example value)
-            uint targetShapeId = 5;
-            // Scaling factors
-            float scaleX = 1.0f;
-            float scaleY = 1.0f;
-
-            // Verify that the input file exists
-            if (!File.Exists(inputPath))
-            {
-                Console.WriteLine("Input file does not exist: " + inputPath);
-                return;
-            }
 
             try
             {
-                // Load the presentation
-                using (Presentation presentation = new Presentation(inputPath))
+                if (!File.Exists(inputPath))
                 {
-                    // Get the thumbnail for the specified shape
-                    IImage thumbnail = GetShapeThumbnail(presentation, targetShapeId, scaleX, scaleY);
-                    if (thumbnail != null)
-                    {
-                        // Save the thumbnail as JPEG
-                        thumbnail.Save(outputImagePath, Aspose.Slides.ImageFormat.Jpeg);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Shape with ID " + targetShapeId + " not found.");
-                    }
-
-                    // Save the presentation before exiting
-                    presentation.Save(outputPresentationPath, SaveFormat.Pptx);
+                    Aspose.Slides.Presentation samplePres = new Aspose.Slides.Presentation();
+                    Aspose.Slides.ISlide sampleSlide = samplePres.Slides[0];
+                    Aspose.Slides.IAutoShape sampleShape = sampleSlide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 100, 100, 300, 150);
+                    sampleShape.FillFormat.FillType = Aspose.Slides.FillType.NoFill;
+                    sampleShape.LineFormat.SketchFormat.SketchType = Aspose.Slides.LineSketchType.Scribble;
+                    samplePres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    samplePres.Dispose();
                 }
+
+                if (!File.Exists(inputPath))
+                {
+                    Console.WriteLine("Failed to create input file: " + inputPath);
+                    Environment.Exit(1);
+                }
+
+                Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+                uint targetShapeId = 0;
+                Aspose.Slides.IShape targetShape = null;
+
+                foreach (Aspose.Slides.ISlide slide in presentation.Slides)
+                {
+                    foreach (Aspose.Slides.IShape shape in slide.Shapes)
+                    {
+                        if (shape.OfficeInteropShapeId != 0)
+                        {
+                            targetShapeId = shape.OfficeInteropShapeId;
+                            targetShape = shape;
+                            break;
+                        }
+                    }
+                    if (targetShape != null)
+                    {
+                        break;
+                    }
+                }
+
+                if (targetShape == null)
+                {
+                    Console.WriteLine("No shapes found in the presentation.");
+                    presentation.Dispose();
+                    Environment.Exit(1);
+                }
+
+                float scaleX = 1.0f;
+                float scaleY = 1.0f;
+                Aspose.Slides.IImage thumbnail = GetShapeThumbnail(presentation, targetShapeId, scaleX, scaleY);
+                if (thumbnail != null)
+                {
+                    thumbnail.Save(outputImagePath, Aspose.Slides.ImageFormat.Png);
+                    thumbnail.Dispose();
+                    Console.WriteLine("Thumbnail saved to: " + outputImagePath);
+                }
+                else
+                {
+                    Console.WriteLine("Failed to generate thumbnail for shape ID " + targetShapeId);
+                    presentation.Dispose();
+                    Environment.Exit(1);
+                }
+
+                presentation.Save(outputPresentationPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                presentation.Dispose();
             }
             catch (NotSupportedException)
             {
-                // Format not supported
                 Console.WriteLine("The file format is not supported.");
+                Environment.Exit(1);
             }
             catch (Exception ex)
             {
-                // Handle other exceptions (e.g., external URL or web service errors)
                 Console.WriteLine("An error occurred: " + ex.Message);
+                Environment.Exit(1);
             }
         }
     }
