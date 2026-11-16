@@ -1,30 +1,24 @@
 // -----------------------------------------------------------------------------
-// Example: Replace table placeholder with csv data using C#
+// Example: Replace Table Placeholder with CSV Data in PowerPoint
 //
 // Description:
 // Demonstrates how to replace a table placeholder in a PowerPoint slide with
-// data from a CSV file using C# and Aspose.Slides for .NET. The example creates
-// a new presentation, adds a layout slide with a table placeholder, reads CSV
-// content, populates a table at the placeholder location, and saves the result.
-// This pattern can be used to automate PPTX workflows that require dynamic
-// table generation from external data sources.
+// data from a CSV file using C# and Aspose.Slides for .NET. The program creates
+// a presentation, adds a layout slide containing a table placeholder, reads a
+// CSV file, populates a table at the placeholder location, and saves the result.
+// This enables automated PPTX workflows that require dynamic table generation.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Replace, Table, Placeholder,
-// CSV, Data Import, Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Replace Table Placeholder, CSV, Data Import
 //
 // Use Cases:
 // - Automate the replacement of table placeholders with CSV data in presentations.
-// - Build C# tools for generating or updating tables in PowerPoint files.
+// - Build tools for generating or updating tables in PowerPoint files.
 // - Integrate CSV-driven content into PPTX slides within .NET applications.
-// - Validate and test presentation workflows that involve dynamic data tables.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
-
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 namespace ReplaceTablePlaceholder
 {
@@ -32,71 +26,78 @@ namespace ReplaceTablePlaceholder
     {
         static void Main(string[] args)
         {
-            // Define file paths
             string csvPath = "data.csv";
             string outputPath = "output.pptx";
 
-            // Verify CSV file exists
+            // Ensure CSV file exists; create sample if missing
             if (!File.Exists(csvPath))
             {
-                Console.WriteLine("CSV file not found: " + csvPath);
-                return;
+                try
+                {
+                    string[] sampleLines = new string[]
+                    {
+                        "Header1,Header2,Header3",
+                        "Row1Col1,Row1Col2,Row1Col3",
+                        "Row2Col1,Row2Col2,Row2Col3"
+                    };
+                    File.WriteAllLines(csvPath, sampleLines);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Failed to create sample CSV: " + ex.Message);
+                    Environment.Exit(1);
+                }
             }
 
             try
             {
-                // Create a new presentation
-                Presentation presentation = new Presentation();
+                Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation();
 
-                // Get a blank layout slide
-                ILayoutSlide layoutSlide = presentation.LayoutSlides.GetByType(SlideLayoutType.Blank);
+                Aspose.Slides.ILayoutSlide layoutSlide = presentation.LayoutSlides.GetByType(Aspose.Slides.SlideLayoutType.Blank);
 
-                // Add a table placeholder to the layout slide
-                ILayoutPlaceholderManager placeholderManager = layoutSlide.PlaceholderManager;
-                IAutoShape placeholder = placeholderManager.AddTablePlaceholder(10, 10, 500, 300);
+                Aspose.Slides.ILayoutPlaceholderManager placeholderManager = layoutSlide.PlaceholderManager;
+                Aspose.Slides.IAutoShape placeholder = placeholderManager.AddTablePlaceholder(10, 10, 500, 300);
 
-                // Add a new slide based on the layout slide
-                ISlide slide = presentation.Slides.AddEmptySlide(layoutSlide);
+                Aspose.Slides.ISlide slide = presentation.Slides.AddEmptySlide(layoutSlide);
 
-                // Locate the placeholder shape on the new slide
-                IShape placeholderShape = null;
-                foreach (IShape shape in slide.Shapes)
+                Aspose.Slides.IShape placeholderShape = null;
+                foreach (Aspose.Slides.IShape shape in slide.Shapes)
                 {
-                    if (shape.Placeholder != null && shape.Placeholder.Type == PlaceholderType.Table)
+                    if (shape.Placeholder != null && shape.Placeholder.Type == Aspose.Slides.PlaceholderType.Table)
                     {
                         placeholderShape = shape;
                         break;
                     }
                 }
 
-                // If placeholder not found, exit
                 if (placeholderShape == null)
                 {
                     Console.WriteLine("Table placeholder not found on the slide.");
-                    presentation.Save(outputPath, SaveFormat.Pptx);
-                    return;
+                    presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    Environment.Exit(1);
                 }
 
-                // Read CSV data
                 string[] csvLines = File.ReadAllLines(csvPath);
                 int rowCount = csvLines.Length;
                 int columnCount = 0;
                 if (rowCount > 0)
                 {
-                    string[] firstRow = csvLines[0].Split(',');
-                    columnCount = firstRow.Length;
+                    columnCount = csvLines[0].Split(',').Length;
                 }
 
-                // Prepare column widths and row heights
                 double[] columnWidths = new double[columnCount];
                 double[] rowHeights = new double[rowCount];
-                for (int i = 0; i < columnCount; i++) columnWidths[i] = 100; // uniform width
-                for (int i = 0; i < rowCount; i++) rowHeights[i] = 20; // uniform height
+                for (int i = 0; i < columnCount; i++)
+                {
+                    columnWidths[i] = 100;
+                }
+                for (int i = 0; i < rowCount; i++)
+                {
+                    rowHeights[i] = 20;
+                }
 
-                // Add a table to the slide at the placeholder position
-                Table table = (Table)slide.Shapes.AddTable(placeholderShape.X, placeholderShape.Y, columnWidths, rowHeights);
+                Aspose.Slides.ITable table = (Aspose.Slides.Table)slide.Shapes.AddTable(placeholderShape.X, placeholderShape.Y, columnWidths, rowHeights);
 
-                // Populate table cells with CSV data
                 for (int r = 0; r < rowCount; r++)
                 {
                     string[] cells = csvLines[r].Split(',');
@@ -109,21 +110,20 @@ namespace ReplaceTablePlaceholder
                     }
                 }
 
-                // Remove the original placeholder shape
                 slide.Shapes.Remove(placeholderShape);
 
-                // Save the presentation
-                presentation.Save(outputPath, SaveFormat.Pptx);
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
             }
             catch (NotSupportedException)
             {
                 // Format not supported
                 // Comment: The specified file format is not supported.
+                Environment.Exit(1);
             }
             catch (Exception ex)
             {
-                // Handle other exceptions (e.g., external URL issues)
                 Console.WriteLine("An error occurred: " + ex.Message);
+                Environment.Exit(1);
             }
         }
     }
