@@ -1,69 +1,71 @@
 // -----------------------------------------------------------------------------
-// Example: Get slide by ID and set tags using C#
+// Example: Retrieve Slide by Persistent ID and Assign Custom Tags
 //
 // Description:
-// Demonstrates how to retrieve a slide by its persistent ID and assign custom
-// tags to it using Aspose.Slides for .NET. The example loads a PPTX file,
-// accesses the first slide via its ID, updates the slide's custom data tags,
-// and saves the modified presentation. This pattern is useful for automating
-// slide metadata management in PowerPoint files.
+// Demonstrates loading a PPTX file, retrieving a slide using its persistent
+// ID, adding custom metadata tags to the slide, and saving the updated
+// presentation. Useful for automating slide metadata management in PowerPoint
+// files using Aspose.Slides for .NET.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Slide, Tags, CustomData,
-// Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Slide ID, Custom Tags, Metadata
 //
 // Use Cases:
 // - Retrieve a specific slide using its persistent ID.
 // - Add or modify custom tags on a slide for metadata tracking.
 // - Automate PPTX metadata updates in batch processing tools.
-// - Integrate slide tag management into .NET applications.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 class Program
 {
     static void Main()
     {
-        // Define input and output paths
-        string dataDir = "Data/";
-        string inputPath = dataDir + "input.pptx";
-        string outputPath = dataDir + "output.pptx";
-
-        // Verify that the input file exists
-        if (!File.Exists(inputPath))
-        {
-            Console.WriteLine("Input file does not exist.");
-            return;
-        }
+        string dataDir = "Data";
+        string inputPath = Path.Combine(dataDir, "input.pptx");
+        string outputPath = Path.Combine(dataDir, "output.pptx");
 
         try
         {
-            // Load the presentation
-            using (Presentation presentation = new Presentation(inputPath))
+            if (!Directory.Exists(dataDir))
             {
-                // Obtain the persistent ID of the first slide (example)
+                Directory.CreateDirectory(dataDir);
+            }
+
+            if (!File.Exists(inputPath))
+            {
+                using (Aspose.Slides.Presentation samplePres = new Aspose.Slides.Presentation())
+                {
+                    samplePres.Slides.AddEmptySlide(samplePres.Slides[0].LayoutSlide);
+                    samplePres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                }
+            }
+
+            if (!File.Exists(inputPath))
+            {
+                Console.WriteLine("Input file does not exist.");
+                Environment.Exit(1);
+            }
+
+            using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
+            {
                 System.UInt32 slideId = presentation.Slides[0].SlideId;
 
-                // Access the slide by its persistent ID
-                IBaseSlide slide = presentation.GetSlideById(slideId);
+                Aspose.Slides.IBaseSlide baseSlide = presentation.GetSlideById(slideId);
+                Aspose.Slides.ISlide slide = (Aspose.Slides.ISlide)baseSlide;
 
-                // Update custom tags on the slide
                 slide.CustomData.Tags["Tag1"] = "Value1";
                 slide.CustomData.Tags.Add("Tag2", "Value2");
 
-                // Save the modified presentation
-                presentation.Save(outputPath, SaveFormat.Pptx);
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
             }
         }
         catch (Exception ex)
         {
-            // If the exception is due to an unsupported format, note it
-            // (In a real scenario, check the exception type/message)
             Console.WriteLine("An error occurred: " + ex.Message);
+            Environment.Exit(1);
         }
     }
 }
