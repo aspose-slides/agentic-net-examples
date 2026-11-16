@@ -1,29 +1,24 @@
 // -----------------------------------------------------------------------------
-// Example: Compress remove unused layout slides using C#
+// Example: Compress PowerPoint by Removing Unused Layout Slides
 //
 // Description:
-// Demonstrates how to compress a PowerPoint presentation by removing unused
-// layout slides using C# and Aspose.Slides for .NET. The example loads a PPTX
-// file, optionally deletes a specific slide, invokes the layout slide cleanup
-// routine, and saves the optimized presentation. This pattern helps reduce
-// file size and improve performance for PowerPoint automation tasks.
-//
+// Demonstrates how to reduce a PPTX file size by deleting a slide and cleaning
+// up unused layout slides using Aspose.Slides for .NET. The program creates a
+// sample presentation if the input file is missing, performs the cleanup, and
+// saves the optimized result.
+// 
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Compress, Remove, Unused,
-// Layout, Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, compress, remove unused layout slides
 //
 // Use Cases:
-// - Automate removal of unused layout slides to compress presentations.
-// - Build C# utilities for PowerPoint file optimization.
-// - Integrate presentation cleanup into .NET applications.
-// - Validate and streamline PPTX workflows before distribution.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Optimize large presentations before distribution.
+// - Automate cleanup of generated PPTX files in CI pipelines.
+// - Reduce file size for faster loading in PowerPoint viewers.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 namespace AsposeSlidesExample
 {
@@ -31,50 +26,52 @@ namespace AsposeSlidesExample
     {
         static void Main(string[] args)
         {
-            // Input and output file paths
             string inputPath = "input.pptx";
             string outputPath = "output.pptx";
 
-            // Check if the input file exists
+            // Ensure input file exists; create a simple presentation if missing
             if (!File.Exists(inputPath))
             {
-                Console.WriteLine("Input file does not exist: " + inputPath);
-                return;
+                Aspose.Slides.Presentation samplePres = new Aspose.Slides.Presentation();
+                samplePres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                samplePres.Dispose();
             }
 
             try
             {
-                // Load the presentation
-                using (Presentation pres = new Presentation(inputPath))
+                using (Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath))
                 {
-                    // Example: delete the first slide (layout‑specific slide)
+                    // Delete the first slide if present
                     if (pres.Slides.Count > 0)
                     {
-                        ISlide firstSlide = pres.Slides[0];
+                        Aspose.Slides.ISlide firstSlide = pres.Slides[0];
                         firstSlide.Remove();
                     }
 
-                    // Remove unused layout slides to reduce file size
+                    // Remove unused layout slides to compress the file
                     pres.LayoutSlides.RemoveUnused();
 
-                    // Save the modified presentation
-                    pres.Save(outputPath, SaveFormat.Pptx);
+                    // Save the optimized presentation
+                    pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
                 }
             }
-            // Handle unsupported file format exceptions
-            catch (PptxUnsupportedFormatException ex)
+            catch (Aspose.Slides.PptxUnsupportedFormatException ex)
             {
                 Console.WriteLine("Unsupported PPTX format: " + ex.Message);
+                Environment.Exit(1);
             }
-            catch (PptUnsupportedFormatException ex)
+            catch (Aspose.Slides.PptUnsupportedFormatException ex)
             {
                 Console.WriteLine("Unsupported PPT format: " + ex.Message);
+                Environment.Exit(1);
             }
-            // General exception handling
             catch (Exception ex)
             {
                 Console.WriteLine("An error occurred: " + ex.Message);
+                Environment.Exit(1);
             }
+
+            Environment.Exit(0);
         }
     }
 }
