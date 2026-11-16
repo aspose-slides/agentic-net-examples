@@ -1,29 +1,24 @@
 // -----------------------------------------------------------------------------
-// Example: Move slide and verify new index using C#
-//
+// Example: Move Slide and Verify New Index in PowerPoint using C#
+// 
 // Description:
-// Demonstrates how to load a PPTX file, move a slide to a new position,
-// verify the slide's new index, and save the updated presentation using
-// Aspose.Slides for .NET. The example includes basic error handling for missing
-// files and unsupported formats, making it suitable for console applications
-// that automate PowerPoint slide reordering.
-//
+// Demonstrates loading a PPTX file, moving a slide to a new position, verifying
+// the slide's new index, and saving the updated presentation with Aspose.Slides
+// for .NET. The program creates a sample input file if none exists and includes
+// basic error handling for missing files and unsupported formats.
+// 
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Move Slide, Verify Index,
-// Presentation Processing, Office Automation
-//
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Move Slide, Verify Index, Slide Reorder
+// 
 // Use Cases:
 // - Reorder slides programmatically in a PowerPoint file.
 // - Validate slide positions after manipulation.
 // - Build .NET tools for automated PPTX editing and quality checks.
-// - Integrate slide management into larger presentation workflows.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 namespace SlideReorderExample
 {
@@ -31,45 +26,94 @@ namespace SlideReorderExample
     {
         static void Main(string[] args)
         {
-            // Define input and output file paths
             string inputPath = "input.pptx";
             string outputPath = "output.pptx";
 
-            // Verify that the input file exists
+            // Ensure input file exists; create a sample presentation if it does not.
             if (!File.Exists(inputPath))
             {
-                Console.WriteLine("Input file does not exist.");
-                return;
+                try
+                {
+                    Aspose.Slides.Presentation samplePresentation = new Aspose.Slides.Presentation();
+                    // Add a second slide to have at least two slides for reordering.
+                    Aspose.Slides.ILayoutSlide layout = samplePresentation.Slides[0].LayoutSlide;
+                    samplePresentation.Slides.AddEmptySlide(layout);
+                    samplePresentation.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    samplePresentation.Dispose();
+                    Console.WriteLine("Sample input presentation created at: " + inputPath);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Failed to create sample input file: " + ex.Message);
+                    Environment.Exit(1);
+                }
             }
 
             Aspose.Slides.Presentation presentation = null;
             try
             {
-                // Load the presentation
                 presentation = new Aspose.Slides.Presentation(inputPath);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                // Handle unsupported file format or other loading errors
-                // Format not supported
-                Console.WriteLine("Failed to load the presentation. The file format may not be supported.");
-                return;
+                Console.WriteLine("Failed to load the presentation. The file format may not be supported. " + ex.Message);
+                Environment.Exit(1);
             }
 
-            // Get the slide to move (first slide in this example)
+            // Ensure there are at least two slides to perform a move.
+            if (presentation.Slides.Count < 2)
+            {
+                try
+                {
+                    Aspose.Slides.ILayoutSlide layout = presentation.Slides[0].LayoutSlide;
+                    presentation.Slides.AddEmptySlide(layout);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Failed to add additional slide: " + ex.Message);
+                    presentation.Dispose();
+                    Environment.Exit(1);
+                }
+            }
+
             Aspose.Slides.ISlide slideToMove = presentation.Slides[0];
+            int targetIndex = 1; // Move to second position (zero‑based index).
 
-            // Move the slide to the desired position (e.g., index 2)
-            presentation.Slides.Reorder(2, slideToMove);
+            // Adjust target index if out of range.
+            if (targetIndex < 0)
+            {
+                targetIndex = 0;
+            }
+            else if (targetIndex >= presentation.Slides.Count)
+            {
+                targetIndex = presentation.Slides.Count - 1;
+            }
 
-            // Verify the new index of the moved slide
+            try
+            {
+                presentation.Slides.Reorder(targetIndex, slideToMove);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to reorder slide: " + ex.Message);
+                presentation.Dispose();
+                Environment.Exit(1);
+            }
+
             int newIndex = presentation.Slides.IndexOf(slideToMove);
             Console.WriteLine("Slide moved to index: " + newIndex);
 
-            // Save the modified presentation
-            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            try
+            {
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to save the presentation: " + ex.Message);
+                presentation.Dispose();
+                Environment.Exit(1);
+            }
 
-            // Dispose the presentation
             presentation.Dispose();
         }
     }
