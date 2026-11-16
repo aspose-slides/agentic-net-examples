@@ -1,31 +1,25 @@
 // -----------------------------------------------------------------------------
-// Example: Import transition settings from XML and apply using C#
+// Example: Import slide transition settings from XML and apply to PPTX
 //
 // Description:
-// Demonstrates how to read an XML file that defines slide transition
-// parameters (slide index, transition type, and advance time) and apply those
-// settings to a PowerPoint presentation using Aspose.Slides for .NET. The
-// example loads an existing PPTX, updates each slide's SlideShowTransition
-// properties according to the XML, and saves the modified presentation.
-// This pattern can be used to programmatically control slide transitions in
-// automated PPTX processing scenarios.
+// This console program reads an XML file that defines slide transition parameters
+// (slide index, transition type, and advance time) and applies them to a PowerPoint
+// presentation using Aspose.Slides for .NET. It creates sample input files if they
+// are missing, updates each slide's SlideShowTransition properties, and saves the
+// modified presentation.
 //
 // Keywords:
-// C#, Aspose.Slides, PowerPoint, PPTX, XML, Slide transition, SlideShowTransition,
-// Transition type, Advance time, Presentation automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, XML, Slide transition, SlideShowTransition
 //
 // Use Cases:
-// - Apply batch transition settings defined in an external XML to a PPTX.
-// - Build tools that synchronize slide animations with external data sources.
+// - Batch update slide transitions based on external configuration.
 // - Automate preparation of presentations for webinars or e‑learning.
-// - Integrate transition configuration into CI/CD pipelines for slide decks.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Integrate transition settings into CI/CD pipelines for slide decks.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Xml;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 namespace SlideTransitionImporter
 {
@@ -33,29 +27,43 @@ namespace SlideTransitionImporter
     {
         static void Main(string[] args)
         {
-            // Input and output file paths
             string inputPresentationPath = "input.pptx";
             string xmlPath = "transitions.xml";
             string outputPresentationPath = "output.pptx";
 
-            // Verify that the presentation file exists
-            if (!File.Exists(inputPresentationPath))
-            {
-                Console.WriteLine("Presentation file not found: " + inputPresentationPath);
-                return;
-            }
-
-            // Verify that the XML file exists
-            if (!File.Exists(xmlPath))
-            {
-                Console.WriteLine("XML file not found: " + xmlPath);
-                return;
-            }
-
             try
             {
+                // Ensure input presentation exists; create a simple one if missing
+                if (!File.Exists(inputPresentationPath))
+                {
+                    Aspose.Slides.Presentation tempPres = new Aspose.Slides.Presentation();
+                    // Add two additional empty slides (total 3 slides)
+                    Aspose.Slides.ILayoutSlide layout = tempPres.Slides[0].LayoutSlide;
+                    tempPres.Slides.AddEmptySlide(layout);
+                    tempPres.Slides.AddEmptySlide(layout);
+                    tempPres.Save(inputPresentationPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    tempPres.Dispose();
+                }
+
+                // Ensure XML file exists; create a sample if missing
+                if (!File.Exists(xmlPath))
+                {
+                    XmlDocument sampleDoc = new XmlDocument();
+                    XmlElement root = sampleDoc.CreateElement("Transitions");
+                    sampleDoc.AppendChild(root);
+                    for (int i = 0; i < 3; i++)
+                    {
+                        XmlElement slideElem = sampleDoc.CreateElement("Slide");
+                        slideElem.SetAttribute("index", i.ToString());
+                        slideElem.SetAttribute("type", "Fade");
+                        slideElem.SetAttribute("time", "2000");
+                        root.AppendChild(slideElem);
+                    }
+                    sampleDoc.Save(xmlPath);
+                }
+
                 // Load the presentation
-                Presentation presentation = new Presentation(inputPresentationPath);
+                Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPresentationPath);
 
                 // Load the XML document containing transition settings
                 XmlDocument xmlDoc = new XmlDocument();
@@ -82,20 +90,20 @@ namespace SlideTransitionImporter
                 }
 
                 // Save the modified presentation
-                presentation.Save(outputPresentationPath, SaveFormat.Pptx);
+                presentation.Save(outputPresentationPath, Aspose.Slides.Export.SaveFormat.Pptx);
                 presentation.Dispose();
 
                 Console.WriteLine("Presentation saved successfully to: " + outputPresentationPath);
             }
             catch (NotSupportedException)
             {
-                // Format not supported
                 Console.WriteLine("The file format is not supported.");
+                Environment.Exit(1);
             }
             catch (Exception ex)
             {
-                // General exception handling
                 Console.WriteLine("An error occurred: " + ex.Message);
+                Environment.Exit(1);
             }
         }
     }
