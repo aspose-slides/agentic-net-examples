@@ -1,44 +1,67 @@
 // -----------------------------------------------------------------------------
-// Example: Clone slide to presentation and merge notes using C#
+// Example: Clone Slide and Merge Speaker Notes Using Aspose.Slides for .NET
 //
 // Description:
-// Demonstrates how to clone the first slide from a source presentation into a new
-// presentation and merge its speaker notes with the notes of the cloned slide using
-// Aspose.Slides for .NET. The example loads a source PPTX, creates a destination PPTX,
-// copies the slide, ensures notes slides exist, and appends the source notes to the
-// destination notes before saving the result.
-//
+// Demonstrates cloning the first slide from a source PPTX into a new presentation
+// and merging its speaker notes with the notes of the cloned slide. The program
+// creates a sample source file if missing, performs the clone and notes merge,
+// and saves the resulting presentation.
+// 
 // Keywords:
-// C#, Aspose.Slides, PowerPoint, PPTX, Clone Slide, Merge Notes, Presentation Processing,
-// Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone Slide, Merge Notes, Presentation Automation
 //
 // Use Cases:
-// - Automate cloning of specific slides while preserving and merging speaker notes.
-// - Build .NET utilities for PowerPoint content reuse and note consolidation.
-// - Generate new presentations programmatically based on existing slide templates.
-// - Validate and transform PPTX files in batch processing scenarios.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Reuse template slides while consolidating speaker notes.
+// - Build utilities that combine notes from multiple presentations.
+// - Automate creation of training decks with aggregated notes.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 namespace CloneSlideAndMergeNotes
 {
     class Program
     {
-        static void Main(string[] args)
+        static int Main(string[] args)
         {
-            // Paths to source and destination presentations
             string sourcePath = "SourcePresentation.pptx";
             string destinationPath = "ClonedPresentation.pptx";
 
-            // Verify source file exists
+            // Ensure source presentation exists; create a simple one if missing
+            if (!File.Exists(sourcePath))
+            {
+                try
+                {
+                    using (Aspose.Slides.Presentation sourcePres = new Aspose.Slides.Presentation())
+                    {
+                        // Add a slide using the first layout slide
+                        Aspose.Slides.ILayoutSlide layout = sourcePres.Slides[0].LayoutSlide;
+                        Aspose.Slides.ISlide slide = sourcePres.Slides.AddEmptySlide(layout);
+
+                        // Add sample notes to the slide
+                        Aspose.Slides.INotesSlideManager notesMgr = slide.NotesSlideManager;
+                        Aspose.Slides.INotesSlide notesSlide = notesMgr.AddNotesSlide();
+                        if (notesSlide.NotesTextFrame != null)
+                        {
+                            notesSlide.NotesTextFrame.Text = "Sample source notes.";
+                        }
+
+                        sourcePres.Save(sourcePath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Failed to create sample source presentation: " + ex.Message);
+                    return 1;
+                }
+            }
+
+            // Verify source file exists after creation attempt
             if (!File.Exists(sourcePath))
             {
                 Console.WriteLine("Source file does not exist: " + sourcePath);
-                return;
+                return 1;
             }
 
             try
@@ -53,25 +76,22 @@ namespace CloneSlideAndMergeNotes
                         Aspose.Slides.ISlide clonedSlide = destPres.Slides.InsertClone(0, sourcePres.Slides[0]);
 
                         // ----- Merge speaker notes -----
-                        // Get source notes slide (create if missing)
+                        // Get source notes text
                         Aspose.Slides.INotesSlideManager sourceNotesMgr = sourcePres.Slides[0].NotesSlideManager;
                         Aspose.Slides.INotesSlide sourceNotesSlide = sourceNotesMgr.AddNotesSlide();
-
-                        // Extract source notes text
                         string sourceNotesText = string.Empty;
                         if (sourceNotesSlide.NotesTextFrame != null)
                         {
                             sourceNotesText = sourceNotesSlide.NotesTextFrame.Text;
                         }
 
-                        // Get destination notes manager and ensure a notes slide exists
+                        // Ensure destination notes slide exists
                         Aspose.Slides.INotesSlideManager destNotesMgr = clonedSlide.NotesSlideManager;
                         Aspose.Slides.INotesSlide destNotesSlide = destNotesMgr.AddNotesSlide();
 
-                        // Append source notes to destination notes (or replace)
+                        // Append source notes to destination notes
                         if (destNotesSlide.NotesTextFrame != null)
                         {
-                            // If destination already has notes, combine them
                             if (!string.IsNullOrEmpty(destNotesSlide.NotesTextFrame.Text))
                             {
                                 destNotesSlide.NotesTextFrame.Text = destNotesSlide.NotesTextFrame.Text + Environment.NewLine + sourceNotesText;
@@ -88,16 +108,17 @@ namespace CloneSlideAndMergeNotes
                 }
 
                 Console.WriteLine("Slide cloned and notes merged successfully.");
+                return 0;
             }
             catch (Aspose.Slides.PptxUnsupportedFormatException)
             {
-                // Format not supported
                 Console.WriteLine("The presentation format is not supported.");
+                return 1;
             }
             catch (Exception ex)
             {
-                // General exception handling
                 Console.WriteLine("An error occurred: " + ex.Message);
+                return 1;
             }
         }
     }
