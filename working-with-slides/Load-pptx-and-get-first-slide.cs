@@ -1,74 +1,71 @@
 // -----------------------------------------------------------------------------
-// Example: Load pptx and get first slide using C#
+// Example: Load PPTX, Access First Slide, Apply Transition, Save Presentation
 //
 // Description:
-// Demonstrates how to load a PPTX file, access its first slide, apply a simple
-// transition, and save the modified presentation using C# and Aspose.Slides for
-// .NET. The example shows the essential steps for loading, processing, and
-// persisting PowerPoint files in a standalone console application. Developers
-// can use this pattern to automate PPTX workflows, add slide effects, or integrate
-// presentation logic into .NET solutions.
+// Demonstrates loading a PPTX file, retrieving its first slide, applying a simple
+// fade transition, and saving the modified presentation using C# and Aspose.Slides
+// for .NET. The program creates a sample input file if none exists and exits with
+// a non‑zero code on failure.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, First Slide, Transition,
-// Save, Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load Presentation, First Slide, Transition, Save
 //
 // Use Cases:
-// - Load a PPTX file and retrieve the first slide for further processing.
-// - Apply slide transitions programmatically.
-// - Build C# tools for PowerPoint presentation automation.
-// - Generate or modify PPTX files in .NET applications.
-// - Validate and test presentation workflows before deployment.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Automate slide transition addition to existing presentations.
+// - Build command‑line tools for PPTX batch processing.
+// - Integrate PowerPoint manipulation into .NET backend services.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main(string[] args)
+    static int Main(string[] args)
     {
-        // Define input and output file paths
         string inputPath = "input.pptx";
         string outputPath = "output.pptx";
 
-        // Verify that the input file exists
+        // Ensure input file exists; create a minimal presentation if missing
         if (!File.Exists(inputPath))
         {
-            Console.WriteLine("Input file does not exist: " + inputPath);
-            return;
+            try
+            {
+                Aspose.Slides.Presentation samplePres = new Aspose.Slides.Presentation();
+                samplePres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                samplePres.Dispose();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to create sample input file: " + ex.Message);
+                return 1;
+            }
         }
 
         try
         {
-            // Load the presentation from the specified file
             Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
-
-            // Access the first slide for processing
             Aspose.Slides.ISlide firstSlide = presentation.Slides[0];
 
-            // Example processing: set a simple transition on the first slide
+            // Apply a simple fade transition
             firstSlide.SlideShowTransition.Type = Aspose.Slides.SlideShow.TransitionType.Fade;
             firstSlide.SlideShowTransition.AdvanceOnClick = true;
             firstSlide.SlideShowTransition.AdvanceAfterTime = 2000; // 2 seconds
 
-            // Save the modified presentation
             presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
-
-            // Release resources
             presentation.Dispose();
         }
         catch (NotSupportedException)
         {
-            // Handle unsupported file format
             Console.WriteLine("The file format is not supported.");
+            return 1;
         }
         catch (Exception ex)
         {
-            // General exception handling
             Console.WriteLine("An error occurred: " + ex.Message);
+            return 1;
         }
+
+        return 0;
     }
 }
