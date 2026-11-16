@@ -1,29 +1,24 @@
 // -----------------------------------------------------------------------------
-// Example: Resize slides and export to PDF using C#
-//
+// Example: Resize Slides and Export to PDF using C#
+// 
 // Description:
-// Demonstrates how to resize all slides in a PowerPoint presentation to a
-// custom size and export the result to a PDF file using Aspose.Slides for .NET.
-// The example loads a PPTX file, applies a new slide dimension while ensuring
+// Demonstrates how to resize all slides in a PowerPoint presentation to a custom
+// size and export the result to a PDF file using Aspose.Slides for .NET. The program
+// creates a sample PPTX if none exists, applies a new slide dimension while ensuring
 // existing content scales to fit, and saves the transformed presentation as PDF.
-// This pattern is useful for automating slide‑size adjustments and PDF generation
-// in .NET applications.
-//
+// 
 // Keywords:
-// C#, Aspose.Slides for .NET, PowerPoint, PPTX, PDF, Resize Slides, Export,
-// Presentation Processing, Office Automation
-//
+// C#, PowerPoint, PPTX, PDF, Aspose.Slides for .NET, Resize Slides, Export
+// 
 // Use Cases:
 // - Automate slide size standardization before publishing.
 // - Convert resized PowerPoint decks to PDF for distribution.
 // - Integrate slide resizing and PDF export into CI/CD pipelines.
-// - Build command‑line tools for batch processing of presentations.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 
 using System;
 using System.IO;
-using Aspose.Slides.Export;
 
 namespace SlideResizeAndExport
 {
@@ -31,37 +26,47 @@ namespace SlideResizeAndExport
     {
         static void Main(string[] args)
         {
-            // Define input and output file paths
             string inputPath = "input.pptx";
             string outputPath = "output.pdf";
 
-            // Verify that the input file exists
+            // Ensure input file exists; create a simple presentation if missing
             if (!File.Exists(inputPath))
             {
-                Console.WriteLine("Input file does not exist: " + inputPath);
-                return;
+                try
+                {
+                    Aspose.Slides.Presentation samplePresentation = new Aspose.Slides.Presentation();
+                    Aspose.Slides.ISlide firstSlide = samplePresentation.Slides[0];
+                    Aspose.Slides.IAutoShape rectangle = firstSlide.Shapes.AddAutoShape(
+                        Aspose.Slides.ShapeType.Rectangle, 50, 50, 400, 100);
+                    rectangle.AddTextFrame("Sample slide");
+                    samplePresentation.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    samplePresentation.Dispose();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Failed to create sample input file: " + ex.Message);
+                    Environment.Exit(1);
+                }
             }
 
             try
             {
-                // Load the presentation
                 Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
-
-                // Set custom slide size (e.g., 800x600 points) and ensure content fits
                 presentation.SlideSize.SetSize(800f, 600f, Aspose.Slides.SlideSizeScaleType.EnsureFit);
-
-                // Export the modified presentation to PDF
                 presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pdf);
+                presentation.Dispose();
+                Console.WriteLine("Presentation resized and exported to PDF successfully.");
             }
             catch (NotSupportedException)
             {
                 // Format not supported
-                // Handle the case where the requested format cannot be saved
+                Console.WriteLine("The requested format is not supported.");
+                Environment.Exit(1);
             }
             catch (Exception ex)
             {
-                // General exception handling (e.g., file access issues)
                 Console.WriteLine("An error occurred: " + ex.Message);
+                Environment.Exit(1);
             }
         }
     }
