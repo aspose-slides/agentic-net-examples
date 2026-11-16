@@ -1,77 +1,81 @@
 // -----------------------------------------------------------------------------
-// Example: Clone multiple slide masters to target using C#
+// Example: Clone Multiple Slide Masters to Target Presentation
 //
 // Description:
-// Demonstrates how to clone all slide masters from a source presentation into a
-// new destination presentation using Aspose.Slides for .NET. The example also
-// shows how to add a slide that uses one of the cloned masters. This pattern
-// can be used to consolidate slide masters across presentations or to prepare
-// a template with multiple masters for further editing.
+// Demonstrates how to clone all slide masters from a source PPTX into a new
+// destination presentation using Aspose.Slides for .NET. The program also adds
+// a slide that utilizes one of the cloned masters, useful for consolidating
+// master libraries or building multi‑master templates.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone, Multiple, Slide, Masters,
-// Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, clone slide masters, master slide
 //
 // Use Cases:
-// - Transfer all slide masters from an existing PPTX to a new presentation.
-// - Build tools that combine slide master libraries for template creation.
+// - Transfer all slide masters from an existing template to a new presentation.
+// - Create a composite master library for reusable design assets.
 // - Automate preparation of presentations that require multiple master slides.
-// - Enable downstream editing of cloned masters in .NET applications.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 class Program
 {
     static void Main()
     {
-        // Paths for source template and destination presentation
         string sourcePath = "Template.pptx";
         string destinationPath = "ClonedMasters.pptx";
 
-        // Verify that the source file exists
+        // Ensure source presentation exists; create a simple one if missing
         if (!File.Exists(sourcePath))
         {
-            Console.WriteLine("Source file does not exist: " + sourcePath);
-            return;
+            try
+            {
+                using (Aspose.Slides.Presentation tempPres = new Aspose.Slides.Presentation())
+                {
+                    // Clone the default master to have at least two masters
+                    Aspose.Slides.IMasterSlide newMaster = tempPres.Masters.AddClone(tempPres.Masters[0]);
+                    tempPres.Save(sourcePath, Aspose.Slides.Export.SaveFormat.Pptx);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to create source presentation: " + ex.Message);
+                Environment.Exit(1);
+            }
         }
 
         try
         {
-            // Load the source presentation
-            using (Presentation srcPres = new Presentation(sourcePath))
+            using (Aspose.Slides.Presentation srcPres = new Aspose.Slides.Presentation(sourcePath))
             {
-                // Create a new empty destination presentation
-                using (Presentation destPres = new Presentation())
+                using (Aspose.Slides.Presentation destPres = new Aspose.Slides.Presentation())
                 {
-                    // Clone all master slides from the source to the destination
+                    // Clone all master slides from source to destination
                     for (int i = 0; i < srcPres.Masters.Count; i++)
                     {
-                        IMasterSlide sourceMaster = srcPres.Masters[i];
+                        Aspose.Slides.IMasterSlide sourceMaster = srcPres.Masters[i];
                         destPres.Masters.AddClone(sourceMaster);
                     }
 
-                    // Optionally clone a slide to demonstrate usage of the cloned masters
+                    // Add a slide that uses the first cloned master
                     if (srcPres.Slides.Count > 0 && destPres.Masters.Count > 0)
                     {
-                        ISlide sourceSlide = srcPres.Slides[0];
-                        IMasterSlide destMaster = destPres.Masters[0];
+                        Aspose.Slides.ISlide sourceSlide = srcPres.Slides[0];
+                        Aspose.Slides.IMasterSlide destMaster = destPres.Masters[0];
                         destPres.Slides.AddClone(sourceSlide, destMaster, true);
                     }
 
                     // Save the destination presentation
-                    destPres.Save(destinationPath, SaveFormat.Pptx);
+                    destPres.Save(destinationPath, Aspose.Slides.Export.SaveFormat.Pptx);
                 }
             }
         }
         catch (Exception ex)
         {
-            // Handle unsupported format or other errors
             Console.WriteLine("An error occurred: " + ex.Message);
+            Environment.Exit(1);
         }
     }
 }
