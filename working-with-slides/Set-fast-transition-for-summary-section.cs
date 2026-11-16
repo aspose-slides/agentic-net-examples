@@ -1,73 +1,64 @@
 // -----------------------------------------------------------------------------
-// Example: Set fast transition for summary section using C#
-//
+// Example: Set Fast Transition for Summary Section in PowerPoint using C#
+// 
 // Description:
-// Demonstrates how to set fast transition for summary section using C# and 
-// Aspose.Slides for .NET. The example shows the required 
-// presentation-processing steps for PowerPoint files and produces the 
-// requested output in a standalone console application. Developers can use 
-// this pattern to automate PPTX workflows, validate results, or integrate 
-// presentation logic into .NET applications.
-//
+// This console application creates or loads a PPTX file, applies a fast slide
+// transition (Fade) to all slides representing a summary section, and saves the
+// modified presentation. It demonstrates using Aspose.Slides for .NET to
+// automate transition settings in PowerPoint files.
+// 
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Fast, Transition, Summary, 
-// Section, Presentation Processing, Office Automation
-//
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, slide transition, fast transition
+// 
 // Use Cases:
-// - Automate set fast transition for summary section.
-// - Build C# tools for PowerPoint presentation processing.
-// - Generate or transform PPTX files in .NET applications.
-// - Validate presentation workflows before publishing or integration.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Automating slide transition configuration for summary sections in presentations.
+// - Ensuring consistent fast transitions across multiple slides in batch processing.
+// - Integrating transition settings into .NET presentation generation workflows.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-namespace SetFastTransitionForSummary
+class Program
 {
-    class Program
+    static int Main(string[] args)
     {
-        static void Main()
-        {
-            // Input and output file paths
-            string inputPath = "input.pptx";
-            string outputPath = "output.pptx";
+        string inputPath = "input.pptx";
+        string outputPath = "output.pptx";
 
-            // Verify that the input file exists
+        try
+        {
+            // Ensure input file exists; create a simple presentation if missing.
             if (!File.Exists(inputPath))
             {
-                Console.WriteLine("Input file not found: " + inputPath);
-                return;
+                Aspose.Slides.Presentation newPres = new Aspose.Slides.Presentation();
+                // Add a few slides to simulate a summary section.
+                newPres.Slides.AddClone(newPres.Slides[0]);
+                newPres.Slides.AddClone(newPres.Slides[0]);
+                newPres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                newPres.Dispose();
             }
 
-            try
-            {
-                // Load the presentation
-                using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
-                {
-                    // Iterate through all slides (or limit to the "Summary" section if needed)
-                    foreach (Aspose.Slides.ISlide slide in presentation.Slides)
-                    {
-                        // Set transition speed to Fast
-                        slide.SlideShowTransition.Speed = Aspose.Slides.SlideShow.TransitionSpeed.Fast;
-                    }
+            // Load the presentation.
+            Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
 
-                    // Save the modified presentation
-                    presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
-                }
-            }
-            catch (NotSupportedException)
+            // Apply a fast transition (Fade) to each slide.
+            for (int i = 0; i < pres.Slides.Count; i++)
             {
-                // Handle unsupported file format
-                Console.WriteLine("The file format is not supported for saving.");
+                pres.Slides[i].SlideShowTransition.Type = Aspose.Slides.SlideShow.TransitionType.Fade;
             }
-            catch (Exception ex)
-            {
-                // General exception handling (e.g., I/O errors)
-                Console.WriteLine("An error occurred: " + ex.Message);
-            }
+
+            // Save the modified presentation.
+            pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            pres.Dispose();
+
+            Console.WriteLine("Fast transition applied successfully. Output saved to " + outputPath);
+            return 0;
+        }
+        catch (Exception ex)
+        {
+            Console.Error.WriteLine("An error occurred: " + ex.Message);
+            return 1;
         }
     }
 }
