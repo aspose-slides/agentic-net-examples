@@ -1,29 +1,25 @@
 // -----------------------------------------------------------------------------
-// Example: Get slide by ID and replace placeholders using C#
+// Example: Replace placeholders on a slide retrieved by ID using Aspose.Slides
 //
 // Description:
-// Demonstrates how to load a PowerPoint presentation, retrieve a slide by its
-// unique identifier, replace text placeholders within shapes on that slide using
-// values from a dictionary, and save the modified presentation. The example
-// uses Aspose.Slides for .NET and can serve as a template for automating PPTX
-// content updates.
+// This console program loads a PowerPoint PPTX file, retrieves a specific slide
+// by its unique identifier, replaces text placeholders within shapes on that
+// slide using values from a dictionary, and saves the modified presentation.
+// It creates a sample input file if none exists, demonstrating automated PPTX
+// content updates with Aspose.Slides for .NET.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Slide ID, Placeholder Replacement,
-// Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Slide ID, Placeholder Replacement
 //
 // Use Cases:
 // - Update specific slides in a presentation based on slide ID.
 // - Replace dynamic text placeholders (e.g., {{Name}}, {{Date}}) with runtime data.
 // - Automate generation of personalized PowerPoint files in .NET applications.
-// - Validate and transform PPTX content before distribution.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 namespace AsposeSlidesExample
 {
@@ -31,42 +27,59 @@ namespace AsposeSlidesExample
     {
         static void Main(string[] args)
         {
-            // Input and output file paths
             string inputPath = "input.pptx";
             string outputPath = "output.pptx";
 
-            // Verify that the input file exists
+            // Ensure input file exists; create a simple presentation if missing
+            if (!File.Exists(inputPath))
+            {
+                try
+                {
+                    Aspose.Slides.Presentation samplePresentation = new Aspose.Slides.Presentation();
+                    Aspose.Slides.ILayoutSlide layout = samplePresentation.Slides[0].LayoutSlide;
+                    Aspose.Slides.ISlide sampleSlide = samplePresentation.Slides.AddEmptySlide(layout);
+                    Aspose.Slides.IAutoShape placeholderShape = sampleSlide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 50, 50, 400, 100);
+                    placeholderShape.TextFrame.Text = "Hello {{Name}}, today is {{Date}}.";
+                    samplePresentation.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Failed to create sample input file: " + ex.Message);
+                    Environment.Exit(1);
+                }
+            }
+
+            // Verify that the input file now exists
             if (!File.Exists(inputPath))
             {
                 Console.WriteLine("Input file does not exist: " + inputPath);
-                return;
+                Environment.Exit(1);
             }
 
-            // Simulated database values
+            // Placeholder values
             Dictionary<string, string> placeholderData = new Dictionary<string, string>();
             placeholderData.Add("{{Name}}", "John Doe");
             placeholderData.Add("{{Date}}", DateTime.Today.ToShortDateString());
 
             try
             {
-                // Load the presentation
-                using (Presentation presentation = new Presentation(inputPath))
+                using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
                 {
-                    // Specify the slide ID to retrieve
-                    uint slideId = 2; // Example ID
+                    // Retrieve the ID of the first slide (or any desired slide)
+                    uint slideId = presentation.Slides[0].SlideId;
 
-                    // Get the slide (or master/layout) by ID
-                    IBaseSlide baseSlide = presentation.GetSlideById(slideId);
-                    if (baseSlide == null)
+                    // Get slide by ID (GetSlideById returns IBaseSlide, cast to ISlide)
+                    Aspose.Slides.ISlide targetSlide = presentation.GetSlideById(slideId) as Aspose.Slides.ISlide;
+                    if (targetSlide == null)
                     {
                         Console.WriteLine("Slide with ID " + slideId + " not found.");
-                        return;
+                        Environment.Exit(1);
                     }
 
-                    // Iterate through shapes on the slide and replace placeholders
-                    foreach (IShape shape in baseSlide.Shapes)
+                    // Replace placeholders in text frames
+                    foreach (Aspose.Slides.IShape shape in targetSlide.Shapes)
                     {
-                        IAutoShape autoShape = shape as IAutoShape;
+                        Aspose.Slides.IAutoShape autoShape = shape as Aspose.Slides.IAutoShape;
                         if (autoShape != null && autoShape.TextFrame != null)
                         {
                             string originalText = autoShape.TextFrame.Text;
@@ -88,23 +101,23 @@ namespace AsposeSlidesExample
                     }
 
                     // Save the modified presentation
-                    presentation.Save(outputPath, SaveFormat.Pptx);
+                    presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
                 }
             }
             catch (Aspose.Slides.PptxUnsupportedFormatException ex)
             {
-                // Format not supported (PPTX)
                 Console.WriteLine("Unsupported PPTX format: " + ex.Message);
+                Environment.Exit(1);
             }
             catch (Aspose.Slides.PptUnsupportedFormatException ex)
             {
-                // Format not supported (PPT)
                 Console.WriteLine("Unsupported PPT format: " + ex.Message);
+                Environment.Exit(1);
             }
             catch (Exception ex)
             {
-                // General exception handling
                 Console.WriteLine("An error occurred: " + ex.Message);
+                Environment.Exit(1);
             }
         }
     }

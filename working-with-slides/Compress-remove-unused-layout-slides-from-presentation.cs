@@ -1,67 +1,58 @@
 // -----------------------------------------------------------------------------
-// Example: Compress remove unused layout slides from presentation using C#
+// Example: Compress and Remove Unused Layout Slides from PowerPoint Presentation
 //
 // Description:
-// Demonstrates how to compress and remove unused layout slides from a PowerPoint
-// presentation using C# and Aspose.Slides for .NET. The example loads an existing
-// PPTX file, invokes the compression utility to eliminate layout slides that are
-// not referenced by any slide, and saves the optimized presentation.
-// This pattern can be used to reduce file size and improve performance of PPTX
-// files in automated workflows.
+// This console application loads an existing PPTX file, removes any layout
+// slides that are not referenced by presentation slides using Aspose.Slides
+// LowCode compression utilities, and saves the optimized file. It creates a
+// sample presentation if the input file is missing, demonstrating how to
+// reduce PPTX size and improve performance in automated workflows.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Compress, Remove, Unused, Layout,
-// Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, layout compression, remove unused layouts
 //
 // Use Cases:
-// - Automate removal of unused layout slides to shrink presentation size.
-// - Build C# utilities for PowerPoint file optimization.
-// - Integrate presentation cleanup steps into .NET applications or CI pipelines.
-// - Prepare PPTX files for distribution by eliminating unnecessary resources.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Reduce PPTX file size before distribution
+// - Optimize presentations in batch processing pipelines
+// - Clean up unused master and layout slides in generated presentations
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
-
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
-using Aspose.Slides.LowCode;
 
 class Program
 {
     static void Main(string[] args)
     {
-        // Input and output file names
-        string inputFileName = "input.pptx";
-        string outputFileName = "output.pptx";
+        string inputPath = Path.Combine(Environment.CurrentDirectory, "input.pptx");
+        string outputPath = Path.Combine(Environment.CurrentDirectory, "output.pptx");
 
-        // Build full paths
-        string inputPath = Path.Combine(Environment.CurrentDirectory, inputFileName);
-        string outputPath = Path.Combine(Environment.CurrentDirectory, outputFileName);
-
-        // Verify input file exists
         if (!File.Exists(inputPath))
         {
-            Console.WriteLine("Input file does not exist: " + inputPath);
-            return;
+            // Create a sample presentation with a single slide
+            Aspose.Slides.Presentation samplePresentation = new Aspose.Slides.Presentation();
+            // Add an empty slide using the default layout
+            samplePresentation.Slides.AddEmptySlide(samplePresentation.Slides[0].LayoutSlide);
+            samplePresentation.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            samplePresentation.Dispose();
+            Console.WriteLine("Sample input presentation created at: " + inputPath);
         }
 
         try
         {
-            // Load the presentation
-            Presentation presentation = new Presentation(inputPath);
-
-            // Remove all unused layout slides
-            Compress.RemoveUnusedLayoutSlides(presentation);
-
-            // Save the modified presentation
-            presentation.Save(outputPath, SaveFormat.Pptx);
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+            // Remove unused layout slides
+            Aspose.Slides.LowCode.Compress.RemoveUnusedLayoutSlides(presentation);
+            // Optionally remove unused master slides
+            Aspose.Slides.LowCode.Compress.RemoveUnusedMasterSlides(presentation);
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
             presentation.Dispose();
+            Console.WriteLine("Compressed presentation saved to: " + outputPath);
         }
         catch (Exception ex)
         {
-            // Handle errors such as unsupported format
-            Console.WriteLine("An error occurred: " + ex.Message);
+            Console.Error.WriteLine("Error during compression: " + ex.Message);
+            Environment.Exit(1);
         }
     }
 }

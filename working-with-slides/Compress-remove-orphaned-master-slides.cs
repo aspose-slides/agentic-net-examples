@@ -1,76 +1,68 @@
 // -----------------------------------------------------------------------------
-// Example: Compress remove orphaned master slides using C#
+// Example: Compress and Remove Orphaned Master and Layout Slides in PPTX
 //
 // Description:
-// Demonstrates how to compress and remove orphaned master and layout slides
-// from a PowerPoint presentation using C# and Aspose.Slides for .NET. The
-// example loads a source PPTX, clones a slide with its master into a new
-// presentation, then invokes the Compress utility to eliminate unused master
-// and layout slides before saving the result.
-//
+// This console program demonstrates how to load a PowerPoint file, clone a slide
+// (including its master) into a new presentation, and then use Aspose.Slides
+// LowCode compression utilities to remove unused master and layout slides.
+// The result is saved as a compressed PPTX file.
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Compress, Remove, Orphaned,
-// Master Slides, Layout Slides, Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, compress, remove unused masters, layout slides
 //
 // Use Cases:
-// - Reduce file size by eliminating unused master and layout slides.
-// - Prepare clean presentations for distribution or archiving.
-// - Automate PPTX cleanup in batch processing pipelines.
-// - Integrate presentation optimization into .NET applications.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Reducing file size by eliminating orphaned slide masters after slide manipulation.
+// - Preparing presentations for distribution with only necessary resources.
+// - Automating cleanup of PPTX files in a batch processing pipeline.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
-using Aspose.Slides.LowCode;
 
-namespace AsposeSlidesExample
+class Program
 {
-    class Program
+    static int Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            // Define input and output file paths
-            string inputPath = Path.Combine(Environment.CurrentDirectory, "source.pptx");
-            string outputPath = Path.Combine(Environment.CurrentDirectory, "output.pptx");
+        string inputPath = Path.Combine(Environment.CurrentDirectory, "source.pptx");
+        string outputPath = Path.Combine(Environment.CurrentDirectory, "compressed.pptx");
 
-            // Verify that the input file exists
+        try
+        {
+            // Ensure source presentation exists; create a simple one if missing.
             if (!File.Exists(inputPath))
             {
-                Console.WriteLine("Input file not found: " + inputPath);
-                return;
+                Aspose.Slides.Presentation tempPres = new Aspose.Slides.Presentation();
+                Aspose.Slides.ISlide slide = tempPres.Slides[0];
+                Aspose.Slides.IShapeCollection shapes = slide.Shapes;
+                shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 50, 50, 400, 200);
+                tempPres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                tempPres.Dispose();
             }
 
-            try
-            {
-                // Load source presentation
-                using (Presentation srcPres = new Presentation(inputPath))
-                {
-                    // Create destination presentation
-                    using (Presentation destPres = new Presentation())
-                    {
-                        // Clone first slide along with its master slide
-                        ISlide sourceSlide = srcPres.Slides[0];
-                        IMasterSlide sourceMaster = sourceSlide.LayoutSlide.MasterSlide;
-                        IMasterSlide destMaster = destPres.Masters.AddClone(sourceMaster);
-                        destPres.Slides.AddClone(sourceSlide, destMaster, true);
+            // Load source presentation.
+            Aspose.Slides.Presentation sourcePres = new Aspose.Slides.Presentation(inputPath);
 
-                        // Remove unused master and layout slides from the destination presentation
-                        Compress.RemoveUnusedMasterSlides(destPres);
-                        Compress.RemoveUnusedLayoutSlides(destPres);
+            // Create destination presentation and clone the first slide (including its master).
+            Aspose.Slides.Presentation destPres = new Aspose.Slides.Presentation();
+            Aspose.Slides.ISlide clonedSlide = destPres.Slides.AddClone(sourcePres.Slides[0]);
 
-                        // Save the resulting presentation
-                        destPres.Save(outputPath, SaveFormat.Pptx);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                // Handle unsupported format or other errors
-                Console.WriteLine("An error occurred: " + ex.Message);
-                // Format not supported
-            }
+            // Remove unused master and layout slides.
+            Aspose.Slides.LowCode.Compress.RemoveUnusedMasterSlides(destPres);
+            Aspose.Slides.LowCode.Compress.RemoveUnusedLayoutSlides(destPres);
+
+            // Save the compressed presentation.
+            destPres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+
+            // Clean up.
+            sourcePres.Dispose();
+            destPres.Dispose();
+
+            Console.WriteLine("Compression completed successfully. Output saved to: " + outputPath);
+            return 0;
+        }
+        catch (Exception ex)
+        {
+            Console.Error.WriteLine("Error during compression: " + ex.Message);
+            return 1;
         }
     }
 }

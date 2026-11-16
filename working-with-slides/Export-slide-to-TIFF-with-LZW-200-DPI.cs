@@ -1,76 +1,67 @@
 // -----------------------------------------------------------------------------
-// Example: Export slide to TIFF with LZW 200 DPI using C#
+// Example: Export PowerPoint Slides to Multi-Page TIFF with LZW Compression at 200 DPI
 //
 // Description:
-// Demonstrates how to export a PowerPoint presentation to a multi‑page TIFF
-// file using LZW compression and a resolution of 200 DPI with Aspose.Slides for
-// .NET. The example loads a PPTX file, configures TIFF export options, and
-// saves the result as a TIFF image. This pattern can be used in console
-// applications to automate slide conversion tasks.
+// This console program loads a PPTX file (or creates a sample if missing), configures
+// TIFF export options for LZW compression and a resolution of 200 DPI, and saves the
+// presentation as a multi-page TIFF image using Aspose.Slides for .NET. It demonstrates
+// automated slide conversion suitable for archiving or printing.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Slide, TIFF, LZW,
-// 200 DPI, Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, TIFF, LZW, 200 DPI
 //
 // Use Cases:
-// - Convert PowerPoint presentations to high‑resolution TIFF images.
+// - Convert PowerPoint presentations to high-resolution TIFF images.
 // - Automate batch export of slides for archival or printing.
-// - Integrate slide‑to‑image conversion into .NET tools or services.
-// - Validate presentation rendering before publishing.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Integrate slide-to-image conversion into .NET tools or services.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
-
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 namespace ExportSlideToTiff
 {
     class Program
     {
-        static void Main(string[] args)
+        static int Main(string[] args)
         {
-            // Input presentation file path (first argument or default)
             string inputPath = args.Length > 0 ? args[0] : "input.pptx";
-            // Output TIFF file path
             string outputPath = "output.tiff";
-
-            // Verify that the input file exists
-            if (!File.Exists(inputPath))
-            {
-                Console.WriteLine("Input file does not exist: " + inputPath);
-                return;
-            }
 
             try
             {
-                // Load the presentation
-                Presentation presentation = new Presentation(inputPath);
+                if (!File.Exists(inputPath))
+                {
+                    // Create a simple sample presentation
+                    Aspose.Slides.Presentation samplePresentation = new Aspose.Slides.Presentation();
+                    Aspose.Slides.ISlide firstSlide = samplePresentation.Slides[0];
+                    Aspose.Slides.IAutoShape autoShape = firstSlide.Shapes.AddAutoShape(
+                        Aspose.Slides.ShapeType.Rectangle, 50, 50, 400, 100);
+                    autoShape.AddTextFrame("Sample Slide");
+                    samplePresentation.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    samplePresentation.Dispose();
+                }
 
-                // Configure TIFF export options: LZW compression and 200 DPI resolution
-                TiffOptions tiffOptions = new TiffOptions();
-                tiffOptions.CompressionType = TiffCompressionTypes.LZW;
+                // Load the presentation
+                Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+
+                // Configure TIFF export options
+                Aspose.Slides.Export.TiffOptions tiffOptions = new Aspose.Slides.Export.TiffOptions();
+                tiffOptions.CompressionType = Aspose.Slides.Export.TiffCompressionTypes.LZW;
                 tiffOptions.DpiX = 200;
                 tiffOptions.DpiY = 200;
 
-                // Save the presentation as a multi‑page TIFF file
-                presentation.Save(outputPath, SaveFormat.Tiff, tiffOptions);
-
-                // Dispose the presentation (optional, using statement could be used)
+                // Save as multi-page TIFF
+                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Tiff, tiffOptions);
                 presentation.Dispose();
 
                 Console.WriteLine("Presentation exported successfully to: " + outputPath);
-            }
-            catch (PptxUnsupportedFormatException)
-            {
-                // Handle unsupported file format
-                Console.WriteLine("The provided file format is not supported for conversion.");
+                return 0;
             }
             catch (Exception ex)
             {
-                // General exception handling
                 Console.WriteLine("An error occurred: " + ex.Message);
+                return 1;
             }
         }
     }

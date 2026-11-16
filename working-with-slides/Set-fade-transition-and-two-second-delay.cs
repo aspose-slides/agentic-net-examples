@@ -1,68 +1,58 @@
 // -----------------------------------------------------------------------------
-// Example: Set fade transition and two second delay using C#
+// Example: Apply Fade Transition with 2-Second Auto Advance to All Slides
 //
 // Description:
-// Demonstrates how to apply a Fade slide transition with a two‑second automatic
-// advance delay to every slide in a PowerPoint presentation using Aspose.Slides
-// for .NET. The example loads an existing PPTX file, updates the transition
-// settings, and saves the result as a new PPTX file.
+// This console program loads an existing PPTX file, sets a Fade slide transition
+// with a two‑second automatic advance delay on every slide, and saves the
+// modified presentation as a new PPTX file. It creates a sample input file if
+// none is found and exits with a non‑zero code on failure.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Fade, Transition, Two Second Delay,
-// Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, slide transition, fade, auto advance
 //
 // Use Cases:
-// - Automate applying Fade transitions with a fixed delay to all slides.
-// - Build .NET tools for batch processing of PowerPoint presentations.
-// - Generate or modify PPTX files programmatically.
-// - Validate slide transition settings before publishing.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Preparing presentations with consistent transitions across all slides.
+// - Automating slide show timing for timed presentations.
+// - Batch processing PPTX files to enforce corporate slide transition standards.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 class Program
 {
     static void Main()
     {
-        // Input and output file paths
         string inputPath = "input.pptx";
         string outputPath = "output.pptx";
 
-        // Verify that the input file exists
-        if (!File.Exists(inputPath))
-        {
-            Console.WriteLine("Input file does not exist.");
-            return;
-        }
-
         try
         {
-            // Load the presentation
-            using (Presentation presentation = new Presentation(inputPath))
+            if (!File.Exists(inputPath))
             {
-                // Apply Fade transition with a 2‑second delay to every slide
-                for (int i = 0; i < presentation.Slides.Count; i++)
-                {
-                    presentation.Slides[i].SlideShowTransition.Type = Aspose.Slides.SlideShow.TransitionType.Fade;
-                    presentation.Slides[i].SlideShowTransition.AdvanceOnClick = true;
-                    presentation.Slides[i].SlideShowTransition.AdvanceAfterTime = 2000; // 2000 ms = 2 seconds
-                }
-
-                // Save the modified presentation
-                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                Aspose.Slides.Presentation samplePres = new Aspose.Slides.Presentation();
+                samplePres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                samplePres.Dispose();
             }
-        }
-        catch (NotSupportedException)
-        {
-            // Format not supported
+
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+
+            foreach (Aspose.Slides.ISlide slide in presentation.Slides)
+            {
+                slide.SlideShowTransition.Type = Aspose.Slides.SlideShow.TransitionType.Fade;
+                slide.SlideShowTransition.AdvanceOnClick = false;
+                slide.SlideShowTransition.AdvanceAfterTime = 2000u; // 2 seconds
+            }
+
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            presentation.Dispose();
+
+            Console.WriteLine("Transition applied successfully. Output saved to " + outputPath);
         }
         catch (Exception ex)
         {
-            // Handle other exceptions (e.g., file access issues)
-            Console.WriteLine("An error occurred: " + ex.Message);
+            Console.WriteLine("Error: " + ex.Message);
+            Environment.Exit(1);
         }
     }
 }

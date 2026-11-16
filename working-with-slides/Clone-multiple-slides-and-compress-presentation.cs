@@ -1,88 +1,114 @@
 // -----------------------------------------------------------------------------
-// Example: Clone multiple slides and compress presentation using C#
+// Example: Clone all slides and compress presentation using C#
 //
 // Description:
-// Demonstrates how to clone all slides from a source PowerPoint file into a new
-// presentation and then compress the resulting PPTX file into a ZIP archive using
-// Aspose.Slides for .NET. The example includes file existence checks, proper
-// disposal of presentation objects, and basic error handling for both cloning
-// and compression steps.
+// Demonstrates cloning every slide from a source PPTX file into a new presentation
+// and then compressing the resulting PPTX into a ZIP archive using Aspose.Slides for .NET.
+// The program creates a sample source file if it does not exist, handles errors, and
+// ensures proper disposal of resources.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone Slides, Multiple Slides,
-// Compress Presentation, ZIP Archive, Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone Slides, Compress Presentation, ZIP Archive
 //
 // Use Cases:
-// - Automate cloning of all slides from one presentation to another.
-// - Create backup ZIP archives of generated PPTX files.
-// - Build .NET tools for batch processing and distribution of PowerPoint content.
-// - Integrate slide cloning and compression into larger document workflows.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Automate duplication of slide decks for backup or distribution.
+// - Generate compressed archives of generated presentations.
+// - Integrate slide cloning and archiving into batch processing pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
-
 using System;
 using System.IO;
 using System.IO.Compression;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-namespace SlideBatchClone
+namespace SlideCloneAndCompress
 {
     class Program
     {
-        static void Main(string[] args)
+        static int Main(string[] args)
         {
-            // Define source and destination file paths
+            int exitCode = 0;
             string sourcePath = "SourcePresentation.pptx";
             string destinationPath = "ClonedPresentation.pptx";
             string zipPath = "ClonedPresentation.zip";
 
-            // Verify source file exists
+            // Ensure source presentation exists; create a simple one if missing
             if (!File.Exists(sourcePath))
             {
-                Console.WriteLine("Source file does not exist: " + sourcePath);
-                return;
+                Aspose.Slides.Presentation samplePres = null;
+                try
+                {
+                    samplePres = new Aspose.Slides.Presentation();
+                    Aspose.Slides.ILayoutSlide layout = samplePres.Slides[0].LayoutSlide;
+                    // Add an additional slide to have more than one
+                    samplePres.Slides.AddEmptySlide(layout);
+                    samplePres.Save(sourcePath, Aspose.Slides.Export.SaveFormat.Pptx);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Failed to create sample source presentation: " + ex.Message);
+                    exitCode = 1;
+                    return exitCode;
+                }
+                finally
+                {
+                    if (samplePres != null)
+                    {
+                        samplePres.Dispose();
+                    }
+                }
             }
 
-            // Initialize presentations
-            Presentation srcPres = null;
-            Presentation destPres = null;
+            Aspose.Slides.Presentation srcPres = null;
+            Aspose.Slides.Presentation destPres = null;
 
             try
             {
-                srcPres = new Presentation(sourcePath);
-                destPres = new Presentation();
+                srcPres = new Aspose.Slides.Presentation(sourcePath);
+                destPres = new Aspose.Slides.Presentation();
 
-                // Clone each slide from source to destination
-                ISlideCollection srcSlides = srcPres.Slides;
-                ISlideCollection destSlides = destPres.Slides;
+                Aspose.Slides.ISlideCollection srcSlides = srcPres.Slides;
+                Aspose.Slides.ISlideCollection destSlides = destPres.Slides;
 
                 for (int i = 0; i < srcSlides.Count; i++)
                 {
                     destSlides.AddClone(srcSlides[i]);
                 }
 
-                // Save the destination presentation
-                destPres.Save(destinationPath, SaveFormat.Pptx);
+                destPres.Save(destinationPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                Console.WriteLine("Slides cloned successfully to: " + destinationPath);
             }
             catch (NotSupportedException)
             {
-                // Format not supported
                 Console.WriteLine("The file format is not supported.");
+                exitCode = 1;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error during cloning: " + ex.Message);
+                exitCode = 1;
             }
             finally
             {
-                // Dispose presentations
-                srcPres?.Dispose();
-                destPres?.Dispose();
+                if (srcPres != null)
+                {
+                    srcPres.Dispose();
+                }
+                if (destPres != null)
+                {
+                    destPres.Dispose();
+                }
             }
 
-            // Compress the resulting PPTX file
+            if (exitCode != 0)
+            {
+                return exitCode;
+            }
+
+            // Compress the resulting PPTX file into a ZIP archive
             try
             {
                 if (File.Exists(destinationPath))
                 {
-                    // Delete existing zip if present
                     if (File.Exists(zipPath))
                     {
                         File.Delete(zipPath);
@@ -99,13 +125,16 @@ namespace SlideBatchClone
                 else
                 {
                     Console.WriteLine("Destination file not found for compression.");
+                    exitCode = 1;
                 }
             }
             catch (Exception ex)
             {
-                // Handle any compression-related exceptions
                 Console.WriteLine("Compression failed: " + ex.Message);
+                exitCode = 1;
             }
+
+            return exitCode;
         }
     }
 }

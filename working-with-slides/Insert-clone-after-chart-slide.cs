@@ -1,31 +1,24 @@
 // -----------------------------------------------------------------------------
-// Example: Insert clone after chart slide using C#
+// Example: Insert Clone After Chart Slide Using Aspose.Slides for .NET
 //
 // Description:
-// Demonstrates how to insert a clone of a slide that contains a chart immediately
-// after that slide using C# and Aspose.Slides for .NET. The example shows the
-// required presentation-processing steps for PowerPoint files and produces the
-// requested output in a standalone console application. Developers can use this
-// pattern to automate PPTX workflows, validate results, or integrate presentation
-// logic into .NET applications.
+// This console program creates a sample PPTX file with a chart if none exists,
+// locates the first slide containing a chart, inserts a cloned copy of that slide
+// immediately after it, and saves the result. It demonstrates slide cloning and
+// chart handling with Aspose.Slides for .NET in C#.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Insert, Clone, After, Chart,
-// Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Insert Clone Chart Slide
 //
 // Use Cases:
-// - Automate insertion of a cloned slide following a chart slide.
-// - Build C# tools for PowerPoint presentation processing.
-// - Generate or transform PPTX files in .NET applications.
-// - Validate presentation workflows before publishing or integration.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Automate duplication of chart slides in presentation workflows.
+// - Build tools that modify PPTX files by cloning specific content.
+// - Validate slide structures after programmatic changes.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Charts;
-using Aspose.Slides.Export;
 
 class Program
 {
@@ -34,14 +27,20 @@ class Program
         string inputPath = "input.pptx";
         string outputPath = "output.pptx";
 
-        if (!File.Exists(inputPath))
-        {
-            Console.WriteLine("Input file does not exist.");
-            return;
-        }
-
         try
         {
+            if (!File.Exists(inputPath))
+            {
+                // Create a sample presentation with a chart slide
+                using (Aspose.Slides.Presentation samplePres = new Aspose.Slides.Presentation())
+                {
+                    Aspose.Slides.ISlideCollection slideCollection = samplePres.Slides;
+                    Aspose.Slides.ISlide chartSlide = slideCollection.AddEmptySlide(samplePres.Slides[0].LayoutSlide);
+                    Aspose.Slides.Charts.IChart chart = chartSlide.Shapes.AddChart(Aspose.Slides.Charts.ChartType.ClusteredColumn, 50, 50, 500, 400);
+                    samplePres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                }
+            }
+
             using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
             {
                 Aspose.Slides.ISlideCollection slides = presentation.Slides;
@@ -50,8 +49,9 @@ class Program
                 for (int i = 0; i < slides.Count; i++)
                 {
                     Aspose.Slides.ISlide slide = slides[i];
-                    foreach (Aspose.Slides.IShape shape in slide.Shapes)
+                    for (int j = 0; j < slide.Shapes.Count; j++)
                     {
+                        Aspose.Slides.IShape shape = slide.Shapes[j];
                         if (shape is Aspose.Slides.Charts.IChart)
                         {
                             chartSlideIndex = i;
@@ -59,7 +59,9 @@ class Program
                         }
                     }
                     if (chartSlideIndex != -1)
+                    {
                         break;
+                    }
                 }
 
                 if (chartSlideIndex != -1)
@@ -67,22 +69,25 @@ class Program
                     Aspose.Slides.ISlide sourceSlide = slides[chartSlideIndex];
                     int insertIndex = chartSlideIndex + 1;
                     slides.InsertClone(insertIndex, sourceSlide);
+                    presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    Console.WriteLine("Clone inserted and saved to " + outputPath);
                 }
                 else
                 {
                     Console.WriteLine("No slide with a chart found.");
+                    Environment.Exit(1);
                 }
-
-                presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
             }
         }
         catch (NotSupportedException)
         {
-            // Format not supported
+            Console.WriteLine("The file format is not supported.");
+            Environment.Exit(1);
         }
         catch (Exception ex)
         {
             Console.WriteLine("Error: " + ex.Message);
+            Environment.Exit(1);
         }
     }
 }

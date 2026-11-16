@@ -1,76 +1,75 @@
 // -----------------------------------------------------------------------------
-// Example: Convert all slides to png using foreach using C#
+// Example: Convert All Slides to PNG Using foreach Loop
 //
 // Description:
-// Demonstrates how to convert all slides to PNG using a foreach loop in C#
-// with Aspose.Slides for .NET. The example shows the required presentation-
-// processing steps for PowerPoint files and produces PNG images for each slide
-// in a standalone console application. Developers can use this pattern to
-// automate PPTX workflows, validate results, or integrate presentation logic
-// into .NET applications.
+// This console application loads a PowerPoint PPTX file, creates it if missing,
+// iterates through each slide using a foreach loop, and exports each slide as a
+// PNG image. It demonstrates Aspose.Slides for .NET slide conversion and file
+// handling in C#.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, PNG, Convert, Slides, Foreach,
-// Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, slide to PNG, foreach loop
 //
 // Use Cases:
-// - Automate conversion of all slides to PNG using a foreach loop.
-// - Build C# tools for PowerPoint presentation processing.
-// - Generate or transform PPTX files in .NET applications.
-// - Validate presentation workflows before publishing or integration.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Automate batch conversion of presentations to images for web thumbnails.
+// - Generate slide images for reporting or documentation pipelines.
+// - Integrate slide export functionality into .NET backend services.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
-
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 class Program
 {
-    static void Main()
+    static int Main(string[] args)
     {
-        // Path to the source presentation
-        string inputPath = "input.pptx";
-
-        // Verify that the input file exists
-        if (!File.Exists(inputPath))
-        {
-            Console.WriteLine("Input file does not exist.");
-            return;
-        }
-
-        // Format string for output PNG files
-        string outputFormat = "slide_{0}.png";
-
         try
         {
-            // Load the presentation
-            Presentation pres = new Presentation(inputPath);
+            // Define input and output paths
+            string inputPath = Path.Combine(Directory.GetCurrentDirectory(), "sample.pptx");
+            string outputDir = Path.Combine(Directory.GetCurrentDirectory(), "output");
 
-            // Iterate through all slides using foreach and export each to PNG
-            int index = 0;
-            foreach (ISlide slide in pres.Slides)
+            // Ensure output directory exists
+            if (!Directory.Exists(outputDir))
             {
-                using (IImage image = slide.GetImage())
-                {
-                    string outputPath = string.Format(outputFormat, index);
-                    image.Save(outputPath, ImageFormat.Png);
-                }
-                index++;
+                Directory.CreateDirectory(outputDir);
             }
 
-            // No modifications made to the presentation, so saving is optional.
-            // pres.Save(inputPath, SaveFormat.Pptx);
+            // If input file does not exist, create a simple presentation
+            if (!File.Exists(inputPath))
+            {
+                Aspose.Slides.Presentation tempPres = new Aspose.Slides.Presentation();
+                // Add a blank slide
+                tempPres.Slides.AddEmptySlide(tempPres.Slides[0].LayoutSlide);
+                tempPres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                tempPres.Dispose();
+            }
+
+            // Load the presentation
+            Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
+
+            int slideIndex = 0;
+            foreach (Aspose.Slides.ISlide slide in pres.Slides)
+            {
+                using (Aspose.Slides.IImage image = slide.GetImage())
+                {
+                    string outPath = Path.Combine(outputDir, $"slide_{slideIndex}.png");
+                    image.Save(outPath, Aspose.Slides.ImageFormat.Png);
+                }
+                slideIndex++;
+            }
+
+            // Save (optional, no changes made)
+            pres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
             pres.Dispose();
-        }
-        catch (NotSupportedException)
-        {
-            // Format not supported
+
+            Console.WriteLine("All slides have been exported to PNG successfully.");
+            return 0;
         }
         catch (Exception ex)
         {
-            Console.WriteLine("Error: " + ex.Message);
+            Console.Error.WriteLine("Error: " + ex.Message);
+            return 1;
         }
     }
 }

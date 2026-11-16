@@ -1,30 +1,24 @@
 // -----------------------------------------------------------------------------
-// Example: Remove every third slide by index using C#
+// Example: Remove every third slide by index using Aspose.Slides for .NET
 //
 // Description:
-// Demonstrates how to remove every third slide from a PowerPoint presentation
-// by its zero‑based index using C# and Aspose.Slides for .NET. The example loads
-// an input PPTX file, iterates through the slides, removes slides whose
-// 1‑based position is a multiple of three, and saves the result to a new file.
-// This pattern can be used to automate slide cleanup or custom presentation
-// transformations in .NET applications.
+// This console program creates a sample PPTX file if none exists, then loads
+// the presentation, removes every third slide (based on 1‑based position), and
+// saves the modified presentation. It demonstrates slide removal automation
+// with Aspose.Slides for .NET in C#.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove, Every, Third, Slide, 
-// Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove every third slide
 //
 // Use Cases:
-// - Automate removal of every third slide in bulk presentations.
-// - Build C# utilities for PowerPoint slide management.
-// - Pre‑process PPTX files before publishing or further editing.
-// - Integrate slide filtering logic into larger .NET workflows.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Clean up presentations by deleting periodic placeholder slides.
+// - Prepare slide decks for publishing by removing unwanted sections.
+// - Integrate slide filtering into batch processing pipelines.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 namespace RemoveEveryThirdSlide
 {
@@ -32,32 +26,41 @@ namespace RemoveEveryThirdSlide
     {
         static void Main(string[] args)
         {
-            // Define input and output file paths
             string inputPath = Path.Combine(Environment.CurrentDirectory, "input.pptx");
             string outputPath = Path.Combine(Environment.CurrentDirectory, "output.pptx");
 
-            // Check if the input file exists
-            if (!File.Exists(inputPath))
-            {
-                Console.WriteLine("Input file not found: " + inputPath);
-                return;
-            }
-
             try
             {
-                // Load the presentation
-                Presentation pres = new Presentation(inputPath);
-
-                // Remove every third slide (indices 2, 5, 8, ...)
-                int index = 0;
-                while (index < pres.Slides.Count)
+                // Create a sample presentation if the input file does not exist
+                if (!File.Exists(inputPath))
                 {
-                    // (index + 1) % 3 == 0 identifies every third slide (1‑based counting)
+                    Aspose.Slides.Presentation samplePres = new Aspose.Slides.Presentation();
+                    Aspose.Slides.ISlideCollection sampleSlides = samplePres.Slides;
+                    Aspose.Slides.ILayoutSlide layout = sampleSlides[0].LayoutSlide;
+
+                    // Add additional slides to have a total of 9 slides
+                    for (int i = 1; i < 9; i++)
+                    {
+                        sampleSlides.AddEmptySlide(layout);
+                    }
+
+                    samplePres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    samplePres.Dispose();
+                    Console.WriteLine("Sample input presentation created: " + inputPath);
+                }
+
+                // Load the presentation
+                Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
+                Aspose.Slides.ISlideCollection slides = pres.Slides;
+
+                // Remove every third slide (1‑based positions 3, 6, 9, ...)
+                int index = 0;
+                while (index < slides.Count)
+                {
                     if ((index + 1) % 3 == 0)
                     {
-                        // Remove slide at the current index
-                        pres.Slides.RemoveAt(index);
-                        // Do not increment index because the next slide shifts into the current position
+                        slides.RemoveAt(index);
+                        // Do not increment index because the next slide shifts into current position
                     }
                     else
                     {
@@ -66,15 +69,15 @@ namespace RemoveEveryThirdSlide
                 }
 
                 // Save the modified presentation
-                pres.Save(outputPath, SaveFormat.Pptx);
+                pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
                 pres.Dispose();
-                Console.WriteLine("Presentation saved to: " + outputPath);
+
+                Console.WriteLine("Modified presentation saved to: " + outputPath);
             }
             catch (Exception ex)
             {
-                // Handle unsupported format or other errors
-                // Format not supported
                 Console.WriteLine("An error occurred: " + ex.Message);
+                Environment.Exit(1);
             }
         }
     }

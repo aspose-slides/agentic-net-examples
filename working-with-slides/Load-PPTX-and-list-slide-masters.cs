@@ -1,70 +1,76 @@
 // -----------------------------------------------------------------------------
-// Example: Load PPTX and list slide masters using C#
+// Example: Load PPTX and List Slide Masters using C#
 //
 // Description:
-// Demonstrates how to load a PPTX file and enumerate its master slides using
-// Aspose.Slides for .NET. The example opens a presentation, retrieves the
-// master slide collection, prints each master slide's name, and saves the
-// presentation unchanged. This pattern is useful for inspecting or validating
-// slide masters in automated workflows.
+// Demonstrates loading a PowerPoint PPTX file, enumerating its master slides,
+// and printing each master slide's name using Aspose.Slides for .NET. The
+// program creates a sample PPTX if none exists, then saves the presentation
+// unchanged after inspection.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, List, Slide Masters,
-// Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Load, List, Slide Masters
 //
 // Use Cases:
 // - Retrieve and display master slide information from a PPTX file.
 // - Build tools that analyze or validate slide master structures.
-// - Integrate slide master enumeration into .NET applications.
 // - Automate reporting on presentation templates before further processing.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 class Program
 {
     static void Main()
     {
-        // Path to the input PPTX file
         string inputPath = "input.pptx";
 
-        // Verify that the file exists
+        // Ensure a sample PPTX exists
+        if (!File.Exists(inputPath))
+        {
+            try
+            {
+                Aspose.Slides.Presentation samplePres = new Aspose.Slides.Presentation();
+                // Add an empty slide using the default master layout to guarantee a master exists
+                samplePres.Slides.AddEmptySlide(samplePres.Slides[0].LayoutSlide);
+                samplePres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                samplePres.Dispose();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to create sample PPTX: " + ex.Message);
+                Environment.Exit(1);
+            }
+        }
+
+        // Verify that the file exists before loading
         if (!File.Exists(inputPath))
         {
             Console.WriteLine("File does not exist: " + inputPath);
-            return;
+            Environment.Exit(1);
         }
 
         try
         {
-            // Load the presentation
-            Presentation presentation = new Presentation(inputPath);
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+            Aspose.Slides.IMasterSlideCollection masters = presentation.Masters;
 
-            // Get the collection of master slides
-            IMasterSlideCollection masters = presentation.Masters;
-
-            // Output the number of master slides
             Console.WriteLine("Number of master slides: " + masters.Count);
 
-            // Enumerate each master slide
             for (int i = 0; i < masters.Count; i++)
             {
-                IMasterSlide master = masters[i];
+                Aspose.Slides.IMasterSlide master = masters[i];
                 Console.WriteLine("Master " + i + " Name: " + master.Name);
             }
 
-            // Save the presentation (no modifications made)
-            presentation.Save(inputPath, SaveFormat.Pptx);
+            // Save the presentation unchanged
+            presentation.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
             presentation.Dispose();
         }
         catch (Exception ex)
         {
-            // Handle errors such as unsupported format
             Console.WriteLine("Error: " + ex.Message);
-            // Format not supported
+            Environment.Exit(1);
         }
     }
 }

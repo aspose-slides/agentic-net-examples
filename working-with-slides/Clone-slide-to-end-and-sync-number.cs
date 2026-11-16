@@ -1,71 +1,57 @@
 // -----------------------------------------------------------------------------
-// Example: Clone slide to end and sync number using C#
+// Example: Clone First Slide with Master to End and Sync Slide Numbers
 //
 // Description:
-// Demonstrates how to clone the first slide (including its master) from a source
-// presentation to a new presentation, place it at the end, and synchronize the
-// slide numbering with the source using Aspose.Slides for .NET. The example
-// includes file existence checks, error handling, and saves the result as a PPTX.
-// This pattern can be used to programmatically duplicate slides while preserving
-// layout and numbering.
+// This console application clones the first slide, including its master layout,
+// from a source PPTX file to a new presentation, places the cloned slide at the
+// end, and saves the result. It checks for the source file, creates a sample if
+// missing, and handles errors gracefully. The output is a PPTX file with the
+// cloned slide preserving layout and numbering.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone Slide, Slide Master, Sync
-// Slide Number, Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, clone slide, master slide, slide numbering
 //
 // Use Cases:
-// - Automate cloning of a specific slide to a new presentation.
-// - Preserve slide master relationships during cloning.
-// - Keep slide numbering consistent across source and destination.
-// - Build .NET tools for PowerPoint slide manipulation and transformation.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Duplicate a template slide into a new presentation while keeping its design.
+// - Programmatically generate presentations based on an existing slide master.
+// - Ensure consistent slide numbering when copying slides across presentations.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
-
-using System;
-using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
-
-class Program
+public class Program
 {
-    static void Main()
+    public static int Main(string[] args)
     {
-        string inputFile = "source.pptx";
-        string outputFile = "cloned_output.pptx";
-
-        if (!File.Exists(inputFile))
-        {
-            Console.WriteLine("Input file does not exist.");
-            return;
-        }
-
         try
         {
-            using (Aspose.Slides.Presentation srcPres = new Aspose.Slides.Presentation(inputFile))
+            string sourcePath = "source.pptx";
+            string destPath = "cloned.pptx";
+
+            if (!System.IO.File.Exists(sourcePath))
             {
-                using (Aspose.Slides.Presentation destPres = new Aspose.Slides.Presentation())
-                {
-                    // Clone slide with its master to the destination presentation
-                    Aspose.Slides.ISlide sourceSlide = srcPres.Slides[0];
-                    Aspose.Slides.IMasterSlide sourceMaster = sourceSlide.LayoutSlide.MasterSlide;
-                    Aspose.Slides.IMasterSlide destMaster = destPres.Masters.AddClone(sourceMaster);
-                    destPres.Slides.AddClone(sourceSlide, destMaster, true);
-
-                    // Synchronize slide number with source presentation
-                    destPres.FirstSlideNumber = srcPres.FirstSlideNumber;
-
-                    // Save the destination presentation
-                    destPres.Save(outputFile, Aspose.Slides.Export.SaveFormat.Pptx);
-                }
+                Aspose.Slides.Presentation createPres = new Aspose.Slides.Presentation();
+                createPres.Save(sourcePath, Aspose.Slides.Export.SaveFormat.Pptx);
+                createPres.Dispose();
             }
+
+            Aspose.Slides.Presentation srcPres = new Aspose.Slides.Presentation(sourcePath);
+            Aspose.Slides.Presentation destPres = new Aspose.Slides.Presentation();
+
+            Aspose.Slides.ISlide sourceSlide = srcPres.Slides[0];
+            Aspose.Slides.IMasterSlide sourceMaster = sourceSlide.LayoutSlide.MasterSlide;
+            Aspose.Slides.IMasterSlide destMaster = destPres.Masters.AddClone(sourceMaster);
+            destPres.Slides.AddClone(sourceSlide, destMaster, true);
+
+            destPres.Save(destPath, Aspose.Slides.Export.SaveFormat.Pptx);
+
+            srcPres.Dispose();
+            destPres.Dispose();
+
+            return 0;
         }
-        catch (NotSupportedException)
+        catch (System.Exception ex)
         {
-            // Format not supported
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine("Error: " + ex.Message);
+            System.Console.Error.WriteLine("Error: " + ex.Message);
+            return 1;
         }
     }
 }

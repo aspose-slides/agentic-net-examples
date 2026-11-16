@@ -1,58 +1,58 @@
 // -----------------------------------------------------------------------------
-// Example: Clone slide and set size to match using C#
+// Example: Clone Slide and Synchronize Slide Size Using Aspose.Slides for .NET
 //
 // Description:
-// Demonstrates how to clone the first slide from a source presentation into a
-// destination template presentation and adjust the destination slide size to
-// match the source presentation dimensions using Aspose.Slides for .NET.
-// The example includes file existence checks, presentation loading, slide
-// cloning, size synchronization, and saving the resulting PPTX file.
+// Demonstrates cloning the first slide from a source PPTX into a destination
+// template PPTX and adjusting the destination presentation's slide dimensions to
+// match the source using Aspose.Slides for .NET. The program creates sample
+// presentations if they are missing, performs the operation, and saves the
+// result as a new PPTX file.
 //
 // Keywords:
-// C#, Aspose.Slides, PowerPoint, PPTX, Clone Slide, Slide Size, Match Size,
-// Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone Slide, Slide Size, Presentation Merge
 //
 // Use Cases:
-// - Copy a specific slide from one PPTX into another while preserving layout.
-// - Ensure the target presentation adopts the same slide dimensions as the source.
-// - Automate PPTX merging and size normalization in .NET applications.
-// - Prepare presentations for consistent rendering across different devices.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Copy a specific slide from one presentation to another while preserving layout.
+// - Ensure consistent slide dimensions across merged presentations.
+// - Automate PPTX processing for consistent rendering in .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-namespace SlideCloneExample
+namespace SlideCloneAndSizeSync
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Define file paths
             string sourcePath = "source.pptx";
-            string destinationTemplatePath = "template.pptx";
+            string templatePath = "template.pptx";
             string outputPath = "cloned_output.pptx";
-
-            // Verify input files exist
-            if (!File.Exists(sourcePath))
-            {
-                Console.WriteLine("Source file does not exist: " + sourcePath);
-                return;
-            }
-
-            if (!File.Exists(destinationTemplatePath))
-            {
-                Console.WriteLine("Destination template file does not exist: " + destinationTemplatePath);
-                return;
-            }
 
             try
             {
+                // Create source presentation if it does not exist
+                if (!File.Exists(sourcePath))
+                {
+                    Aspose.Slides.Presentation sourcePresCreate = new Aspose.Slides.Presentation();
+                    sourcePresCreate.Slides.AddEmptySlide(sourcePresCreate.Slides[0].LayoutSlide);
+                    sourcePresCreate.Save(sourcePath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    sourcePresCreate.Dispose();
+                }
+
+                // Create template presentation if it does not exist
+                if (!File.Exists(templatePath))
+                {
+                    Aspose.Slides.Presentation templatePresCreate = new Aspose.Slides.Presentation();
+                    templatePresCreate.Slides.AddEmptySlide(templatePresCreate.Slides[0].LayoutSlide);
+                    templatePresCreate.Save(templatePath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    templatePresCreate.Dispose();
+                }
+
                 // Load source and destination presentations
-                Presentation sourcePres = new Presentation(sourcePath);
-                Presentation destPres = new Presentation(destinationTemplatePath);
+                Aspose.Slides.Presentation sourcePres = new Aspose.Slides.Presentation(sourcePath);
+                Aspose.Slides.Presentation destPres = new Aspose.Slides.Presentation(templatePath);
 
                 // Clone the first slide from source into destination at position 0
                 destPres.Slides.InsertClone(0, sourcePres.Slides[0]);
@@ -60,23 +60,22 @@ namespace SlideCloneExample
                 // Adjust destination slide size to match source presentation size
                 float sourceWidth = sourcePres.SlideSize.Size.Width;
                 float sourceHeight = sourcePres.SlideSize.Size.Height;
-                destPres.SlideSize.SetSize(sourceWidth, sourceHeight, SlideSizeScaleType.EnsureFit);
+                destPres.SlideSize.SetSize(sourceWidth, sourceHeight, Aspose.Slides.SlideSizeScaleType.EnsureFit);
 
                 // Save the resulting presentation
-                destPres.Save(outputPath, SaveFormat.Pptx);
+                destPres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
 
                 // Dispose presentations
                 sourcePres.Dispose();
                 destPres.Dispose();
 
-                Console.WriteLine("Slide cloned and slide size adjusted successfully.");
+                Console.WriteLine("Slide cloned and slide size synchronized successfully.");
             }
             catch (Exception ex)
             {
-                // Handle unsupported format or other exceptions
                 Console.WriteLine("An error occurred: " + ex.Message);
-                // Format not supported comment
-                // Note: If the file format is not supported by Aspose.Slides, an exception will be thrown.
+                // Exit with non-zero code to indicate failure
+                Environment.Exit(1);
             }
         }
     }

@@ -1,30 +1,24 @@
 // -----------------------------------------------------------------------------
-// Example: Add empty slide with layout and theme using C#
+// Example: Add Empty Slide with Specific Layout and Corporate Theme
 //
 // Description:
-// Demonstrates how to add an empty slide with a specific layout and apply a
-// background color (theme) using C# and Aspose.Slides for .NET. The example
-// loads a template presentation, selects an appropriate layout slide, inserts
-// a new empty slide at the beginning, sets its background to a corporate color,
-// and saves the result. This pattern can be used to automate PPTX workflows,
-// enforce branding, or integrate slide creation into .NET applications.
+// Demonstrates how to add an empty slide using a chosen layout from a template
+// presentation, apply a corporate background color as a theme, and save the
+// modified PPTX. The program creates a sample template if none exists, making
+// it self‑contained for automated branding workflows.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Empty Slide, Layout, Theme,
-// Background Color, Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Empty Slide, Layout, Theme, Background Color
 //
 // Use Cases:
 // - Automate insertion of branded empty slides into existing presentations.
-// - Build .NET tools for PowerPoint presentation processing with custom themes.
-// - Generate or transform PPTX files with specific layouts and background colors.
-// - Validate and enforce corporate branding in slide decks before publishing.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Build .NET tools for PowerPoint processing with custom corporate themes.
+// - Ensure consistent branding across slide decks in batch operations.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 using System.Drawing;
 
 class Program
@@ -34,70 +28,40 @@ class Program
         string inputPath = Path.Combine(Environment.CurrentDirectory, "template.pptx");
         string outputPath = Path.Combine(Environment.CurrentDirectory, "output.pptx");
 
-        if (!File.Exists(inputPath))
-        {
-            Console.WriteLine("Input file does not exist.");
-            return;
-        }
-
         try
         {
-            Presentation presentation = new Presentation(inputPath);
-
-            // Find a suitable layout slide (TitleAndObject, Title, or Blank)
-            ILayoutSlide layoutSlide = presentation.Masters[0].LayoutSlides.GetByType(SlideLayoutType.TitleAndObject) ??
-                                      presentation.Masters[0].LayoutSlides.GetByType(SlideLayoutType.Title);
-
-            if (layoutSlide == null)
+            if (!File.Exists(inputPath))
             {
-                foreach (ILayoutSlide ls in presentation.Masters[0].LayoutSlides)
-                {
-                    if (ls.Name == "Title and Content")
-                    {
-                        layoutSlide = ls;
-                        break;
-                    }
-                }
+                Aspose.Slides.Presentation templatePres = new Aspose.Slides.Presentation();
+                templatePres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                templatePres.Dispose();
             }
 
-            if (layoutSlide == null)
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+
+            if (presentation.Masters.Count == 0)
             {
-                foreach (ILayoutSlide ls in presentation.Masters[0].LayoutSlides)
-                {
-                    if (ls.Name == "Title")
-                    {
-                        layoutSlide = ls;
-                        break;
-                    }
-                }
+                Console.WriteLine("No master slides found in the template.");
+                presentation.Dispose();
+                Environment.Exit(1);
             }
 
-            if (layoutSlide == null)
-            {
-                layoutSlide = presentation.Masters[0].LayoutSlides.GetByType(SlideLayoutType.Blank);
-            }
+            Aspose.Slides.ILayoutSlide layoutSlide = presentation.Masters[0].LayoutSlides[0];
 
-            if (layoutSlide == null)
-            {
-                layoutSlide = presentation.Masters[0].LayoutSlides.Add(SlideLayoutType.TitleAndObject, "TitleAndObject");
-            }
-
-            // Insert an empty slide at the beginning using the selected layout
             presentation.Slides.InsertEmptySlide(0, layoutSlide);
 
-            // Apply corporate branding: set background color of the new slide
-            ISlide newSlide = presentation.Slides[0];
-            newSlide.Background.Type = BackgroundType.OwnBackground;
-            newSlide.Background.FillFormat.FillType = FillType.Solid;
-            newSlide.Background.FillFormat.SolidFillColor.Color = Color.Blue; // corporate color
+            Aspose.Slides.ISlide newSlide = presentation.Slides[0];
+            newSlide.Background.Type = Aspose.Slides.BackgroundType.OwnBackground;
+            newSlide.Background.FillFormat.FillType = Aspose.Slides.FillType.Solid;
+            newSlide.Background.FillFormat.SolidFillColor.Color = Color.FromArgb(0, 120, 215); // corporate blue
 
-            // Save the presentation
-            presentation.Save(outputPath, SaveFormat.Pptx);
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
             presentation.Dispose();
         }
         catch (Exception ex)
         {
             Console.WriteLine("Error: " + ex.Message);
+            Environment.Exit(1);
         }
     }
 }

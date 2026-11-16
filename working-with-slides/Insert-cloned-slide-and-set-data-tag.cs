@@ -1,72 +1,85 @@
 // -----------------------------------------------------------------------------
-// Example: Insert cloned slide and set custom document property using C#
+// Example: Clone First Slide and Add Custom Document Property
 //
 // Description:
-// Demonstrates how to clone the first slide of a presentation, insert the
-// cloned slide at the end of the slide collection, and assign a custom
-// document property to identify the cloned slide. The example uses
-// Aspose.Slides for .NET to load, modify, and save a PPTX file in a console
-// application.
-//
+// Demonstrates how to clone the first slide of a PowerPoint PPTX file, insert the
+// cloned slide at the end of the presentation, and assign a custom document
+// property to identify the cloned slide using Aspose.Slides for .NET.
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Insert, Clone, Slide, Custom
-// Document Property, Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone Slide, Custom Document Property
 //
 // Use Cases:
 // - Automate cloning of a slide and tracking it via a custom property.
 // - Build .NET tools for PowerPoint slide manipulation.
 // - Generate or transform PPTX files while preserving metadata.
-// - Validate presentation workflows before publishing or integration.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 namespace InsertCloneSlideExample
 {
     class Program
     {
-        static void Main(string[] args)
+        static int Main(string[] args)
         {
             string inputPath = "source.pptx";
             string outputPath = "result.pptx";
 
-            // Verify input file exists
+            // Ensure input file exists; create a simple one if missing
             if (!File.Exists(inputPath))
             {
-                Console.WriteLine("Input file does not exist: " + inputPath);
-                return;
+                try
+                {
+                    using (Aspose.Slides.Presentation creationPres = new Aspose.Slides.Presentation())
+                    {
+                        Aspose.Slides.ISlideCollection creationSlides = creationPres.Slides;
+                        Aspose.Slides.ILayoutSlide layout = creationPres.LayoutSlides[0];
+                        Aspose.Slides.ISlide newSlide = creationSlides.AddEmptySlide(layout);
+
+                        Aspose.Slides.IShape shape = newSlide.Shapes.AddAutoShape(
+                            Aspose.Slides.ShapeType.Rectangle, 50, 50, 400, 100);
+                        Aspose.Slides.IAutoShape autoShape = (Aspose.Slides.IAutoShape)shape;
+                        autoShape.TextFrame.Text = "Sample Slide";
+
+                        creationPres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Failed to create sample input file: " + ex.Message);
+                    return 1;
+                }
             }
 
             try
             {
-                // Load the presentation
-                using (Presentation presentation = new Presentation(inputPath))
+                using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
                 {
-                    // Clone the first slide and insert it at the end of the collection
-                    ISlideCollection slides = presentation.Slides;
-                    ISlide clonedSlide = slides.InsertClone(slides.Count, slides[0]);
+                    Aspose.Slides.ISlideCollection slides = presentation.Slides;
 
-                    // Set a custom document property to identify the cloned slide
-                    IDocumentProperties docProps = presentation.DocumentProperties;
+                    if (slides.Count == 0)
+                    {
+                        Console.WriteLine("The presentation contains no slides to clone.");
+                        return 1;
+                    }
+
+                    Aspose.Slides.ISlide clonedSlide = slides.InsertClone(slides.Count, slides[0]);
+
+                    Aspose.Slides.IDocumentProperties docProps = presentation.DocumentProperties;
                     docProps.SetCustomPropertyValue("ClonedSlideId", clonedSlide.SlideId);
 
-                    // Save the modified presentation
-                    presentation.Save(outputPath, SaveFormat.Pptx);
+                    presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
                 }
-            }
-            catch (PptxUnsupportedFormatException)
-            {
-                // Format not supported
-                Console.WriteLine("The presentation format is not supported.");
             }
             catch (Exception ex)
             {
-                // General exception handling
                 Console.WriteLine("An error occurred: " + ex.Message);
+                return 1;
             }
+
+            Console.WriteLine("Presentation processed successfully. Output saved to: " + outputPath);
+            return 0;
         }
     }
 }

@@ -1,31 +1,25 @@
 // -----------------------------------------------------------------------------
-// Example: Export slide master hierarchy to JSON using C#
-//
+// Example: Export Slide Master Hierarchy to JSON using C#
+// 
 // Description:
-// Demonstrates how to export slide master hierarchy to JSON using C# and 
-// Aspose.Slides for .NET. The example shows the required 
-// presentation-processing steps for PowerPoint files and produces the 
-// requested output in a standalone console application. Developers can use 
-// this pattern to automate PPTX workflows, validate results, or integrate 
-// presentation logic into .NET applications.
-//
+// Demonstrates how to export the slide master hierarchy of a PowerPoint PPTX
+// file to a JSON document using Aspose.Slides for .NET. The program creates a
+// sample presentation if none exists, extracts master and layout information,
+// serializes it to JSON, and saves the result.
+// 
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Slide, Master, 
-// Hierarchy, Presentation Processing, Office Automation
-//
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Export, Slide Master, Hierarchy, JSON
+// 
 // Use Cases:
-// - Automate export slide master hierarchy to JSON.
-// - Build C# tools for PowerPoint presentation processing.
-// - Generate or transform PPTX files in .NET applications.
-// - Validate presentation workflows before publishing or integration.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Automate extraction of slide master structures for documentation.
+// - Build tools that analyze PPTX files for compliance or reporting.
+// - Integrate slide master data into downstream .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Text.Json;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 namespace SlideMasterExport
 {
@@ -38,8 +32,23 @@ namespace SlideMasterExport
 
             if (!File.Exists(inputPath))
             {
+                try
+                {
+                    Aspose.Slides.Presentation newPresentation = new Aspose.Slides.Presentation();
+                    newPresentation.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    newPresentation.Dispose();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Failed to create sample presentation: " + ex.Message);
+                    Environment.Exit(1);
+                }
+            }
+
+            if (!File.Exists(inputPath))
+            {
                 Console.WriteLine("Input file does not exist: " + inputPath);
-                return;
+                Environment.Exit(1);
             }
 
             try
@@ -76,15 +85,18 @@ namespace SlideMasterExport
                 // Save the presentation before exit (no changes made, just re-saving)
                 presentation.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
                 presentation.Dispose();
+
+                Console.WriteLine("Slide master hierarchy exported to: " + jsonOutputPath);
             }
             catch (NotSupportedException)
             {
-                // Format not supported
                 Console.WriteLine("The file format is not supported for this operation.");
+                Environment.Exit(1);
             }
             catch (Exception ex)
             {
                 Console.WriteLine("An error occurred: " + ex.Message);
+                Environment.Exit(1);
             }
         }
 

@@ -1,111 +1,120 @@
 // -----------------------------------------------------------------------------
-// Example: Verify persistent slide ids after removal using C#
+// Example: Verify Persistent Slide IDs After Removing a Slide
 //
 // Description:
-// Demonstrates how to verify that slide persistent IDs remain unchanged after
-// removing a neighboring slide using C# and Aspose.Slides for .NET. The example
-// loads a presentation, records the IDs of the first and third slides, removes
-// the second slide, retrieves the original slides by their stored IDs, and
-// confirms that the IDs are still the same. The modified presentation is then
-// saved. This pattern helps developers ensure slide identity consistency during
-// automated PPTX manipulation.
+// This console program demonstrates how to verify that slide persistent IDs
+// remain unchanged after removing a neighboring slide using C# and
+// Aspose.Slides for .NET. It creates a sample PPTX if none exists, records the
+// IDs of the first and third slides, removes the second slide, retrieves the
+// original slides by their stored IDs, and confirms that the IDs are still the
+// same. The modified presentation is then saved.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Verify, Persistent Slide ID, 
-// Slide Removal, Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, slide persistent ID, slide removal verification
 //
 // Use Cases:
-// - Verify slide ID stability after slide removal in automated workflows.
-// - Build C# utilities for reliable PowerPoint slide management.
-// - Ensure data integrity when programmatically editing PPTX files.
-// - Integrate slide ID verification into larger .NET presentation processing pipelines.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Automated slide manipulation integrity check
+// - Batch processing of presentations while preserving slide identity
+// - Validation of slide IDs in custom slide management tools
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
-
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-namespace VerifyPersistentSlideIds
+class Program
 {
-    class Program
+    static int Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            // Determine input file path (first argument or default)
-            string inputPath = args.Length > 0 ? args[0] : "input.pptx";
+        string inputPath = "input.pptx";
+        string outputPath = "output.pptx";
 
-            // Check if the file exists
+        try
+        {
+            // Ensure input file exists; create a sample presentation if missing
             if (!File.Exists(inputPath))
             {
-                Console.WriteLine("Input file does not exist: " + inputPath);
-                return;
+                Aspose.Slides.Presentation samplePres = new Aspose.Slides.Presentation();
+                // The default presentation contains one slide; add two more empty slides
+                samplePres.Slides.AddEmptySlide(samplePres.Slides[0].LayoutSlide);
+                samplePres.Slides.AddEmptySlide(samplePres.Slides[0].LayoutSlide);
+                samplePres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                samplePres.Dispose();
             }
 
-            try
+            // Load the presentation
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+
+            // Verify there are at least three slides
+            if (presentation.Slides.Count < 3)
             {
-                // Load the presentation
-                using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath))
+                Console.Error.WriteLine("The presentation must contain at least three slides.");
+                presentation.Dispose();
+                return 1;
+            }
+
+            // Record persistent IDs of the first and third slides
+            uint firstSlideId = presentation.Slides[0].SlideId;
+            uint thirdSlideId = presentation.Slides[2].SlideId;
+
+            // Remove the second slide (index 1)
+            presentation.Slides.RemoveAt(1);
+
+            // Retrieve slides by stored IDs
+            Aspose.Slides.ISlide firstSlide = null;
+            Aspose.Slides.ISlide thirdSlide = null;
+            foreach (Aspose.Slides.ISlide slide in presentation.Slides)
+            {
+                if (slide.SlideId == firstSlideId)
                 {
-                    // Ensure there are at least two slides to perform removal
-                    if (presentation.Slides.Count < 2)
-                    {
-                        Console.WriteLine("Presentation must contain at least two slides.");
-                        return;
-                    }
-
-                    // Store the persistent IDs of the first and third slides (if present)
-                    uint firstSlideId = presentation.Slides[0].SlideId;
-                    uint thirdSlideId = presentation.Slides.Count > 2 ? presentation.Slides[2].SlideId : 0;
-
-                    // Remove the second slide (neighboring slide)
-                    presentation.Slides.RemoveAt(1);
-
-                    // Retrieve slides by their original IDs
-                    Aspose.Slides.IBaseSlide firstSlideAfterRemoval = presentation.GetSlideById(firstSlideId);
-                    Aspose.Slides.IBaseSlide thirdSlideAfterRemoval = thirdSlideId != 0 ? presentation.GetSlideById(thirdSlideId) : null;
-
-                    // Verify that the IDs are unchanged
-                    if (firstSlideAfterRemoval != null && firstSlideAfterRemoval.SlideId == firstSlideId)
-                    {
-                        Console.WriteLine("First slide ID unchanged after removal.");
-                    }
-                    else
-                    {
-                        Console.WriteLine("First slide ID changed or slide not found.");
-                    }
-
-                    if (thirdSlideAfterRemoval != null && thirdSlideAfterRemoval.SlideId == thirdSlideId)
-                    {
-                        Console.WriteLine("Third slide ID unchanged after removal.");
-                    }
-                    else if (thirdSlideId != 0)
-                    {
-                        Console.WriteLine("Third slide ID changed or slide not found.");
-                    }
-
-                    // Save the modified presentation
-                    string outputPath = "output.pptx";
-                    presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
-                    Console.WriteLine("Presentation saved to " + outputPath);
+                    firstSlide = slide;
+                }
+                if (slide.SlideId == thirdSlideId)
+                {
+                    thirdSlide = slide;
                 }
             }
-            catch (Aspose.Slides.PptxUnsupportedFormatException)
+
+            // Validate that the IDs are unchanged and slides are found
+            bool success = true;
+            if (firstSlide == null)
             {
-                // Format not supported
-                Console.WriteLine("The presentation format is not supported.");
+                Console.Error.WriteLine("First slide could not be located after removal.");
+                success = false;
             }
-            catch (System.Net.WebException)
+            else if (firstSlide.SlideId != firstSlideId)
             {
-                // Handle external URL or web service errors
-                Console.WriteLine("Failed to load presentation from a URL.");
+                Console.Error.WriteLine("First slide ID mismatch after removal.");
+                success = false;
             }
-            catch (Exception ex)
+
+            if (thirdSlide == null)
             {
-                // General exception handling
-                Console.WriteLine("An error occurred: " + ex.Message);
+                Console.Error.WriteLine("Third slide could not be located after removal.");
+                success = false;
             }
+            else if (thirdSlide.SlideId != thirdSlideId)
+            {
+                Console.Error.WriteLine("Third slide ID mismatch after removal.");
+                success = false;
+            }
+
+            if (!success)
+            {
+                presentation.Dispose();
+                return 1;
+            }
+
+            // Save the modified presentation
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            presentation.Dispose();
+
+            Console.WriteLine("Slide IDs verified successfully. Modified presentation saved to " + outputPath);
+            return 0;
+        }
+        catch (Exception ex)
+        {
+            Console.Error.WriteLine("An error occurred: " + ex.Message);
+            return 1;
         }
     }
 }

@@ -1,87 +1,97 @@
 // -----------------------------------------------------------------------------
-// Example: Clone slide to presentation and rename title using C#
+// Example: Clone First Slide and Rename Title Placeholder
 //
 // Description:
-// Demonstrates how to clone the first slide from a source presentation into a
-// new presentation and rename its title placeholder using C# and Aspose.Slides
-// for .NET. The example loads a source PPTX file, creates an empty destination
-// presentation, copies the slide, updates the title text, and saves the result.
-// This pattern can be used to automate slide reuse and title customization in
-// PowerPoint workflows.
+// This console program loads a source PPTX file, creates a new destination
+// presentation, clones the first slide from the source into the destination,
+// updates the title placeholder text, and saves the result. It demonstrates
+// slide reuse and title customization using Aspose.Slides for .NET.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Clone, Slide, Presentation,
-// Rename, Title, Placeholder, Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, clone slide, rename title
 //
 // Use Cases:
-// - Automate cloning of a slide from one presentation to another.
-// - Programmatically update slide titles during batch processing.
-// - Build .NET tools for PowerPoint content reuse and customization.
-// - Validate and transform PPTX files before publishing or integration.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Automate creation of customized presentations from a template slide.
+// - Generate personalized decks by cloning and retitling slides.
+// - Streamline slide reuse in batch PowerPoint processing.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-namespace CloneSlideExample
+class Program
 {
-    class Program
+    static int Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            // Paths to source and destination presentations
-            string sourcePath = "SourcePresentation.pptx";
-            string destinationPath = "ClonedPresentation.pptx";
+        string sourcePath = "source.pptx";
+        string destinationPath = "result.pptx";
 
-            // Verify source file exists
+        try
+        {
+            // Ensure source presentation exists; create a simple one if missing.
             if (!File.Exists(sourcePath))
             {
-                Console.WriteLine("Source file does not exist: " + sourcePath);
-                return;
-            }
-
-            try
-            {
-                // Load source presentation
-                using (Presentation srcPres = new Presentation(sourcePath))
+                Aspose.Slides.Presentation createPres = new Aspose.Slides.Presentation();
+                // Add a title slide (default layout contains a title placeholder).
+                Aspose.Slides.ISlide titleSlide = createPres.Slides[0];
+                // Set default title text.
+                foreach (Aspose.Slides.IShape shape in titleSlide.Shapes)
                 {
-                    // Create destination presentation (empty)
-                    using (Presentation destPres = new Presentation())
+                    Aspose.Slides.IAutoShape autoShape = shape as Aspose.Slides.IAutoShape;
+                    if (autoShape != null && autoShape.TextFrame != null)
                     {
-                        // Clone the first slide from source to destination
-                        ISlide sourceSlide = srcPres.Slides[0];
-                        ISlide clonedSlide = destPres.Slides.AddClone(sourceSlide);
-
-                        // Rename the title shape text if it exists
-                        foreach (IShape shape in clonedSlide.Shapes)
-                        {
-                            IAutoShape autoShape = shape as IAutoShape;
-                            if (autoShape != null && autoShape.TextFrame != null && autoShape.Placeholder != null && autoShape.Placeholder.Type == PlaceholderType.Title)
-                            {
-                                autoShape.TextFrame.Text = "New Title for Cloned Slide";
-                                break;
-                            }
-                        }
-
-                        // Save the destination presentation
-                        destPres.Save(destinationPath, SaveFormat.Pptx);
+                        autoShape.TextFrame.Text = "Original Title";
+                        break;
                     }
                 }
+                createPres.Save(sourcePath, Aspose.Slides.Export.SaveFormat.Pptx);
+                createPres.Dispose();
+            }
 
-                Console.WriteLine("Slide cloned and title renamed successfully.");
-            }
-            catch (PptxUnsupportedFormatException)
+            // Load source presentation.
+            Aspose.Slides.Presentation srcPres = new Aspose.Slides.Presentation(sourcePath);
+
+            // Create empty destination presentation.
+            Aspose.Slides.Presentation destPres = new Aspose.Slides.Presentation();
+
+            // Clone the first slide (index 0) from source into destination at position 0.
+            destPres.Slides.InsertClone(0, srcPres.Slides[0]);
+
+            // Retrieve the cloned slide.
+            Aspose.Slides.ISlide clonedSlide = destPres.Slides[0];
+
+            // Find the title placeholder (first shape with a TextFrame) and rename it.
+            bool titleRenamed = false;
+            foreach (Aspose.Slides.IShape shape in clonedSlide.Shapes)
             {
-                // Format not supported
-                Console.WriteLine("The presentation format is not supported.");
+                Aspose.Slides.IAutoShape autoShape = shape as Aspose.Slides.IAutoShape;
+                if (autoShape != null && autoShape.TextFrame != null)
+                {
+                    autoShape.TextFrame.Text = "New Customized Title";
+                    titleRenamed = true;
+                    break;
+                }
             }
-            catch (Exception ex)
+
+            if (!titleRenamed)
             {
-                // General exception handling
-                Console.WriteLine("An error occurred: " + ex.Message);
+                Console.WriteLine("Warning: Title placeholder not found on the cloned slide.");
             }
+
+            // Save the destination presentation.
+            destPres.Save(destinationPath, Aspose.Slides.Export.SaveFormat.Pptx);
+
+            // Clean up.
+            srcPres.Dispose();
+            destPres.Dispose();
+
+            Console.WriteLine("Slide cloned and title renamed successfully. Output saved to: " + destinationPath);
+            return 0;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error: " + ex.Message);
+            return 1;
         }
     }
 }

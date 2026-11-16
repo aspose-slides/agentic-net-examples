@@ -1,99 +1,143 @@
 // -----------------------------------------------------------------------------
-// Example: Adjust slide margins after size change using C#
+// Example: Adjust Slide Margins After Resizing Presentation
 //
 // Description:
-// Demonstrates how to resize a presentation's slide dimensions and adjust
-// the positions and sizes of all shapes (margins) accordingly using Aspose.Slides
-// for .NET. The example loads a PPTX file, changes the slide size without
-// automatic scaling, computes scaling factors, updates each shape, and saves the
-// result.
+// This console program loads a PPTX file, changes the slide size without automatic scaling, recalculates scaling factors, updates all shapes to preserve margins, and saves the modified presentation. It demonstrates slide resizing and margin adjustment using Aspose.Slides for .NET.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Adjust, Slide, Margins, Resize,
-// Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, slide size, margin adjustment, shape scaling
 //
 // Use Cases:
-// - Resize slides while preserving layout by scaling shape margins.
-// - Build C# utilities for batch processing of PowerPoint files.
-// - Integrate slide size adjustments into .NET applications.
-// - Validate and transform PPTX presentations before distribution.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Reformatting existing presentations to new page dimensions while keeping layout intact.
+// - Preparing slides for printing on different paper sizes without distorting content.
+// - Automating batch processing of presentations to standardize slide margins.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-namespace AdjustSlideMargins
+class Program
 {
-    class Program
+    static int Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            string inputPath = "input.pptx";
-            string outputPath = "output.pptx";
+        string inputPath = "input.pptx";
+        string outputPath = "output.pptx";
 
-            // Verify input file exists
+        try
+        {
+            // Ensure input file exists; create a sample if missing
             if (!File.Exists(inputPath))
             {
-                Console.WriteLine("Input file does not exist: " + inputPath);
-                return;
+                Aspose.Slides.Presentation samplePres = new Aspose.Slides.Presentation();
+                Aspose.Slides.ISlide sampleSlide = samplePres.Slides[0];
+                // Add a rectangle shape as a sample content
+                sampleSlide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 100, 100, 300, 200);
+                samplePres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                samplePres.Dispose();
             }
 
-            try
+            // Load the presentation
+            Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(inputPath);
+
+            // Capture current slide dimensions
+            float currentWidth = presentation.SlideSize.Size.Width;
+            float currentHeight = presentation.SlideSize.Size.Height;
+
+            // Set new slide size without automatic scaling
+            float newWidth = 800f;
+            float newHeight = 600f;
+            presentation.SlideSize.SetSize(newWidth, newHeight, Aspose.Slides.SlideSizeScaleType.DoNotScale);
+
+            // Compute scaling ratios
+            float ratioWidth = presentation.SlideSize.Size.Width / currentWidth;
+            float ratioHeight = presentation.SlideSize.Size.Height / currentHeight;
+
+            // Scale shapes in master slides
+            foreach (Aspose.Slides.IMasterSlide master in presentation.Masters)
             {
-                // Load presentation
-                using (Presentation presentation = new Presentation(inputPath))
+                foreach (Aspose.Slides.IShape shape in master.Shapes)
                 {
-                    // Store original slide dimensions
-                    ISlideSize originalSize = presentation.SlideSize;
-                    float originalWidth = originalSize.Size.Width;
-                    float originalHeight = originalSize.Size.Height;
+                    shape.Width *= ratioWidth;
+                    shape.Height *= ratioHeight;
+                    shape.X *= ratioWidth;
+                    shape.Y *= ratioHeight;
 
-                    // Define new slide dimensions (example: 1024x768 points)
-                    float newWidth = 1024f;
-                    float newHeight = 768f;
-
-                    // Apply new slide size without automatic scaling
-                    presentation.SlideSize.SetSize(newWidth, newHeight, SlideSizeScaleType.DoNotScale);
-
-                    // Compute scaling factors
-                    float scaleX = newWidth / originalWidth;
-                    float scaleY = newHeight / originalHeight;
-
-                    // Adjust each shape on every slide proportionally
-                    for (int i = 0; i < presentation.Slides.Count; i++)
+                    if (shape is Aspose.Slides.ITable)
                     {
-                        ISlide slide = presentation.Slides[i];
-                        for (int j = 0; j < slide.Shapes.Count; j++)
+                        Aspose.Slides.ITable table = (Aspose.Slides.ITable)shape;
+                        foreach (Aspose.Slides.IRow row in table.Rows)
                         {
-                            IShape shape = slide.Shapes[j];
-                            shape.X = shape.X * scaleX;
-                            shape.Y = shape.Y * scaleY;
-                            shape.Width = shape.Width * scaleX;
-                            shape.Height = shape.Height * scaleY;
+                            row.MinimalHeight *= ratioHeight;
+                        }
+                        foreach (Aspose.Slides.IColumn column in table.Columns)
+                        {
+                            column.Width *= ratioWidth;
                         }
                     }
+                }
 
-                    // Save the modified presentation
-                    presentation.Save(outputPath, SaveFormat.Pptx);
+                // Scale shapes in layout slides
+                foreach (Aspose.Slides.ILayoutSlide layout in master.LayoutSlides)
+                {
+                    foreach (Aspose.Slides.IShape shape in layout.Shapes)
+                    {
+                        shape.Width *= ratioWidth;
+                        shape.Height *= ratioHeight;
+                        shape.X *= ratioWidth;
+                        shape.Y *= ratioHeight;
+
+                        if (shape is Aspose.Slides.ITable)
+                        {
+                            Aspose.Slides.ITable table = (Aspose.Slides.ITable)shape;
+                            foreach (Aspose.Slides.IRow row in table.Rows)
+                            {
+                                row.MinimalHeight *= ratioHeight;
+                            }
+                            foreach (Aspose.Slides.IColumn column in table.Columns)
+                            {
+                                column.Width *= ratioWidth;
+                            }
+                        }
+                    }
                 }
             }
-            catch (Aspose.Slides.PptxUnsupportedFormatException)
+
+            // Scale shapes in regular slides
+            foreach (Aspose.Slides.ISlide slide in presentation.Slides)
             {
-                // Format not supported for PPTX files
-                Console.WriteLine("The provided file format is not supported (PPTX).");
+                foreach (Aspose.Slides.IShape shape in slide.Shapes)
+                {
+                    shape.Width *= ratioWidth;
+                    shape.Height *= ratioHeight;
+                    shape.X *= ratioWidth;
+                    shape.Y *= ratioHeight;
+
+                    if (shape is Aspose.Slides.ITable)
+                    {
+                        Aspose.Slides.ITable table = (Aspose.Slides.ITable)shape;
+                        foreach (Aspose.Slides.IRow row in table.Rows)
+                        {
+                            row.MinimalHeight *= ratioHeight;
+                        }
+                        foreach (Aspose.Slides.IColumn column in table.Columns)
+                        {
+                            column.Width *= ratioWidth;
+                        }
+                    }
+                }
             }
-            catch (Aspose.Slides.PptUnsupportedFormatException)
-            {
-                // Format not supported for PPT files
-                Console.WriteLine("The provided file format is not supported (PPT).");
-            }
-            catch (Exception ex)
-            {
-                // General exception handling
-                Console.WriteLine("An error occurred: " + ex.Message);
-            }
+
+            // Save the modified presentation
+            presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+            presentation.Dispose();
+
+            Console.WriteLine("Presentation resized and margins adjusted successfully.");
+            return 0;
+        }
+        catch (Exception ex)
+        {
+            Console.Error.WriteLine("Error: " + ex.Message);
+            return 1;
         }
     }
 }

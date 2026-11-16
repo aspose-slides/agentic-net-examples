@@ -1,81 +1,83 @@
 // -----------------------------------------------------------------------------
-// Example: Reorder slides by alphabetical title using C#
+// Example: Reorder Slides Alphabetically by Title Using Aspose.Slides
 //
 // Description:
-// Demonstrates how to reorder slides by alphabetical title using C# and 
-// Aspose.Slides for .NET. The example shows the required 
-// presentation-processing steps for PowerPoint files and produces the 
-// requested output in a standalone console application. Developers can use 
-// this pattern to automate PPTX workflows, validate results, or integrate 
-// presentation logic into .NET applications.
+// This console application loads a PowerPoint PPTX file, extracts slide titles,
+// sorts the slides alphabetically, and reorders them accordingly. If the input
+// file does not exist, a sample presentation with titled slides is created.
+// The reordered presentation is saved as a new PPTX file.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Reorder, Slides, Alphabetical, 
-// Title, Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Reorder Slides, Alphabetical Title
 //
 // Use Cases:
-// - Automate reorder slides by alphabetical title.
-// - Build C# tools for PowerPoint presentation processing.
-// - Generate or transform PPTX files in .NET applications.
-// - Validate presentation workflows before publishing or integration.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Automate slide ordering before publishing a deck.
+// - Integrate slide sorting into a .NET presentation processing pipeline.
+// - Generate consistently ordered presentations from dynamic content.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
 using System.Collections.Generic;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
-namespace SlideReorderExample
+namespace SlideReorderAlphabetical
 {
     class Program
     {
-        static void Main(string[] args)
+        static int Main(string[] args)
         {
-            // Input and output file paths
             string inputPath = "input.pptx";
             string outputPath = "output.pptx";
 
-            // Verify input file exists
-            if (!File.Exists(inputPath))
-            {
-                Console.WriteLine("Input file does not exist: " + inputPath);
-                return;
-            }
-
             try
             {
-                // Load the presentation
-                Presentation pres = new Presentation(inputPath);
+                // Create a sample presentation if the input file does not exist
+                if (!File.Exists(inputPath))
+                {
+                    Aspose.Slides.Presentation samplePres = new Aspose.Slides.Presentation();
+                    string[] titles = new string[] { "Beta", "Alpha", "Gamma" };
+                    foreach (string t in titles)
+                    {
+                        Aspose.Slides.ISlide slide = samplePres.Slides.AddEmptySlide(samplePres.Slides[0].LayoutSlide);
+                        Aspose.Slides.IAutoShape titleShape = slide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 50f, 50f, 500f, 50f);
+                        titleShape.AddTextFrame(t);
+                    }
+                    samplePres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    samplePres.Dispose();
+                }
 
-                // Collect slides with their titles
-                List<Tuple<string, ISlide>> slideInfo = new List<Tuple<string, ISlide>>();
+                // Load the presentation
+                Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
+
+                // Collect slide titles with corresponding slide objects
+                List<System.Tuple<string, Aspose.Slides.ISlide>> slideInfo = new List<System.Tuple<string, Aspose.Slides.ISlide>>();
                 int slideCount = pres.Slides.Count;
                 for (int i = 0; i < slideCount; i++)
                 {
-                    ISlide slide = pres.Slides[i];
+                    Aspose.Slides.ISlide slide = pres.Slides[i];
                     string title = string.Empty;
 
-                    // Attempt to get title from the first AutoShape (commonly the title placeholder)
-                    if (slide.Shapes.Count > 0)
+                    // Find the first AutoShape with a TextFrame as the title
+                    foreach (Aspose.Slides.IShape shape in slide.Shapes)
                     {
-                        IAutoShape autoShape = slide.Shapes[0] as IAutoShape;
+                        Aspose.Slides.IAutoShape autoShape = shape as Aspose.Slides.IAutoShape;
                         if (autoShape != null && autoShape.TextFrame != null)
                         {
                             title = autoShape.TextFrame.Text;
+                            break;
                         }
                     }
 
-                    slideInfo.Add(new Tuple<string, ISlide>(title, slide));
+                    slideInfo.Add(new System.Tuple<string, Aspose.Slides.ISlide>(title, slide));
                 }
 
                 // Sort slides alphabetically by title
-                slideInfo.Sort((a, b) => string.Compare(a.Item1, b.Item1, StringComparison.Ordinal));
+                slideInfo.Sort((a, b) => string.Compare(a.Item1, b.Item1, System.StringComparison.Ordinal));
 
-                // Reorder slides in the presentation according to sorted order
+                // Reorder slides according to sorted order
                 for (int targetIndex = 0; targetIndex < slideInfo.Count; targetIndex++)
                 {
-                    ISlide targetSlide = slideInfo[targetIndex].Item2;
+                    Aspose.Slides.ISlide targetSlide = slideInfo[targetIndex].Item2;
                     int currentIndex = pres.Slides.IndexOf(targetSlide);
                     if (currentIndex != targetIndex)
                     {
@@ -84,15 +86,16 @@ namespace SlideReorderExample
                 }
 
                 // Save the reordered presentation
-                pres.Save(outputPath, SaveFormat.Pptx);
+                pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
                 pres.Dispose();
+
                 Console.WriteLine("Presentation reordered and saved to: " + outputPath);
+                return 0;
             }
             catch (Exception ex)
             {
-                // Handle unsupported format or other errors
-                // Format not supported
                 Console.WriteLine("An error occurred: " + ex.Message);
+                return 1;
             }
         }
     }

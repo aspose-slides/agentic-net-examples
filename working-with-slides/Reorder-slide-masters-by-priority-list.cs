@@ -1,28 +1,23 @@
 // -----------------------------------------------------------------------------
-// Example: Reorder slide masters by priority list using C#
+// Example: Reorder Slide Masters by Priority List Using Aspose.Slides
 //
 // Description:
-// Demonstrates how to reorder slide masters by a predefined priority list using
-// C# and Aspose.Slides for .NET. The example loads a source presentation,
-// clones the master slides into a new presentation following the specified
-// order, copies all slides, and saves the result. This pattern helps automate
-// PowerPoint master‑slide management in .NET applications.
+// This console program creates a sample PowerPoint file if none exists, then
+// reorders its slide masters according to a predefined priority list. It
+// clones the masters and slides into a new presentation and saves the result.
+// The task demonstrates automated master‑slide management with Aspose.Slides for .NET.
 //
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Reorder, Slide Masters, Priority,
-// Presentation Processing, Office Automation
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Reorder Slide Masters, Priority List
 //
 // Use Cases:
-// - Reorder slide masters in a presentation according to business rules.
-// - Build tools that standardize master slide ordering across multiple PPTX files.
-// - Generate or transform PPTX files while preserving a specific master hierarchy.
-// - Validate and enforce presentation templates before distribution.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Standardize master slide ordering across corporate templates.
+// - Build preprocessing tools that enforce master hierarchy before publishing.
+// - Automate migration of presentations to a new master slide structure.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 namespace SlideMasterReorder
 {
@@ -30,59 +25,69 @@ namespace SlideMasterReorder
     {
         static void Main(string[] args)
         {
-            // Define input and output file paths
             string inputPath = "input.pptx";
             string outputPath = "output_reordered.pptx";
 
-            // Check if input file exists
-            if (!File.Exists(inputPath))
-            {
-                Console.WriteLine("Input file does not exist.");
-                return;
-            }
-
             try
             {
+                // Create a sample input presentation if it does not exist
+                if (!File.Exists(inputPath))
+                {
+                    Aspose.Slides.Presentation samplePres = new Aspose.Slides.Presentation();
+
+                    // Ensure there are at least three master slides for demonstration
+                    Aspose.Slides.IMasterSlide firstMaster = samplePres.Masters[0];
+                    Aspose.Slides.IMasterSlide secondMaster = samplePres.Masters.AddClone(firstMaster);
+                    Aspose.Slides.IMasterSlide thirdMaster = samplePres.Masters.AddClone(firstMaster);
+
+                    // Add three slides, each using a different master slide
+                    Aspose.Slides.ISlide slide1 = samplePres.Slides.AddEmptySlide(firstMaster.LayoutSlides[0]);
+                    Aspose.Slides.ISlide slide2 = samplePres.Slides.AddEmptySlide(secondMaster.LayoutSlides[0]);
+                    Aspose.Slides.ISlide slide3 = samplePres.Slides.AddEmptySlide(thirdMaster.LayoutSlides[0]);
+
+                    samplePres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    samplePres.Dispose();
+                }
+
                 // Load source presentation
-                Presentation sourcePres = new Presentation(inputPath);
+                Aspose.Slides.Presentation sourcePres = new Aspose.Slides.Presentation(inputPath);
 
-                // Create destination presentation
-                Presentation destPres = new Presentation();
-
-                // Predefined priority list of master slide indices (example order)
+                // Define priority order of master slide indices (e.g., third, first, second)
                 int[] priority = new int[] { 2, 0, 1 };
 
-                // Clone masters to destination presentation according to priority
+                // Create destination presentation
+                Aspose.Slides.Presentation destPres = new Aspose.Slides.Presentation();
+
+                // Clone masters into destination according to priority
                 foreach (int index in priority)
                 {
                     if (index >= 0 && index < sourcePres.Masters.Count)
                     {
-                        IMasterSlide sourceMaster = sourcePres.Masters[index];
+                        Aspose.Slides.IMasterSlide sourceMaster = sourcePres.Masters[index];
                         destPres.Masters.AddClone(sourceMaster);
                     }
                 }
 
-                // Clone all slides; masters will be cloned automatically as needed
-                foreach (ISlide slide in sourcePres.Slides)
+                // Clone all slides; masters will be linked automatically
+                foreach (Aspose.Slides.ISlide slide in sourcePres.Slides)
                 {
                     destPres.Slides.AddClone(slide);
                 }
 
                 // Save the reordered presentation
-                destPres.Save(outputPath, SaveFormat.Pptx);
+                destPres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
 
-                // Dispose presentations
+                // Clean up
                 sourcePres.Dispose();
                 destPres.Dispose();
 
-                Console.WriteLine("Presentation saved successfully.");
+                Console.WriteLine("Reordered presentation saved to: " + outputPath);
             }
             catch (Exception ex)
             {
-                // Handle unsupported format or other exceptions
-                Console.WriteLine("An error occurred: " + ex.Message);
-                // Format not supported comment
-                // The provided file format may not be supported by Aspose.Slides.
+                Console.WriteLine("Error: " + ex.Message);
+                // Exit with non‑zero code to indicate failure
+                Environment.Exit(1);
             }
         }
     }

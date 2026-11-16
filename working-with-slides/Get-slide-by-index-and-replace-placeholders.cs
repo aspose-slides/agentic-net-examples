@@ -1,28 +1,23 @@
 // -----------------------------------------------------------------------------
-// Example: Get slide by index and replace placeholders using C#
-//
+// Example: Replace placeholders on a specific slide in a PPTX using C#
+// 
 // Description:
-// Demonstrates how to load a PowerPoint presentation, access a slide by its
-// zero‑based index, iterate through its shapes, replace any placeholder text
-// with a custom string, and save the modified presentation. The example uses
-// Aspose.Slides for .NET in a simple console application and shows the essential
-// steps for slide‑level processing and placeholder manipulation.
-//
+// Demonstrates loading a PowerPoint file, creating a sample if missing, accessing
+// a slide by zero‑based index, iterating its shapes, replacing placeholder text,
+// and saving the updated presentation. Utilizes Aspose.Slides for .NET in a
+// console application.
+// 
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Slide Index, Placeholder, Text Replacement, Presentation Processing, Office Automation
-//
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Slide Index, Placeholder, Text Replacement
+// 
 // Use Cases:
-// - Automate retrieval of a specific slide and update its placeholder content.
-// - Build C# utilities for batch processing of PPTX files to replace template text.
-// - Integrate slide‑level editing into .NET applications that generate or modify presentations.
-// - Validate and test placeholder replacement logic before publishing presentations.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Automate updating template placeholders in generated presentations.
+// - Build command‑line tools for batch processing of PPTX files.
+// - Integrate slide‑level content customization into .NET applications.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
-
 using System;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 namespace AsposeSlidesExample
 {
@@ -30,66 +25,74 @@ namespace AsposeSlidesExample
     {
         static void Main(string[] args)
         {
-            // Path to the source presentation
             string sourcePath = "input.pptx";
-            // Path to the output presentation
             string outputPath = "output.pptx";
 
-            // Verify that the source file exists
+            // Ensure source file exists; create a simple sample if it does not.
             if (!File.Exists(sourcePath))
             {
-                Console.WriteLine($"Source file not found: {sourcePath}");
-                return;
+                try
+                {
+                    using (Aspose.Slides.Presentation samplePres = new Aspose.Slides.Presentation())
+                    {
+                        Aspose.Slides.ISlide sampleSlide = samplePres.Slides[0];
+                        Aspose.Slides.IShape sampleShape = sampleSlide.Shapes.AddAutoShape(Aspose.Slides.ShapeType.Rectangle, 50, 50, 400, 100);
+                        ((Aspose.Slides.IAutoShape)sampleShape).TextFrame.Text = "Hello {{Name}}";
+                        samplePres.Save(sourcePath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Failed to create sample presentation: " + ex.Message);
+                    Environment.ExitCode = 1;
+                    return;
+                }
             }
 
             try
             {
-                // Load the presentation
-                using (Presentation presentation = new Presentation(sourcePath))
+                using (Aspose.Slides.Presentation presentation = new Aspose.Slides.Presentation(sourcePath))
                 {
-                    // Zero‑based slide index to process
                     int slideIndex = 0;
 
-                    // Ensure the index is within range
                     if (slideIndex < 0 || slideIndex >= presentation.Slides.Count)
                     {
-                        Console.WriteLine($"Slide index {slideIndex} is out of range.");
+                        Console.WriteLine("Slide index " + slideIndex + " is out of range.");
+                        Environment.ExitCode = 1;
                         return;
                     }
 
-                    // Access the slide by index
-                    ISlide slide = presentation.Slides[slideIndex];
+                    Aspose.Slides.ISlide slide = presentation.Slides[slideIndex];
 
-                    // Iterate through all shapes on the slide
-                    foreach (IShape shape in slide.Shapes)
+                    foreach (Aspose.Slides.IShape shape in slide.Shapes)
                     {
-                        // Check if the shape has a placeholder and is an AutoShape
-                        if (shape.Placeholder != null && shape is IAutoShape)
+                        if (shape is Aspose.Slides.IAutoShape)
                         {
-                            // Replace placeholder text with actual content
-                            IAutoShape autoShape = (IAutoShape)shape;
-                            autoShape.TextFrame.Text = "Replaced Content";
+                            Aspose.Slides.IAutoShape autoShape = (Aspose.Slides.IAutoShape)shape;
+                            if (autoShape.TextFrame != null && autoShape.TextFrame.Text != null && autoShape.TextFrame.Text.Contains("{{Name}}"))
+                            {
+                                autoShape.TextFrame.Text = autoShape.TextFrame.Text.Replace("{{Name}}", "John Doe");
+                            }
                         }
                     }
 
-                    // Save the modified presentation
-                    presentation.Save(outputPath, SaveFormat.Pptx);
+                    presentation.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
                 }
             }
-            catch (PptxUnsupportedFormatException ex)
+            catch (Aspose.Slides.PptxUnsupportedFormatException ex)
             {
-                // Handle unsupported PPTX format
-                Console.WriteLine($"Unsupported PPTX format: {ex.Message}");
+                Console.WriteLine("Unsupported PPTX format: " + ex.Message);
+                Environment.ExitCode = 1;
             }
-            catch (PptUnsupportedFormatException ex)
+            catch (Aspose.Slides.PptUnsupportedFormatException ex)
             {
-                // Handle unsupported PPT format
-                Console.WriteLine($"Unsupported PPT format: {ex.Message}");
+                Console.WriteLine("Unsupported PPT format: " + ex.Message);
+                Environment.ExitCode = 1;
             }
             catch (Exception ex)
             {
-                // General exception handling
-                Console.WriteLine($"An error occurred: {ex.Message}");
+                Console.WriteLine("An error occurred: " + ex.Message);
+                Environment.ExitCode = 1;
             }
         }
     }
