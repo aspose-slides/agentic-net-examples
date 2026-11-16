@@ -1,29 +1,24 @@
 // -----------------------------------------------------------------------------
-// Example: Remove slides by title using predicate using C#
-//
+// Example: Remove Slides by Title Using Predicate in C#
+// 
 // Description:
-// Demonstrates how to remove slides by title using a predicate function with
-// C# and Aspose.Slides for .NET. The example loads a presentation, identifies
-// slides whose title (or name) contains a specific keyword, removes those
-// slides, and saves the resulting presentation. This pattern is useful for
-// automating PowerPoint slide management tasks.
-//
+// Demonstrates how to load a PowerPoint PPTX file, identify slides whose
+// title (slide name) contains a specific keyword, remove those slides using a
+// predicate, and save the resulting presentation. The program also creates a
+// sample presentation if the input file is missing.
+// 
 // Keywords:
-// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove, Slides, Title,
-// Predicate, Presentation Processing, Office Automation
-//
+// C#, PowerPoint, PPTX, Aspose.Slides for .NET, Remove Slides, Title Predicate
+// 
 // Use Cases:
-// - Automate removal of slides based on title content.
-// - Build C# utilities for PowerPoint presentation cleanup.
-// - Integrate slide filtering logic into .NET applications.
-// - Validate and preprocess PPTX files before distribution or further processing.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// - Automate cleanup of presentations by removing unwanted slides.
+// - Build utilities that filter slides based on naming conventions.
+// - Preprocess PPTX files before distribution or further processing.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 using System;
-using System.Collections.Generic;
 using System.IO;
-using Aspose.Slides;
-using Aspose.Slides.Export;
+using System.Collections.Generic;
 
 namespace RemoveSlidesByTitle
 {
@@ -31,57 +26,71 @@ namespace RemoveSlidesByTitle
     {
         static void Main(string[] args)
         {
-            // Define input and output file paths
             string inputPath = "input.pptx";
             string outputPath = "output.pptx";
-
-            // Check if the input file exists
-            if (!File.Exists(inputPath))
-            {
-                Console.WriteLine("Input file does not exist: " + inputPath);
-                return;
-            }
+            string keyword = "Keyword";
 
             try
             {
-                // Load the presentation
-                Presentation pres = new Presentation(inputPath);
-
-                // Predicate function to match slide titles containing a keyword
-                Func<ISlide, bool> titleMatches = slide =>
+                // Create a sample presentation if the input file does not exist
+                if (!File.Exists(inputPath))
                 {
-                    // Use the slide's Name property as a placeholder for the title
-                    // Adjust this logic if a different property holds the title
-                    return slide.Name != null && slide.Name.Contains("Keyword");
+                    Aspose.Slides.Presentation samplePres = new Aspose.Slides.Presentation();
+                    Aspose.Slides.ILayoutSlide layout = samplePres.Slides[0].LayoutSlide;
+
+                    // Slide 1 - contains keyword
+                    Aspose.Slides.ISlide slide1 = samplePres.Slides.AddEmptySlide(layout);
+                    slide1.Name = "Keyword Slide 1";
+
+                    // Slide 2 - does not contain keyword
+                    Aspose.Slides.ISlide slide2 = samplePres.Slides.AddEmptySlide(layout);
+                    slide2.Name = "Regular Slide";
+
+                    // Slide 3 - contains keyword
+                    Aspose.Slides.ISlide slide3 = samplePres.Slides.AddEmptySlide(layout);
+                    slide3.Name = "Another Keyword Slide";
+
+                    samplePres.Save(inputPath, Aspose.Slides.Export.SaveFormat.Pptx);
+                    samplePres.Dispose();
+                }
+
+                // Load the presentation
+                Aspose.Slides.Presentation pres = new Aspose.Slides.Presentation(inputPath);
+
+                // Predicate to match slide names containing the keyword
+                Func<Aspose.Slides.ISlide, bool> titleMatches = delegate (Aspose.Slides.ISlide slide)
+                {
+                    return slide.Name != null && slide.Name.Contains(keyword);
                 };
 
                 // Collect indices of slides to remove
                 List<int> indicesToRemove = new List<int>();
                 for (int i = 0; i < pres.Slides.Count; i++)
                 {
-                    ISlide slide = pres.Slides[i];
+                    Aspose.Slides.ISlide slide = pres.Slides[i];
                     if (titleMatches(slide))
                     {
                         indicesToRemove.Add(i);
                     }
                 }
 
-                // Remove slides in reverse order to maintain correct indexing
+                // Remove slides in reverse order to keep indices valid
                 for (int i = indicesToRemove.Count - 1; i >= 0; i--)
                 {
                     pres.Slides.RemoveAt(indicesToRemove[i]);
                 }
 
                 // Save the modified presentation
-                pres.Save(outputPath, SaveFormat.Pptx);
+                pres.Save(outputPath, Aspose.Slides.Export.SaveFormat.Pptx);
                 pres.Dispose();
+
+                Console.WriteLine("Slides removed successfully. Output saved to: " + outputPath);
             }
             catch (Exception ex)
             {
-                // Handle unsupported format or other errors
                 Console.WriteLine("An error occurred: " + ex.Message);
-                // Format not supported comment
                 // The provided file format may not be supported by Aspose.Slides.
+                Environment.Exit(1);
             }
         }
     }
