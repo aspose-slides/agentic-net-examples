@@ -18,7 +18,7 @@
 // - Build tools that log animation steps for quality assurance.
 // - Automate PPTX processing while monitoring animation generation.
 // - Integrate animation diagnostics into .NET applications.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 
 using System;

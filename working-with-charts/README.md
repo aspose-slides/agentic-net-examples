@@ -14,10 +14,46 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This category contains 429 standalone C# examples for Aspose.Slides for .NET. These examples help developers automate PowerPoint presentation workflows related to working with charts.
+These files are tested and verified with Aspose.Slides for .NET v26.11.0.
+
 These files are tested and verified with Aspose.Slides for .NET v26.10.0.
 
+
+
 These files are tested and verified with Aspose.Slides for .NET v26.9.0.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -49,6 +85,22 @@ These files are tested and verified with Aspose.Slides for .NET v26.9.0.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - Automate repetitive presentation-processing tasks in .NET applications.
 
 
@@ -57,7 +109,23 @@ These files are tested and verified with Aspose.Slides for .NET v26.9.0.
 
 
 
+
+
+
+
+
+
+
+
 - Generate, inspect, transform, or validate PPTX files in server-side workflows.
+
+
+
+
+
+
+
+
 
 
 
@@ -81,7 +149,39 @@ These files are tested and verified with Aspose.Slides for .NET v26.9.0.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Example Files
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -545,7 +645,31 @@ Total examples: 429
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - [Category instructions](./AGENTS.md)
+
+
+
+
+
+
+
+
 
 
 
@@ -561,7 +685,23 @@ Total examples: 429
 
 
 
+
+
+
+
+
+
+
+
 - [Structured index](../index.json)
+
+
+
+
+
+
+
+
 
 
 
@@ -573,7 +713,19 @@ Total examples: 429
 
 
 
+
+
+
+
 ## Developer FAQ
+
+
+
+
+
+
+
+
 
 
 
@@ -589,7 +741,19 @@ These questions target common developer searches for Aspose.Slides for .NET `wor
 
 
 
+
+
+
+
+
+
+
+
 ### How do I create or edit PowerPoint charts in C# with Aspose.Slides?
+
+
+
+
 
 
 
@@ -601,7 +765,19 @@ Use chart examples to add chart shapes, access `Aspose.Slides.Charts.IChart`, up
 
 
 
+
+
+
+
+
+
+
+
 ### How do I add or inspect PowerPoint animations in C#?
+
+
+
+
 
 
 
@@ -613,7 +789,19 @@ Use animation examples to work with slide timelines, animation sequences, effect
 
 
 
+
+
+
+
+
+
+
+
 ### How do I use Aspose.Slides for .NET for working with charts in C#?
+
+
+
+
 
 
 
@@ -625,7 +813,19 @@ Use the `working-with-charts` examples to find standalone C# patterns for workin
 
 
 
+
+
+
+
+
+
+
+
 ### Which working with charts examples are best for coding agents?
+
+
+
+
 
 
 
@@ -637,7 +837,19 @@ Start with the files listed in this directory and the category AGENTS.md. The st
 
 
 
+
+
+
+
+
+
+
+
 ### Are the working-with-charts examples standalone C# programs?
+
+
+
+
 
 
 
@@ -649,7 +861,19 @@ Yes. The examples are generated as standalone console-style C# files and are int
 
 
 
+
+
+
+
+
+
+
+
 <!-- SEO-FAQ:END -->
+
+
+
+
 
 
 

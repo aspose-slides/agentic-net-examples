@@ -21,7 +21,7 @@
 //   runtime validation.
 // - Generate or transform PPTX files with reliable chart positioning.
 // - Validate and correct chart layouts before publishing presentations.
-// Tested and Verified with Aspose.Slides for .NET v26.10.0.
+// Tested and Verified with Aspose.Slides for .NET v26.11.0.
 // -----------------------------------------------------------------------------
 
 using System;
