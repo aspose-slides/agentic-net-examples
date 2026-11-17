@@ -1,6 +1,6 @@
 ---
 name: aspose-slides-examples
-version: 26.10.0
+version: 26.11.0
 description: AI-friendly C# code examples for Aspose.Slides for .NET
 language: csharp
 framework: net10.0
@@ -29,8 +29,8 @@ When working in this repository:
 
 This repository contains **2154** working code examples demonstrating Aspose.Slides for .NET capabilities.
 
-**Statistics** (as of 2026-10-20):
-- Version: 26.10.0
+**Statistics** (as of 2026-11-16):
+- Version: 26.11.0
 - Total Examples: 2154
 - Categories: 19
 
@@ -252,4 +252,4 @@ dotnet run
 
 
 ---
-Generated: 2026-10-20
+Generated: 2026-11-16
